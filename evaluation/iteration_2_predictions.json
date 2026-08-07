@@ -1,0 +1,20 @@
+{
+  "protocol": "answers-redacted-before-prediction",
+  "benchmark": "MingLi-Bench",
+  "benchmark_commit": "b7433280fd86d7a7c27debbc47d0303c218f0bfd",
+  "split": "questions 61-70",
+  "skill_version": "v2 role attribution plus chronology and base-rate calibration",
+  "answers_inspected_before_prediction": false,
+  "predictions": {
+    "ftb_0061": "B",
+    "ftb_0062": "D",
+    "ftb_0063": "C",
+    "ftb_0064": "A",
+    "ftb_0065": "A",
+    "ftb_0066": "A",
+    "ftb_0067": "A",
+    "ftb_0068": "A",
+    "ftb_0069": "B",
+    "ftb_0070": "D"
+  }
+}

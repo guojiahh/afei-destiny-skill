@@ -1,0 +1,24 @@
+{
+  "iteration": 7,
+  "skill_revision": "direct-candidate preserving expert audit",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "source": ".benchmark-cache/MingLi-Bench/data/data.json",
+  "question_range": "81:160",
+  "question_count_per_run": 80,
+  "runs": 3,
+  "aggregation": "per-question majority vote",
+  "development_references": {
+    "v6_skill_majority": "39/80",
+    "no_skill_majority": "43/80"
+  },
+  "target": "retain the no-skill direct prior and add only high-confidence expert corrections",
+  "results": {
+    "runs": ["34/80", "36/80", "47/80"],
+    "majority": "39/80",
+    "direct_majority_reference": "43/80",
+    "conclusion": "internal direct-prior simulation was unstable and did not improve the baseline"
+  },
+  "status": "failed development candidate; retained only as an evaluation record",
+  "locked_before_scoring": true
+}

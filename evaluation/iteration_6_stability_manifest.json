@@ -1,0 +1,18 @@
+{
+  "iteration": "6-stability",
+  "purpose": "three independent complete reruns of v6 on the 80-question development set",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "source": ".benchmark-cache/MingLi-Bench/data/data.json",
+  "question_range": "81:160",
+  "question_count_per_run": 80,
+  "runs": 3,
+  "aggregation": "per-question majority vote",
+  "status": "development stability check, not an unseen holdout",
+  "locked_before_scoring": true,
+  "rules": [
+    "Each run reads the same frozen v6 skill and the same answers-redacted packet.",
+    "Agents may not read source JSON, prior predictions, reports, analyses, or answer keys.",
+    "All three complete prediction files are saved before scoring."
+  ]
+}

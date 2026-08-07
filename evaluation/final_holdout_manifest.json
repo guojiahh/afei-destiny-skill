@@ -1,0 +1,43 @@
+{
+  "purpose": "final pre-registered holdout evaluation after the benchmark workflow was frozen",
+  "source": ".benchmark-cache/BaziQA/data/celebrity50_zh.json",
+  "people": ["P045", "P046", "P047", "P048", "P049", "P050"],
+  "question_count": 57,
+  "identity_handling": "person and question IDs anonymized to P### aliases",
+  "conditions": ["isolated gpt-5.6-sol direct base", "frozen-v8 expert review of the direct majority"],
+  "reasoning_effort": "high",
+  "runs_per_condition": 3,
+  "aggregation": "per-question majority vote within each condition",
+  "primary_metric": "review-majority accuracy minus direct-majority accuracy",
+  "secondary_metrics": [
+    "raw accuracy for each run and majority",
+    "per-person accuracy",
+    "unanimous-answer rate",
+    "paired flip counts"
+  ],
+  "controls": [
+    "The same redacted packet is used for both conditions.",
+    "Three direct prediction files and their majority were locked before expert review and scoring.",
+    "Three expert-review files and their majority were locked before scoring.",
+    "Agents may not open source data, answer keys, prior predictions, reports, or analyses.",
+    "Raw Celebrity50 accuracy is interpreted alongside answer-distribution and textual-leakage audits."
+  ],
+  "skill_git_commit": "70c2a85bdfa020d72ff1c6a8fd7905bcbddf3b47",
+  "skill_tree_hash": "d413070b632df169aae0127ce301430058c65327",
+  "result": {
+    "direct_runs": [
+      {"correct": 53, "count": 57, "accuracy": 0.9298},
+      {"correct": 55, "count": 57, "accuracy": 0.9649},
+      {"correct": 52, "count": 57, "accuracy": 0.9123}
+    ],
+    "direct_majority": {"correct": 53, "count": 57, "accuracy": 0.9298},
+    "review_majority": {"correct": 53, "count": 57, "accuracy": 0.9298},
+    "expert_switches": 0,
+    "additive_gain_questions": 0,
+    "additive_gain_percentage_points": 0.0,
+    "unanimous_direct_predictions": 54,
+    "correct_unanimous_direct_predictions": 52,
+    "answer_distribution": {"A": 4, "B": 34, "C": 15, "D": 3, "E": 1}
+  },
+  "status": "completed and unblinded after all prediction files were locked"
+}

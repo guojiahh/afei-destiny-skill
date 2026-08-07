@@ -1,0 +1,30 @@
+{
+  "protocol": "answers-redacted-before-prediction",
+  "benchmark": "MingLi-Bench",
+  "benchmark_commit": "b7433280fd86d7a7c27debbc47d0303c218f0bfd",
+  "split": "questions 41-60",
+  "skill_version": "v1 modular calculator plus adaptive protocol",
+  "answers_inspected_before_prediction": false,
+  "predictions": {
+    "ftb_0041": "B",
+    "ftb_0042": "A",
+    "ftb_0043": "D",
+    "ftb_0044": "B",
+    "ftb_0045": "D",
+    "ftb_0046": "A",
+    "ftb_0047": "B",
+    "ftb_0048": "C",
+    "ftb_0049": "A",
+    "ftb_0050": "B",
+    "ftb_0051": "C",
+    "ftb_0052": "C",
+    "ftb_0053": "A",
+    "ftb_0054": "B",
+    "ftb_0055": "C",
+    "ftb_0056": "D",
+    "ftb_0057": "B",
+    "ftb_0058": "B",
+    "ftb_0059": "C",
+    "ftb_0060": "A"
+  }
+}

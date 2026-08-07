@@ -1,0 +1,4 @@
+interface:
+  display_name: "八字研判"
+  short_description: "确定性四柱排盘、领域研判与可追溯的岁运分析完整工作流"
+  default_prompt: "Use $bazi to calculate this Four Pillars chart and give an evidence-ranked analysis of the question."

@@ -1,0 +1,59 @@
+<!--
+FINAL README HERO
+- Purpose: introduce the whole Bazi Skill, not a single consultation.
+- Direction: selected Museum Catalogue / contemporary East Asian editorial system.
+- Stable claims only: no personal data, benchmark score, line count, or fragile metric.
+- Fixed 1920x1080; local font fallbacks and no network dependencies.
+-->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>八字研判 · Bazi Skill</title>
+  <style>
+    :root{--paper:#ece7dc;--ink:#181815;--soft:#5b564d;--line:#b9b1a2;--red:#9f3028;--red-dark:#6f211d;--serif:"Source Han Serif SC","Noto Serif CJK SC","Songti SC","STSong","SimSun",serif;--sans:"Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#cec8bc}body{display:grid;place-items:center;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    .canvas{position:relative;width:1920px;height:1080px;overflow:hidden;background-color:var(--paper);background-image:linear-gradient(to right,transparent 0,transparent 95px,rgba(24,24,21,.035) 96px,transparent 97px),repeating-linear-gradient(to bottom,transparent 0,transparent 35px,rgba(24,24,21,.022) 36px);box-shadow:0 24px 90px rgba(28,23,17,.22)}
+    .canvas:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 23% 14%,rgba(255,255,255,.24),transparent 34%);pointer-events:none}
+    .top-rule{position:absolute;left:76px;right:76px;top:54px;height:1px;background:var(--ink)}
+    .masthead{position:absolute;left:76px;right:76px;top:69px;display:flex;justify-content:space-between;align-items:baseline;font-size:18px;letter-spacing:.14em}.masthead strong{font-family:var(--serif);letter-spacing:.08em}.masthead span{color:var(--soft);letter-spacing:.07em}
+    .intro{position:absolute;left:76px;top:145px;width:520px;height:510px}.intro h1{margin:0;font-family:var(--serif);font-size:164px;line-height:.9;font-weight:600;letter-spacing:-.06em}.intro h1 span{display:block;margin-left:72px}.intro .kicker{margin-top:40px;padding-top:19px;width:430px;border-top:1px solid var(--line);font-size:25px;line-height:1.68;letter-spacing:.04em}.intro .kicker b{color:var(--red);font-weight:650}
+    .seal{position:absolute;left:500px;top:551px;width:82px;height:82px;display:grid;place-items:center;border:2px solid var(--red);color:var(--red);font-family:var(--serif);font-size:22px;line-height:1.05;letter-spacing:.15em;writing-mode:vertical-rl}
+    .system{position:absolute;left:674px;top:134px;width:1170px;height:526px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink)}
+    .system-head{height:92px;display:grid;grid-template-columns:1fr auto;align-items:center;border-bottom:1px solid var(--line)}.system-head h2{margin:0;font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:.08em}.system-head .meta{font-size:16px;color:var(--soft);letter-spacing:.14em}
+    .thesis{height:112px;display:grid;grid-template-columns:210px 1fr;align-items:center;border-bottom:1px solid var(--line)}.thesis-label{font-size:15px;color:var(--red);font-weight:650;letter-spacing:.14em}.thesis p{margin:0;font-family:var(--serif);font-size:31px;line-height:1.45;font-weight:600;letter-spacing:.03em}.thesis p b{color:var(--red);font-weight:600}
+    .module-grid{height:320px;display:grid;grid-template-columns:repeat(4,1fr)}.module{position:relative;padding:20px 24px;border-right:1px solid var(--line)}.module:last-child{border-right:0}.module:before{content:"";position:absolute;left:24px;right:24px;top:62px;height:1px;background:var(--line)}.module-top{display:flex;justify-content:space-between;color:var(--soft);font-size:16px;letter-spacing:.11em}.glyph{height:154px;display:grid;place-items:center;padding-top:25px;font-family:var(--serif);font-size:94px;line-height:1;color:var(--red);font-weight:600}.module h3{margin:2px 0 9px;text-align:center;font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:.1em}.module p{margin:0;text-align:center;color:var(--soft);font-size:16px;line-height:1.55;letter-spacing:.04em}
+    .workflow{position:absolute;left:76px;right:76px;top:704px;height:300px;display:grid;grid-template-columns:495px 1fr;column-gap:102px;border-top:2px solid var(--ink)}.promise{padding-top:25px}.eyebrow{margin-bottom:18px;color:var(--red);font-size:18px;font-weight:650;letter-spacing:.16em}.promise blockquote{margin:0;font-family:var(--serif);font-size:35px;line-height:1.52;font-weight:600;letter-spacing:.015em}.promise .note{margin-top:19px;color:var(--soft);font-size:19px;line-height:1.55}.flow-right{padding-top:26px}
+    .chain{display:grid;grid-template-columns:1fr 1.15fr 1.25fr 1.25fr 1fr 1.15fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{position:relative;min-height:92px;padding:13px 12px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step small{display:block;margin-bottom:9px;color:var(--soft);font-size:13px;letter-spacing:.1em}.step strong{font-family:var(--serif);font-size:19px;line-height:1.34;font-weight:600}.step:not(:last-child):after{content:"";position:absolute;right:-4px;top:43px;width:7px;height:7px;background:var(--red);transform:rotate(45deg);z-index:2}
+    .boundary{margin-top:22px;display:grid;grid-template-columns:160px 1fr;min-height:86px;border:1px solid var(--red);color:var(--red-dark)}.boundary b{display:grid;place-items:center;background:var(--red);color:var(--paper);font-family:var(--serif);font-size:21px;letter-spacing:.1em}.boundary p{margin:0;padding:16px 21px;font-size:20px;line-height:1.55;font-weight:550}
+    .footer{position:absolute;left:76px;right:76px;bottom:32px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);padding-top:15px;font-size:18px;letter-spacing:.06em}.footer div{display:flex;gap:17px;align-items:baseline}.footer b{color:var(--red);font-family:var(--serif);font-size:22px}.footer div:nth-child(2){justify-content:center}.footer div:nth-child(3){justify-content:flex-end}
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="八字研判 Codex Skill 项目主视觉">
+    <div class="top-rule"></div>
+    <header class="masthead"><strong>BAZI SKILL · CODEX</strong><span>OPEN SOURCE · MIT LICENSE · OFFLINE READY</span></header>
+    <section class="intro"><h1>八字<span>研判</span></h1><p class="kicker">把<b>确定性排盘</b>、传统规则与现实边界，拆成一条可复核的 Codex 工作流。</p></section>
+    <div class="seal">证据优先</div>
+    <section class="system">
+      <div class="system-head"><h2>Skill System / 三层分工，一条证据链</h2><div class="meta">PYTHON · RULE ROUTING · CALIBRATED ANSWER</div></div>
+      <div class="thesis"><div class="thesis-label">DESIGN THESIS / 设计命题</div><p>计算器负责<b>事实</b>，规则库负责<b>依据</b>，模型负责<b>综合与反证</b>。</p></div>
+      <div class="module-grid">
+        <article class="module"><div class="module-top"><span>01</span><span>CALCULATE</span></div><div class="glyph">算</div><h3>确定性排盘</h3><p>四柱 · 十神 · 藏干<br>大运 · 流年 · 关系</p></article>
+        <article class="module"><div class="module-top"><span>02</span><span>INSPECT</span></div><div class="glyph">析</div><h3>结构研判</h3><p>月令 · 根气 · 透藏<br>格局 · 病药 · 调候</p></article>
+        <article class="module"><div class="module-top"><span>03</span><span>VERIFY</span></div><div class="glyph">证</div><h3>反证校准</h3><p>支持证据 · 最强反例<br>口径差异 · 信息缺口</p></article>
+        <article class="module"><div class="module-top"><span>04</span><span>BOUND</span></div><div class="glyph">界</div><h3>现实边界</h3><p>传统象意与医疗、财务<br>法律及人生决策分开</p></article>
+      </div>
+    </section>
+    <section class="workflow">
+      <div class="promise"><div class="eyebrow">PROJECT PROMISE / 项目承诺</div><blockquote>「不是替你制造确定答案，<br>而是让每一步判断都知道从哪里来。」</blockquote><div class="note">传统文化解释体系，不包装成科学预测。</div></div>
+      <div class="flow-right">
+        <div class="chain"><div class="step"><small>INPUT</small><strong>出生信息<br>具体问题</strong></div><div class="step"><small>CALCULATE</small><strong>确定性<br>历法事实</strong></div><div class="step"><small>ROUTE</small><strong>按任务加载<br>相关规则</strong></div><div class="step"><small>REASON</small><strong>事实 → 结构<br>→ 触发</strong></div><div class="step"><small>CHECK</small><strong>最强反证<br>信息缺口</strong></div><div class="step"><small>ANSWER</small><strong>置信度<br>现实建议</strong></div></div>
+        <div class="boundary"><b>表达边界</b><p>不编造经历，不做必然承诺，不用灾祸与疾病表述制造恐惧。</p></div>
+      </div>
+    </section>
+    <footer class="footer"><div><b>一</b><span>本地计算器：历法事实可独立复核</span></div><div><b>二</b><span>按需规则库：不把所有知识塞进一段提示词</span></div><div><b>三</b><span>开放式回答：证据、反证与边界同时呈现</span></div></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "iteration": 8,
+  "system": "three isolated direct runs -> direct majority BASE -> v8 expert reviewer",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "source": ".benchmark-cache/MingLi-Bench/data/data.json",
+  "question_range": "81:160",
+  "question_count": 80,
+  "base_predictions": "evaluation/iteration_6_noskill_majority.json",
+  "reviewer_runs": 3,
+  "reviewer_aggregation": "per-question majority vote",
+  "switch_rule": "default keep BASE; change only with a complete switch certificate",
+  "development_baselines": {
+    "direct_majority": "43/80",
+    "v6_skill_majority": "39/80",
+    "v7_internal_two-layer_majority": "39/80"
+  },
+  "success_gate": "reviewer majority must exceed 43/80 without answer leakage",
+  "results": {
+    "reviewer_a": "43/80 with 2 switches",
+    "reviewer_b": "43/80 with 0 switches",
+    "reviewer_c": "43/80 with 1 switch",
+    "reviewer_majority": "43/80",
+    "switch_outcomes": "all three switches changed one wrong option to another wrong option",
+    "success_gate_passed": false
+  },
+  "status": "non-degrading orchestration candidate; expert layer showed no additive development gain",
+  "locked_before_scoring": true
+}

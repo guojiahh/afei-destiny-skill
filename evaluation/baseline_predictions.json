@@ -1,0 +1,36 @@
+{
+  "protocol": "blind-baseline-before-answer-inspection",
+  "benchmark": "BaziQA contest8_2021",
+  "benchmark_commit": "8ea8222f8bd8ef8a6f1a5fb012344935a66e7686",
+  "skill_sha256": "EE9F48ACDA7CD237B4D04789EA2815CF37A14849CD300B4AD52",
+  "created_date": "2026-08-05",
+  "answers_inspected_before_prediction": false,
+  "scored": true,
+  "heldout_score": {
+    "correct": 6,
+    "count": 20,
+    "accuracy": 0.3
+  },
+  "predictions": {
+    "P025-Q1": "B",
+    "P025-Q2": "B",
+    "P025-Q3": "B",
+    "P025-Q4": "B",
+    "P025-Q5": "C",
+    "P026-Q6": "B",
+    "P026-Q7": "C",
+    "P026-Q8": "C",
+    "P026-Q9": "C",
+    "P026-Q10": "A",
+    "P027-Q11": "C",
+    "P027-Q12": "B",
+    "P027-Q13": "A",
+    "P027-Q14": "D",
+    "P027-Q15": "B",
+    "P028-Q16": "B",
+    "P028-Q17": "A",
+    "P028-Q18": "C",
+    "P028-Q19": "A",
+    "P028-Q20": "C"
+  }
+}

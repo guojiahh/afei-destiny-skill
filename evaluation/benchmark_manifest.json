@@ -1,0 +1,21 @@
+{
+  "mingli_bench": {
+    "repository": "https://github.com/DestinyLinker/MingLi-Bench",
+    "commit": "b7433280fd86d7a7c27debbc47d0303c218f0bfd",
+    "role": "development benchmark and compatibility target",
+    "answer_data_must_not_be_loaded_by_the_skill": true
+  },
+  "baziqa": {
+    "repository": "https://github.com/ChenJiangxi/BaziQA",
+    "commit": "8ea8222f8bd8ef8a6f1a5fb012344935a66e7686",
+    "development_split": "contest8_2022 through contest8_2025, overlapping MingLi-Bench",
+    "held_out_split": "contest8_2021 persons P025 through P028, 20 questions",
+    "answer_data_must_not_be_loaded_by_the_skill": true
+  },
+  "evaluation_rules": [
+    "Never copy benchmark answers or answered questions into SKILL.md or references.",
+    "Generate final held-out predictions before scoring either baseline or final predictions.",
+    "Report exact-match accuracy and per-domain errors separately from open-ended quality.",
+    "Treat multiple-choice accuracy as a reasoning probe, not proof of real-world predictive validity."
+  ]
+}

@@ -1,0 +1,12 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+LICENSE text eol=lf
+**/LICENSE text eol=lf
+*.zip binary
+*.png binary
+*.ico binary
+*.woff2 binary

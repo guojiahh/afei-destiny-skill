@@ -1,0 +1,20 @@
+{
+  "protocol": "answers-redacted-before-prediction",
+  "benchmark": "MingLi-Bench",
+  "benchmark_commit": "b7433280fd86d7a7c27debbc47d0303c218f0bfd",
+  "split": "questions 71-80",
+  "skill_version": "v3 layer-sensitive relations and partial-combination calculator",
+  "answers_inspected_before_prediction": false,
+  "predictions": {
+    "ftb_0071": "C",
+    "ftb_0072": "A",
+    "ftb_0073": "D",
+    "ftb_0074": "D",
+    "ftb_0075": "A",
+    "ftb_0076": "A",
+    "ftb_0077": "B",
+    "ftb_0078": "B",
+    "ftb_0079": "B",
+    "ftb_0080": "C"
+  }
+}
