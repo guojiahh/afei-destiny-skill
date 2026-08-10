@@ -1,0 +1,248 @@
+{
+  "allowed_failure_reasons": [
+    "calculation",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_reasoning",
+    "knowledge_gap",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2011_e02-c1_q01",
+      "case_id": "e02-c1",
+      "profile_text": "命例一 男 公历 1972-11-02 · 巳时 中国大陆 唐山市 乾造 壬 子 庚 戌 丁 酉 乙 巳",
+      "question": "1976丙辰年，唐山大地震中六亲情况?（命主最小，没有哥哥，只有三位姐姐）",
+      "options": {
+        "A": "父亲在地震中死亡（母亲与三位姐姐健在）",
+        "B": "母亲在地震中死亡（父亲与三位姐姐健在）",
+        "C": "三位姐姐其中有一、二或三位姐姐在地震中死亡（母亲与父亲健在）",
+        "D": "父母与姐姐全家死亡，只得命主幸存",
+        "E": "全家幸存，父母与姐姐都没有死亡"
+      },
+      "prediction": "A",
+      "answer": "E",
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c1_q02",
+      "case_id": "e02-c1",
+      "profile_text": "命例一 男 公历 1972-11-02 · 巳时 中国大陆 唐山市 乾造 壬 子 庚 戌 丁 酉 乙 巳",
+      "question": "命主何年移民到香港定居?",
+      "options": {
+        "A": "西历1988年1月2x日（丁卯年丑月大寒后，戊辰立春前）",
+        "B": "西历1992年1月2x日（辛未年丑月大寒后，壬申立春前）",
+        "C": "西历1997年1月2x日（丙子年丑月大寒后，丁丑立春前）",
+        "D": "西历2000年1月2x日（己卯年丑月大寒后，庚辰立春前）",
+        "E": "西历2002年1月2x日（辛巳年丑月大寒后，壬午立春前）"
+      },
+      "prediction": "A",
+      "answer": "E",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c1_q03",
+      "case_id": "e02-c1",
+      "profile_text": "命例一 男 公历 1972-11-02 · 巳时 中国大陆 唐山市 乾造 壬 子 庚 戌 丁 酉 乙 巳",
+      "question": "命主在何年结婚?",
+      "options": {
+        "A": "1992 壬申年",
+        "B": "1995 乙亥年",
+        "C": "1996 丙子年",
+        "D": "1997 丁丑年",
+        "E": "1999 己卯年"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c1_q04",
+      "case_id": "e02-c1",
+      "profile_text": "命例一 男 公历 1972-11-02 · 巳时 中国大陆 唐山市 乾造 壬 子 庚 戌 丁 酉 乙 巳",
+      "question": "命主第一胎出生之BB仔在何年?",
+      "options": {
+        "A": "2000 庚辰年",
+        "B": "2001 辛巳年",
+        "C": "2004 甲申年",
+        "D": "2007 丁亥年",
+        "E": "2009 己丑年"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c1_q05",
+      "case_id": "e02-c1",
+      "profile_text": "命例一 男 公历 1972-11-02 · 巳时 中国大陆 唐山市 乾造 壬 子 庚 戌 丁 酉 乙 巳",
+      "question": "2003癸未年发生何事?",
+      "options": {
+        "A": "得到沙士之病",
+        "B": "打架破相而引起官非",
+        "C": "买楼",
+        "D": "创业",
+        "E": "破产"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c2_q01",
+      "case_id": "e02-c2",
+      "profile_text": "命例二 男 公历 1981-09-08 · 戌时 中国台湾 乾造 辛 酉 丁 酉 己 丑 甲 戌",
+      "question": "请问此造的学历程度？",
+      "options": {
+        "A": "小学",
+        "B": "中学",
+        "C": "大学",
+        "D": "小学以下",
+        "E": "硕士以上"
+      },
+      "prediction": "C",
+      "answer": "E",
+      "tags": [
+        "性格外貌学业"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c3_q01",
+      "case_id": "e02-c3",
+      "profile_text": "命例三 男 公历 1994-08-28 · 丑时 中国香港 乾造 甲 戌 壬 申 丙 戌 己 丑",
+      "question": "命主2011年时的家庭状况：",
+      "options": {
+        "A": "父亲坐牢",
+        "B": "母亲坐牢",
+        "C": "全家移民",
+        "D": "父母双亡",
+        "E": "父母破产"
+      },
+      "prediction": "E",
+      "answer": "B",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c3_q02",
+      "case_id": "e02-c3",
+      "profile_text": "命例三 男 公历 1994-08-28 · 丑时 中国香港 乾造 甲 戌 壬 申 丙 戌 己 丑",
+      "question": "命主的母亲于2010年时：",
+      "options": {
+        "A": "移民外地",
+        "B": "自杀",
+        "C": "开刀手术",
+        "D": "车祸",
+        "E": "随人改嫁"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c3_q03",
+      "case_id": "e02-c3",
+      "profile_text": "命例三 男 公历 1994-08-28 · 丑时 中国香港 乾造 甲 戌 壬 申 丙 戌 己 丑",
+      "question": "命主的弟弟妹妹同于那一年身亡：",
+      "options": {
+        "A": "2007",
+        "B": "2008",
+        "C": "2009",
+        "D": "2010",
+        "E": "2011"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "tags": [
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c3_q04",
+      "case_id": "e02-c3",
+      "profile_text": "命例三 男 公历 1994-08-28 · 丑时 中国香港 乾造 甲 戌 壬 申 丙 戌 己 丑",
+      "question": "弟妹同年身亡原因：",
+      "options": {
+        "A": "被杀",
+        "B": "车祸",
+        "C": "传染病绝症",
+        "D": "溺死",
+        "E": "母腹夭折"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "tags": [
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2011_e02-c3_q05",
+      "case_id": "e02-c3",
+      "profile_text": "命例三 男 公历 1994-08-28 · 丑时 中国香港 乾造 甲 戌 壬 申 丙 戌 己 丑",
+      "question": "命主2011年曾经有那些经历：",
+      "options": {
+        "A": "开刀手术",
+        "B": "自杀不逐",
+        "C": "车祸不死",
+        "D": "官司䜣讼",
+        "E": "移民外地"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    }
+  ]
+}

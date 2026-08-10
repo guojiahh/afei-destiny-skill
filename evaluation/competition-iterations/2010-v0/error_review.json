@@ -1,0 +1,142 @@
+{
+  "allowed_failure_reasons": [
+    "calculation",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_reasoning",
+    "knowledge_gap",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2010_e01-c1_q02",
+      "case_id": "e01-c1",
+      "profile_text": "命例一 出题： 李文渊师傅 女 公历 1982-09-27 · 申时 中国香港 坤造 壬 戌 己 酉 癸 丑 庚 申",
+      "question": "命主何年因病（肺炎）而做手术?",
+      "options": {
+        "A": "2007丁亥",
+        "B": "2001辛巳",
+        "C": "2006丙戌",
+        "D": "2000庚辰",
+        "E": "2004甲申"
+      },
+      "prediction": "D",
+      "answer": "E",
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2010_e01-c2_q01",
+      "case_id": "e01-c2",
+      "profile_text": "命例二 出题： 史宾沙先生 男 公历 1960-12-10 · 巳时 中国内地 乾造 庚 子 戊 子 壬 申 乙 巳",
+      "question": "请问命主在1986年丙寅年，以下那件事正确?",
+      "options": {
+        "A": "跟女友分手",
+        "B": "母亲死亡",
+        "C": "车祸破财",
+        "D": "大赚其财",
+        "E": "命主重病"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2010_e01-c2_q02",
+      "case_id": "e01-c2",
+      "profile_text": "命例二 出题： 史宾沙先生 男 公历 1960-12-10 · 巳时 中国内地 乾造 庚 子 戊 子 壬 申 乙 巳",
+      "question": "请问命主在1998年戊寅年，以下那件事正确?",
+      "options": {
+        "A": "大赚其财",
+        "B": "车祸破财",
+        "C": "惹上官符",
+        "D": "此年得子",
+        "E": "此年结婚"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2010_e01-c3_q01",
+      "case_id": "e01-c3",
+      "profile_text": "命例三 出题： 鼎大图书公司负责人培哥 女 公历 1962-09-29 · 寅时 坤造 壬 寅 己 酉 庚 午 戊 寅",
+      "question": "请问命主在以下那一年，身体健康出了大问题（提示：为生死攸关的重病）?",
+      "options": {
+        "A": "2006 丙戌",
+        "B": "2007 丁亥",
+        "C": "2008 戊子",
+        "D": "2009 己丑",
+        "E": "2010 庚寅"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "tags": [
+        "健康灾厄"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2010_e01-c3_q02",
+      "case_id": "e01-c3",
+      "profile_text": "命例三 出题： 鼎大图书公司负责人培哥 女 公历 1962-09-29 · 寅时 坤造 壬 寅 己 酉 庚 午 戊 寅",
+      "question": "请问命主结婚之年在何年?",
+      "options": {
+        "A": "1987 丁卯",
+        "B": "1989 己已",
+        "C": "1991 辛未",
+        "D": "1992 壬申",
+        "E": "1993 癸酉"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2010_e01-c3_q03",
+      "case_id": "e01-c3",
+      "profile_text": "命例三 出题： 鼎大图书公司负责人培哥 女 公历 1962-09-29 · 寅时 坤造 壬 寅 己 酉 庚 午 戊 寅",
+      "question": "请问命主子女数目?",
+      "options": {
+        "A": "没有子女",
+        "B": "一名子",
+        "C": "一名女",
+        "D": "一名子一名女",
+        "E": "两名子一名女"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "tags": [
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    }
+  ]
+}

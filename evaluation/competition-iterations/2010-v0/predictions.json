@@ -1,0 +1,14 @@
+{
+  "protocol": "answers-redacted-single-skill-pass",
+  "predictions": {
+    "gfc_2010_e01-c1_q01": "A",
+    "gfc_2010_e01-c1_q02": "D",
+    "gfc_2010_e01-c1_q03": "E",
+    "gfc_2010_e01-c2_q01": "A",
+    "gfc_2010_e01-c2_q02": "C",
+    "gfc_2010_e01-c2_q03": "B",
+    "gfc_2010_e01-c3_q01": "A",
+    "gfc_2010_e01-c3_q02": "C",
+    "gfc_2010_e01-c3_q03": "C"
+  }
+}

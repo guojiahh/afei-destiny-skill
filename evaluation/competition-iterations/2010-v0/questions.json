@@ -1,0 +1,259 @@
+{
+  "protocol": "answers-redacted-before-prediction",
+  "contest_id": "global_fortune_competition_2010",
+  "year": 2010,
+  "source_url": "https://asklingxi.com/mingli-dasai/2010",
+  "count": 9,
+  "cases": [
+    {
+      "case_id": "e01-c1",
+      "source_url": "https://asklingxi.com/mingli-dasai/2010#e01-c1",
+      "profile_tokens": [
+        "命例一",
+        "出题：",
+        "李文渊师傅",
+        "女",
+        "公历",
+        "1982-09-27",
+        "· 申时",
+        "中国香港",
+        "坤造",
+        "壬",
+        "戌",
+        "己",
+        "酉",
+        "癸",
+        "丑",
+        "庚",
+        "申"
+      ],
+      "chart_url": "https://asklingxi.com/bazi/quiz/e01-c1",
+      "profile_text": "命例一 出题： 李文渊师傅 女 公历 1982-09-27 · 申时 中国香港 坤造 壬 戌 己 酉 癸 丑 庚 申",
+      "author": "李文渊师傅",
+      "school": null,
+      "gender": "女",
+      "birth_date": "1982-09-27",
+      "four_pillars": [
+        "壬戌",
+        "己酉",
+        "癸丑",
+        "庚申"
+      ],
+      "questions": [
+        {
+          "id": "gfc_2010_e01-c1_q01",
+          "question_number": 1,
+          "question": "命主男朋友被人谋杀在何年?（同年命主祖父仙逝）",
+          "options": {
+            "A": "2002壬午",
+            "B": "2008戊子",
+            "C": "2005乙酉",
+            "D": "2001辛巳",
+            "E": "2006丙戌"
+          },
+          "tags": [
+            "年份事件",
+            "婚姻感情",
+            "六亲子女",
+            "健康灾厄"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c1_q02",
+          "question_number": 2,
+          "question": "命主何年因病（肺炎）而做手术?",
+          "options": {
+            "A": "2007丁亥",
+            "B": "2001辛巳",
+            "C": "2006丙戌",
+            "D": "2000庚辰",
+            "E": "2004甲申"
+          },
+          "tags": [
+            "年份事件",
+            "健康灾厄"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c1_q03",
+          "question_number": 3,
+          "question": "命主2009己丑发生何事?",
+          "options": {
+            "A": "得到230万保险金钱",
+            "B": "卖楼而得财纯利63万",
+            "C": "被男朋友呃钱而分手",
+            "D": "创业",
+            "E": "被公司迫使辞职而失去工作"
+          },
+          "tags": [
+            "年份事件"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e01-c2",
+      "source_url": "https://asklingxi.com/mingli-dasai/2010#e01-c2",
+      "profile_tokens": [
+        "命例二",
+        "出题：",
+        "史宾沙先生",
+        "男",
+        "公历",
+        "1960-12-10",
+        "· 巳时",
+        "中国内地",
+        "乾造",
+        "庚",
+        "子",
+        "戊",
+        "子",
+        "壬",
+        "申",
+        "乙",
+        "巳"
+      ],
+      "chart_url": "https://asklingxi.com/bazi/quiz/e01-c2",
+      "profile_text": "命例二 出题： 史宾沙先生 男 公历 1960-12-10 · 巳时 中国内地 乾造 庚 子 戊 子 壬 申 乙 巳",
+      "author": "史宾沙先生",
+      "school": null,
+      "gender": "男",
+      "birth_date": "1960-12-10",
+      "four_pillars": [
+        "庚子",
+        "戊子",
+        "壬申",
+        "乙巳"
+      ],
+      "questions": [
+        {
+          "id": "gfc_2010_e01-c2_q01",
+          "question_number": 1,
+          "question": "请问命主在1986年丙寅年，以下那件事正确?",
+          "options": {
+            "A": "跟女友分手",
+            "B": "母亲死亡",
+            "C": "车祸破财",
+            "D": "大赚其财",
+            "E": "命主重病"
+          },
+          "tags": [
+            "年份事件"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c2_q02",
+          "question_number": 2,
+          "question": "请问命主在1998年戊寅年，以下那件事正确?",
+          "options": {
+            "A": "大赚其财",
+            "B": "车祸破财",
+            "C": "惹上官符",
+            "D": "此年得子",
+            "E": "此年结婚"
+          },
+          "tags": [
+            "年份事件"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c2_q03",
+          "question_number": 3,
+          "question": "请问命主在2002年壬午年，以下那件事正确?",
+          "options": {
+            "A": "大赚其财",
+            "B": "大破其财",
+            "C": "桃花惹祸",
+            "D": "父亲死亡",
+            "E": "母亲死亡"
+          },
+          "tags": [
+            "年份事件"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "e01-c3",
+      "source_url": "https://asklingxi.com/mingli-dasai/2010#e01-c3",
+      "profile_tokens": [
+        "命例三",
+        "出题：",
+        "鼎大图书公司负责人培哥",
+        "女",
+        "公历",
+        "1962-09-29",
+        "· 寅时",
+        "坤造",
+        "壬",
+        "寅",
+        "己",
+        "酉",
+        "庚",
+        "午",
+        "戊",
+        "寅"
+      ],
+      "chart_url": "https://asklingxi.com/bazi/quiz/e01-c3",
+      "profile_text": "命例三 出题： 鼎大图书公司负责人培哥 女 公历 1962-09-29 · 寅时 坤造 壬 寅 己 酉 庚 午 戊 寅",
+      "author": "鼎大图书公司负责人培哥",
+      "school": null,
+      "gender": "女",
+      "birth_date": "1962-09-29",
+      "four_pillars": [
+        "壬寅",
+        "己酉",
+        "庚午",
+        "戊寅"
+      ],
+      "questions": [
+        {
+          "id": "gfc_2010_e01-c3_q01",
+          "question_number": 1,
+          "question": "请问命主在以下那一年，身体健康出了大问题（提示：为生死攸关的重病）?",
+          "options": {
+            "A": "2006 丙戌",
+            "B": "2007 丁亥",
+            "C": "2008 戊子",
+            "D": "2009 己丑",
+            "E": "2010 庚寅"
+          },
+          "tags": [
+            "健康灾厄"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c3_q02",
+          "question_number": 2,
+          "question": "请问命主结婚之年在何年?",
+          "options": {
+            "A": "1987 丁卯",
+            "B": "1989 己已",
+            "C": "1991 辛未",
+            "D": "1992 壬申",
+            "E": "1993 癸酉"
+          },
+          "tags": [
+            "年份事件",
+            "婚姻感情"
+          ]
+        },
+        {
+          "id": "gfc_2010_e01-c3_q03",
+          "question_number": 3,
+          "question": "请问命主子女数目?",
+          "options": {
+            "A": "没有子女",
+            "B": "一名子",
+            "C": "一名女",
+            "D": "一名子一名女",
+            "E": "两名子一名女"
+          },
+          "tags": [
+            "六亲子女"
+          ]
+        }
+      ]
+    }
+  ]
+}

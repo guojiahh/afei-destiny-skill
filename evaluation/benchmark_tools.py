@@ -29,6 +29,17 @@ def baziqa_people(path: Path) -> list[dict[str, Any]]:
     return [item for item in data if "person_id" in item]
 
 
+def competition_questions(path: Path) -> list[dict[str, Any]]:
+    data = load_json(path)
+    if not isinstance(data, dict) or "cases" not in data:
+        raise ValueError(f"not a normalized competition dataset: {path}")
+    return [
+        question
+        for case in data["cases"]
+        for question in case.get("questions", [])
+    ]
+
+
 def parse_range(value: str | None) -> tuple[int, int] | None:
     if value is None:
         return None
@@ -299,7 +310,12 @@ def leak_check(args: argparse.Namespace) -> None:
     ids: list[str] = []
     questions: list[str] = []
     for source in args.sources:
-        if "MingLi" in str(source) or source.name == "data.json":
+        source_data = load_json(source)
+        if isinstance(source_data, dict) and "cases" in source_data:
+            for q in competition_questions(source):
+                ids.append(q["id"])
+                questions.append(q["question"])
+        elif "MingLi" in str(source) or source.name == "data.json":
             for q in mingli_questions(source):
                 ids.append(q["id"])
                 questions.append(q["question"])

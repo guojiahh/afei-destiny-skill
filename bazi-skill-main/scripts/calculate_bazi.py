@@ -201,6 +201,13 @@ def pair_relations(a: dict[str, Any], b: dict[str, Any]) -> list[dict[str, str]]
     stem_pair = frozenset((a["stem"], b["stem"]))
     branch_pair = frozenset((a["branch"], b["branch"]))
     context = f'{a["label"]}-{b["label"]}'
+    if a.get("ganzhi") and a.get("ganzhi") == b.get("ganzhi"):
+        results.append({"context": context, "layer": "干支", "relation": "伏吟"})
+    else:
+        if a["stem"] == b["stem"]:
+            results.append({"context": context, "layer": "天干", "relation": "同干"})
+        if a["branch"] == b["branch"]:
+            results.append({"context": context, "layer": "地支", "relation": "同支"})
     if stem_pair in STEM_COMBINES:
         results.append({"context": context, "layer": "天干", "relation": STEM_COMBINES[stem_pair]})
     if stem_pair in STEM_CLASHES:
@@ -232,6 +239,32 @@ def natal_relations(pillars: list[dict[str, Any]]) -> list[dict[str, str]]:
         for members, name in pattern_map.items():
             if members.issubset(branches):
                 results.append({"context": "命局", "layer": "地支", "relation": name})
+    return results
+
+
+def composite_branch_relations(
+    pillars: list[dict[str, Any]], context: str
+) -> list[dict[str, Any]]:
+    """Return three-branch structures and the labels that supply their members."""
+    results: list[dict[str, Any]] = []
+    labels_by_branch: dict[str, list[str]] = defaultdict(list)
+    for pillar in pillars:
+        labels_by_branch[pillar["branch"]].append(pillar["label"])
+    available = set(labels_by_branch)
+    for pattern_map in (TRIPLE_COMBINES, TRIPLE_MEETINGS, TRIPLE_PUNISH):
+        for members, name in pattern_map.items():
+            if members.issubset(available):
+                results.append(
+                    {
+                        "context": context,
+                        "layer": "地支",
+                        "relation": name,
+                        "members": {
+                            branch: labels_by_branch[branch]
+                            for branch in sorted(members)
+                        },
+                    }
+                )
     return results
 
 
@@ -469,6 +502,25 @@ def build_chart(
             (row for row in yun_precise["cycles"] if row["start_year"] <= target_year <= row["end_year"]),
             None,
         )
+        active_luck = None
+        luck_with_natal: list[dict[str, str]] = []
+        luck_with_target: list[dict[str, str]] = []
+        composite_formations: list[dict[str, Any]] = []
+        if active_cycle and active_cycle.get("ganzhi"):
+            luck_ganzhi = active_cycle["ganzhi"]
+            active_luck = {
+                "label": f"大运{luck_ganzhi}",
+                "ganzhi": luck_ganzhi,
+                "stem": luck_ganzhi[0],
+                "branch": luck_ganzhi[1],
+            }
+            for pillar in pillars:
+                luck_with_natal.extend(pair_relations(pillar, active_luck))
+            luck_with_target = pair_relations(active_luck, target)
+            composite_formations = composite_branch_relations(
+                [*pillars, active_luck, target],
+                f"原局-大运{luck_ganzhi}-流年{target_year}",
+            )
         payload["target_year"] = {
             "year": target_year,
             "ganzhi": target_ganzhi,
@@ -476,6 +528,9 @@ def build_chart(
             "nominal_age": target_year - calculation_moment.year + 1,
             "active_luck_cycle": active_cycle,
             "interactions_with_natal_chart": interactions,
+            "interactions_of_luck_with_natal_chart": luck_with_natal,
+            "interactions_between_luck_and_year": luck_with_target,
+            "composite_formations": composite_formations,
         }
     return payload
 

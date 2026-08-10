@@ -57,3 +57,24 @@ python evaluation/benchmark_tools.py leak-check --skill bazi-skill-main --source
 ```
 
 Multiple-choice exact match 只是与固定答案键的一致性指标，不是现实预测有效性的证据。原始分、相对无技能的增益、计算正确性和开放式回答质量必须分开报告。
+
+## 历届全球命理师大赛错题循环
+
+公开题目的含答案标准化缓存必须写入 `.benchmark-cache/global-fortune-competition/`：
+
+```powershell
+python evaluation/import_competition_questions.py --years 2010:2025
+```
+
+每轮依次执行 `prepare → 作答 → lock → reveal`。`prepare` 固定题库与技能内容哈希并生成
+无答案题包；`lock` 验证全部题号并拒绝覆盖；只有 `reveal` 可以读取答案生成分数和错题单。
+
+```powershell
+python evaluation/competition_iteration.py prepare --input .benchmark-cache/global-fortune-competition/contest_2012.json --round-dir evaluation/competition-iterations/2012-v1 --skill bazi-skill-main --model MODEL
+python evaluation/competition_iteration.py lock --round-dir evaluation/competition-iterations/2012-v1 --predictions evaluation/competition-iterations/2012-v1/predictions.json
+python evaluation/competition_iteration.py reveal --input .benchmark-cache/global-fortune-competition/contest_2012.json --round-dir evaluation/competition-iterations/2012-v1
+```
+
+网页解析或调试过程中看见答案、选项高亮或排除信息时，必须写入 manifest 的
+`contamination`，该轮仅作训练，不计盲测。Skill 更新只接收跨题、跨届重复出现的计算、
+路由或推理问题；不得复制原题、答案、人物经历或按字母分布优化。

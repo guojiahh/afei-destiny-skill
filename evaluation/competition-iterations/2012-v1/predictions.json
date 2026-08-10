@@ -1,0 +1,20 @@
+{
+  "protocol": "answers-redacted-single-skill-pass-full-luck-year-matrix",
+  "predictions": {
+    "gfc_2012_e03-c1_q01": "D",
+    "gfc_2012_e03-c1_q02": "D",
+    "gfc_2012_e03-c1_q03": "D",
+    "gfc_2012_e03-c1_q04": "C",
+    "gfc_2012_e03-c1_q05": "C",
+    "gfc_2012_e03-c2_q01": "D",
+    "gfc_2012_e03-c2_q02": "B",
+    "gfc_2012_e03-c2_q03": "A",
+    "gfc_2012_e03-c2_q04": "B",
+    "gfc_2012_e03-c2_q05": "A",
+    "gfc_2012_e03-c3_q01": "A",
+    "gfc_2012_e03-c3_q02": "C",
+    "gfc_2012_e03-c3_q03": "C",
+    "gfc_2012_e03-c3_q04": "B",
+    "gfc_2012_e03-c3_q05": "C"
+  }
+}

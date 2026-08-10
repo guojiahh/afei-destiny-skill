@@ -63,6 +63,10 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 - `luck_cycles.primary`：大运起运和运序。
 - `target_year`：流年、大运与原局触发。
 
+年份选择题有两个以上候选年份时，不得逐年凭印象比较。使用
+`scripts/compare_candidate_years.py` 一次生成同尺度矩阵，并同时核对原局↔大运、
+原局↔流年、大运↔流年及三方成局。
+
 若运行环境无法执行脚本，明确标记“排盘未由计算器复核”，只在用户已提供四柱时继续解释。
 
 ## 自适应推理

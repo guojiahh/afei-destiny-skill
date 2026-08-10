@@ -1,0 +1,260 @@
+{
+  "allowed_failure_reasons": [
+    "calculation",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_reasoning",
+    "knowledge_gap",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2012_e03-c1_q01",
+      "case_id": "e03-c1",
+      "profile_text": "命例一 出题： 李文渊 女 公历 1979-10-05 · 戌时 坤造 己 未 癸 酉 乙 巳 丙 戌",
+      "question": "1992壬申年，有何特别事情发生？",
+      "options": {
+        "A": "外国升学",
+        "B": "肺结核病，食药半年",
+        "C": "失足意外，头部流血，而蓬了几针",
+        "D": "官非，在学校打架，而被警察调查命主，是否三合会之会员"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c1_q02",
+      "case_id": "e03-c1",
+      "profile_text": "命例一 出题： 李文渊 女 公历 1979-10-05 · 戌时 坤造 己 未 癸 酉 乙 巳 丙 戌",
+      "question": "此命在何年毕业，而投身社会工作？",
+      "options": {
+        "A": "1995乙亥",
+        "B": "1997丁丑",
+        "C": "1999己卯",
+        "D": "2002壬午"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c1_q03",
+      "case_id": "e03-c1",
+      "profile_text": "命例一 出题： 李文渊 女 公历 1979-10-05 · 戌时 坤造 己 未 癸 酉 乙 巳 丙 戌",
+      "question": "推算命主何两个流年为拍拖分手之年份？",
+      "options": {
+        "A": "2004甲申与2009己丑",
+        "B": "2005乙酉与2008戊子",
+        "C": "2006丙戌与2011辛卯",
+        "D": "2007丁亥与2010庚寅"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "tags": [
+        "其他"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c1_q04",
+      "case_id": "e03-c1",
+      "profile_text": "命例一 出题： 李文渊 女 公历 1979-10-05 · 戌时 坤造 己 未 癸 酉 乙 巳 丙 戌",
+      "question": "推算此命在2009己丑年事业成就，在香港平均一个月收入大约何皆层命格？",
+      "options": {
+        "A": "$9000以下，底下皆层之收入",
+        "B": "$9000—$25000，一般普通收入数",
+        "C": "$25000—$90000，中产收入",
+        "D": "$90000以上之高收入"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c1_q05",
+      "case_id": "e03-c1",
+      "profile_text": "命例一 出题： 李文渊 女 公历 1979-10-05 · 戌时 坤造 己 未 癸 酉 乙 巳 丙 戌",
+      "question": "评论此命在2010庚寅年的事业状态？",
+      "options": {
+        "A": "一般打工仔",
+        "B": "是一位医生",
+        "C": "创业生意",
+        "D": "家庭主妇"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c2_q01",
+      "case_id": "e03-c2",
+      "profile_text": "命例二 出题： 史宾沙 女 公历 1983-06-28 · 辰时 坤造 癸 亥 戊 午 丁 亥 甲 辰",
+      "question": "以下那种是最贴近命主在5-15岁（丁卯年至丁丑年）之父母情况？",
+      "options": {
+        "A": "父母双亡，舅父养大",
+        "B": "父存母亡",
+        "C": "母有外情，然后离婚",
+        "D": "父有外情，然后离婚"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c2_q04",
+      "case_id": "e03-c2",
+      "profile_text": "命例二 出题： 史宾沙 女 公历 1983-06-28 · 辰时 坤造 癸 亥 戊 午 丁 亥 甲 辰",
+      "question": "请问以下那种是最贴近命主在2001-2002年之感情状况？",
+      "options": {
+        "A": "男友出现第三者",
+        "B": "命主自己有第三者",
+        "C": "命主这两年间同时间有四位男友",
+        "D": "男友有第三者，自己又同时爱上一位有女友的男人"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c3_q01",
+      "case_id": "e03-c3",
+      "profile_text": "命例三 出题： 鼎大图书 男 公历 1955-03-25 · 寅时 乾造 乙 未 己 卯 乙 酉 戊 寅",
+      "question": "最好的大运时间是那一个?",
+      "options": {
+        "A": "丁丑运（1971年—1980年）",
+        "B": "丙子运（1981年—1990年）",
+        "C": "乙亥运（1991年—2000年）",
+        "D": "甲戌运（2001年—2010年）"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "tags": [
+        "其他"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c3_q02",
+      "case_id": "e03-c3",
+      "profile_text": "命例三 出题： 鼎大图书 男 公历 1955-03-25 · 寅时 乾造 乙 未 己 卯 乙 酉 戊 寅",
+      "question": "现在为止，有几个小孩?",
+      "options": {
+        "A": "一子",
+        "B": "一女",
+        "C": "一子一女",
+        "D": "两女"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "tags": [
+        "其他"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c3_q03",
+      "case_id": "e03-c3",
+      "profile_text": "命例三 出题： 鼎大图书 男 公历 1955-03-25 · 寅时 乾造 乙 未 己 卯 乙 酉 戊 寅",
+      "question": "1999己卯年发生何事?",
+      "options": {
+        "A": "被劫",
+        "B": "破产",
+        "C": "父亡",
+        "D": "母亡"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c3_q04",
+      "case_id": "e03-c3",
+      "profile_text": "命例三 出题： 鼎大图书 男 公历 1955-03-25 · 寅时 乾造 乙 未 己 卯 乙 酉 戊 寅",
+      "question": "2004甲申年发生何事?",
+      "options": {
+        "A": "大病",
+        "B": "断脚",
+        "C": "破产",
+        "D": "流亡外国"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "tags": [
+        "年份事件"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    },
+    {
+      "id": "gfc_2012_e03-c3_q05",
+      "case_id": "e03-c3",
+      "profile_text": "命例三 出题： 鼎大图书 男 公历 1955-03-25 · 寅时 乾造 乙 未 己 卯 乙 酉 戊 寅",
+      "question": "那年正式签纸离婚?",
+      "options": {
+        "A": "1991辛未年（乙亥运）",
+        "B": "1998戊寅年（乙亥运）",
+        "C": "2005乙酉年（甲戌运）",
+        "D": "2009己丑年（甲戌运）"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "failure_reason": null,
+      "evidence": [],
+      "generalizable_change": null
+    }
+  ]
+}

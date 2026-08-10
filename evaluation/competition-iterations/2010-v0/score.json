@@ -1,0 +1,132 @@
+{
+  "protocol": "locked-predictions-then-reveal",
+  "count": 9,
+  "correct": 3,
+  "accuracy": 0.3333,
+  "answer_distribution": {
+    "A": 3,
+    "B": 1,
+    "C": 1,
+    "D": 2,
+    "E": 2
+  },
+  "per_tag": {
+    "健康灾厄": {
+      "count": 3,
+      "correct": 1,
+      "accuracy": 0.3333
+    },
+    "六亲子女": {
+      "count": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "婚姻感情": {
+      "count": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "年份事件": {
+      "count": 7,
+      "correct": 3,
+      "accuracy": 0.4286
+    }
+  },
+  "details": [
+    {
+      "id": "gfc_2010_e01-c1_q01",
+      "case_id": "e01-c1",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "tags": [
+        "年份事件",
+        "婚姻感情",
+        "六亲子女",
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c1_q02",
+      "case_id": "e01-c1",
+      "prediction": "D",
+      "answer": "E",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c1_q03",
+      "case_id": "e01-c1",
+      "prediction": "E",
+      "answer": "E",
+      "correct": true,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c2_q01",
+      "case_id": "e01-c2",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c2_q02",
+      "case_id": "e01-c2",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c2_q03",
+      "case_id": "e01-c2",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c3_q01",
+      "case_id": "e01-c3",
+      "prediction": "A",
+      "answer": "C",
+      "correct": false,
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c3_q02",
+      "case_id": "e01-c3",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2010_e01-c3_q03",
+      "case_id": "e01-c3",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "tags": [
+        "六亲子女"
+      ]
+    }
+  ]
+}

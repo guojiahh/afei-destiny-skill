@@ -1,0 +1,21 @@
+{
+  "status": "prepared",
+  "created_at": "2026-08-10T04:29:56.356102+00:00",
+  "dataset_path": ".benchmark-cache\\global-fortune-competition\\contest_2012.json",
+  "dataset_sha256": "a09bc0222725e4c9de280826fa359067b7187f79ff9a7496463ce8894ca4a792",
+  "skill_path": "bazi-skill-main",
+  "skill_sha256": "ce2f7b2824e36fd5b20abf0472b14582b4b5cb87dc61b411171573b73668a3ec",
+  "model": "gpt-5.6-codex",
+  "count": 15,
+  "contamination": [],
+  "failure_reason_schema": [
+    "calculation",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_reasoning",
+    "knowledge_gap",
+    "uncalibrated_guess"
+  ]
+}

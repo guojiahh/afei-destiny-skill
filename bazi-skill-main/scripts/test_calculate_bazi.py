@@ -11,7 +11,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from calculate_bazi import build_chart, correct_true_solar_time, pair_relations
+from calculate_bazi import (
+    build_chart,
+    composite_branch_relations,
+    correct_true_solar_time,
+    pair_relations,
+)
 
 
 class ChartRegressionTests(unittest.TestCase):
@@ -41,6 +46,24 @@ class ChartRegressionTests(unittest.TestCase):
         )
         self.assertEqual("辛卯", result["target_year"]["ganzhi"])
         self.assertIsNotNone(result["target_year"]["active_luck_cycle"])
+        self.assertIn("interactions_of_luck_with_natal_chart", result["target_year"])
+        self.assertIn("interactions_between_luck_and_year", result["target_year"])
+        self.assertIn("composite_formations", result["target_year"])
+
+    def test_luck_year_matrix_reports_same_stem_and_branch_clash(self):
+        result = build_chart(
+            calendar="solar", year=1972, month=11, day=2,
+            hour=10, minute=0, gender="male", target_year=2004,
+        )
+        relations = result["target_year"]["interactions_between_luck_and_year"]
+        self.assertIn(
+            {"context": "大运甲寅-流年2004", "layer": "天干", "relation": "同干"},
+            relations,
+        )
+        self.assertIn(
+            {"context": "大运甲寅-流年2004", "layer": "地支", "relation": "六冲"},
+            relations,
+        )
 
     def test_zi_hour_convention_is_explicit(self):
         next_day = build_chart(
@@ -80,6 +103,27 @@ class ChartRegressionTests(unittest.TestCase):
         self.assertNotIn(
             {"context": "甲-乙", "layer": "地支", "relation": "六冲"},
             relations,
+        )
+        self.assertNotIn(
+            {"context": "甲-乙", "layer": "干支", "relation": "伏吟"},
+            relations,
+        )
+
+    def test_composite_relations_report_contributing_labels(self):
+        rows = [
+            {"label": "年柱", "branch": "寅"},
+            {"label": "日柱", "branch": "午"},
+            {"label": "流年", "branch": "戌"},
+        ]
+        result = composite_branch_relations(rows, "测试")
+        self.assertIn(
+            {
+                "context": "测试",
+                "layer": "地支",
+                "relation": "三合火局",
+                "members": {"午": ["日柱"], "寅": ["年柱"], "戌": ["流年"]},
+            },
+            result,
         )
 
 

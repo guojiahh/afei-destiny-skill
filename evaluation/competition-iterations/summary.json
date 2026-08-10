@@ -1,0 +1,34 @@
+{
+  "rounds": [
+    {
+      "round": "2010-v0",
+      "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
+      "count": 9,
+      "correct": 3,
+      "accuracy": 0.3333,
+      "contamination": [
+        "Q1 answer exposed during importer DOM validation; round is training-only",
+        "Q2 option highlight classes were partially visible during importer DOM validation; round is training-only"
+      ]
+    },
+    {
+      "round": "2011-v0",
+      "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
+      "count": 15,
+      "correct": 4,
+      "accuracy": 0.2667,
+      "contamination": []
+    },
+    {
+      "round": "2012-v1",
+      "skill_sha256": "ce2f7b2824e36fd5b20abf0472b14582b4b5cb87dc61b411171573b73668a3ec",
+      "count": 15,
+      "correct": 3,
+      "accuracy": 0.2,
+      "contamination": []
+    }
+  ],
+  "count": 39,
+  "correct": 10,
+  "micro_accuracy": 0.2564
+}

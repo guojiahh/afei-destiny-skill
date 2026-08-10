@@ -1,0 +1,202 @@
+{
+  "protocol": "locked-predictions-then-reveal",
+  "count": 15,
+  "correct": 3,
+  "accuracy": 0.2,
+  "answer_distribution": {
+    "A": 3,
+    "B": 7,
+    "C": 2,
+    "D": 3
+  },
+  "per_tag": {
+    "事业财富": {
+      "count": 3,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "六亲子女": {
+      "count": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "其他": {
+      "count": 3,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "婚姻感情": {
+      "count": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "年份事件": {
+      "count": 10,
+      "correct": 1,
+      "accuracy": 0.1
+    },
+    "性格外貌学业": {
+      "count": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    }
+  },
+  "details": [
+    {
+      "id": "gfc_2012_e03-c1_q01",
+      "case_id": "e03-c1",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c1_q02",
+      "case_id": "e03-c1",
+      "prediction": "D",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c1_q03",
+      "case_id": "e03-c1",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c1_q04",
+      "case_id": "e03-c1",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c1_q05",
+      "case_id": "e03-c1",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c2_q01",
+      "case_id": "e03-c2",
+      "prediction": "D",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c2_q02",
+      "case_id": "e03-c2",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "tags": [
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c2_q03",
+      "case_id": "e03-c2",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c2_q04",
+      "case_id": "e03-c2",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c2_q05",
+      "case_id": "e03-c2",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c3_q01",
+      "case_id": "e03-c3",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c3_q02",
+      "case_id": "e03-c3",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c3_q03",
+      "case_id": "e03-c3",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c3_q04",
+      "case_id": "e03-c3",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2012_e03-c3_q05",
+      "case_id": "e03-c3",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    }
+  ]
+}
