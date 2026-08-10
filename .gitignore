@@ -3,6 +3,6 @@
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
-bazi-skill-final.zip
+dist/*.zip
 *.tmp
 *.log

@@ -50,7 +50,7 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
 ```
 
-说明：自动测试验证的是计算稳定性，不是证明八字具有科学预测力。选择题实验的完整限制写在 [`evaluation/final_report.md`](../evaluation/final_report.md) 中。
+说明：自动测试验证的是计算稳定性，不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
 
 ## 可切换的演示问题
 

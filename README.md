@@ -94,19 +94,26 @@ flowchart LR
 
 ```text
 .
-├─ bazi-skill-main/       可直接安装的技能包
+├─ bazi-skill-main/       可直接安装的 Skill；运行时只需要这一层
 │  ├─ SKILL.md            技能入口与任务路由
 │  ├─ README.md           安装、使用与开发说明
 │  ├─ scripts/            排盘器、测试与内置依赖
 │  ├─ references/         计算口径、推理协议、领域规则与示例
 │  └─ agents/             Codex 界面元数据
-├─ evaluation/            隔离的评测记录、工具与最终报告
-├─ docs/                  展示与讲解材料
+├─ evaluation/            与 Skill 隔离的评测实验室
+│  ├─ competition-iterations/  2010–2025 比赛轮次与不可变证据
+│  └─ archive/            上一代 MingLi/BaziQA 实验归档
+├─ docs/                  工作区说明、方法报告和公开案例
+├─ assets/                README、案例与联系图片
+├─ design-demos/          生成展示图片时使用的 HTML/渲染脚本
+├─ dist/                  本地生成的发布压缩包；ZIP 不进入 Git
 ├─ CONTRIBUTING.md        修改与验证约定
 └─ LICENSE                项目许可证
 ```
 
 [`evaluation/`](evaluation/) 故意放在技能包之外。Benchmark 题目、答案、历史预测和误差分析不得进入可安装目录。
+
+第一次进入仓库，建议先看 [工作区地图](docs/WORKSPACE_GUIDE.md)。它说明每个目录是什么、哪些是源文件、哪些是生成物，以及改不同功能时应该从哪里开始。
 
 ## 验证与评测
 
@@ -116,24 +123,27 @@ flowchart LR
 python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
 ```
 
-当前 5 项测试覆盖独立排盘 fixture、目标年份与大运、晚子换日、真太阳时方向、原局关系层。
+当前 9 项计算器测试覆盖独立排盘 fixture、目标年份与大运、换运日期边界、晚子换日、真太阳时方向、原局关系层与复合关系；另有 6 项评测管线测试覆盖题包脱敏、锁定、防篡改、污染隔离和配对比较。
 
-项目还保留了选择题评测，但数字需要谨慎解读：
+项目保留了两代选择题评测，但数字需要谨慎解读：
 
-- MingLi-Bench 160 题开发兼容评测：`85/160 = 53.125%`。
-- BaziQA Celebrity50 预登记保留集：`53/57 = 92.98%`。
-- 后一个子集答案分布偏斜且题面常有强文本线索，不能把高分归因于命理能力；专家审查层相对直答多数票的净增益为 `0`。
+- 当前主线是 2010–2025 历届比赛 515 题错题循环。一次性保留集上，旧版为 `70/160 = 43.75%`，最终版为 `71/160 = 44.38%`；命例级 bootstrap 区间跨 0，因此本轮**没有证明准确率提高**。
+- 上一代 MingLi/BaziQA 实验已经冻结并移入 [`evaluation/archive/mingli-baziqa/`](evaluation/archive/mingli-baziqa/)。其中 MingLi-Bench 开发兼容分为 `85/160 = 53.125%`；BaziQA 的高分子集存在答案分布和文本线索偏差，不能解释为命理预测能力。
 
-实验设计、冻结版本和限制见 [`evaluation/final_report.md`](evaluation/final_report.md)。
+完整方法见 [评测与迭代方法报告](docs/EVALUATION_AND_ITERATION_METHOD.md)，本轮实绩见 [2010–2025 迭代报告](evaluation/competition-iterations/iteration_report.md)。
 
 ## 文档导航
 
+- [工作区地图：每个目录和文件是什么](docs/WORKSPACE_GUIDE.md)
+- [评测与迭代方法报告](docs/EVALUATION_AND_ITERATION_METHOD.md)
+- [文档总索引](docs/README.md)
 - [技能安装与使用](bazi-skill-main/README.md)
 - [三分钟演示指南](docs/SHOWCASE.md)
 - [公开演示案例](docs/CASE_STUDY.md)
 - [公开案例合集](docs/cases/README.md)
-- [评测协议](evaluation/README.md)
-- [最终评测报告](evaluation/final_report.md)
+- [评测实验室索引](evaluation/README.md)
+- [2010–2025 比赛轮次索引](evaluation/competition-iterations/README.md)
+- [上一代 MingLi/BaziQA 评测归档](evaluation/archive/mingli-baziqa/README.md)
 - [参与开发](CONTRIBUTING.md)
 - [第三方依赖说明](bazi-skill-main/THIRD_PARTY_NOTICES.md)
 
