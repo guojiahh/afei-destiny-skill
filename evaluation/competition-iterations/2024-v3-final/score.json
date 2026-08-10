@@ -1,0 +1,752 @@
+{
+  "protocol": "locked-predictions-then-reveal-v2",
+  "split": "holdout",
+  "count": 40,
+  "correct": 18,
+  "accuracy": 0.45,
+  "accuracy_wilson_95": [
+    0.3071,
+    0.6017
+  ],
+  "case_count": 8,
+  "case_macro_accuracy": 0.45,
+  "random_choice_expected_accuracy": 0.25,
+  "confidence_count": 40,
+  "top_label_brier": 0.254,
+  "answer_distribution": {
+    "A": 9,
+    "B": 12,
+    "C": 9,
+    "D": 10
+  },
+  "per_tag": {
+    "事业财富": {
+      "count": 4,
+      "correct": 1,
+      "accuracy": 0.25
+    },
+    "健康灾厄": {
+      "count": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "六亲子女": {
+      "count": 3,
+      "correct": 1,
+      "accuracy": 0.3333
+    },
+    "其他": {
+      "count": 8,
+      "correct": 5,
+      "accuracy": 0.625
+    },
+    "婚姻感情": {
+      "count": 17,
+      "correct": 5,
+      "accuracy": 0.2941
+    },
+    "年份事件": {
+      "count": 11,
+      "correct": 4,
+      "accuracy": 0.3636
+    },
+    "性格外貌学业": {
+      "count": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    }
+  },
+  "details": [
+    {
+      "id": "gfc_2024_e15-c1_q01",
+      "case_id": "e15-c1",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "己土生申月且三申成势，伤官财气重而日主承载偏弱。",
+        "年柱未形成足以支持大富出身的独立官印或身财两停证据。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c1_q02",
+      "case_id": "e15-c1",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.52,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局伤官旺，学习输出能力有基础，但印星只藏于巳。",
+        "17至26岁行壬午运，午火能补印身，较支持完成一般高等教育。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c1_q03",
+      "case_id": "e15-c1",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.38,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命夫星甲官虽透月干，却受旺庚伤官牵制。",
+        "夫星根气和助力证据不足，不宜上推成功经商或高收入。"
+      ],
+      "tags": [
+        "婚姻感情",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c1_q04",
+      "case_id": "e15-c1",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.36,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命食伤子女星在三申中重复而旺，时支亦为申。",
+        "2004甲申虽伏吟月柱并引动时支，但单一出生年不足以压过原局多子女倾向。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c1_q05",
+      "case_id": "e15-c1",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.34,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2022壬寅在庚辰运，寅同时冲三申并与原局巳申构成三刑。",
+        "流年直接引出寅中官星且强烈改变配偶宫网络，较支持发现配偶问题并走向终止。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c2_q01",
+      "case_id": "e15-c2",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "戊土偏强，月年双辛伤官透出，表达与自主性明显。",
+        "原局同时有午火印与亥水财，不能只凭强土推到孤僻或暴力。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c2_q02",
+      "case_id": "e15-c2",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.44,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命财星藏于亥、丑，配偶接口存在但并不极端。",
+        "日支戌未见原局直接冲破，妻早亡或终身未娶均缺少足够结构证据。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c2_q03",
+      "case_id": "e15-c2",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "强戊土配双辛伤官，年支亥又藏偏财，形成输出生财的经营链。",
+        "官印制度链不显，公务员且涉刑案的复合说法负担过高。"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c2_q04",
+      "case_id": "e15-c2",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.52,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2021辛丑伏吟月柱，并以丑害时支午火印星。",
+        "四个候选中2021同时具备母亲印星受损、父母宫重复及更合理代际年龄。"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c2_q05",
+      "case_id": "e15-c2",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.48,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "虚龄34至43主要落在丁酉、丙申运，申酉食伤可接通原局亥丑财星。",
+        "该阶段更支持经营和资产流转获利，不支持单凭强土推断贷款失败或卖屋偿债。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c3_q01",
+      "case_id": "e15-c3",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丁火在子月无木火根，原局金水财杀成势，优先按从势假设比较。",
+        "23至32岁以戊戌、丁酉运为主，较后续木火运更少破坏原局从势。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c3_q02",
+      "case_id": "e15-c3",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命财星庚辛在年月时多透，日支酉亦为财，婚配接口很早即成形。",
+        "23至32岁覆盖戊戌后段和丁酉运初段，财星落地条件强于更晚区间。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c3_q03",
+      "case_id": "e15-c3",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.4,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局七杀藏于子、丑，官非接口存在。",
+        "23至32岁大部处戊戌伤官运，伤官与原局杀星同现，比单纯财运更贴近合规冲突。"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c3_q04",
+      "case_id": "e15-c3",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.42,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局丁火无根而金水从势，最忌强木火打破气势。",
+        "1974甲寅在己亥运，甲印透出且寅亥合木，较其余候选形成更直接的破格压力。"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c3_q05",
+      "case_id": "e15-c3",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.62,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局财星极旺而日主无根，较符合从财杀而非普通身弱取印比。",
+        "53至62岁由乙未转甲午，木火连续逆原局财杀气势，破财压力最集中。"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c4_q01",
+      "case_id": "e15-c4",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.48,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局夫星乙透而日支丑受戌刑，婚姻有建立也有结构压力。",
+        "2017后行丙寅运，寅木加强夫星接口，支持首婚终结后再婚，但不足以推出第三段。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c4_q02",
+      "case_id": "e15-c4",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2005乙酉在甲子运，乙夫星直接出现，酉与日、时两丑半合。",
+        "2003虽强冲日时两丑，但更偏剧烈改变，结婚落地信号不如2005完整。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c4_q03",
+      "case_id": "e15-c4",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.4,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "首婚候选年同时引动夫星与时柱子女宫。",
+        "冲喜、商业联婚和随便嫁均带更高而无独立支持的叙事负担。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c4_q04",
+      "case_id": "e15-c4",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.7,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2015乙未在乙丑运，未同时冲日支、时支及大运丑。",
+        "该年又补齐原局丑戌未三刑，明显强于其余候选的婚居分离触发。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c4_q05",
+      "case_id": "e15-c4",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.35,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局丑戌刑及首婚终结年的丑戌未三刑支持高冲突关系。",
+        "丈夫死亡缺少相应连续证据；施暴者归属本身低可识别，优先保留基准率较高的单方受暴选项。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c5_q01",
+      "case_id": "e15-c5",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.62,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2002壬午在乙未运，壬正官夫星伏吟月干并与日主丁合。",
+        "午未六合且亥卯未木局完成，较1999的单纯配偶宫重复更符合登记落地。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c5_q02",
+      "case_id": "e15-c5",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.64,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2017丁酉直接冲日支卯，先形成婚姻危机。",
+        "2018戊戌随后合日支、冲月支，较符合危机后完成法律状态变更的时间顺序。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c5_q03",
+      "case_id": "e15-c5",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.46,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丁火有卯印根，但财官偏重，具稳定工作收入链而承财不算极强。",
+        "缺少把收入上推至高档年薪的独立证据，采用普通中段基准。"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c5_q04",
+      "case_id": "e15-c5",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.4,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "命局财星与辰土资产接口均存在，完全无房产并非首选。",
+        "具体套数低可识别，缺少支持两套或三套的多重独立证据。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c5_q05",
+      "case_id": "e15-c5",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.72,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2010庚寅在丙申运，流年寅同时冲原局时支申和大运申。",
+        "岁运对同一移动、肢体接口形成双重冲击，明显强于其余候选。"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c6_q01",
+      "case_id": "e15-c6",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.34,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1998戊寅透正官对象星，寅与原局亥合而又受丁巳运刑害。",
+        "该组合支持条件较好但关系迅速冷却；花钱、学渣或脚踏两船均缺少独立证据。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c6_q02",
+      "case_id": "e15-c6",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.42,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1999己卯透七杀对象星，较正官更偏强势和控制。",
+        "2002壬午以午害日支丑，并引动时支未，支持因关系控制与生活安排而分开。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c6_q03",
+      "case_id": "e15-c6",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.5,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "对象星为戊己官杀，2006丙戌结婚时戌刑日支丑并破时支未。",
+        "2009己丑七杀透、日支伏吟且丑未冲，较支持强势冲突和婚后现实财务矛盾。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c6_q04",
+      "case_id": "e15-c6",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2013癸巳在戊午运，巳午未三会火局完成，财务主题被急剧放大。",
+        "投资失误与资金援助比外地诱骗、长期伤残或特定宗教骗局需要更少附加假设。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c6_q05",
+      "case_id": "e15-c6",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.4,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2019己亥在己未运，七杀对象星岁运并见，关系带非典型和隐蔽色彩。",
+        "2021辛丑伏吟日支并冲大运、时支未，直接支持关系真相显化和终止。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c7_q01",
+      "case_id": "e15-c7",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.62,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丁火生酉月，乙印虽透但与庚合，学业链有基础而不宜上推博士。",
+        "早年甲申、癸未运仍提供一定印官资源，专科比小学或初中辍学更合适。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c7_q02",
+      "case_id": "e15-c7",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.46,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "配偶宫酉与月支酉重复且自刑，婚姻稳定度偏弱。",
+        "官星仅藏于申，正式关系支撑不强；结合两名子女前提，离婚比终身未婚更合结构。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c7_q03",
+      "case_id": "e15-c7",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.58,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2017丁酉伏吟日柱并加重酉酉自刑。",
+        "2019己亥虽透子女星，却由亥冲大运巳，二年共同表现为生育受挫强于正常落地。"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c7_q04",
+      "case_id": "e15-c7",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2013癸巳引动官星并与原局酉半合，2015乙未又六合时支午子女宫。",
+        "2013巳中戊伤官与2015未中己食神分属不同子女象，较支持一子一女。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c7_q05",
+      "case_id": "e15-c7",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局庚申、双酉财星集中，乙印透出，较贴近财务记录与制度技能。",
+        "教师所需印与表达链、房产经纪所需食伤生财链均不如财印接口完整。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c8_q01",
+      "case_id": "e15-c8",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.42,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "乙木生寒丑月而无根，丙火又被多辛牵合，火的循环类象偏弱。",
+        "肺炎属于常见急性感染，弱视和贫血也仅有单一五行类象，先天心脏结构问题相对更贴合寒湿与火弱。"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c8_q02",
+      "case_id": "e15-c8",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.54,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命父星财土在戌、双丑及巳中多处有根，家庭资源接口很强。",
+        "孤儿院或贫穷均有额外负担；亿万级别则应留待父亲身家题另行降级。"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c8_q03",
+      "case_id": "e15-c8",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.48,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丑月、双丑与戌使土形偏重，乙木又弱而无根。",
+        "整体寒湿土金重，更支持偏矮圆润和和善外观，而非高大魁梧。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c8_q04",
+      "case_id": "e15-c8",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.68,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2016丙申在壬寅运，申与大运寅正冲。",
+        "流年又与原局巳及大运寅构成寅巳申三刑，强烈支持突发移动或交通类事故。"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2024_e15-c8_q05",
+      "case_id": "e15-c8",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "父星财土在年、月、日多处成势，明显高于小康或失业层级。",
+        "具体财富档位低可识别，缺少把千万继续上推至亿万的独立证据。"
+      ],
+      "tags": [
+        "六亲子女"
+      ]
+    }
+  ]
+}

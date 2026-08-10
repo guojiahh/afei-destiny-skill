@@ -1,0 +1,285 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2025_e16-c1_q01": {
+      "answer": "B",
+      "confidence": 0.52,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["戊土生亥月，年支卯与月支亥半合木，早年压力接口强于资源承载", "富裕或父母任官均缺少独立的财官成链证据"]
+    },
+    "gfc_2025_e16-c1_q02": {
+      "answer": "D",
+      "confidence": 0.42,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["女命官杀木见于卯、亥，而年干辛伤官透出", "卯午相破使配偶宫与夫星网络的稳定性偏弱"]
+    },
+    "gfc_2025_e16-c1_q03": {
+      "answer": "B",
+      "confidence": 0.56,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["年干辛伤官透出，巳中庚食神提供技艺输出接口", "早年结构更支持靠技能求生，而非父母资助创业"]
+    },
+    "gfc_2025_e16-c1_q04": {
+      "answer": "B",
+      "confidence": 0.48,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["1980庚申处壬寅运，岁运寅申六冲", "原局巳加入后形成寅巳申三刑，属于明显身体或移动风险窗口"]
+    },
+    "gfc_2025_e16-c1_q05": {
+      "answer": "B",
+      "confidence": 0.55,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["1993癸酉处癸卯运，岁运卯酉六冲", "酉同时冲原局年支卯官星，夫星接口比父星接口更直接"]
+    },
+    "gfc_2025_e16-c2_q01": {
+      "answer": "D",
+      "confidence": 0.46,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局午月双午，季节加权火势显著偏强，土随火燥", "2022壬寅与庚戌运、原局午形成三合火局，随后仍有辰戌冲与巳火年份"]
+    },
+    "gfc_2025_e16-c2_q02": {
+      "answer": "B",
+      "confidence": 0.43,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["丙伤官、丁食神旺而有根，支持聪敏和技能表达", "正印仅壬一透且原局无官星，高学历并进入企业管理层的附加负担较高"]
+    },
+    "gfc_2025_e16-c2_q03": {
+      "answer": "D",
+      "confidence": 0.4,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局食伤极旺而财弱藏、官星全无，稳定组织晋升链不完整", "2018起庚戌运虽带官财，但卯戌合火继续放大输出与财来财去倾向"]
+    },
+    "gfc_2025_e16-c2_q04": {
+      "answer": "B",
+      "confidence": 0.34,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚戌运正官出现并与乙日主相合，支持关系绑定", "原局伤官旺、双午自刑且卯午多破，关系互动压力高于完全和顺"]
+    },
+    "gfc_2025_e16-c2_q05": {
+      "answer": "B",
+      "confidence": 0.41,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["父星土仅藏于午，受旺木与旺火结构牵动，持续承财能力有限", "原局不足以支持长期富有且衣食无忧的高档位判断"]
+    },
+    "gfc_2025_e16-c3_q01": {
+      "answer": "C",
+      "confidence": 0.38,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["父星水与母星火均在原局明透，没有一方早亡的确定性结构证据", "其余选项附带精确死亡年份、再婚或高级官职，细节负担更高"]
+    },
+    "gfc_2025_e16-c3_q02": {
+      "answer": "C",
+      "confidence": 0.35,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["双卯七杀有丙丁印星化泄，较支持勤奋、纪律和竞争活动", "原局金食伤缺位，专业乐手的直接输出接口偏弱"]
+    },
+    "gfc_2025_e16-c3_q03": {
+      "answer": "A",
+      "confidence": 0.37,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["月干丙正印、时干丁偏印承接旺官杀，官印学习链完整", "判监、退学和仅高中毕业均需要额外中断证据"]
+    },
+    "gfc_2025_e16-c3_q04": {
+      "answer": "B",
+      "confidence": 0.45,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2011辛卯伏吟日支与时支，直接引动关系和家庭生活接口", "2012壬辰财星透出并引动月柱，较符合婚后紧接生育节点"]
+    },
+    "gfc_2025_e16-c3_q05": {
+      "answer": "C",
+      "confidence": 0.36,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2022壬寅处壬子运，岁运同干，财官压力同步放大", "寅补齐原局卯辰三会木方，七杀对命主形成强复合触发"]
+    },
+    "gfc_2025_e16-c4_q01": {
+      "answer": "B",
+      "confidence": 0.3,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数，本技能没有对应宫位与大限模块", "所选项不附带出轨、疾病或跨国改嫁等高负担子句"]
+    },
+    "gfc_2025_e16-c4_q02": {
+      "answer": "B",
+      "confidence": 0.27,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数，不能以八字流年冒充计算", "其余选项均加入休学、遗传病或交通意外等严重结果"]
+    },
+    "gfc_2025_e16-c4_q03": {
+      "answer": "C",
+      "confidence": 0.32,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数且未给对应命盘", "航运物流管理在给定地域与管理职业选项中附加假设最少"]
+    },
+    "gfc_2025_e16-c4_q04": {
+      "answer": "A",
+      "confidence": 0.31,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目体系超出本技能可计算范围", "其余选项要求长期女友且不忠、已婚稳定或离婚程序等额外状态事实"]
+    },
+    "gfc_2025_e16-c4_q05": {
+      "answer": "C",
+      "confidence": 0.28,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数，四个年份无法由本技能的大限模块核验", "2018与2024均处成年阶段，较儿时年份更符合重度症状的现实语境"]
+    },
+    "gfc_2025_e16-c5_q01": {
+      "answer": "D",
+      "confidence": 0.48,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["己酉运为正财、正官同临，原局另有戊偏财透时干", "财官与副业经营接口同时存在，较单纯普通受薪更完整"]
+    },
+    "gfc_2025_e16-c5_q02": {
+      "answer": "C",
+      "confidence": 0.44,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2004甲申处辛亥运，申子辰三合水局并兼成水方", "印星环境被强烈引动，仍在学校体系内的集体活动比离校或被逐更相容"]
+    },
+    "gfc_2025_e16-c5_q03": {
+      "answer": "A",
+      "confidence": 0.68,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2021辛丑处己酉财官运，丑为财星有根", "流年丑与日支子六合，配偶星与配偶宫同时出现落地信号"]
+    },
+    "gfc_2025_e16-c5_q04": {
+      "answer": "A",
+      "confidence": 0.38,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2021的财星与配偶宫复合信号支持已婚状态", "时柱辰有承载且年干丁伤官透出，不支持直接判定无子嗣"]
+    },
+    "gfc_2025_e16-c5_q05": {
+      "answer": "B",
+      "confidence": 0.53,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["甲木有卯根、子水印生，承担与抗压接口明显", "戊偏财透时干、丁伤官透年干，较支持慷慨外拓及异性缘"]
+    },
+    "gfc_2025_e16-c6_q01": {
+      "answer": "A",
+      "confidence": 0.33,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数，本技能不能核验命宫与父母宫", "其余选项包含贫穷暴躁、娘娘腔或懒惰享乐等更重人格断言"]
+    },
+    "gfc_2025_e16-c6_q02": {
+      "answer": "C",
+      "confidence": 0.29,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["装修偏好属于低可识别现实细节，且题目体系无对应模块", "四个选项没有可由题面唯一推出的事实"]
+    },
+    "gfc_2025_e16-c6_q03": {
+      "answer": "D",
+      "confidence": 0.31,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目指定丙辰大限，不能用八字大运替代紫微计算", "2019创业与随后疫情期经营压力在时间顺序上保持一致"]
+    },
+    "gfc_2025_e16-c6_q04": {
+      "answer": "A",
+      "confidence": 0.38,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题面已建立出国创业的前置语境，2021处疫情经营冲击期", "生意资金压力比遇刺、母亡或逆势大幅增长所需附加假设更少"]
+    },
+    "gfc_2025_e16-c6_q05": {
+      "answer": "A",
+      "confidence": 0.3,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目体系无对应健康宫限模块", "鼻癌与车祸骨折属于高严重度选项，缺少题干支持"]
+    },
+    "gfc_2025_e16-c7_q01": {
+      "answer": "D",
+      "confidence": 0.27,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目明确采用紫微斗数且未提供对应星曜宫位", "跟随父亲或母亲的归属无法由八字四柱可靠区分"]
+    },
+    "gfc_2025_e16-c7_q02": {
+      "answer": "C",
+      "confidence": 0.29,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["大学具体科系属于低可识别现实标签", "题面没有成绩、兴趣或履历事实可作文本早停"]
+    },
+    "gfc_2025_e16-c7_q03": {
+      "answer": "B",
+      "confidence": 0.29,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题目体系没有可用的紫微夫妻宫与子女宫信息", "离婚属于较已婚状态更高负担的终局断言"]
+    },
+    "gfc_2025_e16-c7_q04": {
+      "answer": "C",
+      "confidence": 0.31,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["具体职业无法由本技能替代紫微体系核算", "美术设计与所选大学方向构成最少额外转行假设的联合候选"]
+    },
+    "gfc_2025_e16-c7_q05": {
+      "answer": "D",
+      "confidence": 0.28,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["体型属于低可识别细节，题面无身高体重事实", "本技能没有题目所需的紫微身宫与形貌模块"]
+    },
+    "gfc_2025_e16-c8_q01": {
+      "answer": "C",
+      "confidence": 0.62,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚正印双透并有申根，学习能力和体系资源不弱", "博士属于高负担层级，原局与题面没有足够独立证据升级"]
+    },
+    "gfc_2025_e16-c8_q02": {
+      "answer": "C",
+      "confidence": 0.45,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["官杀藏于戌未而庚印双透有根，形成组织管理与制度承载链", "财星仅藏，独立小生意扩张为企业家的直接证据较弱"]
+    },
+    "gfc_2025_e16-c8_q03": {
+      "answer": "C",
+      "confidence": 0.68,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["37岁起进入丁亥运，运支亥与原局卯未补齐三合木局", "2007丁亥岁运伏吟并直接引动日支，是四个年龄段中最集中的迁移与事业变化窗口"]
+    },
+    "gfc_2025_e16-c8_q04": {
+      "answer": "C",
+      "confidence": 0.45,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["癸水有双庚印与申根，原局五行虽有偏态但承载链完整", "终身暗疾或重大意外致残均缺少原局与岁运复合证据"]
+    },
+    "gfc_2025_e16-c8_q05": {
+      "answer": "A",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["官杀有印化、食神卯有根，较支持原则、分寸与对外应对", "双印与官星结构比放荡桃花或情绪失控的描述更相容"]
+    }
+  }
+}

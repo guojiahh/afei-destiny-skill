@@ -1,0 +1,250 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2014_e05-c1_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c1_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c1_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c1_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c1_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c2_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c2_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c2_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c2_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c2_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c3_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c3_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c3_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c3_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c3_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c4_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c4_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c4_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c4_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c4_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c5_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c5_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c5_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c5_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c5_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c6_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c6_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c6_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c6_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c6_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c7_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c7_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c7_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c7_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2014_e05-c7_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    }
+  }
+}

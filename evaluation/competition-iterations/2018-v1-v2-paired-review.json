@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "review": "2018-v1-v2-post-reveal-paired-audit",
+  "split": "regression",
+  "year": 2018,
+  "scope": {
+    "question_count": 40,
+    "changed_prediction_count": 17,
+    "unchanged_prediction_count": 23,
+    "reviewed_only_changed_predictions": true
+  },
+  "aggregate": {
+    "v1": {
+      "correct": 17,
+      "accuracy": 0.425
+    },
+    "v2": {
+      "correct": 15,
+      "accuracy": 0.375
+    },
+    "v2_minus_v1": {
+      "correct_delta": -2,
+      "accuracy_delta": -0.05
+    },
+    "changed_prediction_outcomes": {
+      "win": 5,
+      "loss": 7,
+      "both_wrong": 5
+    },
+    "unchanged_predictions": {
+      "both_correct": 10,
+      "both_wrong": 13
+    },
+    "guard_dispositions": {
+      "keep": 10,
+      "revise": 7,
+      "revert": 0
+    },
+    "summary": "V2 lost two correct answers overall. The cross-system stop guard was directionally useful but its fallback was unstable: among six changed cross-system items it produced two wins, one loss and three both-wrong changes. Several other losses were not evidence against the written guards; they occurred when V2 failed to enforce the Skill's own low-identifiability, whole-chain and weak-signal limits."
+  },
+  "records": [
+    {
+      "id": "gfc_2018_e09-c2_q01",
+      "answer": "A",
+      "v1": { "prediction": "A", "correct": true },
+      "v2": { "prediction": "B", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 replaced a low-confidence broad fit with a parent-support diagnosis, treating 癸戊合 and 丑午害 as enough to decide a compound real-life option.",
+      "likely_guard": "benchmark-protocol §§0,4,8: clause matrix, low-identifiability limit, and the requirement that high-burden biographical clauses receive independent support",
+      "guard_effect": "failed_to_fire",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 explicitly treated whether the parents were alive as low-identifiability and kept confidence at 0.46.",
+        "V2's two reasons concern weak parental support; they do not establish the option's concrete family-history clause."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c3_q01",
+      "answer": "B",
+      "v1": { "prediction": "B", "correct": true },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 promoted 2013 because 巳酉丑 completed a wealth combination, but dropped the weak-day-master wealth-bearing check that made 2010 stronger in V1.",
+      "likely_guard": "SKILL complete candidate-year matrix plus benchmark-protocol §§0.4,6 and temporal-reasoning: compare three-way formations without letting a conspicuous formation override the whole functional chain",
+      "guard_effect": "triggered_but_overweighted",
+      "recommendation": "revise",
+      "evidence": [
+        "V1 compared 2010 and 2013 on the same scale and noted that 2010 supplied wood support while 2013 intensified wealth beyond the weak day master's capacity.",
+        "V2 cited only the 2013 metal wealth combination and called it stronger than the other years."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c3_q02",
+      "answer": "B",
+      "v1": { "prediction": "B", "correct": true },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 reduced the chart to generic commerce/resource exchange and did not preserve V1's combined mobile-service plus metaphysical-study pathway.",
+      "likely_guard": "benchmark-protocol §§4,5,8: preserve the direct candidate on low-identifiability occupations and map the chart to a functional axis before choosing a specific job",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V2 marked B as its alternative and explicitly said the exact occupation was low-identifiability.",
+        "V1's B rationale used both the 亥卯印 chain and the 丁酉 wealth/mobility background, while V2 relied mainly on the three exposed wealth stems."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c3_q03",
+      "answer": "C",
+      "v1": { "prediction": "D", "correct": false },
+      "v2": { "prediction": "C", "correct": true },
+      "outcome": "win",
+      "minimal_cause": "V2 rejected an extreme accident inference from a limited 2014 trigger and moved to the option supported by the chart's longer-running damp-earth and heavy-metal health symbolism.",
+      "likely_guard": "benchmark-protocol §§0.5,8 and temporal-reasoning event-severity guard: extreme outcomes require multiple independent interfaces and sustained support",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V2 stated that the 2014 harm and break relations were insufficient to support amputation.",
+        "V2 connected the natal damp earth and heavy metal pattern to the less extreme correct option."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c3_q05",
+      "answer": "A",
+      "v1": { "prediction": "A", "correct": true },
+      "v2": { "prediction": "B", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 converted poor wealth retention into a concrete spending/behavior label, while V1 stopped at the better-supported resource-outflow description.",
+      "likely_guard": "benchmark-protocol §§4,7,8: distinguish wealth opportunity, carrying capacity and retention, but do not infer a concrete habit without independent evidence",
+      "guard_effect": "failed_to_fire",
+      "recommendation": "keep",
+      "evidence": [
+        "Both versions found a rootless weak fire day master facing three exposed wealth stems.",
+        "V1 explicitly rejected a specific squandering habit; V2 used 劫财坐财 and non-retention to select B without additional behavioral evidence."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c4_q01",
+      "answer": "B",
+      "v1": { "prediction": "B", "correct": true },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 correctly detected that the question asked for a Zi Wei system it could not calculate, but then changed to an unsupported fallback instead of retaining the evidence-backed direct candidate.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch hard stop and §4 preserve-BASE switch certificate",
+      "guard_effect": "triggered_with_unstable_fallback",
+      "recommendation": "revise",
+      "evidence": [
+        "V2 changed calculation_status from verified to blocked and named the absent Zi Wei module.",
+        "Its remaining reason only says later resignation cannot prove earlier promotion; it does not positively support D, while V2 listed B as the alternative."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c4_q04",
+      "answer": "C",
+      "v1": { "prediction": "D", "correct": false },
+      "v2": { "prediction": "C", "correct": true },
+      "outcome": "win",
+      "minimal_cause": "V2 stopped substituting a Bazi luck cycle for the stated Zi Wei period and used the period supplied by the question, with only a limited Bazi tie-break.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch hard stop plus §§2,3 explicit-question-facts priority",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 compared 1992 and 1993 through a Bazi luck-cycle frame and chose D.",
+        "V2 marked the calculation blocked, respected the stated 丙子 period, and used 1992's 申 with 子 and natal 辰 only as a limited discriminator."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c4_q05",
+      "answer": "B",
+      "v1": { "prediction": "C", "correct": false },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "both_wrong",
+      "minimal_cause": "The system-mismatch stop removed V1's overconfident Bazi timing, but V2 then chose 1982 from a single spouse-palace clash and still lacked evidence for the correct option.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch hard stop and §4 low-confidence direct fallback",
+      "guard_effect": "triggered_with_unstable_fallback",
+      "recommendation": "revise",
+      "evidence": [
+        "V2 correctly said it lacked the Zi Wei fertility-timing module.",
+        "Its only positive discriminator was 1982 壬戌冲日支辰, insufficient to establish the option's full event."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c5_q02",
+      "answer": "C",
+      "v1": { "prediction": "A", "correct": false },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "both_wrong",
+      "minimal_cause": "After blocking the requested Zi Wei method, V2 let a visually strong 申子辰 formation choose 1988, but the formation did not prove the compound marriage-and-child event.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch stop, §§0.1,8 compound-clause burden, and temporal-reasoning warning that a three-way formation is not an event label",
+      "guard_effect": "partly_triggered_then_bypassed",
+      "recommendation": "revise",
+      "evidence": [
+        "V2 correctly changed calculation_status to blocked for the Zi Wei question.",
+        "V2's sole positive reason was the 1988 申子辰 water formation and a child interface; no separate marriage-landed evidence was recorded."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c6_q03",
+      "answer": "A",
+      "v1": { "prediction": "C", "correct": false },
+      "v2": { "prediction": "A", "correct": true },
+      "outcome": "win",
+      "minimal_cause": "V2 stopped treating the four branch clashes as enough to decide a compound personality-and-marriage option when the stems, day master and spouse star were missing.",
+      "likely_guard": "benchmark-protocol §§0.1,8: a compound option is limited by its weakest necessary clause, especially under incomplete chart data",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 acknowledged that social ability could not be checked but still selected C from relationship instability.",
+        "V2 explicitly said the clashes weakly support relationship instability but cannot determine the social-personality clause."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c6_q04",
+      "answer": "A",
+      "v1": { "prediction": "D", "correct": false },
+      "v2": { "prediction": "C", "correct": false },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2 changed between equally unsupported husband-longevity/body-type composites even though the available four branches could distinguish none of them.",
+      "likely_guard": "benchmark-protocol §4 preserve-BASE switch certificate and §§3,8 low-identifiability/compound-detail limits",
+      "guard_effect": "failed_to_produce_a_stable_abstention_or_tie_break",
+      "recommendation": "revise",
+      "evidence": [
+        "Both versions marked calculation_status blocked and confidence 0.24.",
+        "V2 stated that no day master, spouse star, birth year or luck data could verify any compound option, yet still changed D to C."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c7_q02",
+      "answer": "C",
+      "v1": { "prediction": "B", "correct": false },
+      "v2": { "prediction": "C", "correct": true },
+      "outcome": "win",
+      "minimal_cause": "V2 recognized the unavailable Qi Men method and used age, region and educational base rates to avoid both early-dropout and doctorate extremes.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch stop and §8 era/region/base-rate calibration for low-identifiability education labels",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 used a weak 印 chain to choose B despite calling both dropout and doctorate high-burden outcomes.",
+        "V2 marked the calculation blocked and selected the ordinary education level for a 1993 Hong Kong birth cohort."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c7_q04",
+      "answer": "A",
+      "v1": { "prediction": "C", "correct": false },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2's system-mismatch fallback selected the least dramatic narrative, but detail burden alone could not distinguish the correct relationship event.",
+      "likely_guard": "benchmark-protocol §0 system-mismatch stop and §8 detail-burden/base-rate tie break",
+      "guard_effect": "triggered_with_unstable_fallback",
+      "recommendation": "revise",
+      "evidence": [
+        "V2 correctly said it had no monthly Qi Men chart and lowered confidence from 0.57 to 0.28.",
+        "It chose ordinary conflict solely because infidelity, violence and marriage required more evidence, while A remained its alternative."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c8_q05",
+      "answer": "A",
+      "v1": { "prediction": "B", "correct": false },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2 moved from a 2004 spouse-star/palace trigger to a 1984 direct water-star and 子午冲 trigger, but neither comparison established the option's precise husband-injury event or stage.",
+      "likely_guard": "benchmark-protocol §§2,6,7 and temporal-reasoning: assign the right subject and event stage before ranking candidate-year triggers",
+      "guard_effect": "triggered_but_under_specified",
+      "recommendation": "revise",
+      "evidence": [
+        "V1 emphasized 2004's hidden 壬, repeated 申 and direct relation to the spouse palace.",
+        "V2 emphasized 1984's direct water star and 子午冲, but recorded no separate evidence linking the time pillar trigger to the husband's specific injury."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c9_q01",
+      "answer": "C",
+      "v1": { "prediction": "D", "correct": false },
+      "v2": { "prediction": "C", "correct": true },
+      "outcome": "win",
+      "minimal_cause": "V2 combined the early-family 辰戌冲 with the weak day master's limited capacity under heavy 官杀, instead of inferring adequate family resources from exposed wealth alone.",
+      "likely_guard": "benchmark-protocol §§0.4,5,8: whole functional chain, carrying capacity and realistic resource-level calibration",
+      "guard_effect": "triggered",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 acknowledged the family-environment clash but treated exposed wealth and social function as evidence that resources were not weak.",
+        "V2 retained the clash and added the day master's inability to carry the heavy earth structure, yielding the correct lower-resource option."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c9_q04",
+      "answer": "C",
+      "v1": { "prediction": "C", "correct": true },
+      "v2": { "prediction": "D", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 upgraded mixed 正官/七杀 into multiple marriages even though the spouse palace lacked a direct termination-and-relanding chain.",
+      "likely_guard": "benchmark-protocol §4 low-identifiability limit for marriage count and §7 relationship state machine",
+      "guard_effect": "failed_to_fire",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 noted the mixed spouse-star system but also that the spouse palace was not directly broken, and preferred one marriage as requiring fewer assumptions.",
+        "V2 cited only spouse-star mixture and hidden earth for relationship complexity; it recorded no distinct termination and remarriage triggers."
+      ]
+    },
+    {
+      "id": "gfc_2018_e09-c9_q05",
+      "answer": "C",
+      "v1": { "prediction": "C", "correct": true },
+      "v2": { "prediction": "B", "correct": false },
+      "outcome": "loss",
+      "minimal_cause": "V2 turned 华盖/internal-turning symbolism plus a late 印运 into a specific religious occupation, overriding the lower-assumption family-continuity option.",
+      "likely_guard": "SKILL knowledge priority and benchmark-protocol §§4,5,8: a weak symbolic cue cannot decide a specific occupation or biography",
+      "guard_effect": "failed_to_fire",
+      "recommendation": "keep",
+      "evidence": [
+        "V1 used the intact rooted spouse palace and continuing family-responsibility structure, and explicitly treated temple work as an unsupported identity fact.",
+        "V2's decisive support for B was traditional 华盖 symbolism and a late 印运, both too indirect for a specific occupation."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2014_e05-c1_q01": {
+      "answer": "B",
+      "confidence": 0.46,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["乙木日主见戊己财星双透，日支未亦含财星，男性关系资源呈多点显现", "肝病与精确子女组合均缺少足够的独立落点"]
+    },
+    "gfc_2014_e05-c1_q02": {
+      "answer": "A",
+      "confidence": 0.36,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2007年交入癸丑运，丑直接冲日支未中所藏己财", "丁亥年又使亥卯未木局成形，财星承压"]
+    },
+    "gfc_2014_e05-c1_q03": {
+      "answer": "C",
+      "confidence": 0.4,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2008戊子年正财透出并伏吟原局月干戊", "子害日支未、且癸丑大运持续冲动日支，夫妻生活核心受复合引动"]
+    },
+    "gfc_2014_e05-c1_q04": {
+      "answer": "B",
+      "confidence": 0.45,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["戊己财星双透且有申中官星，较接近资源交换与业绩责任型工作", "官印并不清透成稳定体制链，教师所需食伤也仅伏藏"]
+    },
+    "gfc_2014_e05-c1_q05": {
+      "answer": "B",
+      "confidence": 0.36,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局财星多且日支为财，具不动产积累接口", "日主承财能力中等，财多不等于现金留存充足"]
+    },
+    "gfc_2014_e05-c2_q01": {
+      "answer": "D",
+      "confidence": 0.39,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["甲戌运与原局寅午构成持续火局背景", "2008戊子年子午直接冲击日支身体接口，较其余候选年更直接"]
+    },
+    "gfc_2014_e05-c2_q02": {
+      "answer": "A",
+      "confidence": 0.34,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局火土燥旺而金极弱，金所对应的呼吸系统失衡最突出", "癌症具体部位本属低可识别细节，其他选项没有更直接的结构优势"]
+    },
+    "gfc_2014_e05-c2_q03": {
+      "answer": "D",
+      "confidence": 0.25,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚辰、辛巳连续两年食伤先后透出，支持子女议题连续发生", "三胞胎的精确性别无法由命盘稳定区分，混合性别仅作低置信度破平"]
+    },
+    "gfc_2014_e05-c2_q04": {
+      "answer": "D",
+      "confidence": 0.5,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["乙官透年、寅中甲杀得丁印化生，官杀印链完整", "文盲或小学层级与原局显著的印官学习接口不符"]
+    },
+    "gfc_2014_e05-c2_q05": {
+      "answer": "B",
+      "confidence": 0.44,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["官杀生印、印再生身的专业资质链明显，较符合制度化专业服务", "原局水财全缺、金食伤很弱，不足以优先支持百万级经营财富"]
+    },
+    "gfc_2014_e05-c3_q01": {
+      "answer": "D",
+      "confidence": 0.75,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["三戌并见且未戌相破，季节加权土占比显著过高", "土类象首先落在消化代谢与肠胃系统"]
+    },
+    "gfc_2014_e05-c3_q02": {
+      "answer": "B",
+      "confidence": 0.84,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["1988戊辰年，辰同时六冲月、日、时三处戌支", "当时癸酉大运持续三害戌，身体与行动接口叠加受扰"]
+    },
+    "gfc_2014_e05-c3_q03": {
+      "answer": "C",
+      "confidence": 0.55,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["1997丁丑年正官透出，符合首次进入工作秩序", "丑年补齐原局未戌形成三刑，且命主实际年龄十八岁，转折性较强"]
+    },
+    "gfc_2014_e05-c3_q04": {
+      "answer": "C",
+      "confidence": 0.9,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2006丙戌与原局时柱丙戌完整伏吟", "流年戌又同时重复月、日、时三支，并受辛未大运相破"]
+    },
+    "gfc_2014_e05-c3_q05": {
+      "answer": "C",
+      "confidence": 0.66,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["男命以木财为配偶接口，2007丁亥藏甲木", "亥与原局未及辛未大运同时形成拱木，关系资源获得落地条件"]
+    },
+    "gfc_2014_e05-c4_q01": {
+      "answer": "D",
+      "confidence": 0.38,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["1990庚午年官星庚透，丁亥大运同时提供食伤与印星背景", "升学表现接口强于失学；该年未见足以支持极端伤害选项的多重信号"]
+    },
+    "gfc_2014_e05-c4_q02": {
+      "answer": "A",
+      "confidence": 0.78,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2001辛巳年配偶星七杀透出，巳又直接六冲日支亥", "巳与原局酉半合官杀、与申六合，星宫两层同时被引动"]
+    },
+    "gfc_2014_e05-c4_q03": {
+      "answer": "B",
+      "confidence": 0.82,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2009己丑年正处己丑大运，岁运干支完整伏吟", "己丑均为直接财星与财地，求财接口显著强于其余候选年"]
+    },
+    "gfc_2014_e05-c4_q04": {
+      "answer": "C",
+      "confidence": 0.56,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2011辛卯年卯伏吟年支并冲月支酉，职业环境出现直接改变", "己丑财运配合比劫旺局，更支持自主经营而非长期闲居或普通文职"]
+    },
+    "gfc_2014_e05-c4_q05": {
+      "answer": "D",
+      "confidence": 0.67,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2013癸巳年巳直接六冲日支亥，并与己丑运、原局酉成三合金局", "巳为乙木食伤子女接口，强官杀成局同时施压，子女事件较交通事件更有角色落点"]
+    },
+    "gfc_2014_e05-c5_q01": {
+      "answer": "B",
+      "confidence": 0.46,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["母亲印星落年支申，而申与月支巳同时六合又相破，早年母系接口呈聚散并见", "父亲财星巳午连续落在月、日两支，较具近身性"]
+    },
+    "gfc_2014_e05-c5_q02": {
+      "answer": "D",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2014甲午年午与日支午同支并自刑，直接重复关系与生活核心", "壬寅大运同时与原局巳申补齐寅巳申三刑，3月丁卯又伏吟时支卯"]
+    },
+    "gfc_2014_e05-c5_q03": {
+      "answer": "A",
+      "confidence": 0.68,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2007丁亥年亥六冲月支巳，学校与成长环境直接改变", "当时癸卯大运伏吟时柱，9月己酉又冲卯，强食伤结构更符合对制度的公开对抗"]
+    },
+    "gfc_2014_e05-c5_q04": {
+      "answer": "A",
+      "confidence": 0.55,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2009己丑年正官己透出，女命对象接口首次清晰显露", "11月乙亥虽冲月支巳，但缺少支持双重关系演员的第二条独立证据"]
+    },
+    "gfc_2014_e05-c5_q05": {
+      "answer": "C",
+      "confidence": 0.58,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2014甲午年食伤与财务服务接口旺，午又在日支自刑", "4月戊辰透七杀，形成表达行为与工作规制正面相接的月份"]
+    },
+    "gfc_2014_e05-c6_q01": {
+      "answer": "A",
+      "confidence": 0.54,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": ["题给四柱木火比印成势，而金财仅藏于巳，储财接口偏弱", "出生时间11:29与题给癸巳时柱不一致，脚本无法完整复核时柱"]
+    },
+    "gfc_2014_e05-c6_q02": {
+      "answer": "C",
+      "confidence": 0.34,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["24至33岁跨己巳、庚午两运，庚财出现支持婚姻机会", "命盘只能支持关系压力与流动，无法独立识别死亡、第三者或法律离婚等高负担细节"]
+    },
+    "gfc_2014_e05-c6_q03": {
+      "answer": "C",
+      "confidence": 0.43,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": ["1994甲戌年戌直接六冲日支辰，移动与身体生活接口明显受扰", "己巳大运又与原局寅形成刑害，交通合规情境较亲友拖累更有直接落点"]
+    },
+    "gfc_2014_e05-c6_q04": {
+      "answer": "B",
+      "confidence": 0.57,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": ["原局木火比印偏旺而金财弱，朋友或同辈分散财务的接口强", "1997丁丑年劫财透出并引出丑中财，较符合替他人承担财务后果"]
+    },
+    "gfc_2014_e05-c6_q05": {
+      "answer": "D",
+      "confidence": 0.45,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": ["2013年处辛未财运，食伤生财背景有改善资产配置的条件", "癸巳年重复题给时柱并引动住所变化，但未见足以锁定婚变或祖业的独立证据"]
+    },
+    "gfc_2014_e05-c7_q01": {
+      "answer": "C",
+      "confidence": 0.32,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["时柱丁卯为唯一明透食伤子女接口，数量上更接近单一子女", "精确性别属于低可识别细节，仅按传统女命伤官子息口径低置信度破平"]
+    },
+    "gfc_2014_e05-c7_q02": {
+      "answer": "B",
+      "confidence": 0.64,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["22至31岁主体落在丁酉运，酉为女命直接官星配偶接口", "丁伤官同现使关系活跃但不必稳定，符合桃花强于婚姻质量的问法"]
+    },
+    "gfc_2014_e05-c7_q03": {
+      "answer": "C",
+      "confidence": 0.7,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["32至41岁主体落在戊戌运，戌直接六冲日支辰", "戌又加剧原局丑未冲及未戌刑，生活核心与财务承载同时受压"]
+    },
+    "gfc_2014_e05-c7_q04": {
+      "answer": "B",
+      "confidence": 0.68,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["32至41岁戊戌运偏财干支成势，是四个时段中最直接的经营资源背景", "22至31岁官星较重，52至61岁则偏向杀印而非自主经营"]
+    },
+    "gfc_2014_e05-c7_q05": {
+      "answer": "C",
+      "confidence": 0.45,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["年干辛正官明透，丈夫功能星比父母印星更清晰", "兄弟劫财虽旺但带资源竞争，较难作为稳定支持来源"]
+    }
+  }
+}

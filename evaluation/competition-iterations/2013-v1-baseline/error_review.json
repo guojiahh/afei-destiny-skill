@@ -1,0 +1,458 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2013_e04-c1_q02",
+      "case_id": "e04-c1",
+      "profile_text": "命例一 出题： 吴佩孚师傅 男 公历 1968-04-10 · 戌时 中国香港 乾造 戊 申 丙 辰 庚 戌 丙 戌",
+      "question": "这命学历高低如何?",
+      "options": {
+        "A": "初中毕业",
+        "B": "中学毕业",
+        "C": "大学毕业",
+        "D": "博士学位"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.54,
+      "pre_reveal_decisive_facts": [
+        "原局杀印相生有学习与体系接口，但印土过重、食伤输出很弱。",
+        "大学与博士属于高负担学历断言，命盘不足以越过中学层级的现实基准率。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "base_rate",
+      "root_cause": "命局与题面只能支持学历不宜高估，不能稳定区分香港语境中的“初中毕业”和“中学毕业”两个相邻层级；官方键要求的细粒度超过现有证据可识别范围。",
+      "evidence": [
+        "揭晓前已经排除了大学和博士，并把答案压到中学低段，说明方向判断并未失真。",
+        "A 与 B 的差异是具体完成阶段，题干没有家庭资源、学龄期中断或明确教育经历可作区分。"
+      ],
+      "counterfactual_fix": "仅增加一般学历基准率或继续压低学历，不能确定地把 B 改为 A；任何直接偏向“初中”的规则都会重述本题标签。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_adjacent_education_level",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "相邻学历层级题在缺少家庭资源或学龄期中断事实时必须降为低置信度。",
+        "不得用揭晓后的具体学历层级反向新增单盘口诀。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c1_q03",
+      "case_id": "e04-c1",
+      "profile_text": "命例一 出题： 吴佩孚师傅 男 公历 1968-04-10 · 戌时 中国香港 乾造 戊 申 丙 辰 庚 戌 丙 戌",
+      "question": "这个命职业类型?",
+      "options": {
+        "A": "地质学家",
+        "B": "财经专家",
+        "C": "汽车经纪",
+        "D": "地产经纪"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.58,
+      "pre_reveal_decisive_facts": [
+        "辰戌土局是全盘最突出的资源主题，且辰戌冲形成反复交易、变动接口。",
+        "财经专家所需的清晰财星链较弱，汽车行业也没有比地产更直接的结构落点。"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "辰戌土与交易动象可支持经纪或实物资源行业，但无法可靠区分汽车经纪与地产经纪这两个具体职业名词。",
+      "evidence": [
+        "揭晓前证据主要落在土资源和交易变动，能够排除学术与财经专家，却不能唯一落到汽车。",
+        "题干没有履历、技能、迁移或交通事实给汽车行业增加独立权重。"
+      ],
+      "counterfactual_fix": "把某一干支关系固定映射为汽车会直接过拟合；通用职业功能链仍会让 C 与 D 接近。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_occupation",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "具体职业题先比较功能链，缺少独立行业线索时不得声称可唯一识别。",
+        "辰戌丑未不得直接等同地产或任何单一行业。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c1_q04",
+      "case_id": "e04-c1",
+      "profile_text": "命例一 出题： 吴佩孚师傅 男 公历 1968-04-10 · 戌时 中国香港 乾造 戊 申 丙 辰 庚 戌 丙 戌",
+      "question": "这命的婚姻结局形势?",
+      "options": {
+        "A": "命主至今未婚，但喜欢到处寻花问柳，女友很多很滥",
+        "B": "命主已婚，妻子是专业人士政界中人",
+        "C": "命主已婚，妻子是妓女出身低贱",
+        "D": "命主已离过两次婚"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.66,
+      "pre_reveal_decisive_facts": [
+        "男命妻星木仅弱藏于辰，日支配偶宫戌被月支辰直接冲动。",
+        "日、时两见戌而辰同时冲及两处，关系结构呈重复破合信号。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "盘面可支持关系结构不稳，但不能区分“两次离婚”与“已婚且妻子具有特定性工作背景”这类极具体终局和人物履历。",
+      "evidence": [
+        "辰戌冲和妻星弱只说明关系压力，不能推出离婚次数。",
+        "官方 C 同时包含已婚、妻子职业和贬损性身份三个高负担子句，题面没有独立证据覆盖。"
+      ],
+      "counterfactual_fix": "更严格的高负担选项审计会降低 C 和 D，但不能从现有信息确定 C；为 C 增设规则会过拟合人物传记。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_relationship_biography",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "婚姻选项中的次数、职业、第三者或性工作背景必须逐子句有独立证据。",
+        "配偶宫受冲不得直接翻译为离婚次数或配偶职业。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c2_q01",
+      "case_id": "e04-c2",
+      "profile_text": "命例二 出题： 鼎大图书有限公司 培哥 女 公历 1972-11-06 · 19:15 戌时 中国香港 坤造 壬 子 庚 戌 辛 丑 戊 戌",
+      "question": "命主2012年的事业情况如何?",
+      "options": {
+        "A": "上班一族",
+        "B": "自己做生意",
+        "C": "家庭主妇",
+        "D": "电台DJ"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.69,
+      "pre_reveal_decisive_facts": [
+        "2012进入丙午正官大运，制度、任职与受薪工作的接口明显增强。",
+        "原局金土强而财星木全无，自营生意所需的持续财务链不足。"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "把丙午官杀大运近乎单向映射为受薪任职，并把原局不见木财当成自营生意的否决条件，忽略强身、壬子食伤输出及 2012 壬辰对原局辰戌结构的经营性变化接口。",
+      "evidence": [
+        "确定性计算确认 2012 的确进入丙午运，因此不是排运错误。",
+        "财星缺失不等于不能经商，官杀背景也可对应承担经营责任；揭晓前证据使用了错误的职业模式映射。"
+      ],
+      "counterfactual_fix": "对“受薪/自营”强制比较官印稳定链与食伤生财、比劫承责、岁运变化链，并禁止用“无财”一票否决经商；该比较会削弱 A 并把 B 提升为首选。",
+      "would_change_answer": true,
+      "recurrence_key": "career_mode_single_ten_god_overreach",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "受薪与自营题不得以官星出现或财星缺失单点定案。",
+        "同盘对职业模式至少比较组织链、输出经营链和目标年份变化接口。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c2_q02",
+      "case_id": "e04-c2",
+      "profile_text": "命例二 出题： 鼎大图书有限公司 培哥 女 公历 1972-11-06 · 19:15 戌时 中国香港 坤造 壬 子 庚 戌 辛 丑 戊 戌",
+      "question": "婚姻情况?",
+      "options": {
+        "A": "单身未婚，盛女",
+        "B": "已婚，有子女，婚姻美满",
+        "C": "夫亡",
+        "D": "被有妇之夫包养之情人"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "女命夫星火仅藏于两戌而不透，配偶星的落地性偏弱。",
+        "日支丑又受戌刑结构牵制，美满婚育的复合断言缺少稳定宫星同向支持。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "夫星藏而不透与丑戌刑只能支持关系落地性和稳定度的不确定，不能可靠区分单身与“已婚、有子女、婚姻美满”的三重现实状态。",
+      "evidence": [
+        "A 与 B 都需要题面未提供的实际婚育事实。",
+        "B 的子女与婚姻质量子句不能由夫星或配偶宫单独推出。"
+      ],
+      "counterfactual_fix": "降低对藏干和刑的负面解释只能使 A、B 更接近，不能确定地改选 B。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_relationship_biography",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "婚育复合选项必须分别验证婚姻、子女和关系质量。",
+        "夫星不透或配偶宫受刑不得直接判定未婚。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c2_q03",
+      "case_id": "e04-c2",
+      "profile_text": "命例二 出题： 鼎大图书有限公司 培哥 女 公历 1972-11-06 · 19:15 戌时 中国香港 坤造 壬 子 庚 戌 辛 丑 戊 戌",
+      "question": "命主学历情况?",
+      "options": {
+        "A": "中三 初中毕业",
+        "B": "中七 预科毕业",
+        "C": "大学以上",
+        "D": "因病而不能上学而只得小学"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.6,
+      "pre_reveal_decisive_facts": [
+        "戌丑土印多而壬子食伤有输出，支持持续到较高的中学阶段。",
+        "印比过旺且官星不透，对大学以上学历的区分性支持不足。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "base_rate",
+      "root_cause": "印与食伤支持较高教育，但缺少学龄期岁运、家庭资源或入学完成事实，无法稳定区分预科毕业与大学以上。",
+      "evidence": [
+        "揭晓前已把范围缩到 B/C 两个高教育选项。",
+        "印比偏旺是否阻碍大学完成属于解释判断，并非能唯一落到实际学历的确定事实。"
+      ],
+      "counterfactual_fix": "取消对印比过旺的过度惩罚会提高 C，但仍不足以保证越过 B；直接把该结构映射大学属于标签拟合。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_adjacent_education_level",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "预科与大学相邻层级在无学龄期事实时必须标注低可识别。",
+        "印星数量不得直接换算为最高学历。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c3_q01",
+      "case_id": "e04-c3",
+      "profile_text": "命例三 出题： 顾臻明师傅（首届冠军、第三届亚军） 男 公历 1972-01-15 · 00:30AM 中国香港 乾造 辛 亥 辛 丑 乙 巳 丙 子",
+      "question": "命主在2012年工作方面情况？",
+      "options": {
+        "A": "无业，无收入",
+        "B": "受薪工作，年薪在$300000以下",
+        "C": "受薪工作，年薪在$1000000以上",
+        "D": "自雇经营店舖，收入不稳定"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.72,
+      "pre_reveal_decisive_facts": [
+        "2012处丁酉运，巳酉丑三合金局强化官杀，受薪与组织约束明显。",
+        "原局财星仅藏、乙木承财有限，百万以上年薪缺少独立财富链支持。"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "base_rate",
+      "root_cause": "丁酉运和巳酉丑金局可以支持受薪和组织压力，却不能由命盘可靠区分年薪三十万以下与一百万以上的精确收入档位。",
+      "evidence": [
+        "揭晓前正确识别为受薪工作，错误仅在收入档位。",
+        "题干没有职位、行业、资历或现实收入事实，财富承载分析不足以生成具体港币门槛。"
+      ],
+      "counterfactual_fix": "提高官杀成局的职业级别权重仍不能稳定推出百万年薪；任何固定金额映射都会过拟合。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_income_band",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "收入档位题缺少现实职位和地区基准时不得由十神直接换算金额。",
+        "先判就业模式，再单独降低收入档位置信度。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c3_q02",
+      "case_id": "e04-c3",
+      "profile_text": "命例三 出题： 顾臻明师傅（首届冠军、第三届亚军） 男 公历 1972-01-15 · 00:30AM 中国香港 乾造 辛 亥 辛 丑 乙 巳 丙 子",
+      "question": "在2001年，命主发生了何事？",
+      "options": {
+        "A": "中六合彩二奖",
+        "B": "和拍拖十年的女友分手",
+        "C": "被劫受伤入院",
+        "D": "居住大厦发生三级大火"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.65,
+      "pre_reveal_decisive_facts": [
+        "2001辛巳与日支巳同支，直接重复引动配偶宫。",
+        "当时戊戌财星大运提供长期关系背景，流年又把原局亥巳冲显化为关系结构变化。"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "看到辛巳流年伏吟日支并触发亥巳冲后，直接把日支解释为配偶宫和分手，忽略题目默认主体应为命主本人以及身体、突发事件同样落在日支生活核心。",
+      "evidence": [
+        "题干只问命主发生何事，没有伴侣事实或关系阶段作支持。",
+        "被劫受伤需要本人身体与官杀压力，至少与流年辛杀、巳亥冲相容；分手的“十年女友”含额外且未获支持的必要子句。"
+      ],
+      "counterfactual_fix": "在未指定角色的事件题先以本人为主体，并要求关系选项同时有配偶星、配偶宫和阶段证据；该闸门会否决 B 的无依据伴侣叙事并使 C 成为更贴近现有触发的选项。",
+      "would_change_answer": true,
+      "recurrence_key": "day_branch_auto_mapped_to_spouse",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "未指定角色的事件题默认命主本人，改判伴侣必须有配偶星和关系语境。",
+        "日支受冲时同时比较身体生活、住所和关系，不得自动翻译为分手。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c3_q03",
+      "case_id": "e04-c3",
+      "profile_text": "命例三 出题： 顾臻明师傅（首届冠军、第三届亚军） 男 公历 1972-01-15 · 00:30AM 中国香港 乾造 辛 亥 辛 丑 乙 巳 丙 子",
+      "question": "以下那个答案最接近命主中学时期的状况？",
+      "options": {
+        "A": "学业成绩名列前茅",
+        "B": "无心向学，结交坏朋友",
+        "C": "成绩中等，有做义工习惯",
+        "D": "中途辍学，赚钱帮补家计"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.63,
+      "pre_reveal_decisive_facts": [
+        "学龄期先行庚子官印运，原局亥子丑又成水方，官印学习链持续而明显。",
+        "义工习惯属于命盘难以识别的附加细节，不能凭中等成绩方向补足。"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "calculation",
+      "secondary_failure_reason": "luck_cycle",
+      "root_cause": "把中学时期错误地放在庚子运。确定性计算显示庚子运约为 1974-1983，命主中学年龄主体在 1984-1990 的己亥运，导致学业背景使用了错误的大运。",
+      "evidence": [
+        "计算器以题给 1972-01-15 00:30、男命排出约 1974-11-08 起运，庚子 1974-1983、己亥 1984-1993。",
+        "揭晓前首要证据正是“中学时期庚子官印运”，因此错误时间映射直接支撑了 A。"
+      ],
+      "counterfactual_fix": "按实际出生日期将中学年龄逐年映射到己亥运，并在年龄段题中处理换运边界；失去庚子官印这一决定性前提后，A 不再成立，己财临运对学习链的干扰会把首选转向 B。",
+      "would_change_answer": true,
+      "recurrence_key": "age_band_luck_cycle_misalignment",
+      "fix_type": "deterministic_calculation",
+      "decision": "patch",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "固定 1972-01-15 00:30 男命：庚子运为 1974-1983、己亥运为 1984-1993。",
+        "年龄段题必须把每个公历年映射到实际大运，禁止按顺序或整十年龄口算。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c3_q04",
+      "case_id": "e04-c3",
+      "profile_text": "命例三 出题： 顾臻明师傅（首届冠军、第三届亚军） 男 公历 1972-01-15 · 00:30AM 中国香港 乾造 辛 亥 辛 丑 乙 巳 丙 子",
+      "question": "命主13岁前所发生的严重事故？",
+      "options": {
+        "A": "父亲过身",
+        "B": "妹妹过身",
+        "C": "意外导致右眼失明",
+        "D": "意外导致右脚折断"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.6,
+      "pre_reveal_decisive_facts": [
+        "原局亥直接冲日支巳火，且亥子丑成水方，火类视觉接口受制很重。",
+        "13岁前庚子运进一步加强金水压力，身体火位比腿部或姐妹接口更直接。"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "金水压火可支持健康或家庭风险类别，但不能从原局和一个十年年龄段唯一识别父亲死亡、妹妹死亡、右眼失明或右脚骨折中的具体人物与事故结果。",
+      "evidence": [
+        "揭晓前只找到火类视觉接口，没有目标年份可复核严重事件的连续触发。",
+        "官方 A 需要父星与年月宫位的独立受损证据，题面没有提供事件年份。"
+      ],
+      "counterfactual_fix": "加强父母角色检查会降低身体选项，但仍不能确定父亲死亡；缺少年份使任何唯一选择都依赖人物事实。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_calamity_actor",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "无具体年份的严重事故题不得由五行类象唯一推出器官、亲属或死亡。",
+        "父母死亡选项必须同时有六亲星、年月宫位和岁运连续触发。"
+      ]
+    },
+    {
+      "id": "gfc_2013_e04-c3_q05",
+      "case_id": "e04-c3",
+      "profile_text": "命例三 出题： 顾臻明师傅（首届冠军、第三届亚军） 男 公历 1972-01-15 · 00:30AM 中国香港 乾造 辛 亥 辛 丑 乙 巳 丙 子",
+      "question": "命主的性格特质？",
+      "options": {
+        "A": "口齿伶俐，平易近人，克勤克俭",
+        "B": "不擅言辞，容易开罪人，挥霍无节制",
+        "C": "口齿伶俐，平易近人，挥霍无节制",
+        "D": "不擅言辞，容易开罪人，克勤克俭"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "亥子丑水方使印星偏重，唯一透出的丙伤官又被两辛合绊，表达输出受束。",
+        "财星仅藏而比劫不旺，节制资源比无节制挥霍更符合原局。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "印重、伤官受合可以支持不擅言辞，但财星弱不能稳定区分克勤克俭与挥霍无节制这项现实消费习惯。",
+      "evidence": [
+        "预测 D 与官方 B 共享“不擅言辞、容易开罪人”，错误只在消费习惯子句。",
+        "财弱描述资源接口，不等于节俭；同样也没有足够证据直接推出挥霍。"
+      ],
+      "counterfactual_fix": "移除“财弱即节俭”的错误映射只会使 B/D 打平，不能确定地改成 B。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_behavior_trait",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "复合性格选项逐子句评分，共享子句不得掩盖低可识别的消费习惯。",
+        "财星强弱不得直接等同节俭或挥霍。"
+      ]
+    }
+  ]
+}

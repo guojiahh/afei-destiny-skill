@@ -1,0 +1,29 @@
+{
+  "protocol": "paired-question-comparison-case-bootstrap-v1",
+  "base_rounds": [
+    "2022-v1-baseline",
+    "2023-v1-baseline",
+    "2024-v1-baseline",
+    "2025-v1-baseline"
+  ],
+  "candidate_rounds": [
+    "2022-v3-final",
+    "2023-v3-final",
+    "2024-v3-final",
+    "2025-v3-final"
+  ],
+  "count": 160,
+  "case_count": 32,
+  "base_accuracy": 0.4375,
+  "candidate_accuracy": 0.4437,
+  "paired_delta": 0.0063,
+  "wins": 19,
+  "losses": 18,
+  "ties": 123,
+  "case_bootstrap_95": [
+    -0.0625,
+    0.075
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20260810
+}

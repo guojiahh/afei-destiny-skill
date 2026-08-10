@@ -1,0 +1,725 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2021_e12-c1_q02",
+      "case_id": "e12-c1",
+      "profile_text": "命例一 出题： 乐只君老师 流派： 紫微斗数 男 公历 1954-03-18 中国香港 乾造 甲 午 丁 卯 癸 酉 庚 申",
+      "question": "命主父亲于哪年去世?",
+      "options": {
+        "A": "1959己亥年",
+        "B": "1963癸卯年",
+        "C": "1964甲辰年",
+        "D": "1969己酉年"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.36,
+      "pre_reveal_decisive_facts": [
+        "1963癸卯伏吟月支并以卯酉冲直击原局",
+        "流年癸与月干丁形成显著功能冲突"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c1_q03",
+      "case_id": "e12-c1",
+      "profile_text": "命例一 出题： 乐只君老师 流派： 紫微斗数 男 公历 1954-03-18 中国香港 乾造 甲 午 丁 卯 癸 酉 庚 申",
+      "question": "命主哪年到香港?",
+      "options": {
+        "A": "1960庚子年",
+        "B": "1962壬寅年",
+        "C": "1968戊申年",
+        "D": "1971辛亥年"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.52,
+      "pre_reveal_decisive_facts": [
+        "1960庚子对子午年柱形成天干与地支双重冲动",
+        "流年子与申、戊辰运补成申子辰水局"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c2_q01",
+      "case_id": "e12-c2",
+      "profile_text": "命例二 出题： 林前利老师 流派： 八字 男 公历 1983-10-19 新加坡 乾造 癸 亥 壬 戌 庚 辰 辛 巳",
+      "question": "命主目前的职业是什么？",
+      "options": {
+        "A": "自己做贸易生意",
+        "B": "电脑技术人员",
+        "C": "偏门放高利贷",
+        "D": "无工作靠父亲养活"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "庚金偏强且壬食神、癸伤官并透，输出与流通功能明显",
+        "财星藏于亥辰，具经营接口但职业名称仍属低可识别"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c2_q02",
+      "case_id": "e12-c2",
+      "profile_text": "命例二 出题： 林前利老师 流派： 八字 男 公历 1983-10-19 新加坡 乾造 癸 亥 壬 戌 庚 辰 辛 巳",
+      "question": "命主已经离婚，第二婚是哪一年？",
+      "options": {
+        "A": "2017",
+        "B": "2018",
+        "C": "2019",
+        "D": "2020"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "2018戊戌直接六冲日支辰配偶宫",
+        "戊午大运与流年戌形成火势背景并重复戊干"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c2_q03",
+      "case_id": "e12-c2",
+      "profile_text": "命例二 出题： 林前利老师 流派： 八字 男 公历 1983-10-19 新加坡 乾造 癸 亥 壬 戌 庚 辰 辛 巳",
+      "question": "命主目前有一个孩子，那年出生？",
+      "options": {
+        "A": "2018年",
+        "B": "2019年",
+        "C": "2020年",
+        "D": "2021年"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.41,
+      "pre_reveal_decisive_facts": [
+        "2019己亥伏吟年支并六冲时支巳子女宫",
+        "亥为原局食伤水气的重要根点"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c2_q04",
+      "case_id": "e12-c2",
+      "profile_text": "命例二 出题： 林前利老师 流派： 八字 男 公历 1983-10-19 新加坡 乾造 癸 亥 壬 戌 庚 辰 辛 巳",
+      "question": "命主在2011年发生了一件事情？",
+      "options": {
+        "A": "得到象棋比赛冠军",
+        "B": "犯法被抓坐牢",
+        "C": "脚受伤骨折",
+        "D": "得到一笔小横财"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.39,
+      "pre_reveal_decisive_facts": [
+        "2011辛卯与亥、己未运补成三合木财局",
+        "原局庚金偏强，具承载有限财务机会的条件"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c2_q05",
+      "case_id": "e12-c2",
+      "profile_text": "命例二 出题： 林前利老师 流派： 八字 男 公历 1983-10-19 新加坡 乾造 癸 亥 壬 戌 庚 辰 辛 巳",
+      "question": "命主的性格外表怎样？",
+      "options": {
+        "A": "斯文有礼，爱穿名牌",
+        "B": "忠厚老实，不爱打扮",
+        "C": "粗鲁无礼，满身纹身",
+        "D": "沉默少话，皮肤白净"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.5,
+      "pre_reveal_decisive_facts": [
+        "庚辰日配辛劫财，金气强而外在边界感较硬",
+        "壬癸食伤并透，不支持沉默少话这一必要子句"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c4_q02",
+      "case_id": "e12-c4",
+      "profile_text": "命例四 出题： 阮怀胜老师 流派： 紫微斗数 男 公历 1977-07-06 中国台湾 乾造 丁 巳 丙 午 甲 子 辛 未",
+      "question": "这人曾经做过啥工作?",
+      "options": {
+        "A": "证券营业员",
+        "B": "会计",
+        "C": "厨师",
+        "D": "房屋中介"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.66,
+      "pre_reveal_decisive_facts": [
+        "原局巳午未三会火方且食伤双透",
+        "四项中厨师最直接需要持续火食伤的技能输出"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c4_q04",
+      "case_id": "e12-c4",
+      "profile_text": "命例四 出题： 阮怀胜老师 流派： 紫微斗数 男 公历 1977-07-06 中国台湾 乾造 丁 巳 丙 午 甲 子 辛 未",
+      "question": "这人那一年结婚，几个小孩?",
+      "options": {
+        "A": "2004年甲申年，两个小孩",
+        "B": "2008年戊子年，一个小孩",
+        "C": "2009年己丑年，一个小孩",
+        "D": "无妻无子，光棍一个"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.5,
+      "pre_reveal_decisive_facts": [
+        "2009己丑正财透出并与日支子六合",
+        "丑同时六冲时支未，婚育与家庭结构在同年被引动"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c4_q05",
+      "case_id": "e12-c4",
+      "profile_text": "命例四 出题： 阮怀胜老师 流派： 紫微斗数 男 公历 1977-07-06 中国台湾 乾造 丁 巳 丙 午 甲 子 辛 未",
+      "question": "这人健康如何?",
+      "options": {
+        "A": "火旺，心脏有问题",
+        "B": "辛金克身，丙辛合，精神有问题",
+        "C": "子水受穿，阳亢阴弱，头部有颗小肿瘤",
+        "D": "食神旺一生无病痛"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "巳午未三会火方使火成为原局最明显的长期偏态",
+        "火类象与循环、心脏系统直接对应"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c6_q02",
+      "case_id": "e12-c6",
+      "profile_text": "命例六 出题： 萧始迪老师 流派： 八字 女 公历 1975-01-07 中国香港 坤造 甲 寅 丁 丑 癸 丑 丁 巳",
+      "question": "命主第一次和男生交往在那一年发生?",
+      "options": {
+        "A": "1991",
+        "B": "1994",
+        "C": "1997",
+        "D": "2002"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.53,
+      "pre_reveal_decisive_facts": [
+        "1991辛未六冲日支丑配偶宫",
+        "未同时六冲月支丑，早年关系环境被双重引动"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c6_q03",
+      "case_id": "e12-c6",
+      "profile_text": "命例六 出题： 萧始迪老师 流派： 八字 女 公历 1975-01-07 中国香港 坤造 甲 寅 丁 丑 癸 丑 丁 巳",
+      "question": "命主在那一年结婚?",
+      "options": {
+        "A": "1993",
+        "B": "1996",
+        "C": "2003",
+        "D": "2005"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "2003癸未与日干癸同干并六冲日支丑",
+        "未还六冲月支丑，并与甲戌运补成丑戌未三刑"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c7_q02",
+      "case_id": "e12-c7",
+      "profile_text": "命例七 出题： 张翊萱老师（己亥亚军、庚子冠军） 流派： 紫微斗数 男 公历 1953-01-27 马来西亚 乾造 壬 辰 癸 丑 戊 寅 乙 卯",
+      "question": "命主在何一年得到子女？",
+      "options": {
+        "A": "1976",
+        "B": "1978",
+        "C": "1979",
+        "D": "1985"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.35,
+      "pre_reveal_decisive_facts": [
+        "1979己未六冲月支丑，家庭结构变化直接",
+        "未与时支卯半合木，子女宫相关功能同时被引动"
+      ],
+      "tags": [
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c7_q03",
+      "case_id": "e12-c7",
+      "profile_text": "命例七 出题： 张翊萱老师（己亥亚军、庚子冠军） 流派： 紫微斗数 男 公历 1953-01-27 马来西亚 乾造 壬 辰 癸 丑 戊 寅 乙 卯",
+      "question": "命主在哪一年闹上官非并被警察扣留在警察局？",
+      "options": {
+        "A": "1995年",
+        "B": "1996年",
+        "C": "1997年",
+        "D": "1998年"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "1998戊寅与日柱戊寅完整伏吟",
+        "流年戊又与戊午运同干，事件明确落到命主本人"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c7_q04",
+      "case_id": "e12-c7",
+      "profile_text": "命例七 出题： 张翊萱老师（己亥亚军、庚子冠军） 流派： 紫微斗数 男 公历 1953-01-27 马来西亚 乾造 壬 辰 癸 丑 戊 寅 乙 卯",
+      "question": "命主是因为什么事而闹上官非并被警察扣留？",
+      "options": {
+        "A": "打架",
+        "B": "吸毒",
+        "C": "偷窃",
+        "D": "经营非法高利贷（大耳窿）"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.56,
+      "pre_reveal_decisive_facts": [
+        "原局壬癸财星突出而乙卯官杀成势",
+        "四项中非法借贷同时覆盖财务经营与官非压力两个接口"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c7_q05",
+      "case_id": "e12-c7",
+      "profile_text": "命例七 出题： 张翊萱老师（己亥亚军、庚子冠军） 流派： 紫微斗数 男 公历 1953-01-27 马来西亚 乾造 壬 辰 癸 丑 戊 寅 乙 卯",
+      "question": "命主在2016年发生何事？",
+      "options": {
+        "A": "负债累累",
+        "B": "母亲逝世",
+        "C": "创业失败",
+        "D": "股票损失"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.5,
+      "pre_reveal_decisive_facts": [
+        "2016丙申偏印透出并六冲日支寅",
+        "申与庚申运同支，亲属与印星议题形成重复引动"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c8_q01",
+      "case_id": "e12-c8",
+      "profile_text": "命例八 出题： 陈俊燊师傅 流派： 子平八字 男 公历 1971-09-10 广东潮汕（少时随家人移居中国香港） 乾造 辛 亥 丁 酉 戊 戌 丁 巳 双命例之一（Q36-38）",
+      "question": "以下哪项描述是命主截至2018年的事业状态？",
+      "options": {
+        "A": "是一小商人，在内地开厂",
+        "B": "是一名艺术家，靠绘画赚钱",
+        "C": "在某大型机构担任高级技术顾问",
+        "D": "在电讯公司门市部担任销售人员"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.61,
+      "pre_reveal_decisive_facts": [
+        "辛酉伤官有根而双丁印透，构成专业技能与体系知识链",
+        "官杀财星不显，不如技术顾问路径直接"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c8_q02",
+      "case_id": "e12-c8",
+      "profile_text": "命例八 出题： 陈俊燊师傅 流派： 子平八字 男 公历 1971-09-10 广东潮汕（少时随家人移居中国香港） 乾造 辛 亥 丁 酉 戊 戌 丁 巳 双命例之一（Q36-38）",
+      "question": "以下哪项是命主于2016及2017年的经历？",
+      "options": {
+        "A": "2016事业不顺，整年赚不到钱。2017更加不顺，更有破产的隐忧",
+        "B": "2016事业不顺，整年赚不到钱。2017平中见顺，赚得小财",
+        "C": "2016算顺，赚得小财。2017更进一步，比2016多赚8倍",
+        "D": "2016很顺，大赚其财。2017因某些原因停止所有工作，整年赚不到钱"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.47,
+      "pre_reveal_decisive_facts": [
+        "2016申与原局酉戌补成三会金方，输出获利信号强",
+        "2017丁酉伏吟月柱并与日支戌相害，停顿风险明显增大"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c8_q03",
+      "case_id": "e12-c8",
+      "profile_text": "命例八 出题： 陈俊燊师傅 流派： 子平八字 男 公历 1971-09-10 广东潮汕（少时随家人移居中国香港） 乾造 辛 亥 丁 酉 戊 戌 丁 巳 双命例之一（Q36-38）",
+      "question": "以下哪项描述符合命主于2019年的状况？",
+      "options": {
+        "A": "事业多有阻滞，且耗财不少，但喜得麟儿",
+        "B": "事业顺畅，又大赚其财，且喜得麟儿",
+        "C": "事业顺畅，大赚其财，但太太流产兼住院",
+        "D": "事业多有阻滞，耗财不少，且太太流产兼住院"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "2019己亥伏吟年支并六冲时支巳，事业和支出变化明显",
+        "亥中甲木引出子女功能，较流产终局需要的附加假设更少"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c9_q01",
+      "case_id": "e12-c9",
+      "profile_text": "命例九 出题： 陈俊燊师傅 流派： 子平八字 女 公历 1967-08-27 坤造 丁 未 戊 申 癸 亥 庚 申 双命例之二（Q39-40）",
+      "question": "截到2017年9月，以下哪项符合命主的感情及婚姻状况？",
+      "options": {
+        "A": "庚戌运(1981-1991年)已结婚，婚姻至今美满",
+        "B": "庚戌运(1981-1991)已结婚,但在辛亥运(1991-2001年)离婚,之后一直拍散拖",
+        "C": "从未结婚，但谈过4次恋爱",
+        "D": "从未结婚，也从未谈过恋爱"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "戊正官透出且庚戌运带制度与关系落地条件",
+        "辛亥运重复日支亥，比劫水旺并加重申亥害，后续稳定性不足"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2021_e12-c9_q02",
+      "case_id": "e12-c9",
+      "profile_text": "命例九 出题： 陈俊燊师傅 流派： 子平八字 女 公历 1967-08-27 坤造 丁 未 戊 申 癸 亥 庚 申 双命例之二（Q39-40）",
+      "question": "截到2017年9月，以下哪项符合命主的财政及事业状况？",
+      "options": {
+        "A": "因投资投机失利，负债。靠正职收入还贷款给银行",
+        "B": "事业一直稳步上扬，做到上市公司高层。可惜投资投机失利，剩下不多钱",
+        "C": "因投资投机失利，负债。无业，要靠父母家人接济过生活",
+        "D": "事业一直平稳，做到上市公司中层。投资投机屡有大斩获，现已财务自由"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "戊官与庚印透出，官印链支持组织内的职位上升",
+        "癸水偏强而丁财弱，投资承载与留财能力弱于职业层级"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

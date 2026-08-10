@@ -1,0 +1,890 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2019_e10-c1_q02",
+      "case_id": "e10-c1",
+      "profile_text": "命例一 出题： 周星飞老师 男 公历 1982-01-23 · 丑时 中国台湾宜兰 乾造 辛 酉 辛 丑 丙 午 己 丑",
+      "question": "命主的学历及其目前的工作？",
+      "options": {
+        "A": "博士硕士毕业，在贸易公司上班，当产品业务员之管理",
+        "B": "只有高中毕业，在贸易公司上班，当产品业务员",
+        "C": "博士硕士毕业，在大型私人医院机构，从事研究",
+        "D": "只有高中毕业，在大型私人医院机构，从事研究助理"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.72,
+      "pre_reveal_decisive_facts": [
+        "伤官生财链明显，较贴近贸易与销售功能",
+        "原局木印不现，研究生层级缺少独立支持"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c1_q03",
+      "case_id": "e10-c1",
+      "profile_text": "命例一 出题： 周星飞老师 男 公历 1982-01-23 · 丑时 中国台湾宜兰 乾造 辛 酉 辛 丑 丙 午 己 丑",
+      "question": "命主需要开刀，在医院住了三天，于那年发生？",
+      "options": {
+        "A": "2006年1月1日",
+        "B": "2009年1月1日",
+        "C": "2011年1月1日",
+        "D": "2014年1月1日"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "2009己丑与时柱己丑伏吟，并重复引动原局两丑",
+        "戊戌大运与原局午半合，流年再以丑害午，身体接口压力集中"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c1_q05",
+      "case_id": "e10-c1",
+      "profile_text": "命例一 出题： 周星飞老师 男 公历 1982-01-23 · 丑时 中国台湾宜兰 乾造 辛 酉 辛 丑 丙 午 己 丑",
+      "question": "命主现在的财务状况？",
+      "options": {
+        "A": "名下有不动产，存款很多，没有卡债",
+        "B": "名下有不动产，存款为0，有欠卡债",
+        "C": "名下没有不动产，存款很多，没有卡债",
+        "D": "名下没有不动产，存款为0，有欠卡债"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.59,
+      "pre_reveal_decisive_facts": [
+        "日主略弱而财星多且伤官泄身，财务承载与留存偏弱",
+        "2019在丁酉运，劫财临财支，资产积累不占优势"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c2_q02",
+      "case_id": "e10-c2",
+      "profile_text": "命例二 出题： 杨迪生老师 流派： 紫微斗数 男 公历 1987-07-10 · 6.27pm 酉时 马来西亚 乾造 丁 卯 丁 未 庚 申 乙 酉",
+      "question": "命主在哪一年结婚？",
+      "options": {
+        "A": "2017",
+        "B": "2015",
+        "C": "2009",
+        "D": "尚未结婚"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.66,
+      "pre_reveal_decisive_facts": [
+        "2015乙未妻星乙透，并与原局月支未伏吟",
+        "当年仍在甲辰财星大运，星与运的关系落地条件强于其他候选"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c2_q04",
+      "case_id": "e10-c2",
+      "profile_text": "命例二 出题： 杨迪生老师 流派： 紫微斗数 男 公历 1987-07-10 · 6.27pm 酉时 马来西亚 乾造 丁 卯 丁 未 庚 申 乙 酉",
+      "question": "命主从毕业阶段到现在的职业",
+      "options": {
+        "A": "客户服务专员，房地产经纪，律师",
+        "B": "直销人士，电脑维修员，Uber司机",
+        "C": "冷气维修工，汽车维修员，电脑维修员",
+        "D": "补习教师，非法博彩经纪，财务公司老板"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.49,
+      "pre_reveal_decisive_facts": [
+        "官财并透且日主有申酉强根，较能承担教学、经纪与经营的混合路径",
+        "纯维修体力链与原局主要功能不合"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c3_q01",
+      "case_id": "e10-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 流派： 子平八字 女 公历 1984-12-28 · 辰时 中国大陆 坤造 甲 子 丙 子 丙 申 壬 辰",
+      "question": "描述命主上学时期的表现特征？",
+      "options": {
+        "A": "聪颖好学，学业优秀",
+        "B": "安分乖巧，学业中等",
+        "C": "调皮懒惰，学业较差",
+        "D": "勤奋苦读，学业良好"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.63,
+      "pre_reveal_decisive_facts": [
+        "甲印透年，旺官杀可沿水生木形成官印学习链",
+        "选项中的调皮懒惰缺少食伤失控证据"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c3_q02",
+      "case_id": "e10-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 流派： 子平八字 女 公历 1984-12-28 · 辰时 中国大陆 坤造 甲 子 丙 子 丙 申 壬 辰",
+      "question": "此命目前婚姻状况如何？",
+      "options": {
+        "A": "无婚姻，无儿女",
+        "B": "无婚姻，有儿女",
+        "C": "一次婚姻，无儿女",
+        "D": "一次婚姻，有儿女"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.58,
+      "pre_reveal_decisive_facts": [
+        "女命官杀成局，日支申亦含壬并参与申子辰水局",
+        "时柱辰为子女宫且藏食神，较无儿女选项多一层承载接口"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c3_q04",
+      "case_id": "e10-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 流派： 子平八字 女 公历 1984-12-28 · 辰时 中国大陆 坤造 甲 子 丙 子 丙 申 壬 辰",
+      "question": "当前工作、财产状况？",
+      "options": {
+        "A": "无房无车，无业，有负债",
+        "B": "无房有车，工薪，月收入五千元",
+        "C": "有房有车，公司高管，年入百万",
+        "D": "多套房产有车，企业老板，年盈收三千万"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "原局官杀成局并有甲印承接，较偏制度组织与管理路径",
+        "2012至2021癸酉运进一步引动官财，支持职位与资产提升而非完全失业"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c3_q05",
+      "case_id": "e10-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 流派： 子平八字 女 公历 1984-12-28 · 辰时 中国大陆 坤造 甲 子 丙 子 丙 申 壬 辰",
+      "question": "下列哪个事情不是发生在命主身上？",
+      "options": {
+        "A": "合伙创业被朋友坑倒闭",
+        "B": "从事保险行业",
+        "C": "进国有集团上班",
+        "D": "在亲戚机械厂里做技术工"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.39,
+      "pre_reveal_decisive_facts": [
+        "官印链对国有组织经历支持最强，申金与辰土也可对应机械技术环境",
+        "合伙创业是四项中附加假设最多、直接经营链最弱的一项"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c4_q02",
+      "case_id": "e10-c4",
+      "profile_text": "命例四 出题： 陈易燊老师（香港青术会） 流派： 八字 女 公历 1971-05-28 · 凌晨02:30 丑时 天津（年少时已随家人移居中国香港） 坤造 辛 亥 癸 巳 癸 丑 癸 丑",
+      "question": "以下哪项是命主于1998戊寅年的经历？",
+      "options": {
+        "A": "当年与前辈合伙创业，几经辛苦，年底已赚到200万左右",
+        "B": "当年决心自行创业，几经辛苦，年底已忍不住止蚀离场",
+        "C": "当年跟男友合份买楼同居，但楼价一路向下，出现财困",
+        "D": "当年男友一次性付款买楼赠送予命主，虽楼价一路向下，但对命主无影响"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.61,
+      "pre_reveal_decisive_facts": [
+        "1998戊寅处丙申财运，财透且官星落年",
+        "寅冲大运申并合原局亥，支持主动创业与明显事业转折"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c4_q03",
+      "case_id": "e10-c4",
+      "profile_text": "命例四 出题： 陈易燊老师（香港青术会） 流派： 八字 女 公历 1971-05-28 · 凌晨02:30 丑时 天津（年少时已随家人移居中国香港） 坤造 辛 亥 癸 巳 癸 丑 癸 丑",
+      "question": "以下哪项描述乎合命主于丙申运（1994年-2004年）及丁酉运（2004年-2014年）的财运状况？",
+      "options": {
+        "A": "浮浮沉沉，多劳少得，丙申运之财运比较差，丁酉财运比较好",
+        "B": "浮浮沉沉，多劳少得，丁酉运之财运比较差，丙申财运比较好",
+        "C": "得贵人扶持，大得际遇，大赚其财，丙申运之财运比较差，丁酉财运比较好",
+        "D": "得贵人扶持，大得际遇，大赚其财，丁酉运之财运比较差，丙申财运比较好"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "丙申与丁酉两运均透财，身有比印可承财，较支持大机会而非长期多劳少得",
+        "丁酉补成巳酉丑金局，印比过旺使其财运承载弱于丙申"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c4_q04",
+      "case_id": "e10-c4",
+      "profile_text": "命例四 出题： 陈易燊老师（香港青术会） 流派： 八字 女 公历 1971-05-28 · 凌晨02:30 丑时 天津（年少时已随家人移居中国香港） 坤造 辛 亥 癸 巳 癸 丑 癸 丑",
+      "question": "截到2014年底，以下哪项是命主事业状态？",
+      "options": {
+        "A": "在一中小型私人机构任职基层文职，纯粹打发时间",
+        "B": "在一中小型私人机构任职中级管理层，仍为事业钱财拼博",
+        "C": "已有5个物业收租，并处于半退休状态",
+        "D": "已贵为一间市值约8-10亿港元的香港上市公司之第三大股东兼董事，仍为事业钱财拼博"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "连续丙申、丁酉财运后于2014转入戊戌官运，形成财后接职位身份的链条",
+        "基层或中层受薪选项低估了连续财运的经营落点"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c4_q05",
+      "case_id": "e10-c4",
+      "profile_text": "命例四 出题： 陈易燊老师（香港青术会） 流派： 八字 女 公历 1971-05-28 · 凌晨02:30 丑时 天津（年少时已随家人移居中国香港） 坤造 辛 亥 癸 巳 癸 丑 癸 丑",
+      "question": "以下哪项乎合命主现在（2019年4月）的感情及婚姻状况？",
+      "options": {
+        "A": "所认识之男性伴侣比命主大10年或以上，彼此桃花算旺，命主至今未婚",
+        "B": "所认识之男性伴侣比命主细7年或以上，彼此桃花不算旺，命主至今未婚",
+        "C": "所认识之男性伴侣比命主大10年或以上，彼此桃花算旺，已婚，并离婚",
+        "D": "所认识之男性伴侣比命主细7年或以上，彼此桃花不算旺，已婚，并离婚"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.43,
+      "pre_reveal_decisive_facts": [
+        "夫星土藏于两丑且配偶宫伏吟，正式婚姻落地信号不强",
+        "官星暗藏而非显透，较符合桃花有限与非典型伴侣关系"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c5_q01",
+      "case_id": "e10-c5",
+      "profile_text": "命例五 出题： 许果朗老师 流派： 子平八字 女 公历 1962-08-26 · 寅时 中国香港 坤造 壬 寅 戊 申 丙 申 庚 寅",
+      "question": "年青时代学业状况？",
+      "options": {
+        "A": "中学毕业",
+        "B": "小学毕业",
+        "C": "特殊技能训练毕业",
+        "D": "大学毕业"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "学龄期丁未运可扶日主并得寅木印星，支持完成基础中等教育",
+        "原局印不透且寅申反复冲，不足以稳推大学层级"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c5_q02",
+      "case_id": "e10-c5",
+      "profile_text": "命例五 出题： 许果朗老师 流派： 子平八字 女 公历 1962-08-26 · 寅时 中国香港 坤造 壬 寅 戊 申 丙 申 庚 寅",
+      "question": "现时感情状况？",
+      "options": {
+        "A": "有婚姻",
+        "B": "只是同居",
+        "C": "离离合合没有真姻缘",
+        "D": "同性恋"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.54,
+      "pre_reveal_decisive_facts": [
+        "日支申被年时两寅反复冲动，关系生活结构先天不稳",
+        "2018后壬寅运再冲配偶宫，较支持离合反复而非稳定现婚"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c5_q03",
+      "case_id": "e10-c5",
+      "profile_text": "命例五 出题： 许果朗老师 流派： 子平八字 女 公历 1962-08-26 · 寅时 中国香港 坤造 壬 寅 戊 申 丙 申 庚 寅",
+      "question": "出生境况？",
+      "options": {
+        "A": "出生于大富之家",
+        "B": "出生于平常百姓之家",
+        "C": "父亲在出生前已经仙逝",
+        "D": "出生时父母欠下巨债"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.71,
+      "pre_reveal_decisive_facts": [
+        "题面无可确认的父亡、巨债或豪门事实",
+        "年柱与父母宫虽有冲动，但不足以支持出生前父亡等极端细节"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c5_q04",
+      "case_id": "e10-c5",
+      "profile_text": "命例五 出题： 许果朗老师 流派： 子平八字 女 公历 1962-08-26 · 寅时 中国香港 坤造 壬 寅 戊 申 丙 申 庚 寅",
+      "question": "工作状况？",
+      "options": {
+        "A": "普通公务员",
+        "B": "上市公司老板",
+        "C": "自顾人士（个体户）",
+        "D": "高级公务员"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.63,
+      "pre_reveal_decisive_facts": [
+        "戊食神生庚偏财且申财有双根，经营交换链明显",
+        "上市公司老板属于高负担身份，缺少独立官印与规模证据"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c5_q05",
+      "case_id": "e10-c5",
+      "profile_text": "命例五 出题： 许果朗老师 流派： 子平八字 女 公历 1962-08-26 · 寅时 中国香港 坤造 壬 寅 戊 申 丙 申 庚 寅",
+      "question": "在那个年份结婚？",
+      "options": {
+        "A": "1982",
+        "B": "1989",
+        "C": "1991",
+        "D": "1996"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "1989己巳与乙巳大运岁运同支，并同时合动月、日两申",
+        "配偶宫被重复绑定的落地强度高于仅有夫星出现的候选年"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c6_q01",
+      "case_id": "e10-c6",
+      "profile_text": "命例六 出题： 丘智伟老师 流派： 子平八字 女 公历 1977-04-30 · 未时 中国香港 坤造 丁 巳 甲 辰 丁 巳 丁 未",
+      "question": "命主事业之命途概况？",
+      "options": {
+        "A": "经营电子生意，曾经发财千多万及后破产",
+        "B": "街市肉类零售，后因身体问题转变其行业",
+        "C": "投考记律部队，三十多岁后职位多有升迁",
+        "D": "从事制衣工作，后转为个人香薰买卖生意"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "火土食伤气势明显而财官极弱，较贴近实体零售与后续转业",
+        "纪律体系升迁与千万元电子生意均缺少足够官财承载"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c6_q02",
+      "case_id": "e10-c6",
+      "profile_text": "命例六 出题： 丘智伟老师 流派： 子平八字 女 公历 1977-04-30 · 未时 中国香港 坤造 丁 巳 甲 辰 丁 巳 丁 未",
+      "question": "命主以往至现在之感情概况？",
+      "options": {
+        "A": "已婚，感情一般但仍可维系",
+        "B": "离婚，现有一男友间时作伴",
+        "C": "作为第三者多年，直至现在",
+        "D": "多年单身，至丙申年识男友"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "女命夫星水仅辰中暗藏，关系稳定落地先天偏弱",
+        "强比劫与官星不显更支持婚后分离及非持续陪伴关系"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c7_q01",
+      "case_id": "e10-c7",
+      "profile_text": "命例七 出题： 林耀光老师 流派： 紫微斗数 女 公历 1986-07-23 · 寅时 中国香港 坤造 丙 寅 甲 午 戊 辰 甲 寅",
+      "question": "这女士有几多个子女？",
+      "options": {
+        "A": "1个",
+        "B": "2个",
+        "C": "没有",
+        "D": "落了多次"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.31,
+      "pre_reveal_decisive_facts": [
+        "题面明示采用紫微斗数，而指定技能不含紫微排盘模块",
+        "给定八字中金食伤不现，子女数量只能作低置信度候选"
+      ],
+      "tags": [
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c7_q02",
+      "case_id": "e10-c7",
+      "profile_text": "命例七 出题： 林耀光老师 流派： 紫微斗数 女 公历 1986-07-23 · 寅时 中国香港 坤造 丙 寅 甲 午 戊 辰 甲 寅",
+      "question": "这女士有做生意定打工？",
+      "options": {
+        "A": "有做（有下属）",
+        "B": "自顾（个体户）",
+        "C": "同人合作",
+        "D": "家庭主妇"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "题面明示采用紫微斗数，无法用八字大运冒充其计算",
+        "给定四柱官杀多透且身有根，直接候选偏组织管理而非完全依赖"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c7_q03",
+      "case_id": "e10-c7",
+      "profile_text": "命例七 出题： 林耀光老师 流派： 紫微斗数 女 公历 1986-07-23 · 寅时 中国香港 坤造 丙 寅 甲 午 戊 辰 甲 寅",
+      "question": "她住的地方在22岁—31岁大运中？",
+      "options": {
+        "A": "自己买",
+        "B": "租地方",
+        "C": "公屋",
+        "D": "长住酒店"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.29,
+      "pre_reveal_decisive_facts": [
+        "题目指定紫微年龄段，但本技能没有相应大限计算模块",
+        "给定四柱的财星藏于辰，年龄段资产落地只能低置信度排序"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c8_q02",
+      "case_id": "e10-c8",
+      "profile_text": "命例八 出题： 李文渊老师 流派： 八字 女 公历 1982-01-27 · 午时 中国香港与广东省中山（两个同年月日时之女命） 坤造 辛 酉 辛 丑 庚 戌 壬 午 特殊题型：香港与广东中山两个同年月日时出生的女命对比。",
+      "question": "此命两人的学历及出身环境（12岁前）？",
+      "options": {
+        "A": "大学毕业，出身大富大贵之家",
+        "B": "大学毕业，出身小康中产之家",
+        "C": "大学未毕业，出身平民百姓之家",
+        "D": "大学未毕业，出身贫穷欠债之家"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.6,
+      "pre_reveal_decisive_facts": [
+        "丑戌印星有根且壬食神透，学习承载与输出链完整",
+        "年柱不提供大富大贵的独立证据，小康中产比豪门选项负担更低"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c8_q03",
+      "case_id": "e10-c8",
+      "profile_text": "命例八 出题： 李文渊老师 流派： 八字 女 公历 1982-01-27 · 午时 中国香港与广东省中山（两个同年月日时之女命） 坤造 辛 酉 辛 丑 庚 戌 壬 午 特殊题型：香港与广东中山两个同年月日时出生的女命对比。",
+      "question": "此命两人的工作类别，那个合乎？",
+      "options": {
+        "A": "人与人接触多的交际（例如：Sales、饮食楼面、客户服务、空姐之类）",
+        "B": "专业的白领工作（例如：律师、会计师、精算师、药剂师）",
+        "C": "不需常面对人事关系之创作工种（例如：写电脑软件、珠宝衣服设计师、厨师）",
+        "D": "纪律部队之政府武职工种（例如：女警察、海关、消防）"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "壬食神透而庚辛金有强根，偏技术、设计与独立输出",
+        "官星火藏而不透，纪律武职及强资质白领链不占优势"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2019_e10-c8_q05",
+      "case_id": "e10-c8",
+      "profile_text": "命例八 出题： 李文渊老师 流派： 八字 女 公历 1982-01-27 · 午时 中国香港与广东省中山（两个同年月日时之女命） 坤造 辛 酉 辛 丑 庚 戌 壬 午 特殊题型：香港与广东中山两个同年月日时出生的女命对比。",
+      "question": "此命两人接受丈夫男朋友的喜好？",
+      "options": {
+        "A": "喜欢有生意头脑之富家公子",
+        "B": "喜欢打不还手，骂不还口之大只男",
+        "C": "喜欢男人甜言蜜语，事业收入比自己多一些，不能少于自己的中上男人",
+        "D": "喜欢事业有成就，有主见，年岁比命主大十年之成熟而且可照顾自己男人"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.56,
+      "pre_reveal_decisive_facts": [
+        "女命官星火藏于午戌，配偶功能偏稳定承担而非轻浮表达",
+        "命主比劫强，自身自主性高，成熟有主见的伴侣更能形成互补"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

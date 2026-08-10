@@ -1,0 +1,285 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2020_e11-c1_q01": {
+      "answer": "B",
+      "confidence": 0.73,
+      "alternative": "E",
+      "calculation_status": "verified",
+      "decisive_facts": ["2007丁亥与己亥大运同支，亥直接害日支申并冲时支巳。", "原局配偶宫申本就处于寅冲、巳合破及寅巳申三刑网络。"]
+    },
+    "gfc_2020_e11-c1_q02": {
+      "answer": "B",
+      "confidence": 0.57,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2006丙戌使偏财丙透出，戌与月支卯六合并与年支寅拱火。", "己亥大运冲时支巳，长期引动输出、经营与工作结构。"]
+    },
+    "gfc_2020_e11-c1_q03": {
+      "answer": "D",
+      "confidence": 0.8,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["1992壬申流年与日柱壬申伏吟，同时冲年支寅。", "原局寅巳申三刑在该年重复引动，落点首先在命主日柱身体接口。"]
+    },
+    "gfc_2020_e11-c1_q04": {
+      "answer": "D",
+      "confidence": 0.55,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["1974甲寅与壬寅大运重复寅支，双重冲击日支申中的偏印。", "母亲以印星及年月宫位互证，金受木火刑冲更贴近肺金类象。"]
+    },
+    "gfc_2020_e11-c1_q05": {
+      "answer": "A",
+      "confidence": 0.7,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["1971辛亥逢壬寅大运，亥冲时支巳并害日支申。", "该年岁运同时落入原局寅巳申三刑，身体与移动接口同受引动。"]
+    },
+    "gfc_2020_e11-c2_q01": {
+      "answer": "A",
+      "confidence": 0.68,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["丁火得寅卯印星及丙火劫财扶助，日主偏强而自主性明显。", "原局金财全无，较难支持挥金如土的描述。"]
+    },
+    "gfc_2020_e11-c2_q02": {
+      "answer": "B",
+      "confidence": 0.67,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2002壬午正官透出并与丁日主相合。", "该年壬与时柱官星同干，午冲时支子且与己巳大运、年支未成巳午未三会火方，具身份落地信号。"]
+    },
+    "gfc_2020_e11-c2_q03": {
+      "answer": "A",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["壬正官透于时干并坐子水有根，丈夫功能星具承载。", "子卯刑及丙壬冲使夫妻相处存在张力，但不足以支持暴力细节。"]
+    },
+    "gfc_2020_e11-c2_q04": {
+      "answer": "D",
+      "confidence": 0.51,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["命主印比旺而日主偏强，不符合软弱不敢还口。", "代表配偶家庭资源的金财不显，较少支持婆婆压倒性强势。"]
+    },
+    "gfc_2020_e11-c2_q05": {
+      "answer": "B",
+      "confidence": 0.49,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["命局官星有根而印比旺，较有专业与稳定支持链。", "原局金财全无，不支持独立屋、私家车等最高财富档位。"]
+    },
+    "gfc_2020_e11-c3_q01": {
+      "answer": "C",
+      "confidence": 0.63,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["癸水日主在卯月略弱，戊己官杀多而贴身，性情更受约束。", "卯木食神当令，较偏柔和审美表达，不像横蛮或强烈反叛。"]
+    },
+    "gfc_2020_e11-c3_q02": {
+      "answer": "C",
+      "confidence": 0.56,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["8至16岁主要在庚辰运，庚正印扶助弱癸水，有利学习能力。", "原局土旺压身且丑午相害，健康承载弱于学业表现。"]
+    },
+    "gfc_2020_e11-c3_q03": {
+      "answer": "A",
+      "confidence": 0.59,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2013至2014处壬午大运，午火持续耗弱癸水并害两个丑支。", "2014甲午与大运午支重复且午午自刑，火燥水弱更直接对应水系内分泌与生殖类象。"]
+    },
+    "gfc_2020_e11-c3_q04": {
+      "answer": "B",
+      "confidence": 0.45,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2016丙申中申藏戊正官，伴侣角色以隐藏状态出现。", "丙财生官而申中官印劫混藏，更贴近对象背景被揭示，缺少破产或心脏手术的直接复合接口。"]
+    },
+    "gfc_2020_e11-c3_q05": {
+      "answer": "C",
+      "confidence": 0.7,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["戊正官、己七杀多透且坐入日支丑，感情对象结构复杂而非全无感情。", "官杀混杂并与午财相连，较支持与有职位或既有关系的男性纠缠。"]
+    },
+    "gfc_2020_e11-c4_q01": {
+      "answer": "A",
+      "confidence": 0.6,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["辛食神透月、丁偏印透时，形成学习输入与输出链。", "早年在英国生活提供教育资源，博士则属于缺少独立证据的高负担层级。"]
+    },
+    "gfc_2020_e11-c4_q02": {
+      "answer": "B",
+      "confidence": 0.72,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["男命妻星水仅藏于日支丑，原局财星极弱。", "两个未支同时冲配偶宫丑，比劫土又旺，婚姻落地承载不足。"]
+    },
+    "gfc_2020_e11-c4_q03": {
+      "answer": "C",
+      "confidence": 0.48,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2014处丁卯新大运，流年甲午官印并见，形成新的事业与居所背景。", "午合年、月两未，害日支丑并破运支卯，家庭与生活核心同步改变。"]
+    },
+    "gfc_2020_e11-c4_q04": {
+      "answer": "C",
+      "confidence": 0.86,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2018戊戌补齐原局丑、未与流年戌的丑戌未三刑。", "强土比劫再临而财水极弱，资源受压与巨额破财接口最集中。"]
+    },
+    "gfc_2020_e11-c4_q05": {
+      "answer": "B",
+      "confidence": 0.76,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2017丁酉与丁卯大运天干同干、地支正冲，岁运反吟明显。", "酉又直接冲时支卯，重复移动冲击更符合多次小型交通意外。"]
+    },
+    "gfc_2020_e11-c5_q01": {
+      "answer": "C",
+      "confidence": 0.69,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["癸伤官与壬食神均透，外在表达和社交并不沉默。", "伤官贴月令而官杀火局强，表面可沟通但内在急躁、言语失衡的反差较大。"]
+    },
+    "gfc_2020_e11-c5_q02": {
+      "answer": "A",
+      "confidence": 0.57,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2007丁亥冲月支巳并引动年柱寅，父母宫位受冲。", "庚寅大运使寅午戌火局持续成立，亥中甲财父星出现后又被强火结构消耗。"]
+    },
+    "gfc_2020_e11-c5_q03": {
+      "answer": "C",
+      "confidence": 0.66,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚寅运补强寅支，使原局寅午戌官杀火局长期成立。", "官杀数量与强度支持追求者多，但已婚身份及反复第三者属于额外细节。"]
+    },
+    "gfc_2020_e11-c5_q04": {
+      "answer": "B",
+      "confidence": 0.65,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2016丙申以寅巳申三刑形成官非危机背景。", "2017丁酉正官透出并与月干癸伤官相冲，更符合裁判、守行为等法律状态正式落地。"]
+    },
+    "gfc_2020_e11-c5_q05": {
+      "answer": "B",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2016丙申中申藏壬食神，直接出现女命子女功能星。", "申同时冲年支寅并与巳构成三刑，且在己丑换运年引动家庭结构。"]
+    },
+    "gfc_2020_e11-c6_q01": {
+      "answer": "A",
+      "confidence": 0.68,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["乙木日主生于午月而偏弱，壬癸印星双透提供保护与依托。", "丙伤官虽透但有印星调节，不足以支持心狠好斗。"]
+    },
+    "gfc_2020_e11-c6_q02": {
+      "answer": "B",
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["壬癸印星双透，学习与教育资源链明显。", "财星土仅藏于支，较符合小康中产而非大富家庭。"]
+    },
+    "gfc_2020_e11-c6_q03": {
+      "answer": "C",
+      "confidence": 0.38,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局除乙日主外，寅中甲与未中乙形成两个同辈比劫接口。", "排行属于低可识别细节，只能作低置信度排序。"]
+    },
+    "gfc_2020_e11-c6_q04": {
+      "answer": "B",
+      "confidence": 0.76,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["1981辛酉使七杀辛透出，流年酉与日支酉同支并自刑。", "甲辰大运已与配偶宫酉六合，1981又使辰酉合重复落地。"]
+    },
+    "gfc_2020_e11-c6_q05": {
+      "answer": "A",
+      "confidence": 0.53,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["丙伤官当令透出，午火输出可生未中财土，形成产品经营链。", "寅午半合火与午未合加强火土加工象，较贴近食品加工自营。"]
+    },
+    "gfc_2020_e11-c7_q01": {
+      "answer": "D",
+      "confidence": 0.59,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["两癸伤官透干而申酉戌三会金，表达直接、讲义气且带冲动。", "金水气势集中更支持清瘦锐利外形；精确身高仅作低权重破平。"]
+    },
+    "gfc_2020_e11-c7_q02": {
+      "answer": "B",
+      "confidence": 0.69,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["伤官双透且亥月水旺，输出强而印星只藏不透。", "时干偏财透并冲日主，学习资源与持续完成链弱于表达、谋生链。"]
+    },
+    "gfc_2020_e11-c7_q03": {
+      "answer": "D",
+      "confidence": 0.61,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2013癸巳中巳火官星出现，冲月支亥并合时支申，适合对象进入。", "2015乙未与乙丑大运天干同干、地支六冲，乙又合庚日主并引动戌日支三刑，适合关系落地。"]
+    },
+    "gfc_2020_e11-c7_q04": {
+      "answer": "D",
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["双伤官透出而官星极弱，日支戌又被年支酉相害，婚姻稳定性不足。", "命局缺少支持打架这一具体暴力子句的独立证据。"]
+    },
+    "gfc_2020_e11-c7_q05": {
+      "answer": "C",
+      "confidence": 0.82,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2016丙申与时支申同支，直接伏吟子女宫。", "申中藏壬食神子女星，宫位与功能星同时被引动。"]
+    },
+    "gfc_2020_e11-c8_q01": {
+      "answer": "B",
+      "confidence": 0.56,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["戊偏印透月，随后丙辰运形成杀印学习链，支持继续教育。", "年柱伤官坐单一卯财且年月相破，早年家庭资源不似富裕。"]
+    },
+    "gfc_2020_e11-c8_q02": {
+      "answer": "D",
+      "confidence": 0.64,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚金日主无根且偏弱，甲寅运干支皆财，财重超出承载。", "原局食伤水旺生财，易启动经营，但财旺又引官杀火压身，失败风险高。"]
+    },
+    "gfc_2020_e11-c8_q03": {
+      "answer": "C",
+      "confidence": 0.83,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2014甲午财星透而午冲配偶宫子，关系终止信号集中。", "2015乙未正财透出并与庚日主相合，未又六合两午，符合新关系绑定；丑运同时冲未使状态转换。"]
+    },
+    "gfc_2020_e11-c8_q04": {
+      "answer": "B",
+      "confidence": 0.6,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["1976命局比肩三透而官星癸透，具主动性也有规则约束。", "月、日两申财官同藏，社交与现实应对较强，不支持胆小或交际差。"]
+    },
+    "gfc_2020_e11-c8_q05": {
+      "answer": "C",
+      "confidence": 0.68,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["食神、偏财、官杀在申支形成经营与组织链，且三丙比肩具团队扩张倾向。", "2015后庚子大运财官并见，更支持创业经营而非低收入或纯打工。"]
+    }
+  }
+}

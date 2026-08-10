@@ -1,0 +1,817 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2018_e09-c1_q01",
+      "case_id": "e09-c1",
+      "profile_text": "命例一 出题： 郑智恒师傅 流派： 子平八字 男 公历 1994-11-04 · 辰时 中国香港 乾造 甲 戌 甲 戌 甲 午 戊 辰",
+      "question": "此甲戌男命，以下那个评论合乎命主?",
+      "options": {
+        "A": "出身富裕家庭，医学硕士毕业，在某医院外科手术医生",
+        "B": "出身富裕家庭，大学未毕业，曾四海流浪一段时期，后帮助家族做生意",
+        "C": "出身贫穷家庭，硕士毕业，某会计师楼高级会计师",
+        "D": "出身贫穷家庭，中学未毕业，曾犯罪于2014年坐牢三个月"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.82,
+      "pre_reveal_decisive_facts": [
+        "甲木生戌月，原局土财极重而水印近乎不显，学业持续链弱于经营资源链",
+        "年月甲戌伏吟且辰戌双冲，早年环境存在明显变动接口",
+        "选项B同时符合富家资源、学业中断与家族经营，附加命理假设最少"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c1_q02",
+      "case_id": "e09-c1",
+      "profile_text": "命例一 出题： 郑智恒师傅 流派： 子平八字 男 公历 1994-11-04 · 辰时 中国香港 乾造 甲 戌 甲 戌 甲 午 戊 辰",
+      "question": "此甲戌男命，于2017丁酉年发生何事?",
+      "options": {
+        "A": "与女朋友分手，更发现身体有脂肪肝",
+        "B": "与女朋友分手，因酒精影响下而发生交通意外死亡",
+        "C": "因女朋友有了BB，而在午月结婚，但在酉月不幸小产",
+        "D": "与女朋友结婚，向银行借款买下楼房，三个月后而失业"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "2017丁酉处丁丑运，酉害两戌并合辰，属于关系与生活结构的集中扰动",
+        "原局火土燥重，丁酉又见伤官与金，较支持关系压力及肝胆代谢类象",
+        "其余选项包含死亡、流产、借贷购房等多项高负担细节"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c2_q02",
+      "case_id": "e09-c2",
+      "profile_text": "命例二 出题： 郑智恒师傅 流派： 子平八字 女 公历 1973-06-07 · 卯时 中国香港 坤造 癸 丑 戊 午 甲 戌 丁 卯",
+      "question": "此癸丑女命的婚姻爱情，及子女情况如何?",
+      "options": {
+        "A": "已婚，有一个女儿，丈夫喜欢男人，命主性取向正常，2004结婚，婚后一年未曾行房",
+        "B": "已婚，没有子女，命主喜欢女人，丈夫有小三，2004结婚，婚后一年未曾行房",
+        "C": "未婚，没有子女，前男朋友喜欢男人，因而分手，命主性取向正常",
+        "D": "未婚，虽有一个女儿，但命主喜欢女人而不结婚"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "2004在辛酉官运，官星及婚姻接口被持续引动，支持该年婚姻落地",
+        "酉运害日支戌并冲时支卯，关系与子女宫均不稳定",
+        "性取向、忠诚及精确子女信息属于命盘低可识别细节"
+      ],
+      "tags": [
+        "婚姻感情",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c2_q03",
+      "case_id": "e09-c2",
+      "profile_text": "命例二 出题： 郑智恒师傅 流派： 子平八字 女 公历 1973-06-07 · 卯时 中国香港 坤造 癸 丑 戊 午 甲 戌 丁 卯",
+      "question": "此癸丑女命于2016丙申年发生何事，而令到命主现在没有工作?",
+      "options": {
+        "A": "误杀罪成，现在坐在牢房中而不能工作",
+        "B": "因交通意外折伤了左脚而没有工作",
+        "C": "婚姻爱情问题困扰，有抑郁病而没有工作",
+        "D": "得了肝癌，专心养病而没有工作"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.47,
+      "pre_reveal_decisive_facts": [
+        "2016处壬戌运，运支与日支同支并与时支六合，关系议题长期贴近日常核心",
+        "丙申流年仅与运干形成丙壬冲，缺少支持牢狱、癌症或严重车祸的复合接口",
+        "四项皆含具体后果，关系困扰的附加假设相对较少"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c3_q03",
+      "case_id": "e09-c3",
+      "profile_text": "命例三 出题： 林正师傅 流派： 子平八字 男 公历 1972-01-26 · 卯时 中国香港 乾造 辛 亥 辛 丑 丙 辰 辛 卯",
+      "question": "2014年，命主身体发生什么变化？",
+      "options": {
+        "A": "因车祸而截肢",
+        "B": "系统性红斑狼疮",
+        "C": "因肥胖而第三期肠癌",
+        "D": "因心臓问题而中风"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.39,
+      "pre_reveal_decisive_facts": [
+        "丙火日主无根且受三辛财与亥丑寒湿压制，循环系统类象长期偏弱",
+        "2014甲午显著引动火象，同时午害丑、破卯，身体状态有变化接口",
+        "截肢、红斑狼疮及三期肠癌均含更高的无依据细节负担"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c3_q04",
+      "case_id": "e09-c3",
+      "profile_text": "命例三 出题： 林正师傅 流派： 子平八字 男 公历 1972-01-26 · 卯时 中国香港 乾造 辛 亥 辛 丑 丙 辰 辛 卯",
+      "question": "命主于那年，出现小脑纤维化症之病情?",
+      "options": {
+        "A": "2018",
+        "B": "2017",
+        "C": "2016",
+        "D": "2015"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.49,
+      "pre_reveal_decisive_facts": [
+        "2017丁酉流年与丁酉大运完整伏吟并见酉自刑",
+        "酉同时合日支辰、冲时支卯，岁运对身体与晚运接口形成重复触发",
+        "2018虽换运且戌冲辰，但重复强度低于2017岁运伏吟"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c4_q04",
+      "case_id": "e09-c4",
+      "profile_text": "命例四 出题： 乐只君师傅 流派： 紫微斗数（天盘计算） 男 公历 1954-02-05 · 巳时 中国香港 乾造 甲 午 丙 寅 壬 辰 乙 巳",
+      "question": "命主于虚龄34至44的丙子运间；辞掉警务处工作，并转为买卖古董和艺术品。客人主要为海外人士。下述哪年，最为行运？",
+      "options": {
+        "A": "1989年2月4日—1990年2月4日（己巳年）",
+        "B": "1991年2月4日—1992年2月4日（辛未年）",
+        "C": "1992年2月4日—1993年2月4日（壬申年）",
+        "D": "1993年2月4日—1994年2月4日（癸酉年）"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.59,
+      "pre_reveal_decisive_facts": [
+        "壬水日主偏弱，金水比火土更能接通承载与跨境交易功能",
+        "1993癸酉同时见比劫水与金印，酉又合日支辰并与时支巳半合金",
+        "1992壬申虽得金水，但寅巳申三刑使经营过程波动更大"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c4_q05",
+      "case_id": "e09-c4",
+      "profile_text": "命例四 出题： 乐只君师傅 流派： 紫微斗数（天盘计算） 男 公历 1954-02-05 · 巳时 中国香港 乾造 甲 午 丙 寅 壬 辰 乙 巳",
+      "question": "命主的正室，替命主怀上了第一胎。唯于同年；却发生事故，而令BB未能出世。事情的发生时间是在哪一年？",
+      "options": {
+        "A": "1977",
+        "B": "1978",
+        "C": "1980",
+        "D": "1982"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.73,
+      "pre_reveal_decisive_facts": [
+        "1977至1982均处戊辰运，运支与日支辰伏吟并自刑，家庭共同体长期受压",
+        "1980庚申冲月支寅，并与原局寅、巳补成寅巳申三刑",
+        "申同时合破时支巳，较其余候选更直接触及子女宫与事故接口"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c5_q01",
+      "case_id": "e09-c5",
+      "profile_text": "命例五 出题： Andrew Chin师傅 流派： 紫微斗数 男 公历 1960-05-29 · 亥时 马来西亚 乾造 庚 子 辛 巳 丁 巳 辛 亥",
+      "question": "命主学历及其性格?",
+      "options": {
+        "A": "文盲，内向怕事",
+        "B": "高中毕业，好胜自我",
+        "C": "大学毕业，谦虚自律",
+        "D": "硕士毕业，随和喜交际"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "丁火生巳月且月日双巳，日主自主与竞争倾向明显",
+        "原局印星不显而财星三透，学习链弱于现实经营链",
+        "高中与好胜的组合比文盲畏缩或硕士随和更符合结构及时代基线"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c5_q02",
+      "case_id": "e09-c5",
+      "profile_text": "命例五 出题： Andrew Chin师傅 流派： 紫微斗数 男 公历 1960-05-29 · 亥时 马来西亚 乾造 庚 子 辛 巳 丁 巳 辛 亥",
+      "question": "此命于那年结婚，同年儿子出生?",
+      "options": {
+        "A": "1985",
+        "B": "1986",
+        "C": "1987",
+        "D": "1988"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "1985乙丑在甲申运，运支申含男命妻星庚财，婚姻背景已具备",
+        "丑中同时藏辛财与己食神，妻星和子女输出在同一年落地",
+        "子丑合并补成亥子丑三会水方，家庭状态变化强于1986至1987"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c5_q04",
+      "case_id": "e09-c5",
+      "profile_text": "命例五 出题： Andrew Chin师傅 流派： 紫微斗数 男 公历 1960-05-29 · 亥时 马来西亚 乾造 庚 子 辛 巳 丁 巳 辛 亥",
+      "question": "此命于那年患癌?",
+      "options": {
+        "A": "2009",
+        "B": "2011",
+        "C": "2013",
+        "D": "2015"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.76,
+      "pre_reveal_decisive_facts": [
+        "2013癸巳处丁亥运，原局月日双巳被运支亥长期冲动",
+        "流年巳再与月支、日支同支，并与运支亥形成岁运六冲",
+        "流年癸又与运干丁相冲，构成原局、大运、流年三层复合触发"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c6_q03",
+      "case_id": "e09-c6",
+      "profile_text": "命例六 出题： 陈开通师傅 流派： 子平八字 女 官方未公布出生信息，仅知为年月日时支「辰戌丑未」四支俱全之女命（见 Q25 题面）。 中国台湾",
+      "question": "此命的性格与及夫妻感情如何?",
+      "options": {
+        "A": "命主性格外向交际缘好，所以令到夫妻感情不佳",
+        "B": "命主性格外向交际缘好，而且令到夫妻感情信任和谐",
+        "C": "命主性格内向交际缘不佳，而且令到夫妻感情不佳",
+        "D": "命主性格内向交际缘不佳，所以令到夫妻感情信任和谐"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.35,
+      "pre_reveal_decisive_facts": [
+        "辰戌相冲与丑未相冲使四个地支内部关系明显不稳",
+        "仅凭四支难定内外向，但较能支持夫妻共同体反复受扰",
+        "交际能力没有天干、月令与食伤信息可复核"
+      ],
+      "tags": [
+        "婚姻感情",
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c6_q04",
+      "case_id": "e09-c6",
+      "profile_text": "命例六 出题： 陈开通师傅 流派： 子平八字 女 官方未公布出生信息，仅知为年月日时支「辰戌丑未」四支俱全之女命（见 Q25 题面）。 中国台湾",
+      "question": "此命丈夫的寿命与及丈夫的身材如何?",
+      "options": {
+        "A": "丈夫不足50岁寿命，丈夫的身材肥胖高大（180cm以上）",
+        "B": "丈夫不足50岁寿命，丈夫的身材瘦削矮小（170cm以下）",
+        "C": "丈夫80岁寿终正寝，丈夫的身材肥胖高大（180cm以上）",
+        "D": "丈夫80岁寿终正寝，丈夫的身材瘦削矮小（170cm以下）"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.24,
+      "pre_reveal_decisive_facts": [
+        "缺少日主、夫星、配偶宫归属及大运，丈夫寿命无法由现有资料判断",
+        "身高体型亦不能仅由辰戌丑未四支可靠识别",
+        "该项仅作为低置信度直接候选保留"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c6_q05",
+      "case_id": "e09-c6",
+      "profile_text": "命例六 出题： 陈开通师傅 流派： 子平八字 女 官方未公布出生信息，仅知为年月日时支「辰戌丑未」四支俱全之女命（见 Q25 题面）。 中国台湾",
+      "question": "此辰戌丑未之女命，以下那个答案来形容是为合适?",
+      "options": {
+        "A": "台湾政治界举足轻重的风云人物",
+        "B": "一间国际贸易的上市公司老板",
+        "C": "黑社会的大家姐，死于牢狱之灾",
+        "D": "平民百姓"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "题面唯一确定的命理特征是辰戌丑未四库俱全且两组对冲",
+        "该结构较支持大型资源、组织与公共权力场中的持续变动，而非完全平淡",
+        "缺少天干与岁运，无法在政治人物和企业老板之间高置信区分"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c7_q02",
+      "case_id": "e09-c7",
+      "profile_text": "命例七 出题： 傅梓量师傅（青术会代表） 流派： 奇门遁甲 女 公历 1993-08-17 · 16:00 申时 中国香港 坤造 癸 酉 庚 申 庚 午 甲 申",
+      "question": "此命学历程度如何？",
+      "options": {
+        "A": "小学程度，因健康理由而不能上课",
+        "B": "中学程度，中途退学",
+        "C": "大学毕业",
+        "D": "博士毕业"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.61,
+      "pre_reveal_decisive_facts": [
+        "原局金比劫极旺而土印弱，正式教育承载链不完整",
+        "学龄期辛酉运继续加强金而未补印，持续完成高等教育的支持有限",
+        "小学因病及博士毕业都是额外负担更高的极端选项"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c7_q03",
+      "case_id": "e09-c7",
+      "profile_text": "命例七 出题： 傅梓量师傅（青术会代表） 流派： 奇门遁甲 女 公历 1993-08-17 · 16:00 申时 中国香港 坤造 癸 酉 庚 申 庚 午 甲 申",
+      "question": "此人性格特征？",
+      "options": {
+        "A": "暴躁野蛮",
+        "B": "刻薄无情",
+        "C": "温柔善良",
+        "D": "骄傲自大"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "庚金得申月并见庚申重复，日主与比劫明显偏强",
+        "癸伤官透年使自我表达和不服约束更显著",
+        "该组合更贴近自负好胜，而非温柔退让"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c7_q04",
+      "case_id": "e09-c7",
+      "profile_text": "命例七 出题： 傅梓量师傅（青术会代表） 流派： 奇门遁甲 女 公历 1993-08-17 · 16:00 申时 中国香港 坤造 癸 酉 庚 申 庚 午 甲 申",
+      "question": "此人于2016年7月的那项感情运程描述为正确？",
+      "options": {
+        "A": "发现男友有第三者，竟然是男性，无奈分手",
+        "B": "发现男友有女第三者，气愤下而剪断他子孙根",
+        "C": "跟男友结婚",
+        "D": "跟男友吵架"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "2016丙申透出女命夫星丙火，且处壬戌大运",
+        "运支戌与日支午半合火，2016年7月未月又与午六合，星、宫、运同时支持绑定",
+        "涉及第三者性别或暴力行为的选项缺少可识别证据"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c7_q05",
+      "case_id": "e09-c7",
+      "profile_text": "命例七 出题： 傅梓量师傅（青术会代表） 流派： 奇门遁甲 女 公历 1993-08-17 · 16:00 申时 中国香港 坤造 癸 酉 庚 申 庚 午 甲 申",
+      "question": "此人于2017年发生何事？",
+      "options": {
+        "A": "破产欠债",
+        "B": "得到横财800万港元",
+        "C": "坐牢",
+        "D": "普通打工"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.67,
+      "pre_reveal_decisive_facts": [
+        "2017丁酉处壬戌运，丁官透而酉金重复原局年支，较像常规工作责任落实",
+        "原局与岁运虽成申酉戌金方，但没有支持横财八百万的财星落地链",
+        "破产与坐牢均缺少财务崩溃或伤官见官的多重接口"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c8_q02",
+      "case_id": "e09-c8",
+      "profile_text": "命例八 出题： 丘智伟老师 流派： 子平八字 女 公历 1961-03-25 · 午时 中国香港 坤造 辛 丑 辛 卯 丁 巳 丙 午",
+      "question": "命主虚龄14-23岁时，其家庭关系如何？",
+      "options": {
+        "A": "与哥哥们生活",
+        "B": "离家出走居住",
+        "C": "被养父母收养",
+        "D": "家庭幸福美满"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "虚龄14至23正行癸巳运，运支与日支巳同支并受癸丁冲",
+        "该十年持续引动生活核心，较支持离开原家庭环境",
+        "被收养及家庭美满都需要题面未给的额外事实"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c8_q04",
+      "case_id": "e09-c8",
+      "profile_text": "命例八 出题： 丘智伟老师 流派： 子平八字 女 公历 1961-03-25 · 午时 中国香港 坤造 辛 丑 辛 卯 丁 巳 丙 午",
+      "question": "命主滥药问题以及肾病，多次进出医院，于那个时段发生？",
+      "options": {
+        "A": "1974—1983",
+        "B": "1984—1993",
+        "C": "1994—2003",
+        "D": "2004—2013"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "1974至1983癸巳运，癸水直接引入原局稀缺的水系健康接口",
+        "运支巳与日支伏吟并受癸丁冲，形成十年持续的身体压力背景",
+        "其余三步运缺少同等直接的水星与日柱复合触发"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c8_q05",
+      "case_id": "e09-c8",
+      "profile_text": "命例八 出题： 丘智伟老师 流派： 子平八字 女 公历 1961-03-25 · 午时 中国香港 坤造 辛 丑 辛 卯 丁 巳 丙 午",
+      "question": "命主的丈夫受伤进了医院而且更惹上官非，发生于那个年份?",
+      "options": {
+        "A": "2014年10月",
+        "B": "2004年10月",
+        "C": "1994年10月",
+        "D": "1984年10月"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.71,
+      "pre_reveal_decisive_facts": [
+        "女命夫星为水，2004甲申的申中藏壬，并处丙申大运形成运年同支",
+        "申与日支巳六合同时相破，直接触及配偶宫并带有受伤变化接口",
+        "其他候选虽有冲刑，但欠缺夫星与配偶宫同向触发"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c9_q01",
+      "case_id": "e09-c9",
+      "profile_text": "命例九 出题： 方荣师傅 流派： 子平八字 女 公历 1958-04-16 · 未时 中国香港 坤造 戊 戌 丙 辰 癸 亥 己 未",
+      "question": "命主出生背景?",
+      "options": {
+        "A": "家境清贫，母亲病重",
+        "B": "家境富裕，父亲病重",
+        "C": "家境清贫，送给他人养育",
+        "D": "家境富裕，父母要出外工干，婆婆养育凑大"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.43,
+      "pre_reveal_decisive_facts": [
+        "月干丙财透而戊己官杀成势，早年家庭的现实资源与社会功能不弱",
+        "年支戌与月支辰六冲，明确支持父母工作、居所或照料关系分离",
+        "贫富与具体由谁养育仍属低可识别细节，故置信度有限"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2018_e09-c9_q02",
+      "case_id": "e09-c9",
+      "profile_text": "命例九 出题： 方荣师傅 流派： 子平八字 女 公历 1958-04-16 · 未时 中国香港 坤造 戊 戌 丙 辰 癸 亥 己 未",
+      "question": "命主父亲死于那一年？",
+      "options": {
+        "A": "1972",
+        "B": "1973",
+        "C": "1976",
+        "D": "1978"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.75,
+      "pre_reveal_decisive_facts": [
+        "父亲接口以火财和年月宫位为主",
+        "1976丙辰使父星丙财透出，并与月柱丙辰完整伏吟",
+        "流年辰又直接冲年支戌，父星与父母宫位同时受到强触发"
+      ],
+      "tags": [
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

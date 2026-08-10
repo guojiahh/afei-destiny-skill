@@ -1,0 +1,29 @@
+{
+  "protocol": "paired-question-comparison-case-bootstrap-v1",
+  "base_rounds": [
+    "2018-v1-baseline",
+    "2019-v1-baseline",
+    "2020-v1-baseline",
+    "2021-v1-baseline"
+  ],
+  "candidate_rounds": [
+    "2018-v2-candidate",
+    "2019-v2-candidate",
+    "2020-v2-candidate",
+    "2021-v2-candidate"
+  ],
+  "count": 160,
+  "case_count": 34,
+  "base_accuracy": 0.3438,
+  "candidate_accuracy": 0.3812,
+  "paired_delta": 0.0375,
+  "wins": 20,
+  "losses": 14,
+  "ties": 126,
+  "case_bootstrap_95": [
+    -0.04,
+    0.1203
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20260810
+}

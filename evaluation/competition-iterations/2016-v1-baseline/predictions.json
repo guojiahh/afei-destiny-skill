@@ -1,0 +1,250 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2016_e07-c1_q01": {
+      "answer": "D",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["17岁附近先落丁未火土背景，随后转入带申金的戊申运", "申金能补原局全无之金并缓解午月火势"]
+    },
+    "gfc_2016_e07-c1_q02": {
+      "answer": "B",
+      "confidence": 0.54,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["27岁附近处于戊申转己酉的交运段", "己酉与两辰六合，后段对日支关系接口的绑定更明显"]
+    },
+    "gfc_2016_e07-c1_q03": {
+      "answer": "C",
+      "confidence": 0.63,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["1988戊辰同时重复年支与日支辰", "两处辰辰自刑，并与己酉大运反复六合"]
+    },
+    "gfc_2016_e07-c1_q04": {
+      "answer": "B",
+      "confidence": 0.66,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["1993癸酉把劫财同辈接口透出", "庚戌大运已同时冲两辰，酉年又与两辰绑定且受戌害"]
+    },
+    "gfc_2016_e07-c1_q05": {
+      "answer": "D",
+      "confidence": 0.84,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["1994甲戌与庚戌大运同支", "岁运双戌同时冲原局年、日两辰，并补成寅午戌火局"]
+    },
+    "gfc_2016_e07-c2_q01": {
+      "answer": "A",
+      "confidence": 0.46,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["己土日主在酉月偏弱，双酉金泄身", "巳火坐日支，为眼部明亮度提供辅助信号"]
+    },
+    "gfc_2016_e07-c2_q02": {
+      "answer": "D",
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["双酉食神有根，双乙七杀透干，形成明显的输出制压结构", "日坐巳火正印并带土根，学习承载并非全无"]
+    },
+    "gfc_2016_e07-c2_q03": {
+      "answer": "C",
+      "confidence": 0.56,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["26至35岁主要处壬午财印大运", "午火能扶偏弱己土，原局食神生时上偏财但承载有限"]
+    },
+    "gfc_2016_e07-c2_q04": {
+      "answer": "D",
+      "confidence": 0.57,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["辛巳运之辛同时冲原局两透乙杀", "巳与双酉持续聚金，令本已偏弱的己土进一步泄耗"]
+    },
+    "gfc_2016_e07-c2_q05": {
+      "answer": "B",
+      "confidence": 0.76,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2016丙申与辛巳大运形成丙辛合水，水为男命配偶财星", "申与原局日支巳及大运巳均形成六合，直接绑定配偶宫"]
+    },
+    "gfc_2016_e07-c3_q01": {
+      "answer": "A",
+      "confidence": 0.53,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["庚辛财星三透，早年资源信号显著", "年支戌冲日支辰，使父系及家族接口与本人生活核心不稳"]
+    },
+    "gfc_2016_e07-c3_q02": {
+      "answer": "A",
+      "confidence": 0.78,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["丙火生巳月且寅巳有根，日主偏强而外放", "配偶宫辰被年支戌直接冲，官星仅藏不透"]
+    },
+    "gfc_2016_e07-c3_q03": {
+      "answer": "B",
+      "confidence": 0.74,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["1993癸酉透出女命正官对象星", "酉与日支辰六合，且己卯大运与酉年形成卯酉冲而强烈引动关系状态"]
+    },
+    "gfc_2016_e07-c3_q04": {
+      "answer": "A",
+      "confidence": 0.64,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局食神土可承接旺火并连续生庚辛财", "三透财星与强日主构成较完整的经营和资源调度链"]
+    },
+    "gfc_2016_e07-c3_q05": {
+      "answer": "B",
+      "confidence": 0.58,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["丙火生巳月且多处通根，命局火热", "全局水气仅辰中一癸，难以调节长期火势"]
+    },
+    "gfc_2016_e07-c4_q01": {
+      "answer": "D",
+      "confidence": 0.48,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["年月癸卯、甲寅构成食伤生财的早年工商接口", "庚金自身无根，财势虽旺但不足以仅凭命盘升级为巨富家族"]
+    },
+    "gfc_2016_e07-c4_q02": {
+      "answer": "C",
+      "confidence": 0.58,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["癸壬食伤透而寅卯财旺，最贴近市场行销功能链", "日支辰与年支卯相害，关系结构不属于稳定无扰型"]
+    },
+    "gfc_2016_e07-c4_q03": {
+      "answer": "C",
+      "confidence": 0.62,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2003进入己酉运，己正印直接对应母亲功能", "酉冲年支卯，癸未年又把印星落支并与午合、卯半合"]
+    },
+    "gfc_2016_e07-c4_q04": {
+      "answer": "A",
+      "confidence": 0.66,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2004甲申把偏财父星甲重复透出", "申直接冲月支寅父母宫，己酉大运又持续冲年支卯"]
+    },
+    "gfc_2016_e07-c4_q05": {
+      "answer": "C",
+      "confidence": 0.80,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["2014甲午令时柱午伏吟并自刑，戊申运同时冲月支寅", "题定丙子月再以子冲原局与流年重复之午，直接作用身体接口"]
+    },
+    "gfc_2016_e07-c5_q01": {
+      "answer": "B",
+      "confidence": 0.61,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["年柱比肩坐辰而早年资源星不透，家境信号普通", "全局无金印，虽食伤旺但正式学历承载链不足"]
+    },
+    "gfc_2016_e07-c5_q02": {
+      "answer": "D",
+      "confidence": 0.38,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["寅寅卯三会木使壬水长期过度泄耗，健康承载偏弱", "父母印星全局不现，时柱又处于过旺食伤结构"]
+    },
+    "gfc_2016_e07-c5_q03": {
+      "answer": "C",
+      "confidence": 0.60,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["寅寅卯三会食伤，外放表达与社交吸引力强", "两寅均藏偏财，而比劫三透使异性资源呈多点而非单一稳定结构"]
+    },
+    "gfc_2016_e07-c5_q04": {
+      "answer": "A",
+      "confidence": 0.72,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["原局形成强食伤输出并在两寅中连续生偏财", "比劫透干配合食伤生财，更接近自主经营而非低层稳定任职"]
+    },
+    "gfc_2016_e07-c5_q05": {
+      "answer": "A",
+      "confidence": 0.67,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["乙巳、丙午两运把原局旺木输出连续转成火财", "丁未运中丁与壬合木、未又助木，财富落地较前两运减弱"]
+    },
+    "gfc_2016_e07-c6_q01": {
+      "answer": "C",
+      "confidence": 0.60,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["癸水生巳月偏弱，火土压力明显", "甲乙食伤双透且寅巳相害，外显反应快而急"]
+    },
+    "gfc_2016_e07-c6_q02": {
+      "answer": "B",
+      "confidence": 0.55,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": ["月令财星并有食伤生财，家庭经营资源接口明显", "巳丑拱金且印星藏于月、日支，仍具大学阶段的学习承载"]
+    },
+    "gfc_2016_e07-c6_q03": {
+      "answer": "D",
+      "confidence": 0.70,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["甲乙食伤透干并在寅有根，连续生巳中财星", "职业链偏经营与产品输出，官印仅藏而非清透制度结构"]
+    },
+    "gfc_2016_e07-c6_q04": {
+      "answer": "A",
+      "confidence": 0.58,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2009己丑令流年支与配偶宫丑同支", "该年仍在戊申官印大运，关系落地所需的稳定背景强于其后三个候选年"]
+    },
+    "gfc_2016_e07-c6_q05": {
+      "answer": "A",
+      "confidence": 0.81,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["2010庚寅重复时支子女宫，并被戊申大运直接冲", "原局巳、时与流年寅、大运申共同形成寅巳申三刑，兼动父母月柱与子女宫"]
+    },
+    "gfc_2016_e07-c7_q01": {
+      "answer": "B",
+      "confidence": 0.70,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["月令酉为伤官，年干庚食神透，表达输出明显", "官星乙被庚合向金而印不透，大学阶段完成度支持不足"]
+    },
+    "gfc_2016_e07-c7_q02": {
+      "answer": "D",
+      "confidence": 0.68,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": ["女命官星乙虽透却被庚合，月令伤官直接制约关系落地", "年、时两戌均害月支酉，关系与家庭接口反复受扰"]
+    },
+    "gfc_2016_e07-c7_q03": {
+      "answer": "D",
+      "confidence": 0.73,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["2009己丑以丑害日支午，直接触发身体核心", "辛巳大运、原局酉与丑年补成巳酉丑三合金局，泄耗集中"]
+    },
+    "gfc_2016_e07-c7_q04": {
+      "answer": "D",
+      "confidence": 0.72,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": ["2013以后仍在辛巳运，辛伤官与原局酉金持续强化输出而耗身", "原局乙官已受庚合，稳定组织职位链不强"]
+    },
+    "gfc_2016_e07-c7_q05": {
+      "answer": "C",
+      "confidence": 0.59,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": ["壬午运之午为戊土正印根，并与日支午重复强化承载", "其后辛巳运强化金泄，工作与健康接口均更不稳定"]
+    }
+  }
+}

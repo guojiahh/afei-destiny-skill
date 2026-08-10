@@ -1,0 +1,390 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2015_e06-c1_q01": {
+      "answer": "A",
+      "confidence": 0.54,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1973癸丑处壬子运，水势压制父星火",
+        "丑年补齐原局戌未三刑并冲动日支未",
+        "父亲生卒属于八字低可识别细节"
+      ]
+    },
+    "gfc_2015_e06-c1_q02": {
+      "answer": "A",
+      "confidence": 0.64,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚正印透月且辛偏印透时，印星成主导结构",
+        "戌未中官杀与印星相接，更偏制度组织任职",
+        "食伤极弱，不利以经营输出为唯一长期职业"
+      ]
+    },
+    "gfc_2015_e06-c1_q03": {
+      "answer": "B",
+      "confidence": 0.84,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1978戊午，戊正官即女命配偶星透出",
+        "午与日支未六合，直接绑定配偶宫",
+        "该年位于癸丑运，官星与宫位同时被引动"
+      ]
+    },
+    "gfc_2015_e06-c1_q04": {
+      "answer": "B",
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚辛印星与双酉高度集中，食伤疏泄极弱",
+        "癸水无地支本根而受重印包围，传统象意偏心神内耗",
+        "具体疾病名称无法由命盘可靠唯一识别"
+      ]
+    },
+    "gfc_2015_e06-c1_q05": {
+      "answer": "C",
+      "confidence": 0.72,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1997丁丑流年冲日支未并补齐丑戌未三刑",
+        "同年进入乙卯运，卯同时冲原局双酉",
+        "换运与流年共同攻击多个原局接口，严重度高于其余候选"
+      ]
+    },
+    "gfc_2015_e06-c2_q01": {
+      "answer": "B",
+      "confidence": 0.43,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1992壬申使财杀机会明显，但丙火日主生于子月承载偏弱",
+        "丁酉运有劫财帮身，较支持业务启动而非完全不振",
+        "身弱财杀旺更符合规模受限、经营尚可的组合"
+      ]
+    },
+    "gfc_2015_e06-c2_q02": {
+      "answer": "B",
+      "confidence": 0.55,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1993癸官星出现，所问男性角色有直接接口",
+        "酉年与丁酉运同支并自刑，且酉破原局双子",
+        "重复破局更像合作停滞中断，缺乏死亡或感情终止的独立证据"
+      ]
+    },
+    "gfc_2015_e06-c2_q03": {
+      "answer": "C",
+      "confidence": 0.46,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1994甲戌与原局申、运支酉构成三会金方，财星被大幅引出",
+        "戌冲月支子并害酉运，父母与家庭层面同时有压力",
+        "财星成局较支持父亲重症同时出现一笔钱"
+      ]
+    },
+    "gfc_2015_e06-c2_q04": {
+      "answer": "B",
+      "confidence": 0.49,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1999己卯中卯为印星，传统上对应父母长辈功能",
+        "卯与原局双子成刑并破午，机会链受到长辈与家庭接口牵制",
+        "该年缺少足以唯一支持公司倒闭或异地置业的信号"
+      ]
+    },
+    "gfc_2015_e06-c2_q05": {
+      "answer": "B",
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2001辛正财透出，财务主题最直接",
+        "巳与原局申及丙申运均有合破，机会与损耗并存",
+        "强财务接口较迁居、婚姻或死亡的附加假设更少"
+      ]
+    },
+    "gfc_2015_e06-c3_q01": {
+      "answer": "C",
+      "confidence": 0.86,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲木得卯月帝旺并有辰、子生扶，日主明显偏强",
+        "丁伤官透月、庚七杀透时，形成竞争与抗压表达",
+        "原局子午冲增加行动张力"
+      ]
+    },
+    "gfc_2015_e06-c3_q02": {
+      "answer": "C",
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲木比劫旺而财星土仅藏支，财富稳定承载不足",
+        "丁伤官透出使收入与支出更具波动性",
+        "比劫旺更符合低潮时同辈朋友介入，而非纯薪酬积累"
+      ]
+    },
+    "gfc_2015_e06-c3_q03": {
+      "answer": "A",
+      "confidence": 0.64,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "父星戊偏财藏于年支辰，父亲接口落年柱",
+        "戊辰运直接引出父星并重复年支辰",
+        "1970庚戌同时冲原局年支辰与运支辰，父母宫复合受冲"
+      ]
+    },
+    "gfc_2015_e06-c3_q04": {
+      "answer": "B",
+      "confidence": 0.47,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局日支子与时支午先天六冲，婚后关系结构不稳",
+        "庚午运再次以午冲配偶宫子，支持婚姻危机",
+        "随后辛未运含正财并害子，兼有关系终止与新对象机会"
+      ]
+    },
+    "gfc_2015_e06-c3_q05": {
+      "answer": "B",
+      "confidence": 0.52,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1995乙亥未直接冲动事业根基，较不支持转工",
+        "乙与庚午运干庚合金，直接绑定七杀上司功能",
+        "合而非冲更偏向与新上司关系良好"
+      ]
+    },
+    "gfc_2015_e06-c4_q01": {
+      "answer": "D",
+      "confidence": 0.57,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丙火生申月偏弱，财杀旺而年印甲寅受申冲",
+        "早年癸酉财官运进一步压制印星学习链",
+        "教育资源与持续完成度均不支持富裕且大学的高负担组合"
+      ]
+    },
+    "gfc_2015_e06-c4_q02": {
+      "answer": "A",
+      "confidence": 0.6,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "寅申原局六冲且壬杀临月，性格张力高于保守稳定",
+        "戌戌燥土重复，申金又受寅冲，传统象意偏皮肤燥敏",
+        "具体疾病种类仅能低权重比较"
+      ]
+    },
+    "gfc_2015_e06-c4_q03": {
+      "answer": "B",
+      "confidence": 0.77,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2001辛巳中辛正财为男命妻星透出，巳又与月支申六合",
+        "2006丙戌为日柱伏吟且无妻星透出，结婚指向较弱",
+        "2013癸巳补齐寅巳申三刑，较2010更支持严重子女事件"
+      ]
+    },
+    "gfc_2015_e06-c4_q04": {
+      "answer": "A",
+      "confidence": 0.8,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1994甲戌与甲戌大运伏吟",
+        "流年甲与年干甲同干，戌又重复日、时双戌",
+        "岁运并临并全面重复原局，最符合长期事业起点"
+      ]
+    },
+    "gfc_2015_e06-c4_q05": {
+      "answer": "D",
+      "confidence": 0.5,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "壬七杀透月并有甲印承接，偏组织内责任与管理",
+        "寅申冲带明显移动交通属性",
+        "工作自1994延续至今的前提更符合稳定受雇而非创业投机"
+      ]
+    },
+    "gfc_2015_e06-c5_q01": {
+      "answer": "B",
+      "confidence": 0.72,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1982壬戌处戊午运，午戌火势补印并扶身，利入学落地",
+        "1983癸亥财水明显加重且亥害月支申，学习链转弱",
+        "两年强弱反差支持先入学后成绩下滑"
+      ]
+    },
+    "gfc_2015_e06-c5_q02": {
+      "answer": "A",
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丁巳运为印运，能扶起原局偏弱戊土以承财",
+        "1986寅巳申三刑提示创业初段阻力突出",
+        "1988申子辰三合水局与后续财年提供出售获利机会"
+      ]
+    },
+    "gfc_2015_e06-c5_q03": {
+      "answer": "C",
+      "confidence": 0.6,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丙辰运与原局申子已构成三合水财局，财势超过日主承载",
+        "2002壬午冲日支子且壬冲运干丙",
+        "2003癸未又害子，连续两年对财务与生活核心施压"
+      ]
+    },
+    "gfc_2015_e06-c5_q04": {
+      "answer": "A",
+      "confidence": 0.58,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命财星水在年干、日支与时干多处并见",
+        "正偏财混杂且配偶宫坐正财，关系对象结构较复杂",
+        "丙辰与乙卯两运持续引动财星，但不足单凭命盘断定具体终局"
+      ]
+    },
+    "gfc_2015_e06-c5_q05": {
+      "answer": "B",
+      "confidence": 0.78,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2011辛卯与乙卯大运同支，形成明显岁运重复",
+        "辛伤官与运干乙正官形成职业秩序冲突",
+        "卯年又刑日支子，最符合正式离开原有职场状态"
+      ]
+    },
+    "gfc_2015_e06-c6_q01": {
+      "answer": "C",
+      "confidence": 0.35,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "卯月木火偏旺而土金偏少，体态更偏轻瘦",
+        "命局子、壬、辰水官杀均有明根，耳部水象较显",
+        "外貌细节属于命盘低可识别项目"
+      ]
+    },
+    "gfc_2015_e06-c6_q02": {
+      "answer": "B",
+      "confidence": 0.48,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丙火日主坐午帝旺，外在表达不弱",
+        "印比旺而食伤只藏，深层表达与交心渠道较窄",
+        "子午冲、卯破午使友谊稳定度低于表面社交性"
+      ]
+    },
+    "gfc_2015_e06-c6_q03": {
+      "answer": "D",
+      "confidence": 0.71,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2012壬辰中壬七杀为女命异性星直接透出",
+        "辰年伏吟时柱并与原局子半合水，官杀网络被强化",
+        "偏官壬的角色象意较偏成熟或年长对象"
+      ]
+    },
+    "gfc_2015_e06-c6_q04": {
+      "answer": "B",
+      "confidence": 0.6,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "卯月正印当令且时支辰再藏乙印，学习承载较强",
+        "己丑运以伤官输出承接印星，支持大学阶段完成",
+        "原局官杀水有根且与强火形成外部发展牵引，北向选项略优"
+      ]
+    },
+    "gfc_2015_e06-c6_q05": {
+      "answer": "B",
+      "confidence": 0.53,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "辛正财透月而原局印官均有根，早年资源结构不弱",
+        "2014甲午伏吟日支午并形成午自刑，且再次冲年支子",
+        "火势集中对唯一辛金父星的压力高于2012"
+      ]
+    },
+    "gfc_2015_e06-c7_q01": {
+      "answer": "B",
+      "confidence": 0.56,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1994甲戌中甲正财为父星直接透出",
+        "甲同时被原局年、时两己合，戌又合日支卯财",
+        "父星透出而被多重合绊，较其他候选更直接"
+      ]
+    },
+    "gfc_2015_e06-c7_q02": {
+      "answer": "B",
+      "confidence": 0.79,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1977丁巳中丁七杀为女命配偶星透出",
+        "巳同时冲原局双亥并与月支申合破，婚姻节点极强",
+        "1986丙寅冲月支申并合双亥，且丙正官再次引动关系终局"
+      ]
+    },
+    "gfc_2015_e06-c7_q03": {
+      "answer": "A",
+      "confidence": 0.4,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲戌财运覆盖全部候选，早年即有求财背景",
+        "1973癸食神透出，可衔接原局壬伤官的技能输出",
+        "14岁开始工作符合低学历手艺型路径，但精确年份识别度低"
+      ]
+    },
+    "gfc_2015_e06-c7_q04": {
+      "answer": "C",
+      "confidence": 0.67,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "壬伤官透月且双亥藏壬，技能输出是主导功能",
+        "卯与双亥形成食伤生财链，更偏手工生产变现",
+        "官星火全无，不支持教师或建筑主管的制度管理链"
+      ]
+    },
+    "gfc_2015_e06-c7_q05": {
+      "answer": "B",
+      "confidence": 0.61,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2013癸巳直接冲原局年支亥，父母家庭宫被强烈引动",
+        "戊寅运干戊为正印，母亲功能在十年背景中显现",
+        "流年另成寅巳申三刑，但日支未被直接冲动，母亲事件优于本人手术"
+      ]
+    }
+  }
+}

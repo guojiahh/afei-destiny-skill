@@ -1,0 +1,1050 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2014_e05-c1_q01",
+      "case_id": "e05-c1",
+      "profile_text": "命例一 出题： 陈俊诚师傅 流派： 八字 男 公历 1962-08-25 · 卯时 中国台湾 乾造 壬 寅 戊 申 乙 未 己 卯",
+      "question": "命主实情何者为真？",
+      "options": {
+        "A": "长年茹素",
+        "B": "情欲重，婚后外遇对象不只一位",
+        "C": "一儿一女",
+        "D": "罹患肝病"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "乙木日主见戊己财星双透，日支未亦含财星，男性关系资源呈多点显现",
+        "肝病与精确子女组合均缺少足够的独立落点"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "戊己财星多点只能支持资源与关系机会，不能推出婚后多次外遇；同样，盘面也没有能唯一推出长年茹素的可验证功能链。",
+      "evidence": [
+        "揭晓前用多财直接映射多位外遇对象，包含性行为、婚后阶段和人数三个未获支持的子句。",
+        "官方 A 是具体生活习惯，题干没有宗教、健康或饮食事实。"
+      ],
+      "counterfactual_fix": "高负担选项审计会否决 B，但无法从现有信息确定 A；新增“此盘茹素”规则只会拟合人物。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_behavior_trait",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "财星多点不得直接等同外遇次数或性行为。",
+        "饮食、疾病、子女组合等低可识别选项缺少题干事实时须降置信度。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c1_q02",
+      "case_id": "e05-c1",
+      "profile_text": "命例一 出题： 陈俊诚师傅 流派： 八字 男 公历 1962-08-25 · 卯时 中国台湾 乾造 壬 寅 戊 申 乙 未 己 卯",
+      "question": "命主于2007年之遭遇何者为真？",
+      "options": {
+        "A": "父亲病逝",
+        "B": "母亲病逝",
+        "C": "妻子病逝",
+        "D": "长子车祸"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.36,
+      "pre_reveal_decisive_facts": [
+        "2007年交入癸丑运，丑直接冲日支未中所藏己财",
+        "丁亥年又使亥卯未木局成形，财星承压"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "execution_error",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "揭晓前决定性事实已经锁定丑运冲日支未、并点名未中己财，证据指向妻星与配偶宫，但最终字母却选了父亲，结论未执行自身角色归属分析。",
+      "evidence": [
+        "确定性计算确认 2007 交癸丑运，丑直接冲日支未。",
+        "预先记录的两条证据都围绕日支妻星受压，没有父星与年月宫位的同等级证据。"
+      ],
+      "counterfactual_fix": "提交前做“答案字母—目标角色—决定性证据”一致性校验；该校验会把 A 改为 C。",
+      "would_change_answer": true,
+      "recurrence_key": "final_answer_contradicts_role_evidence",
+      "fix_type": "execution_check",
+      "decision": "no_change",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "最终选项角色必须与内部决定性事实中的六亲角色一致。",
+        "若证据只覆盖日支妻星，不得输出父亲或母亲选项。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c1_q03",
+      "case_id": "e05-c1",
+      "profile_text": "命例一 出题： 陈俊诚师傅 流派： 八字 男 公历 1962-08-25 · 卯时 中国台湾 乾造 壬 寅 戊 申 乙 未 己 卯",
+      "question": "命主于2008年之遭遇何者为真？",
+      "options": {
+        "A": "父亲病逝",
+        "B": "母亲病逝",
+        "C": "妻子病逝",
+        "D": "长子车祸"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.4,
+      "pre_reveal_decisive_facts": [
+        "2008戊子年正财透出并伏吟原局月干戊",
+        "子害日支未、且癸丑大运持续冲动日支，夫妻生活核心受复合引动"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "过度沿用癸丑运冲日支的妻子解释，忽略 2008 戊子年戊正财伏吟月干戊这一更贴近父星与父母宫位的组合证据。",
+      "evidence": [
+        "揭晓前已记录戊正财伏吟原局月干，但没有在角色比较中给它应有权重。",
+        "子害日支只能支持生活核心受扰，单独不足以把死亡角色锁定为妻子。"
+      ],
+      "counterfactual_fix": "死亡角色题强制同时匹配六亲星和对应宫位；2008 的月干戊父星重复高于单一日支受害，会把 C 改为 A。",
+      "would_change_answer": true,
+      "recurrence_key": "kinship_role_requires_star_and_palace",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "亲属事件逐项列六亲星、宫位和岁运触发，至少两层同向才定角色。",
+        "同一大运背景不得让前一年角色判断自动延续到下一年。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c1_q04",
+      "case_id": "e05-c1",
+      "profile_text": "命例一 出题： 陈俊诚师傅 流派： 八字 男 公历 1962-08-25 · 卯时 中国台湾 乾造 壬 寅 戊 申 乙 未 己 卯",
+      "question": "截至2013年止，命主从事超过15年的职业是？",
+      "options": {
+        "A": "国家公务员(台湾)",
+        "B": "保险业务",
+        "C": "作文老师",
+        "D": "乐器行老板"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "戊己财星双透且有申中官星，较接近资源交换与业绩责任型工作",
+        "官印并不清透成稳定体制链，教师所需食伤也仅伏藏"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "财官功能可支持业务或经营，却不能在保险业务与乐器行老板之间唯一映射；“乐器”还需要题面履历或明确食伤艺术接口。",
+      "evidence": [
+        "预测正确落在商业交换功能，但具体行业错误。",
+        "四个选项都是现实职业名词，命盘没有可验证的十五年履历信息。"
+      ],
+      "counterfactual_fix": "把食伤或五行固定映射乐器行会过拟合；通用职业功能链不会确定地把 B 改为 D。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_occupation",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "具体行业题在无履历事实时只能比较制度、经营、表达等功能轴。",
+        "不得从单一十神直接推出保险、乐器、教师等职业名词。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c2_q01",
+      "case_id": "e05-c2",
+      "profile_text": "命例二 出题： 七仙羽师傅 流派： 八字 男 公历 1965-03-05 · 9:35am 马来西亚 乾造 乙 巳 戊 寅 戊 午 丁 巳",
+      "question": "此命于何年，因癌症而死亡?",
+      "options": {
+        "A": "2012",
+        "B": "2011",
+        "C": "2009",
+        "D": "2008"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.39,
+      "pre_reveal_decisive_facts": [
+        "甲戌运与原局寅午构成持续火局背景",
+        "2008戊子年子午直接冲击日支身体接口，较其余候选年更直接"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "四个候选年都处甲戌火局背景；2008 子冲日支是最醒目的身体触发，但命盘无法可靠区分癌症死亡发生在 2008 还是 2011 的精确年份。",
+      "evidence": [
+        "同尺度矩阵确认 2008 有子午冲，2011 有辛卯与年干冲、日支破及卯戌合，二者均有触发。",
+        "死亡和癌症属于持续后果，题面没有诊断年份、病程或连续年度事实。"
+      ],
+      "counterfactual_fix": "降低单一强冲对死亡年份的权重是必要校准，但不会唯一推出 2011；直接偏向辛卯属于答案拟合。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_severe_event_year",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "死亡年份题必须寻找连续病程或多年同一接口，单一日支冲不得定年。",
+        "所有候选年必须用同尺度矩阵比较，不以关系数量代替事件证据。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c2_q03",
+      "case_id": "e05-c2",
+      "profile_text": "命例二 出题： 七仙羽师傅 流派： 八字 男 公历 1965-03-05 · 9:35am 马来西亚 乾造 乙 巳 戊 寅 戊 午 丁 巳",
+      "question": "此命在庚辰辛巳年期间，生下三胞胎，此三个BB如何?",
+      "options": {
+        "A": "三个是男BB",
+        "B": "三个是女BB",
+        "C": "二女一男BB",
+        "D": "二男一女BB"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.25,
+      "pre_reveal_decisive_facts": [
+        "庚辰、辛巳连续两年食伤先后透出，支持子女议题连续发生",
+        "三胞胎的精确性别无法由命盘稳定区分，混合性别仅作低置信度破平"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "uncalibrated_guess",
+      "root_cause": "连续食伤年只支持子女议题，不能区分三胞胎的精确性别组合；揭晓前已承认只能低置信度破平。",
+      "evidence": [
+        "题干已经明示三胞胎，四个选项只差性别数量。",
+        "星数与阴阳不能稳定换算具体子女性别，现有技能也明确禁止这种映射。"
+      ],
+      "counterfactual_fix": "不存在能从给定八字确定二女一男的通用修复；改选 C 只能利用揭晓标签。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_child_sex_count",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "子女性别与精确数量题必须标记低可识别。",
+        "不得用阴阳、食伤个数或藏干数量换算男女组合。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c2_q05",
+      "case_id": "e05-c2",
+      "profile_text": "命例二 出题： 七仙羽师傅 流派： 八字 男 公历 1965-03-05 · 9:35am 马来西亚 乾造 乙 巳 戊 寅 戊 午 丁 巳",
+      "question": "此命死前的事业成就是那一种类?",
+      "options": {
+        "A": "做生意，富裕。死时身家100万美元以上",
+        "B": "医生，中产小康。10万美元身家",
+        "C": "小学教师，平民。死时没有身家平民收入",
+        "D": "农民，赤贫，死时欠人医药费"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "官杀生印、印再生身的专业资质链明显，较符合制度化专业服务",
+        "原局水财全缺、金食伤很弱，不足以优先支持百万级经营财富"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "官印链能支持专业服务，火土强也可支持经营承责，但无法从命盘唯一识别医生或商人，更不能推导具体美元身家。",
+      "evidence": [
+        "B 与 A 均为职业加收入档位的复合选项，每个都有命理上可解释部分。",
+        "原局无水财不能作为否决百万经营财富的确定事实，反向也不足以证明 A。"
+      ],
+      "counterfactual_fix": "取消“无财即不富”的错误映射会提高 A，但职业和金额仍无从确定，因此不能保证改票。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_occupation_plus_wealth",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "职业加金额复合选项必须分别评分，最弱子句限制整项。",
+        "财星缺失不得直接否决经营或固定财富档位。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c3_q02",
+      "case_id": "e05-c3",
+      "profile_text": "命例三 出题： 玲珑堂常欢师傅 流派： 八字 男 公历 1979-10-10 · 戌时 中国香港 乾造 己 未 甲 戌 庚 戌 丙 戌",
+      "question": "命主那一个年份，不小心撞向游乐场的石屎乒乓球台，以弄致头破血流，需接受缝纫手术？",
+      "options": {
+        "A": "1987",
+        "B": "1988",
+        "C": "1989",
+        "D": "1990"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.84,
+      "pre_reveal_decisive_facts": [
+        "1988戊辰年，辰同时六冲月、日、时三处戌支",
+        "当时癸酉大运持续三害戌，身体与行动接口叠加受扰"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "1988 辰冲三戌是四年中最强的可见事故触发，但官方事件在 1987；现有八字信息无法把同一类头部跌撞精确锁定到相邻年份。",
+      "evidence": [
+        "揭晓前证据是确定性的多重辰戌冲，并非排盘或选项读取错误。",
+        "1987 丁卯缺少比 1988 更明确的头部缝针差异证据。"
+      ],
+      "counterfactual_fix": "禁止以冲刑数量直接定事件可以降低 1988 置信度，但不会确定地推出 1987。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_accident_year",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "相邻事故年份题必须比较事件接口而非合冲数量。",
+        "最强冲刑只能支持变化窗口，不能自动锁定具体事故剧情。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c3_q03",
+      "case_id": "e05-c3",
+      "profile_text": "命例三 出题： 玲珑堂常欢师傅 流派： 八字 男 公历 1979-10-10 · 戌时 中国香港 乾造 己 未 甲 戌 庚 戌 丙 戌",
+      "question": "命主那一年，初出社会，做第一份工作？",
+      "options": {
+        "A": "1995",
+        "B": "1996",
+        "C": "1997",
+        "D": "1998"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "1997丁丑年正官透出，符合首次进入工作秩序",
+        "丑年补齐原局未戌形成三刑，且命主实际年龄十八岁，转折性较强"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "timing",
+      "root_cause": "题目问第一份工作，却把 1997 丁正官和丑未戌三刑的“更强转折”当成答案，忽略 1996 丙子已是更早出现的直接官杀工作接口。",
+      "evidence": [
+        "1996 丙七杀透出且与原局时干丙同干，已经满足首次进入工作秩序的较早触发。",
+        "“第一次”要求优先找最早达到门槛的年份，而不是四年中关系最密集的年份。"
+      ],
+      "counterfactual_fix": "对“开始/第一次”采用阈值状态机：按时间顺序选择最早满足职业接口的候选；会把 C 改为 B。",
+      "would_change_answer": true,
+      "recurrence_key": "event_onset_mistaken_for_peak_trigger",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "问“第一份/开始”时按候选年升序寻找首次满足接口，不选最强后续触发。",
+        "1996 丙子与 1997 丁丑比较时必须记录前者已出现直接官杀。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c3_q04",
+      "case_id": "e05-c3",
+      "profile_text": "命例三 出题： 玲珑堂常欢师傅 流派： 八字 男 公历 1979-10-10 · 戌时 中国香港 乾造 己 未 甲 戌 庚 戌 丙 戌",
+      "question": "命主那一年在大陆酒店洗澡其间，不幸向前跌倒，再次弄致头破血流，当时暂时用有限药物止血，奕日回港再缝针手术？",
+      "options": {
+        "A": "2004",
+        "B": "2005",
+        "C": "2006",
+        "D": "2007"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.9,
+      "pre_reveal_decisive_facts": [
+        "2006丙戌与原局时柱丙戌完整伏吟",
+        "流年戌又同时重复月、日、时三支，并受辛未大运相破"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "2006 丙戌完整伏吟时柱并重复三戌，是候选中最强的事故变化信号，但官方事件在 2007；命盘不足以区分这两个相邻年份的同类跌倒缝针。",
+      "evidence": [
+        "确定性干支事实支持 2006 的完整伏吟，揭晓前没有计算错误。",
+        "具体地点、洗澡跌倒和回港缝针均是命盘不可识别的传记细节。"
+      ],
+      "counterfactual_fix": "降低伏吟对具体事故年份的独占权只能降置信度，不能确定地改为 2007。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_accident_year",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "伏吟只表示重复引动，不直接等于事故发生年。",
+        "具体事故地点、方式和治疗细节不得由单一流年关系推出。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c3_q05",
+      "case_id": "e05-c3",
+      "profile_text": "命例三 出题： 玲珑堂常欢师傅 流派： 八字 男 公历 1979-10-10 · 戌时 中国香港 乾造 己 未 甲 戌 庚 戌 丙 戌",
+      "question": "命主那一年结婚？",
+      "options": {
+        "A": "2005",
+        "B": "2006",
+        "C": "2007",
+        "D": "2008"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.66,
+      "pre_reveal_decisive_facts": [
+        "男命以木财为配偶接口，2007丁亥藏甲木",
+        "亥与原局未及辛未大运同时形成拱木，关系资源获得落地条件"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "timing",
+      "root_cause": "过度偏好 2007 亥中暗藏甲财和未亥拱木，忽略 2005 乙酉年正财直接透出；把条件性拱局当成比有根显露的配偶星更强。",
+      "evidence": [
+        "男命庚日以木为配偶接口，2005 乙为正财直接透干。",
+        "2007 的甲仅藏于亥，未亥只是拱木条件，不能未经月令透干核验就视为已经成局。"
+      ],
+      "counterfactual_fix": "候选结婚年优先比较配偶星是否直接、有根和落地，再考虑半合或拱局；会把 C 改为 A。",
+      "would_change_answer": true,
+      "recurrence_key": "conditional_formation_overweighted_vs_direct_role_star",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "候选年份中直接透出的配偶星不得被未成化的拱局无条件压过。",
+        "正式婚姻年份须区分对象出现、关系变化和登记落地。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c4_q01",
+      "case_id": "e05-c4",
+      "profile_text": "命例四 出题： 鼎大图书 培哥 流派： 八字 女 公历 1975-09-26 · 申时 中国香港 坤造 乙 卯 乙 酉 乙 亥 甲 申",
+      "question": "命主在1990庚午年有何事发生?",
+      "options": {
+        "A": "成绩不理想，而不能升学。到社会更找不到工作而闲在家中",
+        "B": "不幸被人强奸",
+        "C": "父母把命主送到外国读书",
+        "D": "成绩非常优良，而得到奖学金"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.38,
+      "pre_reveal_decisive_facts": [
+        "1990庚午年官星庚透，丁亥大运同时提供食伤与印星背景",
+        "升学表现接口强于失学；该年未见足以支持极端伤害选项的多重信号"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "官印与学业背景只能支持升学相关正向事件，不能在“出国读书”和“成绩优良获奖学金”两个具体落点间稳定区分。",
+      "evidence": [
+        "揭晓前已正确排除失学和极端伤害，剩余 C/D 都是教育资源向上的叙事。",
+        "奖学金与父母送出国分别需要成绩、家庭资源和迁移事实，题面均未提供。"
+      ],
+      "counterfactual_fix": "提高迁移动象或惩罚奖学金细节都不足以确定 C；强行偏向出国会拟合本题。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_specific_education_event",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "教育事件题先判断升学方向，再对出国、奖学金等具体结果降置信度。",
+        "没有迁移与家庭资源双重证据时不得由官印直接推出留学。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c4_q02",
+      "case_id": "e05-c4",
+      "profile_text": "命例四 出题： 鼎大图书 培哥 流派： 八字 女 公历 1975-09-26 · 申时 中国香港 坤造 乙 卯 乙 酉 乙 亥 甲 申",
+      "question": "命主何年结婚?",
+      "options": {
+        "A": "2001辛巳",
+        "B": "2003癸未",
+        "C": "2005乙酉",
+        "D": "2007丁亥"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.78,
+      "pre_reveal_decisive_facts": [
+        "2001辛巳年配偶星七杀透出，巳又直接六冲日支亥",
+        "巳与原局酉半合官杀、与申六合，星宫两层同时被引动"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "timing",
+      "root_cause": "把 2001 巳冲日支亥的强变化信号直接解释为结婚，混淆关系危机/结构改变与正式婚姻落地；同时低估 2005 乙酉对原局月柱乙酉的完整伏吟及官杀支的重复。",
+      "evidence": [
+        "2001 确有辛杀透与巳亥冲，但冲首先表示关系或生活结构改变，不自带结婚语义。",
+        "2005 乙酉完整重复月柱并强化原局官杀环境，更符合身份和社会状态落地的候选。"
+      ],
+      "counterfactual_fix": "婚姻年份强制使用阶段状态机，冲宫只算变化，正式结婚另需绑定或身份落地信号；会把 A 改为 C。",
+      "would_change_answer": true,
+      "recurrence_key": "relationship_change_mistaken_for_marriage_landing",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "冲配偶宫不得单独判结婚，必须另有配偶星和落地信号。",
+        "候选结婚年逐一标记相识、变化、绑定和登记阶段。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c4_q03",
+      "case_id": "e05-c4",
+      "profile_text": "命例四 出题： 鼎大图书 培哥 流派： 八字 女 公历 1975-09-26 · 申时 中国香港 坤造 乙 卯 乙 酉 乙 亥 甲 申",
+      "question": "命主何年抄卖楼房得财60万港币?",
+      "options": {
+        "A": "2011辛卯",
+        "B": "2009己丑",
+        "C": "2007丁亥",
+        "D": "2005乙酉"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.82,
+      "pre_reveal_decisive_facts": [
+        "2009己丑年正处己丑大运，岁运干支完整伏吟",
+        "己丑均为直接财星与财地，求财接口显著强于其余候选年"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "2009 己丑岁运并临且财星最直接，按现有证据比 2011 更像财务事件；命盘无法可靠识别“炒卖楼房获利六十万”的精确年份。",
+      "evidence": [
+        "揭晓前使用的己丑运和己丑流年干支事实正确。",
+        "2011 辛卯主要显示官杀与卯酉冲动，缺少比 2009 更直接的财星金额或房地产证据。"
+      ],
+      "counterfactual_fix": "提醒岁运并临不保证获利可降低 B 置信度，但不会从通用规则确定地推出 A。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_financial_event_year",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "岁运并临只表示主题集中，不预设获利或损失。",
+        "具体资产类别和金额不得由财星或墓库直接推导。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c4_q04",
+      "case_id": "e05-c4",
+      "profile_text": "命例四 出题： 鼎大图书 培哥 流派： 八字 女 公历 1975-09-26 · 申时 中国香港 坤造 乙 卯 乙 酉 乙 亥 甲 申",
+      "question": "命主于2011辛卯年到现在，工作是何种类?",
+      "options": {
+        "A": "常常世界各国，飞来飞去开会的工作",
+        "B": "2011辛卯年被老板辞去工作，在家中做家庭主妇",
+        "C": "2011辛卯年创业，衣服买卖生意到现在",
+        "D": "酒店接待文员"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.56,
+      "pre_reveal_decisive_facts": [
+        "2011辛卯年卯伏吟年支并冲月支酉，职业环境出现直接改变",
+        "己丑财运配合比劫旺局，更支持自主经营而非长期闲居或普通文职"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "2011 卯酉冲可支持职业环境变化、迁移或经营，但不能在环球出差开会与服装创业之间唯一识别具体工作形态。",
+      "evidence": [
+        "揭晓前正确识别了长期职业改变，但将财运与比劫直接映射创业。",
+        "A 的跨国出行和 C 的服装买卖都需要题面履历或独立行业线索。"
+      ],
+      "counterfactual_fix": "同时检查迁移与经营接口会使 A/C 接近，仍不能保证改选 A。",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_exact_occupation",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "职业变化题将迁移、任职与经营作为并列功能轴比较。",
+        "卯酉冲不得直接等同创业、服装或环球差旅。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c4_q05",
+      "case_id": "e05-c4",
+      "profile_text": "命例四 出题： 鼎大图书 培哥 流派： 八字 女 公历 1975-09-26 · 申时 中国香港 坤造 乙 卯 乙 酉 乙 亥 甲 申",
+      "question": "命主于2013癸巳年发生何事?",
+      "options": {
+        "A": "中六合彩，得财2200万港币",
+        "B": "抄卖楼房而得财60万港币",
+        "C": "交通意外留医半个月",
+        "D": "小产"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.67,
+      "pre_reveal_decisive_facts": [
+        "2013癸巳年巳直接六冲日支亥，并与己丑运、原局酉成三合金局",
+        "巳为乙木食伤子女接口，强官杀成局同时施压，子女事件较交通事件更有角色落点"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "把巳亥冲与巳中食伤直接升级为小产，未对极端健康/生育选项执行严重度门槛，也忽略巳中戊财在己丑财运中的直接财务接口。",
+      "evidence": [
+        "小产需要子女星、子女宫、身体承载和连续触发多层支持，揭晓前只有日支冲和一个食伤接口。",
+        "2013 巳中藏戊财，处己丑财运，至少对 B 的财务结果提供直接角色与领域支持。"
+      ],
+      "counterfactual_fix": "对生育损失实施双重独立接口门槛，并对财务候选补做大运—流年承载比较；会否决 D 并改选 B。",
+      "would_change_answer": true,
+      "recurrence_key": "dramatic_event_from_single_role_relation",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "小产、死亡、重伤等极端选项至少需要结构背景和两个独立触发。",
+        "日支受冲与食伤出现不得单独翻译为小产。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c5_q01",
+      "case_id": "e05-c5",
+      "profile_text": "命例五 出题： 傅梓量师傅（香港青年术数家协会） 流派： 奇门遁甲 女 公历 1992-05-06 · 卯时 中国澳门 坤造 壬 申 乙 巳 壬 午 癸 卯",
+      "question": "以下那一项背景描述为正确？",
+      "options": {
+        "A": "从小与父亲聚小离多",
+        "B": "从小与母亲聚小离多",
+        "C": "小学毕业",
+        "D": "大学毕业"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "母亲印星落年支申，而申与月支巳同时六合又相破，早年母系接口呈聚散并见",
+        "父亲财星巳午连续落在月、日两支，较具近身性"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "巳申关系同时牵动父财与母印，现有四柱无法稳定区分从小与父亲还是母亲聚少离多；且题目注明原出题流派为奇门遁甲，但未提供可复算的奇门盘。",
+      "evidence": [
+        "母印在申、父财在巳午，两类六亲接口均位于早年月日结构且互有作用。",
+        "学历选项也缺少题面事实，无法通过排除法唯一锁定 A。"
+      ],
+      "counterfactual_fix": "强化六亲星加宫位检查会降低 B 的确定性，但没有足够信息保证改为 A；补充奇门规则也因缺少起局数据不能完成反事实。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_role_detail",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "父母聚散题必须同时比较父母星、年月宫位和明确岁运。",
+        "非八字流派题在缺少对应盘数据时不得假装可精确复算。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c5_q02",
+      "case_id": "e05-c5",
+      "profile_text": "命例五 出题： 傅梓量师傅（香港青年术数家协会） 流派： 奇门遁甲 女 公历 1992-05-06 · 卯时 中国澳门 坤造 壬 申 乙 巳 壬 午 癸 卯",
+      "question": "以下那项关于命主于2014年3月的描述为正确？",
+      "options": {
+        "A": "命主大肠出血",
+        "B": "得横财十万元",
+        "C": "跟家人嘈吵，被家人赶出家门",
+        "D": "跟男友分手"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.58,
+      "pre_reveal_decisive_facts": [
+        "2014甲午年午与日支午同支并自刑，直接重复关系与生活核心",
+        "壬寅大运同时与原局巳申补齐寅巳申三刑，3月丁卯又伏吟时支卯"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "午自刑与寅巳申三刑只能支持压力或身体生活失衡，不能在大肠出血、分手、家庭赶出和横财之间唯一识别具体事件；大肠出血尤其属于不可由八字诊断的精细医疗事实。",
+      "evidence": [
+        "揭晓前将日支午重复自动偏向关系，但没有男友或关系阶段事实。",
+        "官方 A 需要器官和症状两层精确医学信息，命盘只提供宽泛象意。"
+      ],
+      "counterfactual_fix": "日支多义审计会否决对分手的自动映射，但不能确定地推出大肠出血。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_specific_medical_event",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "健康选项只比较系统类别，不从五行或刑冲诊断具体器官出血。",
+        "日支重复须并列检查身体、生活和关系，不得默认分手。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c5_q05",
+      "case_id": "e05-c5",
+      "profile_text": "命例五 出题： 傅梓量师傅（香港青年术数家协会） 流派： 奇门遁甲 女 公历 1992-05-06 · 卯时 中国澳门 坤造 壬 申 乙 巳 壬 午 癸 卯",
+      "question": "命主于2012年1月开始在赌场工作，以下那项描述关于2014年4月在赌场的工作情况为正确？",
+      "options": {
+        "A": "升职加薪",
+        "B": "离开赌场工作",
+        "C": "在赌场工作中犯错误，被投诉赌客不礼貌，言行不尊重",
+        "D": "以上皆非"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.58,
+      "pre_reveal_decisive_facts": [
+        "2014甲午年食伤与财务服务接口旺，午又在日支自刑",
+        "4月戊辰透七杀，形成表达行为与工作规制正面相接的月份"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "工作规制冲突可支持犯错、投诉或离职风险，但无法由给定四柱稳定区分“被投诉”与“离开赌场”两个相邻事件阶段。",
+      "evidence": [
+        "2014 甲午和戊辰月的表达—规制接口支持工作压力方向。",
+        "题干没有辞职、解雇、投诉结果或后续工作状态，无法完成阶段判定。"
+      ],
+      "counterfactual_fix": "加入工作事件状态机会让 C/B 都保留，仍缺少把压力升级为离职的独立终止信号。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_job_event_stage",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "职场冲突题区分失误、投诉、处罚、离职四个阶段。",
+        "单月官杀或食伤冲突不得直接判定离职。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c6_q02",
+      "case_id": "e05-c6",
+      "profile_text": "命例六 出题： 乐只君师傅 流派： 紫微斗数 男 公历 1974-03-16 · 上午11时29分 中国香港 乾造 甲 寅 丁 卯 丙 辰 癸 巳 命主先生有先天性眼疾，但听觉正常。",
+      "question": "命主先生于虚龄24-33期间的婚姻状况：",
+      "options": {
+        "A": "结婚后，对方不幸辞世",
+        "B": "结婚后，命主出现第三者，以至离婚",
+        "C": "结婚后，命主经常不在太太身边，但保持夫妻关系",
+        "D": "不但未有结婚，更从无亲密异性朋友"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "24至33岁跨己巳、庚午两运，庚财出现支持婚姻机会",
+        "命盘只能支持关系压力与流动，无法独立识别死亡、第三者或法律离婚等高负担细节"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "盘面可支持婚姻机会与关系压力，但不能区分第三者导致离婚、长期分隔仍维持婚姻或配偶死亡等具体演员、原因和终局；题目原流派为紫微斗数却未给紫微盘。",
+      "evidence": [
+        "揭晓前已正确承认第三者和法律离婚是高负担细节。",
+        "B 需要结婚、命主出轨、因果关系和离婚四个子句，给定八字不足以逐项覆盖。"
+      ],
+      "counterfactual_fix": "降低高负担选项门槛反而会削弱 B 的可选性；没有通用修复能从现有输入确定 B。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_relationship_biography",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "婚姻复合选项逐项验证结婚、演员、原因和终局。",
+        "缺少紫微盘时不得声称可复现紫微原题的精确婚姻剧情。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c6_q03",
+      "case_id": "e05-c6",
+      "profile_text": "命例六 出题： 乐只君师傅 流派： 紫微斗数 男 公历 1974-03-16 · 上午11时29分 中国香港 乾造 甲 寅 丁 卯 丙 辰 癸 巳 命主先生有先天性眼疾，但听觉正常。",
+      "question": "1994年曾犯官非，原因是：",
+      "options": {
+        "A": "被手下人拖累",
+        "B": "被亲密的异性朋友拖累",
+        "C": "于停牌期间，超速驾驶汽车被捕",
+        "D": "酒后生事，更至有人受伤"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.43,
+      "pre_reveal_decisive_facts": [
+        "1994甲戌年戌直接六冲日支辰，移动与身体生活接口明显受扰",
+        "己巳大运又与原局寅形成刑害，交通合规情境较亲友拖累更有直接落点"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "1994 戌冲辰可支持移动、生活或官非压力，却不能区分被手下拖累、异性拖累、停牌超速或酒后伤人这些具体起因。",
+      "evidence": [
+        "题干已经明示官非，四个选项只差人物和行为原因。",
+        "交通合规解释与手下人解释都需要题面未提供的现实行为链。"
+      ],
+      "counterfactual_fix": "加强角色归属和原因子句审计会降低 C 置信度，但无法确定 A。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_event_cause",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "官非题分别验证压力结构、行为原因和目标人物。",
+        "移动接口不得直接等同超速或交通违法。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c6_q04",
+      "case_id": "e05-c6",
+      "profile_text": "命例六 出题： 乐只君师傅 流派： 紫微斗数 男 公历 1974-03-16 · 上午11时29分 中国香港 乾造 甲 寅 丁 卯 丙 辰 癸 巳 命主先生有先天性眼疾，但听觉正常。",
+      "question": "1997年曾有财务上的困难，起因是：",
+      "options": {
+        "A": "过度投机于股票之上",
+        "B": "担保朋友借贷，但朋友无力偿还，故要把债务孭上",
+        "C": "年内长期失业，没有收入",
+        "D": "身染恶疾，要付出巨额的医疗开支"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "原局木火比印偏旺而金财弱，朋友或同辈分散财务的接口强",
+        "1997丁丑年劫财透出并引出丑中财，较符合替他人承担财务后果"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "丁丑年与比劫财务压力可支持资金困难，却不能唯一识别失业、替朋友担保、投机或医疗开支中的具体原因。",
+      "evidence": [
+        "揭晓前由劫财直接跳到替朋友承担债务，但 B 还包含担保、朋友违约和债务转嫁三个附加事实。",
+        "官方 C 的长期失业也需要工作终止和全年无收入证据，给定盘没有唯一提供。"
+      ],
+      "counterfactual_fix": "细节负担审计会降低 B，但不会确定地把 C 提升到唯一首选。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_event_cause",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "财务困难题必须把结果与投机、担保、失业、医疗等原因分别评分。",
+        "劫财不得直接等同朋友债务。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c6_q05",
+      "case_id": "e05-c6",
+      "profile_text": "命例六 出题： 乐只君师傅 流派： 紫微斗数 男 公历 1974-03-16 · 上午11时29分 中国香港 乾造 甲 寅 丁 卯 丙 辰 癸 巳 命主先生有先天性眼疾，但听觉正常。",
+      "question": "2013年命主先生搬了屋，其原因是：",
+      "options": {
+        "A": "得到祖业，所以卖了当时的物业，并搬到祖屋居住",
+        "B": "生意上出现财困，故要卖掉所住的物业作为周转",
+        "C": "婚姻上出现问题，所以自己搬出来住，希望相方可以有时间冷静",
+        "D": "储有余钱，所以搬屋，以改善居住环境"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "2013年处辛未财运，食伤生财背景有改善资产配置的条件",
+        "癸巳年重复题给时柱并引动住所变化，但未见足以锁定婚变或祖业的独立证据"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "input_extraction",
+      "root_cause": "输入自身存在可验证冲突：公历 11:29 属午时，计算器排甲午时柱，而 profile 给癸巳；但无论采用哪一柱，都不足以区分婚姻冷静期、财困卖房、祖业或改善居住这四个搬屋原因。",
+      "evidence": [
+        "确定性计算以 1974-03-16 11:29 排出甲寅 丁卯 丙辰 甲午，与题给癸巳时柱不一致。",
+        "揭晓前把 2013 癸巳视为伏吟题给时柱并据此推住所变化；修正为甲午会移除该前提，却不会新增婚姻原因证据。"
+      ],
+      "counterfactual_fix": "先报告时间与题给四柱冲突并做双盘敏感性分析；该修复会撤销 D 的一条理由，但不能确定地改成 C，因此不把数据冲突列为足以改变答案的主因。",
+      "would_change_answer": false,
+      "recurrence_key": "source_time_pillar_conflict_without_decisive_delta",
+      "fix_type": "data_validation",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "1974-03-16 11:29 男命民用时排出午时而非巳时，必须记录与题给柱冲突。",
+        "题给四柱与时间冲突时做双盘敏感性分析，只有答案发生稳定变化才归 data_issue。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c7_q01",
+      "case_id": "e05-c7",
+      "profile_text": "命例七 出题： 林耀光师傅 流派： 紫微玄机 女 公历 1961-07-10 · 卯时（早上6时） 中国香港 坤造 辛 丑 乙 未 甲 辰 丁 卯",
+      "question": "命主已结婚，她的子女情况如何?",
+      "options": {
+        "A": "有一对龙凤胎子女",
+        "B": "没有孩子",
+        "C": "有一男孩",
+        "D": "有一女孩"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.32,
+      "pre_reveal_decisive_facts": [
+        "时柱丁卯为唯一明透食伤子女接口，数量上更接近单一子女",
+        "精确性别属于低可识别细节，仅按传统女命伤官子息口径低置信度破平"
+      ],
+      "tags": [
+        "婚姻感情",
+        "六亲子女"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "uncalibrated_guess",
+      "root_cause": "时柱食伤只能说明子女接口，不能从一处丁伤官判断有一男孩，也不能可靠推出无子；原题注明紫微玄机但没有对应星盘。",
+      "evidence": [
+        "揭晓前已承认精确性别低可识别，却仍以单一传统口径破平。",
+        "官方 B 的无子也需要子女宫承载、连续岁运或现实事实，现有输入不足。"
+      ],
+      "counterfactual_fix": "禁止按食伤阴阳猜性别会撤销 C，但不会确定地推出 B。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_child_outcome",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "食伤个数、阴阳和透藏不得直接换算子女性别或数量。",
+        "判断无子必须有子女宫、承载和岁运多层证据。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c7_q02",
+      "case_id": "e05-c7",
+      "profile_text": "命例七 出题： 林耀光师傅 流派： 紫微玄机 女 公历 1961-07-10 · 卯时（早上6时） 中国香港 坤造 辛 丑 乙 未 甲 辰 丁 卯",
+      "question": "她的桃花运最好岁数时段在那里？",
+      "options": {
+        "A": "12-21岁",
+        "B": "22-31岁",
+        "C": "32-41岁",
+        "D": "42-51岁"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "22至31岁主体落在丁酉运，酉为女命直接官星配偶接口",
+        "丁伤官同现使关系活跃但不必稳定，符合桃花强于婚姻质量的问法"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "12-21 与 22-31 分别以丙申、丁酉运为主体，两步运都带官杀关系接口；现有四柱无法稳定排序哪个十年“桃花最好”。",
+      "evidence": [
+        "确定性计算约 1971-02 起运，丙申与丁酉确为相邻早年大运，没有排运错误。",
+        "丁酉官星更直接支持预测 B，而官方 A 需要额外的桃花或已知关系事件证据。"
+      ],
+      "counterfactual_fix": "加入年龄边界和关系阶段比较仍会让 A/B 接近，不能保证改为 A。",
+      "would_change_answer": false,
+      "recurrence_key": "cross_system_low_identifiability_peak_age_band",
+      "fix_type": "none",
+      "decision": "defer",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "年龄段选项必须按实际起运边界映射，不按整十岁口算。",
+        "官杀出现只表示关系机会，不自动等于桃花峰值。"
+      ]
+    },
+    {
+      "id": "gfc_2014_e05-c7_q04",
+      "case_id": "e05-c7",
+      "profile_text": "命例七 出题： 林耀光师傅 流派： 紫微玄机 女 公历 1961-07-10 · 卯时（早上6时） 中国香港 坤造 辛 丑 乙 未 甲 辰 丁 卯",
+      "question": "她是做生意的类型吗？如是在那一个岁数做起？",
+      "options": {
+        "A": "22-31岁",
+        "B": "32-41岁",
+        "C": "42-51岁",
+        "D": "52-61岁"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "32至41岁戊戌运偏财干支成势，是四个时段中最直接的经营资源背景",
+        "22至31岁官星较重，52至61岁则偏向杀印而非自主经营"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "timing",
+      "root_cause": "题目问“哪一个岁数做起”，却选择 32-41 岁戊戌财运这一经营资源最强阶段，混淆开始经营与后来财务扩张或成熟。",
+      "evidence": [
+        "揭晓前决定性事实只证明戊戌运经营资源更强，没有证明此前未开始。",
+        "22-31 岁丁酉运可作为更早的职业/市场约束与输出成形阶段，符合“做起”的先发生语义。"
+      ],
+      "counterfactual_fix": "对“开始/做起”按时间顺序寻找最早达到经营门槛的阶段，而非选择财星峰值；会把 B 改为 A。",
+      "would_change_answer": true,
+      "recurrence_key": "event_onset_mistaken_for_peak_trigger",
+      "fix_type": "reasoning_guardrail",
+      "decision": "no_change",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "问创业开始年龄时区分启动、扩张和财富峰值。",
+        "更晚财运最强不得反证更早未开始经营。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2023_e14-c1_q01": {
+      "answer": "C",
+      "confidence": 0.50,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚金日主生戌月，戊土偏印重叠且日坐戌根，主体性和固执倾向强。",
+        "A项的容易受他人影响与强印有根的结构不合，D项的胆怯也缺乏官杀印结构支持。"
+      ]
+    },
+    "gfc_2023_e14-c1_q02": {
+      "answer": "A",
+      "confidence": 0.42,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局官杀与印星形成制度、资质和专业服务接口。",
+        "销售与地产所需的食伤生财链不显，律师比市场经营类职业更贴近官印功能。"
+      ]
+    },
+    "gfc_2023_e14-c1_q03": {
+      "answer": "C",
+      "confidence": 0.67,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1986丙寅年处丙申大运，寅申直接相冲，岁运天干又同见丙。",
+        "寅年补齐原局午、戌，形成寅午戌三合火局，复合触发强于其余候选。"
+      ]
+    },
+    "gfc_2023_e14-c1_q04": {
+      "answer": "B",
+      "confidence": 0.39,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命官杀火有根有藏，配偶宫戌亦藏正官，婚姻角色并非缺席。",
+        "印星强而官印相接，教育承载优于两个明确写没有大学毕业的选项。"
+      ]
+    },
+    "gfc_2023_e14-c1_q05": {
+      "answer": "C",
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2008戊子处甲午大运，流年子与运支午六冲，并重复原局子午冲的移动和突发接口。",
+        "随后癸巳运引动原局伤官与官杀压力，法律与事故风险链比移民退休或保险致富更相符。"
+      ]
+    },
+    "gfc_2023_e14-c2_q01": {
+      "answer": "A",
+      "confidence": 0.32,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注流派为紫微斗数，本技能没有紫微斗数早年大限模块。",
+        "在四个低可识别经历中，跟随母亲生活是附加假设较少的直接候选。"
+      ]
+    },
+    "gfc_2023_e14-c2_q02": {
+      "answer": "B",
+      "confidence": 0.32,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注流派为紫微斗数，本技能不能用八字大运替代其父母宫推断。",
+        "父亲短寿、母亲长寿与早年跟随母亲这一直接候选在时间关系上可并存。"
+      ]
+    },
+    "gfc_2023_e14-c2_q03": {
+      "answer": "D",
+      "confidence": 0.33,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注流派为紫微斗数，本技能无法计算对应婚姻宫与大限。",
+        "在没有独立证据支持离异、嫖妓或终身独身时，稳定婚姻的细节负担最低。"
+      ]
+    },
+    "gfc_2023_e14-c2_q04": {
+      "answer": "C",
+      "confidence": 0.28,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "疾病角色的精确归属属于低可识别事实，且题面采用紫微斗数流派。",
+        "命主52岁时父母处于癌症基准风险较高的年龄阶段，因此父母项作为低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c2_q05": {
+      "answer": "D",
+      "confidence": 0.27,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注紫微斗数流派，本技能不支持对应事业宫和大限计算。",
+        "相比犯罪、长期失能和独子断言，稳定任职是严重度较低的直接候选。"
+      ]
+    },
+    "gfc_2023_e14-c3_q01": {
+      "answer": "B",
+      "confidence": 0.64,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2013癸巳年在乙未大运，癸正财直接与戊日主相合，符合正式关系绑定。",
+        "2012壬辰虽冲配偶宫，但壬为偏财且冲更偏变化，落地性弱于2013。"
+      ]
+    },
+    "gfc_2023_e14-c3_q02": {
+      "answer": "C",
+      "confidence": 0.63,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2016丙申年申金为食伤子女接口，并与原局时支亥相害。",
+        "2019己亥年与子女宫亥伏吟且自刑，两年各自具备独立的子女触发。"
+      ]
+    },
+    "gfc_2023_e14-c3_q03": {
+      "answer": "C",
+      "confidence": 0.55,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局壬癸财星双透且亥水有根，戊土在辰戌亦有承载。",
+        "2020后丙申大运引出申金食伤，形成输出再生财的持续增长接口，但不足以确认千万资产。"
+      ]
+    },
+    "gfc_2023_e14-c3_q04": {
+      "answer": "C",
+      "confidence": 0.43,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "同案例题干已明确命主结过婚并有两名孩子，排除从未结婚的叙述。",
+        "原局辰戌冲提示关系有压力，但没有独立事实足以升级为离婚或婚外情。"
+      ]
+    },
+    "gfc_2023_e14-c3_q05": {
+      "answer": "D",
+      "confidence": 0.46,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局偏印透、辰戌库并见，具有体系学习与传统术数的辅助接口。",
+        "丙申大运补入食伤表达，原局财星又可承接服务交换，较贴近顾问型职业链。"
+      ]
+    },
+    "gfc_2023_e14-c4_q01": {
+      "answer": "D",
+      "confidence": 0.31,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注紫微斗数流派，本技能没有对应命宫性格模块。",
+        "外向好胜与急性子是四项中附加道德评判较少的直接候选。"
+      ]
+    },
+    "gfc_2023_e14-c4_q02": {
+      "answer": "B",
+      "confidence": 0.30,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注紫微斗数流派，本技能无法计算其学业大限。",
+        "结合1956年出生的年代背景，中学阶段中断比硕士或大学学历承担更少假设。"
+      ]
+    },
+    "gfc_2023_e14-c4_q03": {
+      "answer": "B",
+      "confidence": 0.29,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "婚姻终局与精确子女数量均不能由本八字技能可靠识别，题面又指定紫微斗数流派。",
+        "已婚育子是较常见状态，较未婚、无子或晚年离婚少一层极端假设。"
+      ]
+    },
+    "gfc_2023_e14-c4_q04": {
+      "answer": "C",
+      "confidence": 0.30,
+      "alternative": "D",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "具体历史事件无法由本技能核实，且题面明确采用紫微斗数流派。",
+        "在不借助外部传记的条件下，选择C仅为低置信度直接候选。"
+      ]
+    },
+    "gfc_2023_e14-c4_q05": {
+      "answer": "A",
+      "confidence": 0.27,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "疾病种类、年份和死亡结果均属高负担事实，题面采用的紫微斗数系统不在本技能内。",
+        "轻微中风相较搭桥、癌症死亡或新冠死亡具有较低的严重度负担。"
+      ]
+    },
+    "gfc_2023_e14-c5_q01": {
+      "answer": "B",
+      "confidence": 0.30,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注紫微斗数流派，本技能无法计算2011年的紫微大限与流年。",
+        "美国永久绿卡与相邻题目的远距离迁移语境能够形成现实时间线，但仍属低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c5_q02": {
+      "answer": "D",
+      "confidence": 0.29,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题目是否定问法，选中项必须是2009年没有发生的事项。",
+        "本技能不支持题面指定的紫微斗数计算，购置不动产仅作为低置信度排除候选。"
+      ]
+    },
+    "gfc_2023_e14-c5_q03": {
+      "answer": "D",
+      "confidence": 0.27,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确标注紫微斗数流派，本技能不能用八字岁运替代其结婚年份计算。",
+        "2009与相邻就业和迁移事件处于同一现实落地阶段，故作低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c5_q04": {
+      "answer": "B",
+      "confidence": 0.28,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "精确生育年份属于低可识别事实，题面采用紫微斗数流派而本技能无对应模块。",
+        "2013在候选中与此前婚姻阶段保持合理时间间隔，作为低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c5_q05": {
+      "answer": "B",
+      "confidence": 0.27,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "婴儿性别、双胞胎与难产均不能由本技能可靠推出，题面又指定紫微斗数流派。",
+        "女婴仅作为低置信度直接候选，不由计算支持。"
+      ]
+    },
+    "gfc_2023_e14-c6_q01": {
+      "answer": "B",
+      "confidence": 0.28,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明确采用紫微斗数流派，本技能没有相应事业大限模块。",
+        "四个年份都属于同一职业阶段，1984仅作低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c6_q02": {
+      "answer": "B",
+      "confidence": 0.27,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "通灵、地下博弈中奖和姐姐购房构成多个高负担子句，无法由本技能核实。",
+        "题面采用紫微斗数流派，1989仅为不受八字计算支持的直接候选。"
+      ]
+    },
+    "gfc_2023_e14-c6_q03": {
+      "answer": "B",
+      "confidence": 0.28,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "选项同时包含配偶工作、本人创业和子女冲突三个领域，需紫微多宫位同动才能判断。",
+        "本技能无对应模块，1992仅作低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c6_q04": {
+      "answer": "B",
+      "confidence": 0.27,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "突然获利、子女通勤与购房是三个复合落点，且题面指定紫微斗数流派。",
+        "2003仅作为低置信度直接候选，不由本技能计算支持。"
+      ]
+    },
+    "gfc_2023_e14-c6_q05": {
+      "answer": "C",
+      "confidence": 0.28,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "乳癌确诊和手术结果属于医疗历史事实，不能由命理可靠生成。",
+        "题面采用紫微斗数流派，本技能无对应模块，2016仅作低置信度直答。"
+      ]
+    },
+    "gfc_2023_e14-c7_q01": {
+      "answer": "C",
+      "confidence": 0.52,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "年柱壬午与月干乙财并非家庭资源完全断裂的结构。",
+        "同时日主略偏弱、财官旺而承载有限，不足以升级到大富贵家庭。"
+      ]
+    },
+    "gfc_2023_e14-c7_q02": {
+      "answer": "A",
+      "confidence": 0.47,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚金日主有辰印承接，壬水食伤透出，学习与输出链未断。",
+        "按2023年约21岁的年龄语境，大学层级比已修读硕士更符合阶段基准。"
+      ]
+    },
+    "gfc_2023_e14-c7_q03": {
+      "answer": "C",
+      "confidence": 0.58,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2020庚子年与日柱庚子完整伏吟，直接引动本人及配偶宫。",
+        "同年子又冲年支午，关系和生活结构变化强于2018、2019。"
+      ]
+    },
+    "gfc_2023_e14-c7_q04": {
+      "answer": "D",
+      "confidence": 0.56,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2022壬寅年处癸卯大运，寅与原局巳相害，关系环境有压力触发。",
+        "流年未直接合动日支子，且命主约20岁，结婚或奉子成婚的落地证据较弱。"
+      ]
+    },
+    "gfc_2023_e14-c7_q05": {
+      "answer": "A",
+      "confidence": 0.72,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "癸卯大运与2022壬寅年共同加强食伤输出，适合公开表现和竞赛机会。",
+        "母亲急逝需父母宫与母星多重严重受损，单一巳寅害不足以支持死亡。"
+      ]
+    },
+    "gfc_2023_e14-c8_q01": {
+      "answer": "A",
+      "confidence": 0.63,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2000庚辰年在乙酉大运，辰含财星并与日支配偶宫酉六合。",
+        "岁支与运支共同绑定配偶宫，正式落地性强于2001的冲动或2005的伏吟自刑。"
+      ]
+    },
+    "gfc_2023_e14-c8_q02": {
+      "answer": "B",
+      "confidence": 0.62,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2012壬辰年处丙戌大运，辰为财星载体并与日支酉六合。",
+        "辰同时冲大运戌，兼具旧状态改变与新关系绑定两层信号。"
+      ]
+    },
+    "gfc_2023_e14-c8_q03": {
+      "answer": "B",
+      "confidence": 0.38,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "申巳同见带有移动和网络组织接口，未土财星又可承接经营。",
+        "官杀集中带来流程和纪律要求，较翻译或救生员更接近组织化物流，但具体职业可识别度低。"
+      ]
+    },
+    "gfc_2023_e14-c8_q04": {
+      "answer": "C",
+      "confidence": 0.46,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "乙木日主略弱而庚辛官杀密集，行为更受责任、规则和现实压力约束。",
+        "月支未为财星根气，保守节俭与承担责任比鲁莽或投机取巧更贴合整体链条。"
+      ]
+    },
+    "gfc_2023_e14-c8_q05": {
+      "answer": "D",
+      "confidence": 0.44,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丙戌大运为伤官生财背景，但乙木偏弱且原局官杀很重，承财和留财能力受压。",
+        "2011卯冲配偶宫、2012辰冲运支并合配偶宫，后段财务压力更贴近家庭责任链；赌博原因缺少独立证据。"
+      ]
+    }
+  }
+}

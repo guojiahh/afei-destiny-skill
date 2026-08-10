@@ -1,0 +1,697 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2022_e13-c1_q02",
+      "case_id": "e13-c1",
+      "profile_text": "命例一 出题： 方荣老师 男 公历 1974-04-28 乾造 甲 寅 戊 辰 己 亥 壬 申",
+      "question": "此命何年结婚？",
+      "options": {
+        "A": "1999",
+        "B": "2002",
+        "C": "2006",
+        "D": "到2022年为止，单身"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "2002壬午透出男命正财配偶星",
+        "午与辛未大运之未六合，较有关系落地意味"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c1_q04",
+      "case_id": "e13-c1",
+      "profile_text": "命例一 出题： 方荣老师 男 公历 1974-04-28 乾造 甲 寅 戊 辰 己 亥 壬 申",
+      "question": "此命父亲是那一年仙逝？",
+      "options": {
+        "A": "2009",
+        "B": "2013",
+        "C": "2018",
+        "D": "2020"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.61,
+      "pre_reveal_decisive_facts": [
+        "2013癸巳直接引出偏财父星",
+        "巳年同时冲日支亥，并与原局寅、申构成寅巳申三刑"
+      ],
+      "tags": [
+        "六亲子女",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c2_q01",
+      "case_id": "e13-c2",
+      "profile_text": "命例二 出题： 侯天同老师 女 公历 1981-05-26 坤造 辛 酉 癸 巳 甲 辰 乙 丑",
+      "question": "此命的学历如何？",
+      "options": {
+        "A": "中七毕业",
+        "B": "2002年升学内地，2006年大学毕业",
+        "C": "预科后升本地大学，2004年大学毕业",
+        "D": "中五后，1998年出国留学"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "原局正印透月、正官透年，具官印学业链",
+        "1995至2004乙未运覆盖主要升学阶段，2004甲申又引动印杀结构"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c2_q02",
+      "case_id": "e13-c2",
+      "profile_text": "命例二 出题： 侯天同老师 女 公历 1981-05-26 坤造 辛 酉 癸 巳 甲 辰 乙 丑",
+      "question": "这命何时候结婚？",
+      "options": {
+        "A": "2005年结婚",
+        "B": "2006年先签纸结婚，2007年摆酒",
+        "C": "2012年结婚，旅行外地签纸",
+        "D": "2009年结婚"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "2005乙酉伏吟年支官星",
+        "酉与日支辰六合，配偶星与配偶宫同时出现绑定信号"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c2_q04",
+      "case_id": "e13-c2",
+      "profile_text": "命例二 出题： 侯天同老师 女 公历 1981-05-26 坤造 辛 酉 癸 巳 甲 辰 乙 丑",
+      "question": "身材？",
+      "options": {
+        "A": "高挑，瘦削",
+        "B": "高挑，肥胖",
+        "C": "矮小，瘦削",
+        "D": "矮小，肥胖"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "甲木日主有辰、乙木助而受三合金局修削",
+        "外貌细节可识别度低，仅支持偏修长清瘦的弱排序"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c3_q03",
+      "case_id": "e13-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 女 公历 1990-05-23 坤造 庚 午 辛 巳 戊 子 辛 酉",
+      "question": "这位女士佩的婚姻仔女如何？",
+      "options": {
+        "A": "未婚，没孩子",
+        "B": "已婚，没孩子",
+        "C": "已婚，有孩子",
+        "D": "离异，有孩子"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "女命官杀木在原局全无，正式婚姻接口先天偏弱",
+        "日支子又受年支午冲，关系生活共同体稳定度不足"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c3_q04",
+      "case_id": "e13-c3",
+      "profile_text": "命例三 出题： 王雅妮老师 女 公历 1990-05-23 坤造 庚 午 辛 巳 戊 子 辛 酉",
+      "question": "佩小姐在下面哪一年的工作有新的突破发展？",
+      "options": {
+        "A": "2014年",
+        "B": "2016年",
+        "C": "2018年",
+        "D": "2021年"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "2021辛丑重现原局伤官并与日支子六合",
+        "丑又与巳、酉补成三合金局，输出和事业突破信号最集中"
+      ],
+      "tags": [
+        "六亲子女",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c4_q01",
+      "case_id": "e13-c4",
+      "profile_text": "命例四 出题： 林狄鸿老师 女 公历 1977-10-26 坤造 丁 巳 庚 戌 丙 辰 甲 午",
+      "question": "命主现在的职业是什么？",
+      "options": {
+        "A": "家庭主妇",
+        "B": "秘书",
+        "C": "自己做生意",
+        "D": "公关行业"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.61,
+      "pre_reveal_decisive_facts": [
+        "丙火日主有根，食伤土旺且庚偏财透月",
+        "食伤生财链更支持自主经营而非纯幕后文职"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c4_q03",
+      "case_id": "e13-c4",
+      "profile_text": "命例四 出题： 林狄鸿老师 女 公历 1977-10-26 坤造 丁 巳 庚 戌 丙 辰 甲 午",
+      "question": "离婚何时？",
+      "options": {
+        "A": "2010",
+        "B": "2013",
+        "C": "2016",
+        "D": "2018"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "2018戊戌直接六冲日支辰配偶宫",
+        "戌又伏吟月支，使关系与现实生活结构同步受动"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c4_q04",
+      "case_id": "e13-c4",
+      "profile_text": "命例四 出题： 林狄鸿老师 女 公历 1977-10-26 坤造 丁 巳 庚 戌 丙 辰 甲 午",
+      "question": "命主在2016年发生何事？",
+      "options": {
+        "A": "堕胎",
+        "B": "得了一笔横财",
+        "C": "移民外国",
+        "D": "升职加薪"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.53,
+      "pre_reveal_decisive_facts": [
+        "2016丙申在甲寅大运形成寅申六冲",
+        "原局巳加入后构成寅巳申三刑，迁移与环境大变信号强"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c4_q05",
+      "case_id": "e13-c4",
+      "profile_text": "命例四 出题： 林狄鸿老师 女 公历 1977-10-26 坤造 丁 巳 庚 戌 丙 辰 甲 午",
+      "question": "命主在2009年发生什么？",
+      "options": {
+        "A": "被打劫",
+        "B": "买产业",
+        "C": "生病住院",
+        "D": "父亲去世"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.47,
+      "pre_reveal_decisive_facts": [
+        "2009己丑与癸丑大运同支，土性资产主题重复",
+        "己土伤官透而丑与时支午相害，更像现实资产落地伴随压力"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c5_q01",
+      "case_id": "e13-c5",
+      "profile_text": "命例五 出题： 杨迪生老师 男 公历 1985-06-29 乾造 乙 丑 壬 午 己 亥 癸 酉",
+      "question": "以下哪一段描述最符合命主个性？",
+      "options": {
+        "A": "谨慎小心，从不冒险",
+        "B": "脾气暴躁，自暴自弃",
+        "C": "先斩后奏，闯祸后就逃避",
+        "D": "苦口婆心，啰啰嗦嗦"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "己土生午月偏强，七杀透年而财星壬癸并透",
+        "杀财驱动强、印星藏支，行动常快于事后消化"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c5_q04",
+      "case_id": "e13-c5",
+      "profile_text": "命例五 出题： 杨迪生老师 男 公历 1985-06-29 乾造 乙 丑 壬 午 己 亥 癸 酉",
+      "question": "前半年的2022发生什么事情？",
+      "options": {
+        "A": "创业并获得巨额融资",
+        "B": "犯下刑事罪被告上法庭",
+        "C": "父亲受伤进医院",
+        "D": "工作上立大功被提拔成管理层"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "2022壬寅以财星生木官杀，官杀约束被显著引动",
+        "寅与日支亥六合又相破，法律与身份压力强于单纯升迁"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c5_q05",
+      "case_id": "e13-c5",
+      "profile_text": "命例五 出题： 杨迪生老师 男 公历 1985-06-29 乾造 乙 丑 壬 午 己 亥 癸 酉",
+      "question": "请命主的学历如何？",
+      "options": {
+        "A": "大学/大专毕业",
+        "B": "中学/高中毕业",
+        "C": "专业技术学校毕业",
+        "D": "小学未读完就辍学"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.37,
+      "pre_reveal_decisive_facts": [
+        "学龄后段进入庚辰伤官运，技能输出强于持续官印教育链",
+        "原局印星仅藏午支，较支持实务技术训练而非高等学术路线"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c6_q03",
+      "case_id": "e13-c6",
+      "profile_text": "命例六 出题： 林炳昌老师 男 公历 1983-11-01 乾造 癸 亥 壬 戌 癸 巳 癸 亥",
+      "question": "命主曾被骗钱，请问在何时？",
+      "options": {
+        "A": "2014年",
+        "B": "2018年",
+        "C": "2019年",
+        "D": "2021年"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.59,
+      "pre_reveal_decisive_facts": [
+        "2019己亥使年、时两亥伏吟自刑",
+        "该年亥又直接六冲日支巳财星与生活核心，财务受损接口最直接"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c7_q02",
+      "case_id": "e13-c7",
+      "profile_text": "命例七 出题： 青术会 大V 女 公历 1984-12-09 坤造 甲 子 丙 子 丁 丑 己 酉",
+      "question": "此命祖上富，因父好赌，何年破产？",
+      "options": {
+        "A": "1995",
+        "B": "1997",
+        "C": "2003",
+        "D": "2007"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "1997丁丑伏吟日柱，丑又与时支酉半合父星财局",
+        "该年双子与丑六合，家庭资源被集中牵动"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c7_q04",
+      "case_id": "e13-c7",
+      "profile_text": "命例七 出题： 青术会 大V 女 公历 1984-12-09 坤造 甲 子 丙 子 丁 丑 己 酉",
+      "question": "此命于2005年拍拖，于何年结婚？",
+      "options": {
+        "A": "2008",
+        "B": "2010",
+        "C": "2012",
+        "D": "2014"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "2008戊子伏吟年、月两支",
+        "子与日支丑六合，配偶宫出现明确绑定信号"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c7_q05",
+      "case_id": "e13-c7",
+      "profile_text": "命例七 出题： 青术会 大V 女 公历 1984-12-09 坤造 甲 子 丙 子 丁 丑 己 酉",
+      "question": "此命的感情生活情况？",
+      "options": {
+        "A": "夫妻恩爱，而且一心一意，夫妻同心照顾孩子",
+        "B": "丈夫外有情人，但家用充足，命主在家照顾孩子，后离婚",
+        "C": "丈夫不给家用更有情人，命主只好打工照顾孩子，后离婚",
+        "D": "丈夫生意失败而离家出走，只好打工帮丈夫还债及照顾孩子"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "双子七杀夹局而丁火偏弱，伴侣压力明显",
+        "时柱食神生偏财但本人承载不足，更符合需自行工作维持家庭的压力型关系"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c8_q03",
+      "case_id": "e13-c8",
+      "profile_text": "命例八 出题： 方法振老师 男 公历 1981-06-17 乾造 辛 酉 甲 午 丙 寅 戊 戌",
+      "question": "命在2014年曾接受手术，手术器官？",
+      "options": {
+        "A": "心脏",
+        "B": "脑部",
+        "C": "双腿",
+        "D": "手肘"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "2014甲午伏吟月柱，午火又自刑",
+        "流年与日支寅、时支戌补成三合火局，火类循环系统最受集中引动"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2022_e13-c8_q04",
+      "case_id": "e13-c8",
+      "profile_text": "命例八 出题： 方法振老师 男 公历 1981-06-17 乾造 辛 酉 甲 午 丙 寅 戊 戌",
+      "question": "命主职业是？",
+      "options": {
+        "A": "保险从业员",
+        "B": "零售业",
+        "C": "文员",
+        "D": "的士司机"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "戊食神透时并有强根，辛酉正财透根",
+        "食神生财的实物交易链更接近零售经营，而非纯文职"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

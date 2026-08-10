@@ -1,0 +1,117 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2013_e04-c1_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c1_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c1_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c1_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c1_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c2_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c2_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c2_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c2_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c2_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c3_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c3_q02": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c3_q03": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c3_q04": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c3_q05": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    },
+    "gfc_2013_e04-c4_q01": {
+      "answer": "",
+      "confidence": null,
+      "alternative": null,
+      "calculation_status": "not_recorded",
+      "decisive_facts": []
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocol": "paired-question-comparison-case-bootstrap-v1",
+  "base_rounds": [
+    "2023-v1-baseline"
+  ],
+  "candidate_rounds": [
+    "2023-v3-final"
+  ],
+  "count": 40,
+  "case_count": 8,
+  "base_accuracy": 0.4,
+  "candidate_accuracy": 0.375,
+  "paired_delta": -0.025,
+  "wins": 7,
+  "losses": 8,
+  "ties": 25,
+  "case_bootstrap_95": [
+    -0.225,
+    0.15
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20260810
+}

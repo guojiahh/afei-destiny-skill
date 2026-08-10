@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -50,10 +51,36 @@ class ChartRegressionTests(unittest.TestCase):
         self.assertIn("interactions_between_luck_and_year", result["target_year"])
         self.assertIn("composite_formations", result["target_year"])
 
+    def test_exact_target_date_resolves_luck_cycle_boundary(self):
+        before = build_chart(
+            calendar="solar", year=1963, month=2, day=6,
+            hour=12, minute=0, gender="male",
+            target_date=datetime(2003, 8, 8, 12, 0),
+        )
+        after = build_chart(
+            calendar="solar", year=1963, month=2, day=6,
+            hour=12, minute=0, gender="male",
+            target_date=datetime(2003, 8, 21, 12, 0),
+        )
+        self.assertEqual("庚戌", before["target_year"]["active_luck_cycle"]["ganzhi"])
+        self.assertEqual("己酉", after["target_year"]["active_luck_cycle"]["ganzhi"])
+        self.assertEqual("exact_date", before["target_year"]["target_scope"])
+
+    def test_whole_transition_year_reports_both_luck_cycles(self):
+        result = build_chart(
+            calendar="solar", year=1963, month=2, day=6,
+            hour=12, minute=0, gender="male", target_year=2003,
+        )
+        candidates = result["target_year"]["active_luck_cycle_candidates"]
+        self.assertEqual(["庚戌", "己酉"], [row["ganzhi"] for row in candidates])
+        self.assertIsNone(result["target_year"]["active_luck_cycle"])
+        self.assertIsNotNone(result["target_year"]["luck_cycle_boundary_warning"])
+
     def test_luck_year_matrix_reports_same_stem_and_branch_clash(self):
         result = build_chart(
             calendar="solar", year=1972, month=11, day=2,
-            hour=10, minute=0, gender="male", target_year=2004,
+            hour=10, minute=0, gender="male",
+            target_date=datetime(2004, 8, 1, 12, 0),
         )
         relations = result["target_year"]["interactions_between_luck_and_year"]
         self.assertIn(

@@ -1,0 +1,166 @@
+{
+  "protocol": "structured-predictions-v2",
+  "predictions": {
+    "gfc_2013_e04-c1_q01": {
+      "answer": "D",
+      "confidence": 0.63,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚日主偏强，原局土印极重而木财只藏于辰，父星与家庭财源均弱。",
+        "月支辰同时冲日、时两戌，父母与成长环境的稳定性不足。"
+      ]
+    },
+    "gfc_2013_e04-c1_q02": {
+      "answer": "B",
+      "confidence": 0.54,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局杀印相生有学习与体系接口，但印土过重、食伤输出很弱。",
+        "大学与博士属于高负担学历断言，命盘不足以越过中学层级的现实基准率。"
+      ]
+    },
+    "gfc_2013_e04-c1_q03": {
+      "answer": "D",
+      "confidence": 0.58,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "辰戌土局是全盘最突出的资源主题，且辰戌冲形成反复交易、变动接口。",
+        "财经专家所需的清晰财星链较弱，汽车行业也没有比地产更直接的结构落点。"
+      ]
+    },
+    "gfc_2013_e04-c1_q04": {
+      "answer": "D",
+      "confidence": 0.66,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命妻星木仅弱藏于辰，日支配偶宫戌被月支辰直接冲动。",
+        "日、时两见戌而辰同时冲及两处，关系结构呈重复破合信号。"
+      ]
+    },
+    "gfc_2013_e04-c1_q05": {
+      "answer": "D",
+      "confidence": 0.61,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "季节加权后土约占全局一半，是最显著的长期五行失衡。",
+        "辰戌反复相冲直接落在燥湿土系统，消化胃部象意强于情绪类选项。"
+      ]
+    },
+    "gfc_2013_e04-c2_q01": {
+      "answer": "A",
+      "confidence": 0.69,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2012进入丙午正官大运，制度、任职与受薪工作的接口明显增强。",
+        "原局金土强而财星木全无，自营生意所需的持续财务链不足。"
+      ]
+    },
+    "gfc_2013_e04-c2_q02": {
+      "answer": "A",
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命夫星火仅藏于两戌而不透，配偶星的落地性偏弱。",
+        "日支丑又受戌刑结构牵制，美满婚育的复合断言缺少稳定宫星同向支持。"
+      ]
+    },
+    "gfc_2013_e04-c2_q03": {
+      "answer": "B",
+      "confidence": 0.6,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "戌丑土印多而壬子食伤有输出，支持持续到较高的中学阶段。",
+        "印比过旺且官星不透，对大学以上学历的区分性支持不足。"
+      ]
+    },
+    "gfc_2013_e04-c2_q04": {
+      "answer": "A",
+      "confidence": 0.57,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2011辛卯的卯为直接财星，丁未运又与卯形成木势，强辛金有承财条件。",
+        "卯同时合原局两戌，财务与地产类资源被集中引动，但政府分配这一细节没有唯一接口。"
+      ]
+    },
+    "gfc_2013_e04-c2_q05": {
+      "answer": "A",
+      "confidence": 0.64,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1999己卯同时带来印星文书与财星现实回报，卯又合月、时两戌而引出官职接口。",
+        "戊申大运没有直接冲坏日支或形成官非链，开除、盗窃官非的极端负担较高。"
+      ]
+    },
+    "gfc_2013_e04-c3_q01": {
+      "answer": "B",
+      "confidence": 0.72,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2012处丁酉运，巳酉丑三合金局强化官杀，受薪与组织约束明显。",
+        "原局财星仅藏、乙木承财有限，百万以上年薪缺少独立财富链支持。"
+      ]
+    },
+    "gfc_2013_e04-c3_q02": {
+      "answer": "B",
+      "confidence": 0.65,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2001辛巳与日支巳同支，直接重复引动配偶宫。",
+        "当时戊戌财星大运提供长期关系背景，流年又把原局亥巳冲显化为关系结构变化。"
+      ]
+    },
+    "gfc_2013_e04-c3_q03": {
+      "answer": "A",
+      "confidence": 0.63,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "学龄期先行庚子官印运，原局亥子丑又成水方，官印学习链持续而明显。",
+        "义工习惯属于命盘难以识别的附加细节，不能凭中等成绩方向补足。"
+      ]
+    },
+    "gfc_2013_e04-c3_q04": {
+      "answer": "C",
+      "confidence": 0.6,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局亥直接冲日支巳火，且亥子丑成水方，火类视觉接口受制很重。",
+        "13岁前庚子运进一步加强金水压力，身体火位比腿部或姐妹接口更直接。"
+      ]
+    },
+    "gfc_2013_e04-c3_q05": {
+      "answer": "D",
+      "confidence": 0.68,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "亥子丑水方使印星偏重，唯一透出的丙伤官又被两辛合绊，表达输出受束。",
+        "财星仅藏而比劫不旺，节制资源比无节制挥霍更符合原局。"
+      ]
+    },
+    "gfc_2013_e04-c4_q01": {
+      "answer": "A",
+      "confidence": 0.9,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丑时盘为庚戌、甲申、丙寅、己丑，2009己丑与时柱完整伏吟，直接对应工作反复节点。",
+        "1972子合丑且未运冲丑，2002午害丑、2003未冲丑，连续命中幼病、生育及迁居停工时段。",
+        "1997丑年重复时支，2008子合丑、2012辰破丑，使已知婚姻与职业时间线得到多段独立复核。"
+      ]
+    }
+  }
+}

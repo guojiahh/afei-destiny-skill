@@ -1,0 +1,756 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2025_e16-c1_q04",
+      "case_id": "e16-c1",
+      "profile_text": "命例一 出题： 方荣老师 流派： 八字 女 公历 1951-11-14 广东 坤造 辛 卯 己 亥 戊 午 丁 巳",
+      "question": "1980年发生何事？",
+      "options": {
+        "A": "结婚",
+        "B": "交通意外",
+        "C": "被人打劫受伤",
+        "D": "得到意外偏财"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "1980庚申处壬寅运，岁运寅申六冲",
+        "原局巳加入后形成寅巳申三刑，属于明显身体或移动风险窗口"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c2_q04",
+      "case_id": "e16-c2",
+      "profile_text": "命例二 出题： 丘智伟老师 流派： 八字 女 公历 1987-07-05 中国香港 坤造 丁 卯 丙 午 乙 卯 壬 午",
+      "question": "命主现时的婚姻状况如何？",
+      "options": {
+        "A": "婚姻美满，夫妻二人相敬如宾",
+        "B": "已婚，但常被配偶言语伤害、责备",
+        "C": "离婚后再婚，现时感情稳定",
+        "D": "同性恋者，得到伴侣爱护"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "庚戌运正官出现并与乙日主相合，支持关系绑定",
+        "原局伤官旺、双午自刑且卯午多破，关系互动压力高于完全和顺"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c3_q01",
+      "case_id": "e16-c3",
+      "profile_text": "命例三 出题： 安公子老师 流派： 八字 男 公历 1983-04-21 日本宫崎县（命例） 乾造 癸 亥 丙 辰 己 卯 丁 卯",
+      "question": "命主出身及家庭情况。",
+      "options": {
+        "A": "出生后次年，母亲去世。父亲为小型企业主，另娶后，又生一弟一妹。",
+        "B": "父亲为政府高级职员，2021年去世。命主有一兄一姐。",
+        "C": "母亲为家庭主妇，父亲为小型企业主。命主有一弟。",
+        "D": "1986年父亲去世，母亲继承父亲产业，守寡至今。命主有一姐一弟。"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.38,
+      "pre_reveal_decisive_facts": [
+        "父星水与母星火均在原局明透，没有一方早亡的确定性结构证据",
+        "其余选项附带精确死亡年份、再婚或高级官职，细节负担更高"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c3_q02",
+      "case_id": "e16-c3",
+      "profile_text": "命例三 出题： 安公子老师 流派： 八字 男 公历 1983-04-21 日本宫崎县（命例） 乾造 癸 亥 丙 辰 己 卯 丁 卯",
+      "question": "命主的样貌、性情、爱好及职业。",
+      "options": {
+        "A": "腿脚残疾脾气古怪，喜好文艺爵士和古典音乐，现为萨克斯手和乐团老板。",
+        "B": "身材高大魁梧，性情固执，喜好音乐，现为酒吧老板。",
+        "C": "中等身材，勤奋、叛逆，喜好拳击、橄榄球等运动，现为餐厅老板。",
+        "D": "早产，自幼身体不好，喜好园艺，现为小型地产经纪公司老板。"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.35,
+      "pre_reveal_decisive_facts": [
+        "双卯七杀有丙丁印星化泄，较支持勤奋、纪律和竞争活动",
+        "原局金食伤缺位，专业乐手的直接输出接口偏弱"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c3_q03",
+      "case_id": "e16-c3",
+      "profile_text": "命例三 出题： 安公子老师 流派： 八字 男 公历 1983-04-21 日本宫崎县（命例） 乾造 癸 亥 丙 辰 己 卯 丁 卯",
+      "question": "命主的学历和职业状况。",
+      "options": {
+        "A": "重点大学医学类专业，毕业后转行，2013年从事现在工作。",
+        "B": "重点大学文科毕业，2011年进入现工作，2019年曾经因事判监半年。",
+        "C": "高中毕业，边打工边学习，2014年得贵人提携，进入现在工作。",
+        "D": "重点大学文科专业，中途退学，2021年进入现在工作。"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.37,
+      "pre_reveal_decisive_facts": [
+        "月干丙正印、时干丁偏印承接旺官杀，官印学习链完整",
+        "判监、退学和仅高中毕业均需要额外中断证据"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c3_q04",
+      "case_id": "e16-c3",
+      "profile_text": "命例三 出题： 安公子老师 流派： 八字 男 公历 1983-04-21 日本宫崎县（命例） 乾造 癸 亥 丙 辰 己 卯 丁 卯",
+      "question": "命主的婚恋和子女情况。",
+      "options": {
+        "A": "婚恋不顺，经人介绍，2011年结婚，2014年生育一女。",
+        "B": "2011年与中学同学奉子成婚，关系平淡，2012年初生一子，2015年生第二子。",
+        "C": "多次恋爱，至今未婚，无子女。",
+        "D": "2018年离婚后，一直独身，无子女。"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "2011辛卯伏吟日支与时支，直接引动关系和家庭生活接口",
+        "2012壬辰财星透出并引动月柱，较符合婚后紧接生育节点"
+      ],
+      "tags": [
+        "婚姻感情",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c3_q05",
+      "case_id": "e16-c3",
+      "profile_text": "命例三 出题： 安公子老师 流派： 八字 男 公历 1983-04-21 日本宫崎县（命例） 乾造 癸 亥 丙 辰 己 卯 丁 卯",
+      "question": "2022年，命主发生的重要事件。",
+      "options": {
+        "A": "母亲去世。",
+        "B": "外出旅行时，遭遇车祸受伤。",
+        "C": "染患新冠，引发其他病症，住院治疗四个多月。",
+        "D": "事业受阻，欠下债务，卖掉房产填补漏洞。"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.36,
+      "pre_reveal_decisive_facts": [
+        "2022壬寅处壬子运，岁运同干，财官压力同步放大",
+        "寅补齐原局卯辰三会木方，七杀对命主形成强复合触发"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c4_q01",
+      "case_id": "e16-c4",
+      "profile_text": "命例四 出题： 王哲佳（Julia）老师（2023年冠军） 流派： 紫微斗数 男 公历 1993-04-08 新加坡（命例） 乾造 癸 酉 丙 辰 己 未 丙 子",
+      "question": "命主儿时家庭情况？",
+      "options": {
+        "A": "父亲出轨，母亲照顾生活",
+        "B": "父母外出工作，外婆抚养",
+        "C": "父亲工作聚少离多，母亲患病",
+        "D": "父母离异，跟随母亲改嫁外国"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.3,
+      "pre_reveal_decisive_facts": [
+        "题目明确采用紫微斗数，本技能没有对应宫位与大限模块",
+        "所选项不附带出轨、疾病或跨国改嫁等高负担子句"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c4_q02",
+      "case_id": "e16-c4",
+      "profile_text": "命例四 出题： 王哲佳（Julia）老师（2023年冠军） 流派： 紫微斗数 男 公历 1993-04-08 新加坡（命例） 乾造 癸 酉 丙 辰 己 未 丙 子",
+      "question": "命主2001年发生何事？",
+      "options": {
+        "A": "遇校园霸凌，申请休学",
+        "B": "参与小语种演讲比赛获奖",
+        "C": "受伤后发现遗传病，用药治疗",
+        "D": "交通意外，人平安"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.27,
+      "pre_reveal_decisive_facts": [
+        "题目明确采用紫微斗数，不能以八字流年冒充计算",
+        "其余选项均加入休学、遗传病或交通意外等严重结果"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c4_q03",
+      "case_id": "e16-c4",
+      "profile_text": "命例四 出题： 王哲佳（Julia）老师（2023年冠军） 流派： 紫微斗数 男 公历 1993-04-08 新加坡（命例） 乾造 癸 酉 丙 辰 己 未 丙 子",
+      "question": "命主2022年后的职业行业情况？",
+      "options": {
+        "A": "牧师",
+        "B": "入殓师",
+        "C": "航运物流管理",
+        "D": "传媒业网红"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.32,
+      "pre_reveal_decisive_facts": [
+        "题目明确采用紫微斗数且未给对应命盘",
+        "航运物流管理在给定地域与管理职业选项中附加假设最少"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c4_q05",
+      "case_id": "e16-c4",
+      "profile_text": "命例四 出题： 王哲佳（Julia）老师（2023年冠军） 流派： 紫微斗数 男 公历 1993-04-08 新加坡（命例） 乾造 癸 酉 丙 辰 己 未 丙 子",
+      "question": "命主抑郁症状最严重的年份？",
+      "options": {
+        "A": "2002",
+        "B": "2016",
+        "C": "2018",
+        "D": "2024"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.28,
+      "pre_reveal_decisive_facts": [
+        "题目明确采用紫微斗数，四个年份无法由本技能的大限模块核验",
+        "2018与2024均处成年阶段，较儿时年份更符合重度症状的现实语境"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c5_q02",
+      "case_id": "e16-c5",
+      "profile_text": "命例五 出题： 吴子震老师 流派： 盲派八字 男 公历 1988-01-10 马来西亚 乾造 丁 卯 癸 丑 甲 子 戊 辰",
+      "question": "命主在2004时发生了什么事?",
+      "options": {
+        "A": "读书时期，被人举报与女生有亲密行为，被赶出学校。",
+        "B": "上学时发生车祸，伤了手脚。",
+        "C": "参加了学校制服团体举办行走比赛，队拿到第一名。",
+        "D": "离校，去摩多车店做学徒。"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "2004甲申处辛亥运，申子辰三合水局并兼成水方",
+        "印星环境被强烈引动，仍在学校体系内的集体活动比离校或被逐更相容"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c5_q03",
+      "case_id": "e16-c5",
+      "profile_text": "命例五 出题： 吴子震老师 流派： 盲派八字 男 公历 1988-01-10 马来西亚 乾造 丁 卯 癸 丑 甲 子 戊 辰",
+      "question": "命主在那一年结婚？",
+      "options": {
+        "A": "2021",
+        "B": "2017",
+        "C": "2022",
+        "D": "2016"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "2021辛丑处己酉财官运，丑为财星有根",
+        "流年丑与日支子六合，配偶星与配偶宫同时出现落地信号"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c6_q02",
+      "case_id": "e16-c6",
+      "profile_text": "命例六 出题： 梁家豪（猫哥） 流派： 紫微斗数 男 公历 1973-08-24 马来西亚 乾造 癸 丑 庚 申 壬 辰 庚 子",
+      "question": "命主喜欢的居家装修风格是？",
+      "options": {
+        "A": "炫酷风格，充满高科技设备",
+        "B": "欧式风格，高贵典雅，喜欢收藏古灵精怪摆设品",
+        "C": "中式风格，复古，喜欢古董和摆设风水物品",
+        "D": "环保极简风格，不喜太多摆设"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.29,
+      "pre_reveal_decisive_facts": [
+        "装修偏好属于低可识别现实细节，且题目体系无对应模块",
+        "四个选项没有可由题面唯一推出的事实"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c6_q03",
+      "case_id": "e16-c6",
+      "profile_text": "命例六 出题： 梁家豪（猫哥） 流派： 紫微斗数 男 公历 1973-08-24 马来西亚 乾造 癸 丑 庚 申 壬 辰 庚 子",
+      "question": "在丙辰大限(43-52)，命主在哪一年出国创业？和什么领域相关？",
+      "options": {
+        "A": "2015，关于饮食领域",
+        "B": "2017，关于儿童培训领域",
+        "C": "2018，关于房地产领域",
+        "D": "2019，关于酒店住宿领域"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.31,
+      "pre_reveal_decisive_facts": [
+        "题目指定丙辰大限，不能用八字大运替代紫微计算",
+        "2019创业与随后疫情期经营压力在时间顺序上保持一致"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c6_q04",
+      "case_id": "e16-c6",
+      "profile_text": "命例六 出题： 梁家豪（猫哥） 流派： 紫微斗数 男 公历 1973-08-24 马来西亚 乾造 癸 丑 庚 申 壬 辰 庚 子",
+      "question": "命主在 2021 年，发生何事？",
+      "options": {
+        "A": "疫情过后生意不佳，不够资金周转，生意倒闭",
+        "B": "回家途中遇到歹徒，不幸被刺伤",
+        "C": "母亲不幸染病疫去世",
+        "D": "疫情过后生意情况峰回路转，蒸蒸日上"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.38,
+      "pre_reveal_decisive_facts": [
+        "题面已建立出国创业的前置语境，2021处疫情经营冲击期",
+        "生意资金压力比遇刺、母亡或逆势大幅增长所需附加假设更少"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c6_q05",
+      "case_id": "e16-c6",
+      "profile_text": "命例六 出题： 梁家豪（猫哥） 流派： 紫微斗数 男 公历 1973-08-24 马来西亚 乾造 癸 丑 庚 申 壬 辰 庚 子",
+      "question": "命主在 2024 年的健康状况如何？",
+      "options": {
+        "A": "健康无碍，只是饮食没控制，过于肥胖",
+        "B": "由于长时间久坐，导致脊椎骨侧弯",
+        "C": "经常无节制吸烟，引发鼻癌",
+        "D": "不幸被车撞倒，左脚骨折"
+      },
+      "prediction": "A",
+      "answer": "C",
+      "pre_reveal_confidence": 0.3,
+      "pre_reveal_decisive_facts": [
+        "题目体系无对应健康宫限模块",
+        "鼻癌与车祸骨折属于高严重度选项，缺少题干支持"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c7_q01",
+      "case_id": "e16-c7",
+      "profile_text": "命例七 出题： 沈建军老师 流派： 紫微斗数 女 公历 1988-02-15 中国台湾 坤造 戊 辰 甲 寅 庚 子 甲 申",
+      "question": "命主原生家庭父母亲状况？",
+      "options": {
+        "A": "婚姻美满、家庭和谐",
+        "B": "婚姻健在、吵闹不休",
+        "C": "离异，跟随父亲",
+        "D": "离异，跟随母亲"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.27,
+      "pre_reveal_decisive_facts": [
+        "题目明确采用紫微斗数且未提供对应星曜宫位",
+        "跟随父亲或母亲的归属无法由八字四柱可靠区分"
+      ],
+      "tags": [
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c7_q04",
+      "case_id": "e16-c7",
+      "profile_text": "命例七 出题： 沈建军老师 流派： 紫微斗数 女 公历 1988-02-15 中国台湾 坤造 戊 辰 甲 寅 庚 子 甲 申",
+      "question": "命主现职行业？",
+      "options": {
+        "A": "身心灵导师",
+        "B": "行政会计",
+        "C": "美术设计",
+        "D": "健身教练"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.31,
+      "pre_reveal_decisive_facts": [
+        "具体职业无法由本技能替代紫微体系核算",
+        "美术设计与所选大学方向构成最少额外转行假设的联合候选"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c7_q05",
+      "case_id": "e16-c7",
+      "profile_text": "命例七 出题： 沈建军老师 流派： 紫微斗数 女 公历 1988-02-15 中国台湾 坤造 戊 辰 甲 寅 庚 子 甲 申",
+      "question": "对命主之描述？",
+      "options": {
+        "A": "身材娇小",
+        "B": "身材健壮",
+        "C": "身材矮胖",
+        "D": "身材瘦长"
+      },
+      "prediction": "D",
+      "answer": "B",
+      "pre_reveal_confidence": 0.28,
+      "pre_reveal_decisive_facts": [
+        "体型属于低可识别细节，题面无身高体重事实",
+        "本技能没有题目所需的紫微身宫与形貌模块"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c8_q02",
+      "case_id": "e16-c8",
+      "profile_text": "命例八 出题： 张粲梁老师 流派： 八字 男 公历 1970-07-22 北京 乾造 庚 戌 癸 未 癸 卯 庚 申",
+      "question": "命主出社会后的工作？",
+      "options": {
+        "A": "进入工厂，转入国企",
+        "C": "进入企业，担任大企业高管",
+        "D": "做小生意，变成企业家"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "官杀藏于戌未而庚印双透有根，形成组织管理与制度承载链",
+        "财星仅藏，独立小生意扩张为企业家的直接证据较弱"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2025_e16-c8_q03",
+      "case_id": "e16-c8",
+      "profile_text": "命例八 出题： 张粲梁老师 流派： 八字 男 公历 1970-07-22 北京 乾造 庚 戌 癸 未 癸 卯 庚 申",
+      "question": "命主早年一直在北京生活，直到哪个岁运有搬迁大变动，从北京去厦门工作？",
+      "options": {
+        "A": "27-31岁",
+        "B": "32-36岁",
+        "C": "37-41岁",
+        "D": "42-46岁"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "37岁起进入丁亥运，运支亥与原局卯未补齐三合木局",
+        "2007丁亥岁运伏吟并直接引动日支，是四个年龄段中最集中的迁移与事业变化窗口"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "protocol": "locked-predictions-then-reveal-v2",
+  "split": "development",
+  "count": 35,
+  "correct": 16,
+  "accuracy": 0.4571,
+  "accuracy_wilson_95": [
+    0.3047,
+    0.6181
+  ],
+  "case_count": 7,
+  "case_macro_accuracy": 0.4571,
+  "random_choice_expected_accuracy": 0.25,
+  "confidence_count": 35,
+  "top_label_brier": 0.2301,
+  "answer_distribution": {
+    "A": 14,
+    "B": 8,
+    "C": 7,
+    "D": 6
+  },
+  "per_tag": {
+    "事业财富": {
+      "count": 7,
+      "correct": 2,
+      "accuracy": 0.2857
+    },
+    "健康灾厄": {
+      "count": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "六亲子女": {
+      "count": 5,
+      "correct": 3,
+      "accuracy": 0.6
+    },
+    "其他": {
+      "count": 7,
+      "correct": 2,
+      "accuracy": 0.2857
+    },
+    "婚姻感情": {
+      "count": 8,
+      "correct": 4,
+      "accuracy": 0.5
+    },
+    "年份事件": {
+      "count": 14,
+      "correct": 6,
+      "accuracy": 0.4286
+    },
+    "性格外貌学业": {
+      "count": 6,
+      "correct": 4,
+      "accuracy": 0.6667
+    }
+  },
+  "details": [
+    {
+      "id": "gfc_2017_e08-c1_q01",
+      "case_id": "e08-c1",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.44,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1961辛丑流年伏吟年柱，并以丑直接冲日支未",
+        "原局父财乙木仅藏于未，处酉月金旺且受丑未冲"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q02",
+      "case_id": "e08-c1",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局正偏印有根且七杀透月，学习与纪律接口并不弱",
+        "丙申运官星到位，但申酉戌金势加重，原局财星仍极弱"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q03",
+      "case_id": "e08-c1",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.7,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1994甲戌与甲午大运同干，戌又伏吟子女宫",
+        "1997丁丑直接冲配偶宫未，并重启原局丑戌未三刑"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q04",
+      "case_id": "e08-c1",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.44,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "月干七杀透出，原局印旺，纪律型经历的结构接口较强",
+        "中年连续行癸巳、壬辰食伤运，公开表达功能较早年明显增强"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q05",
+      "case_id": "e08-c1",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.72,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "辛金生酉月，比印成势且丑戌未三刑，性情较有边界和固执",
+        "财星木只余藏干，食伤水亦弱，资源流通与积蓄链条不足"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q01",
+      "case_id": "e08-c2",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.57,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "壬正财透月并得申子水根，早年资源条件不弱",
+        "月支午与时支子正冲，家庭关系与生活结构存在明显分离接口"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q02",
+      "case_id": "e08-c2",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.6,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2008戊子把男命财星落在有根之子，并伏吟时支",
+        "该年子冲月令午，财星与家庭生活结构同时被直接引动"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q03",
+      "case_id": "e08-c2",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局印旺、伤官透且财星有根，兼具学习承载和输出变现链",
+        "青年甲申运官星进入，申又加强伤官财源，制度教育与自主经营均有接口"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q04",
+      "case_id": "e08-c2",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.74,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1992壬申伏吟年支并与日支巳合破，健康主题有反复性触发",
+        "1995乙亥直接冲日支巳，较符合腹部突发炎症与手术窗口"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q05",
+      "case_id": "e08-c2",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "己土得午巳印比而能承财，壬癸财星又得申子之根",
+        "伤官生财链完整，较支持自有经营所得而非长期依赖或纯负债"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q01",
+      "case_id": "e08-c3",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.64,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "两庚食神透干且坐申有根，表达、销售与社交输出明显",
+        "月柱劫财当令，早年资源承载弱于食神生财能力"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q02",
+      "case_id": "e08-c3",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.45,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1996丙子伏吟年支并冲日支午，工作与生活状态形成明显转换",
+        "次年转入乙酉运，乙官透而酉强化输出，较支持销售岗位后的职级落地"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q03",
+      "case_id": "e08-c3",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.57,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局食神、劫财和财星明显，印星只藏午中且教育承载偏弱",
+        "女命官星木全局不现，正式婚姻接口弱于非登记伴侣关系"
+      ],
+      "tags": [
+        "婚姻感情",
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q04",
+      "case_id": "e08-c3",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.51,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2002壬午把父财壬水直接透出，同时午冲年支子这一早年父母宫",
+        "该年午又伏吟日支并自刑，家庭核心变化强于其余候选年的单点引动"
+      ],
+      "tags": [
+        "六亲子女",
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q05",
+      "case_id": "e08-c3",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.49,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2006丙戌处乙酉运，原局申与岁运酉戌补齐三会金方",
+        "强食神输出接通原局水财，更贴近经营合作重组而非长期失业"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q01",
+      "case_id": "e08-c4",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚辛财星透年时，双申当令，早年财星与家族资源极显",
+        "甲印透月且年月没有足以独断父母早亡的复合受损信号"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q02",
+      "case_id": "e08-c4",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "青年乙酉运印星透出，能扶原局偏弱丁火并维持学习链",
+        "1999进入丙戌运，丙火与戌根继续扶身，未见明确教育中断接口"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q03",
+      "case_id": "e08-c4",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.47,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2016丙申把男命财星落实在申，且申与配偶宫巳六合",
+        "该年申同时伏吟年月双支，关系角色与家庭身份被重复引动"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q04",
+      "case_id": "e08-c4",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2006丙戌与丙戌大运伏吟，火土扶助偏弱丁火的力度最集中",
+        "原局双申及庚辛财势极旺，岁运扶身后具备承接大额财务结果的条件"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q05",
+      "case_id": "e08-c4",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.62,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2007丁亥直接冲配偶宫巳，并同时害年月双申",
+        "2008戊子使双申半合水且引出七杀压力，连续两年由财务变化转入强约束风险"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q01",
+      "case_id": "e08-c5",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.44,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "乙木生丑月而根弱，原局财官食伤显、印星只藏，持续学历承载不足",
+        "年柱偏财虽显但与月支丑未冲，不足以稳定支持大富出身"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q02",
+      "case_id": "e08-c5",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.42,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "月干食神透出，乙木在寒土环境中较偏温和而非持续强势外放",
+        "时干甲劫财代表同辈而被年干己合，且坐申受官杀环境约束"
+      ],
+      "tags": [
+        "六亲子女",
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q03",
+      "case_id": "e08-c5",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.66,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1998戊寅直接冲时支申并害日支巳",
+        "寅同时补齐原局寅巳申三刑，形成候选年中最完整的持续健康触发"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q04",
+      "case_id": "e08-c5",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.54,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2006丙戌以伤官输出引动经营功能，且戌冲大运辰",
+        "戌又补齐原局丑未的三刑，较其余候选年更像事业结构重启"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q05",
+      "case_id": "e08-c5",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2010庚寅把女命正官直接透出，具备婚姻角色落地信号",
+        "寅中又藏伤官并冲子女宫申，同时形成寅巳申三刑，婚育两条接口同年被引动"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q01",
+      "case_id": "e08-c6",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.61,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丁火得巳月、卯印和丙午比劫，日主及自主竞争性明显偏强",
+        "印星虽有根但全局火比过旺，学业输出与制度链不够完整"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q02",
+      "case_id": "e08-c6",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.52,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "巳月丁火再见丙午，火势占局近七成，寒热失衡明显",
+        "调节火势的金水均弱，较支持反复小病而非长期几乎无病"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q03",
+      "case_id": "e08-c6",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.6,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命父财金仅藏巳中庚金，受全局旺火包围而根气不足",
+        "年柱劫财坐辰，早年家族资源链弱且父星承压"
+      ],
+      "tags": [
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q04",
+      "case_id": "e08-c6",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.56,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "癸七杀透月并有辰中根气，旺身能够承接纪律与压力型岗位",
+        "1999处乙未印运，日支卯伏吟且卯未半合，资质与组织归属接口稳定"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q05",
+      "case_id": "e08-c6",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2003进入丙申运，申中庚财使男命配偶星首次在成家年龄获得有根背景",
+        "2008子年与申运、原局辰成水局，同时子刑配偶宫卯并冲子女宫午"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q01",
+      "case_id": "e08-c7",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.57,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲木得寅根与双子印，能够承接月干己财和年干庚杀",
+        "戊子运偏财进入，子又与月支丑合，父亲资源与事业接口偏向加强"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q02",
+      "case_id": "e08-c7",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局财官明透且甲木有根有印，能够承接配偶的经营与资源结果",
+        "1976转丙戌运，食神生财并由寅戌拱火，经营输出链较完整"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q03",
+      "case_id": "e08-c7",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.43,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局财官有承载，未见支持离婚或配偶死亡的独立复合结构",
+        "2017虽处午冲双子的大运背景，但丁壬合缓解伤官对庚杀的直接冲击"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q04",
+      "case_id": "e08-c7",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.5,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "迟子时盘为乙丑日，乙木偏弱而月日双丑偏财过重，资源承载弱于前一命",
+        "戊子运财势再增并合住月日双丑，更像父亲工作资源受牵制而非顺畅上升"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q05",
+      "case_id": "e08-c7",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "迟子时盘乙木偏弱、财官压力偏重，时干丙伤官又与年干庚官形成冲突链",
+        "1975乙卯虽扶身成婚，但经营所需的财务承载仍弱于前一甲子日命"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    }
+  ]
+}

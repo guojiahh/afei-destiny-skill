@@ -1,0 +1,747 @@
+{
+  "protocol": "locked-predictions-then-reveal-v2",
+  "split": "regression",
+  "count": 40,
+  "correct": 14,
+  "accuracy": 0.35,
+  "accuracy_wilson_95": [
+    0.2213,
+    0.5049
+  ],
+  "case_count": 8,
+  "case_macro_accuracy": 0.35,
+  "random_choice_expected_accuracy": 0.25,
+  "confidence_count": 40,
+  "top_label_brier": 0.2502,
+  "answer_distribution": {
+    "A": 9,
+    "B": 8,
+    "C": 16,
+    "D": 7
+  },
+  "per_tag": {
+    "事业财富": {
+      "count": 9,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "健康灾厄": {
+      "count": 3,
+      "correct": 2,
+      "accuracy": 0.6667
+    },
+    "六亲子女": {
+      "count": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "其他": {
+      "count": 5,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "婚姻感情": {
+      "count": 10,
+      "correct": 3,
+      "accuracy": 0.3
+    },
+    "年份事件": {
+      "count": 10,
+      "correct": 5,
+      "accuracy": 0.5
+    },
+    "性格外貌学业": {
+      "count": 7,
+      "correct": 4,
+      "accuracy": 0.5714
+    }
+  },
+  "details": [
+    {
+      "id": "gfc_2019_e10-c1_q01",
+      "case_id": "e10-c1",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.62,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1991辛未同时冲原局两丑，且庚子大运持续冲日支午",
+        "原局火有午根而土金偏重，较支持结实体态而非极端高瘦"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c1_q02",
+      "case_id": "e10-c1",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.72,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "伤官生财链明显，较贴近贸易与销售功能",
+        "原局木印不现，研究生层级缺少独立支持"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c1_q03",
+      "case_id": "e10-c1",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.48,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2009己丑与时柱己丑伏吟，并重复引动原局两丑",
+        "戊戌大运与原局午半合，流年再以丑害午，身体接口压力集中"
+      ],
+      "tags": [
+        "年份事件",
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c1_q04",
+      "case_id": "e10-c1",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.64,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "男命财星两透而配偶宫受两丑相害，关系机会与稳定度并不一致",
+        "极端数量与既婚仅交往一次均缺少足够结构支持"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c1_q05",
+      "case_id": "e10-c1",
+      "prediction": "D",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.59,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "日主略弱而财星多且伤官泄身，财务承载与留存偏弱",
+        "2019在丁酉运，劫财临财支，资产积累不占优势"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q01",
+      "case_id": "e10-c2",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.67,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚金坐申、时逢酉，根气足而官财并透",
+        "结构更支持机敏、现实判断和应变，而非无制的暴烈极端"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q02",
+      "case_id": "e10-c2",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.66,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2015乙未妻星乙透，并与原局月支未伏吟",
+        "当年仍在甲辰财星大运，星与运的关系落地条件强于其他候选"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q03",
+      "case_id": "e10-c2",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.42,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2003癸未处乙巳财运，原局卯未与流年未共同加强财星网络",
+        "癸伤官透出，较偏非标准路径的技能与获利事件"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q04",
+      "case_id": "e10-c2",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.49,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "官财并透且日主有申酉强根，较能承担教学、经纪与经营的混合路径",
+        "纯维修体力链与原局主要功能不合"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q05",
+      "case_id": "e10-c2",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.57,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2018戊戌为印星岁，并跨入癸卯食伤财运",
+        "新运接通输出与财星，较支持创业资源启动而非极端灾损或政治身份"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q01",
+      "case_id": "e10-c3",
+      "prediction": "A",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.63,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲印透年，旺官杀可沿水生木形成官印学习链",
+        "选项中的调皮懒惰缺少食伤失控证据"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q02",
+      "case_id": "e10-c3",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命官杀成局，日支申亦含壬并参与申子辰水局",
+        "时柱辰为子女宫且藏食神，较无儿女选项多一层承载接口"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q03",
+      "case_id": "e10-c3",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.69,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "申子辰三合水局且生于子月，寒湿水势极重",
+        "土仅辰中弱藏，消化代谢类象的失衡最直接"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q04",
+      "case_id": "e10-c3",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.46,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局官杀成局并有甲印承接，较偏制度组织与管理路径",
+        "2012至2021癸酉运进一步引动官财，支持职位与资产提升而非完全失业"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q05",
+      "case_id": "e10-c3",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.39,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "官印链对国有组织经历支持最强，申金与辰土也可对应机械技术环境",
+        "合伙创业是四项中附加假设最多、直接经营链最弱的一项"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q01",
+      "case_id": "e10-c4",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.52,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "甲午、乙未运形成食伤生财背景，较支持家运上升",
+        "年柱印比不直接支持大富出身，采用小康基准更稳健"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q02",
+      "case_id": "e10-c4",
+      "prediction": "A",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.61,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1998戊寅处丙申财运，财透且官星落年",
+        "寅冲大运申并合原局亥，支持主动创业与明显事业转折"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q03",
+      "case_id": "e10-c4",
+      "prediction": "D",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.57,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丙申与丁酉两运均透财，身有比印可承财，较支持大机会而非长期多劳少得",
+        "丁酉补成巳酉丑金局，印比过旺使其财运承载弱于丙申"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q04",
+      "case_id": "e10-c4",
+      "prediction": "D",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.51,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "连续丙申、丁酉财运后于2014转入戊戌官运，形成财后接职位身份的链条",
+        "基层或中层受薪选项低估了连续财运的经营落点"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q05",
+      "case_id": "e10-c4",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.43,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "夫星土藏于两丑且配偶宫伏吟，正式婚姻落地信号不强",
+        "官星暗藏而非显透，较符合桃花有限与非典型伴侣关系"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q01",
+      "case_id": "e10-c5",
+      "prediction": "A",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.55,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "学龄期丁未运可扶日主并得寅木印星，支持完成基础中等教育",
+        "原局印不透且寅申反复冲，不足以稳推大学层级"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q02",
+      "case_id": "e10-c5",
+      "prediction": "C",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.54,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "日支申被年时两寅反复冲动，关系生活结构先天不稳",
+        "2018后壬寅运再冲配偶宫，较支持离合反复而非稳定现婚"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q03",
+      "case_id": "e10-c5",
+      "prediction": "B",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.71,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "题面无可确认的父亡、巨债或豪门事实",
+        "年柱与父母宫虽有冲动，但不足以支持出生前父亡等极端细节"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q04",
+      "case_id": "e10-c5",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.63,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "戊食神生庚偏财且申财有双根，经营交换链明显",
+        "上市公司老板属于高负担身份，缺少独立官印与规模证据"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q05",
+      "case_id": "e10-c5",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.51,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "1989己巳与乙巳大运岁运同支，并同时合动月、日两申",
+        "配偶宫被重复绑定的落地强度高于仅有夫星出现的候选年"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c6_q01",
+      "case_id": "e10-c6",
+      "prediction": "B",
+      "answer": "D",
+      "correct": false,
+      "confidence": 0.46,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "火土食伤气势明显而财官极弱，较贴近实体零售与后续转业",
+        "纪律体系升迁与千万元电子生意均缺少足够官财承载"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c6_q02",
+      "case_id": "e10-c6",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.44,
+      "alternative": "D",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命夫星水仅辰中暗藏，关系稳定落地先天偏弱",
+        "强比劫与官星不显更支持婚后分离及非持续陪伴关系"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c6_q03",
+      "case_id": "e10-c6",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.7,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "原局火土占势且水极弱，燥热与消化代谢接口最突出",
+        "命危与已治愈均属于缺少多重证据的严重或终局细节"
+      ],
+      "tags": [
+        "健康灾厄"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c6_q04",
+      "case_id": "e10-c6",
+      "prediction": "D",
+      "answer": "D",
+      "correct": true,
+      "confidence": 0.66,
+      "alternative": "B",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "年日伏吟且三丁并见，不支持独生子女的唯一性",
+        "甲印虽透但官星极弱，大学层级证据不足，普通家庭中学基准更稳健"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c6_q05",
+      "case_id": "e10-c6",
+      "prediction": "A",
+      "answer": "A",
+      "correct": true,
+      "confidence": 0.58,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "2009己丑正值戊申换运，工作输出与财务主题同时转换",
+        "丑冲时支未并破月支辰，能同时落到健康、生活与工作变化接口"
+      ],
+      "tags": [
+        "年份事件"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c7_q01",
+      "case_id": "e10-c7",
+      "prediction": "C",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.31,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明示采用紫微斗数，而指定技能不含紫微排盘模块",
+        "给定八字中金食伤不现，子女数量只能作低置信度候选"
+      ],
+      "tags": [
+        "六亲子女"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c7_q02",
+      "case_id": "e10-c7",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.34,
+      "alternative": "C",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明示采用紫微斗数，无法用八字大运冒充其计算",
+        "给定四柱官杀多透且身有根，直接候选偏组织管理而非完全依赖"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c7_q03",
+      "case_id": "e10-c7",
+      "prediction": "A",
+      "answer": "B",
+      "correct": false,
+      "confidence": 0.29,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题目指定紫微年龄段，但本技能没有相应大限计算模块",
+        "给定四柱的财星藏于辰，年龄段资产落地只能低置信度排序"
+      ],
+      "tags": [
+        "其他"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c7_q04",
+      "case_id": "e10-c7",
+      "prediction": "B",
+      "answer": "B",
+      "correct": true,
+      "confidence": 0.36,
+      "alternative": "A",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面所用紫微大限无法由指定八字技能验证",
+        "按给定日支辰看，2018戊戌直接冲配偶宫，只能作为低权重变化信号"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c7_q05",
+      "case_id": "e10-c7",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.42,
+      "alternative": "B",
+      "calculation_status": "blocked",
+      "decisive_facts": [
+        "题面明示紫微体系，计算受限",
+        "给定四柱火土有根且两见甲杀，较偏主动、承压与强势表现"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c8_q01",
+      "case_id": "e10-c8",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.68,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "庚日坐戌且年月两辛，金比劫成势",
+        "壬食神透可缓和表达，但竞争与资源边界仍是主结构"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c8_q02",
+      "case_id": "e10-c8",
+      "prediction": "B",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.6,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "丑戌印星有根且壬食神透，学习承载与输出链完整",
+        "年柱不提供大富大贵的独立证据，小康中产比豪门选项负担更低"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c8_q03",
+      "case_id": "e10-c8",
+      "prediction": "C",
+      "answer": "A",
+      "correct": false,
+      "confidence": 0.62,
+      "alternative": "A",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "壬食神透而庚辛金有强根，偏技术、设计与独立输出",
+        "官星火藏而不透，纪律武职及强资质白领链不占优势"
+      ],
+      "tags": [
+        "事业财富"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c8_q04",
+      "case_id": "e10-c8",
+      "prediction": "C",
+      "answer": "C",
+      "correct": true,
+      "confidence": 0.86,
+      "alternative": "D",
+      "calculation_status": "not_needed",
+      "decisive_facts": [
+        "题面明确说明是香港与广东中山两个同年月日时女命的对比",
+        "只有组合项允许环境差异对应两个不同婚年与成婚条件"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c8_q05",
+      "case_id": "e10-c8",
+      "prediction": "D",
+      "answer": "C",
+      "correct": false,
+      "confidence": 0.56,
+      "alternative": "C",
+      "calculation_status": "verified",
+      "decisive_facts": [
+        "女命官星火藏于午戌，配偶功能偏稳定承担而非轻浮表达",
+        "命主比劫强，自身自主性高，成熟有主见的伴侣更能形成互补"
+      ],
+      "tags": [
+        "婚姻感情"
+      ]
+    }
+  ]
+}

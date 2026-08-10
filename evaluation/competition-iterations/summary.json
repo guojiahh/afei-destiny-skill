@@ -1,34 +1,382 @@
 {
-  "rounds": [
+  "protocol": "no-cross-version-or-contamination-aggregation-v2",
+  "clean_groups": [
+    {
+      "skill_sha256": "9ceb22363f3b976366fc7f6c5e226f1035c60ec07b37c6c67b5da83621726a2e",
+      "model": "gpt-5.6-sol",
+      "split": "holdout",
+      "round_count": 4,
+      "question_count": 160,
+      "correct": 71,
+      "micro_accuracy": 0.4437,
+      "case_macro_accuracy": 0.4437,
+      "rounds": [
+        {
+          "round": "2022-v3-final",
+          "skill_sha256": "9ceb22363f3b976366fc7f6c5e226f1035c60ec07b37c6c67b5da83621726a2e",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 20,
+          "accuracy": 0.5,
+          "case_count": 8,
+          "case_macro_accuracy": 0.5,
+          "contamination": []
+        },
+        {
+          "round": "2023-v3-final",
+          "skill_sha256": "9ceb22363f3b976366fc7f6c5e226f1035c60ec07b37c6c67b5da83621726a2e",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 15,
+          "accuracy": 0.375,
+          "case_count": 8,
+          "case_macro_accuracy": 0.375,
+          "contamination": []
+        },
+        {
+          "round": "2024-v3-final",
+          "skill_sha256": "9ceb22363f3b976366fc7f6c5e226f1035c60ec07b37c6c67b5da83621726a2e",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 18,
+          "accuracy": 0.45,
+          "case_count": 8,
+          "case_macro_accuracy": 0.45,
+          "contamination": []
+        },
+        {
+          "round": "2025-v3-final",
+          "skill_sha256": "9ceb22363f3b976366fc7f6c5e226f1035c60ec07b37c6c67b5da83621726a2e",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 18,
+          "accuracy": 0.45,
+          "case_count": 8,
+          "case_macro_accuracy": 0.45,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
+      "model": "gpt-5.6-codex",
+      "split": "legacy-unspecified",
+      "round_count": 1,
+      "question_count": 15,
+      "correct": 4,
+      "micro_accuracy": 0.2667,
+      "case_macro_accuracy": 0,
+      "rounds": [
+        {
+          "round": "2011-v0",
+          "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
+          "model": "gpt-5.6-codex",
+          "split": "legacy-unspecified",
+          "count": 15,
+          "correct": 4,
+          "accuracy": 0.2667,
+          "case_count": 0,
+          "case_macro_accuracy": 0,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+      "model": "gpt-5.6-sol",
+      "split": "development",
+      "round_count": 5,
+      "question_count": 156,
+      "correct": 59,
+      "micro_accuracy": 0.3782,
+      "case_macro_accuracy": 0.3937,
+      "rounds": [
+        {
+          "round": "2013-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "development",
+          "count": 16,
+          "correct": 5,
+          "accuracy": 0.3125,
+          "case_count": 4,
+          "case_macro_accuracy": 0.45,
+          "contamination": []
+        },
+        {
+          "round": "2014-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "development",
+          "count": 35,
+          "correct": 9,
+          "accuracy": 0.2571,
+          "case_count": 7,
+          "case_macro_accuracy": 0.2571,
+          "contamination": []
+        },
+        {
+          "round": "2015-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "development",
+          "count": 35,
+          "correct": 16,
+          "accuracy": 0.4571,
+          "case_count": 7,
+          "case_macro_accuracy": 0.4571,
+          "contamination": []
+        },
+        {
+          "round": "2016-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "development",
+          "count": 35,
+          "correct": 13,
+          "accuracy": 0.3714,
+          "case_count": 7,
+          "case_macro_accuracy": 0.3714,
+          "contamination": []
+        },
+        {
+          "round": "2017-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "development",
+          "count": 35,
+          "correct": 16,
+          "accuracy": 0.4571,
+          "case_count": 7,
+          "case_macro_accuracy": 0.4571,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+      "model": "gpt-5.6-sol",
+      "split": "holdout",
+      "round_count": 4,
+      "question_count": 160,
+      "correct": 70,
+      "micro_accuracy": 0.4375,
+      "case_macro_accuracy": 0.4375,
+      "rounds": [
+        {
+          "round": "2022-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 18,
+          "accuracy": 0.45,
+          "case_count": 8,
+          "case_macro_accuracy": 0.45,
+          "contamination": []
+        },
+        {
+          "round": "2023-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 16,
+          "accuracy": 0.4,
+          "case_count": 8,
+          "case_macro_accuracy": 0.4,
+          "contamination": []
+        },
+        {
+          "round": "2024-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 20,
+          "accuracy": 0.5,
+          "case_count": 8,
+          "case_macro_accuracy": 0.5,
+          "contamination": []
+        },
+        {
+          "round": "2025-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "holdout",
+          "count": 40,
+          "correct": 16,
+          "accuracy": 0.4,
+          "case_count": 8,
+          "case_macro_accuracy": 0.4,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+      "model": "gpt-5.6-sol",
+      "split": "regression",
+      "round_count": 4,
+      "question_count": 160,
+      "correct": 55,
+      "micro_accuracy": 0.3438,
+      "case_macro_accuracy": 0.3314,
+      "rounds": [
+        {
+          "round": "2018-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 17,
+          "accuracy": 0.425,
+          "case_count": 9,
+          "case_macro_accuracy": 0.3926,
+          "contamination": []
+        },
+        {
+          "round": "2019-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 15,
+          "accuracy": 0.375,
+          "case_count": 8,
+          "case_macro_accuracy": 0.375,
+          "contamination": []
+        },
+        {
+          "round": "2020-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 9,
+          "accuracy": 0.225,
+          "case_count": 8,
+          "case_macro_accuracy": 0.225,
+          "contamination": []
+        },
+        {
+          "round": "2021-v1-baseline",
+          "skill_sha256": "c192196977ecbcd42b8c04fb8007272b3697cc0d2ebe3fb4c6563a1431974fac",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 14,
+          "accuracy": 0.35,
+          "case_count": 9,
+          "case_macro_accuracy": 0.3259,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "ce2f7b2824e36fd5b20abf0472b14582b4b5cb87dc61b411171573b73668a3ec",
+      "model": "gpt-5.6-codex",
+      "split": "legacy-unspecified",
+      "round_count": 1,
+      "question_count": 15,
+      "correct": 3,
+      "micro_accuracy": 0.2,
+      "case_macro_accuracy": 0,
+      "rounds": [
+        {
+          "round": "2012-v1",
+          "skill_sha256": "ce2f7b2824e36fd5b20abf0472b14582b4b5cb87dc61b411171573b73668a3ec",
+          "model": "gpt-5.6-codex",
+          "split": "legacy-unspecified",
+          "count": 15,
+          "correct": 3,
+          "accuracy": 0.2,
+          "case_count": 0,
+          "case_macro_accuracy": 0,
+          "contamination": []
+        }
+      ]
+    },
+    {
+      "skill_sha256": "f60f8158145104a757bc81b4ea89806be013b7281394803ba0dfe51bf8123938",
+      "model": "gpt-5.6-sol",
+      "split": "regression",
+      "round_count": 4,
+      "question_count": 160,
+      "correct": 61,
+      "micro_accuracy": 0.3812,
+      "case_macro_accuracy": 0.3588,
+      "rounds": [
+        {
+          "round": "2018-v2-candidate",
+          "skill_sha256": "f60f8158145104a757bc81b4ea89806be013b7281394803ba0dfe51bf8123938",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 15,
+          "accuracy": 0.375,
+          "case_count": 9,
+          "case_macro_accuracy": 0.3333,
+          "contamination": []
+        },
+        {
+          "round": "2019-v2-candidate",
+          "skill_sha256": "f60f8158145104a757bc81b4ea89806be013b7281394803ba0dfe51bf8123938",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 14,
+          "accuracy": 0.35,
+          "case_count": 8,
+          "case_macro_accuracy": 0.35,
+          "contamination": []
+        },
+        {
+          "round": "2020-v2-candidate",
+          "skill_sha256": "f60f8158145104a757bc81b4ea89806be013b7281394803ba0dfe51bf8123938",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 13,
+          "accuracy": 0.325,
+          "case_count": 8,
+          "case_macro_accuracy": 0.325,
+          "contamination": []
+        },
+        {
+          "round": "2021-v2-candidate",
+          "skill_sha256": "f60f8158145104a757bc81b4ea89806be013b7281394803ba0dfe51bf8123938",
+          "model": "gpt-5.6-sol",
+          "split": "regression",
+          "count": 40,
+          "correct": 19,
+          "accuracy": 0.475,
+          "case_count": 9,
+          "case_macro_accuracy": 0.4222,
+          "contamination": []
+        }
+      ]
+    }
+  ],
+  "contaminated_training_only": [
     {
       "round": "2010-v0",
       "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
+      "model": "gpt-5.6-codex",
+      "split": "legacy-unspecified",
       "count": 9,
       "correct": 3,
       "accuracy": 0.3333,
+      "case_count": 0,
+      "case_macro_accuracy": 0,
       "contamination": [
         "Q1 answer exposed during importer DOM validation; round is training-only",
         "Q2 option highlight classes were partially visible during importer DOM validation; round is training-only"
       ]
-    },
-    {
-      "round": "2011-v0",
-      "skill_sha256": "c0e077d0a005e951b6c9cfd282ef8a1d5779fd42bd316c3483feb1c3fcea2b05",
-      "count": 15,
-      "correct": 4,
-      "accuracy": 0.2667,
-      "contamination": []
-    },
-    {
-      "round": "2012-v1",
-      "skill_sha256": "ce2f7b2824e36fd5b20abf0472b14582b4b5cb87dc61b411171573b73668a3ec",
-      "count": 15,
-      "correct": 3,
-      "accuracy": 0.2,
-      "contamination": []
     }
-  ],
-  "count": 39,
-  "correct": 10,
-  "micro_accuracy": 0.2564
+  ]
 }

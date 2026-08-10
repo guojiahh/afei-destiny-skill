@@ -355,18 +355,35 @@ def _format_jie(jie: Any) -> dict[str, str] | None:
     return {"name": jie.getName(), "datetime": jie.getSolar().toYmdHms()}
 
 
+def _add_years(moment: datetime, years: int) -> datetime:
+    try:
+        return moment.replace(year=moment.year + years)
+    except ValueError:
+        # A luck-cycle anniversary starting on leap day resolves to Feb 28 in
+        # non-leap years. The calendrical library currently returns ordinary
+        # dates, but keeping this explicit makes the boundary helper total.
+        return moment.replace(year=moment.year + years, day=28)
+
+
 def _yun_payload(eight_char: Any, gender_value: int, sect: int) -> dict[str, Any]:
     yun = eight_char.getYun(gender_value, sect)
+    first_cycle_start = datetime.fromisoformat(yun.getStartSolar().toYmdHms())
     dayun_rows = []
     for item in yun.getDaYun(11):
-        dayun_rows.append({
+        row = {
             "index": item.getIndex(),
             "ganzhi": item.getGanZhi(),
             "start_year": item.getStartYear(),
             "end_year": item.getEndYear(),
             "start_nominal_age": item.getStartAge(),
             "end_nominal_age": item.getEndAge(),
-        })
+        }
+        if item.getIndex() >= 1:
+            exact_start = _add_years(first_cycle_start, 10 * (item.getIndex() - 1))
+            exact_end = _add_years(exact_start, 10) - timedelta(seconds=1)
+            row["start_solar"] = exact_start.isoformat(sep=" ")
+            row["end_solar"] = exact_end.isoformat(sep=" ")
+        dayun_rows.append(row)
     return {
         "method_sect": sect,
         "forward": yun.isForward(),
@@ -395,6 +412,7 @@ def build_chart(
     utc_offset: float | None = None,
     dst_minutes: int = 0,
     target_year: int | None = None,
+    target_date: datetime | None = None,
 ) -> dict[str, Any]:
     solar = _solar_from_input(calendar, year, month, day, hour, minute, second, leap)
     civil_moment = datetime(
@@ -486,8 +504,21 @@ def build_chart(
         },
     }
 
+    if target_date is not None:
+        if target_year is not None and target_year != target_date.year:
+            raise ValueError("target_year and target_date must refer to the same year")
+        target_year = target_date.year
+
     if target_year is not None:
-        target_lunar = Solar.fromYmdHms(target_year, 7, 1, 12, 0, 0).getLunar()
+        target_moment = target_date or datetime(target_year, 7, 1, 12, 0, 0)
+        target_lunar = Solar.fromYmdHms(
+            target_moment.year,
+            target_moment.month,
+            target_moment.day,
+            target_moment.hour,
+            target_moment.minute,
+            target_moment.second,
+        ).getLunar()
         target_ganzhi = target_lunar.getYearInGanZhiExact()
         target = {
             "label": f"流年{target_year}",
@@ -498,22 +529,40 @@ def build_chart(
         interactions = []
         for pillar in pillars:
             interactions.extend(pair_relations(pillar, target))
-        active_cycle = next(
-            (row for row in yun_precise["cycles"] if row["start_year"] <= target_year <= row["end_year"]),
-            None,
+        if target_date is not None:
+            active_cycle_candidates = [
+                row
+                for row in yun_precise["cycles"]
+                if row.get("start_solar")
+                and datetime.fromisoformat(row["start_solar"])
+                <= target_moment
+                <= datetime.fromisoformat(row["end_solar"])
+            ]
+        else:
+            year_start = datetime(target_year, 1, 1, 0, 0, 0)
+            year_end = datetime(target_year, 12, 31, 23, 59, 59)
+            active_cycle_candidates = [
+                row
+                for row in yun_precise["cycles"]
+                if row.get("start_solar")
+                and datetime.fromisoformat(row["start_solar"]) <= year_end
+                and datetime.fromisoformat(row["end_solar"]) >= year_start
+            ]
+        active_cycle = (
+            active_cycle_candidates[0] if len(active_cycle_candidates) == 1 else None
         )
-        active_luck = None
-        luck_with_natal: list[dict[str, str]] = []
-        luck_with_target: list[dict[str, str]] = []
-        composite_formations: list[dict[str, Any]] = []
-        if active_cycle and active_cycle.get("ganzhi"):
-            luck_ganzhi = active_cycle["ganzhi"]
+        luck_contexts = []
+        for cycle in active_cycle_candidates:
+            if not cycle.get("ganzhi"):
+                continue
+            luck_ganzhi = cycle["ganzhi"]
             active_luck = {
                 "label": f"大运{luck_ganzhi}",
                 "ganzhi": luck_ganzhi,
                 "stem": luck_ganzhi[0],
                 "branch": luck_ganzhi[1],
             }
+            luck_with_natal: list[dict[str, str]] = []
             for pillar in pillars:
                 luck_with_natal.extend(pair_relations(pillar, active_luck))
             luck_with_target = pair_relations(active_luck, target)
@@ -521,16 +570,44 @@ def build_chart(
                 [*pillars, active_luck, target],
                 f"原局-大运{luck_ganzhi}-流年{target_year}",
             )
+            luck_contexts.append(
+                {
+                    "active_luck_cycle": cycle,
+                    "interactions_of_luck_with_natal_chart": luck_with_natal,
+                    "interactions_between_luck_and_year": luck_with_target,
+                    "composite_formations": composite_formations,
+                }
+            )
+        single_context = luck_contexts[0] if len(luck_contexts) == 1 else None
         payload["target_year"] = {
             "year": target_year,
+            "target_datetime": target_moment.isoformat(sep=" ") if target_date else None,
+            "target_scope": "exact_date" if target_date else "whole_calendar_year",
             "ganzhi": target_ganzhi,
             "actual_age": target_year - calculation_moment.year,
             "nominal_age": target_year - calculation_moment.year + 1,
             "active_luck_cycle": active_cycle,
+            "active_luck_cycle_candidates": active_cycle_candidates,
+            "luck_cycle_boundary_warning": (
+                "The calendar year crosses a luck-cycle boundary; supply --target-date or evaluate both contexts."
+                if len(active_cycle_candidates) > 1
+                else None
+            ),
             "interactions_with_natal_chart": interactions,
-            "interactions_of_luck_with_natal_chart": luck_with_natal,
-            "interactions_between_luck_and_year": luck_with_target,
-            "composite_formations": composite_formations,
+            "interactions_of_luck_with_natal_chart": (
+                single_context["interactions_of_luck_with_natal_chart"]
+                if single_context
+                else []
+            ),
+            "interactions_between_luck_and_year": (
+                single_context["interactions_between_luck_and_year"]
+                if single_context
+                else []
+            ),
+            "composite_formations": (
+                single_context["composite_formations"] if single_context else []
+            ),
+            "luck_cycle_contexts": luck_contexts,
         }
     return payload
 
@@ -547,6 +624,10 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--utc-offset", type=float, help="Standard UTC offset at birthplace")
     parser.add_argument("--dst-minutes", type=int, default=0, help="Civil daylight-saving minutes to remove")
     parser.add_argument("--target-year", type=int, help="Include target-year and active-luck-cycle context")
+    parser.add_argument(
+        "--target-date",
+        help="YYYY-MM-DD or YYYY-MM-DDTHH:MM[:SS]; resolve luck-cycle boundaries exactly",
+    )
     parser.add_argument("--compact", action="store_true", help="Emit compact JSON")
     return parser.parse_args()
 
@@ -559,6 +640,11 @@ def main() -> int:
         raise ValueError("date must be YYYY-MM-DD and time must be HH:MM[:SS]")
     if len(time_parts) == 2:
         time_parts.append(0)
+    target_date = None
+    if args.target_date:
+        target_date = datetime.fromisoformat(args.target_date)
+        if target_date.hour == 0 and "T" not in args.target_date and " " not in args.target_date:
+            target_date = target_date.replace(hour=12)
     payload = build_chart(
         calendar=args.calendar,
         year=date_parts[0], month=date_parts[1], day=date_parts[2],
@@ -566,6 +652,7 @@ def main() -> int:
         gender=args.gender, leap=args.leap, day_boundary=args.day_boundary,
         longitude=args.longitude, utc_offset=args.utc_offset,
         dst_minutes=args.dst_minutes, target_year=args.target_year,
+        target_date=target_date,
     )
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")

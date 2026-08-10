@@ -1,0 +1,890 @@
+{
+    "primary_failure_reasons":  [
+                                    "data_issue",
+                                    "option_parse",
+                                    "calculation",
+                                    "knowledge_gap",
+                                    "reasoning_error",
+                                    "execution_error",
+                                    "unresolved"
+                                ],
+    "secondary_failure_reasons":  [
+                                      "input_extraction",
+                                      "calendar_chart",
+                                      "luck_cycle",
+                                      "relation_matrix",
+                                      "strength_pattern",
+                                      "role_attribution",
+                                      "timing",
+                                      "event_mapping",
+                                      "option_negation",
+                                      "compound_option",
+                                      "base_rate",
+                                      "uncalibrated_guess"
+                                  ],
+    "errors":  [
+                   {
+                       "id":  "gfc_2016_e07-c1_q01",
+                       "case_id":  "e07-c1",
+                       "profile_text":  "命例一 出题： 黄卯老师 流派： 紫微斗数 男 公历 1952-06-15 · 寅时 中国香港 乾造 壬 辰 丙 午 壬 辰 壬 寅",
+                       "question":  "第二个大限（17-26岁）父母事业情况?",
+                       "options":  {
+                                       "A":  "十年暴发.",
+                                       "B":  "十年破败.",
+                                       "C":  "先好后差.",
+                                       "D":  "先差后好."
+                                   },
+                       "prediction":  "D",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.58,
+                       "pre_reveal_decisive_facts":  [
+                                                         "17岁附近先落丁未火土背景，随后转入带申金的戊申运",
+                                                         "申金能补原局全无之金并缓解午月火势"
+                                                     ],
+                       "tags":  [
+                                    "六亲子女",
+                                    "事业财富"
+                                ],
+                       "primary_failure_reason":  "knowledge_gap",
+                       "secondary_failure_reason":  "timing",
+                       "root_cause":  "The question asks about the second Ziwei limit, but the rationale substitutes Bazi luck chronology. That does not compute the requested system.",
+                       "evidence":  [
+                                        "The profile identifies Ziwei and the question defines the 17-26 limit.",
+                                        "All decisive facts use a Bazi luck transition and element-balancing story."
+                                    ],
+                       "counterfactual_fix":  "Add a Ziwei routing guard or module. Without one, retain the base answer and forbid the Bazi substitution.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "ziwei_interval_misrouted_to_bazi_luck",
+                       "fix_type":  "routing_rule",
+                       "decision":  "defer",
+                       "overfit_risk":  "medium",
+                       "regression_tests":  [
+                                                "If a profile and question ask for a Ziwei decade, fail validation when the rationale substitutes a Bazi luck cycle for that interval."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c1_q02",
+                       "case_id":  "e07-c1",
+                       "profile_text":  "命例一 出题： 黄卯老师 流派： 紫微斗数 男 公历 1952-06-15 · 寅时 中国香港 乾造 壬 辰 丙 午 壬 辰 壬 寅",
+                       "question":  "第三个大限（27-36岁）：自己姻缘情况?",
+                       "options":  {
+                                       "A":  "先好后坏.",
+                                       "B":  "先坏后好.",
+                                       "C":  "一直都差.",
+                                       "D":  "越来越好."
+                                   },
+                       "prediction":  "B",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.54,
+                       "pre_reveal_decisive_facts":  [
+                                                         "27岁附近处于戊申转己酉的交运段",
+                                                         "己酉与两辰六合，后段对日支关系接口的绑定更明显"
+                                                     ],
+                       "tags":  [
+                                    "其他"
+                                ],
+                       "primary_failure_reason":  "knowledge_gap",
+                       "secondary_failure_reason":  "timing",
+                       "root_cause":  "The third Ziwei limit was again answered from a Bazi luck transition. The requested system and evidence system do not match.",
+                       "evidence":  [
+                                        "The question asks for the 27-36 Ziwei limit.",
+                                        "The decisive facts only discuss Bazi luck and a branch combination."
+                                    ],
+                       "counterfactual_fix":  "Add a Ziwei routing guard or module. Otherwise retain the base answer rather than switching from substitute evidence.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "ziwei_interval_misrouted_to_bazi_luck",
+                       "fix_type":  "routing_rule",
+                       "decision":  "defer",
+                       "overfit_risk":  "medium",
+                       "regression_tests":  [
+                                                "If a profile and question ask for a Ziwei decade, fail validation when the rationale substitutes a Bazi luck cycle for that interval."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c2_q01",
+                       "case_id":  "e07-c2",
+                       "profile_text":  "命例二 出题： 康常治师傅 流派： 陆斌兆派紫微斗数 男 公历 1975-09-20 · 18:00 酉时 中国香港 乾造 乙 卯 乙 酉 己 巳 癸 酉",
+                       "question":  "命主样貌特征?",
+                       "options":  {
+                                       "A":  "身材瘦削眼晴较大",
+                                       "B":  "身材瘦削眼晴较小",
+                                       "C":  "身材肥大眼晴较大",
+                                       "D":  "身材肥大眼晴较小"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.46,
+                       "pre_reveal_decisive_facts":  [
+                                                         "己土日主在酉月偏弱，双酉金泄身",
+                                                         "巳火坐日支，为眼部明亮度提供辅助信号"
+                                                     ],
+                       "tags":  [
+                                    "性格外貌学业"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "uncalibrated_guess",
+                       "root_cause":  "Prediction and gold agree on thin build and differ only on eye size, a low-identifiability physical detail. One fire correspondence cannot reliably decide large versus small eyes.",
+                       "evidence":  [
+                                        "The rationale uses one fire correspondence for eye appearance.",
+                                        "No deterministic or textual discriminator supports B over A."
+                                    ],
+                       "counterfactual_fix":  "Do not add a fire-to-eye-size rule. Retain low confidence.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_appearance_detail",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c2_q02",
+                       "case_id":  "e07-c2",
+                       "profile_text":  "命例二 出题： 康常治师傅 流派： 陆斌兆派紫微斗数 男 公历 1975-09-20 · 18:00 酉时 中国香港 乾造 乙 卯 乙 酉 己 巳 癸 酉",
+                       "question":  "个性及学历情况如何?",
+                       "options":  {
+                                       "A":  "平庸又懒惰(大学未毕业)",
+                                       "B":  "不聪敏但勤力死读书(大学毕业)",
+                                       "C":  "聪敏但不读书(大学未毕业)",
+                                       "D":  "聪敏能读书有成(大学毕业)"
+                                   },
+                       "prediction":  "D",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.56,
+                       "pre_reveal_decisive_facts":  [
+                                                         "双酉食神有根，双乙七杀透干，形成明显的输出制压结构",
+                                                         "日坐巳火正印并带土根，学习承载并非全无"
+                                                     ],
+                       "tags":  [
+                                    "性格外貌学业"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "base_rate",
+                       "root_cause":  "The solver identified ability and output but upgraded one supportive resource signal into completed university. Learning capacity, study behavior, and degree completion were not separated.",
+                       "evidence":  [
+                                        "Options C and D agree on intelligence.",
+                                        "Double output and double pressure can support ability, while one resource branch is insufficient evidence of completion."
+                                    ],
+                       "counterfactual_fix":  "Score ability, study behavior, and completion as separate stages. This changes D to C.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "specific_outcome_without_stage_or_base_rate",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them.",
+                                                "One resource-star support must not upgrade ability into a completed degree without stage evidence."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c2_q03",
+                       "case_id":  "e07-c2",
+                       "profile_text":  "命例二 出题： 康常治师傅 流派： 陆斌兆派紫微斗数 男 公历 1975-09-20 · 18:00 酉时 中国香港 乾造 乙 卯 乙 酉 己 巳 癸 酉",
+                       "question":  "命主26-35大限内财政状态最终如何?",
+                       "options":  {
+                                       "A":  "破产",
+                                       "B":  "中六合彩发大横财，发达",
+                                       "C":  "打工仔(上班族)，不发不败，财政尚可",
+                                       "D":  "不停转工财来财去，无积蓄"
+                                   },
+                       "prediction":  "C",
+                       "answer":  "D",
+                       "pre_reveal_confidence":  0.56,
+                       "pre_reveal_decisive_facts":  [
+                                                         "26至35岁主要处壬午财印大运",
+                                                         "午火能扶偏弱己土，原局食神生时上偏财但承载有限"
+                                                     ],
+                       "tags":  [
+                                    "事业财富"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "event_mapping",
+                       "root_cause":  "The rationale recognized limited financial carrying capacity but still selected stable finances. It failed to distinguish active resource flow from retention, the key difference between C and D.",
+                       "evidence":  [
+                                        "Both C and D are non-rich outcomes.",
+                                        "Strong output feeding visible wealth with a weak carrier better supports turnover and poor retention than stable accumulation."
+                                    ],
+                       "counterfactual_fix":  "Separate opportunity and flow from retention. Under this structure, D outranks C.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "specific_outcome_without_stage_or_base_rate",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "medium",
+                       "regression_tests":  [
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them.",
+                                                "Active output-to-wealth with weak carrying capacity must be scored as turnover or poor retention rather than stable finances."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c2_q04",
+                       "case_id":  "e07-c2",
+                       "profile_text":  "命例二 出题： 康常治师傅 流派： 陆斌兆派紫微斗数 男 公历 1975-09-20 · 18:00 酉时 中国香港 乾造 乙 卯 乙 酉 己 巳 癸 酉",
+                       "question":  "命主36-45大限内事业运势?",
+                       "options":  {
+                                       "A":  "名成利就工作顺利",
+                                       "B":  "长期失业不工作",
+                                       "C":  "自己当老板,生意失败",
+                                       "D":  "工作发展不顺利每况越下"
+                                   },
+                       "prediction":  "D",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.57,
+                       "pre_reveal_decisive_facts":  [
+                                                         "辛巳运之辛同时冲原局两透乙杀",
+                                                         "巳与双酉持续聚金，令本已偏弱的己土进一步泄耗"
+                                                     ],
+                       "tags":  [
+                                    "事业财富"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "strength_pattern",
+                       "root_cause":  "The solver read the stem clash and metal output only as damage. It ignored the constructive output-controls-pressure function and repeated fire support, reversing the decade valence.",
+                       "evidence":  [
+                                        "The natal chart already contains strong output against strong pressure.",
+                                        "The new luck can complete a productive control chain instead of merely draining the day master."
+                                    ],
+                       "counterfactual_fix":  "Test whether a clash or control resolves the native structural problem before assigning negative valence. This changes D to A.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "salient_relation_overrides_full_structure",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "A salient clash, combination, or repetition must not decide the answer unless it reaches the queried role and event interface in the full structure.",
+                                                "A luck that controls excessive pressure through the chart output chain must be tested as constructive before being labeled damaging."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c2_q05",
+                       "case_id":  "e07-c2",
+                       "profile_text":  "命例二 出题： 康常治师傅 流派： 陆斌兆派紫微斗数 男 公历 1975-09-20 · 18:00 酉时 中国香港 乾造 乙 卯 乙 酉 己 巳 癸 酉",
+                       "question":  "2016年已经发生何等人生大事?",
+                       "options":  {
+                                       "A":  "意外死亡",
+                                       "B":  "感情美满，结婚之年",
+                                       "C":  "中六合彩大横财环游世界",
+                                       "D":  "生癌但治好"
+                                   },
+                       "prediction":  "B",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.76,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2016丙申与辛巳大运形成丙辛合水，水为男命配偶财星",
+                                                         "申与原局日支巳及大运巳均形成六合，直接绑定配偶宫"
+                                                     ],
+                       "tags":  [
+                                    "年份事件"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "event_mapping",
+                       "root_cause":  "The pre-reveal evidence strongly supports relationship binding, while the official key is the extreme death option. No multi-layer fatality chain or text clue justifies that reversal.",
+                       "evidence":  [
+                                        "The cited stem and branch relations directly activate relationship functions.",
+                                        "Accidental death is a high-burden rare event without a fatal body or transport interface in the decisive facts."
+                                    ],
+                       "counterfactual_fix":  "Do not add a death rule from the label. Require multiple independent fatality indicators and low confidence for extreme options.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_extreme_event",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "Death must not beat a supported ordinary event without at least two independent severity interfaces."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c3_q01",
+                       "case_id":  "e07-c3",
+                       "profile_text":  "命例三 出题： 陈易贤老师 流派： 四柱八字 女 公历 1970-06-05 · 寅时 中国台湾 坤造 庚 戌 辛 巳 丙 辰 庚 寅",
+                       "question":  "命主的家境跟父母关系如何?",
+                       "options":  {
+                                       "A":  "家境富有,跟母亲感情比较好",
+                                       "B":  "家境富有,跟父亲感情比较好.",
+                                       "C":  "家境小康,跟父亲感情不好.",
+                                       "D":  "家境不好,跟父母感情都不好."
+                                   },
+                       "prediction":  "A",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.53,
+                       "pre_reveal_decisive_facts":  [
+                                                         "庚辛财星三透，早年资源信号显著",
+                                                         "年支戌冲日支辰，使父系及家族接口与本人生活核心不稳"
+                                                     ],
+                       "tags":  [
+                                    "六亲子女"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "role_attribution",
+                       "root_cause":  "Rich family is shared by A and B; the chart does not reliably identify which parent had the better emotional bond.",
+                       "evidence":  [
+                                        "Only mother versus father closeness distinguishes the two options.",
+                                        "No explicit parent-history fact or independent emotional-bond evidence supports the official choice."
+                                    ],
+                       "counterfactual_fix":  "Do not patch parent-affection labels from revealed biography. Keep confidence low.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_family_relationship_detail",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c3_q03",
+                       "case_id":  "e07-c3",
+                       "profile_text":  "命例三 出题： 陈易贤老师 流派： 四柱八字 女 公历 1970-06-05 · 寅时 中国台湾 坤造 庚 戌 辛 巳 丙 辰 庚 寅",
+                       "question":  "命主1993年发生了什么事?",
+                       "options":  {
+                                       "A":  "中奖一百万彩金.",
+                                       "B":  "结婚.",
+                                       "C":  "父亲去世.",
+                                       "D":  "自行创业."
+                                   },
+                       "prediction":  "B",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.74,
+                       "pre_reveal_decisive_facts":  [
+                                                         "1993癸酉透出女命正官对象星",
+                                                         "酉与日支辰六合，且己卯大运与酉年形成卯酉冲而强烈引动关系状态"
+                                                     ],
+                       "tags":  [
+                                    "年份事件"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "event_mapping",
+                       "root_cause":  "The official lottery win is rarer and less supported than the selected marriage event. The year directly exposes the female partner star and binds the day branch, while no independent jackpot mechanism exists.",
+                       "evidence":  [
+                                        "The decisive facts provide two relationship-stage signals.",
+                                        "A one-million prize is unusually precise biography and cannot be derived from generic natal wealth signals."
+                                    ],
+                       "counterfactual_fix":  "Do not learn a jackpot mapping. Keep rare windfall options behind a high evidence gate.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_extreme_event",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c3_q04",
+                       "case_id":  "e07-c3",
+                       "profile_text":  "命例三 出题： 陈易贤老师 流派： 四柱八字 女 公历 1970-06-05 · 寅时 中国台湾 坤造 庚 戌 辛 巳 丙 辰 庚 寅",
+                       "question":  "命主目前状况如何?",
+                       "options":  {
+                                       "A":  "事业成功的女企业家.",
+                                       "B":  "监狱的女犯.",
+                                       "C":  "寺庙的尼姑.",
+                                       "D":  "一般的上班族,"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "D",
+                       "pre_reveal_confidence":  0.64,
+                       "pre_reveal_decisive_facts":  [
+                                                         "原局食神土可承接旺火并连续生庚辛财",
+                                                         "三透财星与强日主构成较完整的经营和资源调度链"
+                                                     ],
+                       "tags":  [
+                                    "其他"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "base_rate",
+                       "root_cause":  "A viable output-to-wealth chain was upgraded into the rare status of successful entrepreneur. Structural capacity does not prove ownership or exceptional success.",
+                       "evidence":  [
+                                        "The decisive facts show a possible business function chain, not business ownership.",
+                                        "No career history or independent entrepreneurship marker supports the rare option over ordinary employment."
+                                    ],
+                       "counterfactual_fix":  "Treat structural chains as capability, then apply base-rate constraints before upgrading to rare status. This changes A to D.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "specific_outcome_without_stage_or_base_rate",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them.",
+                                                "A complete output-to-wealth chain alone must not upgrade an ordinary worker to a successful owner."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c3_q05",
+                       "case_id":  "e07-c3",
+                       "profile_text":  "命例三 出题： 陈易贤老师 流派： 四柱八字 女 公历 1970-06-05 · 寅时 中国台湾 坤造 庚 戌 辛 巳 丙 辰 庚 寅",
+                       "question":  "命主目前身体状况如何?",
+                       "options":  {
+                                       "A":  "糖尿病",
+                                       "B":  "高血压",
+                                       "C":  "忧郁症",
+                                       "D":  "肝硬化."
+                                   },
+                       "prediction":  "B",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.58,
+                       "pre_reveal_decisive_facts":  [
+                                                         "丙火生巳月且多处通根，命局火热",
+                                                         "全局水气仅辰中一癸，难以调节长期火势"
+                                                     ],
+                       "tags":  [
+                                    "其他"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "uncalibrated_guess",
+                       "root_cause":  "The traditional health correspondence supports hot or circulatory risk more directly than depression, yet the official key chooses depression. Exact diagnosis is not recoverable at this granularity.",
+                       "evidence":  [
+                                        "Strong fire and scarce water conventionally favor a heat or circulatory interpretation.",
+                                        "No text clue or deterministic calculation supports depression over hypertension."
+                                    ],
+                       "counterfactual_fix":  "Do not add a revealed diagnosis mapping. Retain low confidence and medical-detail abstention.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_exact_diagnosis",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c4_q01",
+                       "case_id":  "e07-c4",
+                       "profile_text":  "命例四 出题： 蔡文成老师 流派： 四柱八字 男 公历 1963-02-06 · 中午时（午时） 中国台湾台中 乾造 癸 卯 甲 寅 庚 辰 壬 午",
+                       "question":  "命主祖辈含父母家庭背景?",
+                       "options":  {
+                                       "A":  "三代同堂.富裕商人",
+                                       "B":  "祖上零落.贫穷孤苦",
+                                       "C":  "公教老师.金融财政",
+                                       "D":  "中产阶层.工商农民"
+                                   },
+                       "prediction":  "D",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.48,
+                       "pre_reveal_decisive_facts":  [
+                                                         "年月癸卯、甲寅构成食伤生财的早年工商接口",
+                                                         "庚金自身无根，财势虽旺但不足以仅凭命盘升级为巨富家族"
+                                                     ],
+                       "tags":  [
+                                    "六亲子女"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "strength_pattern",
+                       "root_cause":  "The solver treated a visible output-to-wealth chain as evidence of an ordinary commercial family without asking whether the rootless, seasonally weak day master can carry the strong early wealth structure.",
+                       "evidence":  [
+                                        "Year and month are dominated by wealth while the day master has no native metal root and little resource support.",
+                                        "The rationale notes weak carrying capacity but merely caps the family tier instead of scoring the adverse early-resource condition."
+                                    ],
+                       "counterfactual_fix":  "Distinguish visible resources from usable resources in the family axis. This changes D to B.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "specific_outcome_without_stage_or_base_rate",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "medium",
+                       "regression_tests":  [
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them.",
+                                                "A visible wealth chain with no carrier must not default to a middle or wealthy family background."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c4_q02",
+                       "case_id":  "e07-c4",
+                       "profile_text":  "命例四 出题： 蔡文成老师 流派： 四柱八字 男 公历 1963-02-06 · 中午时（午时） 中国台湾台中 乾造 癸 卯 甲 寅 庚 辰 壬 午",
+                       "question":  "命主本人手足,职业,及婚姻?",
+                       "options":  {
+                                       "A":  "独子,食品工厂,美满婚姻",
+                                       "B":  "手足2人,金融财政,大妻小妾",
+                                       "C":  "手足3人,百货行销,离婚同居",
+                                       "D":  "手足6人,算命风水,单身未婚"
+                                   },
+                       "prediction":  "C",
+                       "answer":  "D",
+                       "pre_reveal_confidence":  0.58,
+                       "pre_reveal_decisive_facts":  [
+                                                         "癸壬食伤透而寅卯财旺，最贴近市场行销功能链",
+                                                         "日支辰与年支卯相害，关系结构不属于稳定无扰型"
+                                                     ],
+                       "tags":  [
+                                    "婚姻感情",
+                                    "事业财富"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "compound_option",
+                       "root_cause":  "Every option joins exact sibling count, concrete occupation, and relationship status. The chosen marketing and divorce option has a plausible functional chain, while the official combination contains three unsupported low-identifiability details.",
+                       "evidence":  [
+                                        "The rationale directly supports market or output functions and relationship disturbance.",
+                                        "No independent evidence establishes six siblings, fortune-telling work, and lifelong single status together."
+                                    ],
+                       "counterfactual_fix":  "Do not learn the revealed compound. Require every high-burden subclause to pass and keep confidence low when none does.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_compound_biography",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c4_q03",
+                       "case_id":  "e07-c4",
+                       "profile_text":  "命例四 出题： 蔡文成老师 流派： 四柱八字 男 公历 1963-02-06 · 中午时（午时） 中国台湾台中 乾造 癸 卯 甲 寅 庚 辰 壬 午",
+                       "question":  "命主母亡何年?",
+                       "options":  {
+                                       "A":  "庚戌运,己卯年1999",
+                                       "B":  "庚戌运,庚辰年2000",
+                                       "C":  "庚戌运,癸未年立秋前.2003",
+                                       "D":  "己酉运,甲申年2004"
+                                   },
+                       "prediction":  "C",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.62,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2003进入己酉运，己正印直接对应母亲功能",
+                                                         "酉冲年支卯，癸未年又把印星落支并与午合、卯半合"
+                                                     ],
+                       "tags":  [
+                                    "年份事件",
+                                    "六亲子女"
+                                ],
+                       "primary_failure_reason":  "calculation",
+                       "secondary_failure_reason":  "luck_cycle",
+                       "root_cause":  "The calculator assigns all of 2003 to the new luck even though its own exact transition is 2003-08-20 22:00. The option explicitly states an event before Start of Autumn, when the prior luck still applies.",
+                       "evidence":  [
+                                        "The calculator reports the new luck start at 2003-08-20 22:00.",
+                                        "The year-level target output nevertheless labels all of 2003 as the new luck, and the rationale relies on that wrong assignment.",
+                                        "The option says the event is before Start of Autumn, earlier than the computed transition."
+                                    ],
+                       "counterfactual_fix":  "Make active-luck selection date-aware and accept event dates or solar-term qualifiers. Removing the wrong new-luck evidence lets the 2000 full day-pillar repetition and old-luck reversal win.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "luck_cycle_within_year_boundary",
+                       "fix_type":  "calculator_code",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "For 1963-02-06 12:00 male, 2003-08-08 must resolve to the old luck and 2003-08-21 to the new luck.",
+                                                "A transition calendar year must not be represented by one active luck when a candidate includes a date or solar-term qualifier."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c4_q04",
+                       "case_id":  "e07-c4",
+                       "profile_text":  "命例四 出题： 蔡文成老师 流派： 四柱八字 男 公历 1963-02-06 · 中午时（午时） 中国台湾台中 乾造 癸 卯 甲 寅 庚 辰 壬 午",
+                       "question":  "命主父亲车祸脑损似植物人何年?",
+                       "options":  {
+                                       "A":  "己酉运,甲申年2004",
+                                       "B":  "己酉运,乙酉年2005",
+                                       "C":  "己酉运,丙戌年2006",
+                                       "D":  "己酉运,己丑年2009"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.66,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2004甲申把偏财父星甲重复透出",
+                                                         "申直接冲月支寅父母宫，己酉大运又持续冲年支卯"
+                                                     ],
+                       "tags":  [
+                                    "年份事件",
+                                    "六亲子女",
+                                    "健康灾厄"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "timing",
+                       "root_cause":  "The selected 2004 year has the most direct father-star and parent-palace contacts, while the official 2006 year emphasizes broader body or life disruption. Exact paternal accident timing and injury form are not uniquely inferable.",
+                       "evidence":  [
+                                        "2004 repeats the father or wealth stem and directly changes the parent month branch.",
+                                        "2006 changes the day branch but lacks a clearer father-role discriminator."
+                                    ],
+                       "counterfactual_fix":  "Do not add an accident-year rule from the reveal. Require full role-specific matrices and keep exact kin accidents low-confidence.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_exact_kin_event_year",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "For every multi-year or multi-stage item, require a same-scale matrix for all candidates, including active luck, natal-to-luck, natal-to-year, luck-to-year, composite formations, target role, and event interface."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c5_q01",
+                       "case_id":  "e07-c5",
+                       "profile_text":  "命例五 出题： 梁真圣师傅 流派： 四柱八字 男 公历 1952-02-26 · 卯时 中国香港 乾造 壬 辰 壬 寅 壬 寅 癸 卯",
+                       "question":  "命主出生家庭环境及教育程度?",
+                       "options":  {
+                                       "A":  "出身平民,大学毕业",
+                                       "B":  "出身平民,大学未毕业",
+                                       "C":  "出身富裕,大学毕业",
+                                       "D":  "出身富裕,大学未毕业"
+                                   },
+                       "prediction":  "B",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.61,
+                       "pre_reveal_decisive_facts":  [
+                                                         "年柱比肩坐辰而早年资源星不透，家境信号普通",
+                                                         "全局无金印，虽食伤旺但正式学历承载链不足"
+                                                     ],
+                       "tags":  [
+                                    "其他"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "base_rate",
+                       "root_cause":  "Absence of a visible resource star does not prove failure to graduate, but removing that shortcut still does not positively establish a university degree. The official education detail remains underdetermined.",
+                       "evidence":  [
+                                        "Options A and B agree on plain family background and differ only in degree completion.",
+                                        "The current protocol invalidates the no-resource-equals-no-degree shortcut, but no other fact uniquely proves A."
+                                    ],
+                       "counterfactual_fix":  "Remove the shortcut without claiming that it alone changes the answer. Retain low confidence pending direct stage evidence.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_education_biography",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "Absence of a visible resource star cannot alone decide degree completion or non-completion."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c5_q02",
+                       "case_id":  "e07-c5",
+                       "profile_text":  "命例五 出题： 梁真圣师傅 流派： 四柱八字 男 公历 1952-02-26 · 卯时 中国香港 乾造 壬 辰 壬 寅 壬 寅 癸 卯",
+                       "question":  "命主的健康及父母,子女情况如何?",
+                       "options":  {
+                                       "A":  "命主健康少病痛,父母健在,有子女",
+                                       "B":  "命主健康少病痛,父母离世,没有子女",
+                                       "C":  "命主亚健康多病痛,父母健在,有子女",
+                                       "D":  "命主亚健康多病痛,父母离世,没有子女"
+                                   },
+                       "prediction":  "D",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.38,
+                       "pre_reveal_decisive_facts":  [
+                                                         "寅寅卯三会木使壬水长期过度泄耗，健康承载偏弱",
+                                                         "父母印星全局不现，时柱又处于过旺食伤结构"
+                                                     ],
+                       "tags":  [
+                                    "六亲子女",
+                                    "健康灾厄"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "compound_option",
+                       "root_cause":  "The health clause was correct, but parental survival and child existence are exact biographical facts. Star absence and strong output cannot determine that both parents are dead and there are no children.",
+                       "evidence":  [
+                                        "Options C and D share poor health.",
+                                        "The distinguishing clauses require separate parent and child palace or timing evidence, which is absent."
+                                    ],
+                       "counterfactual_fix":  "Do not add star-absence rules for survival or fertility. Require clause-level evidence and keep the compound item low-confidence.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_compound_biography",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "A precise or rare clause must not beat an ordinary clause without independent evidence for the detail that distinguishes them."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c5_q05",
+                       "case_id":  "e07-c5",
+                       "profile_text":  "命例五 出题： 梁真圣师傅 流派： 四柱八字 男 公历 1952-02-26 · 卯时 中国香港 乾造 壬 辰 壬 寅 壬 寅 癸 卯",
+                       "question":  "命主那两个大运二十年,是其事业发展最为高峰时期?",
+                       "options":  {
+                                       "A":  "乙巳,丙午 1975---1994",
+                                       "B":  "丙午,丁未 1985---2004",
+                                       "C":  "丁未,戊申 1995---2014",
+                                       "D":  "乙巳,戊申 1975--1984, 2005--2014"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "B",
+                       "pre_reveal_confidence":  0.67,
+                       "pre_reveal_decisive_facts":  [
+                                                         "乙巳、丙午两运把原局旺木输出连续转成火财",
+                                                         "丁未运中丁与壬合木、未又助木，财富落地较前两运减弱"
+                                                     ],
+                       "tags":  [
+                                    "事业财富"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "relation_matrix",
+                       "root_cause":  "One stem combination and branch support were allowed to disqualify an entire decade, overriding the larger twenty-year sequence in which both candidate decades sustain the needed fire-wealth function.",
+                       "evidence":  [
+                                        "Options A and B share the Bing-Wu decade; only Yi-Si versus Ding-Wei differs.",
+                                        "The rationale scores Ding-Wei almost entirely through one stem combination instead of its full decade function."
+                                    ],
+                       "counterfactual_fix":  "Evaluate decade function before local combinations and require structural reversal before one relation can disqualify a whole luck. This changes A to B.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "salient_relation_overrides_full_structure",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "medium",
+                       "regression_tests":  [
+                                                "A salient clash, combination, or repetition must not decide the answer unless it reaches the queried role and event interface in the full structure.",
+                                                "One stem combination may not negate a decade when its branch and adjacent decade sustain the queried function."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c6_q04",
+                       "case_id":  "e07-c6",
+                       "profile_text":  "命例六 出题： Helen师傅（青术会代表） 流派： 四柱八字 男 公历 1982-05-30 · 寅时 中国香港 乾造 壬 戌 乙 巳 癸 丑 甲 寅",
+                       "question":  "命主的结婚在何年?",
+                       "options":  {
+                                       "A":  "2009",
+                                       "B":  "2010",
+                                       "C":  "2011",
+                                       "D":  "2012"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.58,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2009己丑令流年支与配偶宫丑同支",
+                                                         "该年仍在戊申官印大运，关系落地所需的稳定背景强于其后三个候选年"
+                                                     ],
+                       "tags":  [
+                                    "年份事件",
+                                    "婚姻感情"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "timing",
+                       "root_cause":  "The official 2011 marriage year lacks a clearer partner-star and spouse-palace combination than the selected 2009 day-branch repetition. Exact wedding year is underdetermined.",
+                       "evidence":  [
+                                        "2009 repeats the spouse palace in a stabilizing luck.",
+                                        "None of the candidates exposes the male spouse fire star plainly, and no text fact resolves the stage to 2011."
+                                    ],
+                       "counterfactual_fix":  "Do not patch toward 2011. Require unique spouse-star, spouse-palace, and registration-stage alignment before expert switching.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_exact_biography_year",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "For every multi-year or multi-stage item, require a same-scale matrix for all candidates, including active luck, natal-to-luck, natal-to-year, luck-to-year, composite formations, target role, and event interface."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c6_q05",
+                       "case_id":  "e07-c6",
+                       "profile_text":  "命例六 出题： Helen师傅（青术会代表） 流派： 四柱八字 男 公历 1982-05-30 · 寅时 中国香港 乾造 壬 戌 乙 巳 癸 丑 甲 寅",
+                       "question":  "父亲惹官非及太太小产于何年一齐发生?",
+                       "options":  {
+                                       "A":  "2010",
+                                       "B":  "2012",
+                                       "C":  "2013",
+                                       "D":  "2014"
+                                   },
+                       "prediction":  "A",
+                       "answer":  "C",
+                       "pre_reveal_confidence":  0.81,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2010庚寅重复时支子女宫，并被戊申大运直接冲",
+                                                         "原局巳、时与流年寅、大运申共同形成寅巳申三刑，兼动父母月柱与子女宫"
+                                                     ],
+                       "tags":  [
+                                    "年份事件",
+                                    "六亲子女",
+                                    "健康灾厄"
+                                ],
+                       "primary_failure_reason":  "unresolved",
+                       "secondary_failure_reason":  "timing",
+                       "root_cause":  "The selected 2010 year has a full penalty spanning natal chart and luck and directly repeats and strikes the child palace. The official 2013 paired biography is not recoverable.",
+                       "evidence":  [
+                                        "The decisive facts provide independent parent-month and child-palace contacts for 2010.",
+                                        "The official option joins father legal trouble and spouse miscarriage, two precise outcomes needing separate evidence."
+                                    ],
+                       "counterfactual_fix":  "Do not learn a 2013-specific mapping. Retain low confidence for exact multi-person events.",
+                       "would_change_answer":  false,
+                       "recurrence_key":  "low_identifiability_compound_biography",
+                       "fix_type":  "none",
+                       "decision":  "no_change",
+                       "overfit_risk":  "high",
+                       "regression_tests":  [
+                                                "For exact disease, appearance, occupation, kin death, or biography questions without decisive text evidence, require low confidence and prohibit an expert switch from one Bazi correspondence.",
+                                                "For every multi-year or multi-stage item, require a same-scale matrix for all candidates, including active luck, natal-to-luck, natal-to-year, luck-to-year, composite formations, target role, and event interface."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c7_q03",
+                       "case_id":  "e07-c7",
+                       "profile_text":  "命例七 出题： 培哥（鼎大图书） 流派： 四柱八字 女 公历 1970-10-05 · 戌时 中国香港 坤造 庚 戌 乙 酉 戊 午 壬 戌",
+                       "question":  "命主于那个年份做过手术?",
+                       "options":  {
+                                       "A":  "1998",
+                                       "B":  "2003",
+                                       "C":  "2007",
+                                       "D":  "2009"
+                                   },
+                       "prediction":  "D",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.73,
+                       "pre_reveal_decisive_facts":  [
+                                                         "2009己丑以丑害日支午，直接触发身体核心",
+                                                         "辛巳大运、原局酉与丑年补成巳酉丑三合金局，泄耗集中"
+                                                     ],
+                       "tags":  [
+                                    "健康灾厄"
+                                ],
+                       "primary_failure_reason":  "execution_error",
+                       "secondary_failure_reason":  "relation_matrix",
+                       "root_cause":  "Only 2009 was fully analyzed. The equal-scale matrix shows that 1998 completes a fire formation through the natal day or body branch and both Xu branches, while 2009 completes a metal formation through luck.",
+                       "evidence":  [
+                                        "The decisive facts list only 2009 and omit 1998, 2003, and 2007.",
+                                        "The calculator shows the 1998 formation has the more direct body and heat interface."
+                                    ],
+                       "counterfactual_fix":  "Run the complete candidate matrix and weight formations touching the native body interface. This changes D to A.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "temporal_candidate_comparison_omitted",
+                       "fix_type":  "solver_process",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "For every multi-year or multi-stage item, require a same-scale matrix for all candidates, including active luck, natal-to-luck, natal-to-year, luck-to-year, composite formations, target role, and event interface.",
+                                                "Fixture 1970-10-05 20:00 female: explicitly compare the 1998 fire formation with the 2009 metal formation."
+                                            ]
+                   },
+                   {
+                       "id":  "gfc_2016_e07-c7_q05",
+                       "case_id":  "e07-c7",
+                       "profile_text":  "命例七 出题： 培哥（鼎大图书） 流派： 四柱八字 女 公历 1970-10-05 · 戌时 中国香港 坤造 庚 戌 乙 酉 戊 午 壬 戌",
+                       "question":  "命主在那一个大运的运气比较好?",
+                       "options":  {
+                                       "A":  "甲申 1979---1988",
+                                       "B":  "癸未 1989---1998",
+                                       "C":  "壬午 1999---2008",
+                                       "D":  "辛巳 2009--现在"
+                                   },
+                       "prediction":  "C",
+                       "answer":  "A",
+                       "pre_reveal_confidence":  0.59,
+                       "pre_reveal_decisive_facts":  [
+                                                         "壬午运之午为戊土正印根，并与日支午重复强化承载",
+                                                         "其后辛巳运强化金泄，工作与健康接口均更不稳定"
+                                                     ],
+                       "tags":  [
+                                    "其他"
+                                ],
+                       "primary_failure_reason":  "reasoning_error",
+                       "secondary_failure_reason":  "strength_pattern",
+                       "root_cause":  "The solver treated added fire-resource support as favorable without first resolving native strength. The chart already has the day branch Wu and two Xu branches, so more fire and earth reinforces excess.",
+                       "evidence":  [
+                                        "The native chart already has strong fire and earth carrying capacity.",
+                                        "The rationale did not compare how the Jia-Shen luck adds control and output functions to the whole structure."
+                                    ],
+                       "counterfactual_fix":  "Determine native strength and structural need before calling support favorable. This changes C to A.",
+                       "would_change_answer":  true,
+                       "recurrence_key":  "salient_relation_overrides_full_structure",
+                       "fix_type":  "reasoning_rule",
+                       "decision":  "patch",
+                       "overfit_risk":  "low",
+                       "regression_tests":  [
+                                                "A salient clash, combination, or repetition must not decide the answer unless it reaches the queried role and event interface in the full structure.",
+                                                "A chart with day-branch Wu and double Xu must not automatically prefer another fire-resource luck over a control-and-output luck."
+                                            ]
+                   }
+               ]
+}

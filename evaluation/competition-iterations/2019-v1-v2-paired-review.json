@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "review_type": "post_reveal_paired_audit",
+  "year": 2019,
+  "split_status": "exposed_regression",
+  "comparison": {
+    "baseline": "2019-v1-baseline",
+    "candidate": "2019-v2-candidate",
+    "total_questions": 40,
+    "same_prediction_count": 32,
+    "different_prediction_count": 8,
+    "v1_correct": 15,
+    "v2_correct": 14,
+    "v1_accuracy": 0.375,
+    "v2_accuracy": 0.35,
+    "candidate_minus_baseline_correct": -1,
+    "candidate_minus_baseline_accuracy": -0.025
+  },
+  "aggregate": {
+    "outcomes": {
+      "win": 2,
+      "loss": 3,
+      "both_wrong": 3,
+      "both_correct": 0
+    },
+    "guard_recommendations": {
+      "keep": 3,
+      "revise": 5,
+      "revert": 0
+    },
+    "summary": "The mandatory decision-card style audit produced two useful event-mapping corrections but three direct regressions and three unresolved changes. Keep the time-matrix, anti-circularity, and non-identifiability protections; revise how overall functional chains, negated questions, wealth granularity, and polarity checks interact with clause coverage and domain selection. No whole-guard revert is supported by this year alone."
+  },
+  "scope": {
+    "holdout_years_inspected": [],
+    "holdout_artifacts_inspected": false,
+    "skill_or_prediction_files_modified": false
+  },
+  "records": [
+    {
+      "id": "gfc_2019_e10-c2_q03",
+      "answer": "B",
+      "v1": {
+        "prediction": "D",
+        "correct": false
+      },
+      "v2": {
+        "prediction": "B",
+        "correct": true
+      },
+      "outcome": "win",
+      "minimal_cause": "V2 shifted the 2003 event mapping from a conspicuous hurt-officer-versus-officer school/family conflict to the active Yi-Si wealth background plus the Mao-Wei wealth network, changing the predicted domain from discipline trouble to financial gain.",
+      "current_skill_guard": {
+        "name": "decision_card.line_4_overall_function_chain_and_section_6_full_time_matrix",
+        "likely_effect": "It forced the annual trigger to be read inside the active luck-cycle theme instead of letting one conspicuous conflict decide the event.",
+        "recommendation": "keep",
+        "reason": "The domain correction was decisive and matched the official answer; the exact illegal-gambling and amount clauses should still remain low confidence under the detail-burden rule."
+      },
+      "evidence": [
+        "V1 cited Gui hurting the two Ding officers and Wei repeating the month branch, then chose exam failure, parental punishment, and running away.",
+        "V2 cited the Yi-Si wealth luck and the Mao-Wei wealth network, then chose financial winnings; the official answer is B."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q04",
+      "answer": "A",
+      "v1": {
+        "prediction": "A",
+        "correct": true
+      },
+      "v2": {
+        "prediction": "D",
+        "correct": false
+      },
+      "outcome": "loss",
+      "minimal_cause": "V2 promoted a broad teaching-brokerage-business functional story over clause-level verification of the three exact occupations, replacing the correct professional-service sequence with a more dramatic mixed sequence.",
+      "current_skill_guard": {
+        "name": "decision_card.line_4_overall_function_chain",
+        "likely_effect": "The mixed officer-wealth and strong-root structure was mapped too directly to tutoring, gambling brokerage, and company ownership.",
+        "recommendation": "revise",
+        "reason": "For exact career-history options, line 1 clause coverage and line 5 low-identifiability limits must take precedence over a broadly coherent functional chain; no single structural story should validate all three occupations."
+      },
+      "evidence": [
+        "V1 selected A from an officer-seal-wealth professional-service chain and was correct.",
+        "V2 only established a generic teaching, brokerage, and operating mix; it did not independently support illegal gambling brokerage or finance-company ownership, yet selected D."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c2_q05",
+      "answer": "C",
+      "v1": {
+        "prediction": "A",
+        "correct": false
+      },
+      "v2": {
+        "prediction": "C",
+        "correct": true
+      },
+      "outcome": "win",
+      "minimal_cause": "V2 stopped translating 2018 branch conflict directly into catastrophic investment failure and instead treated the luck-cycle transition into output-plus-wealth as a startup-resource activation.",
+      "current_skill_guard": {
+        "name": "decision_card.line_4_overall_function_chain_plus_section_8_symmetric_outcome_audit",
+        "likely_effect": "It separated a change interface from an assumed negative terminal outcome and compared positive and negative event mappings.",
+        "recommendation": "keep",
+        "reason": "This corrected a classic conflict-equals-disaster error and selected the official startup answer."
+      },
+      "evidence": [
+        "V1 used Mao-You conflict and the Shen-You-Xu metal formation to infer failed joint stock speculation and huge debt.",
+        "V2 used the transition into Gui-Mao output-and-wealth luck to infer investment-backed company formation; the official answer is C."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q04",
+      "answer": "A",
+      "v1": {
+        "prediction": "A",
+        "correct": true
+      },
+      "v2": {
+        "prediction": "C",
+        "correct": false
+      },
+      "outcome": "loss",
+      "minimal_cause": "V2 upgraded an officer-seal organizational tendency and an officer-wealth luck background into the exact high-status package of home, car, executive role, and million-level annual income.",
+      "current_skill_guard": {
+        "name": "decision_card.line_4_overall_function_chain",
+        "likely_effect": "A plausible institutional-management direction overrode the separate evidentiary burden of each asset, title, and income clause.",
+        "recommendation": "revise",
+        "reason": "Line 5 granularity and base rate must cap line 4: a role tendency cannot establish four conjunctive high-burden outcomes without independent support."
+      },
+      "evidence": [
+        "V2 evidence supported only an institutional or management path and greater officer-wealth activation.",
+        "Option C additionally requires a home, a car, an executive title, and annual income of one million; the official answer is A, which V1 retained from the weak-daymaster and excessive officer-wealth burden."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c3_q05",
+      "answer": "D",
+      "v1": {
+        "prediction": "D",
+        "correct": true
+      },
+      "v2": {
+        "prediction": "A",
+        "correct": false
+      },
+      "outcome": "loss",
+      "minimal_cause": "On the negated prompt, V2 treated the option with the weakest positive support and the most extra assumptions as the event that did not occur; lack of chart support was used as evidence of historical absence.",
+      "current_skill_guard": {
+        "name": "decision_card.line_1_clause_matrix_and_line_5_detail_burden_on_negated_questions",
+        "likely_effect": "The burden filter was inverted to choose the least-supported biography as the negative answer.",
+        "recommendation": "revise",
+        "reason": "For 'which did not happen' questions, absence of support is not contradiction. Require a positive incompatibility with the option or preserve the low-confidence direct candidate; do not infer non-occurrence from weak identifiability."
+      },
+      "evidence": [
+        "V2 called partnership failure the option with the most assumptions and weakest direct operating chain, then selected A as the non-event.",
+        "V1 explicitly compared all four histories and judged mechanical technical work least compatible; the official non-event is D."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q02",
+      "answer": "C",
+      "v1": {
+        "prediction": "B",
+        "correct": false
+      },
+      "v2": {
+        "prediction": "A",
+        "correct": false
+      },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2 flipped the interpretation of the 1998 conflict from entrepreneurial stop-loss to entrepreneurial success, but both versions stayed inside the business pair and failed to compare that domain against the relationship-and-property pair.",
+      "current_skill_guard": {
+        "name": "decision_card.line_6_strongest_counterevidence_plus_section_8_symmetric_outcome_audit",
+        "likely_effect": "The candidate correctly challenged conflict-equals-loss but performed the positive-versus-negative audit before resolving the option domain.",
+        "recommendation": "revise",
+        "reason": "Make line 2 subject-domain-stage selection a prerequisite to polarity review. A polarity flip inside the wrong domain cannot pass the card."
+      },
+      "evidence": [
+        "V1 chose business failure B from the Yin-Si-Shen punishment and V2 chose profitable partnership A from exposed wealth and a business transition.",
+        "The official answer is C, a partner-co-purchased-property and financial-distress event; neither version supplied relationship or property-interface evidence."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c4_q03",
+      "answer": "A",
+      "v1": {
+        "prediction": "C",
+        "correct": false
+      },
+      "v2": {
+        "prediction": "D",
+        "correct": false
+      },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2 used the Ding-You completion of the Si-You-Chou metal frame to reverse which luck cycle was worse, while retaining the already-wrong high-opportunity and large-profit premise.",
+      "current_skill_guard": {
+        "name": "decision_card.line_3_deterministic_comparison_and_section_6_three_party_formation",
+        "likely_effect": "The fuller relation matrix changed the relative-cycle ranking, but the formation was assigned a direction without first settling the overall wealth magnitude and useful-versus-harmful function.",
+        "recommendation": "revise",
+        "reason": "Keep same-scale cycle comparison, but decide magnitude under line 5 separately and translate a completed formation through strength and functional usefulness before using it to reverse the ordering."
+      },
+      "evidence": [
+        "V1 selected C: high wealth, with Bing-Shen worse and Ding-You better; only its relative ordering matched the official answer.",
+        "V2 selected D because Ding-You completes the metal frame, reversing the ordering; the official answer A says overall floating and low-return, with Bing-Shen worse and Ding-You better."
+      ]
+    },
+    {
+      "id": "gfc_2019_e10-c5_q02",
+      "answer": "D",
+      "v1": {
+        "prediction": "A",
+        "correct": false
+      },
+      "v2": {
+        "prediction": "C",
+        "correct": false
+      },
+      "outcome": "both_wrong",
+      "minimal_cause": "V2 stopped using the existence of another marriage-year question as proof of a formal marriage and instead mapped repeated spouse-palace conflict to an unstable on-off relationship.",
+      "current_skill_guard": {
+        "name": "section_1_no_cross_question_circular_facts_plus_section_4_low_identifiability_boundary",
+        "likely_effect": "It removed a weak cross-question presupposition from the evidence base and lowered confidence in exact relationship biography.",
+        "recommendation": "keep",
+        "reason": "The official answer is sexual orientation, which the current Skill explicitly treats as a low-identifiability detail that Bazi should not infer. This miss is not a valid reason to tune the guard toward D; at most, execution should also remember that spouse-palace conflict does not prove 'no true marriage'."
+      },
+      "evidence": [
+        "V1 cited the separate marriage-year question as textual support for A; V2 omitted that presupposition and chose C from repeated spouse-palace conflict.",
+        "The official answer is D, an identity attribute not established by either score record's chart evidence and explicitly outside reliable expert takeover in the current protocol."
+      ]
+    }
+  ]
+}

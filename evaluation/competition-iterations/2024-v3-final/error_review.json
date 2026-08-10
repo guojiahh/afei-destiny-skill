@@ -1,0 +1,761 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2024_e15-c1_q02",
+      "case_id": "e15-c1",
+      "profile_text": "命例一 出题： 陈俊燊老师 女 公历 1980-08-24 坤造 庚 申 甲 申 己 巳 壬 申",
+      "question": "以下哪项描述合乎命主的学历情况？",
+      "options": {
+        "A": "只有小学程度学历",
+        "B": "只有中学程度学历",
+        "C": "拥有大学程度学历",
+        "D": "拥有硕士程度学历"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.52,
+      "pre_reveal_decisive_facts": [
+        "原局伤官旺，学习输出能力有基础，但印星只藏于巳。",
+        "17至26岁行壬午运，午火能补印身，较支持完成一般高等教育。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c1_q03",
+      "case_id": "e15-c1",
+      "profile_text": "命例一 出题： 陈俊燊老师 女 公历 1980-08-24 坤造 庚 申 甲 申 己 巳 壬 申",
+      "question": "以下哪项描述合乎命主的配偶工作状况？",
+      "options": {
+        "A": "配偶是打工仔一名，普通职级收入，对家庭没有助力",
+        "B": "配偶是打工仔一名，中高职级收入，对家庭很有助力",
+        "C": "配偶经商，败多于成，颇多外债，对家庭没有助力",
+        "D": "配偶经商，成多于败，颇有盈余，对家庭很有助力"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.38,
+      "pre_reveal_decisive_facts": [
+        "女命夫星甲官虽透月干，却受旺庚伤官牵制。",
+        "夫星根气和助力证据不足，不宜上推成功经商或高收入。"
+      ],
+      "tags": [
+        "婚姻感情",
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c1_q04",
+      "case_id": "e15-c1",
+      "profile_text": "命例一 出题： 陈俊燊老师 女 公历 1980-08-24 坤造 庚 申 甲 申 己 巳 壬 申",
+      "question": "以下哪项描述合乎命主的子息状况？",
+      "options": {
+        "A": "没有子女，因身体不能生育",
+        "B": "有三女一子",
+        "C": "只有一子，2004甲申年出世",
+        "D": "只有一女，2010庚寅年出世"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.36,
+      "pre_reveal_decisive_facts": [
+        "女命食伤子女星在三申中重复而旺，时支亦为申。",
+        "2004甲申虽伏吟月柱并引动时支，但单一出生年不足以压过原局多子女倾向。"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c1_q05",
+      "case_id": "e15-c1",
+      "profile_text": "命例一 出题： 陈俊燊老师 女 公历 1980-08-24 坤造 庚 申 甲 申 己 巳 壬 申",
+      "question": "在2022壬寅年，以下哪项是命主的婚姻经历？",
+      "options": {
+        "A": "命主之前已有外遇，2022年被丈夫发现，但得到丈夫原谅，至今未离婚",
+        "B": "命主之前已有外遇，2022年被丈夫发现，得不到丈夫原谅，当年搞离婚",
+        "C": "丈夫之前已有外遇，2022年被命主发现，但得到命主原谅，至今未离婚",
+        "D": "丈夫之前已有外遇，2022年被命主发现，得不到命主原谅，当年搞离婚"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "2022壬寅在庚辰运，寅同时冲三申并与原局巳申构成三刑。",
+        "流年直接引出寅中官星且强烈改变配偶宫网络，较支持发现配偶问题并走向终止。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c2_q02",
+      "case_id": "e15-c2",
+      "profile_text": "命例二 出题： 乐只君老师 男 公历 1972-01-08 乾造 辛 亥 辛 丑 戊 戌 戊 午",
+      "question": "命主的男女关系和婚姻情况？",
+      "options": {
+        "A": "一生未娶",
+        "B": "已娶妻，关系良好，未见有异",
+        "C": "于虚龄24至33期间娶妻，但因妻子过于情绪化，而影响了感情",
+        "D": "于虚龄34至43娶妻，但婚后不久，妻即离世"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "男命财星藏于亥、丑，配偶接口存在但并不极端。",
+        "日支戌未见原局直接冲破，妻早亡或终身未娶均缺少足够结构证据。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c2_q04",
+      "case_id": "e15-c2",
+      "profile_text": "命例二 出题： 乐只君老师 男 公历 1972-01-08 乾造 辛 亥 辛 丑 戊 戌 戊 午",
+      "question": "命主的母亲于哪年离世？",
+      "options": {
+        "A": "1989",
+        "B": "1990",
+        "C": "2011",
+        "D": "2021"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.52,
+      "pre_reveal_decisive_facts": [
+        "2021辛丑伏吟月柱，并以丑害时支午火印星。",
+        "四个候选中2021同时具备母亲印星受损、父母宫重复及更合理代际年龄。"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c3_q01",
+      "case_id": "e15-c3",
+      "profile_text": "命例三 出题： 林耀光老师 男 公历 1961-12-30 乾造 辛 丑 庚 子 丁 酉 辛 丑",
+      "question": "大约哪段时间，运程最佳？",
+      "options": {
+        "A": "23—32岁",
+        "B": "33—42岁",
+        "C": "43—52岁",
+        "D": "53—62岁"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "丁火在子月无木火根，原局金水财杀成势，优先按从势假设比较。",
+        "23至32岁以戊戌、丁酉运为主，较后续木火运更少破坏原局从势。"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c3_q04",
+      "case_id": "e15-c3",
+      "profile_text": "命例三 出题： 林耀光老师 男 公历 1961-12-30 乾造 辛 丑 庚 子 丁 酉 辛 丑",
+      "question": "有凶劫之灾出现的时间？",
+      "options": {
+        "A": "1965年4岁",
+        "B": "1968年7岁",
+        "C": "1971年10岁",
+        "D": "1974年13岁"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "原局丁火无根而金水从势，最忌强木火打破气势。",
+        "1974甲寅在己亥运，甲印透出且寅亥合木，较其余候选形成更直接的破格压力。"
+      ],
+      "tags": [
+        "健康灾厄"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c3_q05",
+      "case_id": "e15-c3",
+      "profile_text": "命例三 出题： 林耀光老师 男 公历 1961-12-30 乾造 辛 丑 庚 子 丁 酉 辛 丑",
+      "question": "哪一个时段，破财最严重？",
+      "options": {
+        "A": "23—32岁",
+        "B": "33—42岁",
+        "C": "43—52岁",
+        "D": "53—62岁"
+      },
+      "prediction": "D",
+      "answer": "C",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "原局财星极旺而日主无根，较符合从财杀而非普通身弱取印比。",
+        "53至62岁由乙未转甲午，木火连续逆原局财杀气势，破财压力最集中。"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c4_q02",
+      "case_id": "e15-c4",
+      "profile_text": "命例四 出题： 涂培旭老师 女 公历 1983-10-28 坤造 癸 亥 壬 戌 己 丑 乙 丑",
+      "question": "第一段婚姻是何时嫁？",
+      "options": {
+        "A": "2003",
+        "B": "2005",
+        "C": "2007",
+        "D": "2009"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "2005乙酉在甲子运，乙夫星直接出现，酉与日、时两丑半合。",
+        "2003虽强冲日时两丑，但更偏剧烈改变，结婚落地信号不如2005完整。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c4_q04",
+      "case_id": "e15-c4",
+      "profile_text": "命例四 出题： 涂培旭老师 女 公历 1983-10-28 坤造 癸 亥 壬 戌 己 丑 乙 丑",
+      "question": "命主在那一年结束了第一段婚姻？",
+      "options": {
+        "A": "2011搬离，2012结束",
+        "B": "2013搬离，2014结束",
+        "C": "2015搬离，2016结束",
+        "D": "2017搬离，2018结束"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.7,
+      "pre_reveal_decisive_facts": [
+        "2015乙未在乙丑运，未同时冲日支、时支及大运丑。",
+        "该年又补齐原局丑戌未三刑，明显强于其余候选的婚居分离触发。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c5_q01",
+      "case_id": "e15-c5",
+      "profile_text": "命例五 出题： 张评老师 女 公历 1971-04-12 坤造 辛 亥 壬 辰 丁 卯 戊 申",
+      "question": "命主在哪一年登记结婚？",
+      "options": {
+        "A": "1998",
+        "B": "1999",
+        "C": "2002",
+        "D": "2003"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.62,
+      "pre_reveal_decisive_facts": [
+        "2002壬午在乙未运，壬正官夫星伏吟月干并与日主丁合。",
+        "午未六合且亥卯未木局完成，较1999的单纯配偶宫重复更符合登记落地。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c5_q02",
+      "case_id": "e15-c5",
+      "profile_text": "命例五 出题： 张评老师 女 公历 1971-04-12 坤造 辛 亥 壬 辰 丁 卯 戊 申",
+      "question": "命主在哪一年登记离婚？",
+      "options": {
+        "A": "2010",
+        "B": "2017",
+        "C": "2018",
+        "D": "没有离婚"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "2017丁酉直接冲日支卯，先形成婚姻危机。",
+        "2018戊戌随后合日支、冲月支，较符合危机后完成法律状态变更的时间顺序。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c5_q03",
+      "case_id": "e15-c5",
+      "profile_text": "命例五 出题： 张评老师 女 公历 1971-04-12 坤造 辛 亥 壬 辰 丁 卯 戊 申",
+      "question": "命主工作收入平均如何？",
+      "options": {
+        "A": "年薪不足50万新台币",
+        "B": "年薪过50万新台币",
+        "C": "年薪过100万新台币",
+        "D": "年薪过150万新台币"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "丁火有卯印根，但财官偏重，具稳定工作收入链而承财不算极强。",
+        "缺少把收入上推至高档年薪的独立证据，采用普通中段基准。"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c5_q04",
+      "case_id": "e15-c5",
+      "profile_text": "命例五 出题： 张评老师 女 公历 1971-04-12 坤造 辛 亥 壬 辰 丁 卯 戊 申",
+      "question": "命主名下拥有房产吗？",
+      "options": {
+        "A": "有一间公寓",
+        "B": "有二间公寓",
+        "C": "有三间公寓",
+        "D": "没有房产"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.4,
+      "pre_reveal_decisive_facts": [
+        "命局财星与辰土资产接口均存在，完全无房产并非首选。",
+        "具体套数低可识别，缺少支持两套或三套的多重独立证据。"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c6_q01",
+      "case_id": "e15-c6",
+      "profile_text": "命例六 出题： 陈依婷老师 女 公历 1983-03-26 坤造 癸 亥 乙 卯 癸 丑 己 未",
+      "question": "1998年开始—1999年结束的感情对象类型，分手原因?",
+      "options": {
+        "A": "高富帅，冷酷；分手原因—冷暴力，消失不见",
+        "B": "矮帅，学渣；分手原因—花女人钱，爱PUA",
+        "C": "书呆子，学霸；分手原因—太爱批评",
+        "D": "痞子，学渣；分手原因—脚踏两船"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.34,
+      "pre_reveal_decisive_facts": [
+        "1998戊寅透正官对象星，寅与原局亥合而又受丁巳运刑害。",
+        "该组合支持条件较好但关系迅速冷却；花钱、学渣或脚踏两船均缺少独立证据。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c6_q02",
+      "case_id": "e15-c6",
+      "profile_text": "命例六 出题： 陈依婷老师 女 公历 1983-03-26 坤造 癸 亥 乙 卯 癸 丑 己 未",
+      "question": "1999年恋爱，2002分手；类型与分手原因?",
+      "options": {
+        "A": "高富帅，热心体贴；分手原因—命主外遇",
+        "B": "长相普通，善良；分手原因—家庭反对",
+        "C": "肥壮，大男子主义；分手原因—控制欲过强",
+        "D": "瘦高，胆小怕事；分手原因—毕业后异地发展而分手"
+      },
+      "prediction": "C",
+      "answer": "A",
+      "pre_reveal_confidence": 0.42,
+      "pre_reveal_decisive_facts": [
+        "1999己卯透七杀对象星，较正官更偏强势和控制。",
+        "2002壬午以午害日支丑，并引动时支未，支持因关系控制与生活安排而分开。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c6_q03",
+      "case_id": "e15-c6",
+      "profile_text": "命例六 出题： 陈依婷老师 女 公历 1983-03-26 坤造 癸 亥 乙 卯 癸 丑 己 未",
+      "question": "2002年认识，大学师兄；2006年结婚，2009年离婚；对象类型和离婚原因?",
+      "options": {
+        "A": "富二代，玩世不恭；离婚原因—对方花心出轨。",
+        "B": "帅气，聪明有才；离婚原因—吵架多，命主离家修行。",
+        "C": "高大，大男人主义；离婚原因—婚后为钱吵架，家暴。",
+        "D": "矮帅，多金；离婚原因—命主出轨"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.5,
+      "pre_reveal_decisive_facts": [
+        "对象星为戊己官杀，2006丙戌结婚时戌刑日支丑并破时支未。",
+        "2009己丑七杀透、日支伏吟且丑未冲，较支持强势冲突和婚后现实财务矛盾。"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情",
+        "六亲子女"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c6_q04",
+      "case_id": "e15-c6",
+      "profile_text": "命例六 出题： 陈依婷老师 女 公历 1983-03-26 坤造 癸 亥 乙 卯 癸 丑 己 未",
+      "question": "2012—2013之间，发生了一件严重的事，遇到一个桃花帮助了自己?",
+      "options": {
+        "A": "误入歧途，被骗去外地工作，某暧昧同事把自己救出去",
+        "B": "投资失误，欠了几百万，某暧昧富豪，借钱给自己渡过难关",
+        "C": "严重意外导致无法工作，对自己有意思的大叔给自己生活费",
+        "D": "遇到宗教老千，倾家荡产，某暧昧富豪提供了自己金钱帮助"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "2013癸巳在戊午运，巳午未三会火局完成，财务主题被急剧放大。",
+        "投资失误与资金援助比外地诱骗、长期伤残或特定宗教骗局需要更少附加假设。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c7_q02",
+      "case_id": "e15-c7",
+      "profile_text": "命例七 出题： 林书宇老师 女 公历 1980-09-21 坤造 庚 申 乙 酉 丁 酉 丙 午",
+      "question": "命主的婚姻状况如何？",
+      "options": {
+        "A": "未婚，育有二女",
+        "B": "已婚，育有二子",
+        "C": "离婚，育有一子一女",
+        "D": "已婚，育有一子一女"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.46,
+      "pre_reveal_decisive_facts": [
+        "配偶宫酉与月支酉重复且自刑，婚姻稳定度偏弱。",
+        "官星仅藏于申，正式关系支撑不强；结合两名子女前提，离婚比终身未婚更合结构。"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c8_q03",
+      "case_id": "e15-c8",
+      "profile_text": "命例八 出题： 陈昕霓老师 男 公历 2007-01-31 乾造 丙 戌 辛 丑 乙 丑 辛 巳",
+      "question": "命主的身材外貌如何？",
+      "options": {
+        "A": "身材高瘦皮肤白皙，细眼薄唇，秀气温文",
+        "B": "身材高大魁梧，浓眉大眼，外表威严",
+        "C": "身材矮瘦皮肤蜡黄，五官扁平，其貌不扬",
+        "D": "身材偏矮微胖，圆脸咪眼，外表和善"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "丑月、双丑与戌使土形偏重，乙木又弱而无根。",
+        "整体寒湿土金重，更支持偏矮圆润和和善外观，而非高大魁梧。"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    },
+    {
+      "id": "gfc_2024_e15-c8_q04",
+      "case_id": "e15-c8",
+      "profile_text": "命例八 出题： 陈昕霓老师 男 公历 2007-01-31 乾造 丙 戌 辛 丑 乙 丑 辛 巳",
+      "question": "命主在2016年，家中发生何事？",
+      "options": {
+        "A": "父亲破产，被判入穷籍",
+        "B": "婆婆因急病去世",
+        "C": "父亲严重车祸，休养在家，无法工作。",
+        "D": "父母离异"
+      },
+      "prediction": "C",
+      "answer": "D",
+      "pre_reveal_confidence": 0.68,
+      "pre_reveal_decisive_facts": [
+        "2016丙申在壬寅运，申与大运寅正冲。",
+        "流年又与原局巳及大运寅构成寅巳申三刑，强烈支持突发移动或交通类事故。"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": null,
+      "secondary_failure_reason": null,
+      "root_cause": null,
+      "evidence": [],
+      "counterfactual_fix": null,
+      "would_change_answer": null,
+      "recurrence_key": null,
+      "fix_type": null,
+      "decision": null,
+      "overfit_risk": null,
+      "regression_tests": []
+    }
+  ]
+}

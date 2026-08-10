@@ -1,0 +1,795 @@
+{
+  "primary_failure_reasons": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "secondary_failure_reasons": [
+    "input_extraction",
+    "calendar_chart",
+    "luck_cycle",
+    "relation_matrix",
+    "strength_pattern",
+    "role_attribution",
+    "timing",
+    "event_mapping",
+    "option_negation",
+    "compound_option",
+    "base_rate",
+    "uncalibrated_guess"
+  ],
+  "errors": [
+    {
+      "id": "gfc_2017_e08-c1_q01",
+      "case_id": "e08-c1",
+      "profile_text": "命例一 出题： 邵温老师 流派： 八字 男 公历 1961-10-05 · 20:05 戌时 新加坡 乾造 辛 丑 丁 酉 辛 未 戊 戌",
+      "question": "请问命造出生那年(1961年)发生何事?",
+      "options": {
+        "A": "全家移民",
+        "B": "父亲遇难死亡",
+        "C": "卖给别人",
+        "D": "家中火灾"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "1961辛丑流年伏吟年柱，并以丑直接冲日支未",
+        "原局父财乙木仅藏于未，处酉月金旺且受丑未冲"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "The chart and 1961 matrix identify severe early-family disruption but do not distinguish being sold from a father's death; both are high-burden biographical labels beyond the supplied evidence.",
+      "evidence": [
+        "The deterministic calculator reproduces 辛丑 丁酉 辛未 戊戌 and confirms 1961伏吟年柱、丑冲未.",
+        "The pre-reveal facts correctly located a weak father-wealth interface, but that evidence supports family or father disruption only and does not positively identify sale to another household.",
+        "A generic rule rejecting unsupported death would remove the prediction but would not uniquely select the official event."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix: retain a low-confidence family-disruption category and do not infer a unique extreme biography without an independent textual clue.",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_extreme_biographical_event",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Synthetic birth-year question with the same伏吟/冲 pattern and two different extreme family outcomes must not claim either outcome is uniquely determined.",
+        "Calculator regression: 1961-10-05 20:05 male remains 辛丑 丁酉 辛未 戊戌 with 1961年柱伏吟 and 丑未冲."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q02",
+      "case_id": "e08-c1",
+      "profile_text": "命例一 出题： 邵温老师 流派： 八字 男 公历 1961-10-05 · 20:05 戌时 新加坡 乾造 辛 丑 丁 酉 辛 未 戊 戌",
+      "question": "请问命造在第一个大运(1970—1979)的经历是?",
+      "options": {
+        "A": "无心念书而提早服兵役",
+        "B": "学业成绩很好，但家中穷困没法继续念书",
+        "C": "学业成绩优良而获取助学金继续念书",
+        "D": "常常打架閙事而被学校开除"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "原局正偏印有根且七杀透月，学习与纪律接口并不弱",
+        "丙申运官星到位，但申酉戌金势加重，原局财星仍极弱"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "The first luck cycle supports both educational capacity and a disciplined institutional environment, but the chart does not reliably identify lack of interest plus early military service versus good grades followed by financial withdrawal.",
+      "evidence": [
+        "The calculator confirms 丙申 as the 1970-1979 primary luck cycle.",
+        "The pre-reveal印杀 and申酉戌 observations are internally valid but do not encode the option's exact school motivation or military-service history.",
+        "Neither a study-capacity rule nor a discipline rule supplies the missing biographical discriminator."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; treat exact school-motivation and service-history options as low-identifiability unless the profile supplies an external clue.",
+      "would_change_answer": false,
+      "recurrence_key": "low_identifiability_education_service_biography",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Synthetic adolescent-luck question where印杀 and discipline signals fit both school continuation and institutional service must remain low confidence.",
+        "Ensure no rule maps a single官杀/印 combination directly to military service or school withdrawal."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c1_q04",
+      "case_id": "e08-c1",
+      "profile_text": "命例一 出题： 邵温老师 流派： 八字 男 公历 1961-10-05 · 20:05 戌时 新加坡 乾造 辛 丑 丁 酉 辛 未 戊 戌",
+      "question": "命造从事过那的行业",
+      "options": {
+        "A": "现在演员 过去厨师",
+        "B": "现在演员 过去军人",
+        "C": "现在烧焊 过去行船",
+        "D": "现在烧焊 过去售货员"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "月干七杀透出，原局印旺，纪律型经历的结构接口较强",
+        "中年连续行癸巳、壬辰食伤运，公开表达功能较早年明显增强"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "The reasoning recovered the shared current occupation but the distinguishing past occupation, chef versus soldier, is too specific to infer from the same broad discipline and output chains.",
+      "evidence": [
+        "Both candidate options share the actor clause, so only the past occupation can change the answer.",
+        "七杀印 can support structured work and食伤财 can support service or cooking, but neither chain uniquely identifies one historical job title.",
+        "A profession dictionary would merely encode a revealed biography and fail the counterfactual generalization test."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; preserve broad occupational-function inference and avoid switching between exact job titles without profile evidence.",
+      "would_change_answer": false,
+      "recurrence_key": "exact_occupation_subtype_not_identifiable",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Paired synthetic options sharing the same current role but differing only by chef versus soldier must not be resolved by one ten-god label.",
+        "Profession regression must score function chains, not use a one-to-one ten-god-to-job lookup."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q01",
+      "case_id": "e08-c2",
+      "profile_text": "命例二 出题： 陈依婷 流派： 紫微斗数 男 公历 1980-06-25 · 23:20 中国江苏 乾造 庚 申 壬 午 己 巳 丙 子",
+      "question": "命主的家庭背景?",
+      "options": {
+        "A": "家庭富裕，父母恩爱",
+        "B": "家庭富裕，父母异离",
+        "C": "平民家庭，父母恩爱",
+        "D": "平民家庭，父母异离"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "壬正财透月并得申子水根，早年资源条件不弱",
+        "月支午与时支子正冲，家庭关系与生活结构存在明显分离接口"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "The answer correctly identified parental separation but upgraded the independent wealth clause from 财星 presence to wealthy-family status without discriminative evidence or an ordinary-background prior.",
+      "evidence": [
+        "The pre-reveal 子午冲 fact supports the separation dimension shared by B and D.",
+        "壬财透出并有申子来源 shows a resource channel, not the family's wealth tier; the Skill explicitly separates财出现 from being rich.",
+        "Once the two option dimensions are scored separately, the unsupported wealthy clause is the weakest necessary clause."
+      ],
+      "counterfactual_fix": "Split every 2x2 family option into wealth and parental-relationship clauses; when only relationship is discriminated, use the ordinary-background prior instead of upgrading from财星 presence.",
+      "would_change_answer": true,
+      "recurrence_key": "compound_option_weakest_clause_not_scored",
+      "fix_type": "reasoning_rule",
+      "decision": "patch",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic 2x2 family-background item with a strong separation signal but equivocal wealth must select the ordinary-background separated-parent combination.",
+        "A chart with rooted财 but no independent family-asset evidence must not be labeled wealthy solely from财 presence."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q03",
+      "case_id": "e08-c2",
+      "profile_text": "命例二 出题： 陈依婷 流派： 紫微斗数 男 公历 1980-06-25 · 23:20 中国江苏 乾造 庚 申 壬 午 己 巳 丙 子",
+      "question": "命主的学历及职业模式?",
+      "options": {
+        "A": "学历大学，创业者，拥有自己的公司企业",
+        "B": "学历大学，上班打工",
+        "C": "高中辍学，创业者，拥有自己的公司企业",
+        "D": "高中辍学，上班打工"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.56,
+      "pre_reveal_decisive_facts": [
+        "原局印旺、伤官透且财星有根，兼具学习承载和输出变现链",
+        "青年甲申运官星进入，申又加强伤官财源，制度教育与自主经营均有接口"
+      ],
+      "tags": [
+        "事业财富",
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "base_rate",
+      "root_cause": "The reasoning treated a viable output-to-wealth chain as sufficient evidence for entrepreneurship even though the same facts also supported ordinary employment and the options shared the university clause.",
+      "evidence": [
+        "The pre-reveal record explicitly says both institutional education and autonomous operation have interfaces.",
+        "No supplied fact establishes ownership, risk taking, capital formation, or an independent company.",
+        "Under the protocol, an exact founder-versus-employee label is low-identifiability and ordinary employment is the proper tie-breaker."
+      ],
+      "counterfactual_fix": "When education is shared and entrepreneur versus employee remains structurally tied, require an independent ownership/risk interface before overriding the employment base rate.",
+      "would_change_answer": true,
+      "recurrence_key": "base_rate_status_upgrade_without_discriminative_evidence",
+      "fix_type": "reasoning_rule",
+      "decision": "defer",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic university graduate with both官印 and食伤生财 but no ownership clue must default to employee rather than founder.",
+        "Adding explicit repeated ownership and capital-risk evidence must allow the entrepreneur option to win."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c2_q05",
+      "case_id": "e08-c2",
+      "profile_text": "命例二 出题： 陈依婷 流派： 紫微斗数 男 公历 1980-06-25 · 23:20 中国江苏 乾造 庚 申 壬 午 己 巳 丙 子",
+      "question": "命主当下的财富等级?",
+      "options": {
+        "A": "父母有产业，自己有存款，总值约500万美元",
+        "B": "父母无产业，白手起家，约10万美元积蓄",
+        "C": "父母无产业，赚多少花多少，只有债务，没有存款",
+        "D": "父母有产业，自己无积蓄，靠父母较多，名下只有房产约200万美元"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.48,
+      "pre_reveal_decisive_facts": [
+        "己土得午巳印比而能承财，壬癸财星又得申子之根",
+        "伤官生财链完整，较支持自有经营所得而非长期依赖或纯负债"
+      ],
+      "tags": [
+        "事业财富"
+      ],
+      "primary_failure_reason": "option_parse",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "The selected option contradicted the solver's own decisive statement that wealth was self-generated rather than dependent on parental assets; only the large dollar amount matched the optimistic wealth reading.",
+      "evidence": [
+        "The pre-reveal evidence says the chain supports own operating income rather than long-term dependence.",
+        "Option A requires parental industry and a much higher wealth tier, while option B contains the white-hand/self-made clause aligned with that evidence.",
+        "This is a clause-to-option mapping failure before any deeper wealth interpretation is needed."
+      ],
+      "counterfactual_fix": "Create a clause matrix for parent assets, source of wealth, savings tier, and debt; reject any compound option containing a decisive contradiction even if another clause looks attractive.",
+      "would_change_answer": true,
+      "recurrence_key": "compound_option_weakest_clause_not_scored",
+      "fix_type": "option_parser_guard",
+      "decision": "patch",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "A four-option wealth item where the analysis says self-made must reject every option requiring parental assets before ranking dollar amounts.",
+        "Compound-option mapper must report a contradiction when any necessary clause opposes a decisive fact."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q01",
+      "case_id": "e08-c3",
+      "profile_text": "命例三 出题： 李袁鸣 流派： 八字 女 公历 1961-01-25 · 申时 马来西亚 坤造 庚 子 己 丑 戊 午 庚 申",
+      "question": "命主的性情和出生如何?",
+      "options": {
+        "A": "沉默善意，愿意为人付出，出生有钱人家",
+        "B": "固执霸道，为人自私自利，出生贫困人家",
+        "C": "锋芒毕露，容易得罪人，出生有钱人家",
+        "D": "豪爽大方，社交能力好，出生贫困人家"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.64,
+      "pre_reveal_decisive_facts": [
+        "两庚食神透干且坐申有根，表达、销售与社交输出明显",
+        "月柱劫财当令，早年资源承载弱于食神生财能力"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "The solver equated two rooted食神 with overt sociability and月令劫财 with poverty, instead of separately testing the temperament and birth-wealth clauses against the full cold-chart flow.",
+      "evidence": [
+        "The calculator confirms two庚食神 and a 子申水 source;食神 can support quiet kindness and steady giving, not only extroverted social output.",
+        "The visible/hidden财 network and食神生财 chain contradict a one-step inference from劫财月令 to poor birth.",
+        "Option D depended on both unverified extroversion and poverty, so its weakest clauses were not audited."
+      ],
+      "counterfactual_fix": "For compound temperament-background items, score stable食神 versus sharp伤官 behavior and early-resource structure separately; do not map劫财月令 directly to poverty.",
+      "would_change_answer": true,
+      "recurrence_key": "compound_option_weakest_clause_not_scored",
+      "fix_type": "reasoning_rule",
+      "decision": "patch",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic chart with repeated rooted食神, little伤官, and a functioning财 channel must not be forced into extroverted-poor solely from劫财 month.",
+        "Compound personality/background scorer must expose separate scores and reject an option when either necessary clause fails."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q02",
+      "case_id": "e08-c3",
+      "profile_text": "命例三 出题： 李袁鸣 流派： 八字 女 公历 1961-01-25 · 申时 马来西亚 坤造 庚 子 己 丑 戊 午 庚 申",
+      "question": "1996年事业上发生何事?",
+      "options": {
+        "A": "和人合作做生意，生意失败",
+        "B": "去外国打工一年后回来",
+        "C": "进入一家大企业做销售，一年后升主任",
+        "D": "做保险，达到千万事绩"
+      },
+      "prediction": "C",
+      "answer": "B",
+      "pre_reveal_confidence": 0.45,
+      "pre_reveal_decisive_facts": [
+        "1996丙子伏吟年支并冲日支午，工作与生活状态形成明显转换",
+        "次年转入乙酉运，乙官透而酉强化输出，较支持销售岗位后的职级落地"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "The strongest 1996 signal was a transient movement/change interface, but the solver mapped it to entry and promotion by borrowing support from the following luck cycle.",
+      "evidence": [
+        "1996丙子 directly repeats the natal 子 and冲日支午, a strong one-year movement or living-structure change.",
+        "The promotion explanation depends on the 1997 start of乙酉运 rather than a direct 1996 career-status trigger.",
+        "A one-year overseas work-and-return narrative matches the bounded transition signal with fewer cross-year assumptions."
+      ],
+      "counterfactual_fix": "Map a one-year direct movement signal to mobility before status promotion; do not use the next luck cycle to supply an unobserved promotion unless the option's timing explicitly spans that cycle.",
+      "would_change_answer": true,
+      "recurrence_key": "movement_signal_mapped_to_status_upgrade",
+      "fix_type": "reasoning_rule",
+      "decision": "defer",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic target year with strong residence/day-branch冲 and no direct官印 promotion trigger must prefer a one-year relocation over a promotion story.",
+        "Following-cycle evidence must not be counted as target-year evidence unless the option explicitly includes the later period."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c3_q04",
+      "case_id": "e08-c3",
+      "profile_text": "命例三 出题： 李袁鸣 流派： 八字 女 公历 1961-01-25 · 申时 马来西亚 坤造 庚 子 己 丑 戊 午 庚 申",
+      "question": "推算命主那一个年份，父亲去世?",
+      "options": {
+        "A": "1998",
+        "B": "2002",
+        "C": "2005",
+        "D": "2009"
+      },
+      "prediction": "B",
+      "answer": "C",
+      "pre_reveal_confidence": 0.51,
+      "pre_reveal_decisive_facts": [
+        "2002壬午把父财壬水直接透出，同时午冲年支子这一早年父母宫",
+        "该年午又伏吟日支并自刑，家庭核心变化强于其余候选年的单点引动"
+      ],
+      "tags": [
+        "六亲子女",
+        "健康灾厄"
+      ],
+      "primary_failure_reason": "execution_error",
+      "secondary_failure_reason": "relation_matrix",
+      "root_cause": "Only the predicted year received a detailed audit; the required same-scale candidate matrix was not used, so the decisive岁运伏吟 in 2005 was missed.",
+      "evidence": [
+        "The pre-reveal facts list only 2002 interactions and do not compare all four candidate years.",
+        "The deterministic matrix shows 2005乙酉 fully伏吟 the active乙酉 luck cycle and自刑酉, while 2002 has natal冲/伏吟 signals but no comparable luck-year repetition.",
+        "The official year becomes the strongest timing candidate under the mandated equal-scale comparison, although the death event itself remains low-identifiability."
+      ],
+      "counterfactual_fix": "Hard-require compare_candidate_years output for every multi-year item and block submission until natal-to-luck, natal-to-year, luck-to-year, and composite fields are present for every option.",
+      "would_change_answer": true,
+      "recurrence_key": "candidate_year_full_matrix_omitted",
+      "fix_type": "execution_guard",
+      "decision": "defer",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "Four-year synthetic timing item must fail validation when only the preferred year has a populated matrix.",
+        "Matrix fixture must rank an active-luck full伏吟 year above a candidate supported only by isolated natal interactions when the target interface is otherwise equal."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q02",
+      "case_id": "e08-c4",
+      "profile_text": "命例四 出题： 许果朗 流派： 八字 男 公历 1980-08-12 · 丑时 中国香港 乾造 庚 申 甲 申 丁 巳 辛 丑",
+      "question": "命主青年的学习情况?",
+      "options": {
+        "A": "1997年会考成绩良好(二十几分)，1999年高考成绩差，不能考上大学",
+        "B": "1997年会考成绩良好(二十几分)，1999年高考成绩好，并能考上大学",
+        "C": "1997年会考成绩差(不到十分)，放弃学业，出社会工作",
+        "D": "1997年之前，已经停学，早早在社会工作，而且1997年开始创业"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "青年乙酉运印星透出，能扶原局偏弱丁火并维持学习链",
+        "1999进入丙戌运，丙火与戌根继续扶身，未见明确教育中断接口"
+      ],
+      "tags": [
+        "其他"
+      ],
+      "primary_failure_reason": "execution_error",
+      "secondary_failure_reason": "relation_matrix",
+      "root_cause": "The two examination years were not compared on the mandated same-scale matrix, causing general supportive luck-cycle language to erase a sharp difference between the years.",
+      "evidence": [
+        "For 1997, the calculator shows 丁同干、丑伏吟时支 and an original-chart plus乙酉-luck 三合金局.",
+        "For 1999, the calculator shows only 甲己合 and卯戌合 with no comparable composite formation.",
+        "The pre-reveal reasoning used broad乙酉/丙戌 support but never evaluated whether the later exam year had weaker completion/output evidence."
+      ],
+      "counterfactual_fix": "Require a year-by-year education-stage matrix and score examination performance separately for each named year instead of extending a decade-level learning judgment across both.",
+      "would_change_answer": true,
+      "recurrence_key": "candidate_year_full_matrix_omitted",
+      "fix_type": "execution_guard",
+      "decision": "defer",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "Two-exam-year fixture must produce separate matrices and must not copy a decade-level education score to both years.",
+        "Regression fixture: 1997 includes the巳酉丑 composite while 1999 does not; the comparison output must preserve that distinction."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c4_q03",
+      "case_id": "e08-c4",
+      "profile_text": "命例四 出题： 许果朗 流派： 八字 男 公历 1980-08-12 · 丑时 中国香港 乾造 庚 申 甲 申 丁 巳 辛 丑",
+      "question": "命主的结婚年份?",
+      "options": {
+        "A": "2007",
+        "B": "2010",
+        "C": "2014",
+        "D": "2016"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.47,
+      "pre_reveal_decisive_facts": [
+        "2016丙申把男命财星落实在申，且申与配偶宫巳六合",
+        "该年申同时伏吟年月双支，关系角色与家庭身份被重复引动"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "The complete matrix leaves two plausible marriage-stage candidates: 2007 directly冲 the spouse palace, while 2016 supplies a rooted wealth/spouse branch and六合 to that palace; no general rule uniquely makes the former the registration year.",
+      "evidence": [
+        "The 2007 matrix has 丁亥 with日干同干 and亥冲日支巳.",
+        "The 2016 matrix has申 repeating both natal申 branches and六合/相破 the spouse palace巳 under丁亥 luck.",
+        "Both years express relationship change, but the profile supplies no meeting, registration, or cohabitation clue to resolve the stage."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; keep marriage-stage timing low confidence when one candidate has宫冲 and another has spouse-star plus宫合 without an external timeline anchor.",
+      "would_change_answer": false,
+      "recurrence_key": "marriage_stage_ambiguous_between_spouse_palace_triggers",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Synthetic marriage-year item with one宫冲 year and one spouse-star plus宫合 year must not force registration timing without another landing signal.",
+        "Changing an option from meeting to legal registration must trigger a fresh stage-specific audit."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q01",
+      "case_id": "e08-c5",
+      "profile_text": "命例五 出题： 鼎大图书 培哥 流派： 八字 女 公历 1980-02-02 · 16:00 申时 中国香港 坤造 己 未 丁 丑 乙 巳 甲 申",
+      "question": "命主的出身及学历?",
+      "options": {
+        "A": "出身平民之家，大学毕业",
+        "B": "出身平民之家，未能考上大学",
+        "C": "出身大富之家，大学毕业",
+        "D": "出身大富之家，未能考上大学"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.44,
+      "pre_reveal_decisive_facts": [
+        "乙木生丑月而根弱，原局财官食伤显、印星只藏，持续学历承载不足",
+        "年柱偏财虽显但与月支丑未冲，不足以稳定支持大富出身"
+      ],
+      "tags": [
+        "性格外貌学业"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "timing",
+      "root_cause": "The education judgment was made from natal印 visibility alone and omitted the actual school-age luck cycles that strongly rooted the weak乙日主.",
+      "evidence": [
+        "The calculator confirms school-age 戊寅 and己卯 luck cycles;寅卯 directly supply sustained木 roots during primary and secondary education.",
+        "The pre-reveal facts cite only natal弱身 and hidden印, with no life-stage luck analysis.",
+        "The background clause was already correctly ordinary, so restoring education-stage support changes only the university-completion clause."
+      ],
+      "counterfactual_fix": "For degree questions, always evaluate the school-age luck cycles for learning capacity, entry, and completion before inferring non-attendance from a weak natal印.",
+      "would_change_answer": true,
+      "recurrence_key": "education_stage_luck_omitted",
+      "fix_type": "reasoning_rule",
+      "decision": "defer",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic weak-day-master chart with hidden印 but continuous school-age root luck must not be classified as unable to attend university from natal印 alone.",
+        "Education scorer must expose separate natal-capacity, school-age-luck, entry, and completion fields."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c5_q04",
+      "case_id": "e08-c5",
+      "profile_text": "命例五 出题： 鼎大图书 培哥 流派： 八字 女 公历 1980-02-02 · 16:00 申时 中国香港 坤造 己 未 丁 丑 乙 巳 甲 申",
+      "question": "命主在那年创业?",
+      "options": {
+        "A": "2003",
+        "B": "2006",
+        "C": "2009",
+        "D": "2012"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.54,
+      "pre_reveal_decisive_facts": [
+        "2006丙戌以伤官输出引动经营功能，且戌冲大运辰",
+        "戌又补齐原局丑未的三刑，较其余候选年更像事业结构重启"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "timing",
+      "root_cause": "The full candidate matrix does not support a stable generic switch to 2003: 2003 has natal未 repetition and丑未冲, while 2006 has the stronger辰戌运年冲 plus丑戌未三刑, yet either can mark a business transition.",
+      "evidence": [
+        "The deterministic comparison confirms both 2003 and 2006 occur in庚辰 luck.",
+        "2003癸未 directly repeats年支 and冲月支; 2006丙戌 directly冲大运辰 and completes the natal丑未刑局.",
+        "The chart relations identify change intensity but do not identify the legal or practical start date of a business."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; require an external business-stage anchor when multiple candidate years each carry a valid start/change interface.",
+      "would_change_answer": false,
+      "recurrence_key": "business_start_year_multiple_valid_triggers",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Synthetic startup-year item with one natal-repeat year and one stronger luck-year冲刑 year must remain low confidence without a registration or launch clue.",
+        "Candidate-year comparison must not equate more relations with the exact startup date."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q04",
+      "case_id": "e08-c6",
+      "profile_text": "命例六 出题： 青术会 常欢师傅 流派： 八字 男 公历 1976-05-15 · 午时 中国香港 乾造 丙 辰 癸 巳 丁 卯 丙 午",
+      "question": "命主于1999年工作至今的事业?",
+      "options": {
+        "A": "警察",
+        "B": "家族生意",
+        "C": "医生",
+        "D": "殡仪行业"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.56,
+      "pre_reveal_decisive_facts": [
+        "癸七杀透月并有辰中根气，旺身能够承接纪律与压力型岗位",
+        "1999处乙未印运，日支卯伏吟且卯未半合，资质与组织归属接口稳定"
+      ],
+      "tags": [
+        "年份事件",
+        "事业财富"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "The supplied chart supports a stable pressure/discipline occupation but cannot distinguish police from the highly specific funeral industry; the latter has no unique profile clue or deterministic signature.",
+      "evidence": [
+        "The calculator reproduces 丙辰 癸巳 丁卯 丙午 and confirms 1999 in乙未 luck.",
+        "七杀透出 plus long organizational continuity reasonably supports police, while funeral work would require a profession-specific symbolic lookup forbidden by the Skill's function-first rule.",
+        "No general counterfactual rule selects funeral work across independent charts."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; infer occupational function only and avoid exact rare-industry selection without textual or repeated independent interfaces.",
+      "would_change_answer": false,
+      "recurrence_key": "exact_occupation_subtype_not_identifiable",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Rare-industry synthetic option must require at least two independent and role-correct interfaces plus a profile clue.",
+        "A纪律/压力 chain alone must not map one-to-one to police, medicine, or funeral work."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c6_q05",
+      "case_id": "e08-c6",
+      "profile_text": "命例六 出题： 青术会 常欢师傅 流派： 八字 男 公历 1976-05-15 · 午时 中国香港 乾造 丙 辰 癸 巳 丁 卯 丙 午",
+      "question": "命主的婚姻感情?",
+      "options": {
+        "A": "未婚，多次拍拖分手",
+        "B": "2006年结婚 婚姻美满",
+        "C": "2010年结婚 2015年离婚",
+        "D": "2003年结婚 2008妻子因怀孕有病变而令妻子和BB死亡"
+      },
+      "prediction": "D",
+      "answer": "A",
+      "pre_reveal_confidence": 0.58,
+      "pre_reveal_decisive_facts": [
+        "2003进入丙申运，申中庚财使男命配偶星首次在成家年龄获得有根背景",
+        "2008子年与申运、原局辰成水局，同时子刑配偶宫卯并冲子女宫午"
+      ],
+      "tags": [
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "The solver accepted the most extreme compound narrative from a marriage-opportunity signal and a later spouse/child-palace stress signal, without independently proving marriage, maternal disease, and two deaths.",
+      "evidence": [
+        "2003丙申 luck introduces a potential spouse-star background but does not by itself establish marriage that year.",
+        "The 2008 matrix confirms申子辰 water formation, 子刑卯, and子冲午, which supports relationship/child-system stress but not the option's disease cause or deaths.",
+        "The selected option carries four high-burden clauses; the benchmark protocol requires independent support for each and defaults away from unsupported extreme detail."
+      ],
+      "counterfactual_fix": "Apply a hard weakest-clause gate to extreme relationship options: without two independent interfaces for each terminal harm and a marriage landing signal, reject the compound tragedy and prefer the non-terminal status option.",
+      "would_change_answer": true,
+      "recurrence_key": "extreme_compound_harm_without_independent_interfaces",
+      "fix_type": "reasoning_rule",
+      "decision": "defer",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic option combining marriage, pregnancy disease, spouse death, and child death must fail if evidence only shows spouse/child-palace stress.",
+        "Adding a single dramatic冲 must not overcome four unsupported necessary clauses."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q01",
+      "case_id": "e08-c7",
+      "profile_text": "命例七 出题： 方荣老师 流派： 八字 女 公历 1951-01-24 · 零时至1时内（子时） 中国香港 坤造 庚 寅 己 丑 甲 子 甲 子 本命例含同日双命对比：Q31-33 为本命（0-1 时生）；Q34-35 为同日 23-24 时生之另一坤造（迟 23 小时）。",
+      "question": "命主出生家境与父母关系，戊子运(1956—1965)中发生何事？",
+      "options": {
+        "A": "出生富裕家庭，父母双全，父亲工作更上层楼",
+        "B": "出生富裕家庭，父死母在",
+        "C": "出生贫穷家庭，父母双全，父亲工作更困难",
+        "D": "出生贫穷家庭，父死母在"
+      },
+      "prediction": "A",
+      "answer": "D",
+      "pre_reveal_confidence": 0.57,
+      "pre_reveal_decisive_facts": [
+        "甲木得寅根与双子印，能够承接月干己财和年干庚杀",
+        "戊子运偏财进入，子又与月支丑合，父亲资源与事业接口偏向加强"
+      ],
+      "tags": [
+        "年份事件",
+        "六亲子女"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "The natal and戊子-luck structure can support either resource binding or family strain, but it cannot uniquely establish both poor birth and the father's death during that decade.",
+      "evidence": [
+        "The calculator confirms 庚寅 己丑 甲子 甲子 and戊子 luck.",
+        "Double甲 competing around己财 and repeated子合丑 can weaken a simple wealthy-family reading, but they still do not prove paternal death.",
+        "Switching from resource-positive to resource-negative interpretation would leave the fatality clause unresolved."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; distinguish family-resource strain from a parent's death and require a separate father-star plus parent-palace temporal trigger for the latter.",
+      "would_change_answer": false,
+      "recurrence_key": "relative_death_not_identifiable_from_resource_strain",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Synthetic parent-resource strain must not be upgraded to paternal death without independent father-star and parent-palace timing evidence.",
+        "Multiple stems competing for财 must be represented as resource ambiguity, not a deterministic poverty or death label."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q02",
+      "case_id": "e08-c7",
+      "profile_text": "命例七 出题： 方荣老师 流派： 八字 女 公历 1951-01-24 · 零时至1时内（子时） 中国香港 坤造 庚 寅 己 丑 甲 子 甲 子 本命例含同日双命对比：Q31-33 为本命（0-1 时生）；Q34-35 为同日 23-24 时生之另一坤造（迟 23 小时）。",
+      "question": "命主于1975年结婚，76年生仔，婚后与丈夫生活如何？",
+      "options": {
+        "A": "夫创业成功，生活富裕",
+        "B": "夫创业失败，要外出工作",
+        "C": "夫一份工作，妻一份工作，没创业，生活平淡",
+        "D": "没有工作，在家凑儿，生活平稳"
+      },
+      "prediction": "A",
+      "answer": "B",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "原局财官明透且甲木有根有印，能够承接配偶的经营与资源结果",
+        "1976转丙戌运，食神生财并由寅戌拱火，经营输出链较完整"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "role_attribution",
+      "root_cause": "The solver projected the native's食神生财/经营 output chain onto the husband's business success instead of auditing the husband star and its stress in the relevant luck cycle.",
+      "evidence": [
+        "All options ask about the husband's post-marriage work, not the native's own operating ability.",
+        "In the 甲子 chart, 庚 is the husband/七杀 interface and is already opposed by the repeated甲 stems.",
+        "The 1976 transition to丙戌 introduces strong食神 pressure on庚, which supports difficulty for the husband's venture more directly than native食神生财 supports his success."
+      ],
+      "counterfactual_fix": "For relative-event options, score the relative star and its palace first; do not transfer the native's own output-to-wealth function chain to the relative without a bridging relationship signal.",
+      "would_change_answer": true,
+      "recurrence_key": "relative_event_scored_on_native_function_chain",
+      "fix_type": "reasoning_rule",
+      "decision": "defer",
+      "overfit_risk": "medium",
+      "regression_tests": [
+        "Synthetic spouse-career item must score the spouse star before using the native's own创业/食伤生财 chain.",
+        "When native business ability is strong but the spouse star is independently stressed, the spouse-success option must not inherit the native score."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q03",
+      "case_id": "e08-c7",
+      "profile_text": "命例七 出题： 方荣老师 流派： 八字 女 公历 1951-01-24 · 零时至1时内（子时） 中国香港 坤造 庚 寅 己 丑 甲 子 甲 子 本命例含同日双命对比：Q31-33 为本命（0-1 时生）；Q34-35 为同日 23-24 时生之另一坤造（迟 23 小时）。",
+      "question": "命主直至现在2017年5月生活怎样？",
+      "options": {
+        "A": "夫死亡，要外出工作",
+        "B": "夫妻退休，生活清闲",
+        "C": "已经离婚，不用工作",
+        "D": "夫退休，储畜不多，要工作"
+      },
+      "prediction": "B",
+      "answer": "D",
+      "pre_reveal_confidence": 0.43,
+      "pre_reveal_decisive_facts": [
+        "原局财官有承载，未见支持离婚或配偶死亡的独立复合结构",
+        "2017虽处午冲双子的大运背景，但丁壬合缓解伤官对庚杀的直接冲击"
+      ],
+      "tags": [
+        "年份事件"
+      ],
+      "primary_failure_reason": "reasoning_error",
+      "secondary_failure_reason": "compound_option",
+      "root_cause": "The solver used relationship evidence only to eliminate death and divorce, then chose leisure without evaluating the remaining distinguishing clauses: savings sufficiency and whether the native still needed to work.",
+      "evidence": [
+        "Options B and D both keep the husband alive and retired; their only decisive difference is household resources and the native's work status.",
+        "The pre-reveal facts address only marital continuity and do not supply evidence for adequate retirement resources.",
+        "The 2017 context has壬午 luck冲 both natal子 branches and丁酉伤官/官 activity, so complete clause scoring does not support an unqualified leisure assumption."
+      ],
+      "counterfactual_fix": "After textual elimination, rebuild the comparison using only the still-distinguishing clauses; score savings capacity and work activation before choosing between otherwise identical marital-status options.",
+      "would_change_answer": true,
+      "recurrence_key": "compound_option_weakest_clause_not_scored",
+      "fix_type": "reasoning_rule",
+      "decision": "patch",
+      "overfit_risk": "low",
+      "regression_tests": [
+        "Paired options with identical spouse status but different savings/work clauses must be rescored on those clauses only.",
+        "Eliminating death and divorce must not automatically imply comfortable retirement."
+      ]
+    },
+    {
+      "id": "gfc_2017_e08-c7_q05",
+      "case_id": "e08-c7",
+      "profile_text": "命例七 出题： 方荣老师 流派： 八字 女 公历 1951-01-24 · 零时至1时内（子时） 中国香港 坤造 庚 寅 己 丑 甲 子 甲 子 本命例含同日双命对比：Q31-33 为本命（0-1 时生）；Q34-35 为同日 23-24 时生之另一坤造（迟 23 小时）。",
+      "question": "（同日23-24时生之坤造）命主1975年结婚，76年生子，婚后与丈夫生活如何？",
+      "options": {
+        "A": "夫创业成功，生活富裕",
+        "B": "夫创业失败，要外出工作",
+        "C": "夫一份工作，妻一份工作，没创业，生活平淡",
+        "D": "没有工作，在家凑儿，生活平稳"
+      },
+      "prediction": "B",
+      "answer": "A",
+      "pre_reveal_confidence": 0.55,
+      "pre_reveal_decisive_facts": [
+        "迟子时盘乙木偏弱、财官压力偏重，时干丙伤官又与年干庚官形成冲突链",
+        "1975乙卯虽扶身成婚，但经营所需的财务承载仍弱于前一甲子日命"
+      ],
+      "tags": [
+        "年份事件",
+        "婚姻感情"
+      ],
+      "primary_failure_reason": "unresolved",
+      "secondary_failure_reason": "event_mapping",
+      "root_cause": "For the late-子 comparison chart, the broad husband/wealth structures do not reliably distinguish entrepreneurial success from failure; the pre-reveal adversity reading is plausible and no generic correction uniquely yields success.",
+      "evidence": [
+        "The calculator reproduces the late-子 chart as 庚寅 己丑 乙丑 丙子 under the documented late-子 boundary.",
+        "乙庚合 and strong财 can support spouse/resource binding, while丙伤官 and weak乙承载 provide a contrary stress reading.",
+        "Both success and failure interpretations require additional assumptions about the husband's actual venture."
+      ],
+      "counterfactual_fix": "No safe answer-changing fix; preserve both spouse-business hypotheses and avoid promoting either outcome without a profile or timeline discriminator.",
+      "would_change_answer": false,
+      "recurrence_key": "spouse_business_outcome_not_identifiable",
+      "fix_type": "none",
+      "decision": "no_change",
+      "overfit_risk": "high",
+      "regression_tests": [
+        "Same-day dual-chart fixture must preserve the late-子 day-pillar change without hard-coding opposite business outcomes.",
+        "A spouse-business success/failure pair with balanced supporting and opposing interfaces must remain low confidence."
+      ]
+    }
+  ]
+}

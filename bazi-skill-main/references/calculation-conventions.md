@@ -43,6 +43,17 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 python scripts/compare_candidate_years.py --date 1972-11-02 --time 10:00 --gender male --years 1992 1995 1996 1997 1999
 ```
 
+候选项给出具体日期、节气前后或发生在换运年时，改用精确日期：
+
+```powershell
+python scripts/compare_candidate_years.py --date 1963-02-06 --time 12:00 --gender male --candidate-dates 2003-08-08 2003-08-21
+```
+
+`--target-date YYYY-MM-DD[THH:MM]` 按起运时刻解析所在大运。只给 `--target-year` 时，
+计算器检查整个公历年；若年内换运，`active_luck_cycle` 为 `null`，并在
+`active_luck_cycle_candidates` 和 `luck_cycle_contexts` 中同时返回前后两运，禁止默认把
+整年归到新运或旧运。
+
 逐年读取 `natal_to_luck`、`natal_to_year`、`luck_to_year` 和
 `composite_formations`。`同干`、`同支`与完整干支`伏吟`分开记录；它们只表示重复引动，
 不自带吉凶和事件名称。
@@ -53,6 +64,7 @@ python scripts/compare_candidate_years.py --date 1972-11-02 --time 10:00 --gende
 2. 时辰边界：比较民用时与真太阳时；若跨时辰，输出两盘共同结论和分歧项。
 3. 晚子时：同时计算两种日界，若日柱改变，不做唯一断语。
 4. 时辰未知：不要虚构时柱、大运精确起运时刻或子女/晚年细节。
+5. 大运交接年：题目有日期或“某节气前后”时必须用精确日期；只有年份时并列前后两运。
 
 ## `element_profile` 的正确用法
 

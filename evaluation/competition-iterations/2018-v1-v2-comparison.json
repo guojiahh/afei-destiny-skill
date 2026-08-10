@@ -1,0 +1,19 @@
+{
+  "protocol": "paired-question-comparison-case-bootstrap-v1",
+  "base_round": "2018-v1-baseline",
+  "candidate_round": "2018-v2-candidate",
+  "count": 40,
+  "case_count": 9,
+  "base_accuracy": 0.425,
+  "candidate_accuracy": 0.375,
+  "paired_delta": -0.05,
+  "wins": 5,
+  "losses": 7,
+  "ties": 28,
+  "case_bootstrap_95": [
+    -0.1951,
+    0.075
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20260810
+}

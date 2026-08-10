@@ -66,15 +66,33 @@ Multiple-choice exact match 只是与固定答案键的一致性指标，不是�
 python evaluation/import_competition_questions.py --years 2010:2025
 ```
 
-每轮依次执行 `prepare → 作答 → lock → reveal`。`prepare` 固定题库与技能内容哈希并生成
-无答案题包；`lock` 验证全部题号并拒绝覆盖；只有 `reveal` 可以读取答案生成分数和错题单。
+固定协议见 `competition_protocol.json`。2010–2025 实际是 16 届、107 个案例、515 题，按完整年份和完整案例切分：
+
+- 2010–2017：开发集，允许揭晓、归因和重复训练；
+- 2018–2021：配对回归集，旧版和候选版必须都在揭晓前锁定；
+- 2022–2025：一次性保留集，最终候选冻结后只揭晓一次。
+
+反复刷已经揭晓的 515 题可以作为训练和防回退，但不能再次称为盲测，也不能单独证明泛化提升。
+
+截至 2026-08-10，三个分区均已按协议揭晓；2022–2025 的一次性保留集已经耗尽。后续可用全部 515 题继续做训练和回归，但新的准确率提升声明必须使用未见的新比赛题或另一个外部保留集。
+
+每轮依次执行 `prepare → audit → 新鲜子代理作答 → lock → reveal`。`prepare` 使用字段白名单删除答案、来源 URL 和回查标识，固定题包、提示词、协议与技能内容哈希；`audit` 拒绝禁用字段及技能/题包篡改；`lock` 验证全部题号并拒绝覆盖；只有评分阶段可以读取含答案缓存。
 
 ```powershell
-python evaluation/competition_iteration.py prepare --input .benchmark-cache/global-fortune-competition/contest_2012.json --round-dir evaluation/competition-iterations/2012-v1 --skill bazi-skill-main --model MODEL
-python evaluation/competition_iteration.py lock --round-dir evaluation/competition-iterations/2012-v1 --predictions evaluation/competition-iterations/2012-v1/predictions.json
-python evaluation/competition_iteration.py reveal --input .benchmark-cache/global-fortune-competition/contest_2012.json --round-dir evaluation/competition-iterations/2012-v1
+python evaluation/competition_iteration.py prepare --input .benchmark-cache/global-fortune-competition/contest_2013.json --round-dir evaluation/competition-iterations/2013-v1 --skill bazi-skill-main --model gpt-5.6-sol --reasoning-effort high --split development --prompt-file evaluation/solver_prompt.md --protocol-file evaluation/competition_protocol.json
+python evaluation/competition_iteration.py audit --round-dir evaluation/competition-iterations/2013-v1 --skill bazi-skill-main
+python evaluation/competition_iteration.py lock --round-dir evaluation/competition-iterations/2013-v1 --predictions evaluation/competition-iterations/2013-v1/predictions.json --skill bazi-skill-main
+python evaluation/competition_iteration.py reveal --input .benchmark-cache/global-fortune-competition/contest_2013.json --round-dir evaluation/competition-iterations/2013-v1
 ```
 
-网页解析或调试过程中看见答案、选项高亮或排除信息时，必须写入 manifest 的
-`contamination`，该轮仅作训练，不计盲测。Skill 更新只接收跨题、跨届重复出现的计算、
-路由或推理问题；不得复制原题、答案、人物经历或按字母分布优化。
+盲答子代理必须使用 `fork_turns=none`，只读取冻结 Skill、单个无答案题包和 `solver_prompt.md`。当前 Codex 子代理仍共享工作区文件系统，因此这是可审计的输入白名单，而非操作系统级硬隔离；公开网页是否存在于模型预训练中也无法排除。不得把这个限制写成“绝对无污染”。
+
+网页解析或调试过程中看见答案、选项高亮或排除信息时，必须写入 manifest 的 `contamination`。污染轮默认从正式汇总中排除，只能作为训练记录。不同 Skill 哈希、模型或数据用途不得混成一个总分。
+
+错因按固定顺序只选一个主因：`data_issue → option_parse → calculation → knowledge_gap → reasoning_error → execution_error → unresolved`。只有可复现的确定性计算错误，或至少跨 3 题、跨 2 个独立案例重复出现的同一内核原因，才进入修改候选。规则修改不得复制原题、答案、人物经历或按字母分布优化。
+
+同题旧版/候选版揭晓后，用命例级 bootstrap 做配对比较：
+
+```powershell
+python evaluation/competition_iteration.py compare --base evaluation/competition-iterations/2022-v1 --candidate evaluation/competition-iterations/2022-v2 --output evaluation/competition-iterations/2022-v1-v2-comparison.json
+```

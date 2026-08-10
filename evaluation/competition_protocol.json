@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "dataset": {
+    "name": "global-fortune-competition-2010-2025",
+    "years": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+    "case_count": 107,
+    "question_count": 515,
+    "gold_policy": "Use the locally cached official answer key as the contest scoring target; do not relabel from model preference.",
+    "split_unit": "whole contest year and whole case"
+  },
+  "frozen_runner": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "runs_per_skill_version": 1,
+    "aggregation": "none",
+    "network": "forbidden",
+    "context": "fresh subagent with fork_turns=none",
+    "allowed_inputs": [
+      "one answer-redacted questions.json",
+      "one frozen Bazi Skill snapshot",
+      "evaluation/solver_prompt.md"
+    ],
+    "known_limit": "Codex subagents share the workspace filesystem, so this is procedural allowlist isolation rather than an OS-level read barrier; public-page pretraining memory also cannot be excluded."
+  },
+  "splits": {
+    "development": {
+      "years": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      "case_count": 41,
+      "question_count": 195,
+      "use": "Reveal, diagnose and iterate. Repeated scores are training-fit or regression scores only.",
+      "current_status": "exposed"
+    },
+    "regression": {
+      "years": [2018, 2019, 2020, 2021],
+      "case_count": 34,
+      "question_count": 160,
+      "use": "Lock old and candidate Skill predictions before reveal, then make one paired comparison. After reveal this split becomes exposed regression data.",
+      "current_status": "revealed on 2026-08-10; exposed regression data"
+    },
+    "holdout": {
+      "years": [2022, 2023, 2024, 2025],
+      "case_count": 32,
+      "question_count": 160,
+      "use": "Reveal once after the final candidate is frozen. After reveal, require new external questions for another generalization claim.",
+      "current_status": "revealed once on 2026-08-10; exhausted as a holdout"
+    }
+  },
+  "cycle": [
+    "Freeze model, reasoning effort, solver prompt, Skill hash and split manifest.",
+    "With the current Skill, lock predictions for every still-sealed year before revealing any new answer.",
+    "Reveal development years only after the full development batch is locked.",
+    "Assign exactly one primary root cause per error using the fixed decision order.",
+    "Patch only deterministic calculation defects or recurrent causes supported by at least three questions across at least two independent cases.",
+    "Run calculation unit tests and exposed-development regression checks.",
+    "Lock the candidate Skill on the still-sealed regression split, then reveal old and candidate rounds together and compute paired delta.",
+    "Freeze the final candidate before touching holdout answers; reveal holdout once.",
+    "Move every revealed item to exposed training/regression status and never call its later score blind accuracy."
+  ],
+  "root_cause_order": [
+    "data_issue",
+    "option_parse",
+    "calculation",
+    "knowledge_gap",
+    "reasoning_error",
+    "execution_error",
+    "unresolved"
+  ],
+  "change_gate": {
+    "deterministic_bug": "One reproducible calculation defect is sufficient, but the fix must add a unit test.",
+    "rule_or_reasoning_change": "Require at least three errors across at least two independent cases with the same recurrence key.",
+    "forbidden": [
+      "person-specific facts",
+      "question identifiers",
+      "official answer letters",
+      "answer-distribution optimization",
+      "one-off rules that merely restate a revealed option"
+    ],
+    "rollback": "Do not promote a change that improves exposed development but worsens the paired sealed split without a pre-registered safety justification."
+  },
+  "metrics": {
+    "primary": "exact-match micro accuracy on the sealed split",
+    "required": [
+      "case macro accuracy",
+      "year-level results",
+      "paired candidate-minus-base delta",
+      "wins losses and ties",
+      "case-level bootstrap 95 percent interval",
+      "Wilson 95 percent interval",
+      "top-label Brier score when confidence is recorded",
+      "root-cause counts",
+      "deterministic calculation test results"
+    ],
+    "claim_gate": "Say accuracy improved only when the paired holdout delta is positive and its case-level bootstrap interval excludes zero; otherwise report a trend or no demonstrated improvement."
+  }
+}
