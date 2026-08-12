@@ -18,6 +18,20 @@ Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
 
 ## 怎么提问
 
+### 统一入口：不知道问什么也可以开始
+
+直接说：
+
+```text
+请用 $bazi 开始预测，一步一步带着我分析。
+```
+
+技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出三条开场盲测。你可以逐条回答“准 / 部分准 / 不准 / 不确定”；清单展示前会被锁定，回答后不能改题圆场。系统随后明确告诉你：哪些结论被保留、下调或修正，再由你选择深入事业、关系、财务、家庭或未来年份。
+
+这个流程追求的是“你的回答确实改变了后续分析”，不是通过宽泛问题制造被说中的感觉。
+
+### 直接问一个主题
+
 一个可靠的请求通常包含：
 
 - 公历或农历出生日期；农历需注明是否闰月。
@@ -66,12 +80,27 @@ python scripts/calculate_bazi.py `
 | `SKILL.md` | 识别任务模式、路由资料、约束输出边界 |
 | `scripts/calculate_bazi.py` | 计算历法、四柱、大运、流年和关系事实 |
 | `scripts/test_calculate_bazi.py` | 计算器回归测试 |
+| `scripts/blind_opening.py` | 开场盲测资格过滤、跨领域选择、哈希锁定与反馈结算 |
+| `scripts/test_blind_opening.py` | 盲测引擎回归测试 |
+| `scripts/consultation_harness.py` | 会话状态、阶段门禁、产物血缘、替代/重启和来源防火墙 |
+| `scripts/consultation_output_router.py` | 对话、技术审计、总结与报告来源的活动产物路由 |
+| `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
+| `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
 | `scripts/vendor/` | 内置 `lunar_python 1.4.8`，支持离线运行 |
 | `references/calculation-conventions.md` | 计算参数和边界口径 |
 | `references/reasoning-protocol.md` | 事实、结构、触发和反证流程 |
+| `references/structure-analysis.md` | 旺衰、格局、从格、调候和多种用神语义 |
+| `references/relations-and-transformations.md` | 合冲刑害、三合三会、合化与墓库的分层判断 |
 | `references/domain-rules.md` | 事业、财运、关系等领域映射 |
 | `references/temporal-reasoning.md` | 大运、流年与事件窗口 |
 | `references/consultation-output.md` | 完整咨询与聚焦咨询的表达方式 |
+| `references/guided-consultation.md` | “开始预测”统一入口、七阶段状态与每轮参与闭环 |
+| `references/opening-blind-reading.md` | 三条开场盲测的候选门禁、运行方式与转场 |
+| `references/client-voice.md` | 温暖、具体、不迎合的客户语言与反馈回应 |
+| `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
+| `references/consultation-harness.md` | 会话恢复、三种操作语义、状态血缘与信息防火墙 |
+| `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
+| `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |
 | `references/worked-examples.md` | 不含评测数据的合成示例 |
 
 技能会按问题读取所需资料，不应一次加载全部参考文件。
@@ -82,10 +111,18 @@ python scripts/calculate_bazi.py `
 
 ```powershell
 python -m unittest -v scripts/test_calculate_bazi.py
+python -m unittest -v scripts/test_blind_opening.py
+python -m unittest -v scripts/test_consultation_harness.py
+python scripts/doctor.py
 python scripts/calculate_bazi.py --help
+python scripts/blind_opening.py --help
+python scripts/consultation_harness.py --help
+python scripts/consultation_output_router.py --help
 ```
 
 修改计算逻辑时应先补测试；修改推理规则时应给出适用条件、反例和冲突口径。Benchmark 相关内容必须继续留在仓库根目录的 `evaluation/` 中。
+
+本轮知识与推理缺口的证据、补全范围和仍待验证事项见 [`../docs/KNOWLEDGE_AUDIT.md`](../docs/KNOWLEDGE_AUDIT.md)。
 
 ## 使用边界
 

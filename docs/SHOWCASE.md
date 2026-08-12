@@ -48,9 +48,12 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 
 ```powershell
 python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
+python -m unittest -v .\bazi-skill-main\scripts\test_blind_opening.py
+python -m unittest -v .\bazi-skill-main\scripts\test_consultation_harness.py
+python .\bazi-skill-main\scripts\doctor.py
 ```
 
-说明：自动测试验证的是计算稳定性，不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
+说明：四组检查分别验证计算稳定性、盲测候选门禁、完整会话状态与环境可运行性；它们都不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
 
 ## 可切换的演示问题
 
@@ -105,6 +108,6 @@ python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
 
 - [ ] 新环境中能识别 `$bazi`。
 - [ ] `SKILL.md` 位于安装目录第一层。
-- [ ] Python 能运行，5 项回归测试通过。
+- [ ] Python 能运行，9 项排盘、6 项盲测和 14 项会话 Harness 测试通过；`doctor.py` 全绿。
 - [ ] 演示出生信息是虚构信息或已获本人同意。
 - [ ] 不在屏幕上展示评测答案缓存或个人敏感信息。

@@ -12,10 +12,14 @@
 ## 本地检查
 
 ```powershell
-python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
+python -m unittest discover -s .\bazi-skill-main\scripts -p "test_*.py"
+python -m unittest discover -s .\evaluation -p "test_*.py"
+python .\bazi-skill-main\scripts\doctor.py
 python .\bazi-skill-main\scripts\calculate_bazi.py --help
 git diff --check
 ```
+
+修改 Skill 结构或 `SKILL.md` 后，再运行 `skill-creator` 的 `quick_validate.py`；修改 Markdown 后检查仓库内相对链接。
 
 涉及评测时，再按 [`evaluation/README.md`](evaluation/README.md) 的流程进行预登记、答案隔离、预测锁定和评分。
 
@@ -23,6 +27,8 @@ git diff --check
 
 - 对计算口径使用明确术语，不把流派差异写成唯一标准。
 - 引用古籍时必须可核验；无法确认原文时改为概述，不制造引文。
+- 新增推理规则时必须写明语境、适用条件、最强反例和冲突口径；只有口诀不得进入自动裁决层。
+- 现代资料或开源项目必须先核对许可证；不兼容或非商业许可证内容只能用于比较，不能复制进 MIT 技能包。
 - 合成示例必须明确标注，不得伪装成真实用户案例。
 - 高风险主题使用条件性、风险管理语言，不诊断、不恐吓、不承诺。
 - 不根据已揭晓的 benchmark 答案反向添加只对固定题目有效的规则。

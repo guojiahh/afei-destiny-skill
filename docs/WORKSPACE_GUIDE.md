@@ -1,6 +1,6 @@
 # 工作区地图
 
-更新日期：2026-08-10
+更新日期：2026-08-12
 
 ## 一句话说明
 
@@ -8,10 +8,23 @@
 
 最重要的边界是：**含答案题库、预测记录和错题分析永远不能进入可安装 Skill。** 否则下一轮作答会被答案污染。
 
+## Git 仓库边界
+
+当前项目的源代码只有一个主仓库：
+
+| 路径 | Git 身份 | 用途 | 是否项目源码 |
+|---|---|---|---|
+| `E:\bazi-skill-main` | `guojiahh/bazi-analysis-skill` | 当前完整研发仓库 | 是 |
+| `.benchmark-cache/BaziQA` | `ChenJiangxi/BaziQA` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
+| `.benchmark-cache/MingLi-Bench` | `DestinyLinker/MingLi-Bench` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
+
+因此 `bazi-skill-main/`、`evaluation/`、`docs/`、`assets/`、`design-demos/` 和 `dist/` 都只是主仓库里的职责目录。不要把缓存仓库的提交、分支或许可证误当成本项目状态，也不要把它们打进 Skill。
+
 ## 顶层结构
 
 ```text
 E:\bazi-skill-main
+├─ AGENTS.md                    Agent 项目规则与验证入口
 ├─ README.md                    仓库总入口
 ├─ bazi-skill-main/             可安装、可运行的 Bazi Skill
 ├─ evaluation/                  评测工具、协议和实验原件
@@ -22,6 +35,7 @@ E:\bazi-skill-main
 ├─ CONTRIBUTING.md              修改、测试和安全约定
 ├─ LICENSE                      仓库许可证
 ├─ .benchmark-cache/            本地含答案缓存；被 Git 忽略
+├─ consultation_state/          真实咨询状态；运行时生成并被 Git 忽略
 └─ .git/                        Git 历史
 ```
 
@@ -36,10 +50,19 @@ E:\bazi-skill-main
 | `references/reasoning-protocol.md` | 通用判断顺序、反证和置信度规则 | 出现跨题复发的推理错误时 |
 | `references/temporal-reasoning.md` | 大运、流年和具体年份判断 | 年份事件比较反复出错时 |
 | `references/domain-rules.md` | 事业、关系、六亲等领域规则 | 同领域错误跨多个案例复发时 |
+| `references/consultation-harness.md` | 会话恢复、操作语义、血缘与信息防火墙 | 改咨询生命周期时 |
+| `references/guided-consultation.md` | 七阶段体验和每轮承接 | 改用户参与流程时 |
+| `references/opening-blind-reading.md` | 开场盲测门禁和反馈转场 | 改盲测体验时 |
+| `references/client-voice.md` | 温暖、具体、不迎合的表达层 | 改客户语言时 |
+| `references/output-routing.md` | 对话、审计、总结和报告来源边界 | 改输出类型时 |
 | `references/worked-examples.md` | 不含比赛原题的通用示例 | 需要说明抽象规则如何落地时 |
 | `scripts/calculate_bazi.py` | 确定性排盘和岁运计算 | 可复现计算错误时 |
 | `scripts/compare_candidate_years.py` | 多个候选年同尺度比较 | 时间候选比较工具需要扩展时 |
-| `scripts/test_calculate_bazi.py` | 计算器回归测试 | 每个计算修复必须同步补测试 |
+| `scripts/blind_opening.py` | 盲测筛选、锁定和反馈结算 | 改开场盲测硬门禁时 |
+| `scripts/consultation_harness.py` | 状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
+| `scripts/consultation_output_router.py` | 只选择活动产物的输出计划 | 改输出路由时 |
+| `scripts/doctor.py` | 环境与固定命例自检 | 改依赖或运行入口时 |
+| `scripts/test_*.py` | Skill 全部回归测试 | 每个脚本修复必须同步补测试 |
 | `scripts/vendor/` | 内置第三方依赖 | 只有升级依赖时 |
 | `agents/openai.yaml` | Codex 展示元数据 | 改技能名称、描述或入口文案时 |
 
@@ -108,13 +131,16 @@ evaluation/
 
 这个目录被 `.gitignore` 排除，包含标准化题目、官方答案和网页缓存。它只能被控制器在导入、揭晓和评分阶段读取。盲答器禁止读取。
 
-当前主要缓存：
+当前主要缓存分三类：
 
 ```text
-.benchmark-cache/global-fortune-competition/
-├─ contest_2010.json
-├─ ...
-└─ contest_2025.json
+.benchmark-cache/
+├─ BaziQA/                         外部 Git 克隆
+├─ MingLi-Bench/                   外部 Git 克隆
+└─ global-fortune-competition/
+   ├─ contest_2010.json
+   ├─ ...
+   └─ contest_2025.json
 ```
 
 本地缓存不进入 Git，因此换电脑后必须重新导入或安全迁移；不能只靠仓库恢复答案库。
@@ -129,6 +155,8 @@ evaluation/
 | 检查当前成绩 | `competition-iterations/iteration_report.md` | 同时看区间、wins/losses 和数据状态 |
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `bazi-skill-main/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
+| 继续真实咨询 | `consultation_harness.py` | `status`、`audit`、`resume`，只消费活动产物 |
+| 准备最终报告 | `consultation_output_router.py` | 先形成 `report_source`；HTML 仍未实现 |
 
 ## 文件治理规则
 
@@ -142,6 +170,8 @@ evaluation/
 ## 当前状态
 
 - Git 分支：`main`。
+- 当前 Skill：确定性排盘、开场盲测、状态化咨询、来源防火墙和输出路由已实现；HTML 呈现层尚未实现。
+- 当前本地门禁：29 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。

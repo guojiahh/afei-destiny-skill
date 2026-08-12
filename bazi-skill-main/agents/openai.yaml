@@ -1,4 +1,4 @@
 interface:
   display_name: "八字研判"
-  short_description: "确定性四柱排盘、领域研判与可追溯的岁运分析完整工作流"
-  default_prompt: "Use $bazi to calculate this Four Pillars chart and give an evidence-ranked analysis of the question."
+  short_description: "有状态的四柱排盘、开场盲测、温暖校准、主题深挖与可追溯输出"
+  default_prompt: "请使用 $bazi 开始一次可恢复的分步八字咨询：先建立会话状态，排盘后做三条不读取经历的开场盲测，诚实结算反馈，再用温暖具体的语言逐层深入。"
