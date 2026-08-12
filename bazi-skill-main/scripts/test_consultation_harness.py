@@ -80,10 +80,15 @@ class ConsultationHarnessTests(unittest.TestCase):
             categories=("chart_fact", "traditional_rule"),
             sources=(chart["id"],),
         )
-        return chart, lock
+        analysis = self.register(
+            "preblind_analysis",
+            categories=("chart_fact", "traditional_rule"),
+            sources=(chart["id"], lock["id"]),
+        )
+        return chart, lock, analysis
 
     def reach_deep_dive(self):
-        chart, lock = self.reach_chart_ready()
+        chart, lock, analysis = self.reach_chart_ready()
         transition_stage(
             self.session_dir,
             self.state,
@@ -94,7 +99,7 @@ class ConsultationHarnessTests(unittest.TestCase):
         candidates = self.register(
             "blind_candidates",
             categories=("chart_fact", "traditional_rule"),
-            sources=(lock["id"],),
+            sources=(analysis["id"],),
         )
         manifest = self.register(
             "blind_manifest",
@@ -125,7 +130,7 @@ class ConsultationHarnessTests(unittest.TestCase):
             categories=("biography", "user_preference"),
             sources=(lock["id"], feedback["id"]),
         )
-        return chart, lock, manifest, feedback, deep
+        return chart, lock, analysis, manifest, feedback, deep
 
     def test_init_creates_hashed_recoverable_state(self):
         recovered = read_state(self.session_dir)
@@ -209,7 +214,7 @@ class ConsultationHarnessTests(unittest.TestCase):
             self.register("chart_facts", categories=("operational_input",), name="chart-v2.json")
 
     def test_chart_supersede_invalidates_downstream_and_rolls_back(self):
-        chart, _, _, _, deep = self.reach_deep_dive()
+        chart, _, _, _, _, deep = self.reach_deep_dive()
         result = supersede(
             self.session_dir,
             self.state,
@@ -223,7 +228,7 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertEqual([], active_artifacts(self.state))
 
     def test_reset_to_first_read_preserves_chart_lock(self):
-        _, lock, manifest, _, _ = self.reach_deep_dive()
+        _, lock, analysis, manifest, _, _ = self.reach_deep_dive()
         invalidated = reset_to_stage(
             self.session_dir,
             self.state,
@@ -231,6 +236,7 @@ class ConsultationHarnessTests(unittest.TestCase):
             "restart blind opening",
         )
         self.assertEqual("active", lock["status"])
+        self.assertEqual("active", analysis["status"])
         self.assertIn(manifest["id"], invalidated)
         self.assertEqual("first_read", self.state["stage"])
 
@@ -241,7 +247,7 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertTrue(any("hash mismatch" in issue for issue in issues))
 
     def test_output_router_uses_only_active_lineage_and_defers_html(self):
-        _, _, _, feedback, deep = self.reach_deep_dive()
+        _, _, analysis, _, feedback, deep = self.reach_deep_dive()
         feedback_log = self.register(
             "feedback_log",
             categories=("feedback_label", "biography"),
@@ -254,13 +260,14 @@ class ConsultationHarnessTests(unittest.TestCase):
         plan = build_output_plan(self.state, "report_source")
         ids = {row["artifact_id"] for row in plan["selected_artifacts"]}
         self.assertIn(deep["id"], ids)
+        self.assertIn(analysis["id"], ids)
         self.assertIn(feedback_log["id"], ids)
         self.assertIn(context["id"], ids)
         with self.assertRaisesRegex(HarnessError, "deferred"):
             build_output_plan(self.state, "html_report")
 
     def test_final_markdown_is_registered_only_at_report_ready(self):
-        _, _, _, _, deep = self.reach_deep_dive()
+        _, _, _, _, _, deep = self.reach_deep_dive()
         with self.assertRaisesRegex(HarnessError, "cannot be registered during deep_dive"):
             self.register(
                 "markdown_report",
@@ -290,10 +297,90 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertEqual([], plan["selected_artifacts"])
 
     def test_technical_audit_excludes_biography_artifact(self):
-        _, _, _, _, deep = self.reach_deep_dive()
+        _, _, analysis, _, _, deep = self.reach_deep_dive()
         plan = build_output_plan(self.state, "technical_audit")
         ids = {row["artifact_id"] for row in plan["selected_artifacts"]}
         self.assertNotIn(deep["id"], ids)
+        self.assertIn(analysis["id"], ids)
+
+    def test_preblind_analysis_is_required_and_rejects_user_context(self):
+        chart = self.register("chart_facts", categories=("operational_input",))
+        transition_stage(
+            self.session_dir,
+            self.state,
+            "chart_ready",
+            operator_override=False,
+            reason=None,
+        )
+        self.register(
+            "chart_lock",
+            categories=("chart_fact", "traditional_rule"),
+            sources=(chart["id"],),
+        )
+        with self.assertRaisesRegex(HarnessError, "preblind_analysis"):
+            transition_stage(
+                self.session_dir,
+                self.state,
+                "first_read",
+                operator_override=False,
+                reason=None,
+            )
+        with self.assertRaisesRegex(HarnessError, "user_preference"):
+            self.register(
+                "preblind_analysis",
+                categories=("chart_fact", "traditional_rule", "user_preference"),
+                sources=(chart["id"],),
+            )
+
+    def test_intake_brief_guides_report_but_not_blind_sources(self):
+        brief = self.register(
+            "consultation_brief",
+            categories=("user_preference",),
+            name="consultation_brief.json",
+        )
+        self.reach_deep_dive()
+        report_plan = build_output_plan(self.state, "report_source")
+        report_ids = {row["artifact_id"] for row in report_plan["selected_artifacts"]}
+        self.assertIn(brief["id"], report_ids)
+        with self.assertRaises(HarnessError):
+            firewall_check("blind_generation", ("chart_fact", "user_preference"))
+        supersede(
+            self.session_dir,
+            self.state,
+            scope="chart",
+            artifact_ids=(),
+            reason="birth input corrected",
+        )
+        self.assertEqual("active", brief["status"])
+
+    def test_technical_report_has_separate_biography_free_route(self):
+        _, _, analysis, _, feedback, deep = self.reach_deep_dive()
+        plan = build_output_plan(self.state, "technical_report_source")
+        ids = {row["artifact_id"] for row in plan["selected_artifacts"]}
+        self.assertIn(analysis["id"], ids)
+        self.assertIn(feedback["id"], ids)
+        self.assertNotIn(deep["id"], ids)
+        transition_stage(
+            self.session_dir,
+            self.state,
+            "report_ready",
+            operator_override=False,
+            reason=None,
+        )
+        with self.assertRaisesRegex(HarnessError, "biography"):
+            self.register(
+                "technical_report",
+                categories=("prior_output", "biography"),
+                sources=(analysis["id"],),
+                name="contaminated_technical_analysis.md",
+            )
+        report = self.register(
+            "technical_report",
+            categories=("prior_output",),
+            sources=(analysis["id"], feedback["id"]),
+            name="technical_analysis.md",
+        )
+        self.assertEqual("technical_report", report["kind"])
 
     def test_doctor_passes_against_installed_skill(self):
         result = run_checks(self.session_dir)

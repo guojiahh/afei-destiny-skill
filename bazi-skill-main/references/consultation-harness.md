@@ -53,7 +53,7 @@ python scripts/consultation_harness.py resume --session-dir consultation_state
 
 ### Supplement：补充
 
-在不改变旧结论身份和来源的前提下增加材料。注册新的可并存产物就是补充，例如新增一个主题深挖章节。补充不能替换唯一产物：`chart_facts`、`chart_lock`、`blind_manifest` 等已有活动版本时，必须先执行 supersede。
+在不改变旧结论身份和来源的前提下增加材料。注册新的可并存产物就是补充，例如新增一个主题深挖章节。补充不能替换唯一产物：`consultation_brief`、`chart_facts`、`chart_lock`、`preblind_analysis`、`blind_manifest` 等已有活动版本时，必须先执行 supersede。
 
 ### Supersede：替代
 
@@ -108,7 +108,7 @@ python scripts/consultation_harness.py transition `
 intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready
 ```
 
-`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。完整 Markdown 只有进入 `report_ready` 后才能登记为 `markdown_report`；HTML 不属于阶段迁移，且当前尚未实现。
+`guided` 从 `chart_ready` 进入 `first_read` 前必须登记 `chart_lock` 和 `preblind_analysis`。`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。两份 Markdown 只有进入 `report_ready` 后才能分别登记为 `markdown_report` 与 `technical_report`；HTML 不属于阶段迁移，且当前尚未实现。
 
 ## 五、产物注册与血缘
 
@@ -138,13 +138,13 @@ python scripts/consultation_harness.py register `
 
 | 类别 | 内容 |
 |---|---|
-| `operational_input` | 出生日期时间地点、历法、性别口径、用户问题 |
+| `operational_input` | 出生日期时间地点、历法、性别和计算口径；不含用户关注主题或现实问题 |
 | `chart_fact` | 计算器确认的四柱、十神、藏干、岁运和关系 |
 | `traditional_rule` | 当前加载的子平规则 |
 | `locked_claim` | 展示前已锁定的盘面判断或盲测陈述 |
 | `feedback_label` | 命中、部分、不命中、不确定等固定标签 |
 | `biography` | 用户经历、性格自述和现实结果 |
-| `user_preference` | 用户关注主题、表达偏好和咨询节奏 |
+| `user_preference` | 用户关注主题、主动提出的现实问题、表达偏好和咨询节奏 |
 | `prior_output` | 已生成的咨询或报告内容 |
 | `benchmark_material` | 评测题、答案、历史预测；禁止进入真实咨询产物 |
 
@@ -157,7 +157,7 @@ python scripts/consultation_harness.py firewall-check `
   --source-category traditional_rule
 ```
 
-`blind_candidates`、`blind_manifest` 不能含 `biography`、`feedback_label`、`prior_output` 或 Benchmark。进入咨询映射后可以读取最小传记摘要，但必须把它标为咨询上下文，不能改写成独立盘面证据。
+入口关注方向写入只含 `user_preference` 的 `consultation_brief`。`preblind_analysis`、`blind_candidates`、`blind_manifest` 不能含 `biography`、`user_preference`、`feedback_label`、`prior_output` 或 Benchmark。进入咨询映射后可以读取入口偏好和最小传记摘要，但必须把它们标为咨询上下文，不能改写成独立盘面证据。
 
 ## 七、用户可见的承接
 

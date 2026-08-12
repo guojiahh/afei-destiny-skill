@@ -32,6 +32,9 @@ def candidate(
         "id": candidate_id,
         "domain": domain,
         "claim": f"claim {candidate_id}",
+        "scenario": f"scenario {candidate_id}",
+        "observable_result": f"observable result {candidate_id}",
+        "examples": [f"example {candidate_id}"],
         "evidence": ["chart fact"],
         "counterevidence": ["opposite condition"],
         "evidence_strength": evidence_strength,
@@ -142,6 +145,17 @@ class BlindOpeningTests(unittest.TestCase):
         self.assertIn("compound_claim", reasons["compound"])
         self.assertIn("biography_contaminated", reasons["contaminated"])
         self.assertIn("time_window_too_broad", reasons["wide-time"])
+
+    def test_rejects_candidate_without_concrete_user_facing_fields(self):
+        vague = candidate("vague", "behavior_pattern")
+        vague.pop("scenario")
+        vague.pop("observable_result")
+        vague["examples"] = []
+        manifest = select_candidates(packet([vague]), 1)
+        reasons = manifest["rejected"][0]["reasons"]
+        self.assertIn("missing_scenario", reasons)
+        self.assertIn("missing_observable_result", reasons)
+        self.assertIn("missing_or_invalid_examples", reasons)
 
     def test_settlement_routes_supported_reading_to_deep_dive(self):
         manifest = select_candidates(

@@ -86,6 +86,17 @@ def candidate_rejection_reasons(candidate: dict[str, Any]) -> list[str]:
         reasons.append("unsupported_or_sensitive_domain")
     if not isinstance(candidate.get("claim"), str) or not candidate["claim"].strip():
         reasons.append("missing_claim")
+    if not isinstance(candidate.get("scenario"), str) or not candidate["scenario"].strip():
+        reasons.append("missing_scenario")
+    if not isinstance(candidate.get("observable_result"), str) or not candidate[
+        "observable_result"
+    ].strip():
+        reasons.append("missing_observable_result")
+    examples = candidate.get("examples")
+    if not isinstance(examples, list) or not examples or len(examples) > 3 or not all(
+        isinstance(item, str) and item.strip() for item in examples
+    ):
+        reasons.append("missing_or_invalid_examples")
     evidence = candidate.get("evidence")
     if not isinstance(evidence, list) or not evidence or not all(
         isinstance(item, str) and item.strip() for item in evidence

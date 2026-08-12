@@ -95,12 +95,14 @@ python scripts/calculate_bazi.py `
 | `references/temporal-reasoning.md` | 大运、流年与事件窗口 |
 | `references/consultation-output.md` | 完整咨询与聚焦咨询的表达方式 |
 | `references/guided-consultation.md` | “开始预测”统一入口、七阶段状态与每轮参与闭环 |
+| `references/preblind-analysis.md` | 盲测前的完整盘面审计、疑点与用户偏好隔离 |
 | `references/opening-blind-reading.md` | 默认四条开场盲测的候选门禁、运行方式与一次结算转场 |
 | `references/client-voice.md` | 温暖、具体、不迎合的客户语言与反馈回应 |
 | `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
 | `references/consultation-harness.md` | 会话恢复、三种操作语义、状态血缘与信息防火墙 |
 | `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
-| `references/markdown-report.md` | 最终长篇 Markdown 报告的来源、结构、未来展望与交付检查 |
+| `references/markdown-report.md` | 面向用户的全主题长篇 Markdown 报告、重点导航与交付检查 |
+| `references/technical-report.md` | 独立技术分析文档的来源、结构、一致性和隐私边界 |
 | `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |
 | `references/worked-examples.md` | 不含评测数据的合成示例 |
 

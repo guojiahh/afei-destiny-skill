@@ -28,6 +28,7 @@ ROUTES = {
         "preferred": (
             "chart_facts",
             "chart_lock",
+            "preblind_analysis",
             "blind_manifest",
             "feedback_result",
             "deep_dive",
@@ -42,7 +43,13 @@ ROUTES = {
     },
     "technical_audit": {
         "required_all": ("chart_facts", "chart_lock"),
-        "preferred": ("chart_facts", "chart_lock", "blind_manifest", "feedback_result"),
+        "preferred": (
+            "chart_facts",
+            "chart_lock",
+            "preblind_analysis",
+            "blind_manifest",
+            "feedback_result",
+        ),
         "presentation": "markdown",
         "forbidden_categories": ("biography", "user_preference"),
     },
@@ -51,6 +58,7 @@ ROUTES = {
         "preferred": (
             "chart_facts",
             "chart_lock",
+            "preblind_analysis",
             "feedback_result",
             "deep_dive",
             "forecast",
@@ -63,8 +71,10 @@ ROUTES = {
         "required_any": ("deep_dive", "report_section"),
         "preferred": (
             "inputs",
+            "consultation_brief",
             "chart_facts",
             "chart_lock",
+            "preblind_analysis",
             "blind_manifest",
             "feedback_result",
             "feedback_log",
@@ -74,6 +84,21 @@ ROUTES = {
             "report_section",
         ),
         "presentation": "structured_markdown",
+    },
+    "technical_report_source": {
+        "required_all": ("chart_facts", "chart_lock", "preblind_analysis"),
+        "preferred": (
+            "inputs",
+            "chart_facts",
+            "chart_lock",
+            "preblind_analysis",
+            "blind_manifest",
+            "feedback_result",
+            "forecast",
+            "report_section",
+        ),
+        "presentation": "technical_markdown",
+        "forbidden_categories": ("biography", "user_preference"),
     },
 }
 

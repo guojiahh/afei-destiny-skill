@@ -48,8 +48,10 @@ SOURCE_CATEGORIES = {
 # They prevent contaminated artifacts from being accepted into the official lineage.
 ARTIFACT_SOURCE_POLICIES = {
     "inputs": {"operational_input"},
+    "consultation_brief": {"user_preference"},
     "chart_facts": {"operational_input"},
     "chart_lock": {"operational_input", "chart_fact", "traditional_rule"},
+    "preblind_analysis": {"operational_input", "chart_fact", "traditional_rule"},
     "blind_candidates": {"operational_input", "chart_fact", "traditional_rule"},
     "blind_manifest": {
         "operational_input",
@@ -94,6 +96,14 @@ ARTIFACT_SOURCE_POLICIES = {
     },
     "report_section": SOURCE_CATEGORIES - {"benchmark_material"},
     "markdown_report": SOURCE_CATEGORIES - {"benchmark_material"},
+    "technical_report": {
+        "operational_input",
+        "chart_fact",
+        "traditional_rule",
+        "locked_claim",
+        "feedback_label",
+        "prior_output",
+    },
     "output_plan": SOURCE_CATEGORIES - {"benchmark_material"},
 }
 PURPOSE_POLICIES = {
@@ -106,17 +116,22 @@ PURPOSE_POLICIES = {
 
 EXCLUSIVE_KINDS = {
     "inputs",
+    "consultation_brief",
     "chart_facts",
     "chart_lock",
+    "preblind_analysis",
     "blind_candidates",
     "blind_manifest",
     "feedback_result",
     "markdown_report",
+    "technical_report",
 }
 KIND_EARLIEST_STAGE = {
     "inputs": "intake",
+    "consultation_brief": "intake",
     "chart_facts": "intake",
     "chart_lock": "chart_ready",
+    "preblind_analysis": "chart_ready",
     "blind_candidates": "first_read",
     "blind_manifest": "first_read",
     "feedback_result": "calibration",
@@ -126,12 +141,14 @@ KIND_EARLIEST_STAGE = {
     "forecast": "forecast",
     "report_section": "deep_dive",
     "markdown_report": "report_ready",
+    "technical_report": "report_ready",
     "output_plan": "deep_dive",
 }
 SCOPE_KINDS = {
-    "chart": set(ARTIFACT_SOURCE_POLICIES),
+    "chart": set(ARTIFACT_SOURCE_POLICIES) - {"consultation_brief"},
     "interpretation": {
         "chart_lock",
+        "preblind_analysis",
         "blind_candidates",
         "blind_manifest",
         "feedback_result",
@@ -149,7 +166,7 @@ SCOPE_KINDS = {
         "report_section",
         "output_plan",
     },
-    "output": {"report_section", "markdown_report", "output_plan"},
+    "output": {"report_section", "markdown_report", "technical_report", "output_plan"},
 }
 SCOPE_ROLLBACK = {
     "chart": "intake",
@@ -361,7 +378,7 @@ def register_artifact(
 def transition_requirements(state: dict[str, Any], target: str) -> list[str]:
     requirements = {
         "chart_ready": {"chart_facts"},
-        "first_read": {"chart_lock"},
+        "first_read": {"chart_lock", "preblind_analysis"},
         "calibration": {"blind_manifest"},
         "deep_dive": {"chart_lock"},
         "forecast": {"deep_dive"},

@@ -39,9 +39,11 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
         SCRIPT_DIR / "consultation_output_router.py",
         SKILL_DIR / "references" / "calculation-conventions.md",
         SKILL_DIR / "references" / "guided-consultation.md",
+        SKILL_DIR / "references" / "preblind-analysis.md",
         SKILL_DIR / "references" / "consultation-harness.md",
         SKILL_DIR / "references" / "output-routing.md",
         SKILL_DIR / "references" / "markdown-report.md",
+        SKILL_DIR / "references" / "technical-report.md",
     )
     missing = [str(path.relative_to(SKILL_DIR)) for path in required if not path.is_file()]
     checks.append(check("required_files", not missing, "missing=" + ",".join(missing) if missing else "complete"))
