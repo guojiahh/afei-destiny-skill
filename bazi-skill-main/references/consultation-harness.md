@@ -73,7 +73,7 @@ python scripts/consultation_harness.py supersede `
 | `chart` | 只保留与旧盘无关的最小上下文 | `intake` |
 | `interpretation` | 保留排盘事实，废弃盘面锁及其下游 | `chart_ready` |
 | `calibration` | 保留原盲测，重做反馈结算和后续分析 | `calibration` |
-| `output` | 保留推理产物，只废弃旧报告章节和输出计划 | 当前阶段 |
+| `output` | 保留推理产物，只废弃旧报告章节、最终 Markdown 和输出计划 | 当前阶段 |
 
 也可以用一个或多个 `--artifact-id` 精确替代。不得删除旧记录；它们需要留给审计。
 
@@ -108,7 +108,7 @@ python scripts/consultation_harness.py transition `
 intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready
 ```
 
-`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。HTML 不属于阶段迁移；它是最后的呈现层。
+`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。完整 Markdown 只有进入 `report_ready` 后才能登记为 `markdown_report`；HTML 不属于阶段迁移，且当前尚未实现。
 
 ## 五、产物注册与血缘
 

@@ -26,7 +26,7 @@ Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
 请用 $bazi 开始预测，一步一步带着我分析。
 ```
 
-技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出三条开场盲测。你可以逐条回答“准 / 部分准 / 不准 / 不确定”；清单展示前会被锁定，回答后不能改题圆场。系统随后明确告诉你：哪些结论被保留、下调或修正，再由你选择深入事业、关系、财务、家庭或未来年份。
+技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出默认四条跨方向盲测。你可以直接回复“1准；2部分准，准在……；3不准；4不确定”；清单展示前会被锁定，回答后不能改题圆场。系统只结算一次，再从你愿意展开的话头进入一个现实主问题。深入过程中每轮显示进度，以倾听和承接为主；信息足够后询问是否生成完整 Markdown 报告。
 
 这个流程追求的是“你的回答确实改变了后续分析”，不是通过宽泛问题制造被说中的感觉。
 
@@ -95,11 +95,12 @@ python scripts/calculate_bazi.py `
 | `references/temporal-reasoning.md` | 大运、流年与事件窗口 |
 | `references/consultation-output.md` | 完整咨询与聚焦咨询的表达方式 |
 | `references/guided-consultation.md` | “开始预测”统一入口、七阶段状态与每轮参与闭环 |
-| `references/opening-blind-reading.md` | 三条开场盲测的候选门禁、运行方式与转场 |
+| `references/opening-blind-reading.md` | 默认四条开场盲测的候选门禁、运行方式与一次结算转场 |
 | `references/client-voice.md` | 温暖、具体、不迎合的客户语言与反馈回应 |
 | `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
 | `references/consultation-harness.md` | 会话恢复、三种操作语义、状态血缘与信息防火墙 |
 | `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
+| `references/markdown-report.md` | 最终长篇 Markdown 报告的来源、结构、未来展望与交付检查 |
 | `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |
 | `references/worked-examples.md` | 不含评测数据的合成示例 |
 

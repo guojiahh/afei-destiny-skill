@@ -55,6 +55,41 @@ def packet(candidates):
 
 
 class BlindOpeningTests(unittest.TestCase):
+    def test_default_cli_selects_four_diverse_probes(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            input_path = root / "candidates.json"
+            manifest_path = root / "manifest.json"
+            input_path.write_text(
+                json.dumps(
+                    packet(
+                        [
+                            candidate("work", "work_role"),
+                            candidate("timing", "timing_event"),
+                            candidate("relation", "relationship_pattern"),
+                            candidate("resource", "resource_pattern"),
+                        ]
+                    ),
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                0,
+                main(
+                    [
+                        "select",
+                        "--input",
+                        str(input_path),
+                        "--output",
+                        str(manifest_path),
+                    ]
+                ),
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(4, manifest["requested_count"])
+            self.assertEqual(4, len(manifest["selected"]))
+
     def test_selects_three_diverse_eligible_probes(self):
         manifest = select_candidates(
             packet(

@@ -93,6 +93,7 @@ ARTIFACT_SOURCE_POLICIES = {
         "user_preference",
     },
     "report_section": SOURCE_CATEGORIES - {"benchmark_material"},
+    "markdown_report": SOURCE_CATEGORIES - {"benchmark_material"},
     "output_plan": SOURCE_CATEGORIES - {"benchmark_material"},
 }
 PURPOSE_POLICIES = {
@@ -110,6 +111,7 @@ EXCLUSIVE_KINDS = {
     "blind_candidates",
     "blind_manifest",
     "feedback_result",
+    "markdown_report",
 }
 KIND_EARLIEST_STAGE = {
     "inputs": "intake",
@@ -123,6 +125,7 @@ KIND_EARLIEST_STAGE = {
     "deep_dive": "deep_dive",
     "forecast": "forecast",
     "report_section": "deep_dive",
+    "markdown_report": "report_ready",
     "output_plan": "deep_dive",
 }
 SCOPE_KINDS = {
@@ -146,7 +149,7 @@ SCOPE_KINDS = {
         "report_section",
         "output_plan",
     },
-    "output": {"report_section", "output_plan"},
+    "output": {"report_section", "markdown_report", "output_plan"},
 }
 SCOPE_ROLLBACK = {
     "chart": "intake",

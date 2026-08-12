@@ -108,6 +108,6 @@ python .\bazi-skill-main\scripts\doctor.py
 
 - [ ] 新环境中能识别 `$bazi`。
 - [ ] `SKILL.md` 位于安装目录第一层。
-- [ ] Python 能运行，9 项排盘、6 项盲测和 14 项会话 Harness 测试通过；`doctor.py` 全绿。
+- [ ] Python 能运行，9 项排盘、7 项盲测和 15 项会话 Harness 测试通过；`doctor.py` 全绿。
 - [ ] 演示出生信息是虚构信息或已获本人同意。
 - [ ] 不在屏幕上展示评测答案缓存或个人敏感信息。

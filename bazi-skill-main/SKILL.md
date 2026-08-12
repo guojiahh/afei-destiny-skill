@@ -18,7 +18,7 @@ description: >
 
 ### A. 统一引导式咨询（默认）
 
-用户说“开始预测”“帮我看看”“全面看看”“一步一步来”，只给出生信息，或没有明确问题时，读取 [consultation-harness.md](references/consultation-harness.md)、[guided-consultation.md](references/guided-consultation.md)、[opening-blind-reading.md](references/opening-blind-reading.md)、[client-voice.md](references/client-voice.md) 和 [evidence-feedback.md](references/evidence-feedback.md)。先初始化或恢复 `consultation_state/session_state.json`，再使用 `intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready` 状态推进。完成盘面锁后默认运行 `scripts/blind_opening.py`，先做三条不读取经历的开场盲测；结算后再进入一轮一个分叉的校准。
+用户说“开始预测”“帮我看看”“全面看看”“一步一步来”，只给出生信息，或没有明确问题时，读取 [consultation-harness.md](references/consultation-harness.md)、[guided-consultation.md](references/guided-consultation.md)、[opening-blind-reading.md](references/opening-blind-reading.md)、[client-voice.md](references/client-voice.md) 和 [evidence-feedback.md](references/evidence-feedback.md)。先初始化或恢复 `consultation_state/session_state.json`，再使用 `intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready` 状态推进。完成盘面锁后默认运行 `scripts/blind_opening.py`，一次展示四条跨方向、结果优先的开场盲测；用户反馈后只结算一次，抓住其愿意展开的话头进入一个主问题。
 
 ### B. 直接聚焦咨询
 
@@ -26,7 +26,7 @@ description: >
 
 ### C. 一次性完整解读
 
-用户明确要求“一次讲完”“完整报告”“不要追问”时，读取 [consultation-harness.md](references/consultation-harness.md)、[consultation-output.md](references/consultation-output.md)、[client-voice.md](references/client-voice.md) 和 [evidence-feedback.md](references/evidence-feedback.md)，以 `one_shot` 模式形成首次盘面锁后一次交付排盘口径、命局骨架、主题分析、岁运窗口和边界。未核验的内容标记为未核验，不为了完整感虚构反馈。
+用户明确要求“一次讲完”“完整报告”“不要追问”时，同时读取 [markdown-report.md](references/markdown-report.md)，以 `one_shot` 模式生成完整 Markdown 报告。未核验内容标记为未核验，不为了完整感虚构反馈。
 
 ### D. 命理选择题 / Benchmark
 
@@ -38,7 +38,7 @@ description: >
 
 继续旧会话前必须先 `status` 和 `audit`。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
-用户要求总结、技术审计、准备报告或未来 HTML 时读取 [output-routing.md](references/output-routing.md)，运行 `scripts/consultation_output_router.py` 只选择活动产物。当前先生成 `consultation_summary` 或 `report_source`；HTML 生成器尚未启用，不得临时扫描目录拼接旧结论。
+用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用 `report_source`，再按 [markdown-report.md](references/markdown-report.md) 写入 `consultation_state/final_report.md` 并登记为 `markdown_report`。HTML 尚未启用，不得临时扫描目录拼接旧结论。
 
 ## 最小信息原则
 
@@ -110,6 +110,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | “开始预测”、开场盲测、多轮参与 | `consultation-harness.md`、`guided-consultation.md`、`opening-blind-reading.md`、`client-voice.md`、`evidence-feedback.md` |
 | 完整/聚焦咨询与客户正文 | `consultation-harness.md`、`consultation-output.md`、`client-voice.md`、`evidence-feedback.md` |
 | 总结、技术审计、报告内容准备 | `output-routing.md`；先运行输出路由器 |
+| 生成完整 Markdown 报告 | `markdown-report.md`、`output-routing.md`、`client-voice.md` |
 | 学习推理示例 | `worked-examples.md`；不得把示例结论套到新命盘 |
 
 知识优先级：确定性历法事实 > 原局结构与月令 > 大运流年触发 > 领域十神/宫位 > 神煞和单句口诀。Benchmark 另采用：题干明示事实与文本逻辑 > 确定性排盘事实 > 强复合命理信号 > 弱命理信号。不同流派冲突时，陈述采用的口径，不拼成一个伪共识。
@@ -118,13 +119,15 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 ### 引导式咨询格式
 
-按 [guided-consultation.md](references/guided-consultation.md) 推进，并用 [client-voice.md](references/client-voice.md) 写客户正文。`first_read` 阶段按 [opening-blind-reading.md](references/opening-blind-reading.md) 一次展示三条已锁定盲测陈述，这是“一轮一个问题”的例外；用户逐条反馈并由脚本结算。此后每轮只完成一个主要任务：先给 1–2 条新判断及其依据，再问一个能区分假设的问题。下一轮开头必须说明“保留 / 下调 / 修正”了什么。
+按 [guided-consultation.md](references/guided-consultation.md) 推进，并用 [client-voice.md](references/client-voice.md) 写客户正文。`first_read` 阶段按 [opening-blind-reading.md](references/opening-blind-reading.md) 一次展示默认四条已锁定盲测：先写具体时间、场景、事件和可观察结果，技术依据默认隐藏。用户用“1准；2部分准，准在……；3不准；4不确定”一次反馈，脚本结算后不增加独立画像修正轮。
 
-不要把流程做成审讯或长表单。参与感来自用户的选择实际改变后续分析，不来自频繁问“准不准”。让语言具有承接感：说清用户可能承担的成本、减少无谓自责、把主动权还给用户；但温暖句不得新增事实或删除反证。允许并记录“不符合”；不能用“果然”“你只是没意识到”或改写用户原话制造命中感。
+进入主问题后，每轮先显示自然语言进度，再承接用户表达，用一两句暂时归纳，最后只问一个高价值问题。前期少下完整结论，让用户愿意把真正的疑虑说出来；信息足够后立即短收束，说明将生成哪些内容并询问是否生成完整报告。温暖句不得新增事实或删除反证；不能用“果然”“你只是没意识到”或改写用户原话制造命中感。
 
 ### 完整咨询格式
 
-先按 [consultation-output.md](references/consultation-output.md) 组织证据标签和语言质感，再输出：
+一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
+
+完整报告至少覆盖：
 
 1. **排盘口径**：历法、换日法、是否真太阳时、信息缺口。
 2. **命局骨架**：四柱、日主、月令、根气、透藏、主要冲合，先事实后判断。

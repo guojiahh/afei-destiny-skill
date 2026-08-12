@@ -1,4 +1,4 @@
 interface:
   display_name: "八字研判"
-  short_description: "有状态的四柱排盘、开场盲测、温暖校准、主题深挖与可追溯输出"
-  default_prompt: "请使用 $bazi 开始一次可恢复的分步八字咨询：先建立会话状态，排盘后做三条不读取经历的开场盲测，诚实结算反馈，再用温暖具体的语言逐层深入。"
+  short_description: "四柱排盘、四条具体盲测、倾听式深入与完整可追溯报告"
+  default_prompt: "请使用 $bazi 开始一次可恢复的八字咨询：先做四条跨方向具体盲测，一次结算反馈，再倾听式深入一个现实问题并生成完整 Markdown 报告。"

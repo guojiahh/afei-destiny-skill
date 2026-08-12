@@ -55,6 +55,7 @@ E:\bazi-skill-main
 | `references/opening-blind-reading.md` | 开场盲测门禁和反馈转场 | 改盲测体验时 |
 | `references/client-voice.md` | 温暖、具体、不迎合的表达层 | 改客户语言时 |
 | `references/output-routing.md` | 对话、审计、总结和报告来源边界 | 改输出类型时 |
+| `references/markdown-report.md` | 最终 Markdown 的章节、未来展望、语言和来源要求 | 改最终交付时 |
 | `references/worked-examples.md` | 不含比赛原题的通用示例 | 需要说明抽象规则如何落地时 |
 | `scripts/calculate_bazi.py` | 确定性排盘和岁运计算 | 可复现计算错误时 |
 | `scripts/compare_candidate_years.py` | 多个候选年同尺度比较 | 时间候选比较工具需要扩展时 |
@@ -156,7 +157,7 @@ evaluation/
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `bazi-skill-main/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
 | 继续真实咨询 | `consultation_harness.py` | `status`、`audit`、`resume`，只消费活动产物 |
-| 准备最终报告 | `consultation_output_router.py` | 先形成 `report_source`；HTML 仍未实现 |
+| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md` | 先形成 `report_source`，再写 `final_report.md`；HTML 仍未实现 |
 
 ## 文件治理规则
 
@@ -170,8 +171,8 @@ evaluation/
 ## 当前状态
 
 - Git 分支：`main`。
-- 当前 Skill：确定性排盘、开场盲测、状态化咨询、来源防火墙和输出路由已实现；HTML 呈现层尚未实现。
-- 当前本地门禁：29 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
+- 当前 Skill：确定性排盘、四条开场盲测、一次反馈转场、倾听式主问题、状态化咨询、来源防火墙、输出路由和完整 Markdown 报告规范已实现；HTML 呈现层尚未实现。
+- 当前本地门禁：31 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。

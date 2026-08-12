@@ -241,12 +241,48 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertTrue(any("hash mismatch" in issue for issue in issues))
 
     def test_output_router_uses_only_active_lineage_and_defers_html(self):
-        _, _, _, _, deep = self.reach_deep_dive()
+        _, _, _, feedback, deep = self.reach_deep_dive()
+        feedback_log = self.register(
+            "feedback_log",
+            categories=("feedback_label", "biography"),
+            sources=(feedback["id"],),
+        )
+        context = self.register(
+            "consultation_context",
+            categories=("biography", "user_preference"),
+        )
         plan = build_output_plan(self.state, "report_source")
         ids = {row["artifact_id"] for row in plan["selected_artifacts"]}
         self.assertIn(deep["id"], ids)
+        self.assertIn(feedback_log["id"], ids)
+        self.assertIn(context["id"], ids)
         with self.assertRaisesRegex(HarnessError, "deferred"):
             build_output_plan(self.state, "html_report")
+
+    def test_final_markdown_is_registered_only_at_report_ready(self):
+        _, _, _, _, deep = self.reach_deep_dive()
+        with self.assertRaisesRegex(HarnessError, "cannot be registered during deep_dive"):
+            self.register(
+                "markdown_report",
+                categories=("prior_output",),
+                sources=(deep["id"],),
+                name="final_report.md",
+            )
+        transition_stage(
+            self.session_dir,
+            self.state,
+            "report_ready",
+            operator_override=False,
+            reason=None,
+        )
+        report = self.register(
+            "markdown_report",
+            categories=("prior_output",),
+            sources=(deep["id"],),
+            name="final_report.md",
+        )
+        self.assertEqual("markdown_report", report["kind"])
+        self.assertEqual([], audit_state(self.session_dir, self.state))
 
     def test_guided_turn_can_open_before_chart_exists(self):
         plan = build_output_plan(self.state, "guided_turn")

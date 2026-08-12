@@ -33,7 +33,7 @@ git diff --check
 - 计算、解释、真实咨询状态和 Benchmark 必须隔离。
 - 用户会话写入 `consultation_state/`；该目录不得提交。
 - 继续咨询前先运行 Harness 的 `status`/`audit`/`resume`；输入变化先 `supersede`，回退阶段用 `reset`。
-- HTML 报告生成尚未实现；当前只准备 `report_source`，不要扫描目录拼接旧产物。
+- 当前正式报告是 `consultation_state/final_report.md`：先生成 `report_source` 计划，再按 `references/markdown-report.md` 写入并登记血缘。HTML 尚未实现，不要扫描目录拼接旧产物。
 - 不删除、移动或改写历史评测原件、分支、缓存仓库或发布包，除非用户在看过清理预览后明确确认。
 
 ## 当前权威入口
@@ -44,4 +44,4 @@ git diff --check
 - 评测流程：`evaluation/README.md`
 - 咨询状态机：`bazi-skill-main/references/consultation-harness.md`
 
-当前现役能力包括确定性排盘、开场盲测、状态化咨询、来源防火墙和输出路由；下一产品阶段是先用真实流程验证咨询体验，再实现 HTML 呈现层。
+当前现役能力包括确定性排盘、四条开场盲测、一次反馈转场、倾听式主问题、状态化咨询、来源防火墙、输出路由和完整 Markdown 报告规范；HTML 等用户提供模板后再实现。

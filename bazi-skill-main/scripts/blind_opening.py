@@ -310,7 +310,7 @@ def build_parser() -> argparse.ArgumentParser:
     select = subparsers.add_parser("select", help="select eligible blind probes")
     select.add_argument("--input", required=True, type=Path)
     select.add_argument("--output", required=True, type=Path)
-    select.add_argument("--count", type=int, default=3)
+    select.add_argument("--count", type=int, default=4)
 
     settle = subparsers.add_parser("settle", help="settle user feedback")
     settle.add_argument("--manifest", required=True, type=Path)

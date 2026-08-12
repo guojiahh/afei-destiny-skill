@@ -62,9 +62,13 @@ ROUTES = {
         "required_all": ("chart_lock",),
         "required_any": ("deep_dive", "report_section"),
         "preferred": (
+            "inputs",
             "chart_facts",
             "chart_lock",
+            "blind_manifest",
             "feedback_result",
+            "feedback_log",
+            "consultation_context",
             "deep_dive",
             "forecast",
             "report_section",
@@ -77,7 +81,7 @@ ROUTES = {
 def build_output_plan(state: dict[str, Any], intent: str) -> dict[str, Any]:
     if intent == "html_report":
         raise HarnessError(
-            "html_report is deferred; prepare report_source after upstream sections are complete"
+            "html_report is deferred; prepare report_source and final_report.md first"
         )
     if intent not in ROUTES:
         raise HarnessError(f"unsupported output intent: {intent}")
