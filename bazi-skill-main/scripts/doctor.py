@@ -37,6 +37,7 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
         SCRIPT_DIR / "blind_opening.py",
         SCRIPT_DIR / "consultation_harness.py",
         SCRIPT_DIR / "consultation_output_router.py",
+        SCRIPT_DIR / "validate_final_report.py",
         SKILL_DIR / "references" / "calculation-conventions.md",
         SKILL_DIR / "references" / "guided-consultation.md",
         SKILL_DIR / "references" / "preblind-analysis.md",

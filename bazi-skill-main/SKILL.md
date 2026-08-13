@@ -38,7 +38,7 @@ description: >
 
 任何咨询开始前先 `discover`。继续旧会话时只对用户选中的子目录运行 `status`、`audit` 和 `resume`；重新开始使用 `start` 创建新子目录，不能覆盖或清空旧会话。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使当前会话的旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
-用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`，登记为 `markdown_report`、`technical_report`。HTML 尚未启用，不得扫描会话根目录或其他会话拼接旧结论。
+用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。先运行 `scripts/validate_final_report.py`，通过后再登记为 `markdown_report`、`technical_report`。HTML 尚未启用，不得扫描会话根目录或其他会话拼接旧结论。
 
 ## 最小信息原则
 
@@ -127,17 +127,17 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 ### 完整咨询格式
 
-一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md`。用户报告覆盖目前能分析的全部主题，以导航突出用户最关心的章节；技术文档集中解释四柱、结构、岁运、候选筛选、反证和为什么这样分析。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
+一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md`。用户报告采用“总览 → 重点问题 → 人生全景 → 未来 → 选择提示 → 反馈修正 → 边界”的固定顺序；四柱、十神、旺衰、格局、合冲、起运和详细推导不得占据用户正文前部，统一进入技术文档。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
 
-完整报告至少覆盖：
+用户报告至少覆盖：
 
-1. **排盘口径**：历法、换日法、是否真太阳时、信息缺口。
-2. **命局骨架**：四柱、日主、月令、根气、透藏、主要冲合，先事实后判断。
-3. **核心判断**：旺衰/格局/病药/调候，并列出 2–4 条最有区分度的证据。
-4. **主题解读**：只讲用户关心的领域，区分稳定倾向与条件性表现。
-5. **岁运窗口**：给时间区间、触发机制和可能事件类别，不承诺单一事件。
-6. **回溯校验**：按 `evidence-feedback.md` 先保留首次盘面锁，再给 2–3 个有区分度的已过窗口；记录真命中、部分命中、宽泛命中、不命中或不确定，不得声称事情已经发生，也不得事后改写原判断。
-7. **结论边界**：高/中/低置信度、最大不确定来源、现实建议。
+1. **一页总览**：稳定结论、主要问题、反馈状态和重点阅读导航。
+2. **重点问题**：现实处境、主要拉扯、白话理解、反馈修正、反例与可能路径；这是最丰富的章节。
+3. **人生全景**：自我、学习、事业、财务、关系、家庭、迁移和身心八个主题。
+4. **当前与未来**：给阶段、时间区间、机会、条件和准备，不承诺单一事件。
+5. **行动与选择**：提供可验证的观察、路径取舍和不宜仅凭命理决定的事项。
+6. **反馈与边界**：如实保留开场判断的命中、部分命中、不命中和不确定，并列出置信度与信息缺口。
+7. **技术入口**：指向独立 `technical_analysis.md`，不在正文重复技术章节。
 
 语气可以庄重、凝练、有仪式感，但专业感来自结构、证据和一致口径，不来自绝对化措辞。优先使用“更易表现为”“在某条件下被引动”“倾向”而不是“必定”。
 

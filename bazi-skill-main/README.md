@@ -84,6 +84,7 @@ python scripts/calculate_bazi.py `
 | `scripts/test_blind_opening.py` | 盲测引擎回归测试 |
 | `scripts/consultation_harness.py` | 多会话发现、独立目录创建、阶段门禁、产物血缘、替代/重启和来源防火墙 |
 | `scripts/consultation_output_router.py` | 对话、技术审计、总结与报告来源的活动产物路由 |
+| `scripts/validate_final_report.py` | 固定用户报告的读者优先顺序，拒绝技术章节重新前置 |
 | `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
 | `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
 | `scripts/vendor/` | 内置 `lunar_python 1.4.8`，支持离线运行 |
@@ -101,7 +102,7 @@ python scripts/calculate_bazi.py `
 | `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
 | `references/consultation-harness.md` | 会话集合目录、继续/新开决策、恢复、操作语义、状态血缘与信息防火墙 |
 | `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
-| `references/markdown-report.md` | 面向用户的全主题长篇 Markdown 报告、重点导航与交付检查 |
+| `references/markdown-report.md` | 先讲重点问题和人生全景的用户报告固定格式、未来展望与交付检查 |
 | `references/technical-report.md` | 独立技术分析文档的来源、结构、一致性和隐私边界 |
 | `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |
 | `references/worked-examples.md` | 不含评测数据的合成示例 |
@@ -121,6 +122,7 @@ python scripts/calculate_bazi.py --help
 python scripts/blind_opening.py --help
 python scripts/consultation_harness.py --help
 python scripts/consultation_output_router.py --help
+python scripts/validate_final_report.py --help
 ```
 
 修改计算逻辑时应先补测试；修改推理规则时应给出适用条件、反例和冲突口径。Benchmark 相关内容必须继续留在仓库根目录的 `evaluation/` 中。

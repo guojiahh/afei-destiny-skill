@@ -31,7 +31,7 @@ python scripts/consultation_output_router.py `
 - 技术审计、客户短总结、用户报告、独立技术报告和未来 HTML 是不同呈现层，不是重新改写历史的机会。
 - 客户总结可以减少术语、改善节奏，但必须保留主要反证、反馈修正和不确定项。
 - 用户说“结束”“总结一下”时，路由到 `consultation_summary`；不要因为还没做 HTML 而阻止正常收束。
-- 用户同意生成后，读取 `markdown-report.md` 和 `technical-report.md`：分别用 `report_source`、`technical_report_source` 写入当前 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`，并登记为 `markdown_report`、`technical_report`。两个来源计划只能消费同一 `session_id` 的活动产物。
+- 用户同意生成后，读取 `markdown-report.md` 和 `technical-report.md`：分别用 `report_source`、`technical_report_source` 写入当前 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。用户报告先运行 `validate_final_report.py`；通过后再登记为 `markdown_report`、`technical_report`。两个来源计划只能消费同一 `session_id` 的活动产物。
 - 未来 HTML 生成器只能消费两份已登记报告及其活动来源，不能扫描目录自行拼接旧文件。
 
 ## 最终内容完整度

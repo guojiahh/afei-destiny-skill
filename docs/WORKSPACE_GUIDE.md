@@ -1,6 +1,6 @@
 # 工作区地图
 
-更新日期：2026-08-12
+更新日期：2026-08-13
 
 ## 一句话说明
 
@@ -56,7 +56,7 @@ E:\bazi-skill-main
 | `references/preblind-analysis.md` | 盲测前完整盘面审计与偏好隔离 | 改盲测准确性和分析深度时 |
 | `references/client-voice.md` | 温暖、具体、不迎合的表达层 | 改客户语言时 |
 | `references/output-routing.md` | 对话、审计、总结和报告来源边界 | 改输出类型时 |
-| `references/markdown-report.md` | 用户报告的全主题章节、重点导航、未来展望和来源要求 | 改最终交付时 |
+| `references/markdown-report.md` | 用户优先的固定章节、重点问题、人生全景、未来展望和来源要求 | 改最终交付时 |
 | `references/technical-report.md` | 独立技术文档的规则链、反证和隐私要求 | 改技术交付时 |
 | `references/worked-examples.md` | 不含比赛原题的通用示例 | 需要说明抽象规则如何落地时 |
 | `scripts/calculate_bazi.py` | 确定性排盘和岁运计算 | 可复现计算错误时 |
@@ -64,6 +64,7 @@ E:\bazi-skill-main
 | `scripts/blind_opening.py` | 盲测筛选、锁定和反馈结算 | 改开场盲测硬门禁时 |
 | `scripts/consultation_harness.py` | 会话发现与创建、状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
 | `scripts/consultation_output_router.py` | 只选择活动产物的输出计划 | 改输出路由时 |
+| `scripts/validate_final_report.py` | 检查用户报告章节顺序并阻止技术章节前置 | 改最终报告固定格式时 |
 | `scripts/doctor.py` | 环境与固定命例自检 | 改依赖或运行入口时 |
 | `scripts/test_*.py` | Skill 全部回归测试 | 每个脚本修复必须同步补测试 |
 | `scripts/vendor/` | 内置第三方依赖 | 只有升级依赖时 |
@@ -159,7 +160,7 @@ evaluation/
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `bazi-skill-main/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
-| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成 `report_source`、`technical_report_source`，再写用户报告与技术报告；HTML 仍未实现 |
+| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，HTML 仍未实现 |
 
 ## 文件治理规则
 
@@ -173,8 +174,8 @@ evaluation/
 ## 当前状态
 
 - Git 分支：`main`。
-- 当前 Skill：确定性排盘、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由和 Markdown 报告规范已实现；HTML 呈现层尚未实现。
-- 当前本地门禁：41 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
+- 当前 Skill：确定性排盘、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由和读者优先的双 Markdown 报告规范已实现；HTML 呈现层尚未实现。
+- 当前本地门禁：44 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。
