@@ -32,12 +32,14 @@ FORBIDDEN_TECHNICAL_HEADINGS = (
 def validate_report_text(text: str) -> list[str]:
     issues: list[str] = []
     positions: list[int] = []
+    heading_positions: dict[str, int] = {}
     for heading in REQUIRED_HEADINGS:
         matches = list(re.finditer(rf"(?m)^{re.escape(heading)}\s*$", text))
         if len(matches) != 1:
             issues.append(f"required heading must appear exactly once: {heading}")
         else:
             positions.append(matches[0].start())
+            heading_positions[heading] = matches[0].start()
     if len(positions) >= 2 and positions != sorted(positions):
         issues.append("required headings are out of order")
 
@@ -47,6 +49,16 @@ def validate_report_text(text: str) -> list[str]:
             issues.append(f"technical content must move to technical_analysis.md: {forbidden}")
     if "technical_analysis.md" not in text:
         issues.append("final report must point readers to technical_analysis.md")
+
+    focus_heading = REQUIRED_HEADINGS[1]
+    panorama_heading = REQUIRED_HEADINGS[2]
+    if focus_heading in heading_positions and panorama_heading in heading_positions:
+        focus_text = text[
+            heading_positions[focus_heading]:heading_positions[panorama_heading]
+        ]
+        for subheading in ("### 现实中的具体场景", "### 心结收束"):
+            if not re.search(rf"(?m)^{re.escape(subheading)}\s*$", focus_text):
+                issues.append(f"focus section must include: {subheading}")
     return issues
 
 
