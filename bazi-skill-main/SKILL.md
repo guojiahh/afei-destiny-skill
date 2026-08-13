@@ -18,7 +18,7 @@ description: >
 
 ### A. 统一引导式咨询（默认）
 
-用户说“开始预测”“帮我看看”“全面看看”“一步一步来”，只给出生信息，或没有明确问题时，读取 [consultation-harness.md](references/consultation-harness.md)、[guided-consultation.md](references/guided-consultation.md)、[preblind-analysis.md](references/preblind-analysis.md)、[opening-blind-reading.md](references/opening-blind-reading.md)、[client-voice.md](references/client-voice.md) 和 [evidence-feedback.md](references/evidence-feedback.md)。第一次同时询问最低出生信息和想了解的方向；关注方向单独登记为 `consultation_brief`，不得参与盲测。先初始化或恢复 `consultation_state/session_state.json`，再使用 `intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready` 状态推进。完成盘面锁与足量的 `preblind_analysis` 后才运行 `scripts/blind_opening.py`，一次展示四条、强信号时五条跨方向现实判断；用户反馈后只结算一次，从其真实问题、入口关注、反馈话头或高价值盘面疑点中进入一个主问题。
+用户说“开始预测”“帮我看看”“全面看看”“一步一步来”，只给出生信息，或没有明确问题时，读取 [consultation-harness.md](references/consultation-harness.md)、[guided-consultation.md](references/guided-consultation.md)、[preblind-analysis.md](references/preblind-analysis.md)、[opening-blind-reading.md](references/opening-blind-reading.md)、[client-voice.md](references/client-voice.md) 和 [evidence-feedback.md](references/evidence-feedback.md)。先对 `consultation_state/` 运行 Harness `discover`：有未完成咨询时让用户明确选择继续哪一次或新开；没有时使用 `start` 创建独立子目录。整轮只消费返回的单一 `session_dir`，绝不混读其他会话。第一次同时询问最低出生信息和想了解的方向；关注方向单独登记为 `consultation_brief`，不得参与盲测。再使用 `intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready` 状态推进。完成盘面锁与足量的 `preblind_analysis` 后才运行 `scripts/blind_opening.py`，一次展示四条、强信号时五条跨方向现实判断；用户反馈后只结算一次，从其真实问题、入口关注、反馈话头或高价值盘面疑点中进入一个主问题。
 
 ### B. 直接聚焦咨询
 
@@ -36,9 +36,9 @@ description: >
 
 真实咨询模式 A–C 使用 `scripts/consultation_harness.py` 管理阶段、产物哈希、来源类别和下游失效；Benchmark 不得进入咨询会话血缘。首次使用、环境变化或脚本失败时运行 `python scripts/doctor.py`。
 
-继续旧会话前必须先 `status` 和 `audit`。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
+任何咨询开始前先 `discover`。继续旧会话时只对用户选中的子目录运行 `status`、`audit` 和 `resume`；重新开始使用 `start` 创建新子目录，不能覆盖或清空旧会话。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使当前会话的旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
-用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `consultation_state/final_report.md`、`consultation_state/technical_analysis.md`，登记为 `markdown_report`、`technical_report`。HTML 尚未启用，不得临时扫描目录拼接旧结论。
+用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`，登记为 `markdown_report`、`technical_report`。HTML 尚未启用，不得扫描会话根目录或其他会话拼接旧结论。
 
 ## 最小信息原则
 

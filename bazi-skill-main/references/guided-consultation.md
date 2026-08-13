@@ -24,6 +24,14 @@
 - 只给出生信息，没有提出具体问题；
 - 明确希望边聊边补充资料。
 
+在回复出生资料问题之前，先运行 Harness `discover --state-root consultation_state`。若发现未完成会话且用户没有明确说“新开”，先用一句话询问：
+
+```text
+我发现有一条尚未结束的咨询：〔主题〕，目前进行到〔自然语言阶段〕。你想接着这次继续，还是重新开始一条新的咨询？
+```
+
+有多条时列出简短编号、主题和阶段，不展示内部文件。用户选“继续”后才对该子目录运行 `status → audit → resume`；用户选“重新开始”或一开始已经明确说“新开”时运行 `start`。不得把“换了问题”自动理解为同一次，也不得把“出生资料相同”当作同一次咨询。
+
 用户已经提出清楚问题时，不强迫走完整 onboarding；直接计算并围绕该问题倾听和分析。用户明确要求“一次讲完”“不要追问”时，按 `one_shot` 生成当前证据能够支持的完整报告，未核验内容标记为未核验。
 
 不要重复询问用户已经给出的信息。第一次请求资料时，把出生信息和关注方向放在同一轮询问；信息足够计算时先计算，信息不足时只收集完成下一步所需的最小字段。
@@ -182,7 +190,7 @@
 
 ## 八、会话状态与恢复
 
-按 `consultation-harness.md` 使用 `scripts/consultation_harness.py` 维护 `consultation_state/session_state.json`。每轮开始先读取当前阶段和活动产物；跨任务恢复、输入纠正、进入最终报告前运行 `audit`。
+按 `consultation-harness.md` 使用 `scripts/consultation_harness.py`。先对 `consultation_state/` 运行 `discover`；用户选择继续或新开后，整轮只维护返回的 `<session-dir>/session_state.json`。每轮开始先读取当前阶段和活动产物；跨任务恢复、输入纠正、进入最终报告前运行 `audit`。禁止读取其他会话目录补充当前上下文。
 
 - 补充主题或新章节：保留旧血缘；
 - 出生输入、计算口径或权威解释改变：先 `supersede`，使下游失效；
@@ -207,7 +215,7 @@
 需要我现在生成吗？
 ```
 
-用户同意后进入 `report_ready`，读取 `output-routing.md`、`markdown-report.md` 和 `technical-report.md`，生成 `consultation_state/final_report.md` 与 `consultation_state/technical_analysis.md`。如果用户一开始就明确要求报告，无需再次确认。
+用户同意后进入 `report_ready`，读取 `output-routing.md`、`markdown-report.md` 和 `technical-report.md`，在当前 `<session-dir>/` 内生成 `final_report.md` 与 `technical_analysis.md`。如果用户一开始就明确要求报告，无需再次确认。
 
 即使用户没有主动询问未来，也在报告中提供基于当前命盘的未来阶段展望；标明它未经过用户现实反馈校准，优先讲可利用的机会、准备方式和主动权，同时如实写出风险条件。
 

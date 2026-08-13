@@ -21,7 +21,7 @@
 2. 进入 `report_ready`；
 3. 用输出路由器生成 `report_source` 计划；
 4. 只读取计划列出的活动产物；
-5. 写入 `consultation_state/final_report.md`；
+5. 写入当前 `<session-dir>/final_report.md`；
 6. 将文件登记为 `markdown_report`，来源指向参与报告的活动产物；
 7. 按 `technical-report.md` 生成并登记独立的 `technical_analysis.md`。
 
@@ -218,7 +218,7 @@
 
 ```powershell
 python scripts/consultation_output_router.py `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --intent report_source `
   --output report_source_plan.json `
   --register
@@ -227,23 +227,23 @@ python scripts/consultation_output_router.py `
 依据计划写入：
 
 ```text
-consultation_state/final_report.md
+consultation_state/<chosen-session>/final_report.md
 ```
 
 随后登记为 `markdown_report`，并把所有实际使用的活动产物 ID 作为来源。报告文件不得写入 Skill 目录，不得包含 Benchmark，不能读取 `stale` 或 `superseded` 产物。
 
 ```powershell
 python scripts/consultation_harness.py register `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --kind markdown_report `
-  --path consultation_state/final_report.md `
+  --path consultation_state/<chosen-session>/final_report.md `
   --source-category prior_output `
   --source-artifact <实际使用的活动产物ID>
 ```
 
 重复 `--source-artifact` 传入全部实际来源。若已有活动 `markdown_report`，先按 `output` 范围 `supersede`，不得静默覆盖。
 
-按 `technical-report.md` 另行生成 `consultation_state/technical_analysis.md`。HTML 尚未实现。未来获得模板后，只渲染这两份已登记 Markdown 及其结构化来源，不重新进行命理推理。
+按 `technical-report.md` 在同一 `<session-dir>/` 另行生成 `technical_analysis.md`。HTML 尚未实现。未来获得模板后，只渲染同一会话内这两份已登记 Markdown 及其结构化来源，不重新进行命理推理。
 
 ## 八、交付检查
 

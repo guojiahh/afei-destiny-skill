@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import json
+import io
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 
@@ -18,14 +20,20 @@ from consultation_harness import (
     HarnessError,
     active_artifacts,
     audit_state,
+    discover_sessions,
     firewall_check,
     initialize_session,
+    legacy_migration_preview,
+    main,
     read_state,
     register_artifact,
     reset_to_stage,
     status_summary,
+    start_isolated_session,
     supersede,
     transition_stage,
+    validate_low_level_init_target,
+    validate_start_choice,
 )
 from consultation_output_router import build_output_plan
 from doctor import run_checks
@@ -137,6 +145,83 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertEqual("intake", recovered["stage"])
         self.assertFalse(recovered["privacy"]["absolute_context_isolation_claimed"])
         self.assertEqual(["chart_ready"], status_summary(recovered)["allowed_next_stages"])
+
+    def test_discover_empty_root_starts_new(self):
+        root = Path(self.temporary.name) / "empty_collection"
+        result = discover_sessions(root)
+        self.assertEqual("start_new", result["decision"])
+        self.assertEqual([], result["sessions"])
+
+    def test_low_level_init_rejects_collection_root(self):
+        root = Path(self.temporary.name) / "consultation_state"
+        with self.assertRaisesRegex(HarnessError, "start --state-root"):
+            validate_low_level_init_target(root)
+        validate_low_level_init_target(root / "explicit_session")
+
+    def test_start_creates_one_directory_per_consultation(self):
+        root = Path(self.temporary.name) / "session_collection"
+        first_dir, first = start_isolated_session(root, "guided", "事业", "career")
+        second_dir, second = start_isolated_session(root, "focused", "感情", "love")
+        self.assertNotEqual(first_dir, second_dir)
+        self.assertEqual(root.resolve(), first_dir.parent)
+        self.assertTrue((first_dir / "session_state.json").is_file())
+        self.assertTrue((second_dir / "session_state.json").is_file())
+        self.assertEqual("isolated_session_v1", first["storage_layout"])
+        self.assertNotEqual(first["session_id"], second["session_id"])
+        discovered = discover_sessions(root)
+        self.assertEqual("ask_choose_session_or_start_new", discovered["decision"])
+        self.assertEqual(2, discovered["unfinished_count"])
+
+    def test_start_cli_requires_new_choice_when_unfinished_exists(self):
+        root = Path(self.temporary.name) / "cli_collection"
+        stream = io.StringIO()
+        with redirect_stdout(stream), redirect_stderr(stream):
+            self.assertEqual(
+                0,
+                main(["start", "--state-root", str(root), "--mode", "guided"]),
+            )
+            self.assertEqual(
+                2,
+                main(["start", "--state-root", str(root), "--mode", "guided"]),
+            )
+            self.assertEqual(
+                0,
+                main(
+                    [
+                        "start",
+                        "--state-root",
+                        str(root),
+                        "--mode",
+                        "guided",
+                        "--user-choice",
+                        "new",
+                    ]
+                ),
+            )
+        self.assertEqual(2, discover_sessions(root)["unfinished_count"])
+
+    def test_discover_one_unfinished_requires_explicit_choice(self):
+        root = Path(self.temporary.name) / "single_collection"
+        session_dir, _ = start_isolated_session(root, "guided", None, "overall")
+        discovered = discover_sessions(root)
+        self.assertEqual("ask_continue_or_start_new", discovered["decision"])
+        self.assertEqual(str(session_dir), discovered["sessions"][0]["session_dir"])
+        with self.assertRaisesRegex(HarnessError, "explicit user choice"):
+            validate_start_choice(discovered, None)
+        validate_start_choice(discovered, "new")
+
+    def test_legacy_root_is_detected_and_preview_does_not_move_files(self):
+        root = Path(self.temporary.name) / "legacy_collection"
+        initialize_session(root, "guided", None)
+        extra = root / "unassigned.md"
+        extra.write_text("legacy", encoding="utf-8")
+        discovered = discover_sessions(root)
+        self.assertEqual("legacy_root", discovered["sessions"][0]["storage_layout"])
+        preview = legacy_migration_preview(root)
+        self.assertTrue(preview["legacy_session_found"])
+        self.assertFalse(preview["safe_to_auto_migrate"])
+        self.assertIn("unassigned.md", preview["unassigned_root_files"])
+        self.assertTrue(extra.is_file())
 
     def test_transition_rejects_missing_prerequisite(self):
         with self.assertRaisesRegex(HarnessError, "chart_facts"):

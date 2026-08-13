@@ -60,7 +60,7 @@
 
 ```powershell
 python scripts/consultation_harness.py register `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --kind preblind_analysis `
   --path consultation_state/preblind_analysis.md `
   --source-category chart_fact `

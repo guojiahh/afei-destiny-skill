@@ -1,11 +1,11 @@
 # 会话 Harness：状态、操作语义与信息防火墙
 
-本文件规定所有真实咨询怎样初始化、恢复、纠正和失效。目标是让用户感受到一条连续、被认真承接的咨询线；底层则确保旧盘、旧判断和新反馈不会被静默混用。Harness 只管理状态与来源，不生成命理结论。
+本文件规定所有真实咨询怎样发现、初始化、恢复、纠正和失效。目标是让用户感受到一条连续、被认真承接的咨询线；底层则确保不同咨询、旧盘、旧判断和新反馈不会被静默混用。Harness 只管理状态与来源，不生成命理结论。
 
 ## 目录
 
 1. [基本原则](#一基本原则)
-2. [初始化与恢复](#二初始化与恢复)
+2. [会话发现、初始化与恢复](#二会话发现初始化与恢复)
 3. [三种操作语义](#三三种操作语义)
 4. [阶段迁移](#四阶段迁移)
 5. [产物注册与血缘](#五产物注册与血缘)
@@ -16,21 +16,56 @@
 ## 一、基本原则
 
 - 会话状态只写入用户当前工作目录，不写入 Skill、仓库示例或 Benchmark。
+- `consultation_state/` 只作会话集合根目录；每次咨询写入独立子目录。
 - 每次继续咨询前先读取 `session_state.json`；不能凭聊天记忆猜当前阶段。
+- 不得同时读取两个会话目录，也不得扫描根目录拼接产物。
 - 只有 `active` 产物可进入下一阶段。`stale` 和 `superseded` 产物只能用于审计，不得恢复成结论。
 - 用户纠正资料时先执行失效操作，再重算；不能先生成新结论，最后才补状态。
 - Harness 的来源防火墙只验证声明来源和正式产物血缘，不宣称能隔离模型预训练、完整聊天上下文或共享文件系统。
 
-## 二、初始化与恢复
+## 二、会话发现、初始化与恢复
 
-首次开始咨询：
+`consultation_state/` 是会话集合根目录，不是某一次咨询本身：
+
+```text
+consultation_state/
+├─ 20260813-031500Z_overall_a1b2c3d4/
+│  ├─ session_state.json
+│  ├─ inputs.json
+│  └─ ...
+└─ 20260813-042000Z_love_e5f6a7b8/
+   ├─ session_state.json
+   └─ ...
+```
+
+每次开始或继续前先只读发现：
 
 ```powershell
-python scripts/doctor.py --session-dir consultation_state
-python scripts/consultation_harness.py init `
-  --session-dir consultation_state `
-  --mode guided
+python scripts/consultation_harness.py discover `
+  --state-root consultation_state
 ```
+
+根据 `decision` 执行：
+
+| `decision` | 用户可见动作 |
+|---|---|
+| `start_new` | 没有未完成咨询，直接新建独立会话 |
+| `ask_continue_or_start_new` | 有一条未完成咨询，询问“继续这次，还是新开一次” |
+| `ask_choose_session_or_start_new` | 有多条未完成咨询，列出主题、阶段和更新时间，让用户选择或新开 |
+| `review_invalid_state_or_start_new` | 状态损坏；说明问题并允许新开，不擅自恢复 |
+
+用户明确说“重新开始”“新开一次”时直接新建：
+
+```powershell
+python scripts/consultation_harness.py start `
+  --state-root consultation_state `
+  --mode guided `
+  --topic "整体分析" `
+  --label overall `
+  --user-choice new
+```
+
+`start` 使用时间、标签和随机短 ID 创建不可碰撞的子目录，并返回准确的 `session_dir`。本轮之后的全部命令和输出路由只使用这个目录。不得按修改时间自行猜测当前会话，也不得因为出生资料相同就复用旧目录。
 
 模式：
 
@@ -38,16 +73,25 @@ python scripts/consultation_harness.py init `
 - `focused`：用户只问一个明确问题，跳过强制盲测，但仍保留盘面锁、血缘和输出路由。
 - `one_shot`：用户明确要求一次讲完；未完成的校准项保持未核验。
 
-已有状态时不得重新 `init`。先运行：
+用户选择继续某条未完成咨询后，对 `discover` 返回的准确目录运行：
 
 ```powershell
-python scripts/consultation_harness.py status --session-dir consultation_state
-python scripts/consultation_harness.py audit --session-dir consultation_state
-python scripts/consultation_harness.py resume --session-dir consultation_state
+python scripts/consultation_harness.py status --session-dir consultation_state/<chosen-session>
+python scripts/consultation_harness.py audit --session-dir consultation_state/<chosen-session>
+python scripts/consultation_harness.py resume `
+  --session-dir consultation_state/<chosen-session> `
+  --user-choice continue
 ```
 
 `audit` 失败时停止消费产物。先修复缺失、被篡改或依赖失效的问题，再继续。
 `resume` 会先审计，再返回当前阶段、活动产物种类和合法下一步；它不会把失效文件重新激活。
+
+`init --session-dir` 仅保留给测试和已明确指定独立目录的低层调用；正常流程使用 `start --state-root`。旧版可能把产物直接放在根目录，`discover` 会将其标为 `legacy_root`。迁移前运行以下只读预览，只有用户查看预览并明确确认后才能移动：
+
+```powershell
+python scripts/consultation_harness.py migration-preview `
+  --state-root consultation_state
+```
 
 ## 三、三种操作语义
 
@@ -61,7 +105,7 @@ python scripts/consultation_harness.py resume --session-dir consultation_state
 
 ```powershell
 python scripts/consultation_harness.py supersede `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --scope chart `
   --reason "用户将出生时间从 09:00 修正为 08:20"
 ```
@@ -83,7 +127,7 @@ python scripts/consultation_harness.py supersede `
 
 ```powershell
 python scripts/consultation_harness.py reset `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --to first_read `
   --reason "用户要求换一种开场盲测重新开始"
 ```
@@ -96,7 +140,7 @@ python scripts/consultation_harness.py reset `
 
 ```powershell
 python scripts/consultation_harness.py transition `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --to chart_ready
 ```
 
@@ -116,7 +160,7 @@ intake → chart_ready → first_read → calibration → deep_dive → forecast
 
 ```powershell
 python scripts/consultation_harness.py register `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --kind chart_facts `
   --path consultation_state/chart_facts.json `
   --source-category operational_input

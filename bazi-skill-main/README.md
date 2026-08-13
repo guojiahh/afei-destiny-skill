@@ -82,7 +82,7 @@ python scripts/calculate_bazi.py `
 | `scripts/test_calculate_bazi.py` | 计算器回归测试 |
 | `scripts/blind_opening.py` | 开场盲测资格过滤、跨领域选择、哈希锁定与反馈结算 |
 | `scripts/test_blind_opening.py` | 盲测引擎回归测试 |
-| `scripts/consultation_harness.py` | 会话状态、阶段门禁、产物血缘、替代/重启和来源防火墙 |
+| `scripts/consultation_harness.py` | 多会话发现、独立目录创建、阶段门禁、产物血缘、替代/重启和来源防火墙 |
 | `scripts/consultation_output_router.py` | 对话、技术审计、总结与报告来源的活动产物路由 |
 | `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
 | `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
@@ -99,7 +99,7 @@ python scripts/calculate_bazi.py `
 | `references/opening-blind-reading.md` | 默认四条开场盲测的候选门禁、运行方式与一次结算转场 |
 | `references/client-voice.md` | 温暖、具体、不迎合的客户语言与反馈回应 |
 | `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
-| `references/consultation-harness.md` | 会话恢复、三种操作语义、状态血缘与信息防火墙 |
+| `references/consultation-harness.md` | 会话集合目录、继续/新开决策、恢复、操作语义、状态血缘与信息防火墙 |
 | `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
 | `references/markdown-report.md` | 面向用户的全主题长篇 Markdown 报告、重点导航与交付检查 |
 | `references/technical-report.md` | 独立技术分析文档的来源、结构、一致性和隐私边界 |

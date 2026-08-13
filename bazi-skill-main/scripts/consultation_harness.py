@@ -12,6 +12,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import uuid
 from datetime import datetime, timezone
@@ -22,6 +23,7 @@ from typing import Any, Iterable
 SCHEMA_VERSION = 1
 POLICY_VERSION = "bazi-consultation-harness-v1"
 STATE_NAME = "session_state.json"
+ROOT_MARKER_NAME = ".consultation-root.json"
 STAGES = (
     "intake",
     "chart_ready",
@@ -205,6 +207,165 @@ def file_hash(path: Path) -> str:
 
 def state_path(session_dir: Path) -> Path:
     return session_dir.resolve() / STATE_NAME
+
+
+def session_lifecycle(state: dict[str, Any]) -> str:
+    return "complete" if state.get("stage") == "report_ready" else "unfinished"
+
+
+def safe_session_label(value: str | None, mode: str) -> str:
+    raw = (value or mode).strip().lower()
+    normalized = re.sub(r"[^\w-]+", "_", raw, flags=re.UNICODE).strip("_-")
+    return (normalized or mode)[:40]
+
+
+def discover_sessions(state_root: Path) -> dict[str, Any]:
+    root = state_root.resolve()
+    candidates: list[tuple[Path, str]] = []
+    if (root / STATE_NAME).is_file():
+        candidates.append((root, "legacy_root"))
+    if root.is_dir():
+        for child in sorted(root.iterdir(), key=lambda path: path.name.lower()):
+            if child.is_dir() and (child / STATE_NAME).is_file():
+                candidates.append((child, "isolated_subdirectory"))
+
+    sessions: list[dict[str, Any]] = []
+    invalid_sessions: list[dict[str, str]] = []
+    for directory, layout in candidates:
+        try:
+            state = read_state(directory)
+            issues = audit_state(directory, state)
+        except HarnessError as exc:
+            invalid_sessions.append(
+                {"session_dir": str(directory), "storage_layout": layout, "error": str(exc)}
+            )
+            continue
+        summary = status_summary(state)
+        sessions.append(
+            {
+                "session_dir": str(directory),
+                "directory_name": directory.name,
+                "storage_layout": layout,
+                "lifecycle": session_lifecycle(state),
+                "audit_ok": not issues,
+                "audit_issues": issues,
+                "updated_at": state.get("updated_at"),
+                **summary,
+            }
+        )
+
+    sessions.sort(key=lambda row: row.get("updated_at") or "", reverse=True)
+    sessions.sort(key=lambda row: row["lifecycle"] != "unfinished")
+    unfinished = [row for row in sessions if row["lifecycle"] == "unfinished" and row["audit_ok"]]
+    audit_problems = [row for row in sessions if not row["audit_ok"]]
+    if len(unfinished) == 1:
+        decision = "ask_continue_or_start_new"
+    elif len(unfinished) > 1:
+        decision = "ask_choose_session_or_start_new"
+    elif invalid_sessions or audit_problems:
+        decision = "review_invalid_state_or_start_new"
+    else:
+        decision = "start_new"
+    return {
+        "schema_version": 1,
+        "state_root": str(root),
+        "decision": decision,
+        "unfinished_count": len(unfinished),
+        "audit_problem_count": len(audit_problems),
+        "sessions": sessions,
+        "invalid_sessions": invalid_sessions,
+        "rules": [
+            "never merge artifacts from different session_dir values",
+            "do not resume an unfinished session until the user chooses it",
+            "start_new always creates a new isolated subdirectory",
+        ],
+    }
+
+
+def start_isolated_session(
+    state_root: Path,
+    mode: str,
+    topic: str | None,
+    label: str | None,
+) -> tuple[Path, dict[str, Any]]:
+    root = state_root.resolve()
+    root.mkdir(parents=True, exist_ok=True)
+    marker = root / ROOT_MARKER_NAME
+    if not marker.exists():
+        write_json_atomic(
+            marker,
+            {
+                "schema_version": 1,
+                "purpose": "bazi_consultation_session_collection",
+                "session_layout": "one_subdirectory_per_consultation",
+            },
+        )
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%SZ")
+    name = f"{stamp}_{safe_session_label(label or topic, mode)}_{uuid.uuid4().hex[:8]}"
+    session_dir = root / name
+    state = initialize_session(session_dir, mode, topic)
+    state["storage_layout"] = "isolated_session_v1"
+    state["session_label"] = label or topic
+    state["revision"] += 1
+    append_history(state, "isolated_session_created", state_root=str(root), session_dir=name)
+    write_state(session_dir, state)
+    return session_dir, state
+
+
+def legacy_migration_preview(state_root: Path) -> dict[str, Any]:
+    root = state_root.resolve()
+    legacy_state = root / STATE_NAME
+    if not legacy_state.is_file():
+        return {
+            "schema_version": 1,
+            "state_root": str(root),
+            "legacy_session_found": False,
+            "action": "none",
+        }
+    state = read_state(root)
+    registered = {STATE_NAME}
+    for artifact in state.get("artifacts", []):
+        path = artifact.get("path")
+        if isinstance(path, str) and path:
+            registered.add(Path(path).as_posix())
+    loose_files = {
+        path.name
+        for path in root.iterdir()
+        if path.is_file() and path.name != ROOT_MARKER_NAME
+    }
+    registered_root_files = {path for path in registered if "/" not in path}
+    unassigned = sorted(loose_files - registered_root_files)
+    nested_registered = sorted(path for path in registered if "/" in path)
+    target = f"legacy_{state.get('session_id', 'unknown')[:8]}"
+    return {
+        "schema_version": 1,
+        "state_root": str(root),
+        "legacy_session_found": True,
+        "session_id": state.get("session_id"),
+        "stage": state.get("stage"),
+        "suggested_target": str(root / target),
+        "registered_paths": sorted(registered),
+        "unassigned_root_files": unassigned,
+        "nested_registered_paths": nested_registered,
+        "safe_to_auto_migrate": not unassigned and not nested_registered,
+        "action": "preview_only_requires_user_confirmation",
+        "note": "No files were moved. Mixed or unassigned files require manual mapping before migration.",
+    }
+
+
+def validate_low_level_init_target(session_dir: Path) -> None:
+    resolved = session_dir.resolve()
+    if resolved.name.lower() == "consultation_state" or (resolved / ROOT_MARKER_NAME).exists():
+        raise HarnessError(
+            "init cannot target the consultation collection root; use start --state-root so each consultation gets an isolated subdirectory"
+        )
+
+
+def validate_start_choice(discovery: dict[str, Any], user_choice: str | None) -> None:
+    if discovery.get("decision") != "start_new" and user_choice != "new":
+        raise HarnessError(
+            "existing or invalid consultation state requires an explicit user choice; run discover, ask the user, then pass --user-choice new"
+        )
 
 
 def ensure_inside_session(session_dir: Path, artifact_path: Path) -> Path:
@@ -596,6 +757,8 @@ def status_summary(state: dict[str, Any]) -> dict[str, Any]:
         "session_id": state["session_id"],
         "mode": state["mode"],
         "stage": state["stage"],
+        "lifecycle": session_lifecycle(state),
+        "session_label": state.get("session_label"),
         "selected_topic": state.get("selected_topic"),
         "revision": state["revision"],
         "active_artifacts": counts,
@@ -612,9 +775,28 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--mode", choices=sorted(MODES), default="guided")
     init.add_argument("--topic")
 
-    for name in ("status", "resume", "audit"):
+    discover = subparsers.add_parser("discover", help="discover isolated consultation sessions")
+    discover.add_argument("--state-root", required=True, type=Path)
+
+    start = subparsers.add_parser("start", help="start a new isolated consultation session")
+    start.add_argument("--state-root", required=True, type=Path)
+    start.add_argument("--mode", choices=sorted(MODES), default="guided")
+    start.add_argument("--topic")
+    start.add_argument("--label")
+    start.add_argument("--user-choice", choices=("new",))
+
+    preview = subparsers.add_parser(
+        "migration-preview", help="preview legacy root-session migration without moving files"
+    )
+    preview.add_argument("--state-root", required=True, type=Path)
+
+    for name in ("status", "audit"):
         command = subparsers.add_parser(name, help=f"{name} a consultation session")
         command.add_argument("--session-dir", required=True, type=Path)
+
+    resume = subparsers.add_parser("resume", help="resume a user-selected consultation session")
+    resume.add_argument("--session-dir", required=True, type=Path)
+    resume.add_argument("--user-choice", required=True, choices=("continue",))
 
     register = subparsers.add_parser("register", help="register a lineage artifact")
     register.add_argument("--session-dir", required=True, type=Path)
@@ -649,7 +831,31 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        if args.command == "discover":
+            print(json.dumps(discover_sessions(args.state_root), ensure_ascii=False, indent=2))
+            return 0
+        if args.command == "start":
+            discovery = discover_sessions(args.state_root)
+            validate_start_choice(discovery, args.user_choice)
+            session_dir, state = start_isolated_session(
+                args.state_root,
+                args.mode,
+                args.topic,
+                args.label,
+            )
+            print(
+                json.dumps(
+                    {"session_dir": str(session_dir), "status": status_summary(state)},
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            return 0
+        if args.command == "migration-preview":
+            print(json.dumps(legacy_migration_preview(args.state_root), ensure_ascii=False, indent=2))
+            return 0
         if args.command == "init":
+            validate_low_level_init_target(args.session_dir)
             state = initialize_session(args.session_dir, args.mode, args.topic)
             print(json.dumps(status_summary(state), ensure_ascii=False, indent=2))
             return 0

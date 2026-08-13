@@ -35,7 +35,7 @@ E:\bazi-skill-main
 ├─ CONTRIBUTING.md              修改、测试和安全约定
 ├─ LICENSE                      仓库许可证
 ├─ .benchmark-cache/            本地含答案缓存；被 Git 忽略
-├─ consultation_state/          真实咨询状态；运行时生成并被 Git 忽略
+├─ consultation_state/          真实咨询集合根目录；每次咨询一个子目录，整体被 Git 忽略
 └─ .git/                        Git 历史
 ```
 
@@ -50,7 +50,7 @@ E:\bazi-skill-main
 | `references/reasoning-protocol.md` | 通用判断顺序、反证和置信度规则 | 出现跨题复发的推理错误时 |
 | `references/temporal-reasoning.md` | 大运、流年和具体年份判断 | 年份事件比较反复出错时 |
 | `references/domain-rules.md` | 事业、关系、六亲等领域规则 | 同领域错误跨多个案例复发时 |
-| `references/consultation-harness.md` | 会话恢复、操作语义、血缘与信息防火墙 | 改咨询生命周期时 |
+| `references/consultation-harness.md` | 多会话发现、继续/新开、恢复、操作语义、血缘与信息防火墙 | 改咨询生命周期时 |
 | `references/guided-consultation.md` | 七阶段体验和每轮承接 | 改用户参与流程时 |
 | `references/opening-blind-reading.md` | 开场盲测门禁和反馈转场 | 改盲测体验时 |
 | `references/preblind-analysis.md` | 盲测前完整盘面审计与偏好隔离 | 改盲测准确性和分析深度时 |
@@ -62,7 +62,7 @@ E:\bazi-skill-main
 | `scripts/calculate_bazi.py` | 确定性排盘和岁运计算 | 可复现计算错误时 |
 | `scripts/compare_candidate_years.py` | 多个候选年同尺度比较 | 时间候选比较工具需要扩展时 |
 | `scripts/blind_opening.py` | 盲测筛选、锁定和反馈结算 | 改开场盲测硬门禁时 |
-| `scripts/consultation_harness.py` | 状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
+| `scripts/consultation_harness.py` | 会话发现与创建、状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
 | `scripts/consultation_output_router.py` | 只选择活动产物的输出计划 | 改输出路由时 |
 | `scripts/doctor.py` | 环境与固定命例自检 | 改依赖或运行入口时 |
 | `scripts/test_*.py` | Skill 全部回归测试 | 每个脚本修复必须同步补测试 |
@@ -158,7 +158,7 @@ evaluation/
 | 检查当前成绩 | `competition-iterations/iteration_report.md` | 同时看区间、wins/losses 和数据状态 |
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `bazi-skill-main/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
-| 继续真实咨询 | `consultation_harness.py` | `status`、`audit`、`resume`，只消费活动产物 |
+| 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
 | 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成 `report_source`、`technical_report_source`，再写用户报告与技术报告；HTML 仍未实现 |
 
 ## 文件治理规则
@@ -173,8 +173,8 @@ evaluation/
 ## 当前状态
 
 - Git 分支：`main`。
-- 当前 Skill：确定性排盘、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、状态化咨询、来源防火墙、输出路由、用户报告与独立技术报告规范已实现；HTML 呈现层尚未实现。
-- 当前本地门禁：35 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
+- 当前 Skill：确定性排盘、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由和 Markdown 报告规范已实现；HTML 呈现层尚未实现。
+- 当前本地门禁：41 项 Skill 测试、6 项评测测试、`doctor.py`、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。

@@ -8,7 +8,7 @@
 
 ```powershell
 python scripts/consultation_output_router.py `
-  --session-dir consultation_state `
+  --session-dir consultation_state/<chosen-session> `
   --intent technical_report_source `
   --output technical_report_source_plan.json `
   --register
@@ -47,7 +47,7 @@ python scripts/consultation_output_router.py `
 写入：
 
 ```text
-consultation_state/technical_analysis.md
+consultation_state/<chosen-session>/technical_analysis.md
 ```
 
 登记为 `technical_report`，并传入实际使用的活动产物 ID。若已经存在活动技术报告，先按 `output` 范围失效旧输出，不得静默覆盖。
