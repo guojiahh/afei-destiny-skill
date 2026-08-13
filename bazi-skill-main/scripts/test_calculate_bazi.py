@@ -115,6 +115,19 @@ class ChartRegressionTests(unittest.TestCase):
         self.assertLess(corrected, datetime(2000, 6, 1, 12, 0))
         self.assertLess(details["total_correction_minutes"], 0)
 
+    def test_exact_chongqing_time_keeps_true_solar_primary_pillar(self):
+        result = build_chart(
+            calendar="solar", year=2005, month=11, day=9,
+            hour=9, minute=3, gender="male",
+            longitude=106.5516, utc_offset=8,
+        )
+        comparison = result["time_basis_comparison"]
+        self.assertEqual("true_solar_time", comparison["primary_basis"])
+        self.assertEqual("乙巳", comparison["civil_clock"]["time_pillar"])
+        self.assertEqual("甲辰", comparison["primary_chart"]["time_pillar"])
+        self.assertTrue(comparison["crosses_shichen"])
+        self.assertEqual("甲辰", result["four_pillars"]["pillars"][3]["ganzhi"])
+
     def test_relation_layers_and_partial_combinations_are_explicit(self):
         si = {"label": "甲", "stem": "丁", "branch": "巳"}
         you = {"label": "乙", "stem": "癸", "branch": "酉"}

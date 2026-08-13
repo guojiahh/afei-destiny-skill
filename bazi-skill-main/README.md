@@ -73,12 +73,14 @@ python scripts/calculate_bazi.py `
 
 完整口径见 [`references/calculation-conventions.md`](references/calculation-conventions.md)。
 
+提供经度和时区后，输出中的 `time_basis_comparison` 会同时保留民用钟表盘与当前主口径盘。两者跨时辰不表示出生时间不准确：主盘时柱继续完整分析，另一盘只用于检查哪些结论对时间口径敏感。
+
 ## 目录职责
 
 | 路径 | 职责 |
 |---|---|
 | `SKILL.md` | 识别任务模式、路由资料、约束输出边界 |
-| `scripts/calculate_bazi.py` | 计算历法、四柱、大运、流年和关系事实 |
+| `scripts/calculate_bazi.py` | 计算历法、四柱、大运、流年和关系事实，并输出民用时与主口径盘对照 |
 | `scripts/test_calculate_bazi.py` | 计算器回归测试 |
 | `scripts/blind_opening.py` | 开场盲测资格过滤、跨领域选择、哈希锁定与反馈结算 |
 | `scripts/test_blind_opening.py` | 盲测引擎回归测试 |

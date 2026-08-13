@@ -349,6 +349,27 @@ def _solar_from_input(
     return Lunar.fromYmdHms(year, lunar_month, day, hour, minute, second).getSolar()
 
 
+def _eight_char_at(moment: datetime, day_boundary: str) -> tuple[Any, Any]:
+    solar = Solar.fromYmdHms(
+        moment.year, moment.month, moment.day,
+        moment.hour, moment.minute, moment.second,
+    )
+    lunar = solar.getLunar()
+    eight = lunar.getEightChar()
+    eight.setSect(1 if day_boundary == "zi-next" else 2)
+    return lunar, eight
+
+
+def _pillar_snapshot(moment: datetime, eight: Any) -> dict[str, Any]:
+    pillars = [eight.getYear(), eight.getMonth(), eight.getDay(), eight.getTime()]
+    return {
+        "datetime": moment.isoformat(sep=" "),
+        "four_pillars": " ".join(pillars),
+        "day_pillar": pillars[2],
+        "time_pillar": pillars[3],
+    }
+
+
 def _format_jie(jie: Any) -> dict[str, str] | None:
     if jie is None:
         return None
@@ -428,13 +449,14 @@ def build_chart(
             civil_moment, longitude, utc_offset, dst_minutes
         )
 
-    calculation_solar = Solar.fromYmdHms(
-        calculation_moment.year, calculation_moment.month, calculation_moment.day,
-        calculation_moment.hour, calculation_moment.minute, calculation_moment.second,
-    )
-    lunar = calculation_solar.getLunar()
-    eight = lunar.getEightChar()
-    eight.setSect(1 if day_boundary == "zi-next" else 2)
+    lunar, eight = _eight_char_at(calculation_moment, day_boundary)
+    if calculation_moment == civil_moment:
+        civil_eight = eight
+    else:
+        _, civil_eight = _eight_char_at(civil_moment, day_boundary)
+
+    civil_snapshot = _pillar_snapshot(civil_moment, civil_eight)
+    primary_snapshot = _pillar_snapshot(calculation_moment, eight)
 
     pillars = [
         _pillar("年柱", eight.getYear(), eight.getYearHideGan(), eight.getYearShiShenGan(),
@@ -478,6 +500,13 @@ def build_chart(
             "previous_jie": _format_jie(lunar.getPrevJie()),
             "next_jie": _format_jie(lunar.getNextJie()),
             "true_solar_time": solar_correction,
+        },
+        "time_basis_comparison": {
+            "primary_basis": "true_solar_time" if solar_correction else "civil_clock_time",
+            "civil_clock": civil_snapshot,
+            "primary_chart": primary_snapshot,
+            "crosses_shichen": civil_snapshot["time_pillar"] != primary_snapshot["time_pillar"],
+            "crosses_day_pillar": civil_snapshot["day_pillar"] != primary_snapshot["day_pillar"],
         },
         "four_pillars": {
             "text": " ".join(p["ganzhi"] for p in pillars),

@@ -174,6 +174,13 @@ python scripts/consultation_harness.py register `
 - 唯一产物存在时直接覆盖；
 - 与该产物种类不相容的来源类别。
 
+`inputs`、`chart_facts` 和 `chart_lock` 还必须保持时间语义一致：
+
+- `inputs` 分别记录用户时间的精度和所选 `primary_time_basis`；
+- `chart_facts` 保留计算器的 `time_basis_comparison`，不得只复制“三柱稳定”后省略主盘时柱；
+- `chart_lock` 明确写出主盘完整四柱、候选口径及仅被候选盘改变的敏感项；
+- 分钟级输入明确时，禁止把跨口径写成“出生时间不准”或“时柱未知”。
+
 私密自由叙述不要机械写入 JSON。正式状态只保存最小标签、必要摘要和“是否含传记”的标记。
 
 ## 六、用户信息防火墙
