@@ -47,13 +47,12 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 ### 4. 展示工程验证（约 40 秒）
 
 ```powershell
-python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
-python -m unittest -v .\bazi-skill-main\scripts\test_blind_opening.py
-python -m unittest -v .\bazi-skill-main\scripts\test_consultation_harness.py
+python -m unittest discover -s .\bazi-skill-main\scripts -p "test_*.py"
+python -m unittest discover -s .\evaluation -p "test_*.py"
 python .\bazi-skill-main\scripts\doctor.py
 ```
 
-说明：四组检查分别验证计算稳定性、盲测候选门禁、完整会话状态与环境可运行性；它们都不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
+说明：两组测试分别覆盖 Skill 的计算、盲测、会话、报告门禁，以及评测实验室的脱敏、锁定和污染检查；环境自检确认当前机器能运行这些能力。它们都不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
 
 ## 可切换的演示问题
 
@@ -108,6 +107,6 @@ python .\bazi-skill-main\scripts\doctor.py
 
 - [ ] 新环境中能识别 `$bazi`。
 - [ ] `SKILL.md` 位于安装目录第一层。
-- [ ] Python 能运行，9 项排盘、7 项盲测和 15 项会话 Harness 测试通过；`doctor.py` 全绿。
+- [ ] Python 能运行，46 项 Skill 测试和 6 项评测测试通过；`doctor.py` 全绿。
 - [ ] 演示出生信息是虚构信息或已获本人同意。
 - [ ] 不在屏幕上展示评测答案缓存或个人敏感信息。
