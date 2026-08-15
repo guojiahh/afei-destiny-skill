@@ -19,10 +19,7 @@ function browserLaunchOptions() {
 const shots = [
   { input: 'final-readme-hero.html', output: 'readme-hero.png', width: 1920, height: 1080 },
   { input: 'final-social-preview.html', output: 'social-preview.png', width: 1280, height: 640 },
-  { input: 'real-response-replica.html', output: 'real-response.png', width: 1440, height: 1080 },
-  { input: 'historical-response-template.html?case=puyi', output: 'case-puyi.png', width: 1440, height: 1080 },
-  { input: 'historical-response-template.html?case=einstein', output: 'case-einstein.png', width: 1440, height: 1080 },
-  { input: 'historical-response-template.html?case=churchill', output: 'case-churchill.png', width: 1440, height: 1080 },
+  { input: 'capability-map.html', output: 'capability-map.png', width: 1600, height: 900 },
 ];
 
 (async () => {

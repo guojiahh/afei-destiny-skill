@@ -28,8 +28,8 @@ E:\bazi-skill-main
 ├─ README.md                    仓库总入口
 ├─ bazi-skill-main/             可安装、可运行的 Bazi Skill
 ├─ evaluation/                  评测工具、协议和实验原件
-├─ docs/                        面向人的说明、方法报告和案例
-├─ assets/                      README 与案例图片
+├─ docs/                        面向人的说明、方法报告和演示指南
+├─ assets/                      项目主视觉、社交预览与能力说明图
 ├─ design-demos/                展示图的 HTML 源稿和渲染脚本
 ├─ dist/                        本地发布包；ZIP 被 Git 忽略
 ├─ CONTRIBUTING.md              修改、测试和安全约定
@@ -117,13 +117,13 @@ evaluation/
 - `WORKSPACE_GUIDE.md`：本文件，解释整个工作区。
 - `EVALUATION_AND_ITERATION_METHOD.md`：详细评测和迭代制度。
 - `SHOWCASE.md`：三分钟对外演示。
-- `CASE_STUDY.md`、`cases/`：公开案例材料。
+- 当前不保留公开咨询案例；以后仅接收完整走过现行流程、通过隐私审查并取得授权的材料。
 
 ## 4. `assets/` 与 `design-demos/`：展示层
 
-- `assets/showcase/`：README 主视觉、社交预览和案例图片。
+- `assets/showcase/`：README 主视觉、社交预览、能力闭环图和抽象背景。
 - `assets/contact/`：联系图片。
-- `design-demos/`：上述展示图的 HTML 源稿、回复模板和渲染脚本。
+- `design-demos/`：上述展示图的 HTML 源稿和渲染脚本。
 
 它们不会影响 Skill 的推理准确率。做功能优化时无需加载这些文件。
 
