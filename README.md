@@ -6,7 +6,7 @@
 
 > 八字属于传统文化解释体系，不是科学预测。本项目适合文化研究、方法实验与娱乐参考，不应替代医疗、法律、财务或其他专业判断。
 
-![八字研判 Codex Skill 项目主视觉](assets/showcase/readme-hero.png)
+![八字咨询系统 Codex Skill 项目主视觉](assets/showcase/readme-hero.png)
 
 ## 项目亮点
 
