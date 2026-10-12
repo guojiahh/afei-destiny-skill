@@ -1,0 +1,42 @@
+name: Validate workspace
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            python: '3.11'
+          - os: macos-latest
+            python: '3.13'
+          - os: windows-latest
+            python: '3.9'
+          - os: windows-latest
+            python: '3.13'
+          - os: ubuntu-latest
+            python: '3.13'
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: workspace with spaces
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Workspace checks
+        working-directory: workspace with spaces
+        run: python tools/check_workspace.py

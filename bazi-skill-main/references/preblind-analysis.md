@@ -62,7 +62,7 @@
 python scripts/consultation_harness.py register `
   --session-dir consultation_state/<chosen-session> `
   --kind preblind_analysis `
-  --path consultation_state/preblind_analysis.md `
+  --path consultation_state/<chosen-session>/preblind_analysis.md `
   --source-category chart_fact `
   --source-category traditional_rule `
   --source-artifact <chart_facts-id> `

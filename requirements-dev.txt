@@ -1,0 +1,2 @@
+# Only needed by skill-creator's quick_validate.py; runtime uses vendored code.
+PyYAML==6.0.3

@@ -7,3 +7,8 @@ consultation_state/
 dist/*.zip
 *.tmp
 *.log
+.venv/
+.DS_Store
+.env
+.env.*
+!.env.example

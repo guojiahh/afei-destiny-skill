@@ -121,10 +121,10 @@
 
 ## 八、持续对话状态
 
-真实咨询按 `consultation-harness.md` 使用文件化状态，不把完整私人经历写入可安装 Skill：
+真实咨询按 `consultation-harness.md` 使用文件化状态。先发现并选定单一会话，下面的文件只属于该会话子目录，不把完整私人经历写入可安装 Skill：
 
 ```
-consultation_state/
+consultation_state/<chosen-session>/
   chart_facts.json         排盘器输出或其摘要
   chart_lock.md            首次盘面锁
   blind_candidates.json    仅用盘面生成的盲测候选

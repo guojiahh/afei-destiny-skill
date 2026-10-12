@@ -1,10 +1,13 @@
 # 工作区地图
 
-更新日期：2026-08-13
+更新日期：2026-10-12
 
 ## 一句话说明
 
-`E:\bazi-skill-main` 不是一个单独的 Skill 文件夹，而是一个完整的研发仓库：中间的 `bazi-skill-main/` 才是交给 Codex 运行的技能包；`evaluation/` 是与答案和实验有关的隔离评测区；`docs/`、`assets/`、`design-demos/` 是说明与展示层。
+仓库根目录不是一个单独的 Skill 文件夹，而是一个完整的研发仓库：中间的 `bazi-skill-main/` 才是交给 Codex 运行的技能包；`evaluation/` 是与答案和实验有关的隔离评测区；`docs/`、`assets/`、`design-demos/` 是说明与展示层。
+
+旧文档中的 `E:\bazi-skill-main` 是 Windows 开发机路径，项目不依赖这一位置。
+在 Mac 上从实际仓库根目录开始，按[开发初始化指南](../CONTRIBUTING.md)建立本机环境。
 
 最重要的边界是：**含答案题库、预测记录和错题分析永远不能进入可安装 Skill。** 否则下一轮作答会被答案污染。
 
@@ -14,7 +17,7 @@
 
 | 路径 | Git 身份 | 用途 | 是否项目源码 |
 |---|---|---|---|
-| `E:\bazi-skill-main` | `guojiahh/bazi-analysis-skill` | 当前完整研发仓库 | 是 |
+| 仓库根目录 `.` | `guojiahh/bazi-analysis-skill` | 当前完整研发仓库 | 是 |
 | `.benchmark-cache/BaziQA` | `ChenJiangxi/BaziQA` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
 | `.benchmark-cache/MingLi-Bench` | `DestinyLinker/MingLi-Bench` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
 
@@ -23,7 +26,7 @@
 ## 顶层结构
 
 ```text
-E:\bazi-skill-main
+.
 ├─ AGENTS.md                    Agent 项目规则与验证入口
 ├─ README.md                    仓库总入口
 ├─ bazi-skill-main/             可安装、可运行的 Bazi Skill
@@ -33,6 +36,9 @@ E:\bazi-skill-main
 ├─ design-demos/                展示图的 HTML 源稿和渲染脚本
 ├─ dist/                        本地发布包；ZIP 被 Git 忽略
 ├─ CONTRIBUTING.md              修改、测试和安全约定
+├─ requirements-dev.txt         开发验证依赖；不进入 Skill 运行包
+├─ tools/check_workspace.py     一条命令执行工作区检查
+├─ .github/workflows/           跨平台自动验证
 ├─ LICENSE                      仓库许可证
 ├─ .benchmark-cache/            本地含答案缓存；被 Git 忽略
 ├─ consultation_state/          真实咨询集合根目录；每次咨询一个子目录，整体被 Git 忽略
@@ -173,7 +179,7 @@ evaluation/
 
 ## 当前状态
 
-- Git 分支：`main`。
+- Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
 - 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；HTML 呈现层尚未实现。
 - 当前本地门禁：46 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。

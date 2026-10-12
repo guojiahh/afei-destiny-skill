@@ -37,7 +37,7 @@
 请用 $bazi 开始预测，一步一步带着我分析。
 ```
 
-如果用户还没有提供出生信息，技能会先完成最小资料收集；排盘后先给不读取个人经历的初判，再每轮核对一个关键分叉并展示“保留 / 下调 / 修正”了什么。明确只问职业、关系或某一年时，也可以直接进入对应主题。
+如果用户还没有提供出生信息，技能会先完成最小资料收集与关注方向确认；排盘和内部审计后展示默认四条、强信号时五条盲测，用户反馈后只结算一次，再围绕一个现实主问题倾听和深入。明确只问职业、关系或某一年时，也可以直接进入对应主题。
 
 更完整的安装、提问方式和目录说明见 [`bazi-skill-main/README.md`](bazi-skill-main/README.md)。
 
@@ -55,6 +55,14 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 ```
 
 输出为结构化 JSON。上述示例会得到四柱 `庚午 辛巳 庚辰 癸未`，并同时返回所采用的历法口径、起运信息及 2026 年的岁运关系。
+
+在 macOS / Linux 的终端中，使用下面的一行命令：
+
+```sh
+python3 bazi-skill-main/scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
+```
+
+从 Windows 切换到 Mac 的虚拟环境、命令和换行说明见[开发初始化指南](CONTRIBUTING.md#macos--linux-初始化)。
 
 ## 当前能力闭环
 
@@ -86,6 +94,9 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 ├─ assets/                项目主视觉、社交预览、能力图和联系图片
 ├─ design-demos/          生成展示图片时使用的 HTML/渲染脚本
 ├─ dist/                  本地生成的发布压缩包；ZIP 不进入 Git
+├─ tools/                 工作区开发检查；不属于可安装 Skill
+├─ requirements-dev.txt   开发校验依赖
+├─ .github/workflows/     跨平台自动验证配置
 ├─ CONTRIBUTING.md        修改与验证约定
 └─ LICENSE                项目许可证
 ```
@@ -96,13 +107,14 @@ python .\bazi-skill-main\scripts\calculate_bazi.py `
 
 ## 验证与评测
 
-运行项目回归测试与环境自检：
+按[开发初始化指南](CONTRIBUTING.md)准备 Python 环境后，从仓库根目录运行统一检查：
 
-```powershell
-python -m unittest discover -s .\bazi-skill-main\scripts -p "test_*.py"
-python -m unittest discover -s .\evaluation -p "test_*.py"
-python .\bazi-skill-main\scripts\doctor.py
+```text
+python tools/check_workspace.py
 ```
+
+该入口运行两组回归测试、环境自检、空白检查和 Markdown 本地文件链接检查。
+修改 Skill 时再加 `--skill`，调用本机安装的 `skill-creator` 结构校验器。
 
 当前 10 项计算器测试覆盖独立排盘 fixture、目标年份与大运、换运日期边界、晚子换日、真太阳时方向、重庆 09:03 跨时辰时仍保留主盘甲辰、原局关系层与复合关系；8 项开场盲测测试覆盖默认四条跨领域选择、现实字段门禁、敏感/宽泛/复合候选拒绝、清单防篡改、反馈结算、降级转场和命令行往返；24 项会话 Harness 测试覆盖会话发现、独立目录创建、命令行显式选择、根目录误初始化拒绝、继续/新开决策、旧布局预览、阶段门禁、来源防火墙、产物血缘、替代/重启、篡改检测、输出路由与环境自检；4 项报告结构测试阻止技术章节回到用户报告前部，并要求重点问题包含具体场景和心结收束；另有 6 项评测管线测试覆盖题包脱敏、锁定、防篡改、污染隔离和配对比较。
 

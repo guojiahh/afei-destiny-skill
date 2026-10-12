@@ -162,7 +162,7 @@ intake → chart_ready → first_read → calibration → deep_dive → forecast
 python scripts/consultation_harness.py register `
   --session-dir consultation_state/<chosen-session> `
   --kind chart_facts `
-  --path consultation_state/chart_facts.json `
+  --path consultation_state/<chosen-session>/chart_facts.json `
   --source-category operational_input
 ```
 

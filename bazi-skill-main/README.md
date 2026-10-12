@@ -2,7 +2,7 @@
 
 这是仓库中**可直接安装**的技能目录。它包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
 
-如果你想了解整个项目、评测结果和设计思路，请先看[仓库首页](../README.md)。
+如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/bazi-analysis-skill)。
 
 ## 安装
 
@@ -51,13 +51,10 @@ Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
 
 ## 直接使用计算器
 
-```powershell
-python scripts/calculate_bazi.py `
-  --date 1990-05-15 `
-  --time 14:30 `
-  --gender female `
-  --target-year 2026 `
-  --compact
+从当前技能目录运行（macOS 未激活虚拟环境时使用 `python3`）：
+
+```text
+python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
 ```
 
 常用参数：
@@ -115,10 +112,8 @@ python scripts/calculate_bazi.py `
 
 在当前目录执行：
 
-```powershell
-python -m unittest -v scripts/test_calculate_bazi.py
-python -m unittest -v scripts/test_blind_opening.py
-python -m unittest -v scripts/test_consultation_harness.py
+```text
+python -m unittest discover -s scripts -p "test_*.py"
 python scripts/doctor.py
 python scripts/calculate_bazi.py --help
 python scripts/blind_opening.py --help
@@ -129,7 +124,7 @@ python scripts/validate_final_report.py --help
 
 修改计算逻辑时应先补测试；修改推理规则时应给出适用条件、反例和冲突口径。Benchmark 相关内容必须继续留在仓库根目录的 `evaluation/` 中。
 
-本轮知识与推理缺口的证据、补全范围和仍待验证事项见 [`../docs/KNOWLEDGE_AUDIT.md`](../docs/KNOWLEDGE_AUDIT.md)。
+源码仓库的开发环境与完整验证入口见[参与开发](https://github.com/guojiahh/bazi-analysis-skill/blob/main/CONTRIBUTING.md)；2026-08-11 的知识补全历史见[知识与推理缺口审计](https://github.com/guojiahh/bazi-analysis-skill/blob/main/docs/KNOWLEDGE_AUDIT.md)。这些仓库文档不随独立 Skill 安装包分发。
 
 ## 使用边界
 

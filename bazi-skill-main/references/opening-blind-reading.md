@@ -97,12 +97,12 @@
 
 ## 四、选择与锁定
 
-运行：
+以下 `<chosen-session>` 必须替换为 Harness 返回并由用户选定的同一会话子目录；所有候选、清单和反馈文件都写在该目录中。运行：
 
 ```powershell
 python scripts/blind_opening.py select `
-  --input consultation_state/blind_candidates.json `
-  --output consultation_state/blind_probe_manifest.json
+  --input consultation_state/<chosen-session>/blind_candidates.json `
+  --output consultation_state/<chosen-session>/blind_probe_manifest.json
 ```
 
 脚本默认选择四条，允许 `--count 1..5`。先拒绝不合格候选，再按证据、具体度、基础率风险和反向条件排序；优先跨不同领域选择。`selection_score` 只用于排序，不是命理准确率。
@@ -181,9 +181,9 @@ python scripts/blind_opening.py select `
 
 ```powershell
 python scripts/blind_opening.py settle `
-  --manifest consultation_state/blind_probe_manifest.json `
-  --feedback consultation_state/blind_feedback_input.json `
-  --output consultation_state/blind_feedback_result.json
+  --manifest consultation_state/<chosen-session>/blind_probe_manifest.json `
+  --feedback consultation_state/<chosen-session>/blind_feedback_input.json `
+  --output consultation_state/<chosen-session>/blind_feedback_result.json
 ```
 
 脚本结果只控制转场，不在用户面前包装成准确率。结算完成后集中向用户说明保留、部分保留和放下什么，然后直接引入一个主问题；默认不再增加独立画像修正轮。

@@ -7,16 +7,19 @@
 
 ## 验证命令
 
-从仓库根目录运行：
+从仓库根目录运行；macOS 先用 `source .venv/bin/activate` 激活本地环境。
+统一入口 `python tools/check_workspace.py` 会执行下列检查及 Markdown 本地链接检查：
 
-```powershell
-python -m unittest discover -s .\bazi-skill-main\scripts -p "test_*.py"
-python -m unittest discover -s .\evaluation -p "test_*.py"
-python .\bazi-skill-main\scripts\doctor.py
+```text
+python -m unittest discover -s bazi-skill-main/scripts -p "test_*.py"
+python -m unittest discover -s evaluation -p "test_*.py"
+python bazi-skill-main/scripts/doctor.py
 git diff --check
 ```
 
-修改 Skill 后还要运行 `skill-creator` 的 `quick_validate.py`；修改 Markdown 后检查本地链接。
+修改 Skill 后还要运行 `skill-creator` 的 `quick_validate.py`：已安装该技能和
+`requirements-dev.txt` 依赖时，使用 `python tools/check_workspace.py --skill`。
+修改 Markdown 后检查本地链接。
 
 ## 技术与目录边界
 
@@ -31,9 +34,9 @@ git diff --check
 
 - 历法事实只由 `scripts/calculate_bazi.py` 计算，不手算日柱、起运或节气边界。
 - 计算、解释、真实咨询状态和 Benchmark 必须隔离。
-- 用户会话写入 `consultation_state/`；该目录不得提交。
-- 继续咨询前先运行 Harness 的 `status`/`audit`/`resume`；输入变化先 `supersede`，回退阶段用 `reset`。
-- 当前正式报告是 `consultation_state/final_report.md`：先生成 `report_source` 计划，再按 `references/markdown-report.md` 写入并登记血缘。HTML 尚未实现，不要扫描目录拼接旧产物。
+- `consultation_state/` 是会话集合，每次咨询使用独立子目录；整体不得提交。
+- 开始前先 `discover`；用户选定单一会话后，继续时运行 `status`/`audit`/`resume`；输入变化先 `supersede`，回退阶段用 `reset`。
+- 正式交付是 `<session-dir>/final_report.md` 与 `technical_analysis.md`：分别生成 `report_source`、`technical_report_source`，按两份报告规范写入，用户报告校验通过后登记血缘。HTML 尚未实现，不要跨会话拼接旧产物。
 - 不删除、移动或改写历史评测原件、分支、缓存仓库或发布包，除非用户在看过清理预览后明确确认。
 
 ## 当前权威入口
@@ -44,4 +47,4 @@ git diff --check
 - 评测流程：`evaluation/README.md`
 - 咨询状态机：`bazi-skill-main/references/consultation-harness.md`
 
-当前现役能力包括确定性排盘、四条开场盲测、一次反馈转场、倾听式主问题、状态化咨询、来源防火墙、输出路由和完整 Markdown 报告规范；HTML 等用户提供模板后再实现。
+当前能力与目录说明见 `docs/WORKSPACE_GUIDE.md`；咨询与报告协议以 Skill 内对应参考文件为准。
