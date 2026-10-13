@@ -4,8 +4,8 @@
 
 ## 修改前先判断属于哪一层
 
-- 计算事实：修改 `bazi-skill-main/scripts/`，并补充自动测试。
-- 推理或表达：修改 `bazi-skill-main/references/`，写清适用条件、反例和冲突口径。
+- 计算事实：修改 `afei-destiny-skill/scripts/`，并补充自动测试。
+- 推理或表达：修改 `afei-destiny-skill/references/`，写清适用条件、反例和冲突口径。
 - 技能路由：只有任务识别、文件路由或全局边界变化时才修改 `SKILL.md`。
 - Benchmark：只放在 `evaluation/`，不得复制原题、答案、人物标识或历史预测进技能包。
 
@@ -14,7 +14,7 @@
 ### macOS / Linux 初始化
 
 在仓库根目录执行。项目支持 Python 3.9–3.13，运行依赖已内置于
-`bazi-skill-main/scripts/vendor/`。开发时额外安装 PyYAML，供 Skill 结构校验使用。
+`afei-destiny-skill/scripts/vendor/`。开发时额外安装 PyYAML，供 Skill 结构校验使用。
 
 ```sh
 python3 -m venv .venv
@@ -40,10 +40,10 @@ GitHub。推送代码需要单独配置 GitHub HTTPS 或 SSH 认证。
 macOS 命令。两端的虚拟环境需要分别创建，不要复制 `.venv/`。
 
 ```powershell
-python -m unittest discover -s .\bazi-skill-main\scripts -p "test_*.py"
+python -m unittest discover -s .\afei-destiny-skill\scripts -p "test_*.py"
 python -m unittest discover -s .\evaluation -p "test_*.py"
-python .\bazi-skill-main\scripts\doctor.py
-python .\bazi-skill-main\scripts\calculate_bazi.py --help
+python .\afei-destiny-skill\scripts\doctor.py
+python .\afei-destiny-skill\scripts\calculate_bazi.py --help
 git diff --check
 ```
 

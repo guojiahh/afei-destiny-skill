@@ -1,20 +1,33 @@
-# Bazi Skill 使用说明
+# Afei Destiny Skill · 阿飞命运探索使用说明
 
-这是仓库中**可直接安装**的技能目录。它包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
+这是仓库中**可直接安装**的技能目录，技能 ID 为 `afei-destiny-skill`。它是 afei 的实验性命运探索技能，当前以四柱八字为核心，包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
 
-如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/bazi-analysis-skill)。
+如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/afei-destiny-skill)。
 
 ## 安装
 
-将当前目录复制到 Codex 的 skills 目录，并将目标文件夹命名为 `bazi`。例如已配置 `CODEX_HOME` 时，可在仓库根目录执行：
+将当前目录复制到 Codex 的 skills 目录，并将目标文件夹命名为 `afei-destiny-skill`。在 macOS / Linux 上，可在仓库根目录执行：
 
-```powershell
-Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
+```sh
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R ./afei-destiny-skill "${CODEX_HOME:-$HOME/.codex}/skills/afei-destiny-skill"
 ```
 
-重新打开 Codex 或开始一个新任务后，用 `$bazi` 显式调用技能。
+如果目标目录已存在，先备份并移开旧安装，再复制，避免把新目录嵌套进旧安装。Windows PowerShell 中，已配置 `CODEX_HOME` 时执行：
 
-安装成功后，目标目录的第一层应直接包含 `SKILL.md`，而不是再次嵌套一层 `bazi-skill-main/`。
+```powershell
+Copy-Item -Recurse .\afei-destiny-skill "$env:CODEX_HOME\skills\afei-destiny-skill"
+```
+
+重新打开 Codex 或开始一个新任务后，用 `$afei-destiny-skill` 显式调用技能。
+
+安装成功后，目标目录的第一层应直接包含 `SKILL.md`，而不是再次嵌套一层 `afei-destiny-skill/`。
+
+### 从旧名称迁移
+
+2026-10-13 起，项目名、可安装目录和 Skill ID 统一为 `afei-destiny-skill`，旧仓库名为 `bazi-analysis-skill`，旧技能 ID 为 `bazi`。
+
+已有用户安装新目录后，改用 `$afei-destiny-skill`。旧 `$bazi` 调用不会自动成为新 ID 的别名；确认迁移成功后，可自行移除旧 `bazi` 安装，避免同时加载两个版本。真实咨询仍使用原有独立会话目录，迁移前应备份相关会话，保留状态文件、产物和血缘，不覆盖或重新初始化旧咨询。
 
 ## 怎么提问
 
@@ -23,7 +36,7 @@ Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
 直接说：
 
 ```text
-请用 $bazi 开始预测，一步一步带着我分析。
+请用 $afei-destiny-skill 开始预测，一步一步带着我分析。
 ```
 
 技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出默认四条跨方向盲测。你可以直接回复“1准；2部分准，准在……；3不准；4不确定”；清单展示前会被锁定，回答后不能改题圆场。系统只结算一次，再从你愿意展开的话头进入一个现实主问题。深入过程中每轮显示进度，以倾听和承接为主；信息足够后询问是否生成完整 Markdown 报告。
@@ -42,7 +55,7 @@ Copy-Item -Recurse .\bazi-skill-main "$env:CODEX_HOME\skills\bazi"
 示例：
 
 ```text
-请用 $bazi 分析：公历 1990-05-15 14:30，女性，出生地上海。
+请用 $afei-destiny-skill 分析：公历 1990-05-15 14:30，女性，出生地上海。
 我只问 2026–2027 年是否适合换工作。请区分排盘事实、命理判断和现实建议，
 给出最强支持证据与一个最强反证，不要做确定性承诺。
 ```
@@ -124,7 +137,7 @@ python scripts/validate_final_report.py --help
 
 修改计算逻辑时应先补测试；修改推理规则时应给出适用条件、反例和冲突口径。Benchmark 相关内容必须继续留在仓库根目录的 `evaluation/` 中。
 
-源码仓库的开发环境与完整验证入口见[参与开发](https://github.com/guojiahh/bazi-analysis-skill/blob/main/CONTRIBUTING.md)；2026-08-11 的知识补全历史见[知识与推理缺口审计](https://github.com/guojiahh/bazi-analysis-skill/blob/main/docs/KNOWLEDGE_AUDIT.md)。这些仓库文档不随独立 Skill 安装包分发。
+源码仓库的开发环境与完整验证入口见[参与开发](https://github.com/guojiahh/afei-destiny-skill/blob/main/CONTRIBUTING.md)；2026-08-11 的知识补全历史见[知识与推理缺口审计](https://github.com/guojiahh/afei-destiny-skill/blob/main/docs/KNOWLEDGE_AUDIT.md)。这些仓库文档不随独立 Skill 安装包分发。
 
 ## 使用边界
 

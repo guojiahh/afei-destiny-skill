@@ -1,10 +1,10 @@
 # 工作区地图
 
-更新日期：2026-10-12
+更新日期：2026-10-13
 
 ## 一句话说明
 
-仓库根目录不是一个单独的 Skill 文件夹，而是一个完整的研发仓库：中间的 `bazi-skill-main/` 才是交给 Codex 运行的技能包；`evaluation/` 是与答案和实验有关的隔离评测区；`docs/`、`assets/`、`design-demos/` 是说明与展示层。
+仓库根目录不是一个单独的 Skill 文件夹，而是一个完整的研发仓库：中间的 `afei-destiny-skill/` 才是交给 Codex 运行的技能包；`evaluation/` 是与答案和实验有关的隔离评测区；`docs/`、`assets/`、`design-demos/` 是说明与展示层。
 
 旧文档中的 `E:\bazi-skill-main` 是 Windows 开发机路径，项目不依赖这一位置。
 在 Mac 上从实际仓库根目录开始，按[开发初始化指南](../CONTRIBUTING.md)建立本机环境。
@@ -17,11 +17,11 @@
 
 | 路径 | Git 身份 | 用途 | 是否项目源码 |
 |---|---|---|---|
-| 仓库根目录 `.` | `guojiahh/bazi-analysis-skill` | 当前完整研发仓库 | 是 |
+| 仓库根目录 `.` | `guojiahh/afei-destiny-skill` | 当前完整研发仓库 | 是 |
 | `.benchmark-cache/BaziQA` | `ChenJiangxi/BaziQA` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
 | `.benchmark-cache/MingLi-Bench` | `DestinyLinker/MingLi-Bench` | 外部 Benchmark 数据缓存 | 否；被 Git 忽略 |
 
-因此 `bazi-skill-main/`、`evaluation/`、`docs/`、`assets/`、`design-demos/` 和 `dist/` 都只是主仓库里的职责目录。不要把缓存仓库的提交、分支或许可证误当成本项目状态，也不要把它们打进 Skill。
+因此 `afei-destiny-skill/`、`evaluation/`、`docs/`、`assets/`、`design-demos/` 和 `dist/` 都只是主仓库里的职责目录。不要把缓存仓库的提交、分支或许可证误当成本项目状态，也不要把它们打进 Skill。
 
 ## 顶层结构
 
@@ -29,7 +29,7 @@
 .
 ├─ AGENTS.md                    Agent 项目规则与验证入口
 ├─ README.md                    仓库总入口
-├─ bazi-skill-main/             可安装、可运行的 Bazi Skill
+├─ afei-destiny-skill/           可安装、可运行的 Afei Destiny Skill
 ├─ evaluation/                  评测工具、协议和实验原件
 ├─ docs/                        面向人的说明、方法报告和演示指南
 ├─ assets/                      项目主视觉、社交预览与能力说明图
@@ -45,7 +45,7 @@
 └─ .git/                        Git 历史
 ```
 
-## 1. `bazi-skill-main/`：真正运行的 Skill
+## 1. `afei-destiny-skill/`：真正运行的 Skill
 
 这是最核心、也最需要保持干净的目录。安装时复制的是这一层，而不是整个仓库。
 
@@ -135,7 +135,7 @@ evaluation/
 
 ## 5. `dist/`：发布产物
 
-`dist/bazi-skill-final.zip` 是本地生成的安装包，ZIP 被 Git 忽略。它是构建产物，不是源文件；源文件发生变化后，旧 ZIP 不会自动更新，发布前应重新打包并验证。
+当前名称的安装包使用 `dist/afei-destiny-skill-YYYY-MM-DD.zip`。ZIP 被 Git 忽略，是构建产物，不是源文件；源文件发生变化后，旧 ZIP 不会自动更新，发布前应重新打包并验证。旧名称的 `dist/bazi-skill-final.zip` 如仍在本机，属于历史发布产物，应保留，不代表当前版本。
 
 ## 6. `.benchmark-cache/`：本地答案库
 
@@ -164,13 +164,13 @@ evaluation/
 | 做新一届比赛题 | `evaluation/README.md` | 先冻结协议和 Skill，再生成无答案题包 |
 | 检查当前成绩 | `competition-iterations/iteration_report.md` | 同时看区间、wins/losses 和数据状态 |
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
-| 发布 Skill | `bazi-skill-main/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
+| 发布 Skill | `afei-destiny-skill/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
 | 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，HTML 仍未实现 |
 
 ## 文件治理规则
 
-1. **Skill 与评测隔离。** 答案和错题不得复制进 `bazi-skill-main/`。
+1. **Skill 与评测隔离。** 答案和错题不得复制进 `afei-destiny-skill/`。
 2. **已锁轮次不改。** 需要重跑就新建更高版本目录，不覆盖旧目录。
 3. **生成物与源文件分开。** ZIP 放 `dist/`，缓存放 `.benchmark-cache/`。
 4. **报告指向原始证据。** 总结数字必须能追到 `score.json` 或 comparison JSON。

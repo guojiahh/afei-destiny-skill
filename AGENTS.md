@@ -1,9 +1,9 @@
-# Bazi Skill Repository Guide
+# Afei Destiny Skill Repository Guide
 
 ## 项目定位
 
-这是一个八字 Codex Skill 的完整研发仓库。真正可安装的技能包是
-`bazi-skill-main/`；根目录不是安装包本身。
+这是 afei 的命运探索 Codex Skill 完整研发仓库，当前以四柱八字为分析核心。真正可安装的技能包是
+`afei-destiny-skill/`；根目录不是安装包本身。
 
 ## 验证命令
 
@@ -11,9 +11,9 @@
 统一入口 `python tools/check_workspace.py` 会执行下列检查及 Markdown 本地链接检查：
 
 ```text
-python -m unittest discover -s bazi-skill-main/scripts -p "test_*.py"
+python -m unittest discover -s afei-destiny-skill/scripts -p "test_*.py"
 python -m unittest discover -s evaluation -p "test_*.py"
-python bazi-skill-main/scripts/doctor.py
+python afei-destiny-skill/scripts/doctor.py
 git diff --check
 ```
 
@@ -23,8 +23,8 @@ git diff --check
 
 ## 技术与目录边界
 
-- Python 3.9–3.13；`lunar_python 1.4.8` 内置于 `bazi-skill-main/scripts/vendor/`。
-- `bazi-skill-main/`：可分发 Skill。不得放 Benchmark 题目、答案、预测或真实用户会话。
+- Python 3.9–3.13；`lunar_python 1.4.8` 内置于 `afei-destiny-skill/scripts/vendor/`。
+- `afei-destiny-skill/`：可分发 Skill。不得放 Benchmark 题目、答案、预测或真实用户会话。
 - `evaluation/`：评测协议、工具和实验原件。已锁定/揭晓轮次不可覆盖，重跑必须新建版本。
 - `.benchmark-cache/`：被忽略的外部题库克隆和含答案缓存；不是项目源代码。
 - `docs/`：权威说明与方法报告；`assets/`、`design-demos/`：展示材料。
@@ -43,8 +43,8 @@ git diff --check
 
 - 总览：`README.md`
 - 工作区与仓库边界：`docs/WORKSPACE_GUIDE.md`
-- Skill 使用：`bazi-skill-main/README.md`
+- Skill 使用：`afei-destiny-skill/README.md`
 - 评测流程：`evaluation/README.md`
-- 咨询状态机：`bazi-skill-main/references/consultation-harness.md`
+- 咨询状态机：`afei-destiny-skill/references/consultation-harness.md`
 
 当前能力与目录说明见 `docs/WORKSPACE_GUIDE.md`；咨询与报告协议以 Skill 内对应参考文件为准。

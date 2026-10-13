@@ -1,0 +1,4 @@
+interface:
+  display_name: "Afei Destiny · 阿飞命运探索"
+  short_description: "以四柱八字展开命运探索：确定性排盘、具体盲测、倾听式咨询与双报告交付"
+  default_prompt: "请使用 $afei-destiny-skill 开始咨询：先扫描 consultation_state 中的独立会话；有未完成咨询时让我选择继续或新开，没有则创建新的会话子目录。整轮只使用选中的单一会话，完成排盘、盲测与深入分析；最终先在用户报告回答重点问题和人生全景，再用独立技术文档承接命盘推导。"

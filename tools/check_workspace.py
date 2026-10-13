@@ -60,9 +60,9 @@ def main() -> int:
         parser.error("use Python 3.9 through 3.13")
 
     checks = [
-        ("Skill tests", [sys.executable, "-m", "unittest", "discover", "-s", "bazi-skill-main/scripts", "-p", "test_*.py"]),
+        ("Skill tests", [sys.executable, "-m", "unittest", "discover", "-s", "afei-destiny-skill/scripts", "-p", "test_*.py"]),
         ("Evaluation tests", [sys.executable, "-m", "unittest", "discover", "-s", "evaluation", "-p", "test_*.py"]),
-        ("Environment", [sys.executable, "bazi-skill-main/scripts/doctor.py"]),
+        ("Environment", [sys.executable, "afei-destiny-skill/scripts/doctor.py"]),
         ("Whitespace", ["git", "-c", "core.safecrlf=false", "diff", "--check"]),
     ]
     if args.skill or args.skill_validator:
@@ -70,7 +70,7 @@ def main() -> int:
         validator = args.skill_validator or codex_dir / "skills/.system/skill-creator/scripts/quick_validate.py"
         if not validator.is_file():
             parser.error("skill-creator validator not found; supply --skill-validator /path/to/quick_validate.py")
-        checks.append(("Skill structure", [sys.executable, str(validator.resolve()), "bazi-skill-main"]))
+        checks.append(("Skill structure", [sys.executable, str(validator.resolve()), "afei-destiny-skill"]))
     results = [run(label, command) for label, command in checks]
     results.append(check_markdown_links())
     print("\nAll checks passed." if all(results) else "\nWorkspace checks failed.")

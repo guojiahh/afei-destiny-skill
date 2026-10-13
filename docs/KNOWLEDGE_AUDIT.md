@@ -65,7 +65,7 @@
 
 ### 1. 结构分析协议
 
-新增 [`../bazi-skill-main/references/structure-analysis.md`](../bazi-skill-main/references/structure-analysis.md)：
+新增 [`../afei-destiny-skill/references/structure-analysis.md`](../afei-destiny-skill/references/structure-analysis.md)：
 
 - 分开记录力量、组织、气候和病药四条轴；
 - 普通格局先提出候选，再审月令、透藏、有情、成败与救应；
@@ -75,18 +75,18 @@
 
 ### 2. 合冲、合化与墓库协议
 
-新增 [`../bazi-skill-main/references/relations-and-transformations.md`](../bazi-skill-main/references/relations-and-transformations.md)：
+新增 [`../afei-destiny-skill/references/relations-and-transformations.md`](../afei-destiny-skill/references/relations-and-transformations.md)：
 
 - “看见一组关系”不等于“发生合化”，更不等于“必然发生某事件”；
 - 天干五合、地支六合、三合、三会、半合和拱局都增加月令、透干、根气、冲破、竞争关系检查；
 - 多组关系同时存在时，按全局功能、月令和实际承载裁决，不按口诀固定排名；
 - 墓、库、开库、闭库登记为条件性解释，禁止见冲即断“开库发财”或“入墓有灾”。
 
-同时修订 [`../bazi-skill-main/references/wuxing-tables.md`](../bazi-skill-main/references/wuxing-tables.md)：删除“半合力量减半”“三会必强于三合”等无条件表述；把隐藏干 `60/30/10` 明确为计算器可解释的启发式权重，而非古典定律。
+同时修订 [`../afei-destiny-skill/references/wuxing-tables.md`](../afei-destiny-skill/references/wuxing-tables.md)：删除“半合力量减半”“三会必强于三合”等无条件表述；把隐藏干 `60/30/10` 明确为计算器可解释的启发式权重，而非古典定律。
 
 ### 3. 用户反馈证据协议
 
-新增 [`../bazi-skill-main/references/evidence-feedback.md`](../bazi-skill-main/references/evidence-feedback.md)：
+新增 [`../afei-destiny-skill/references/evidence-feedback.md`](../afei-destiny-skill/references/evidence-feedback.md)：
 
 - 出生信息与现实经历分栏；经历只能用于校验，不能冒充排盘输入；
 - 第一轮先锁定盘面事实、结构判断、反证和置信度；
@@ -96,7 +96,7 @@
 
 ### 4. 来源治理与路由
 
-修订 [`../bazi-skill-main/references/classical-texts.md`](../bazi-skill-main/references/classical-texts.md) 和 [`../bazi-skill-main/SKILL.md`](../bazi-skill-main/SKILL.md)：
+修订 [`../afei-destiny-skill/references/classical-texts.md`](../afei-destiny-skill/references/classical-texts.md) 和 [`../afei-destiny-skill/SKILL.md`](../afei-destiny-skill/SKILL.md)：
 
 - 古籍、注解和现代归纳分层；
 - 新规则必须登记来源、语境、条件、反例、冲突和验证方法；
@@ -136,9 +136,9 @@
 
 2026-08-11 在仓库根目录实测：
 
-- `python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py`：9/9 通过；
+- `python -m unittest -v .\afei-destiny-skill\scripts\test_calculate_bazi.py`：9/9 通过；
 - `python -m unittest -v .\evaluation\test_competition_pipeline.py`：6/6 通过；
-- `python .\bazi-skill-main\scripts\calculate_bazi.py --help`：正常；
+- `python .\afei-destiny-skill\scripts\calculate_bazi.py --help`：正常；
 - `git diff --check`：通过；
 - 14 个变更 Markdown 文件的相对链接：通过；
 - `SKILL.md` 新增资料路由的目标文件：全部存在；

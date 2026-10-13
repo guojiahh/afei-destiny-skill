@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only environment diagnostics for the installable Bazi skill."""
+"""Read-only environment diagnostics for Afei Destiny Skill."""
 
 from __future__ import annotations
 
@@ -88,7 +88,7 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
             temporary = tempfile.TemporaryDirectory()
             target = Path(temporary.name)
         target.mkdir(parents=True, exist_ok=True)
-        probe = target / ".bazi-doctor-write-probe"
+        probe = target / ".afei-destiny-skill-doctor-write-probe"
         probe.write_text("ok", encoding="utf-8")
         probe.unlink()
         checks.append(check("session_directory_writable", True, str(target.resolve())))
@@ -106,7 +106,7 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Diagnose the Bazi skill environment.")
+    parser = argparse.ArgumentParser(description="Diagnose the Afei Destiny Skill environment.")
     parser.add_argument("--session-dir", type=Path)
     parser.add_argument("--json", action="store_true")
     return parser

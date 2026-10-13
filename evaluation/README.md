@@ -1,6 +1,6 @@
 # 评测实验室
 
-本目录故意位于可安装的 `bazi` 技能之外。Benchmark 问题、答案、预测和误差分析不得复制进 `SKILL.md`、`references/` 或 `scripts/`。
+本目录故意位于可安装的 `afei-destiny-skill` 技能之外。Benchmark 问题、答案、预测和误差分析不得复制进 `SKILL.md`、`references/` 或 `scripts/`。
 
 ## 目录导航
 
@@ -68,7 +68,7 @@ python evaluation/benchmark_tools.py score --benchmark baziqa --input .benchmark
 ## 泄漏检查
 
 ```powershell
-python evaluation/benchmark_tools.py leak-check --skill bazi-skill-main --sources .benchmark-cache/MingLi-Bench/data/data.json .benchmark-cache/BaziQA/data/contest8_2021.json .benchmark-cache/BaziQA/data/celebrity50_zh.json
+python evaluation/benchmark_tools.py leak-check --skill afei-destiny-skill --sources .benchmark-cache/MingLi-Bench/data/data.json .benchmark-cache/BaziQA/data/contest8_2021.json .benchmark-cache/BaziQA/data/celebrity50_zh.json
 ```
 
 Multiple-choice exact match 只是与固定答案键的一致性指标，不是现实预测有效性的证据。原始分、相对无技能的增益、计算正确性和开放式回答质量必须分开报告。
@@ -94,9 +94,9 @@ python evaluation/import_competition_questions.py --years 2010:2025
 每轮依次执行 `prepare → audit → 新鲜子代理作答 → lock → reveal`。`prepare` 使用字段白名单删除答案、来源 URL 和回查标识，固定题包、提示词、协议与技能内容哈希；`audit` 拒绝禁用字段及技能/题包篡改；`lock` 验证全部题号并拒绝覆盖；只有评分阶段可以读取含答案缓存。
 
 ```powershell
-python evaluation/competition_iteration.py prepare --input .benchmark-cache/global-fortune-competition/contest_2013.json --round-dir evaluation/competition-iterations/2013-v1 --skill bazi-skill-main --model gpt-5.6-sol --reasoning-effort high --split development --prompt-file evaluation/solver_prompt.md --protocol-file evaluation/competition_protocol.json
-python evaluation/competition_iteration.py audit --round-dir evaluation/competition-iterations/2013-v1 --skill bazi-skill-main
-python evaluation/competition_iteration.py lock --round-dir evaluation/competition-iterations/2013-v1 --predictions evaluation/competition-iterations/2013-v1/predictions.json --skill bazi-skill-main
+python evaluation/competition_iteration.py prepare --input .benchmark-cache/global-fortune-competition/contest_2013.json --round-dir evaluation/competition-iterations/2013-v1 --skill afei-destiny-skill --model gpt-5.6-sol --reasoning-effort high --split development --prompt-file evaluation/solver_prompt.md --protocol-file evaluation/competition_protocol.json
+python evaluation/competition_iteration.py audit --round-dir evaluation/competition-iterations/2013-v1 --skill afei-destiny-skill
+python evaluation/competition_iteration.py lock --round-dir evaluation/competition-iterations/2013-v1 --predictions evaluation/competition-iterations/2013-v1/predictions.json --skill afei-destiny-skill
 python evaluation/competition_iteration.py reveal --input .benchmark-cache/global-fortune-competition/contest_2013.json --round-dir evaluation/competition-iterations/2013-v1
 ```
 

@@ -10,7 +10,9 @@
 
 这些比赛题不是电脑随机编出来的，也不是虚构人物题。
 
-**比赛从真实人物和他们已经发生的人生经历中整理案例，再做成选择题。我们先不让 AI 看答案、人物履历和查询线索，让“GPT-5.6 + 本地 Bazi Skill”独立作答；交卷锁定以后才公布答案，错了就分析为什么错，再把可重复的方法教回 Skill。**
+**比赛从真实人物和他们已经发生的人生经历中整理案例，再做成选择题。我们先不让 AI 看答案、人物履历和查询线索，让“GPT-5.6 + 本地 Skill”独立作答；交卷锁定以后才公布答案，错了就分析为什么错，再把可重复的方法教回 Skill。**
+
+本项目于 2026-10-13 更名为 Afei Destiny Skill（阿飞命运探索），可安装目录为 `afei-destiny-skill/`。本文引用的历史评测继续保留原始名称、版本与哈希。
 
 所以，观众看到的不是“AI 自己说自己准”，而是一场可以当场判分、可以看到错题、也可以看到它有没有真正进步的考试。
 
@@ -279,7 +281,7 @@ flowchart LR
 
 盲答上下文只允许读取：
 
-1. 冻结的 `bazi-skill-main/`；
+1. 冻结的 `afei-destiny-skill/`；
 2. 单个年份的无答案 `questions.json`；
 3. `evaluation/solver_prompt.md`。
 
@@ -353,7 +355,7 @@ data_issue
 ## G. 验证命令
 
 ```powershell
-python -m unittest -v .\bazi-skill-main\scripts\test_calculate_bazi.py
+python -m unittest -v .\afei-destiny-skill\scripts\test_calculate_bazi.py
 python -m unittest -v .\evaluation\test_competition_pipeline.py
 ```
 

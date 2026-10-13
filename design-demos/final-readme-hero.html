@@ -1,6 +1,6 @@
 <!--
 CURRENT README HERO
-- Purpose: explain the current Bazi Skill as a stateful consultation system.
+- Purpose: explain the current Afei Destiny Skill as a stateful consultation system.
 - Capability-level content only; no synthetic or historical consultation claims.
 - Fixed 1920x1080; local assets and font fallbacks; no network dependency.
 -->
@@ -9,25 +9,25 @@ CURRENT README HERO
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>八字咨询系统 · Bazi Skill</title>
+  <title>阿飞命运探索 · Afei Destiny Skill</title>
   <style>
     :root{--paper:#ece7dc;--paper2:#f4f0e8;--ink:#191814;--soft:#615b52;--line:#b8afa0;--red:#a43229;--serif:"Source Han Serif SC","Noto Serif CJK SC","Songti SC","STSong","SimSun",serif;--sans:"Source Han Sans SC","Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif}
     *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{display:grid;place-items:center;background:#cbc4b7;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}.canvas{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper)}
     .texture{position:absolute;inset:0;background:url('../assets/showcase/system-thread-background.jpg') center/cover no-repeat;opacity:.18;filter:saturate(.72) contrast(.92);mix-blend-mode:multiply}.wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(236,231,220,.98) 0%,rgba(236,231,220,.93) 42%,rgba(236,231,220,.57) 72%,rgba(236,231,220,.22) 100%)}
     .frame{position:absolute;inset:52px 74px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.mast{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:16px;letter-spacing:.13em}.mast b{font-family:var(--serif);letter-spacing:.1em}.mast span{color:var(--soft)}
-    .hero{height:602px;display:grid;grid-template-columns:570px 1fr;gap:70px;padding-top:56px}.identity{position:relative}.eyebrow{color:var(--red);font-size:16px;font-weight:700;letter-spacing:.18em}.identity h1{margin:22px 0 0;font-family:var(--serif);font-size:118px;line-height:.92;font-weight:600;letter-spacing:-.055em}.identity h1 span{display:block;margin-left:82px;font-size:96px}.identity .intro{width:490px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--serif);font-size:27px;line-height:1.68}.identity .intro b{color:var(--red);font-weight:600}.seal{position:absolute;left:480px;top:282px;width:66px;height:88px;display:grid;place-items:center;border:2px solid var(--red);color:var(--red);font-family:var(--serif);font-size:20px;line-height:1.08;letter-spacing:.14em;writing-mode:vertical-rl;background:rgba(236,231,220,.72)}
+    .hero{height:602px;display:grid;grid-template-columns:570px 1fr;gap:70px;padding-top:56px}.identity{position:relative}.eyebrow{color:var(--red);font-size:16px;font-weight:700;letter-spacing:.18em}.identity h1{margin:22px 0 0;font-family:var(--serif);font-size:118px;line-height:.92;font-weight:600;letter-spacing:-.055em}.identity h1 span{display:block;margin-left:82px;font-size:96px}.identity .intro{width:450px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--serif);font-size:27px;line-height:1.68}.identity .intro b{color:var(--red);font-weight:600}.seal{position:absolute;left:480px;top:282px;width:66px;height:88px;display:grid;place-items:center;border:2px solid var(--red);color:var(--red);font-family:var(--serif);font-size:20px;line-height:1.08;letter-spacing:.14em;writing-mode:vertical-rl;background:rgba(236,231,220,.72)}
     .system{align-self:start;border-top:2px solid var(--ink);background:rgba(244,240,232,.72);backdrop-filter:blur(2px)}.system-head{height:92px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.system-head h2{margin:0;font-family:var(--serif);font-size:30px;font-weight:600;letter-spacing:.05em}.system-head span{color:var(--soft);font-size:14px;letter-spacing:.13em}.modules{display:grid;grid-template-columns:repeat(4,1fr);height:340px;border-bottom:1px solid var(--ink)}.module{position:relative;padding:22px 20px;border-right:1px solid var(--line)}.module:last-child{border-right:0}.module .n{display:flex;justify-content:space-between;color:var(--soft);font-size:13px;letter-spacing:.11em}.module .glyph{height:126px;display:grid;place-items:center;font-family:var(--serif);font-size:78px;color:var(--red);font-weight:600}.module h3{margin:0 0 13px;text-align:center;font-family:var(--serif);font-size:24px;letter-spacing:.08em}.module p{margin:0;text-align:center;color:var(--soft);font-size:15px;line-height:1.65}.system-note{height:90px;display:grid;grid-template-columns:165px 1fr;align-items:center}.system-note b{height:100%;display:grid;place-items:center;background:var(--red);color:var(--paper);font-family:var(--serif);font-size:20px;letter-spacing:.08em}.system-note p{margin:0;padding:0 24px;font-family:var(--serif);font-size:21px;line-height:1.5}
     .journey{height:264px;border-top:2px solid var(--ink);padding-top:24px}.journey-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:15px}.journey-head h2{margin:0;font-family:var(--serif);font-size:27px;letter-spacing:.05em}.journey-head p{margin:0;color:var(--soft);font-size:15px;letter-spacing:.08em}.rail{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(244,240,232,.64)}.step{position:relative;min-height:104px;padding:14px 15px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step small{display:block;margin-bottom:10px;color:var(--red);font-size:12px;letter-spacing:.12em}.step strong{font-family:var(--serif);font-size:19px;line-height:1.35}.step span{display:block;margin-top:7px;color:var(--soft);font-size:13px;line-height:1.4}.step:not(:last-child):after{content:"";position:absolute;right:-4px;top:49px;width:7px;height:7px;background:var(--red);transform:rotate(45deg);z-index:2}.promise{margin-top:17px;display:flex;justify-content:space-between;align-items:center}.promise blockquote{margin:0;font-family:var(--serif);font-size:24px;font-weight:600}.promise span{color:var(--soft);font-size:15px;letter-spacing:.05em}
     .footer{position:absolute;left:0;right:0;bottom:0;height:47px;display:flex;justify-content:space-between;align-items:end;padding-bottom:13px;font-size:14px;color:var(--soft);letter-spacing:.06em}.footer b{color:var(--red);font-weight:650}
   </style>
 </head>
 <body>
-  <main class="canvas" aria-label="八字咨询系统 Codex Skill 项目主视觉">
+  <main class="canvas" aria-label="Afei Destiny Skill · 阿飞命运探索项目主视觉">
     <div class="texture"></div><div class="wash"></div>
     <section class="frame">
-      <header class="mast"><b>BAZI SKILL · CODEX</b><span>STATEFUL · AUDITABLE · OFFLINE READY</span></header>
+      <header class="mast"><b>AFEI DESTINY SKILL · CODEX</b><span>github.com/guojiahh/afei-destiny-skill</span></header>
       <div class="hero">
-        <section class="identity"><div class="eyebrow">CURRENT SYSTEM / 当前系统</div><h1>八字<span>咨询系统</span></h1><p class="intro">从<b>确定性排盘</b>开始，先锁定判断，再让反馈真正改变后续咨询与报告。</p><div class="seal">证据留痕</div></section>
+        <section class="identity"><div class="eyebrow">AFEI / 命运探索实验</div><h1>阿飞<span>命运探索</span></h1><p class="intro">以<b>四柱八字</b>为当前起点，探索命运、巧合与选择，让每次对话带来一点新的启发。</p><div class="seal">证据留痕</div></section>
         <section class="system">
           <div class="system-head"><h2>Four Working Layers / 四层能力</h2><span>CALCULATE · BLIND · LISTEN · REPORT</span></div>
           <div class="modules">
