@@ -17,7 +17,8 @@
 | 想接续此后或开始下一次完整咨询模拟 | [当前版本与新对话交接](CIHOU_HANDOFF.md) |
 | 想了解此后的产品形态与后续规划 | [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md) |
 | 想了解主图与完整咨询报告如何衔接 | [主图与完整报告体验方案](CIHOU_REPORT_EXPERIENCE.md) |
-| 想体验此后第一阶段原型 | [完整交互原型](../design-demos/cihou-stage1.html)及[源码与验证说明](../design-demos/cihou-stage1/README.md) |
+| 想查看默认最终交付的生成流程 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md) |
+| 想体验此后第一阶段匿名原型 | [完整交互原型](../design-demos/cihou-stage1.html)及[源码与验证说明](../design-demos/cihou-stage1/README.md) |
 | 想区分当前样机和历史设计 | [设计演示索引](../design-demos/README.md) |
 
 ## 项目说明
@@ -26,8 +27,8 @@
 - [评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)：盲答、锁定、评分、错因、改动门槛、回归和新保留集规则。
 - [知识与推理缺口审计](KNOWLEDGE_AUDIT.md)：2026-08-11 的历史基线、错因、公开资料对照及当次验证，不作为当前功能清单。
 - [三分钟演示指南](SHOWCASE.md)：公开演示顺序和表达边界。
-- [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md)：个人交互报告的用户旅程、个性化、视觉语言与分阶段验收；第一阶段已有匿名样机，正式咨询接入尚未实现。
-- [此后当前版本与新对话交接](CIHOU_HANDOFF.md)：当前基线、同型多人物的适配缺口、下一次模拟咨询的流程和边界。
+- [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md)：个人交互报告的用户旅程、个性化、视觉语言与分阶段验收；匿名样机保留为历史对照；已接通本地个人 HTML 默认交付，私有在线服务尚未实现。
+- [此后当前版本与新对话交接](CIHOU_HANDOFF.md)：当前 HTML 交付链路、个人化适配与新对话的完成要求。
 
 ## 展示策略
 

@@ -1,5 +1,6 @@
 # Afei Destiny Skill · 阿飞命运探索使用说明
 
+默认完整咨询交付为一份个人 HTML：可点击主图、完整图文解读和可展开技术依据。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)。
 这是仓库中**可直接安装**的技能目录，技能 ID 为 `afei-destiny-skill`。它是 afei 的实验性命运探索技能，当前以四柱八字为核心，包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
 
 如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/afei-destiny-skill)。
@@ -113,7 +114,8 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | `references/client-voice.md` | 温暖、具体、不迎合的客户语言与反馈回应 |
 | `references/evidence-feedback.md` | 用户反馈标注、首次锁定与防事后改写协议 |
 | `references/consultation-harness.md` | 会话集合目录、继续/新开决策、恢复、操作语义、状态血缘与信息防火墙 |
-| `references/output-routing.md` | 对话、审计、总结、报告来源与未来 HTML 的输出边界 |
+| `references/output-routing.md` | 对话、审计、总结、双底稿来源与默认 HTML 的输出边界 |
+| `references/html-report.md` | 默认个人 HTML、模型编排、生成登记、完整覆盖与更新规则 |
 | `references/markdown-report.md` | 先讲重点问题和人生全景的用户报告固定格式、未来展望与交付检查 |
 | `references/technical-report.md` | 独立技术分析文档的来源、结构、一致性和隐私边界 |
 | `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |

@@ -169,9 +169,10 @@ evaluation/
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `afei-destiny-skill/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
-| 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；先完成双报告，再核对图形适配 |
-| 修改此后原型 | [原型源码说明](../design-demos/cihou-stage1/README.md) | 重建 HTML，运行数据、播放时钟与动态图检查；行为变更需补相应浏览器验收 |
-| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，正式 HTML 生成与登记仍未实现 |
+| 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；完成双底稿、个人模型与 HTML，校验登记后才完成默认交付 |
+| 修改正式 HTML 交付 | [HTML 协议](../afei-destiny-skill/references/html-report.md)、`scripts/generate_html_report.py`、`assets/cihou/`（均在 Skill 内） | 运行来源、覆盖、失效与安全回归；核对完整内容和桌面／窄屏交互 |
+| 修改此后匿名原型 | [原型源码说明](../design-demos/cihou-stage1/README.md) | 重建 HTML，运行数据、播放时钟与动态图检查；行为变更需补相应浏览器验收 |
+| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，继续按 [HTML 协议](../afei-destiny-skill/references/html-report.md) 编排模型，生成并登记主交付 HTML |
 
 ## 文件治理规则
 
@@ -185,9 +186,9 @@ evaluation/
 ## 当前状态
 
 - Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
-- 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；正式 HTML 生成与登记尚未实现。
-- 当前此后：第一阶段匿名交互样机已实现；循环型主图支持回环、累积、行动转向和自动讲解。其他样例、完整范围和同型多人物限制以[交接说明](CIHOU_HANDOFF.md)为准；第二阶段未启动。
-- 当前本地门禁：46 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
+- 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；默认个人 HTML 生成、校验、登记与下游失效已接通，双 Markdown 保留为底稿。
+- 当前此后：第一阶段匿名交互样机已实现；循环型主图支持回环、累积、行动转向和自动讲解。正式 HTML 使用独立的个人模型与渲染器，完成线动效已接入；通用图型和在线交付边界以[交接说明](CIHOU_HANDOFF.md)为准。
+- 当前本地门禁：58 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。

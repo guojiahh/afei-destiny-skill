@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Select active consultation artifacts for a requested output.
 
-This router prepares a source plan only. HTML rendering is intentionally deferred
-until the upstream consultation artifacts and report sections are complete.
+This router selects active sources. generate_html_report.py renders and registers
+the default HTML delivery after the two source reports and visual model are ready.
 """
 
 from __future__ import annotations
@@ -16,6 +16,7 @@ from typing import Any
 from consultation_harness import (
     HarnessError,
     active_artifacts,
+    audit_state,
     ensure_inside_session,
     read_state,
     register_artifact,
@@ -24,6 +25,11 @@ from consultation_harness import (
 
 
 ROUTES = {
+    "html_report": {
+        "required_all": ("markdown_report", "technical_report", "visual_report_model"),
+        "preferred": ("markdown_report", "technical_report", "visual_report_model"),
+        "presentation": "self_contained_html",
+    },
     "guided_turn": {
         "preferred": (
             "chart_facts",
@@ -104,10 +110,6 @@ ROUTES = {
 
 
 def build_output_plan(state: dict[str, Any], intent: str) -> dict[str, Any]:
-    if intent == "html_report":
-        raise HarnessError(
-            "html_report is deferred; prepare report_source and final_report.md first"
-        )
     if intent not in ROUTES:
         raise HarnessError(f"unsupported output intent: {intent}")
     route = ROUTES[intent]
@@ -187,6 +189,10 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         state = read_state(args.session_dir)
+        if args.intent == "html_report":
+            issues = audit_state(args.session_dir, state)
+            if issues:
+                raise HarnessError("HTML source audit failed: " + "; ".join(issues))
         output = args.output
         if not output.is_absolute():
             output = args.session_dir / output

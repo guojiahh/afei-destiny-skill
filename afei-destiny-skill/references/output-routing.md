@@ -1,6 +1,6 @@
 # 咨询输出路由
 
-输出路由只决定“用哪些已经完成的活动产物、以什么形式交付”，不得改变置信度或把失效结论捞回来。当前正式终稿是面向用户的 `final_report.md` 与独立的 `technical_analysis.md`；HTML 生成器暂不实现。
+输出路由只决定“用哪些已经完成的活动产物、以什么形式交付”，不得改变置信度或把失效结论捞回来。默认最终交付是 `final_report.html`；`final_report.md` 与 `technical_analysis.md` 是有来源的内部底稿及可选下载。生成流程见 [html-report.md](html-report.md)。
 
 ## 路由表
 
@@ -12,7 +12,7 @@
 | 结束时给总结 | `consultation_summary` | 汇总稳定判断、修正轨迹、主题、窗口和边界 |
 | 准备完整 Markdown | `report_source` | 选择生成 `final_report.md` 所需的全部活动来源 |
 | 准备独立技术文档 | `technical_report_source` | 选择生成 `technical_analysis.md` 的盘面与规则来源，排除传记和关注偏好 |
-| 直接生成 HTML | `html_report` | 当前明确拒绝，并提示先完成 `final_report.md` |
+| 准备默认 HTML 交付 | `html_report` | 选择同一会话的活动用户报告、技术报告和个人可视模型，缺少任一项即拒绝 |
 
 运行：
 
@@ -28,11 +28,11 @@ python scripts/consultation_output_router.py `
 
 ## 呈现纪律
 
-- 技术审计、客户短总结、用户报告、独立技术报告和未来 HTML 是不同呈现层，不是重新改写历史的机会。
+- 技术审计、客户短总结、用户报告、独立技术底稿和最终 HTML 是不同呈现层，不是重新改写历史的机会。
 - 客户总结可以减少术语、改善节奏，但必须保留主要反证、反馈修正和不确定项。
 - 用户说“结束”“总结一下”时，路由到 `consultation_summary`；不要因为还没做 HTML 而阻止正常收束。
 - 用户同意生成后，读取 `markdown-report.md` 和 `technical-report.md`：分别用 `report_source`、`technical_report_source` 写入当前 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。用户报告先运行 `validate_final_report.py`；通过后再登记为 `markdown_report`、`technical_report`。两个来源计划只能消费同一 `session_id` 的活动产物。
-- 未来 HTML 生成器只能消费两份已登记报告及其活动来源，不能扫描目录自行拼接旧文件。
+- 双底稿完成后按 `html-report.md` 编排 `visual_report_model` 并生成、校验、登记 `html_report`。图形和文案只来自本次活动报告，不能扫描目录自行拼接旧文件。默认最终回复只突出 HTML；底稿下载位于页面末尾。
 
 ## 最终内容完整度
 
@@ -44,4 +44,4 @@ python scripts/consultation_output_router.py `
 4. 当前主题已经形成；若用户没问未来，也能从活动命盘形成明确标注为未校准的未来展望；
 5. 输出计划中没有 `stale`、`superseded` 或 Benchmark 产物。
 
-只有这些内容稳定后才生成两份 Markdown；HTML 等用户后续提供模板再实现。
+只有这些内容稳定后才生成两份内容底稿，再完成个人模型与 HTML。默认 HTML 会话在页面登记前仍为未完成；失败时保留底稿并说明限制，不静默降级为 Markdown。历史无交付格式字段的会话沿用旧 Markdown 契约，用户明确要求时再迁移。

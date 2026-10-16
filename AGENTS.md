@@ -36,7 +36,7 @@ git diff --check
 - 计算、解释、真实咨询状态和 Benchmark 必须隔离。
 - `consultation_state/` 是会话集合，每次咨询使用独立子目录；整体不得提交。
 - 开始前先 `discover`；用户选定单一会话后，继续时运行 `status`/`audit`/`resume`；输入变化先 `supersede`，回退阶段用 `reset`。
-- 正式交付是 `<session-dir>/final_report.md` 与 `technical_analysis.md`：分别生成 `report_source`、`technical_report_source`，按两份报告规范写入，用户报告校验通过后登记血缘。正式 HTML 生成与登记尚未实现；`design-demos/` 中的匿名原型不能直接充当个人报告，不要跨会话拼接旧产物。
+- 默认最终交付是 `<session-dir>/final_report.html`。先按来源计划完成、校验并登记 `final_report.md` 与 `technical_analysis.md` 底稿，再按 `references/html-report.md` 编排个人模型、生成并登记 HTML；默认回复突出 HTML 一个入口。`report_ready` 不等于交付完成。匿名原型不能直接换名用于个人报告，不要跨会话拼接旧产物。
 - 不删除、移动或改写历史评测原件、分支、缓存仓库或发布包，除非用户在看过清理预览后明确确认。
 
 ## 当前权威入口
@@ -46,6 +46,6 @@ git diff --check
 - Skill 使用：`afei-destiny-skill/README.md`
 - 评测流程：`evaluation/README.md`
 - 咨询状态机：`afei-destiny-skill/references/consultation-harness.md`
-- 此后当前原型与新对话交接：`docs/CIHOU_HANDOFF.md`；第二阶段未启动。
+- 此后当前原型与新对话交接：`docs/CIHOU_HANDOFF.md`；本地 HTML 默认交付已接通，私有在线交付尚未实现。
 
 当前能力与目录说明见 `docs/WORKSPACE_GUIDE.md`；咨询与报告协议以 Skill 内对应参考文件为准。

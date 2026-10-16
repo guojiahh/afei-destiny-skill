@@ -88,7 +88,7 @@ python .\afei-destiny-skill\scripts\doctor.py
 
 循环、接桥、汇流三个案例各有 6 个图内热点，信息不足案例有 4 个；后三类保留上一版图形。主图点选不改写事实或现实行动记录。当前视觉以暖白纸面、墨色中文、蓝色立体回环与铜橙拨片为主，不依赖外部资源，可离线打开。
 
-四例全部是人工编排的匿名虚构素材，未接入正式咨询生成或云端。它们展示不同关系可以有不同形状，尚不能证明同一种图已适配多个人；不能只换姓名或 `cases.js` 后直接交付。正式咨询仍交付两份 Markdown，第二阶段未启动。
+四例全部是人工编排的匿名虚构素材，未接入正式咨询生成或云端。它们展示不同关系可以有不同形状，尚不能证明同一种图已适配多个人；不能只换姓名或 `cases.js` 后直接交付。正式咨询现已通过独立的 [HTML 生成协议](../afei-destiny-skill/references/html-report.md) 默认交付个人页面；这四个历史样机本身不作为生成器。
 
 源码与实际验收范围见[原型说明](../design-demos/cihou-stage1/README.md)，产品方向见[产品方案](CIHOU_PRODUCT_PLAN.md)与[完整报告体验](CIHOU_REPORT_EXPERIENCE.md)，接续工作见[新对话交接](CIHOU_HANDOFF.md)。此前海图和此后概念均保留在[设计演示索引](../design-demos/README.md)，不与当前入口混用。
 
@@ -119,6 +119,6 @@ python .\afei-destiny-skill\scripts\doctor.py
 
 - [ ] 新环境中能识别 `$afei-destiny-skill`。
 - [ ] `SKILL.md` 位于安装目录第一层。
-- [ ] Python 能运行，46 项 Skill 测试和 6 项评测测试通过；`doctor.py` 全绿。
+- [ ] Python 能运行，58 项 Skill 测试和 6 项评测测试通过；`doctor.py` 全绿。
 - [ ] 演示出生信息是虚构信息或已获本人同意。
 - [ ] 不在屏幕上展示评测答案缓存或个人敏感信息。

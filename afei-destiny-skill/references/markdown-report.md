@@ -1,6 +1,6 @@
 # 完整 Markdown 咨询报告
 
-本文件规定引导式咨询收束后的面向用户交付。目标是把命盘事实、开场盲测、用户反馈、全部可分析主题、重点问题、未来展望和现实建议整理成一份详细、温暖、可追溯的 `final_report.md`。它不是聊天记录拼接，也不是 HTML 模板；详细技术推导另写入 `technical_analysis.md`。
+本文件规定引导式咨询收束后的用户内容底稿；默认交付形态见 [html-report.md](html-report.md)。目标是把命盘事实、开场盲测、用户反馈、全部可分析主题、重点问题、未来展望和现实建议整理成一份详细、温暖、可追溯的 `final_report.md`。它不是聊天记录拼接，也不是 HTML 模板；详细技术推导另写入 `technical_analysis.md`。
 
 ## 目录
 
@@ -257,7 +257,7 @@ python scripts/consultation_harness.py register `
 
 重复 `--source-artifact` 传入全部实际来源。若已有活动 `markdown_report`，先按 `output` 范围 `supersede`，不得静默覆盖。
 
-按 `technical-report.md` 在同一 `<session-dir>/` 另行生成 `technical_analysis.md`。HTML 尚未实现。未来获得模板后，只渲染同一会话内这两份已登记 Markdown 及其结构化来源，不重新进行命理推理。
+按 `technical-report.md` 在同一 `<session-dir>/` 另行生成 `technical_analysis.md`。双底稿登记后，按 `html-report.md` 编排本次的有来源图文模型并生成 HTML，不重新进行命理推理。
 
 ## 八、交付检查
 
@@ -275,6 +275,6 @@ python scripts/consultation_harness.py register `
 - [ ] 全文说人话，术语有解释；
 - [ ] 四柱、十神、藏干、旺衰、格局、合冲和起运推导没有作为正文独立章节；
 - [ ] 用户得到理解、启发和行动感，同时反例和边界仍完整；
-- [ ] 输出为 `final_report.md`，HTML 未被临时拼接；
+- [ ] 本底稿为 `final_report.md`；默认最终交付继续生成并登记 `final_report.html`，不能停在两个长文链接；
 - [ ] 报告已登记为 `markdown_report` 并保留来源血缘。
 - [ ] 独立 `technical_analysis.md` 已按 `technical-report.md` 生成，且与用户报告一致。

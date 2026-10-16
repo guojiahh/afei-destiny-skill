@@ -98,6 +98,8 @@ ARTIFACT_SOURCE_POLICIES = {
     },
     "report_section": SOURCE_CATEGORIES - {"benchmark_material"},
     "markdown_report": SOURCE_CATEGORIES - {"benchmark_material"},
+    "visual_report_model": SOURCE_CATEGORIES - {"benchmark_material"},
+    "html_report": SOURCE_CATEGORIES - {"benchmark_material"},
     "technical_report": {
         "operational_input",
         "chart_fact",
@@ -127,6 +129,8 @@ EXCLUSIVE_KINDS = {
     "feedback_result",
     "markdown_report",
     "technical_report",
+    "visual_report_model",
+    "html_report",
 }
 KIND_EARLIEST_STAGE = {
     "inputs": "intake",
@@ -144,6 +148,8 @@ KIND_EARLIEST_STAGE = {
     "report_section": "deep_dive",
     "markdown_report": "report_ready",
     "technical_report": "report_ready",
+    "visual_report_model": "report_ready",
+    "html_report": "report_ready",
     "output_plan": "deep_dive",
 }
 SCOPE_KINDS = {
@@ -168,7 +174,7 @@ SCOPE_KINDS = {
         "report_section",
         "output_plan",
     },
-    "output": {"report_section", "markdown_report", "technical_report", "output_plan"},
+    "output": {"report_section", "markdown_report", "technical_report", "visual_report_model", "html_report", "output_plan"},
 }
 SCOPE_ROLLBACK = {
     "chart": "intake",
@@ -210,7 +216,11 @@ def state_path(session_dir: Path) -> Path:
 
 
 def session_lifecycle(state: dict[str, Any]) -> str:
-    return "complete" if state.get("stage") == "report_ready" else "unfinished"
+    required = {"markdown_report", "technical_report"}
+    if state.get("delivery_format", "markdown") == "html":
+        required |= {"visual_report_model", "html_report"}
+    available = {a["kind"] for a in active_artifacts(state)}
+    return "complete" if state.get("stage") == "report_ready" and required <= available else "unfinished"
 
 
 def safe_session_label(value: str | None, mode: str) -> str:
@@ -430,6 +440,7 @@ def initialize_session(session_dir: Path, mode: str, topic: str | None) -> dict[
         "session_id": str(uuid.uuid4()),
         "mode": mode,
         "stage": "intake",
+        "delivery_format": "html",
         "selected_topic": topic,
         "revision": 1,
         "privacy": {
@@ -516,6 +527,10 @@ def register_artifact(
             raise HarnessError(f"source artifact is not active: {source_id}")
         inherited_categories.update(source.get("source_categories", []))
     normalized_categories = validate_sources(kind, inherited_categories)
+
+    if kind in {"visual_report_model", "html_report"}:
+        from generate_html_report import validate_registration
+        validate_registration(session_dir, state, kind, resolved, source_ids)
 
     artifact = {
         "id": f"{kind}-{uuid.uuid4().hex[:12]}",
@@ -758,6 +773,7 @@ def status_summary(state: dict[str, Any]) -> dict[str, Any]:
         "mode": state["mode"],
         "stage": state["stage"],
         "lifecycle": session_lifecycle(state),
+        "delivery_format": state.get("delivery_format", "markdown"),
         "session_label": state.get("session_label"),
         "selected_topic": state.get("selected_topic"),
         "revision": state["revision"],
@@ -797,6 +813,11 @@ def build_parser() -> argparse.ArgumentParser:
     resume = subparsers.add_parser("resume", help="resume a user-selected consultation session")
     resume.add_argument("--session-dir", required=True, type=Path)
     resume.add_argument("--user-choice", required=True, choices=("continue",))
+
+    delivery = subparsers.add_parser("set-delivery", help="set an explicitly requested delivery format")
+    delivery.add_argument("--session-dir", required=True, type=Path)
+    delivery.add_argument("--format", required=True, choices=("html", "markdown"))
+    delivery.add_argument("--reason", required=True)
 
     register = subparsers.add_parser("register", help="register a lineage artifact")
     register.add_argument("--session-dir", required=True, type=Path)
@@ -884,6 +905,16 @@ def main(argv: list[str] | None = None) -> int:
                 raise HarnessError("cannot resume: " + "; ".join(issues))
             append_history(state, "resumed", stage=state["stage"])
             state["revision"] += 1
+            write_state(args.session_dir, state)
+            print(json.dumps(status_summary(state), ensure_ascii=False, indent=2))
+        elif args.command == "set-delivery":
+            issues = audit_state(args.session_dir, state)
+            if issues:
+                raise HarnessError("cannot change delivery: " + "; ".join(issues))
+            old = state.get("delivery_format", "markdown")
+            state["delivery_format"] = args.format
+            state["revision"] += 1
+            append_history(state, "delivery_format_changed", previous=old, target=args.format, reason=args.reason)
             write_state(args.session_dir, state)
             print(json.dumps(status_summary(state), ensure_ascii=False, indent=2))
         elif args.command == "register":

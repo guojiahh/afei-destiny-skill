@@ -28,7 +28,7 @@ description: >
 
 ### C. 一次性完整解读
 
-用户明确要求“一次讲完”“完整报告”“不要追问”时，同时读取 [markdown-report.md](references/markdown-report.md)，以 `one_shot` 模式生成完整 Markdown 报告。未核验内容标记为未核验，不为了完整感虚构反馈。
+用户明确要求“一次讲完”“完整报告”“不要追问”时，同时读取 [markdown-report.md](references/markdown-report.md)，以 `one_shot` 模式准备完整底稿，并按 [html-report.md](references/html-report.md) 生成默认 HTML 交付。未核验内容标记为未核验，不为了完整感虚构反馈。
 
 ### D. 命理选择题 / Benchmark
 
@@ -40,7 +40,7 @@ description: >
 
 任何咨询开始前先 `discover`。继续旧会话时只对用户选中的子目录运行 `status`、`audit` 和 `resume`；重新开始使用 `start` 创建新子目录，不能覆盖或清空旧会话。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使当前会话的旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
-用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。先运行 `scripts/validate_final_report.py`，通过后再登记为 `markdown_report`、`technical_report`。HTML 尚未启用，不得扫描会话根目录或其他会话拼接旧结论。
+用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。先运行 `scripts/validate_final_report.py`，通过后再登记为 `markdown_report`、`technical_report`。然后按 [html-report.md](references/html-report.md) 编排本次个人主图与图文模型，生成、校验并登记 `final_report.html`，优先向用户交付和打开这一个页面。两份 Markdown 是内部底稿和可选下载；用户明确只要 Markdown 时除外。`report_ready` 不等于交付完成，默认会话须有有效 HTML。不得扫描会话根目录或其他会话拼接旧结论。
 
 ## 最小信息原则
 
@@ -117,7 +117,8 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | “开始预测”、开场盲测、多轮参与 | `consultation-harness.md`、`guided-consultation.md`、`preblind-analysis.md`、`opening-blind-reading.md`、`client-voice.md`、`evidence-feedback.md` |
 | 完整/聚焦咨询与客户正文 | `consultation-harness.md`、`consultation-output.md`、`client-voice.md`、`evidence-feedback.md` |
 | 总结、技术审计、报告内容准备 | `output-routing.md`；先运行输出路由器 |
-| 生成完整 Markdown 报告 | `markdown-report.md`、`technical-report.md`、`output-routing.md`、`client-voice.md` |
+| 准备内部 Markdown 底稿 | `markdown-report.md`、`technical-report.md`、`output-routing.md`、`client-voice.md` |
+| 完整咨询最终交付、个人 HTML、可视化报告 | `html-report.md`、`output-routing.md`；用当前活动双报告生成个人内容，校验并登记 HTML |
 | 学习推理示例 | `worked-examples.md`；不得把示例结论套到新命盘 |
 
 知识优先级：确定性历法事实 > 原局结构与月令 > 大运流年触发 > 领域十神/宫位 > 神煞和单句口诀。Benchmark 另采用：题干明示事实与文本逻辑 > 确定性排盘事实 > 强复合命理信号 > 弱命理信号。不同流派冲突时，陈述采用的口径，不拼成一个伪共识。
@@ -128,11 +129,11 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 按 [guided-consultation.md](references/guided-consultation.md) 推进，并用 [client-voice.md](references/client-voice.md) 写客户正文。`first_read` 阶段按 [opening-blind-reading.md](references/opening-blind-reading.md) 一次展示默认四条已锁定盲测：先写具体时间、场景、事件和可观察结果，技术依据默认隐藏。用户用“1准；2部分准，准在……；3不准；4不确定”一次反馈，脚本结算后不增加独立画像修正轮。
 
-进入主问题后，每轮先显示自然语言进度，再承接用户表达，用一两句暂时归纳，最后只问一个高价值问题。主问题优先来自用户主动问题，其次是入口关注方向、反馈话头和 `preblind_analysis` 的高价值疑点；可以给二到四个值得深入的选择。前期少下完整结论，让用户愿意把真正的疑虑说出来；在合适时机提出会改变判断的疑问，帮助用户从更高层次认识自己的运行机制，不强行给落地建议。信息足够后立即短收束，说明将生成哪些内容并询问是否生成完整报告。温暖句不得新增事实或删除反证；不能用“果然”“你只是没意识到”或改写用户原话制造命中感。
+进入主问题后，每轮先显示自然语言进度，再承接用户表达，用一两句暂时归纳，最后只问一个高价值问题。主问题优先来自用户主动问题，其次是入口关注方向、反馈话头和 `preblind_analysis` 的高价值疑点；可以给二到四个值得深入的选择。前期少下完整结论，让用户愿意把真正的疑虑说出来；在合适时机提出会改变判断的疑问，帮助用户从更高层次认识自己的运行机制，不强行给落地建议。信息足够后立即短收束，说明将生成一份含完整解读与可展开依据的个人 HTML；此前已授权生成报告时直接继续，否则询问是否生成。温暖句不得新增事实或删除反证；不能用“果然”“你只是没意识到”或改写用户原话制造命中感。
 
 ### 完整咨询格式
 
-一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md`。用户报告采用“总览 → 重点问题 → 人生全景 → 未来 → 选择提示 → 反馈修正 → 边界”的固定顺序；四柱、十神、旺衰、格局、合冲、起运和详细推导不得占据用户正文前部，统一进入技术文档。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
+一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md` 作为底稿；最终按 [html-report.md](references/html-report.md) 生成 `final_report.html`，默认回复优先给 HTML 一个入口。用户报告底稿采用“总览 → 重点问题 → 人生全景 → 未来 → 选择提示 → 反馈修正 → 边界”的固定顺序；四柱、十神、旺衰、格局、合冲、起运和详细推导不得占据用户正文前部，统一进入技术文档。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
 
 用户报告至少覆盖：
 

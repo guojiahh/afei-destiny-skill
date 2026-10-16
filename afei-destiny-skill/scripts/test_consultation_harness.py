@@ -331,7 +331,7 @@ class ConsultationHarnessTests(unittest.TestCase):
         issues = audit_state(self.session_dir, self.state)
         self.assertTrue(any("hash mismatch" in issue for issue in issues))
 
-    def test_output_router_uses_only_active_lineage_and_defers_html(self):
+    def test_output_router_uses_only_active_lineage_and_requires_html_sources(self):
         _, _, analysis, _, feedback, deep = self.reach_deep_dive()
         feedback_log = self.register(
             "feedback_log",
@@ -348,7 +348,7 @@ class ConsultationHarnessTests(unittest.TestCase):
         self.assertIn(analysis["id"], ids)
         self.assertIn(feedback_log["id"], ids)
         self.assertIn(context["id"], ids)
-        with self.assertRaisesRegex(HarnessError, "deferred"):
+        with self.assertRaisesRegex(HarnessError, "lacks active artifacts"):
             build_output_plan(self.state, "html_report")
 
     def test_final_markdown_is_registered_only_at_report_ready(self):
