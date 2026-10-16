@@ -16,6 +16,7 @@
 | 想对外演示 | [三分钟演示指南](SHOWCASE.md) |
 | 想接续此后或开始下一次完整咨询模拟 | [当前版本与新对话交接](CIHOU_HANDOFF.md) |
 | 想了解此后的产品形态与后续规划 | [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md) |
+| 想查看最新第一阶段优化方案 | [主图与连续阅读重构方案](CIHOU_PHASE1_REDESIGN.md)，含静态视觉概念和实施验收；尚未替换页面 |
 | 想了解主图与完整咨询报告如何衔接 | [主图与完整报告体验方案](CIHOU_REPORT_EXPERIENCE.md) |
 | 想查看默认最终交付的生成流程 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md) |
 | 想体验此后第一阶段匿名原型 | [完整交互原型](../design-demos/cihou-stage1.html)及[源码与验证说明](../design-demos/cihou-stage1/README.md) |
