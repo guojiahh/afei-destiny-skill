@@ -1,92 +1,110 @@
-# 此后：默认 HTML 交付
+# 此后：固定莫比乌斯环 HTML 交付
 
-完整咨询的主要交付是同一会话内的 `final_report.html`。用户打开一个页面即可读懂重点、探索主图、下读完整图文和按需展开依据。`final_report.md` 与 `technical_analysis.md` 保留为有来源的内容底稿和可选下载，不再把两个长文链接作为默认最终回复。用户明确只要 Markdown 时才改变交付格式。
+完整咨询默认交付一份同会话的 `final_report.html`。**所有新报告使用 `cihou-mobius-v1` 模板：quiet 莫比乌斯主图、三段点击状态、九章连续正文。** 两份 Markdown 是有来源的内容底稿与页尾可选下载，不能以写完两份长文代替 HTML 交付。用户明确只要 Markdown 时沿原协议记录选择。
 
-## 完成流程
+## 固定与个性化
 
-沿用资料、计算、盲测锁定、反馈、深入与未来的现有协议。报告授权已存在时直接生成，不为 HTML 再问一遍。进入 `report_ready` 仅表示可以准备交付，新会话默认 `delivery_format=html`；两份底稿、个人模型、HTML 都登记且有效后才为 `complete`。
+固定的是视觉隐喻、几何、点击方式、字体色彩、章节职责与排列。每次重新写的是问题、过去与现在、关系解释、事例、反例、行动条件、未来、其他领域和反馈修正。
 
-1. 运行 `report_source`、`technical_report_source`；按各自规范写两份底稿，校验用户报告并分别登记。技术底稿的来源防火墙不变。
-2. 阅读这两份活动底稿，提炼一个主问题、关键关系、可尝试的介入、条件与反例。不要从旧原型或其他会话复制个人文案。使用下面的来源索引读取当前 ID、哈希及章节编号。
-3. 编写本次的 `visual_report_model.json`。模型由执行咨询的代理根据活动材料编排，脚本负责校验和绘制；不是脚本自动推断人格、因果或命理。先内容后选图，不是所有人都画循环。
-4. 生成预览，检查主图含义、章节覆盖、桌面与窄屏阅读、图内点击与依据展开。修正未登记预览时使用新的输出名，保留旧版本；不要直接改已登记文件。
-5. 使用 `--register` 生成并登记最终页面，再 `--check` 和 Harness `audit`。最终回复优先给 HTML 一个入口，并打开它；底稿在页末按需下载。不得只写两份 Markdown 就宣布默认交付完成。
+环不构成心理因果证据。即使问题主要由资源、制度、他人或环境限制形成，仍使用同一视觉母题，在短句与正文中说清外部条件。信息不足就用 `unknown` 或待核对假设，可以不连边；不能因为图是环就发明经历或回连。最后一态表示可控的尝试、观察、求助或暂缓，不表示已经成功、获得他人回应或完成现实行动。
 
-从仓库根目录运行（`SESSION` 是 Harness 返回且用户选定的独立目录，不是集合根）：
+不要从匿名演示或别人的咨询复制文案。共享美术和模板，不共享人生结论。
+
+## 每次完成流程
+
+沿用现有资料、计算、锁定、反馈、深入与未来协议。报告授权已存在时直接完成，不额外询问是否要 HTML。`report_ready` 只表示开始准备交付，默认 HTML 会话须有活动双底稿、个人模型和 HTML 才为 `complete`。
+
+1. 分别运行 `report_source` 和 `technical_report_source`，按 [用户八节模板](../assets/cihou/user-report-template.md)与[技术十一节模板](../assets/cihou/technical-report-template.md)写当前底稿。保留精确二级标题及顺序；填完并移除占位符和写作注释，再校验和登记。
+2. **完整阅读两份活动底稿**，明确一个主问题、已有事实、当前理解、可尝试的介入、关键反例与未知。技术来源防火墙不变。
+3. 运行 `--init-model` 生成本次来源绑定草稿。它自动填入会话 ID、双报告 ID/hash 和固定九章骨架，不自动编造分析。
+4. 填写所有 `__CIHOU_FILL__` 字段，调整节点和引用，保持九章契约；复核后将 `draft` 设为 `false` 或删除该字段。不能只删除占位符留下空文。
+5. 生成预览，检查语义、桌面与窄屏、三态点击、正文完整度和依据展开。修正使用新的预览文件名，保留旧版本。
+6. 用 `--register` 生成并登记最终页面，再 `--check` 与 Harness `audit`。最终回复只突出 HTML 一个入口并打开，底稿在页尾按需下载。
+
+从仓库根目录运行，`SESSION` 是 Harness 返回、用户选定的独立咨询目录：
 
 ```sh
+# 双底稿已按各自来源计划完成并登记后
 python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --describe-sources
+python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --init-model visual_report_model.json
+# 代理阅读全文、填写模型并复核；草稿不能跳过这一步直接生成
+python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output preview.html
 python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --register
 python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --check
 python afei-destiny-skill/scripts/consultation_harness.py audit --session-dir "$SESSION"
 ```
 
-`--model` 与 `--output` 的相对路径均相对于本次会话。生成器审核整个会话，核对源报告哈希、模型会话身份、引用、完整章节覆盖及确定性构建。`--register` 同时保存并登记本次 HTML 的来源计划（`<output-stem>_source_plan.json`）；`--check` 不写文件。来源验证不证明文字解释正确；代理仍需核对每条总结与原意、限定和反例。
+`--init-model`、`--model` 与 `--output` 相对路径均相对于该会话，不能越界。已有文件不覆盖，更新时使用版本文件名。`--register` 同时登记模型及 `<output-stem>_source_plan.json`；`--check` 不写文件。内容结构校验不能证明解释正确，仍需逐段核对原意、限制与反例。
 
-### 旧会话与显式 Markdown
+## 模型契约（schema_version 1）
 
-没有 `delivery_format` 的历史会话按旧 Markdown 交付理解，不批量改写旧会话。用户要求给某次旧咨询补 HTML 时，先 `status`、`audit`、`resume --user-choice continue`，再执行：
+结构模板：[mobius-model-template.json](../assets/cihou/mobius-model-template.json)。它是不可直接交付的草稿，不含真实案例。模型只保存到当前会话，不能放进 Skill、公开演示或测试 fixture。
+
+| 字段 | 要求 |
+|---|---|
+| `template_id` | 新报告固定 `cihou-mobius-v1` |
+| `draft` | 初始化为 `true`；完整填写后设 `false` 或删除 |
+| `session_id` | 当前会话身份 |
+| `sources.user` / `sources.technical` | 当前双报告各自的 `artifact_id`、`sha256` |
+| `title`、`subtitle`、`closing` | 个人标题、主问题背景与收束，非空且不保证结果 |
+| `diagram` | 固定 `type="loop"`，个人节点、可选关系与讲解顺序 |
+| `presentation` | 固定 `style="quiet-v1"`，恰好三个 `hero_states` |
+| `chapters` | 下面九章 ID、顺序、布局和覆盖映射固定 |
+| `technical_intro`、`technical_cards` | 传统框架与现实的关系、计算口径、反证与边界摘要 |
+| `limits` | 本次未知与结论范围 |
+
+新会话的 `report_template=cihou-mobius-v1` 由 Harness 初始化，不能通过省略模型中的模板身份退回旧版。所有占位符必须填写；只有模板标题和空白正文的文件不能完成交付。
+
+### 个人关系与三态
+
+- `nodes` 为 2–12 个重点，ID 唯一且格式为小写字母开头的字母、数字、下划线或连字符；`label` 不超过 14 字，另含 `title`、`text`、`refs`。
+- `kind` 是 `fact`、`hypothesis`、`action`、`condition`、`unknown`。事实和假设分开，不把传统推断写成确认经历。
+- 每条 `edge` 含 `from`、`to`、`kind`、`refs`；类别为材料联系 `known`、待核对理解 `hypothesis`、有前提的 `conditional`。没有证据可以是空数组。
+- `tour` 是有效节点 ID 的非重复序列，不能自动选择外部回应 `condition`。quiet 的实际画面顺序由三个 `hero_states` 驱动。
+- 每个 `hero_state` 含 `lines`（恰好两行非空短句，每行上限 18 字）、`description`、`hint`、`label`、`node_id`、`refs`。标题和解释都来自当前报告；上限不是建议把字写满。
+- 三态依次是路上、全环、跨出。不得指向 `condition` 节点，第三态必须指向 `action`；必要时行动是继续了解、争取支持或暂缓，而非替用户保证结果。
+- 几何、人物路线和图像固定复用，不按个体随机生成形状。人物持续走，用户点击才切换观看状态；无外部回应自动发生。
+
+`refs` 如 `user:2`、`technical:1`，来自双底稿二级标题顺序，必须以来源索引为准。引用不代表置信度分数，有来源的两节点也不自动具备因果关系。
+
+### 九章正文模板
+
+| ID | 固定布局 | 职责 | 固定 `covers` |
+|---|---|---|---|
+| `focus` | `story` | 主问题、来处、处境与需要 | `user:1`, `user:2` |
+| `pattern` | `path` | 可能的持续机制、已知与未知 | 空 |
+| `scenes` | `story` | 具体事例、条件式场景与反例 | 空 |
+| `experiment` | `path` | 一次有限尝试、条件与观察证据 | `user:5` |
+| `choices` | `topics` | 可选路径、成本与外部限制 | 空 |
+| `future` | `timeline` | 未来窗口与观察，区分现实实验 | `user:4` |
+| `panorama` | `topics` | 八领域分析及未展开部分 | `user:3` |
+| `calibration` | `feedback` | 原判断、反馈、保留与撤回 | `user:6` |
+| `boundaries` | `closing` | 置信边界、缺口与下一步 | `user:7`, `user:8` |
+
+每章含 `id`、`kicker`、`title`、`lead`、`layout`、`cards`、`covers`。章节职责固定，读者看到的标题、卡片数量、文字按本次调整。每个 card 含非空 `title`、`text`、有效 `refs`；可补 `eyebrow`（短眉题）、`items`（短文本列表）、`counterexample`（反例）。`technical_cards` 使用同样卡片形式。
+
+`covers` 指内容归属，每个用户底稿章节恰好覆盖一次；空覆盖章节仍须在卡片上引用支持其内容的来源。完整用户八节及技术十一节原文全部集中在文末单层展开，两份原始 Markdown 原样内嵌下载。
+
+没有盲测或反馈时保留第八章，明确未进行／未校准。八领域资料不足时直说未知，不能为固定篇章补写故事。关键限定不能只藏进文末原文。
+
+## 历史兼容与更新
+
+没有 `report_template` 的旧会话保留旧契约；没有 `template_id` 的历史模型仍可按原渲染器或旧 quiet 呈现复核，不批量重写已登记页面。`threshold`、`chain`、`confluence`、`sparse` 等旧类型只供历史兼容，不是新报告候选。旧会话需要新模板时使用 `--init-model` 新建模型，显式 `template_id` 同样触发完整新契约。
+
+历史无 `delivery_format` 字段的会话按旧 Markdown 交付理解。用户要补 HTML 时先 `status`、`audit`、`resume`，按需执行：
 
 ```sh
-python afei-destiny-skill/scripts/consultation_harness.py set-delivery --session-dir "$SESSION" --format html --reason "用户要求补齐 HTML 主交付"
+python afei-destiny-skill/scripts/consultation_harness.py set-delivery --session-dir "$SESSION" --format html --reason "用户要求 HTML 主交付"
 ```
 
-只要 Markdown 的显式请求可用 `--format markdown` 并写明原因。不能为绕过 HTML 失败静默改格式。生成失败保留有效底稿，说明具体限制；默认 HTML 会话继续显示未完成。
+用户明确只要 Markdown 可用 `--format markdown` 并记录原因。不能为了绕过失败静默改格式。新模板与历史底稿标题不一致时，按来源规范形成新版本并登记，再初始化模型，不能覆盖旧文件。
 
-## 个人模型契约（schema_version 1）
+`visual_report_model` 直接依赖当前两份报告；`html_report` 依赖双报告、当前模型和来源计划。登记时重建比对，拒绝任意 HTML 冒充交付。更新双底稿或模型先 `supersede`，下游自动失效，再以新文件名生成。离线副本不能远程撤回，“失效”指会话内当前有效产物。
 
-模型位于会话目录，不能放入 Skill、匿名演示或测试 fixture。
+## 验收与范围
 
-| 字段 | 内容 |
-|---|---|
-| `session_id` | 本次会话 ID |
-| `sources.user` / `sources.technical` | 各自严格包含 `artifact_id`、`sha256`；来自当前活动报告 |
-| `title`、`subtitle`、`closing` | 本次标题、主问题背景与收束；短而具体，不作保证 |
-| `diagram` | 图形类型、个人节点、关系和讲解顺序 |
-| `chapters` | 连续阅读的图文章节与底稿覆盖映射 |
-| `technical_intro`、`technical_cards` | 传统解释与现实的联系、计算口径和关键反证的短解读 |
-| `limits` | 本次边界与未知，不套通用确定性结论 |
+每次检查：一个主问题、三态含义与正文一致、事实和假设分开、具体事例与反例保留、未来与外部条件完整、八领域含未知、反馈未被美化；桌面和手机窄屏可读，表格仅内部横滑。
 
-`refs` 是 `user:1`、`technical:2` 等章节引用，编号由两份 Markdown 的二级标题顺序产生，必须以 `--describe-sources` 为准。它们是内容出处，不是置信度分数。节点有出处不代表连线已经获得因果证明；每条边也须有引用与关系类别。
+页面用内嵌 PNG、CSS、JS 和 SVG，无外部运行依赖；键盘、暂停、重看、减少动态及无脚本正文保持可用。真实 3D、视频、私有在线托管、手机传输服务、账号与回访同步均不在当前模板内。手机视口验收不等于实体手机交付验证。
 
-图形数据形状如下，示例仅说明字段，实际内容必须由本次材料重新编写：
-
-```json
-{
-  "type": "threshold",
-  "nodes": [
-    {"id":"current","label":"当前条件","kind":"fact","title":"具体处境","text":"来自报告的解释与限制","refs":["user:2"]},
-    {"id":"choice","label":"一个介入","kind":"action","title":"改变什么条件","text":"尝试需要的投入与未知","refs":["user:5"]}
-  ],
-  "edges": [{"from":"current","to":"choice","kind":"conditional","refs":["user:2","user:5"]}],
-  "tour": ["current","choice"]
-}
-```
-
-- `type`：`threshold`（完成线／门槛）、`chain`、`confluence`、`loop`、`sparse`。当前完成线有专属开门动效，其他类型用通用来源关系图；不是五套均已精修的空间主图。关系和节点由数据决定。
-- `nodes`：2–12 个重点，ID 唯一，短标签不超过 14 字。`kind` 为 `fact`、`hypothesis`、`action`、`condition`、`unknown`。更多资料在详报展开，不强行塞进主图。
-- `edges`：`known` 表示材料中的联系或顺序，不宣称科学因果；`hypothesis` 是待验证理解；`conditional` 保留尚未成立的条件。`sparse` 不允许补连接。
-- `tour`：各节点 ID 的有限序列；自动讲解不能选择他人的条件回应。每段约 3.5 秒，点图接管，离开主图或后台暂停，减少动画时不自动播放。
-- 选择 `loop` 时需确有回连依据；不能把所有准备、等待或结构性负担都解释成个人循环。信息不足时选择留白。
-
-每个 `chapter` 包含 `kicker`、`title`、`lead`、`layout`、`cards`、`covers`。`layout` 可用 `story`、`path`、`topics`、`timeline`、`feedback`、`closing`。每个 card 包含 `title`、`text`、`refs`；`technical_cards` 使用相同 card 结构。
-
-`covers` 指向该章承接的用户底稿章节，例如 `["user:1","user:2"]`。所有用户底稿章节必须恰好覆盖一次，完整正文随该章在页内可展开；全部技术底稿章节自动进入依据区。两份原始底稿也以离线下载形式内嵌，原始文件不被重写。
-
-## 阅读与呈现要求
-
-- 首屏一张可点的主图，变化与短解释同步；主图数量与热点由个人材料决定，无人物切换器。图上操作不写入现实行动状态。
-- 默认下读能理解主要结论、关键反例、已谈到的人生领域、未来、取舍与反馈，不把关键限定都藏进折叠区。补充场景与详细推导可展开。
-- 八领域按实际覆盖呈现；未知领域保留未知。未来现实实验与传统岁运窗口分开，时间依据沿用报告，不重新推算。
-- 不用两份长文逐字平铺冒充可视化。需要重点对照时选路径、时间带、反馈前后等信息图形式；不可删去不命中或不确定项。
-- CSS 为手机重新排布；键盘可点图、无脚本仍可读主图摘要和完整正文。长表格允许在表格内部横向阅读，页面不得整体横向溢出。
-
-## 来源与更新
-
-`visual_report_model` 直接依赖本次两份活动报告；`html_report` 直接依赖两份报告和当前模型。登记时重新构建并比对 HTML，拒绝任意 HTML 文件冒充有效交付。报告或模型被 `supersede` 后，下游 HTML 自动失效，默认 HTML 会话重新变为未完成。新版本使用新文件名，保留旧版本证据。
-
-离线副本无法被远程撤回；“失效”指会话内有效交付选择，不能声称用户手中旧副本自动消失。分享、私有托管、跨设备草稿同步不在当前实现中。文件内有私人资料，仅在用户授权的本地会话生成与预览，不复制到公开演示或仓库。
-
-## 验收
-
-可安装包的回归测试覆盖默认完成门槛、历史 Markdown 兼容、来源过期和篡改、跨会话模型、缺失章节、非法连线、外部回应自动播放限制、HTML 注入与独立内容。人工还需核对语义、手机布局、点击状态、键盘、完整依据展开与下载。桌面手机视口测试不等于实体手机或真人理解测试。
+生成失败保留有效底稿和未完成状态，说明具体工程限制。真实报告只能在选定本地会话内生成和预览，不能复制到公开演示、Git 或可分发 Skill。回归测试一律使用合成材料。

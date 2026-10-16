@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import io
+import copy
 import sys
 import tempfile
 import unittest
@@ -37,6 +38,7 @@ from consultation_harness import (
 )
 from consultation_output_router import build_output_plan
 from doctor import run_checks
+from generate_html_report import ASSETS, PLACEHOLDER, sections
 
 
 class ConsultationHarnessTests(unittest.TestCase):
@@ -65,14 +67,28 @@ class ConsultationHarnessTests(unittest.TestCase):
         sources=(),
         name: str | None = None,
     ):
+        path = self.make_file(name or f"{kind}.json")
+        if kind in {"markdown_report", "technical_report"}:
+            path.write_text(self.synthetic_report(kind), encoding="utf-8")
         return register_artifact(
             self.session_dir,
             self.state,
             kind=kind,
-            path=self.make_file(name or f"{kind}.json"),
+            path=path,
             source_categories=categories,
             source_artifact_ids=sources,
         )
+
+    def synthetic_report(self, kind):
+        filename = "user-report-template.md" if kind == "markdown_report" else "technical-report-template.md"
+        _, parts = sections((ASSETS / filename).read_text(encoding="utf-8"))
+        text = "# Synthetic report\n\n" + "".join(
+            "## " + part["title"] + "\n\nSynthetic evidence.\n\n"
+            + ("### 现实中的具体场景\n\nConditional example.\n\n### 心结收束\n\nAgency.\n\n"
+               if kind == "markdown_report" and index == 1 else "")
+            for index, part in enumerate(parts)
+        )
+        return text + ("[Technical](technical_analysis.md)\n" if kind == "markdown_report" else "")
 
     def reach_chart_ready(self):
         chart = self.register("chart_facts", categories=("operational_input",))
@@ -143,6 +159,8 @@ class ConsultationHarnessTests(unittest.TestCase):
     def test_init_creates_hashed_recoverable_state(self):
         recovered = read_state(self.session_dir)
         self.assertEqual("intake", recovered["stage"])
+        self.assertEqual("cihou-mobius-v1", recovered["report_template"])
+        self.assertEqual("cihou-mobius-v1", status_summary(recovered)["report_template"])
         self.assertFalse(recovered["privacy"]["absolute_context_isolation_claimed"])
         self.assertEqual(["chart_ready"], status_summary(recovered)["allowed_next_stages"])
 
@@ -375,6 +393,29 @@ class ConsultationHarnessTests(unittest.TestCase):
         )
         self.assertEqual("markdown_report", report["kind"])
         self.assertEqual([], audit_state(self.session_dir, self.state))
+
+    def test_new_report_templates_cannot_be_registered_as_completed_sources(self):
+        _, _, analysis, _, _, deep = self.reach_deep_dive()
+        transition_stage(self.session_dir, self.state, "report_ready", operator_override=False, reason=None)
+        original_state = copy.deepcopy(self.state)
+        original_bytes = (self.session_dir / "session_state.json").read_bytes()
+        for kind, parent in [("markdown_report", deep), ("technical_report", analysis)]:
+            valid = self.synthetic_report(kind)
+            for suffix, content in [
+                ("draft", valid + "\n" + PLACEHOLDER),
+                ("headings", valid.replace("## 一、", "## Missing first section — ", 1)),
+            ]:
+                path = self.session_dir / f"{kind}_{suffix}.md"
+                path.write_text(content, encoding="utf-8")
+                with self.assertRaises(HarnessError):
+                    register_artifact(self.session_dir, self.state, kind=kind, path=path,
+                                      source_categories=["prior_output"], source_artifact_ids=[parent["id"]])
+                self.assertEqual(original_state, self.state)
+                self.assertEqual(original_bytes, (self.session_dir / "session_state.json").read_bytes())
+        # Either source is validated independently; no companion report is needed yet.
+        self.register("technical_report", categories=("prior_output",), sources=(analysis["id"],))
+        self.assertFalse(active_artifacts(self.state, "markdown_report"))
+        self.register("markdown_report", categories=("prior_output",), sources=(deep["id"],))
 
     def test_guided_turn_can_open_before_chart_exists(self):
         plan = build_output_plan(self.state, "guided_turn")

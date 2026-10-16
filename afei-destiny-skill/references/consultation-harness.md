@@ -117,7 +117,7 @@ python scripts/consultation_harness.py supersede `
 | `chart` | 只保留与旧盘无关的最小上下文 | `intake` |
 | `interpretation` | 保留排盘事实，废弃盘面锁及其下游 | `chart_ready` |
 | `calibration` | 保留原盲测，重做反馈结算和后续分析 | `calibration` |
-| `output` | 保留推理产物，只废弃旧报告章节、最终 Markdown 和输出计划 | 当前阶段 |
+| `output` | 保留推理产物，只废弃旧报告章节、双底稿、个人模型、HTML 和输出计划 | 当前阶段 |
 
 也可以用一个或多个 `--artifact-id` 精确替代。不得删除旧记录；它们需要留给审计。
 
@@ -152,7 +152,7 @@ python scripts/consultation_harness.py transition `
 intake → chart_ready → first_read → calibration → deep_dive → forecast → report_ready
 ```
 
-`guided` 从 `chart_ready` 进入 `first_read` 前必须登记 `chart_lock` 和 `preblind_analysis`。`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。两份 Markdown 底稿只有进入 `report_ready` 后才能分别登记为 `markdown_report` 与 `technical_report`。随后按 [html-report.md](html-report.md) 登记 `visual_report_model` 与 `html_report`。HTML 不新增分析阶段；新会话默认 `delivery_format=html`，只有有效双底稿、模型和 HTML 齐备才为 `complete`。历史缺少交付格式字段的会话沿用 Markdown，用户明确要求时使用 `set-delivery --format html --reason ...` 迁移；显式只要 Markdown 可记录 `--format markdown`。
+`guided` 从 `chart_ready` 进入 `first_read` 前必须登记 `chart_lock` 和 `preblind_analysis`。`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。两份 Markdown 底稿只有进入 `report_ready` 后才能分别登记为 `markdown_report` 与 `technical_report`。随后按 [html-report.md](html-report.md) 登记 `visual_report_model` 与 `html_report`。HTML 不新增分析阶段；新会话默认 `delivery_format=html` 且 `report_template=cihou-mobius-v1`，固定莫比乌斯三态与九章正文；只有有效双底稿、模型和 HTML 齐备才为 `complete`。历史缺少交付格式字段的会话沿用 Markdown，用户明确要求时使用 `set-delivery --format html --reason ...` 迁移；显式只要 Markdown 可记录 `--format markdown`。
 
 ## 五、产物注册与血缘
 

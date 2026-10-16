@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "template_id": "cihou-mobius-v1",
+  "draft": true,
+  "session_id": "__CIHOU_FILL__: 由 --init-model 绑定当前会话",
+  "sources": {},
+  "authoring_notes": [
+    "固定的是莫比乌斯视觉与章节阅读顺序；事实、困局、行动、分支和语言必须逐次来自本次完整咨询与双报告。",
+    "不要把莫比乌斯隐喻当作已经证实的心理因果。证据不足时保留 unknown/hypothesis，无依据的边不要添加。",
+    "第三幅画面表示可控尝试而非保证成功；外部回应只能写成 condition，不能进入自动叙事。",
+    "补全所有占位符并审阅来源后设 draft=false。代码能核对结构与出处，语义真实性仍需逐段人工审阅。"
+  ],
+  "title": "__CIHOU_FILL__: 个人报告标题",
+  "subtitle": "__CIHOU_FILL__: 这一页围绕哪一个主问题",
+  "closing": "__CIHOU_FILL__: 基于本次咨询的收束与开放问题",
+  "technical_intro": "__CIHOU_FILL__: 计算、传统框架与现实解释分别处于什么证据层级",
+  "technical_cards": [
+    {
+      "title": "__CIHOU_FILL__: 技术摘要主题",
+      "text": "__CIHOU_FILL__: 解释可复核的事实、争议与不能推出的结论",
+      "refs": [
+        "technical:1",
+        "technical:10"
+      ]
+    }
+  ],
+  "limits": "__CIHOU_FILL__: 本次事实缺口、未验证判断与结果边界",
+  "diagram": {
+    "type": "loop",
+    "nodes": [
+      {
+        "id": "experience",
+        "kind": "unknown",
+        "label": "__CIHOU_FILL__: 短标签",
+        "title": "__CIHOU_FILL__: 过去与现在的具体事实",
+        "text": "__CIHOU_FILL__: 只写有来源的经历；未确认处保留未知",
+        "refs": [
+          "user:2"
+        ]
+      },
+      {
+        "id": "pattern",
+        "kind": "hypothesis",
+        "label": "__CIHOU_FILL__: 短标签",
+        "title": "__CIHOU_FILL__: 目前可检验的重复机制",
+        "text": "__CIHOU_FILL__: 提出解释假设、条件与反证，不能把循环形式当因果证据",
+        "refs": [
+          "user:2"
+        ]
+      },
+      {
+        "id": "action",
+        "kind": "action",
+        "label": "__CIHOU_FILL__: 短标签",
+        "title": "__CIHOU_FILL__: 本人可执行的尝试",
+        "text": "__CIHOU_FILL__: 行动前提、完成线、观察点，不包含保证外部成功的结果",
+        "refs": [
+          "user:5"
+        ]
+      }
+    ],
+    "edges": [],
+    "tour": [
+      "experience",
+      "pattern",
+      "action"
+    ]
+  },
+  "presentation": {
+    "style": "quiet-v1",
+    "hero_states": [
+      {
+        "lines": [
+          "__CIHOU_FILL__: 第一行",
+          "__CIHOU_FILL__: 第二行"
+        ],
+        "description": "__CIHOU_FILL__: 第一视角：本次困扰的真实感受或处境",
+        "hint": "__CIHOU_FILL__: 点击图片的简短引导",
+        "label": "__CIHOU_FILL__: 第一状态无障碍说明",
+        "node_id": "experience",
+        "refs": [
+          "user:2"
+        ]
+      },
+      {
+        "lines": [
+          "__CIHOU_FILL__: 第一行",
+          "__CIHOU_FILL__: 第二行"
+        ],
+        "description": "__CIHOU_FILL__: 全环视角：重复机制；尚属假设则在这句明确",
+        "hint": "__CIHOU_FILL__: 点击图片进入行动的引导",
+        "label": "__CIHOU_FILL__: 第二状态无障碍说明",
+        "node_id": "pattern",
+        "refs": [
+          "user:2"
+        ]
+      },
+      {
+        "lines": [
+          "__CIHOU_FILL__: 第一行",
+          "__CIHOU_FILL__: 第二行"
+        ],
+        "description": "__CIHOU_FILL__: 离环视角：改变一个可控行动，观察反馈而不是承诺未来",
+        "hint": "__CIHOU_FILL__: 向下阅读具体实施步骤",
+        "label": "__CIHOU_FILL__: 第三状态无障碍说明",
+        "node_id": "action",
+        "refs": [
+          "user:5"
+        ]
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "focus",
+      "layout": "story",
+      "kicker": "本次主要矛盾",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 用本次用户确认的目标、现实阻碍与内在需要解释主问题；区分事实和推断",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 用本次用户确认的目标、现实阻碍与内在需要解释主问题；区分事实和推断",
+          "refs": [
+            "user:1",
+            "user:2"
+          ]
+        }
+      ],
+      "covers": [
+        "user:1",
+        "user:2"
+      ]
+    },
+    {
+      "id": "pattern",
+      "layout": "path",
+      "kicker": "困局如何重复",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 过去经验、当下做法、结果与回到起点的关系；证据不足时说明尚待确认，不编造因果",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 过去经验、当下做法、结果与回到起点的关系；证据不足时说明尚待确认，不编造因果",
+          "refs": [
+            "user:2"
+          ]
+        }
+      ],
+      "covers": []
+    },
+    {
+      "id": "scenes",
+      "layout": "story",
+      "kicker": "回到具体场景",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 具体咨询事例与条件性场景；标清哪些实际发生、哪些仅供自查，并给反例",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 具体咨询事例与条件性场景；标清哪些实际发生、哪些仅供自查，并给反例",
+          "refs": [
+            "user:2"
+          ]
+        }
+      ],
+      "covers": []
+    },
+    {
+      "id": "experiment",
+      "layout": "path",
+      "kicker": "一轮可以结束的尝试",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 可控行动、明确完成线、反馈观察点与复盘条件；按照本次现实起点安排",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 可控行动、明确完成线、反馈观察点与复盘条件；按照本次现实起点安排",
+          "refs": [
+            "user:5"
+          ]
+        }
+      ],
+      "covers": [
+        "user:5"
+      ]
+    },
+    {
+      "id": "choices",
+      "layout": "topics",
+      "kicker": "面对分岔时如何选择",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 列明不同现实条件下的选择及代价，不默认用户已经满足前提",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 列明不同现实条件下的选择及代价，不默认用户已经满足前提",
+          "refs": [
+            "user:5"
+          ]
+        }
+      ],
+      "covers": []
+    },
+    {
+      "id": "future",
+      "layout": "timeline",
+      "kicker": "未来如何观察",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 阶段窗口、触发条件和外部不确定性，区分传统解释与实际观察，不承诺结果",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 阶段窗口、触发条件和外部不确定性，区分传统解释与实际观察，不承诺结果",
+          "refs": [
+            "user:4"
+          ]
+        }
+      ],
+      "covers": [
+        "user:4"
+      ]
+    },
+    {
+      "id": "panorama",
+      "layout": "topics",
+      "kicker": "其他生活方面",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 按自我节奏、学习、事业、财务、关系、家庭、迁动、身心八方面组织；未讨论的明确写未展开",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 按自我节奏、学习、事业、财务、关系、家庭、迁动、身心八方面组织；未讨论的明确写未展开",
+          "refs": [
+            "user:3"
+          ]
+        }
+      ],
+      "covers": [
+        "user:3"
+      ]
+    },
+    {
+      "id": "calibration",
+      "layout": "feedback",
+      "kicker": "哪些保留，哪些修正",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 逐项保留、部分命中、未命中、未验证及修正，不掩盖反证，不算伪准确率",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 逐项保留、部分命中、未命中、未验证及修正，不掩盖反证，不算伪准确率",
+          "refs": [
+            "user:6"
+          ]
+        }
+      ],
+      "covers": [
+        "user:6"
+      ]
+    },
+    {
+      "id": "boundaries",
+      "layout": "closing",
+      "kicker": "还不知道什么",
+      "title": "__CIHOU_FILL__: 结合本次咨询写章节标题",
+      "lead": "__CIHOU_FILL__: 未解问题、下一步最有价值的证据、解释边界与原文阅读说明",
+      "cards": [
+        {
+          "title": "__CIHOU_FILL__: 具体观点或步骤",
+          "text": "__CIHOU_FILL__: 未解问题、下一步最有价值的证据、解释边界与原文阅读说明",
+          "refs": [
+            "user:7",
+            "user:8"
+          ]
+        }
+      ],
+      "covers": [
+        "user:7",
+        "user:8"
+      ]
+    }
+  ]
+}

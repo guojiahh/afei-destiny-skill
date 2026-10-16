@@ -62,6 +62,7 @@
 | `references/preblind-analysis.md` | 盲测前完整盘面审计与偏好隔离 | 改盲测准确性和分析深度时 |
 | `references/client-voice.md` | 温暖、具体、不迎合的表达层 | 改客户语言时 |
 | `references/output-routing.md` | 对话、审计、总结和报告来源边界 | 改输出类型时 |
+| `references/html-report.md` | 默认 HTML 交付、个人模型、生成登记、覆盖与更新规则 | 改个人页面与完成条件时 |
 | `references/markdown-report.md` | 用户优先的固定章节、重点问题、人生全景、未来展望和来源要求 | 改最终交付时 |
 | `references/technical-report.md` | 独立技术文档的规则链、反证和隐私要求 | 改技术交付时 |
 | `references/worked-examples.md` | 不含比赛原题的通用示例 | 需要说明抽象规则如何落地时 |
@@ -71,6 +72,9 @@
 | `scripts/consultation_harness.py` | 会话发现与创建、状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
 | `scripts/consultation_output_router.py` | 只选择活动产物的输出计划 | 改输出路由时 |
 | `scripts/validate_final_report.py` | 检查用户报告章节顺序并阻止技术章节前置 | 改最终报告固定格式时 |
+| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py` | 校验个人模型、生成并登记正式 HTML | 改 HTML 数据契约、完整内容与呈现时 |
+| `assets/cihou/` 内的 `mobius-model-template.json`、`user-report-template.md`、`technical-report-template.md` | 新报告固定模型与双底稿骨架 | 改所有报告共同结构时 |
+| `assets/cihou/quiet/` | 当前 quiet 正式页面模板、样式、交互和图像 | 改统一莫比乌斯视觉与阅读方式时 |
 | `scripts/doctor.py` | 环境与固定命例自检 | 改依赖或运行入口时 |
 | `scripts/test_*.py` | Skill 全部回归测试 | 每个脚本修复必须同步补测试 |
 | `scripts/vendor/` | 内置第三方依赖 | 只有升级依赖时 |
@@ -124,7 +128,7 @@ evaluation/
 - `EVALUATION_AND_ITERATION_METHOD.md`：详细评测和迭代制度。
 - `SHOWCASE.md`：三分钟对外演示。
 - [CIHOU_HANDOFF.md](CIHOU_HANDOFF.md)：此后当前基线、个性化边界与新对话交接。
-- [CIHOU_PRODUCT_PLAN.md](CIHOU_PRODUCT_PLAN.md)、[CIHOU_REPORT_EXPERIENCE.md](CIHOU_REPORT_EXPERIENCE.md)：产品方案、主图与完整咨询报告的衔接；区分已实现样机和待开发正式能力。
+- [CIHOU_PRODUCT_PLAN.md](CIHOU_PRODUCT_PLAN.md)、[CIHOU_REPORT_EXPERIENCE.md](CIHOU_REPORT_EXPERIENCE.md)：现役产品方案与历史体验研究；以交接和 HTML 协议为当前实现合同。
 - 当前不保留公开的真实咨询案例；以后仅接收完整走过现行流程、通过隐私审查并取得授权的材料。匿名设计素材单独标注为虚构。
 
 ## 4. `assets/` 与 `design-demos/`：展示层
@@ -132,7 +136,8 @@ evaluation/
 - `assets/showcase/`：README 主视觉、社交预览、能力闭环图和抽象背景。
 - `assets/contact/`：联系图片。
 - `design-demos/`：匿名产品原型、保留的历史设计，以及上述展示图的 HTML 源稿和渲染脚本；以[设计演示索引](../design-demos/README.md)区分用途。
-- 当前此后入口为 `design-demos/cihou-stage1.html`，源码在同名目录。四例为人工编排，`build.py` 仅打包源码，尚不能从咨询生成个人图形。
+- 当前匿名视觉入口为 `design-demos/cihou-quiet.html`，源码在 `design-demos/cihou-quiet/`；它只演示视觉与交互，不承担完整咨询生成。正式开发从 [此后交接](CIHOU_HANDOFF.md)进入 Skill 内的生成器与 `assets/cihou/quiet/`。
+- `design-demos/cihou-stage1.html` 及同名目录是四个人工匿名案例的历史设计对照，不再是当前开发入口。真实个人报告只保存在对应 `consultation_state/<session>/`。
 
 它们不会影响 Skill 的推理准确率。做功能优化时无需加载这些文件。
 
@@ -171,7 +176,7 @@ evaluation/
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
 | 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；完成双底稿、个人模型与 HTML，校验登记后才完成默认交付 |
 | 修改正式 HTML 交付 | [HTML 协议](../afei-destiny-skill/references/html-report.md)、`scripts/generate_html_report.py`、`assets/cihou/`（均在 Skill 内） | 运行来源、覆盖、失效与安全回归；核对完整内容和桌面／窄屏交互 |
-| 修改此后匿名原型 | [原型源码说明](../design-demos/cihou-stage1/README.md) | 重建 HTML，运行数据、播放时钟与动态图检查；行为变更需补相应浏览器验收 |
+| 修改此后匿名视觉样机 | [quiet 源码说明](../design-demos/cihou-quiet/README.md) | 重建单文件 HTML，核对桌面／窄屏、图内点击、暂停与减少动画；正式页面改动同时检查 Skill 渲染器 |
 | 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，继续按 [HTML 协议](../afei-destiny-skill/references/html-report.md) 编排模型，生成并登记主交付 HTML |
 
 ## 文件治理规则
@@ -187,8 +192,8 @@ evaluation/
 
 - Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
 - 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；默认个人 HTML 生成、校验、登记与下游失效已接通，双 Markdown 保留为底稿。
-- 当前此后：第一阶段匿名交互样机已实现；循环型主图支持回环、累积、行动转向和自动讲解。正式 HTML 使用独立的个人模型与渲染器，完成线动效已接入；通用图型和在线交付边界以[交接说明](CIHOU_HANDOFF.md)为准。
-- 当前本地门禁：58 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
+- 当前此后：第一阶段已于 2026-10-16 完成并获用户确认；quiet 视觉已用于正式个人 HTML，所有新完整报告统一莫比乌斯主图，支持三状态图内点击、持续行走与主动跨出，正文连续承接完整咨询。当前共享纸带几何并固定九章正文与双底稿结构；连续 3D、视频与私有在线交付的后续范围以[交接说明](CIHOU_HANDOFF.md)为准。
+- 当前本地门禁：Skill 与评测两组回归测试（数量以当前检查输出为准）、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。
 - 下一次可宣称泛化提升，必须使用新发布且从未揭晓的比赛题或独立外部保留集。

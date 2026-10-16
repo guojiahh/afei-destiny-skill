@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ed">
+  <meta name="description" content="此后的匿名视觉与阅读样机：看见准备的循环，尝试让现实给出反馈。">
+  <title>此后 · 先试一次</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="此后，重新开始">此后<span aria-hidden="true">.</span></a>
+    <span class="edition">匿名演示</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="看见你的下一步" data-state="0">
+      <div class="hero-heading">
+        <h1 id="scene-title">再准备一点，<br>就出发。</h1>
+      </div>
+
+      <div class="scene-wrap">
+        <button class="scene" id="scene" type="button" aria-label="点击路面，拉远看看自己在哪里" aria-describedby="scene-description">
+          <span class="artwork">
+            <img class="scene-image road-image" src="assets/road.png" alt="近处的纸带路面向前伸展，看不到它的全貌" width="1200" height="900" fetchpriority="high" draggable="false">
+            <img class="scene-image loop-image" src="assets/loop.png" alt="拉远后，一条纸带回转成环" width="1200" height="900" draggable="false">
+            <svg class="walker-layer" viewBox="0 0 1200 900" aria-hidden="true">
+              <g id="road-marker" opacity="0"><path d="M-14 0H14" fill="none" stroke="#f4f2ed" stroke-width="2" stroke-linecap="round"/></g>
+              <g id="walker" transform="translate(620 566)">
+                <ellipse class="walker-shadow" cx="0" cy="1" rx="12" ry="3.5"/>
+                <g class="walker-body">
+                  <circle cx="0" cy="-39" r="5"/>
+                  <path class="walker-torso" d="M-4-30 Q0-33 4-30 L6-15 -5-15Z"/>
+                  <path class="walker-limb arm-back" d="M-3-28 -10-16"/>
+                  <path class="walker-limb arm-front" d="M3-28 10-19"/>
+                  <path class="walker-limb leg-back" d="M-2-15 -7 0"/>
+                  <path class="walker-limb leg-front" d="M2-15 8 0"/>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="scene-hint" id="scene-hint"><span class="signal" aria-hidden="true"></span>点一下路面，看看全貌</span>
+        </button>
+      </div>
+
+      <div class="hero-explanation" aria-live="polite" aria-atomic="true">
+        <p id="scene-description">投递却一次次被推迟。</p>
+      </div>
+
+      <div class="scene-tools" aria-label="画面播放控制">
+        <button class="tool replay" id="replay" type="button" aria-label="重新观看" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 8A8 8 0 1 1 4 13M5 3v6h6"/></svg>
+          <span>重看</span>
+        </button>
+        <button class="tool pause" id="pause" type="button" aria-label="暂停人物行走" aria-pressed="false">
+          <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg>
+          <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg>
+          <span id="pause-label">暂停</span>
+        </button>
+      </div>
+      <span class="reading-cue" aria-hidden="true">向下，慢慢读 <span>↓</span></span>
+    </section>
+
+    <article class="reading" aria-label="这次理解的详细说明">
+      <section class="reading-section">
+        <p class="section-index">01 / 看见困局</p>
+        <h2>准备，曾经让你安心。</h2>
+        <p class="section-intro">在这个故事里，准备是一种认真。只是，当“准备好了”变成出发的前提，出发就可能越来越远。</p>
+
+        <figure class="cycle-figure">
+          <ol class="cycle">
+            <li><span class="cycle-label">多做准备</span><span class="cycle-note">希望更有把握</span></li>
+            <li><span class="cycle-label">延后投递</span><span class="cycle-note">再等等也许更好</span></li>
+            <li><span class="cycle-label">缺少反馈</span><span class="cycle-note">不知道差在哪里</span></li>
+            <li><span class="cycle-label">继续准备</span><span class="cycle-note">把停滞当成不足</span></li>
+          </ol>
+          <figcaption>绕回来的，是同一个判断：<em>“我还没准备好。”</em></figcaption>
+        </figure>
+
+        <div class="reading-conclusion">
+          <span class="conclusion-mark" aria-hidden="true">↗</span>
+          <p>需要改变的也许不是努力的程度，<br class="desktop-break">而是让反馈更早发生。</p>
+        </div>
+      </section>
+
+      <section class="reading-section attempt-section">
+        <p class="section-index">02 / 试着走出去</p>
+        <h2>不必一次想明白整个未来。</h2>
+        <p class="section-intro">先让一件小事进入现实，再看看现实怎样回应。没有回应，也可以成为检查岗位匹配与投递方式的线索。</p>
+
+        <ol class="attempts">
+          <li><span class="attempt-number" aria-hidden="true">1</span><div><h3>选一个岗位</h3><p>选择基本匹配、愿意尝试的方向。</p></div></li>
+          <li><span class="attempt-number" aria-hidden="true">2</span><div><h3>发出一份投递</h3><p>完成这次可承受的尝试。</p></div></li>
+          <li><span class="attempt-number" aria-hidden="true">3</span><div><h3>按回应调整</h3><p>用新的信息，决定下一小步。</p></div></li>
+        </ol>
+        <p class="closing-thought">未来不只发生在你身上。<br>你的行动，也在其中。</p>
+      </section>
+
+      <details class="evidence">
+        <summary>这段理解的依据<span aria-hidden="true">+</span></summary>
+        <div class="evidence-content">
+          <p>这是一个匿名虚构示例，用于演示此后的画面、文字时机与连续阅读方式，不是个人咨询结论。</p>
+          <p>故事假设：当事人反复准备却延后投递，缺少外部反馈，并把停滞理解为准备不足。上面的循环只描述这个假设，没有覆盖求职中的所有现实因素。</p>
+          <p>正式报告需要结合具体咨询，区分当事人的陈述、分析推断与可核对的依据；不能用这张图替代个体分析。</p>
+        </div>
+      </details>
+    </article>
+  </main>
+  <footer class="page-footer"><span>此后.</span><p>看见惯性，也看见下一步。</p></footer>
+</body>
+</html>

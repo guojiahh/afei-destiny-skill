@@ -84,41 +84,10 @@ python .\afei-destiny-skill\scripts\doctor.py
 
 ## 可视化报告设计演示
 
-当前唯一入口是[「此后」第一阶段「回环与积累」原型](../design-demos/cihou-stage1.html)。一张主图承担重点：循环型首次约 16 秒自动讲解，呈现任务流动、积累与行动转向；可直接点图内不同位置接管，图下同一处短解释同步变化，并可暂停继续。向下自然阅读完整图文、反例、覆盖范围与模拟回访，记录与独立分享位于末尾。
+当前匿名视觉入口为[「此后」quiet 样机](../design-demos/cihou-quiet.html)。暖白纸面、深灰纸带与朱红人物保持一个视觉重点：点道路看全环，再点环看人物主动跨出；文字随画面解释，向下自然阅读。动效为透明图片与二维路径，不是视频或连续 3D 运镜。
 
-循环、接桥、汇流三个案例各有 6 个图内热点，信息不足案例有 4 个；后三类保留上一版图形。主图点选不改写事实或现实行动记录。当前视觉以暖白纸面、墨色中文、蓝色立体回环与铜橙拨片为主，不依赖外部资源，可离线打开。
+样机正文是匿名虚构片段，用于公开展示风格；完整个人交付由独立的 [HTML 生成流程](../afei-destiny-skill/references/html-report.md)生成。所有新完整报告统一三态莫比乌斯主图、九章正文、八节用户底稿和十一节技术底稿，具体事实、困局与行动每次重新编写。模板一致不等于人生解释一致。
 
-四例全部是人工编排的匿名虚构素材，未接入正式咨询生成或云端。它们展示不同关系可以有不同形状，尚不能证明同一种图已适配多个人；不能只换姓名或 `cases.js` 后直接交付。正式咨询现已通过独立的 [HTML 生成协议](../afei-destiny-skill/references/html-report.md) 默认交付个人页面；这四个历史样机本身不作为生成器。
+第一阶段已于 2026-10-16 获用户确认。正式页面能离线打开，完整依据在页尾展开；真实报告不进入公开样例。旧 stage1 四图型、蓝色轨道和铜橙拨片只作为[历史对照](../design-demos/README.md)，不再是开发入口。
 
-源码与实际验收范围见[原型说明](../design-demos/cihou-stage1/README.md)，产品方向见[产品方案](CIHOU_PRODUCT_PLAN.md)与[完整报告体验](CIHOU_REPORT_EXPERIENCE.md)，接续工作见[新对话交接](CIHOU_HANDOFF.md)。此前海图和此后概念均保留在[设计演示索引](../design-demos/README.md)，不与当前入口混用。
-
-本地预览地址只供当前电脑使用，服务停止后会失效；响应式视口检查不等于已经完成真实手机交付。年度作品与动效取舍见[研究记录](../design-demos/cihou-stage1/ANNUAL_AWARDS_RESEARCH.md)，研究材料不全部等于实际原站操作。
-
-## 对外介绍时不要过度承诺
-
-- 可以说“排盘计算可测试、过程可追溯”。
-- 可以说“回答会标记口径、证据和不确定性”。
-- 不要说“评测高分证明命理有效”。
-- 不要把 BaziQA 的 `92.98%` 当作技能净增益；该实验中专家审查层的净增益为 `0`。
-- 不要用单个合成示例暗示系统已经预测了真实经历。
-
-## GitHub 社交预览图
-
-仓库已经准备好 [`assets/showcase/social-preview.png`](../assets/showcase/social-preview.png)，尺寸为 `1280 × 640`。它只介绍整个 Skill，不包含个人案例或微信二维码。
-
-上传步骤：
-
-1. 打开 GitHub 仓库主页，进入 **Settings**。
-2. 在 **General** 页面找到 **Social preview**。
-3. 点击 **Edit** / **Upload an image**，选择 `assets/showcase/social-preview.png`。
-4. 保存后回到仓库主页，等待 GitHub 更新分享卡片缓存。
-
-预览图中的项目地址为 `github.com/guojiahh/afei-destiny-skill`。
-
-## 演示前检查
-
-- [ ] 新环境中能识别 `$afei-destiny-skill`。
-- [ ] `SKILL.md` 位于安装目录第一层。
-- [ ] Python 能运行，58 项 Skill 测试和 6 项评测测试通过；`doctor.py` 全绿。
-- [ ] 演示出生信息是虚构信息或已获本人同意。
-- [ ] 不在屏幕上展示评测答案缓存或个人敏感信息。
+源码与视觉边界见[样机说明](../design-demos/cihou-quiet/README.md)，正式开发从[新对话交接](CIHOU_HANDOFF.md)进入。手机尺寸浏览器检查不等于真实手机交付；本机预览服务停止后地址会失效，保留 HTML 文件才是本地交付。

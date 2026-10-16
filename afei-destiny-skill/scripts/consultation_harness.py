@@ -22,6 +22,7 @@ from typing import Any, Iterable
 
 SCHEMA_VERSION = 1
 POLICY_VERSION = "bazi-consultation-harness-v1"
+DEFAULT_REPORT_TEMPLATE = "cihou-mobius-v1"
 STATE_NAME = "session_state.json"
 ROOT_MARKER_NAME = ".consultation-root.json"
 STAGES = (
@@ -441,6 +442,7 @@ def initialize_session(session_dir: Path, mode: str, topic: str | None) -> dict[
         "mode": mode,
         "stage": "intake",
         "delivery_format": "html",
+        "report_template": DEFAULT_REPORT_TEMPLATE,
         "selected_topic": topic,
         "revision": 1,
         "privacy": {
@@ -527,6 +529,10 @@ def register_artifact(
             raise HarnessError(f"source artifact is not active: {source_id}")
         inherited_categories.update(source.get("source_categories", []))
     normalized_categories = validate_sources(kind, inherited_categories)
+
+    if state.get("report_template") == DEFAULT_REPORT_TEMPLATE and kind in {"markdown_report", "technical_report"}:
+        from generate_html_report import validate_source_contract
+        validate_source_contract(kind, resolved.read_text(encoding="utf-8"))
 
     if kind in {"visual_report_model", "html_report"}:
         from generate_html_report import validate_registration
@@ -774,6 +780,7 @@ def status_summary(state: dict[str, Any]) -> dict[str, Any]:
         "stage": state["stage"],
         "lifecycle": session_lifecycle(state),
         "delivery_format": state.get("delivery_format", "markdown"),
+        "report_template": state.get("report_template"),
         "session_label": state.get("session_label"),
         "selected_topic": state.get("selected_topic"),
         "revision": state["revision"],

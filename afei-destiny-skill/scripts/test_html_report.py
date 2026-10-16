@@ -5,15 +5,18 @@ from pathlib import Path
 import tempfile
 import unittest
 from consultation_harness import (HarnessError, initialize_session, register_artifact, transition_stage,
-    read_state, session_lifecycle, supersede, audit_state, active_artifacts)
+    read_state, session_lifecycle, supersede, audit_state, active_artifacts, write_state)
 from consultation_output_router import build_output_plan
-from generate_html_report import generate, load_sources, validate_model, render, markdown
+from generate_html_report import (generate, load_sources, validate_model, render, markdown,
+    init_model, MOBIUS_CHAPTERS, ASSETS, sections, PLACEHOLDER)
 from validate_final_report import REQUIRED_HEADINGS
 
 class HtmlReportTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.s=Path(self.tmp.name)/'session'
         self.state=initialize_session(self.s,'focused','synthetic')
+        # Historical models remain checkable after the default template changes.
+        self.state.pop('report_template');write_state(self.s,self.state)
         chart=self.reg('chart_facts','chart.json','{}',['operational_input'])
         self.move('chart_ready')
         lock=self.reg('chart_lock','lock.md','synthetic',['chart_fact'],[chart['id']])
@@ -104,5 +107,166 @@ class HtmlReportTests(unittest.TestCase):
         text=self.out.read_text();self.assertIn('Another synthetic situation',text)
         self.assertNotIn('Synthetic report',text);self.assertNotIn('林舟',text)
         self.assertNotIn('"id":"action"',text)
+
+    def quiet(self):
+        self.model['diagram']['type']='loop'
+        self.model['presentation']={'style':'quiet-v1','hero_states':[
+            {'lines':['Synthetic','state '+str(i)],'description':'State description '+str(i),
+             'hint':'State hint','label':'Scene action','node_id':node,'refs':['user:2']}
+            for i,node in enumerate(['past','present','action'])]}
+        self.save()
+
+    def test_quiet_delivery_contains_sources_downloads_and_personalized_states(self):
+        import base64
+        self.quiet()
+        generate(self.s,self.model_path,self.out,register=True)
+        self.assertTrue(generate(self.s,self.model_path,self.out,check=True)['ok'])
+        state=read_state(self.s)
+        self.assertEqual('complete',session_lifecycle(state))
+        self.assertEqual([],audit_state(self.s,state))
+        result=self.out.read_text()
+        for source in ['final_report.md','technical_analysis.md']:
+            encoded=base64.b64encode((self.s/source).read_bytes()).decode()
+            self.assertIn('data:text/markdown;base64,'+encoded,result)
+        for key,count in [('user',8),('technical',2)]:
+            for i in range(1,count+1):self.assertIn(f'id="source-{key}-{i}"',result)
+        self.assertNotIn('href="#source-',result)
+        self.assertEqual(2,result.count('src="data:image/png;base64,'))
+        self.assertIn('State description 2',result)
+        self.assertIn('<noscript>',result)
+
+    def test_quiet_rejects_incompatible_diagrams_and_unsourced_states(self):
+        self.quiet();original=copy.deepcopy(self.model)
+        for mutation,error in [
+            (lambda m:m['diagram'].update(type='threshold'),'loop model'),
+            (lambda m:m['presentation'].update(style='unknown'),'presentation style'),
+            (lambda m:m['presentation']['hero_states'].pop(),'three hero states'),
+            (lambda m:m['presentation']['hero_states'][0].update(refs=['user:99']),'section references'),
+            (lambda m:m['presentation']['hero_states'][0].update(node_id='missing'),'unknown node')]:
+            self.model=copy.deepcopy(original);mutation(self.model);self.save()
+            with self.assertRaisesRegex(HarnessError,error):generate(self.s,self.model_path,self.out)
+        self.assertFalse(self.out.exists())
+
+    def test_quiet_data_and_rich_card_fields_are_escaped(self):
+        self.quiet()
+        payload='</script><script>alert(1)</script>'
+        self.model['presentation']['hero_states'][0]['description']=payload
+        self.model['chapters'][0]['cards'][0].update(eyebrow=payload,items=[payload],counterexample=payload)
+        self.save();generate(self.s,self.model_path,self.out)
+        result=self.out.read_text()
+        self.assertNotIn(payload,result)
+        self.assertIn('\\u003c/script',result)
+        self.assertIn('&lt;/script&gt;',result)
+
+    def mobius(self):
+        """Upgrade only this synthetic fixture to the new fixed contract."""
+        supersede(self.s,self.state,scope=None,artifact_ids=[self.tech['id']],reason='synthetic source template upgrade')
+        _, technical_sections=sections((ASSETS/'technical-report-template.md').read_text())
+        text='# Synthetic fixed technical report\n\n'+''.join('## '+part['title']+'\n\nSynthetic declared evidence.\n\n' for part in technical_sections)
+        lock=active_artifacts(self.state,'chart_lock')[0]
+        self.tech=self.reg('technical_report','technical_v2.md',text,['prior_output'],[lock['id']])
+        self.state['report_template']='cihou-mobius-v1';write_state(self.s,self.state)
+        self.model['sources']['technical']={'artifact_id':self.tech['id'],'sha256':self.tech['sha256']}
+        self.quiet()
+        self.model['template_id']='cihou-mobius-v1'
+        self.model['chapters']=[{'id':ident,'layout':layout,'title':'Synthetic '+ident,'lead':'Synthetic explanation',
+            'cards':[{'title':'Synthetic observation','text':'A condition, not a guaranteed result.','refs':['user:2']}],
+            'covers':list(covers)} for ident,layout,covers in MOBIUS_CHAPTERS]
+        self.save()
+
+    def test_new_session_requires_fixed_mobius_template_before_registration(self):
+        self.state['report_template']='cihou-mobius-v1';write_state(self.s,self.state)
+        with self.assertRaisesRegex(HarnessError,'requires template_id'):
+            generate(self.s,self.model_path,self.out,register=True)
+        self.assertFalse(self.out.exists())
+        self.assertFalse(active_artifacts(read_state(self.s),'visual_report_model'))
+
+    def test_mobius_complete_delivery_is_source_bound_and_deterministic(self):
+        self.mobius()
+        generate(self.s,self.model_path,self.out,register=True)
+        self.assertEqual('complete',session_lifecycle(read_state(self.s)))
+        self.assertTrue(generate(self.s,self.model_path,self.out,check=True)['ok'])
+        result=self.out.read_text()
+        self.assertEqual(9,result.count('<section class="reading-section chapter-'))
+        for i in range(1,12):self.assertIn(f'id="source-technical-{i}"',result)
+
+    def test_mobius_rejects_reordering_missing_chapters_and_wrong_coverage(self):
+        self.mobius();original=copy.deepcopy(self.model)
+        for mutation in [
+            lambda m:m['chapters'].pop(),
+            lambda m:m['chapters'].reverse(),
+            lambda m:m['chapters'][1].update(layout='story'),
+            lambda m:m['chapters'][0].update(covers=['user:1']),
+        ]:
+            self.model=copy.deepcopy(original);mutation(self.model);self.save()
+            with self.assertRaisesRegex(HarnessError,'nine fixed chapters'):
+                generate(self.s,self.model_path,self.out)
+        self.assertFalse(self.out.exists())
+
+    def test_mobius_scaffold_is_current_source_bound_and_cannot_be_delivered(self):
+        self.mobius();path=self.s/'draft_model.json'
+        result=init_model(self.s,path)
+        scaffold=json.loads(path.read_text())
+        self.assertTrue(result['draft']);self.assertEqual(self.state['session_id'],scaffold['session_id'])
+        self.assertEqual(self.model['sources'],scaffold['sources'])
+        self.assertEqual('cihou-mobius-v1',scaffold['template_id'])
+        self.assertEqual(list(MOBIUS_CHAPTERS),[(c['id'],c['layout'],tuple(c['covers'])) for c in scaffold['chapters']])
+        with self.assertRaisesRegex(HarnessError,'draft'):
+            generate(self.s,path,self.out,register=True)
+        scaffold['draft']=False;path.write_text(json.dumps(scaffold))
+        with self.assertRaisesRegex(HarnessError,'unfilled template placeholders'):
+            generate(self.s,path,self.out,register=True)
+        self.assertFalse(self.out.exists());self.assertFalse(active_artifacts(read_state(self.s),'visual_report_model'))
+        with self.assertRaisesRegex(HarnessError,'new model filename'):init_model(self.s,path)
+
+    def test_mobius_initialization_requires_current_reports_and_session_boundary(self):
+        self.mobius()
+        with self.assertRaisesRegex(HarnessError,'inside the session'):
+            init_model(self.s,self.s.parent/'outside.json')
+        supersede(self.s,self.state,scope=None,artifact_ids=[self.tech['id']],reason='synthetic missing report')
+        with self.assertRaisesRegex(HarnessError,'active technical_report'):
+            init_model(self.s,self.s/'missing_source_model.json')
+        self.assertFalse((self.s/'missing_source_model.json').exists())
+
+    def test_mobius_sources_require_full_outlines_and_filled_content(self):
+        self.mobius();sources=load_sources(self.s,self.state)
+        for key in ['user','technical']:
+            changed=copy.deepcopy(sources);changed[key]['text']+='\n'+PLACEHOLDER
+            with self.assertRaisesRegex(HarnessError,'source reports contain'):
+                validate_model(self.model,self.state,changed)
+        changed=copy.deepcopy(sources);changed['technical']['text']=changed['technical']['text'].rsplit('## ',1)[0]
+        with self.assertRaisesRegex(HarnessError,'eleven canonical'):
+            validate_model(self.model,self.state,changed)
+
+    def test_blank_or_nonstring_report_content_cannot_complete_delivery(self):
+        self.mobius();original=copy.deepcopy(self.model)
+        changes=[
+            lambda m,v:m['chapters'][0].update(title=v),
+            lambda m,v:m['chapters'][0].update(lead=v),
+            lambda m,v:m['chapters'][0]['cards'][0].update(title=v),
+            lambda m,v:m['chapters'][0]['cards'][0].update(text=v),
+            lambda m,v:m.update(technical_intro=v),
+            lambda m,v:m.update(limits=v),
+            lambda m,v:m['technical_cards'][0].update(title=v),
+            lambda m,v:m['technical_cards'][0].update(text=v),
+        ]
+        state_before=(self.s/'session_state.json').read_bytes()
+        for change in changes:
+            for invalid in [' \n\t ', 123]:
+                self.model=copy.deepcopy(original);change(self.model,invalid);self.save()
+                with self.assertRaisesRegex(HarnessError,'incomplete|technical explanation'):
+                    generate(self.s,self.model_path,self.out,register=True)
+                self.assertFalse(self.out.exists())
+                self.assertEqual(state_before,(self.s/'session_state.json').read_bytes())
+        self.assertEqual('unfinished',session_lifecycle(read_state(self.s)))
+
+    def test_mobius_keeps_unknowns_and_requires_controllable_last_scene(self):
+        self.mobius()
+        self.model['diagram']['nodes'][0]['kind']='unknown'
+        self.model['diagram']['edges']=[];self.save()
+        generate(self.s,self.model_path,self.out)
+        self.model['diagram']['nodes'][-1]['kind']='hypothesis';self.save()
+        with self.assertRaisesRegex(HarnessError,'controllable action'):
+            generate(self.s,self.model_path,self.s/'invalid.html')
 
 if __name__=='__main__':unittest.main()

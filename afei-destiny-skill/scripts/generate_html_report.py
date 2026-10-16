@@ -11,16 +11,32 @@ import sys
 from pathlib import Path
 from urllib.parse import urlsplit
 from consultation_harness import (HarnessError, active_artifacts, audit_state, ensure_inside_session,
-    file_hash, read_state, register_artifact, write_json_atomic)
-from validate_final_report import validate_report_text
+    file_hash, read_state, register_artifact, write_json_atomic, DEFAULT_REPORT_TEMPLATE)
+from validate_final_report import validate_report_text, REQUIRED_HEADINGS
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets' / 'cihou'
 SOURCE_KINDS = {'user': 'markdown_report', 'technical': 'technical_report'}
+PLACEHOLDER = '__CIHOU_FILL__'
+MOBIUS_CHAPTERS = (
+    ('focus', 'story', ('user:1', 'user:2')),
+    ('pattern', 'path', ()),
+    ('scenes', 'story', ()),
+    ('experiment', 'path', ('user:5',)),
+    ('choices', 'topics', ()),
+    ('future', 'timeline', ('user:4',)),
+    ('panorama', 'topics', ('user:3',)),
+    ('calibration', 'feedback', ('user:6',)),
+    ('boundaries', 'closing', ('user:7', 'user:8')),
+)
 
 
 def require(value, message):
     if not value:
         raise HarnessError(message)
+
+
+def nonempty_string(value):
+    return isinstance(value, str) and bool(value.strip())
 
 
 def sections(text):
@@ -49,6 +65,8 @@ def load_sources(session, state):
 
 def validate_model(model, state, sources):
     require(isinstance(model, dict) and model.get('schema_version') == 1, 'invalid visual model schema')
+    require(model.get('draft', False) is False, 'model is a draft; complete the sourced content before delivery')
+    require(PLACEHOLDER not in json.dumps(model, ensure_ascii=False), 'model contains unfilled template placeholders')
     require(model.get('session_id') == state['session_id'], 'visual model belongs to another session')
     for key, source in sources.items():
         expected = {'artifact_id': source['artifact']['id'], 'sha256': source['artifact']['sha256']}
@@ -80,24 +98,116 @@ def validate_model(model, state, sources):
     tour = diagram.get('tour', [])
     require(tour and len(tour) <= len(nodes) and len(set(tour)) == len(tour) and all(n in ids for n in tour), 'invalid narration order')
     require(all(next(n for n in nodes if n['id'] == t)['kind'] != 'condition' for t in tour), 'autoplay must not decide external responses')
+    presentation = model.get('presentation')
+    if presentation is not None:
+        require(isinstance(presentation, dict) and presentation.get('style') == 'quiet-v1', 'unsupported presentation style')
+        require(diagram['type'] == 'loop', 'quiet-v1 requires a sourced loop model')
+        states = presentation.get('hero_states')
+        require(isinstance(states, list) and len(states) == 3, 'quiet-v1 requires three hero states')
+        for scene in states:
+            require(isinstance(scene, dict), 'invalid hero state')
+            lines = scene.get('lines')
+            require(isinstance(lines, list) and len(lines) == 2 and all(isinstance(v, str) and v.strip() and len(v) <= 18 for v in lines), 'hero requires two short lines')
+            for field in ('description', 'hint', 'label'):
+                require(isinstance(scene.get(field), str) and scene[field].strip(), 'missing hero ' + field)
+            require(scene.get('node_id') in ids, 'hero has unknown node')
+            require(next(n for n in nodes if n['id'] == scene['node_id'])['kind'] != 'condition', 'hero must not decide external responses')
+            refs(scene)
     chapters = model.get('chapters', [])
     require(3 <= len(chapters) <= 10, 'requires a complete editorial report')
+    validate_template_contract(model, state, sources)
     covered = []
     for c in chapters:
         require(c.get('layout') in {'story', 'path', 'topics', 'timeline', 'feedback', 'closing'}, 'invalid chapter layout')
-        require(c.get('title') and c.get('lead') and c.get('cards'), 'incomplete chapter')
+        require(all(nonempty_string(c.get(field)) for field in ('title', 'lead')) and
+                isinstance(c.get('cards'), list) and c['cards'], 'incomplete chapter')
         for card in c['cards']:
-            require(card.get('title') and card.get('text'), 'incomplete card')
+            require(all(nonempty_string(card.get(field)) for field in ('title', 'text')), 'incomplete card')
+            for field in ('eyebrow', 'counterexample'):
+                require(field not in card or isinstance(card[field], str), 'invalid card ' + field)
+            require('items' not in card or (isinstance(card['items'], list) and all(isinstance(v, str) and v.strip() for v in card['items'])), 'invalid card items')
             refs(card)
         cc = c.get('covers', [])
         require(isinstance(cc, list) and all(x in valid_refs and x.startswith('user:') for x in cc), 'invalid coverage map')
         covered.extend(cc)
     expected = [f'user:{i+1}' for i in range(len(sources['user']['sections']))]
     require(sorted(covered) == sorted(expected), 'each user report section must be covered exactly once')
-    require(model.get('technical_intro') and model.get('limits') and model.get('technical_cards'), 'technical explanation and limits required')
+    require(all(nonempty_string(model.get(field)) for field in ('technical_intro', 'limits')) and
+            isinstance(model.get('technical_cards'), list) and model['technical_cards'], 'technical explanation and limits required')
     for card in model['technical_cards']:
-        require(card.get('title') and card.get('text'), 'incomplete technical summary')
+        require(all(nonempty_string(card.get(field)) for field in ('title', 'text')), 'incomplete technical summary')
         refs(card)
+
+
+def validate_template_contract(model, state, sources):
+    """Enforce the fixed edition only for new sessions or explicitly opted-in models.
+
+    Old sessions and models without a template ID retain their original renderer
+    contract, so a format upgrade does not invalidate a delivered report.
+    """
+    required = state.get('report_template')
+    template = model.get('template_id')
+    require(required in {None, DEFAULT_REPORT_TEMPLATE}, 'unsupported session report template')
+    require(template in {None, DEFAULT_REPORT_TEMPLATE}, 'unsupported model template')
+    if required:
+        require(template == required, 'session requires template_id=' + required)
+    if template is None:
+        return
+    require(model.get('presentation', {}).get('style') == 'quiet-v1', 'Mobius template requires quiet-v1 presentation')
+    require(model['diagram']['type'] == 'loop', 'Mobius template requires loop diagram')
+    validate_template_sources(sources)
+
+    actual = [(chapter.get('id'), chapter.get('layout'), tuple(chapter.get('covers', [])))
+              for chapter in model['chapters']]
+    require(actual == list(MOBIUS_CHAPTERS), 'Mobius template requires the nine fixed chapters, order, layouts and coverage')
+    final_id = model['presentation']['hero_states'][-1]['node_id']
+    final_node = next(node for node in model['diagram']['nodes'] if node['id'] == final_id)
+    require(final_node['kind'] == 'action', 'Mobius final scene must describe a controllable action, not an outcome')
+
+
+def validate_template_sources(sources):
+    """Check the fixed source outlines without changing historical source contracts."""
+    for key, source in sources.items():
+        validate_source_contract(SOURCE_KINDS[key], source['text'])
+
+
+def validate_source_contract(kind, text):
+    """Validate one new-template source before it enters the active lineage.
+
+    Each source can be registered independently: this check never reads the other
+    report and therefore preserves the technical source firewall.
+    """
+    require(kind in SOURCE_KINDS.values(), 'unsupported report source kind')
+    require(PLACEHOLDER not in text, 'source reports contain unfilled template placeholders')
+    _, parts = sections(text)
+    actual_titles = [part['title'] for part in parts]
+    if kind == 'markdown_report':
+        require(not validate_report_text(text), 'user report structure must pass validation')
+        expected_titles = [heading.removeprefix('## ') for heading in REQUIRED_HEADINGS]
+        require(actual_titles == expected_titles, 'Mobius template requires the eight canonical user report sections')
+    else:
+        _, technical_sections = sections((ASSETS / 'technical-report-template.md').read_text(encoding='utf-8'))
+        require(len(technical_sections) == 11, 'invalid bundled technical report template')
+        require(actual_titles == [section['title'] for section in technical_sections],
+                'Mobius template requires the eleven canonical technical report sections')
+
+
+def init_model(session, output):
+    """Create an explicitly unfinished model bound to this session's current reports."""
+    session = session.resolve()
+    state = read_state(session)
+    require(state['stage'] == 'report_ready', 'model initialization requires report_ready')
+    output = ensure_inside_session(session, output)
+    require(not output.exists(), 'use a new model filename; preserve existing artifacts')
+    sources = load_sources(session, state)
+    validate_template_sources(sources)
+    model = json.loads((ASSETS / 'mobius-model-template.json').read_text(encoding='utf-8'))
+    model['session_id'] = state['session_id']
+    model['sources'] = {key: {'artifact_id': source['artifact']['id'], 'sha256': source['artifact']['sha256']}
+                        for key, source in sources.items()}
+    write_json_atomic(output, model)
+    return {'ok': True, 'model': str(output), 'draft': True, 'template_id': DEFAULT_REPORT_TEMPLATE,
+            'next': 'Read both complete reports; replace all __CIHOU_FILL__ placeholders with sourced content, review unknowns and conditions, then set draft=false and generate --register.'}
 
 
 def inline(text):
@@ -160,6 +270,9 @@ def safe_json(obj):
 
 
 def render(model, sources):
+    if model.get('presentation', {}).get('style') == 'quiet-v1':
+        from render_quiet_report import render_quiet
+        return render_quiet(model, sources)
     esc = html.escape
     def evidence_links(refs):
         return ' · '.join(f'<a href="#source-{r.replace(":", "-")}">{"解读" if r.startswith("user") else "依据"} {r.split(":")[1]}</a>' for r in dict.fromkeys(refs))
@@ -244,16 +357,24 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--session-dir',required=True,type=Path)
     p.add_argument('--model',type=Path,help='path relative to session directory')
-    p.add_argument('--describe-sources',action='store_true',help='show current report IDs, hashes and section references without writing')
+    mode=p.add_mutually_exclusive_group()
+    mode.add_argument('--describe-sources',action='store_true',help='show current report IDs, hashes and section references without writing')
+    mode.add_argument('--init-model',type=Path,metavar='FILE',help='create a source-bound Mobius draft; relative to session directory')
     p.add_argument('--output',type=Path,default=Path('final_report.html'))
     group=p.add_mutually_exclusive_group(); group.add_argument('--register',action='store_true'); group.add_argument('--check',action='store_true')
     a=p.parse_args()
     try:
+        if a.init_model or a.describe_sources:
+            require(not a.model and not a.register and not a.check, '--init-model/--describe-sources cannot generate, register or check HTML')
+        if a.init_model:
+            output=a.init_model if a.init_model.is_absolute() else a.session_dir/a.init_model
+            print(json.dumps(init_model(a.session_dir,output),ensure_ascii=False,indent=2))
+            return 0
         if a.describe_sources:
             state=read_state(a.session_dir); sources=load_sources(a.session_dir,state)
             print(json.dumps({'session_id':state['session_id'],'sources':{k:{'artifact_id':v['artifact']['id'],'sha256':v['artifact']['sha256'],'sections':[{ 'ref':f'{k}:{i+1}','title':part['title']} for i,part in enumerate(v['sections'])]} for k,v in sources.items()}},ensure_ascii=False,indent=2))
             return 0
-        require(a.model is not None, '--model is required unless --describe-sources')
+        require(a.model is not None, '--model is required unless --describe-sources or --init-model')
         print(json.dumps(generate(a.session_dir,a.model if a.model.is_absolute() else a.session_dir/a.model,a.output if a.output.is_absolute() else a.session_dir/a.output,a.register,a.check),ensure_ascii=False,indent=2))
         return 0
     except (HarnessError,OSError,ValueError,KeyError,TypeError) as exc:

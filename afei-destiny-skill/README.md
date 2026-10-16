@@ -1,6 +1,6 @@
 # Afei Destiny Skill · 阿飞命运探索使用说明
 
-默认完整咨询交付为一份个人 HTML：可点击主图、完整图文解读和可展开技术依据。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)。
+默认完整咨询交付为一份个人 HTML：固定莫比乌斯三态主图、九章连续图文解读和可展开技术依据。视觉与结构一致，具体困局、事例、行动及未知按本次资料编写。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)。
 这是仓库中**可直接安装**的技能目录，技能 ID 为 `afei-destiny-skill`。它是 afei 的实验性命运探索技能，当前以四柱八字为核心，包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
 
 如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/afei-destiny-skill)。
@@ -40,7 +40,7 @@ Copy-Item -Recurse .\afei-destiny-skill "$env:CODEX_HOME\skills\afei-destiny-ski
 请用 $afei-destiny-skill 开始预测，一步一步带着我分析。
 ```
 
-技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出默认四条跨方向盲测。你可以直接回复“1准；2部分准，准在……；3不准；4不确定”；清单展示前会被锁定，回答后不能改题圆场。系统只结算一次，再从你愿意展开的话头进入一个现实主问题。深入过程中每轮显示进度，以倾听和承接为主；信息足够后询问是否生成完整 Markdown 报告。
+技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出默认四条跨方向盲测。你可以直接回复“1准；2部分准，准在……；3不准；4不确定”；清单展示前会被锁定，回答后不能改题圆场。系统只结算一次，再从你愿意展开的话头进入一个现实主问题。深入过程中每轮显示进度，以倾听和承接为主；信息足够后承接已有授权或询问是否生成完整 HTML 报告。
 
 这个流程追求的是“你的回答确实改变了后续分析”，不是通过宽泛问题制造被说中的感觉。最终报告的重要判断会配不同生活场景、情绪成本和反例，并在重点问题结尾帮助用户分清真正想确认的东西、仍可改变的部分和可以暂时不再逼迫自己的部分。
 
@@ -98,6 +98,8 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | `scripts/consultation_harness.py` | 多会话发现、独立目录创建、阶段门禁、产物血缘、替代/重启和来源防火墙 |
 | `scripts/consultation_output_router.py` | 对话、技术审计、总结与报告来源的活动产物路由 |
 | `scripts/validate_final_report.py` | 固定用户报告的读者优先顺序，拒绝技术章节重新前置 |
+| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py` | 初始化来源绑定模型、校验固定模板、生成并登记离线 HTML |
+| `assets/cihou/` | 用户八节／技术十一节底稿、九章模型与 quiet 页面资产 |
 | `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
 | `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
 | `scripts/vendor/` | 内置 `lunar_python 1.4.8`，支持离线运行 |

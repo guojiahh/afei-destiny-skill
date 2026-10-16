@@ -40,7 +40,7 @@ description: >
 
 任何咨询开始前先 `discover`。继续旧会话时只对用户选中的子目录运行 `status`、`audit` 和 `resume`；重新开始使用 `start` 创建新子目录，不能覆盖或清空旧会话。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使当前会话的旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
-用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。先运行 `scripts/validate_final_report.py`，通过后再登记为 `markdown_report`、`technical_report`。然后按 [html-report.md](references/html-report.md) 编排本次个人主图与图文模型，生成、校验并登记 `final_report.html`，优先向用户交付和打开这一个页面。两份 Markdown 是内部底稿和可选下载；用户明确只要 Markdown 时除外。`report_ready` 不等于交付完成，默认会话须有有效 HTML。不得扫描会话根目录或其他会话拼接旧结论。
+用户要求总结、技术审计或生成报告时读取 [output-routing.md](references/output-routing.md)。短总结使用 `consultation_summary`；用户同意生成完整报告后使用当前会话的 `report_source` 和 `technical_report_source`，再按 [markdown-report.md](references/markdown-report.md)、[technical-report.md](references/technical-report.md) 分别写入 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。先运行 `scripts/validate_final_report.py`，通过后再登记为 `markdown_report`、`technical_report`。然后按 [html-report.md](references/html-report.md) 用 `--init-model` 初始化 `cihou-mobius-v1` 固定模板（三态莫比乌斯环、九章正文），根据本次双底稿填完模型并移除草稿标记，生成、校验并登记 `final_report.html`，优先向用户交付和打开这一个页面。两份 Markdown 是内部底稿和可选下载；用户明确只要 Markdown 时除外。`report_ready` 不等于交付完成，默认会话须有有效 HTML。不得扫描会话根目录或其他会话拼接旧结论。
 
 ## 最小信息原则
 
@@ -133,7 +133,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 ### 完整咨询格式
 
-一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md` 作为底稿；最终按 [html-report.md](references/html-report.md) 生成 `final_report.html`，默认回复优先给 HTML 一个入口。用户报告底稿采用“总览 → 重点问题 → 人生全景 → 未来 → 选择提示 → 反馈修正 → 边界”的固定顺序；四柱、十神、旺衰、格局、合冲、起运和详细推导不得占据用户正文前部，统一进入技术文档。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
+一次性完整解读按 [markdown-report.md](references/markdown-report.md) 生成 `final_report.md`，并按 [technical-report.md](references/technical-report.md) 生成独立 `technical_analysis.md` 作为底稿；最终按 [html-report.md](references/html-report.md) 的固定莫比乌斯环与九章正文模板生成 `final_report.html`，默认回复优先给 HTML 一个入口。用户报告底稿采用“总览 → 重点问题 → 人生全景 → 未来 → 选择提示 → 反馈修正 → 边界”的固定顺序；四柱、十神、旺衰、格局、合冲、起运和详细推导不得占据用户正文前部，统一进入技术文档。普通聚焦回答继续按 [consultation-output.md](references/consultation-output.md) 组织证据和语言。最终报告即使用户没有主动询问未来，也包含明确标注为未经现实反馈校准的未来阶段展望；先讲可利用资源、机会与准备，再讲条件风险，不许诺必然好运。
 
 用户报告至少覆盖：
 
