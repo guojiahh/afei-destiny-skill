@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f4ee"><meta name="description" content="此后：一张图，看见来处、此刻与可能的下一步。匿名虚构的交互报告原型。">
+<title>此后 · 你，也是原因</title>
+<style>/* STYLES */</style>
+</head>
+<body id="top">
+<a class="skip" href="#story">跳到详细报告</a>
+<header class="masthead wrap"><a class="brand" href="#top" aria-label="此后，回到主图"><svg viewBox="0 0 48 32" aria-hidden="true"><path d="M33 23C12 38 2 5 23 5c17 0 17 21 30 21M25 23C7 34 7 11 23 11c12 0 12 15 30 15"/></svg>此后<span>CIHOU</span></a><span class="edition">一份可以继续的理解<span>匿名虚构 · V1</span></span></header>
+<main>
+  <section class="hero wrap" aria-labelledby="report-title">
+    <div class="hero-heading"><div><p class="eyebrow" id="report-meta"></p><h1 id="report-title"></h1></div><p class="hero-summary" id="hero-summary"></p></div>
+    <figure class="main-figure">
+      <div class="figure-rule"><span>来处 <i>—</i> 此刻</span><span id="future-heading">此后 <i>／</i> 条件情景</span></div>
+      <div class="scene-stage" id="scene-stage"><div id="scene-host"></div><div id="scene-hotspots" role="group" aria-label="探索这张图" aria-describedby="scene-instruction"></div></div>
+      <div class="playback-strip" id="playback-strip" hidden><span id="playback-state">来处 · 自动讲解</span><span class="playback-track" aria-hidden="true"><i id="playback-progress"></i></span><button type="button" id="playback-toggle" aria-controls="scene-stage scene-explanation">暂停讲解</button></div>
+      <div class="figure-foot"><span id="scene-instruction"><span class="touch-glyph" aria-hidden="true">⊙</span> 点图上的圆点，看看为什么。</span><figcaption id="figure-caption">连线是理解，分支是情景。</figcaption></div>
+    </figure>
+    <div class="scene-explanation" id="scene-explanation" role="status" aria-live="polite" aria-atomic="true"><div class="scene-explanation-heading"><span id="scene-kind" class="scene-kind"></span><h2 id="scene-title"></h2></div><p id="scene-body"></p></div>
+    <div class="reading-cue"><span>向下读，理解这张图</span><span aria-hidden="true">↓</span></div>
+  </section>
+
+  <article class="report wrap" id="story" aria-label="详细报告">
+    <section class="chapter" id="origins">
+      <header class="chapter-heading"><span class="chapter-index">01<span>来处</span></span><div><p class="eyebrow">这张图从哪里来</p><h2 id="origin-title"></h2></div></header>
+      <ol class="history" id="history"></ol>
+      <div class="interpretation" id="interpretation"></div>
+      <aside class="counterpoint"><span class="counter-icon" aria-hidden="true">↗</span><div><h3>换一种解释，也要说得通。</h3><p id="counterexample"></p></div></aside>
+      <div class="scope-line" id="scope-line"></div>
+      <div id="decision-reading"></div>
+    </section>
+
+    <section class="chapter" id="choices">
+      <header class="chapter-heading"><span class="chapter-index">02<span>此后</span></span><div><p class="eyebrow">一次行动，改变什么</p><h2 id="choice-title"></h2></div></header>
+      <div class="change-line" id="change-line"></div>
+      <div class="choice-facts" id="choice-facts"></div>
+      <div class="responses" id="responses"></div>
+      <aside class="alternative" id="alternative"></aside>
+      <ol class="windows" id="windows"></ol>
+    </section>
+
+    <section class="chapter" id="life-context">
+      <header class="chapter-heading"><span class="chapter-index">03<span>全貌</span></span><div><p class="eyebrow">把这件事，放回整个生活</p><h2>谈到的，都留在这里。</h2></div></header>
+      <p class="chapter-intro">主图抓住一个重点，下面保留这次材料里的全部生活主题。</p>
+      <div id="life-topics"></div>
+    </section>
+
+    <section class="chapter" id="revision">
+      <header class="chapter-heading"><span class="chapter-index">04<span>重看</span></span><div><p class="eyebrow">预设的虚构回访</p><h2>事实多一点，<br>理解就可以变一点。</h2></div></header>
+      <blockquote class="feedback" id="revision-feedback"></blockquote>
+      <div class="revision-comparison" id="revision-comparison"></div>
+      <div class="revision-diff" id="revision-diff"></div>
+      <p class="footnote">这段回访是写好的虚构情节，用来展示理解怎样修正。下方填写的记录不会自动改变图形或生成分析。</p>
+    </section>
+
+    <section class="chapter appendix" aria-label="完整依据与范围">
+      <details id="evidence"><summary>查阅这份理解的完整依据<span class="detail-plus" aria-hidden="true">＋</span></summary><div class="appendix-body"><h3>经历与来源</h3><div id="source-list"></div><h3>关系、条件与反例</h3><div id="edge-list"></div><h3>这次谈到了哪些生活领域</h3><div id="topic-list"></div><p class="footnote" id="provenance"></p></div></details>
+    </section>
+  </article>
+
+  <section class="closing" id="takeaway"><div class="wrap">
+    <div class="closing-top"><span class="eyebrow">05 / 带回生活</span><span class="eyebrow">你，也是原因。</span></div>
+    <div class="closing-grid"><h2>未来没有写完。<br>你可以带着<br><em>一个问题</em>离开。</h2><div class="observation"><span class="eyebrow">V1 / 下一次，留意</span><p id="observation-question"></p><span class="observation-note">先看见，再决定。</span></div></div>
+    <details class="record-tool" id="record-tool"><summary>写下观察，或纠正这份理解<span aria-hidden="true">＋</span></summary><form id="record-form"><p class="tool-intro">本记录对应 V1 原理解；上方 V2 是独立的模拟回访。草稿刷新即清空，导出后带回原咨询继续讨论。</p><div class="record-grid"><div><label for="record-status">这条记录属于</label><select id="record-status"><option value="observe">先观察，还没有行动</option><option value="intend">想尝试，还没有行动</option><option value="acted">已在现实中尝试</option></select><label for="record-note" id="record-note-label">我的观察或想法（可不填）</label><textarea id="record-note" rows="4" maxlength="1200" placeholder="只写你想记录的事。"></textarea></div><div><label for="correction-note">V1 哪些地方不符合实际？（可不填）</label><textarea id="correction-note" rows="4" maxlength="1600" placeholder="可以不同意这条连线，也可以补充遗漏的条件。"></textarea><div id="feedback-field" hidden><label for="feedback-note">实际收到的回应（可暂不填）</label><textarea id="feedback-note" rows="3" maxlength="1200"></textarea></div></div></div><div class="record-bottom"><button class="primary light" id="export-record" type="submit">导出这份记录 <span aria-hidden="true">↓</span></button><p id="draft-status" role="status">仅在本页 · 未同步</p></div></form></details>
+  </div></section>
+
+  <section class="afterword wrap" aria-label="附页">
+    <details class="share-tool"><summary>保存一张分享图<span class="detail-plus" aria-hidden="true">＋</span></summary><div class="share-grid"><div id="share-preview"></div><div class="share-description"><h2>把画面带走，<br>把故事留给自己。</h2><p>完整报告里有经历、原话和记录；分享图只包含下面选中的内容。</p><div class="share-options"><label><input id="share-shape" type="checkbox" checked>线的形状</label><label><input id="share-action" type="checkbox" checked>行动短句</label><label><input id="share-motto" type="checkbox" checked>品牌短句</label></div><button class="secondary" id="export-share">保存分享图 ↓</button><p class="footnote">仅导出左侧预览。不会附带人物、经历、原话、来源或草稿。</p></div></div></details>
+    <div class="sample-picker"><div><p class="eyebrow">原型样例集</p><h3>不同经历，长出不同的形状。</h3><p>正式个人报告只呈现自己的故事。</p></div><div><label for="case-select">换一份匿名虚构样例</label><select id="case-select"></select></div></div>
+  </section>
+</main>
+<footer class="footer wrap"><span class="footer-brand">此后</span><p>第一阶段 · 回环与积累演示<br>2026.10.16 · 本地原型，未接入正式咨询与云端保存</p><a href="#top">回到主图 ↑</a></footer>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><div class="wrap"><h2>此后 · 静态摘要</h2><p>林舟从临时补位到持续承接，再到任务叠加。一种理解是分工未被重新讨论，但岗位空缺与明确派工也可能是原因。沟通能让任务成为可讨论的事项；是否调整，还取决于权限、资源与他人的回应。可以先记录任务的来源与取舍，再决定下一步。</p><p>所有内容均为匿名虚构。浏览器未启用脚本，无法展示完整互动报告。</p></div></noscript>
+<script>/* CASES */</script><script>/* INTERACTIONS */</script><script>/* SCENE */</script><script>/* KINETIC */</script><script>/* EXPERIENCE */</script><script>/* APP */</script>
+</body></html>

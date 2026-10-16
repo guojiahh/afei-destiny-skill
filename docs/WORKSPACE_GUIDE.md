@@ -1,6 +1,6 @@
 # 工作区地图
 
-更新日期：2026-10-13
+更新日期：2026-10-16
 
 ## 一句话说明
 
@@ -33,7 +33,7 @@
 ├─ evaluation/                  评测工具、协议和实验原件
 ├─ docs/                        面向人的说明、方法报告和演示指南
 ├─ assets/                      项目主视觉、社交预览与能力说明图
-├─ design-demos/                展示图的 HTML 源稿和渲染脚本
+├─ design-demos/                匿名产品原型、历史演示与展示图源稿
 ├─ dist/                        本地发布包；ZIP 被 Git 忽略
 ├─ CONTRIBUTING.md              修改、测试和安全约定
 ├─ requirements-dev.txt         开发验证依赖；不进入 Skill 运行包
@@ -123,13 +123,16 @@ evaluation/
 - `WORKSPACE_GUIDE.md`：本文件，解释整个工作区。
 - `EVALUATION_AND_ITERATION_METHOD.md`：详细评测和迭代制度。
 - `SHOWCASE.md`：三分钟对外演示。
-- 当前不保留公开咨询案例；以后仅接收完整走过现行流程、通过隐私审查并取得授权的材料。
+- [CIHOU_HANDOFF.md](CIHOU_HANDOFF.md)：此后当前基线、个性化边界与新对话交接。
+- [CIHOU_PRODUCT_PLAN.md](CIHOU_PRODUCT_PLAN.md)、[CIHOU_REPORT_EXPERIENCE.md](CIHOU_REPORT_EXPERIENCE.md)：产品方案、主图与完整咨询报告的衔接；区分已实现样机和待开发正式能力。
+- 当前不保留公开的真实咨询案例；以后仅接收完整走过现行流程、通过隐私审查并取得授权的材料。匿名设计素材单独标注为虚构。
 
 ## 4. `assets/` 与 `design-demos/`：展示层
 
 - `assets/showcase/`：README 主视觉、社交预览、能力闭环图和抽象背景。
 - `assets/contact/`：联系图片。
-- `design-demos/`：上述展示图的 HTML 源稿和渲染脚本。
+- `design-demos/`：匿名产品原型、保留的历史设计，以及上述展示图的 HTML 源稿和渲染脚本；以[设计演示索引](../design-demos/README.md)区分用途。
+- 当前此后入口为 `design-demos/cihou-stage1.html`，源码在同名目录。四例为人工编排，`build.py` 仅打包源码，尚不能从咨询生成个人图形。
 
 它们不会影响 Skill 的推理准确率。做功能优化时无需加载这些文件。
 
@@ -166,7 +169,9 @@ evaluation/
 | 对外介绍 | 根 `README.md`、`docs/SHOWCASE.md` | 不把选择题分数写成现实预测能力 |
 | 发布 Skill | `afei-destiny-skill/`、`dist/` | 验证技能结构、测试、重新打 ZIP |
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
-| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，HTML 仍未实现 |
+| 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；先完成双报告，再核对图形适配 |
+| 修改此后原型 | [原型源码说明](../design-demos/cihou-stage1/README.md) | 重建 HTML，运行数据、播放时钟与动态图检查；行为变更需补相应浏览器验收 |
+| 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，正式 HTML 生成与登记仍未实现 |
 
 ## 文件治理规则
 
@@ -180,7 +185,8 @@ evaluation/
 ## 当前状态
 
 - Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
-- 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；HTML 呈现层尚未实现。
+- 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；正式 HTML 生成与登记尚未实现。
+- 当前此后：第一阶段匿名交互样机已实现；循环型主图支持回环、累积、行动转向和自动讲解。其他样例、完整范围和同型多人物限制以[交接说明](CIHOU_HANDOFF.md)为准；第二阶段未启动。
 - 当前本地门禁：46 项 Skill 测试、6 项评测测试、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。

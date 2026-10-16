@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="一张人生海图：看见走过的路，也看见下一程的选择。匿名虚构设计演示。">
+<title>你的下一程 · 人生海图</title>
+<style>
+:root{--paper:#f8f7f2;--ink:#243e49;--muted:#61757a;--orange:#ad623d;--line:#d9dfda;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;--serif:"Songti SC","STSong",serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 var(--sans);-webkit-font-smoothing:antialiased}h1,h2,h3,p,figure{margin:0}button,a,summary{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-underline-offset:4px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:5px}::selection{background:#d2e4e1}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.skip{position:absolute;top:-80px;left:20px;z-index:20;background:var(--ink);color:white;padding:12px}.skip:focus{top:10px}
+.shell{width:min(1180px,calc(100% - 72px));margin:auto}.masthead{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:9px;font-size:14px;letter-spacing:.09em}.brand svg{width:22px;height:25px}.demo{font-size:12px;color:var(--muted)}.intro{text-align:center;padding:24px 0 0}h1{font:500 clamp(42px,5.2vw,66px)/1.24 var(--serif);letter-spacing:.04em}.intro p{margin-top:15px;font-size:17px;color:var(--muted)}
+.chart{margin-top:24px;position:relative}.map{height:455px;width:100%;position:relative;border-radius:32px;overflow:hidden}.map>svg{display:block;width:100%;height:100%}.map::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 42px 32px var(--paper)}.map svg .port{cursor:pointer;outline:none}.port .dot{transition:fill .2s,stroke .2s}.port .focus-ring{opacity:0}.port:focus-visible .focus-ring{opacity:1}.port:hover .dot,.port.selected .dot{fill:#ad623d;stroke:#ad623d}.port.selected text{fill:#9a4d2e}.controls{display:flex;justify-content:center;margin-top:1px;position:relative}.play{border:0;background:var(--ink);color:#fffdf6;border-radius:999px;min-height:48px;padding:0 26px;display:flex;align-items:center;gap:12px;font-size:14px;box-shadow:0 6px 18px #243e4914;transition:transform .2s,background .2s}.play:hover{background:#355662;transform:translateY(-2px)}.play svg{width:13px;height:14px}.play .pause-icon{display:none}.play[data-state=playing] .pause-icon{display:block}.play[data-state=playing] .play-icon{display:none}.hint{text-align:center;font-size:12px;color:var(--muted);margin-top:13px}.insight{position:relative;width:min(600px,100%);margin:25px auto 0;border-top:1px solid var(--line);padding:22px 40px 0 0;animation:arrive .25s ease-out}.insight .age{font-size:12px;color:var(--orange);margin-bottom:4px}.insight h2{font-size:21px;font-weight:500}.insight .body{font-size:15px;line-height:1.8;color:var(--muted);margin-top:7px}.insight .condition{font-size:13px;color:var(--orange);margin-top:8px}.close{position:absolute;right:0;top:17px;border:0;background:transparent;color:var(--muted);width:40px;height:40px;font-size:24px}
+.below{width:min(760px,100%);margin:60px auto 0}.report{border-top:1px solid var(--line)}.report>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:86px;font:500 22px/1.5 var(--serif);cursor:pointer}.report>summary::-webkit-details-marker{display:none}.report>summary .plus{font:300 25px var(--sans);transition:transform .2s}.report[open]>summary .plus{transform:rotate(45deg)}.essay{padding:20px 0 45px;font-size:16px;line-height:2.1}.essay-chapter+ .essay-chapter{margin-top:60px;padding-top:36px;border-top:1px solid var(--line)}.essay h2{font:500 28px/1.5 var(--serif);margin-bottom:24px}.essay h3{font-size:18px;font-weight:500;margin-top:26px}.essay p+p{margin-top:16px}.essay p,.essay li,.essay dd{color:#52686f}.essay ol{padding-left:25px}.essay li{padding-left:5px;margin:10px 0}.essay dt{font-weight:500;margin:25px 0 7px}.essay dd{margin:0}.essay dd p{margin:0}.references{border-top:1px solid var(--line);margin-top:45px;padding-top:22px;font-size:13px;color:var(--muted)}.end-tools{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:20px 0 28px;color:var(--muted);font-size:12px}.save{background:transparent;border:0;padding:10px 0 10px 16px;color:var(--ink);font-size:13px}.footnote{font-size:12px;color:var(--muted);max-width:58em;margin-bottom:28px;line-height:1.8}.noscript{margin:20px auto;max-width:760px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);border-radius:12px;background:var(--ink);color:var(--paper);font-size:13px;padding:12px 20px;max-width:calc(100% - 32px);z-index:20;box-shadow:0 5px 30px #243e4922}.toast:empty{display:none}@keyframes arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1400px){.map{height:480px}.intro{padding-top:32px}}
+@media(min-width:761px) and (max-height:800px){.masthead{height:58px}.intro{padding-top:8px}h1{font-size:52px}.intro p{margin-top:10px}.chart{margin-top:16px}.map{height:52vh;min-height:320px;max-height:400px}}
+@media(max-width:760px){.shell{width:calc(100% - 32px)}.masthead{height:65px}.brand{font-size:12px}.demo{font-size:11px}.intro{padding-top:13px}h1{font-size:43px}.intro p{font-size:15px;margin-top:11px}.chart{margin-top:12px}.map{height:395px;border-radius:0}.map::after{box-shadow:inset 0 0 22px 12px var(--paper)}.controls{margin-top:0}.play{min-height:46px;padding:0 24px}.hint{margin-top:10px}.below{margin-top:36px}.report>summary{min-height:76px;font-size:21px}.insight{margin-top:20px;padding-top:18px}.insight h2{font-size:19px}.essay{font-size:16px;padding-top:10px}.essay h2{font-size:25px}.essay-chapter+ .essay-chapter{margin-top:40px;padding-top:30px}.end-tools{padding-bottom:16px}.footnote{font-size:11px}.close{top:12px}}
+@media(max-width:360px){h1{font-size:38px}.intro p{font-size:14px}.map{height:380px}.brand{letter-spacing:0}.hint{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{.shell{width:100%}.masthead{height:50px}.intro{padding-top:0}h1{font-size:40px}.map{height:350px}.controls,.hint,.insight,.end-tools,.toast,.report>summary,.skip{display:none!important}.below{margin-top:30px;width:100%}.report{border:0}.report:not([open])>article{display:block!important}.essay{padding-top:0;font-size:11pt}.essay-chapter{break-inside:auto}.essay h2,.essay h3,.essay dt{break-after:avoid}.essay h2{font-size:20pt}.references,.footnote{font-size:9pt}body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.case-switch{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px}.case-switch select{font:inherit;font-size:13px;color:var(--ink);border:1px solid var(--line);background:transparent;border-radius:20px;min-height:36px;padding:5px 12px;max-width:210px}.case-switch select:focus-visible{outline:2px solid var(--orange);outline-offset:3px}.below{width:min(940px,100%)}.provenance{font-size:12px;color:var(--muted);margin-top:10px}.map.tall-map{height:var(--atlas-height)!important;min-height:0;max-height:none!important}.map.tall-map::after{box-shadow:inset 0 0 28px 14px var(--paper)}
+@media(max-width:500px){.case-switch{gap:6px}.case-switch>span{display:none}.case-switch select{font-size:12px;max-width:174px}.below{margin-top:36px}}
+<!-- DETAILS_CSS -->
+</style>
+</head>
+<body>
+<a class="skip" href="#report">跳到完整解读</a>
+<div class="shell">
+<header class="masthead"><div class="brand"><svg viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 2V21H3L12 2Z" fill="#243e49"/><path d="M14 7L21 21H14Z" fill="#ad623d"/><path d="M2 24H22L18 27H6Z" fill="#243e49"/></svg><span>人生海图</span></div><div class="case-switch"><span>虚构示例</span><label class="sr-only" for="case-select">切换虚构人物</label><select id="case-select"></select></div></header>
+<main>
+<section class="hero" aria-labelledby="title">
+<div class="intro"><h1 id="title">你的下一程</h1><p id="tagline">从被需要，走向主动选择。</p></div>
+<figure class="chart" aria-label="从专业积累、被需要、责任满载，走到现在；下一步有重谈职责、内部转向、外部探索三条可能航线。">
+<div class="map" id="map"><svg id="sea" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="可交互人生海图，按 Tab 选择阶段，按回车查看"></svg></div>
+<div class="controls"><button type="button" class="play" id="play" data-state="idle"><svg class="play-icon" viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1L11 7L1 13Z" fill="currentColor"/></svg><svg class="pause-icon" viewBox="0 0 12 14" aria-hidden="true"><path d="M2 1V13M10 1V13" stroke="currentColor" stroke-width="3"/></svg><span id="play-text">播放航程</span></button></div>
+<figcaption class="hint">实线是来路，虚线是选择。点选可查看。</figcaption>
+</figure>
+<section id="insight" class="insight" hidden aria-live="polite" aria-label="所选航程解读"><p class="age" id="insight-age"></p><h2 id="insight-title"></h2><p class="body" id="insight-body"></p><p class="condition" id="insight-condition"></p><p class="provenance" id="insight-source"></p><button type="button" class="close" id="close-insight" aria-label="收起解读，回到现在">×</button></section>
+<p id="status" class="sr-only" role="status" aria-live="polite"></p>
+</section>
+<noscript><p class="noscript">本演示的海图与图文解读需要启用 JavaScript。</p></noscript>
+<section class="below" aria-label="完整报告与保存">
+<details id="report" class="report"><summary><span>图解这段航程</span><span class="plus" aria-hidden="true">＋</span></summary><article id="visual-report" class="visual-report" aria-label="图文解读"></article></details>
+<div class="end-tools"><span>看见自己，也看见选择。</span><button class="save" id="save" type="button">保存海图 ↗</button></div>
+<p class="footnote">三位人物及其经历均为虚构，可在页首切换比较。节点随内容改变；位置与间距仅用于排布，不表示时长、吉凶或概率。本稿未排盘，尚未接入正式报告生成。</p>
+</section>
+</main></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<!-- BOAT_ASSET -->
+<!-- V5_SCRIPTS -->
+</body>
+</html>

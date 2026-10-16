@@ -1,0 +1,2333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f4ee"><meta name="description" content="此后：一张图，看见来处、此刻与可能的下一步。匿名虚构的交互报告原型。">
+<title>此后 · 你，也是原因</title>
+<style>:root{--paper:#f6f4ee;--ink:#252820;--blue:#3559c7;--coral:#d65b3e;--muted:#676a64;--rule:#d7d8ce;--serif:"Songti SC","Noto Serif CJK SC","STSong",serif;--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}button,select,textarea,input{font:inherit}button,a,input,select,textarea,summary{-webkit-tap-highlight-color:transparent}button,a{color:inherit}button{cursor:pointer}button:disabled{cursor:wait}a{text-decoration:none}button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--coral);outline-offset:5px}button{border:0}h1,h2,h3,p,figure,blockquote{margin:0}svg{display:block;max-width:100%;height:auto}button,select{min-height:48px}textarea{width:100%;resize:vertical}ul,ol{padding:0;margin:0;list-style:none}em{font-style:normal}::selection{background:#dce4ff}.wrap{width:min(1120px,calc(100% - 96px));margin-inline:auto}.skip{position:absolute;top:-100px;left:20px;padding:10px;background:var(--ink);color:white;z-index:10}.skip:focus{top:10px}.masthead{display:flex;justify-content:space-between;align-items:center;padding:25px 0 22px;border-bottom:1px solid var(--ink)}.brand{display:flex;align-items:center;gap:12px;font-size:25px;font-weight:600;letter-spacing:.12em}.brand svg{width:47px;fill:none;stroke:var(--blue);stroke-width:1.5}.brand span{font:11px/1 var(--sans);letter-spacing:.18em;margin-left:8px;padding-top:4px}.edition{text-align:right;font-size:12px;letter-spacing:.04em;line-height:1.65}.edition span{display:block;color:var(--muted)}.hero-heading{display:grid;grid-template-columns:1.7fr 1fr;align-items:end;gap:40px;padding:44px 0 32px}.eyebrow{font-size:12px;letter-spacing:.12em;font-weight:500}.hero-heading .eyebrow{margin-bottom:18px;color:var(--muted)}h1{font-family:var(--serif);font-size:clamp(36px,5vw,66px);font-weight:500;line-height:1.25;letter-spacing:-.045em}h1 span{display:block}h1 span:last-child{color:var(--blue)}.hero-summary{max-width:280px;justify-self:end;color:#5b605a;font-size:15px;line-height:1.9;padding-bottom:7px}.main-figure{position:relative}.figure-rule{display:flex;justify-content:space-between;padding-top:13px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.1em;color:var(--muted)}.figure-rule i{font-style:normal;margin:0 13px;color:#8b8f84}#scene-host{min-height:180px}#scene-host svg{width:100%}figcaption{font-size:12px;color:var(--muted);text-align:right;margin-top:-10px}.action-strip{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:36px;padding:23px 0 22px;margin-top:8px;border-bottom:1px solid var(--ink)}.primary{display:inline-flex;justify-content:space-between;align-items:center;gap:44px;background:var(--ink);color:var(--paper);padding:15px 22px;min-height:56px;font-size:16px;line-height:1.5;transition:background .2s,transform .2s}.primary:hover{background:var(--blue);transform:translateY(-2px)}.primary .arrow{font-size:24px;line-height:1}.action-result{display:flex;align-items:flex-start;gap:12px;max-width:630px}.action-result p{font-size:14px;color:#555c53;line-height:1.8}.action-marker{width:7px;height:7px;background:var(--coral);flex:none;border-radius:50%;margin-top:9px}.reading-cue{display:flex;justify-content:space-between;padding:19px 0;font-size:12px;color:var(--muted)}.reading-cue>span:last-child{font-size:24px;line-height:1}.chapter{padding:84px 0 80px;border-bottom:1px solid var(--rule)}.chapter-heading{display:grid;grid-template-columns:170px 1fr;gap:20px;margin-bottom:44px;align-items:start}.chapter-index{font:56px/1 Georgia,serif;font-style:italic;font-weight:400;color:var(--blue)}.chapter-index>span{font:12px/1.5 var(--sans);display:block;margin-top:10px;letter-spacing:.14em}.chapter-heading .eyebrow{color:var(--muted);margin-bottom:14px}h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,44px);font-weight:500;letter-spacing:-.025em;line-height:1.45}.history{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:36px;row-gap:28px}.history li{border-top:1px solid var(--ink);padding-top:13px}.history .history-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px}.history-number{font:italic 20px Georgia;color:var(--blue)}.history h3{font-size:18px;font-weight:500}.history blockquote{font-size:15px;line-height:1.9;color:#535a50}.source-ref{font-size:11px;color:var(--muted);display:block;margin-top:11px}.interpretation{margin:44px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px}.insight{border-top:1px solid var(--rule);padding-top:21px}.small-chain{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:18px;min-height:50px}.small-chain span{font-size:16px;font-weight:500}.small-chain i{font-size:23px;font-style:normal;color:var(--blue);font-weight:300}.insight p{font-size:14px;color:var(--muted);line-height:1.8}.counterpoint{display:flex;gap:22px;background:#eaece2;margin-top:36px;padding:25px 30px}.counter-icon{font-size:38px;line-height:1.2;color:var(--blue)}.counterpoint h3{font-family:var(--serif);font-size:23px;font-weight:500;margin-bottom:8px}.counterpoint p{font-size:15px;line-height:1.85;max-width:856px}.scope-line{font-size:13px;color:var(--muted);margin-top:24px;line-height:2}.scope-line strong{font-weight:500;color:var(--ink)}.change-line{display:grid;grid-template-columns:1fr 48px 1fr;align-items:center;gap:30px;padding:30px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:32px}.change-line small{font-size:12px;color:var(--muted);display:block;letter-spacing:.1em;margin-bottom:10px}.change-line p{font-size:23px;line-height:1.6;font-family:var(--serif)}.change-line .change-arrow{font-size:48px;color:var(--coral)}.change-line>div:last-child p{color:var(--blue)}.choice-facts{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-bottom:36px}.choice-facts h3{font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:400;letter-spacing:.1em}.choice-facts p{font-size:16px;line-height:1.9}.responses{display:grid;grid-template-columns:1fr 1fr;gap:44px}.response{border-top:1px dashed #91998c;padding-top:20px}.response .branch-label{font-size:12px;color:var(--blue);display:block;margin-bottom:10px}.response h3{font-family:var(--serif);font-size:26px;font-weight:500;margin-bottom:13px}.response>p{font-size:15px;line-height:1.85}.response dl{font-size:13px;color:var(--muted);display:grid;grid-template-columns:35px 1fr;gap:8px 12px;margin:18px 0 0}.response dt{color:var(--ink)}.response dd{margin:0}.alternative{border-left:2px solid var(--coral);padding:2px 0 2px 22px;margin-top:36px;max-width:840px}.alternative h3{font-weight:500;font-size:17px;margin-bottom:8px}.alternative p{font-size:14px;color:var(--muted);line-height:1.9}.windows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:36px}.windows li{border-top:1px solid var(--rule);padding-top:16px}.windows small{font-size:11px;display:block;color:var(--muted);margin-bottom:9px}.windows h4{font-weight:500;font-size:15px;margin:0 0 8px}.windows p{font-size:13px;color:var(--muted);line-height:1.85}.feedback{font-size:24px;font-family:var(--serif);line-height:1.8;padding-left:28px;border-left:2px solid var(--blue);margin-bottom:38px;max-width:850px}.revision-comparison{display:grid;grid-template-columns:1fr 1fr;gap:36px}.revision-panel{padding:18px 0 25px;border-top:1px solid var(--ink)}.revision-panel>small{font-size:12px;color:var(--muted)}.revision-art{height:205px;overflow:hidden;display:flex;align-items:center;justify-content:center}.revision-art svg{height:100%;width:100%}.revision-labels{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:12px 0 20px;font-size:14px;line-height:1.6}.revision-labels i{font-style:normal;color:var(--blue)}.revision-panel p{font-size:15px;line-height:1.9;color:#535a50}.revision-panel h3{font-size:14px;font-weight:500;line-height:1.8;margin-top:14px}.revision-panel:last-child{border-top-color:var(--blue)}.revision-diff{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:24px;padding-top:24px;border-top:1px solid var(--rule)}.revision-diff h3{font-size:12px;font-weight:500;margin-bottom:8px;color:var(--blue)}.revision-diff p{font-size:14px;color:var(--muted);line-height:1.85}.footnote{font-size:12px;line-height:1.85;color:var(--muted);margin-top:24px}details>summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:16px}summary::-webkit-details-marker{display:none}.detail-plus{font-size:22px;font-weight:300}details[open]>summary .detail-plus{transform:rotate(45deg)}.appendix{padding:20px 0;border-bottom:0}.appendix-body{padding:20px 0 40px;max-width:850px;margin-inline:auto}.appendix-body>h3{font-size:22px;font-family:var(--serif);font-weight:500;margin:30px 0 18px}.source-row,.edge-row,.topic-row{padding:18px 0;border-top:1px solid var(--rule);font-size:14px;line-height:1.9}.source-row small{display:block;color:var(--muted);font-size:12px}.edge-row h4,.topic-row h4{font-size:16px;font-weight:500;margin:0 0 10px}.edge-row dl{display:grid;grid-template-columns:56px 1fr;gap:10px;margin:0}.edge-row dd{margin:0;color:var(--muted)}.topic-row h4 span{font-size:12px;margin-left:15px;color:var(--muted);font-weight:400}.topic-row p{color:var(--muted)}.closing{margin-top:60px;background:var(--blue);color:var(--paper);padding:40px 0 35px}.closing-top{display:flex;justify-content:space-between}.closing-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;padding:65px 0 70px}.closing h2{font-size:clamp(35px,4vw,54px);line-height:1.5}.closing h2 em{border-bottom:1px solid #c6d0ee}.observation{border-top:1px solid #99aadf;padding-top:23px}.observation>p{font-size:24px;line-height:1.85;font-family:var(--serif);margin:24px 0}.observation-note{font-size:13px;color:#dde5ff}.record-tool{border-top:1px solid #7d94dd}.record-tool>summary{min-height:70px}.record-tool[open]{padding-bottom:20px}.tool-intro{font-size:13px;color:#e1e8ff;margin:10px 0 25px}.record-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}label{display:block;font-size:13px;margin:12px 0 10px}select{width:100%;padding:12px 14px;background:var(--paper);color:var(--ink);border:1px solid #b2b9a9;border-radius:0;appearance:auto}textarea{padding:14px;border:1px solid #a7b8eb;background:transparent;border-radius:0;color:inherit;font-size:16px;line-height:1.75}textarea::placeholder{color:#d0dcff}.record-bottom{display:flex;align-items:center;gap:24px;margin-top:22px}.primary.light{background:var(--paper);color:var(--ink)}.primary.light:hover{background:#e5ebfd}.record-bottom p{font-size:12px;color:#e0e7ff}.afterword{padding-top:35px}.share-tool{border-bottom:1px solid var(--rule)}.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:30px 0 50px}.share-description h2{font-size:34px;margin-bottom:20px}.share-description>p{font-size:14px;line-height:1.9;color:var(--muted)}#share-preview{border:1px solid var(--rule)}#share-preview svg{width:100%}.share-options{display:flex;flex-wrap:wrap;gap:8px 16px;margin:17px 0}.share-options label{display:flex;align-items:center;gap:8px;min-height:44px;margin:0;cursor:pointer;font-size:13px}.share-options input{width:18px;height:18px;accent-color:var(--blue)}.secondary{min-height:50px;border:1px solid var(--ink);background:transparent;padding:12px 22px;line-height:1.5}.secondary:hover{background:var(--ink);color:var(--paper)}.sample-picker{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;padding:42px 0 48px}.sample-picker h3{font-size:20px;font-family:var(--serif);font-weight:500;margin-top:10px}.sample-picker p:not(.eyebrow){font-size:12px;color:var(--muted);margin-top:6px}.sample-picker>div:last-child{width:100%;max-width:360px;justify-self:end}.sample-picker label{font-size:12px;color:var(--muted)}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:25px 0 32px;border-top:1px solid var(--ink)}.footer-brand{font-family:var(--serif);font-size:32px}.footer p{font-size:11px;color:var(--muted);line-height:1.9}.footer a{font-size:13px;min-height:44px;display:flex;align-items:center}#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:14px 23px;max-width:calc(100% - 36px);width:max-content;font-size:14px;z-index:20;box-shadow:0 5px 30px #2222}[hidden]{display:none!important}.no-future{grid-column:1/-1;font-family:var(--serif);font-size:24px;padding:24px;border-block:1px dashed var(--rule)}
+@media(min-width:1450px){.wrap{width:min(1220px,calc(100% - 120px))}.hero-heading{padding-top:48px}#scene-host{max-width:1120px;margin-inline:auto}}
+@media(max-width:900px){.wrap{width:calc(100% - 56px)}.hero-heading{grid-template-columns:1fr;gap:16px;padding:32px 0 24px}.hero-summary{max-width:620px;justify-self:start;padding:0;font-size:14px}.hero-heading .eyebrow{margin-bottom:12px}h1{font-size:49px}.hero-heading h1 span{display:inline}.chapter-heading{grid-template-columns:110px 1fr}.action-strip{gap:25px}.primary{gap:25px}.history{gap:24px}.small-chain span{font-size:14px}.small-chain i{font-size:18px}.closing-grid{gap:40px}.observation>p{font-size:22px}.share-grid{gap:30px}.revision-art{height:180px}}
+@media(max-width:856px){.wrap{width:calc(100% - 36px)}.masthead{padding:16px 0 14px}.brand{font-size:23px;gap:8px}.brand svg{width:37px}.brand span{display:none}.edition{font-size:10px;line-height:1.7}.edition>span{font-size:10px}.hero-heading{padding:27px 0 20px;gap:15px}.hero-heading .eyebrow{font-size:11px;letter-spacing:.05em;margin-bottom:12px}.hero-heading h1{font-size:37px;line-height:1.32}.hero-heading h1 span{display:block}.hero-summary{font-size:13px;line-height:1.8;max-width:330px}.figure-rule{font-size:11px;padding-top:10px}.figure-rule i{margin:0 7px}figcaption{font-size:10px;text-align:left;margin-top:0;line-height:1.7}.action-strip{grid-template-columns:1fr;gap:14px;padding:18px 0 19px;margin-top:4px}.primary{width:100%;min-height:52px;padding:13px 18px}.action-result{gap:10px}.action-result p{font-size:13px;line-height:1.8}.action-marker{margin-top:8px;flex:none;width:6px;height:6px}.reading-cue{padding:16px 0;font-size:11px}.chapter{padding:52px 0 48px}.chapter-heading{grid-template-columns:50px 1fr;gap:18px;margin-bottom:30px}.chapter-index{font-size:34px;line-height:1.2}.chapter-index>span{font-size:10px;margin-top:4px}.chapter-heading .eyebrow{font-size:10px;margin-bottom:10px}h2{font-size:29px;line-height:1.5}.history{display:block}.history li{display:grid;grid-template-columns:100px 1fr;gap:4px 18px;padding:19px 0;border-top-color:var(--rule)}.history li:first-child{border-top-color:var(--ink)}.history .history-meta{display:block;margin:0;grid-row:span 2}.history-number{display:block;font-size:17px;margin-bottom:7px}.history h3{font-size:16px}.history blockquote{font-size:15px;line-height:1.85}.source-ref{font-size:10px;margin-top:6px}.interpretation{grid-template-columns:1fr;gap:26px;margin-top:25px}.small-chain{margin-bottom:11px;min-height:42px;gap:10px}.small-chain span{font-size:16px}.small-chain i{font-size:22px}.insight{padding-top:16px}.insight p{font-size:14px}.counterpoint{padding:21px 19px;gap:14px;margin-top:28px}.counter-icon{font-size:28px}.counterpoint h3{font-size:21px;line-height:1.55;margin-bottom:10px}.counterpoint p{font-size:14px;line-height:1.9}.scope-line{font-size:12px;line-height:2;margin-top:20px}.change-line{grid-template-columns:1fr;gap:12px;padding:22px 0}.change-line small{font-size:11px;margin-bottom:8px}.change-line p{font-size:22px}.change-line .change-arrow{font-size:32px;line-height:1;transform:rotate(90deg);width:34px;text-align:center}.choice-facts{grid-template-columns:1fr;gap:20px;margin-bottom:28px}.choice-facts h3{font-size:11px;margin-bottom:6px}.choice-facts p{font-size:15px;line-height:1.85}.responses{grid-template-columns:1fr;gap:28px}.response h3{font-size:25px}.response .branch-label{font-size:11px}.response p{font-size:15px}.response dl{font-size:13px;line-height:1.9}.alternative{padding-left:17px;margin-top:30px}.alternative h3{font-size:16px}.alternative p{font-size:14px}.windows{grid-template-columns:1fr;gap:16px;margin-top:26px}.windows li{padding-top:14px;display:grid;grid-template-columns:110px 1fr;gap:3px 17px}.windows small{grid-row:span 2;font-size:10px;line-height:1.9}.windows h4{font-size:15px;margin:0}.windows p{font-size:13px}.feedback{font-size:21px;padding-left:20px;margin-bottom:30px}.revision-comparison{grid-template-columns:1fr;gap:18px}.revision-panel{padding:16px 0}.revision-art{height:180px}.revision-labels{font-size:14px;gap:6px;margin:8px 0 15px}.revision-panel p{font-size:14px}.revision-panel h3{font-size:14px}.revision-diff{grid-template-columns:1fr;gap:19px;margin-top:15px}.revision-diff p{font-size:14px}.revision-diff h3{font-size:11px;margin-bottom:5px}.footnote{font-size:11px;line-height:1.9;margin-top:22px}.appendix{padding:12px 0}details>summary{font-size:14px;min-height:60px}.appendix-body{padding-top:0}.appendix-body>h3{font-size:21px;margin:20px 0}.edge-row dl{grid-template-columns:42px 1fr;gap:9px;font-size:13px}.source-row,.topic-row{font-size:14px}.closing{margin-top:35px;padding:25px 0 20px}.closing-top .eyebrow{font-size:10px;letter-spacing:.06em}.closing-grid{grid-template-columns:1fr;gap:30px;padding:36px 0 38px}.closing h2{font-size:36px;line-height:1.5}.observation{padding-top:20px}.observation>.eyebrow{font-size:11px}.observation>p{font-size:23px;margin:16px 0}.observation-note{font-size:12px}.record-tool>summary{min-height:65px;font-size:14px}.tool-intro{font-size:12px;line-height:1.9;margin-top:0}.record-grid{grid-template-columns:1fr;gap:15px}.record-bottom{flex-direction:column;align-items:stretch;gap:14px}.record-bottom p{font-size:11px}.afterword{padding-top:20px}.share-grid{grid-template-columns:1fr;gap:26px;padding:20px 0 34px}.share-description h2{font-size:28px;margin-bottom:12px}.share-description>p{font-size:13px}.share-options{gap:5px 12px;margin:15px 0}.share-options label{font-size:12px}.sample-picker{grid-template-columns:1fr;gap:20px;padding:30px 0}.sample-picker h3{font-size:22px}.sample-picker>div:last-child{max-width:none}.sample-picker .eyebrow{font-size:10px}.footer{gap:12px;flex-wrap:wrap;padding:22px 0}.footer-brand{font-size:28px}.footer p{font-size:10px;max-width:235px}.footer a{font-size:12px;width:100%;justify-content:flex-end}.no-future{font-size:22px;padding:20px 0}}
+@media(max-width:370px){.hero-heading h1{font-size:32px}.hero-summary{font-size:12px}.history li{grid-template-columns:84px 1fr;gap:5px 13px}.chapter-heading{gap:12px;grid-template-columns:44px 1fr}h2{font-size:27px}.small-chain span{font-size:14px}.closing h2{font-size:32px}.observation>p{font-size:21px}.primary{font-size:15px}.revision-labels{font-size:12px}.windows li{grid-template-columns:92px 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.primary:hover{transform:none}}
+@media print{.wrap{width:100%}body{font-size:12px}.masthead{padding-top:0}.hero-heading{padding:20px 0}h1{font-size:35px}.chapter{padding:25px 0}.chapter-heading{margin-bottom:20px}h2{font-size:26px}.action-strip,.reading-cue,.record-tool,.afterword,.footer a,.skip,#toast{display:none}.closing{background:none;color:var(--ink);margin-top:20px;padding:20px 0}.closing-grid{padding:20px 0}.closing h2{font-size:30px}.observation-note{color:var(--muted)}.chapter,.history li,.response{break-inside:avoid}.footer{margin-top:20px}}
+
+/* The diagram is the interface. Labels remain HTML and keep their screen size. */
+.masthead{padding-top:18px;padding-bottom:17px}
+.hero-heading{display:block;padding:26px 0 24px}
+.hero-heading .eyebrow{margin-bottom:11px;font-size:11px;letter-spacing:.1em}
+.hero-heading h1{font-size:clamp(38px,4.1vw,53px);line-height:1.3;letter-spacing:-.045em}
+.hero-heading h1 span{display:inline}
+.hero-summary{display:none}
+.main-figure{margin-top:0}
+.figure-rule{padding-top:11px;font-size:11px;letter-spacing:.1em}
+.scene-stage{position:relative;width:100%;max-width:1000px;margin:0 auto;isolation:isolate}
+#scene-host{position:absolute;inset:0;min-height:0;pointer-events:none}
+#scene-host svg{width:100%;height:100%;max-width:none}
+#scene-hotspots{position:absolute;inset:0;pointer-events:none}
+.scene-hotspot{--node-color:var(--blue);position:absolute;width:96px;height:56px;min-height:56px;padding:0;transform:translate(-50%,-20px);background:none;color:var(--ink);pointer-events:auto;touch-action:manipulation;z-index:2;border-radius:4px;outline-offset:2px}
+.hotspot-dot{position:absolute;top:14px;left:42px;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--node-color);background:var(--paper);transition:background .2s,border-color .2s,box-shadow .25s,transform .25s;box-shadow:0 0 0 4px var(--paper)}
+.hotspot-dot:after{content:'';position:absolute;inset:-8px;border:1px solid var(--node-color);border-radius:50%;opacity:0;transform:scale(.65);transition:opacity .2s,transform .3s}
+.hotspot-label{position:absolute;top:32px;left:50%;transform:translateX(-50%);font-size:14px;line-height:22px;font-weight:500;letter-spacing:.02em;white-space:nowrap;background:var(--paper);padding:0 4px;transition:color .2s}
+.scene-hotspot[data-kind=action]{--node-color:var(--coral);color:var(--coral)}
+.scene-hotspot[data-kind=scenario]{--node-color:#7e8789;color:#626b6c}
+.scene-hotspot[data-kind=unknown]{--node-color:#858d89;color:#626b6c}
+.scene-hotspot[data-kind=interpretation] .hotspot-dot{border-style:dashed}
+.scene-hotspot[data-kind=present] .hotspot-dot{background:var(--blue);box-shadow:0 0 0 4px var(--paper),0 0 0 5px #3559c725}
+.scene-hotspot[aria-pressed=true] .hotspot-dot{background:var(--node-color);transform:scale(1.05)}
+.scene-hotspot[aria-pressed=true] .hotspot-dot:after{opacity:.55;transform:scale(1)}
+.scene-hotspot[aria-pressed=true] .hotspot-label{color:var(--node-color)}
+@media(hover:hover){.scene-hotspot:hover .hotspot-dot:after{opacity:.45;transform:scale(1)}.scene-hotspot:hover .hotspot-label{color:inherit}}
+.figure-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:0;padding:1px 0 13px;font-size:12px;color:var(--muted)}
+#scene-instruction{color:#555f5b;white-space:nowrap}
+.touch-glyph{color:var(--coral);font-size:18px;vertical-align:-1px;margin-right:5px}
+.figure-foot figcaption{margin:0;font-size:11px;text-align:right;line-height:1.5}
+.scene-explanation{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;border-block:1px solid var(--rule);border-top-color:var(--ink);padding:18px 0 19px;min-height:112px}
+.scene-explanation-heading{display:grid;grid-template-columns:65px 1fr;gap:18px;align-items:start}
+.scene-kind{font-size:11px;line-height:1.5;padding-top:7px;white-space:nowrap;color:var(--blue)}
+.scene-kind:before{content:'';display:block;width:19px;height:2px;background:currentColor;margin-bottom:8px}
+.scene-explanation h2{font-size:24px;line-height:1.6;letter-spacing:-.025em;padding-top:3px}
+.scene-explanation>p{font-size:14px;color:#555f5b;line-height:1.85;max-width:480px}
+.scene-explanation[data-kind=action] .scene-kind{color:var(--coral)}
+.scene-explanation[data-kind=scenario] .scene-kind,.scene-explanation[data-kind=unknown] .scene-kind{color:#64706c}
+.reading-cue{padding:13px 0 15px;font-size:11px}
+.chapter:first-child{padding-top:70px}
+@media(min-width:1450px){.scene-stage{max-width:1080px}.hero-heading h1{font-size:57px}}
+@media(min-width:857px) and (max-width:1100px){.scene-hotspot{width:96px}.hotspot-dot{left:42px}.hotspot-label{font-size:13px}.scene-explanation h2{font-size:23px}.scene-explanation{gap:25px}.scene-explanation-heading{grid-template-columns:60px 1fr;gap:8px}}
+@media(max-width:856px){
+  .masthead{padding:13px 0}
+  .hero-heading{padding:23px 0 19px}
+  .hero-heading h1{font-size:37px;line-height:1.32}
+  .hero-heading h1 span{display:block}
+  .hero-heading .eyebrow{margin-bottom:9px;font-size:10px;letter-spacing:.04em}
+  .figure-rule{padding-top:9px;font-size:10px}
+  .scene-stage{max-width:400px}
+  .hotspot-label{font-size:14px}
+  .figure-foot{align-items:flex-start;gap:6px;padding:5px 0 13px;flex-direction:column;font-size:11px}
+  .figure-foot figcaption{font-size:10px;text-align:left;margin-left:0;color:#737c75}
+  .touch-glyph{font-size:17px}
+  .scene-explanation{display:block;min-height:145px;padding:16px 0 18px}
+  .scene-explanation-heading{grid-template-columns:53px 1fr;gap:10px;align-items:center}
+  .scene-kind{font-size:10px;padding-top:0;line-height:1.5}
+  .scene-kind:before{width:16px;margin-bottom:5px}
+  .scene-explanation h2{font-size:22px;line-height:1.55;padding:0}
+  .scene-explanation>p{font-size:14px;line-height:1.8;margin:10px 0 0 63px;max-width:none}
+  .reading-cue{font-size:10px;padding:12px 0}
+  .chapter:first-child{padding-top:45px}
+}
+@media(max-width:370px){
+  .hero-heading h1{font-size:31px}
+  .scene-explanation-heading{grid-template-columns:48px 1fr;gap:9px}
+  .scene-explanation h2{font-size:20px}
+  .scene-explanation>p{margin-left:57px;font-size:13px}
+  .hotspot-label{font-size:13px;letter-spacing:0;padding:0 2px}
+}
+@media(max-width:856px) and (max-height:680px){
+  .masthead{padding:9px 0}
+  .hero-heading{padding:14px 0 12px}
+  .hero-heading h1{font-size:29px}
+}
+@media(prefers-reduced-motion:reduce){.hotspot-dot,.hotspot-dot:after,.hotspot-label{transition:none}}
+@media print{.scene-stage{max-width:800px}.hotspot-dot:after,#scene-instruction{display:none}.scene-hotspot{pointer-events:none}.scene-explanation{min-height:0}.scene-explanation h2{font-size:20px}.scene-explanation>p{font-size:12px}.scene-stage{break-inside:avoid}}
+/* Keep the changing explanation in the same desktop viewport as the figure. */
+@media(min-width:857px){
+  .masthead{padding:7px 0}
+  .hero-heading{padding:13px 0 12px}
+  .hero-heading h1{font-size:clamp(37px,3.75vw,48px)}
+  .hero-heading .eyebrow{margin-bottom:8px}
+  .scene-stage{margin-top:-35px;margin-bottom:-40px}
+  .figure-foot{padding:0 0 10px;min-height:28px}
+  .scene-explanation{min-height:102px;padding:14px 0}
+}
+@media(max-width:856px){
+  .hero-heading{padding:17px 0 14px}
+  .hero-heading h1{font-size:33px;line-height:1.3}
+  .scene-stage{margin-top:-38px;margin-bottom:-22px}
+  .figure-foot{flex-direction:row;align-items:center;justify-content:space-between;gap:10px;padding:0 0 10px;font-size:10px;min-height:32px}
+  .figure-foot figcaption{font-size:9px;white-space:nowrap}
+  .scene-explanation{min-height:130px;padding:13px 0 15px}
+  .scene-explanation-heading{display:block}
+  .scene-kind{display:flex;align-items:center;gap:7px;font-size:10px;margin-bottom:6px}
+  .scene-kind:before{width:13px;height:1px;margin:0}
+  .scene-explanation h2{font-size:22px;line-height:1.5}
+  .scene-explanation>p{margin:7px 0 0;font-size:14px;line-height:1.8}
+}
+@media(max-width:370px){.hero-heading h1{font-size:30px}.figure-foot{gap:4px;font-size:9px}.figure-foot figcaption{font-size:8px}.scene-explanation h2{font-size:20px}.scene-explanation>p{font-size:13px}}
+@media(max-width:856px) and (max-height:680px){.hero-heading{padding:11px 0 10px}.hero-heading h1{font-size:28px}.scene-stage{margin-top:-34px;margin-bottom:-24px}}
+/* A darker ink variant keeps the small action label readable on paper. */
+.scene-hotspot[data-kind=action]{color:#ad412a}
+.scene-hotspot[data-kind=action][aria-pressed=true] .hotspot-label{color:#ad412a}
+.scene-explanation[data-kind=action] .scene-kind{color:#ad412a}
+
+/* Kinetic reading: one object, a synchronized sentence, a quiet playback rail. */
+[hidden]{display:none!important}
+.scene-stage[data-structure=loop]{margin-top:-12px;margin-bottom:-14px;isolation:isolate}
+.scene-stage[data-structure=loop] .hotspot-label{background:rgba(246,244,238,.92);border-radius:3px;padding:1px 5px;box-shadow:0 1px 5px #f6f4ee88}
+.scene-stage[data-structure=loop] .hotspot-dot{box-shadow:0 1px 7px #f6f4ee; background:var(--paper,#f6f4ee)}
+.scene-stage[data-structure=loop] .scene-hotspot[aria-pressed=true] .hotspot-dot{background:currentColor}
+.playback-strip{display:flex;align-items:center;gap:22px;min-height:46px;border-top:1px solid #dedfd8;font-size:11px;color:#626961;letter-spacing:.03em}
+.playback-strip>span:first-child{min-width:178px}
+.playback-track{flex:1;height:2px;background:#dfe2df;overflow:hidden}
+.playback-track i{display:block;height:100%;width:0;background:#3758b4;transition:width 600ms ease}
+.playback-strip button{min-height:44px;min-width:72px;font:inherit;color:#3b4c76;background:none;border:0;padding:8px 0 8px 16px;cursor:pointer}
+.playback-strip button:hover{color:#af472a}
+.playback-strip button:focus-visible{outline:2px solid #bf5e42;outline-offset:3px}
+.figure-foot{color:#6b6e69}
+.scene-explanation{position:relative}
+.scene-explanation:after{content:'';width:70px;height:2px;background:#4566b0;position:absolute;bottom:-1px;left:0}
+.scene-explanation[data-kind=action]:after{background:#bf6545;width:110px}
+.chapter-intro{color:#697067;font-size:16px;line-height:1.8;max-width:650px;margin:-20px 0 40px}
+.decision-reading{margin:75px 0 50px;padding-top:46px;border-top:1px solid #cfd3ca}
+.decision-intro{display:grid;grid-template-columns:1fr 1fr;gap:24px 65px;align-items:center}
+.decision-intro>.eyebrow{grid-column:1/-1;margin:0}
+.decision-intro h2{font-family:'Songti SC','STSong',serif;font-weight:500;font-size:clamp(28px,3.8vw,44px);line-height:1.5;margin:0}
+.decision-intro blockquote{font-family:'Songti SC','STSong',serif;font-size:22px;line-height:1.9;margin:0;color:#3d5149}
+.decision-intro cite{display:block;font:11px/1.8 -apple-system,BlinkMacSystemFont,sans-serif;color:#747a70;margin-top:12px;font-style:normal}
+.decision-scenes{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:42px 0 22px}
+.decision-scene{padding:26px 0;border-top:1px solid #d4d8cf}
+.scene-scenario{font-size:13px;color:#687462}
+.decision-chain{display:flex;align-items:center;gap:12px;margin:25px 0 22px;min-height:48px}
+.decision-chain span{font-size:16px;line-height:1.5;flex:1}
+.decision-chain span:nth-last-child(3){font-weight:600;color:#3559a9}
+.decision-chain i{font-style:normal;color:#9ca8b8;font-size:20px}
+.decision-scene:nth-child(2) .decision-chain span:nth-last-child(3){color:#a64e32}
+.decision-scene blockquote{margin:0 0 12px;font-size:14px;line-height:1.9;color:#656b61}
+.decision-meaning{font-size:17px;line-height:2;max-width:800px}
+.traditional-reading{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding:36px 0;margin:24px 0 0;border-top:1px solid #d4d8cf}
+.traditional-reading h3{font-family:'Songti SC','STSong',serif;font-size:25px;font-weight:500;line-height:1.6;margin:0}
+.traditional-reading p{font-size:14px;line-height:1.9;color:#636c62;margin:20px 0 0}
+.basis-flow{display:flex;align-items:center;gap:10px;font-size:13px;color:#334f68;line-height:1.7}
+.basis-flow i{color:#939e9c;font-style:normal}
+.traditional-reading p.basis-empty{font-size:12px;color:#73776d;border-left:2px solid #c3c6bb;padding-left:14px}
+.life-index{display:grid;grid-template-columns:repeat(8,1fr);border-bottom:1px solid #cfd4ca;border-top:1px solid #cfd4ca;padding:23px 0;margin-bottom:40px;gap:14px}
+.life-index span{font-size:16px;position:relative;padding-top:18px}
+.life-index span:before{content:'';position:absolute;top:0;left:0;width:9px;height:9px;border:1px solid #c9cec2;border-radius:50%}
+.life-index [data-depth=深入]:before{background:#3559a9;border-color:#3559a9}
+.life-index [data-depth=略有了解]:before{background:linear-gradient(90deg,#7189ac 50%,transparent 50%);border-color:#7189ac}
+.life-index i{display:block;font-size:10px;font-style:normal;color:#747c6e;line-height:1.6;margin-top:6px}
+.life-topic{display:grid;grid-template-columns:1fr 2fr;gap:50px;padding:32px 0;border-bottom:1px solid #e0e2da}
+.life-topic-heading{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap;align-content:start}
+.topic-number{font-family:Georgia,serif;font-style:italic;font-size:19px;color:#94a1ae}
+.life-topic h3{font-family:'Songti SC','STSong',serif;font-size:28px;font-weight:500;line-height:1.3;margin:0}
+.topic-depth{font-size:11px;color:#718068}
+.life-topic h4{font-size:17px;font-weight:500;line-height:1.7;margin:0 0 18px;color:#344635}
+.life-topic ul,.life-unknown ul{padding-left:18px;margin:0;color:#646e61;font-size:15px;line-height:1.9}
+.life-topic li+li,.life-unknown li+li{margin-top:10px}
+.life-unknown{margin-top:35px;padding:25px 0;color:#65705f}
+.life-unknown>p{font-family:'Songti SC','STSong',serif;font-size:23px;line-height:1.8;margin:12px 0 22px}
+.life-unknown ul{font-size:13px}
+.life-unknown strong{font-weight:500;color:#3a4b38;margin-right:8px}
+@media(min-width:857px){.scene-stage[data-structure=loop]{max-width:960px}.hero:has(.scene-stage[data-structure=loop]) .hero-heading h1{font-size:clamp(34px,3.3vw,44px)}}
+@media(max-width:856px){
+  .scene-stage[data-structure=loop]{margin-top:-8px;margin-bottom:0}
+  .hero:has(.scene-stage[data-structure=loop]) .hero-heading{padding:16px 0 10px}
+  .hero:has(.scene-stage[data-structure=loop]) .hero-heading h1{font-size:30px;line-height:1.3}
+  .playback-strip{gap:12px;min-height:44px;font-size:10px}
+  .playback-strip>span:first-child{min-width:0;white-space:nowrap}
+  .playback-strip button{min-width:64px;padding-left:6px}
+  .figure-foot{padding-bottom:8px}
+  .scene-explanation{min-height:140px}
+  .chapter-intro{font-size:15px;margin-top:-10px}
+  .decision-reading{margin-top:45px;padding-top:30px}
+  .decision-intro{display:block}
+  .decision-intro>.eyebrow{margin-bottom:18px}
+  .decision-intro h2{font-size:31px}
+  .decision-intro blockquote{font-size:20px;margin-top:25px}
+  .decision-scenes{grid-template-columns:1fr;gap:0;margin-top:24px}
+  .decision-scene{padding:25px 0}
+  .decision-chain{gap:9px;margin:20px 0}
+  .decision-chain span{font-size:16px}
+  .decision-meaning{font-size:16px;line-height:1.95}
+  .traditional-reading{grid-template-columns:1fr;gap:23px;padding-top:28px}
+  .traditional-reading h3{font-size:23px}
+  .basis-flow{font-size:13px;justify-content:space-between;gap:7px}
+  .life-index{grid-template-columns:repeat(4,1fr);gap:22px 14px;margin-bottom:10px}
+  .life-topic{grid-template-columns:1fr;gap:20px;padding:28px 0}
+  .life-topic h3{font-size:26px}
+  .life-topic h4{font-size:17px}
+  .life-topic ul{font-size:16px}
+}
+@media(max-width:370px){.hero:has(.scene-stage[data-structure=loop]) .hero-heading h1{font-size:27px}.playback-strip{gap:8px;font-size:9px}.scene-explanation>p{font-size:14px}.decision-chain span{font-size:15px}.basis-flow{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.playback-track i{transition:none}}
+@media print{.playback-strip{display:none}.decision-scenes,.life-topic{break-inside:avoid}}
+/* On phones the object and its changing sentence share the first reading view. */
+@media(max-width:856px){
+  body:has(.scene-stage[data-structure=loop]) .masthead{padding:6px 0}
+  body:has(.scene-stage[data-structure=loop]) .brand{font-size:23px;line-height:1.4}
+  .hero:has(.scene-stage[data-structure=loop]) .hero-heading{padding:12px 0 8px}
+  .hero:has(.scene-stage[data-structure=loop]) .hero-heading h1{font-size:28px;line-height:1.32}
+}
+@media(max-width:370px){.hero:has(.scene-stage[data-structure=loop]) .hero-heading h1{font-size:26px}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#story">跳到详细报告</a>
+<header class="masthead wrap"><a class="brand" href="#top" aria-label="此后，回到主图"><svg viewBox="0 0 48 32" aria-hidden="true"><path d="M33 23C12 38 2 5 23 5c17 0 17 21 30 21M25 23C7 34 7 11 23 11c12 0 12 15 30 15"/></svg>此后<span>CIHOU</span></a><span class="edition">一份可以继续的理解<span>匿名虚构 · V1</span></span></header>
+<main>
+  <section class="hero wrap" aria-labelledby="report-title">
+    <div class="hero-heading"><div><p class="eyebrow" id="report-meta"></p><h1 id="report-title"></h1></div><p class="hero-summary" id="hero-summary"></p></div>
+    <figure class="main-figure">
+      <div class="figure-rule"><span>来处 <i>—</i> 此刻</span><span id="future-heading">此后 <i>／</i> 条件情景</span></div>
+      <div class="scene-stage" id="scene-stage"><div id="scene-host"></div><div id="scene-hotspots" role="group" aria-label="探索这张图" aria-describedby="scene-instruction"></div></div>
+      <div class="playback-strip" id="playback-strip" hidden><span id="playback-state">来处 · 自动讲解</span><span class="playback-track" aria-hidden="true"><i id="playback-progress"></i></span><button type="button" id="playback-toggle" aria-controls="scene-stage scene-explanation">暂停讲解</button></div>
+      <div class="figure-foot"><span id="scene-instruction"><span class="touch-glyph" aria-hidden="true">⊙</span> 点图上的圆点，看看为什么。</span><figcaption id="figure-caption">连线是理解，分支是情景。</figcaption></div>
+    </figure>
+    <div class="scene-explanation" id="scene-explanation" role="status" aria-live="polite" aria-atomic="true"><div class="scene-explanation-heading"><span id="scene-kind" class="scene-kind"></span><h2 id="scene-title"></h2></div><p id="scene-body"></p></div>
+    <div class="reading-cue"><span>向下读，理解这张图</span><span aria-hidden="true">↓</span></div>
+  </section>
+
+  <article class="report wrap" id="story" aria-label="详细报告">
+    <section class="chapter" id="origins">
+      <header class="chapter-heading"><span class="chapter-index">01<span>来处</span></span><div><p class="eyebrow">这张图从哪里来</p><h2 id="origin-title"></h2></div></header>
+      <ol class="history" id="history"></ol>
+      <div class="interpretation" id="interpretation"></div>
+      <aside class="counterpoint"><span class="counter-icon" aria-hidden="true">↗</span><div><h3>换一种解释，也要说得通。</h3><p id="counterexample"></p></div></aside>
+      <div class="scope-line" id="scope-line"></div>
+      <div id="decision-reading"></div>
+    </section>
+
+    <section class="chapter" id="choices">
+      <header class="chapter-heading"><span class="chapter-index">02<span>此后</span></span><div><p class="eyebrow">一次行动，改变什么</p><h2 id="choice-title"></h2></div></header>
+      <div class="change-line" id="change-line"></div>
+      <div class="choice-facts" id="choice-facts"></div>
+      <div class="responses" id="responses"></div>
+      <aside class="alternative" id="alternative"></aside>
+      <ol class="windows" id="windows"></ol>
+    </section>
+
+    <section class="chapter" id="life-context">
+      <header class="chapter-heading"><span class="chapter-index">03<span>全貌</span></span><div><p class="eyebrow">把这件事，放回整个生活</p><h2>谈到的，都留在这里。</h2></div></header>
+      <p class="chapter-intro">主图抓住一个重点，下面保留这次材料里的全部生活主题。</p>
+      <div id="life-topics"></div>
+    </section>
+
+    <section class="chapter" id="revision">
+      <header class="chapter-heading"><span class="chapter-index">04<span>重看</span></span><div><p class="eyebrow">预设的虚构回访</p><h2>事实多一点，<br>理解就可以变一点。</h2></div></header>
+      <blockquote class="feedback" id="revision-feedback"></blockquote>
+      <div class="revision-comparison" id="revision-comparison"></div>
+      <div class="revision-diff" id="revision-diff"></div>
+      <p class="footnote">这段回访是写好的虚构情节，用来展示理解怎样修正。下方填写的记录不会自动改变图形或生成分析。</p>
+    </section>
+
+    <section class="chapter appendix" aria-label="完整依据与范围">
+      <details id="evidence"><summary>查阅这份理解的完整依据<span class="detail-plus" aria-hidden="true">＋</span></summary><div class="appendix-body"><h3>经历与来源</h3><div id="source-list"></div><h3>关系、条件与反例</h3><div id="edge-list"></div><h3>这次谈到了哪些生活领域</h3><div id="topic-list"></div><p class="footnote" id="provenance"></p></div></details>
+    </section>
+  </article>
+
+  <section class="closing" id="takeaway"><div class="wrap">
+    <div class="closing-top"><span class="eyebrow">05 / 带回生活</span><span class="eyebrow">你，也是原因。</span></div>
+    <div class="closing-grid"><h2>未来没有写完。<br>你可以带着<br><em>一个问题</em>离开。</h2><div class="observation"><span class="eyebrow">V1 / 下一次，留意</span><p id="observation-question"></p><span class="observation-note">先看见，再决定。</span></div></div>
+    <details class="record-tool" id="record-tool"><summary>写下观察，或纠正这份理解<span aria-hidden="true">＋</span></summary><form id="record-form"><p class="tool-intro">本记录对应 V1 原理解；上方 V2 是独立的模拟回访。草稿刷新即清空，导出后带回原咨询继续讨论。</p><div class="record-grid"><div><label for="record-status">这条记录属于</label><select id="record-status"><option value="observe">先观察，还没有行动</option><option value="intend">想尝试，还没有行动</option><option value="acted">已在现实中尝试</option></select><label for="record-note" id="record-note-label">我的观察或想法（可不填）</label><textarea id="record-note" rows="4" maxlength="1200" placeholder="只写你想记录的事。"></textarea></div><div><label for="correction-note">V1 哪些地方不符合实际？（可不填）</label><textarea id="correction-note" rows="4" maxlength="1600" placeholder="可以不同意这条连线，也可以补充遗漏的条件。"></textarea><div id="feedback-field" hidden><label for="feedback-note">实际收到的回应（可暂不填）</label><textarea id="feedback-note" rows="3" maxlength="1200"></textarea></div></div></div><div class="record-bottom"><button class="primary light" id="export-record" type="submit">导出这份记录 <span aria-hidden="true">↓</span></button><p id="draft-status" role="status">仅在本页 · 未同步</p></div></form></details>
+  </div></section>
+
+  <section class="afterword wrap" aria-label="附页">
+    <details class="share-tool"><summary>保存一张分享图<span class="detail-plus" aria-hidden="true">＋</span></summary><div class="share-grid"><div id="share-preview"></div><div class="share-description"><h2>把画面带走，<br>把故事留给自己。</h2><p>完整报告里有经历、原话和记录；分享图只包含下面选中的内容。</p><div class="share-options"><label><input id="share-shape" type="checkbox" checked>线的形状</label><label><input id="share-action" type="checkbox" checked>行动短句</label><label><input id="share-motto" type="checkbox" checked>品牌短句</label></div><button class="secondary" id="export-share">保存分享图 ↓</button><p class="footnote">仅导出左侧预览。不会附带人物、经历、原话、来源或草稿。</p></div></div></details>
+    <div class="sample-picker"><div><p class="eyebrow">原型样例集</p><h3>不同经历，长出不同的形状。</h3><p>正式个人报告只呈现自己的故事。</p></div><div><label for="case-select">换一份匿名虚构样例</label><select id="case-select"></select></div></div>
+  </section>
+</main>
+<footer class="footer wrap"><span class="footer-brand">此后</span><p>第一阶段 · 回环与积累演示<br>2026.10.16 · 本地原型，未接入正式咨询与云端保存</p><a href="#top">回到主图 ↑</a></footer>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><div class="wrap"><h2>此后 · 静态摘要</h2><p>林舟从临时补位到持续承接，再到任务叠加。一种理解是分工未被重新讨论，但岗位空缺与明确派工也可能是原因。沟通能让任务成为可讨论的事项；是否调整，还取决于权限、资源与他人的回应。可以先记录任务的来源与取舍，再决定下一步。</p><p>所有内容均为匿名虚构。浏览器未启用脚本，无法展示完整互动报告。</p></div></noscript>
+<script>/*
+ * 此后 · 第一阶段匿名虚构素材。
+ * 所有姓名、叙述、关系解释与回访均为产品演示创作，不来自真实咨询。
+ * nodes 是素材中已描述的经历；edges 是可修正的理解，不是已证实的因果。
+ * branches 是条件情景；revision 是预先编写的模拟回访，不表示已同步咨询。
+ * 不含出生信息、历法计算、八字结论、人生分数或概率。
+ */
+window.CIHOU_CASES = [
+  {
+    id: 'loop',
+    name: '林舟',
+    role: '职责与边界 · 虚构样例',
+    structure: 'loop',
+    title: ['总是接住别人，', '也想接住自己。'],
+    summary: '几次临时补位，渐渐变成持续承接。先看看，哪些职责可以重新说清。',
+    question: '临时帮忙，是从哪里开始变成默认职责的？',
+    nodes: [
+      {
+        id: 'l-fill', label: '临时补位', time: '较早 · 日期未提供',
+        quote: '有几次项目赶进度，我帮忙接了原本不在分工里的任务。',
+        source: '虚构素材 L1 · 开场叙述'
+      },
+      {
+        id: 'l-default', label: '持续承接', time: '随后 · 日期未提供',
+        quote: '后来类似任务又交给我，原来的分工一直没有重新讨论。',
+        source: '虚构素材 L2 · 职责补充'
+      },
+      {
+        id: 'l-load', label: '任务叠加', time: '本次叙述 · 日期未提供',
+        quote: '现在几项任务同时找过来。我接下以后，自己的事项就得往后排。',
+        source: '虚构素材 L3 · 当前处境'
+      }
+    ],
+    edges: [
+      {
+        from: 'l-fill', to: 'l-default', label: '可能形成默认',
+        basis: 'L1 描述临时补位，L2 描述类似任务持续交来；两者的作用关系仍待核对。',
+        condition: '临时分工未被重新说明，且后续派工确实沿用原来的安排。',
+        counterexample: '也可能是岗位空缺或上级明确分配，未必由补位形成。',
+        unknown: '任务分配者依据什么派工，目前没有信息。'
+      },
+      {
+        from: 'l-default', to: 'l-load', label: '叠加到原任务',
+        basis: 'L2 的持续承接与 L3 的任务并行，支持继续了解工作量如何叠加。',
+        condition: '新增任务没有伴随延期、交接或其他事项的取消。',
+        counterexample: '若原任务已经减量，新增任务未必增加总负荷。',
+        unknown: '任务实际耗时、正式职责与可用人手尚未核对。'
+      },
+      {
+        from: 'l-load', to: 'l-fill', label: '再次补位？',
+        basis: 'L3 提到继续接下任务，暂以回环表示一种待确认的反复模式。',
+        condition: '下一次临时任务仍以相同方式被接下，且没有重新分配。',
+        counterexample: '若每次都来自明确的岗位指派，个人补位并非回环的主要原因。',
+        unknown: '是否曾拒绝、提出异议或获得重新安排，目前未知。'
+      }
+    ],
+    graphLabels: ['临时补位', '默认职责', '继续承接'],
+    action: {
+      label: '试着谈清边界', short: '谈清边界',
+      change: '把默认承接的任务，变成可以讨论优先级与交接的事项。',
+      cost: '需要整理任务，也可能经历一次不轻松的沟通。',
+      needs: '有权调整分工的人愿意听取情况，或至少能收到清晰记录。',
+      observe: '讨论之后，哪些任务真的延期、交接或重新排序？'
+    },
+    alternative: {
+      label: '先记录，再决定', protect: '保留现有节奏，先看清负荷来源。',
+      cost: '短期职责可能仍维持原状。',
+      needs: '能够记录新增事项、分配来源与占用时间。',
+      observe: '哪些任务反复出现，又是谁决定交给你？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果愿意协商', title: '把讨论变成安排',
+        body: '把达成的共识落到具体任务，再看看执行中有没有改变。',
+        needs: '对方拥有调整权限，相关协作者也知晓安排。',
+        cost: '需要交接与后续核对，沟通本身不会自动减少工作量。',
+        observe: '下一次同类任务到来时，是否按新安排处理？'
+      },
+      {
+        id: 'b', label: '如果暂未同意', title: '看清尚未松动的条件',
+        body: '了解卡在权限、资源还是优先级，再决定等待、补充信息或寻求支持。',
+        needs: '能进一步了解未被同意的原因，并评估再次沟通是否合适。',
+        cost: '职责可能暂时不变，还需要保护已有精力。',
+        observe: '对方给出了什么限制？其中哪些可以核对？'
+      }
+    ],
+    insights: [
+      {
+        title: '一次帮忙，怎样被延续',
+        chain: ['临时承接', '未再讨论', '持续分配'],
+        sentence: '这条关系值得核对；也可能真正起作用的是岗位与权限。'
+      },
+      {
+        title: '可以介入的是讨论',
+        chain: ['列出事项', '说明取舍', '等待回应'],
+        sentence: '你能让条件更清楚，无法独自决定对方的安排。'
+      }
+    ],
+    context: {
+      scene: '新任务到来时，先明确它会挤占哪一件已经承诺的事。',
+      against: '尚未了解岗位空缺与派工权限，不能把负荷都归因于个人边界。',
+      alternative: '如果沟通条件暂不具备，记录来源与寻求支持也可以是下一步。'
+    },
+    topics: [
+      { id: 'self', name: '自我', status: '略有了解', label: '可靠与可持续', points: ['补充自述 L5：希望是可靠的合作者，也不希望什么都由自己承担。', 'L4 与 L6：先想怎样完成，是部分场景中的反应；分工清楚时也会先讨论顺序。', '这些自述不能定义整个人，也不解释所有派工原因。'] },
+      { id: 'learning', name: '学习', status: '未展开', label: '尚未了解', points: ['本次没有学习经历资料。'] },
+      { id: 'career', name: '事业', status: '深入', label: '职责未再确认', points: ['类似任务持续交来。', '原有事项被新增任务挤占。', '派工权限与人手情况仍待核对。'] },
+      { id: 'finance', name: '财务', status: '未展开', label: '尚未了解', points: ['本次没有收支、储备或财务约束资料。'] },
+      { id: 'relationships', name: '关系', status: '略有了解', label: '工作协作', points: ['仅了解工作中的分工关系，未展开亲密关系。'] },
+      { id: 'family', name: '家庭', status: '未展开', label: '尚未了解', points: ['本次没有家庭处境资料。'] },
+      { id: 'mobility', name: '迁移', status: '未展开', label: '尚未了解', points: ['本次没有迁居或地域选择资料。'] },
+      { id: 'wellbeing', name: '身心', status: '略有了解', label: '可用精力', points: ['任务叠加可能占用精力，实际影响尚未询问。', '不由工作叙述推导健康结论。'] }
+    ],
+    windows: [
+      { time: '若决定沟通 · 事前', title: '列出正在承担的事', body: '写下来源、期限与需要协调的取舍。', kind: '现实计划' },
+      { time: '沟通之后 · 时间自定', title: '看安排有没有落实', body: '核对实际变化，也记录未改变的部分。', kind: '现实计划' },
+      { time: '时间未知', title: '派工条件仍待了解', body: '没有足够资料设定一个必然转好的日期。', kind: '信息缺失' }
+    ],
+    revision: {
+      prior: '反复补位可能让任务形成默认归属，进而带来下一次补位。',
+      feedback: '模拟回访：这几次主要是岗位空缺后的明确派工；我提出过重新分配，但负责人暂时没有补充人手。',
+      current: '撤去“再次补位”的回连，改画“岗位空缺 → 任务分配 → 负荷叠加”的开链，把结构性约束放到图中。',
+      keep: '任务正在叠加，优先级与交接仍有讨论价值。',
+      drop: '放下“个人补位是反复派工主要原因”的理解。',
+      unknown: '谁能调整资源、能否延期，仍未得到答复。',
+      title: ['有些重量，', '来自尚未补上的位置。'],
+      graphLabels: ['岗位空缺', '任务分配', '负荷叠加']
+    },
+    observation: '下一次任务到来时，记录是谁分配、挤占了什么，以及是否有调整权限。'
+  },
+  {
+    id: 'bridge',
+    name: '许宁',
+    role: '学习与实践 · 虚构样例',
+    structure: 'bridge',
+    title: ['已经学了很多，', '想让它遇见现实。'],
+    summary: '有课程、有笔记，也有跟做练习。下一座桥，可能通向一次具体反馈。',
+    question: '学习和实际使用之间，还缺的是哪一种连接？',
+    nodes: [
+      {
+        id: 'b-course', label: '课程积累', time: '较早 · 日期未提供',
+        quote: '我陆续学了一些课程，基本概念已经不陌生。',
+        source: '虚构素材 B1 · 学习经历'
+      },
+      {
+        id: 'b-notes', label: '方法笔记', time: '随后 · 日期未提供',
+        quote: '我把常用的方法整理成笔记，遇到问题会回去查。',
+        source: '虚构素材 B2 · 学习方式'
+      },
+      {
+        id: 'b-practice', label: '跟做练习', time: '学习期间 · 日期未提供',
+        quote: '跟着教程做过练习，有的地方能自己改，有的还得照着步骤。',
+        source: '虚构素材 B3 · 已有练习'
+      },
+      {
+        id: 'b-comment', label: '零散回应', time: '练习之后 · 日期未提供',
+        quote: '给人看过一次，对方说还不错，但没有说哪里要改。',
+        source: '虚构素材 B4 · 反馈经历'
+      },
+      {
+        id: 'b-now', label: '想再试试', time: '本次叙述 · 日期未提供',
+        quote: '我想知道自己离实际使用还有多远，也不想一直只靠多学一点来判断。',
+        source: '虚构素材 B5 · 当前问题'
+      }
+    ],
+    edges: [
+      {
+        from: 'b-course', to: 'b-notes', label: '整理成可查方法',
+        basis: 'B1、B2 记录了课程与笔记的关联；学习效果没有独立测量。',
+        condition: '笔记确实覆盖后续任务需要的方法。',
+        counterexample: '整理得完整，也可能仍不适合具体任务。',
+        unknown: '笔记如何被实际调用，了解有限。'
+      },
+      {
+        from: 'b-notes', to: 'b-practice', label: '尝试调用',
+        basis: 'B2、B3 提到查阅方法与跟做练习，暂作一种学习过程的解释。',
+        condition: '练习中存在需要独立判断的环节。',
+        counterexample: '完全照着步骤完成时，未必检验了独立使用能力。',
+        unknown: '是否已经完成独立作品，初次叙述未说明。'
+      },
+      {
+        from: 'b-practice', to: 'b-comment', label: '得到笼统回应',
+        basis: 'B3、B4 表明练习曾被别人看过，但没有具体改进信息。',
+        condition: '对方了解作品的用途，并愿意给出意见。',
+        counterexample: '友善评价不一定反映作品能否满足使用要求。',
+        unknown: '当时有没有共同的评价标准，尚不清楚。'
+      },
+      {
+        from: 'b-comment', to: 'b-now', label: '仍缺判断依据',
+        basis: 'B4 的笼统回应与 B5 的疑问，支持继续了解反馈缺口。',
+        condition: '用户确实希望检验实际使用，而非单纯享受学习。',
+        counterexample: '若学习本身就是目的，未必需要作品检验。',
+        unknown: '希望应用到什么场景、达到什么程度，仍待具体化。'
+      }
+    ],
+    graphLabels: ['已有准备', '已有练习', '待具体反馈'],
+    action: {
+      label: '让作品遇见反馈', short: '带着问题请教',
+      change: '把“做得怎么样”缩小为一个可以被具体回应的问题。',
+      cost: '需要挑一件作品、说明用途，也可能听到尚未准备好的意见。',
+      needs: '有可讨论的作品，且找到愿意结合用途给反馈的人。',
+      observe: '是否得到一条可以据此修改、并再次验证的意见？'
+    },
+    alternative: {
+      label: '先明确想用在哪里', protect: '保留学习的乐趣，不急于证明能力。',
+      cost: '短期仍可能缺少外部检验。',
+      needs: '愿意选出一个具体的使用场景。',
+      observe: '这个场景究竟需要什么，而已有练习覆盖了哪些部分？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果收到具体意见', title: '选一处修改，再看一次',
+        body: '只处理一项与用途相关的意见，让前后变化可以被观察。',
+        needs: '意见具体，并且在现有时间与工具范围内能够尝试。',
+        cost: '要投入一次修改，也要判断意见是否适合目标场景。',
+        observe: '修改解决了什么，又暴露了什么新的问题？'
+      },
+      {
+        id: 'b', label: '如果回应仍很笼统', title: '先对齐反馈的尺度',
+        body: '补充作品用途，缩小提问；必要时换一种反馈方式。',
+        needs: '能向对方说明想核对的具体环节。',
+        cost: '寻找合适反馈可能比再次学习更费时间。',
+        observe: '下一次是否得到依据，而不只是“不错”或“不行”？'
+      }
+    ],
+    insights: [
+      {
+        title: '已经发生的学习', chain: ['接触方法', '跟做练习', '尝试改动'],
+        sentence: '这些都是已有投入，不能因为仍有疑问就将它们归零。'
+      },
+      {
+        title: '把反馈变得可用', chain: ['说明用途', '问一件事', '据此修改'],
+        sentence: '是否需要更多实践，仍要结合已经做过什么来判断。'
+      }
+    ],
+    context: {
+      scene: '带一件已有作品，请对方只评价一个与实际用途有关的环节。',
+      against: '初次叙述没有说明独立作品的数量，不能直接断言一直没有实践。',
+      alternative: '如果暂时找不到反馈者，可以先写出预期用途与自检问题，保留未知。'
+    },
+    topics: [
+      { id: 'self', name: '自我', status: '略有了解', label: '想知道自己走到哪', points: ['希望获得实际使用的参照，不据此定义为“缺乏自信”。'] },
+      { id: 'learning', name: '学习', status: '深入', label: '从积累到反馈', points: ['已经有课程、笔记与跟做练习。', '收到的意见还不够具体。', '独立作品与目标用途仍需补充。'] },
+      { id: 'career', name: '事业', status: '略有了解', label: '应用场景待定', points: ['提到实际使用，尚未明确是否与求职或岗位有关。'] },
+      { id: 'finance', name: '财务', status: '未展开', label: '尚未了解', points: ['没有学习预算或收入约束资料。'] },
+      { id: 'relationships', name: '关系', status: '略有了解', label: '反馈交流', points: ['只了解一次作品交流，不推导其他关系模式。'] },
+      { id: 'family', name: '家庭', status: '未展开', label: '尚未了解', points: ['本次没有家庭处境资料。'] },
+      { id: 'mobility', name: '迁移', status: '未展开', label: '尚未了解', points: ['本次没有地域选择资料。'] },
+      { id: 'wellbeing', name: '身心', status: '未展开', label: '尚未了解', points: ['本次没有睡眠、精力或健康资料。'] }
+    ],
+    windows: [
+      { time: '若决定请教 · 事前', title: '选作品，选问题', body: '从已有材料里选择，不要求先做一个更大的项目。', kind: '现实计划' },
+      { time: '收到回应之后', title: '看看意见能否使用', body: '挑一个可尝试的改动；也允许判断这条意见不适合。', kind: '现实计划' }
+    ],
+    revision: {
+      prior: '可能需要从学习迈向一次独立实践，才能知道自己走到了哪里。',
+      feedback: '模拟回访：其实已做过两件独立作品，也修改过；缺的是具体标准，对方每次只说整体还行。',
+      current: '将“实践尚未连接”的缺口移到反馈环节：已有作品保留为实线，下一座桥连接共同标准与具体意见。',
+      keep: '学习已有积累，仍希望获得实际使用的参照。',
+      drop: '放下“还没有开始独立实践”的初步理解。',
+      unknown: '谁能结合目标用途提供具体反馈，仍待寻找。',
+      title: ['你已经做过了，', '这次，把反馈接上。'],
+      graphLabels: ['已有作品', '共同标准', '待具体反馈']
+    },
+    observation: '下一次请教后，记下一条真正能用于修改的意见；如果没有，也保留这个结果。'
+  },
+  {
+    id: 'confluence',
+    name: '乔安',
+    role: '积累与合作 · 虚构样例',
+    structure: 'confluence',
+    title: ['走过的几条路，', '开始有了交汇处。'],
+    summary: '方法、交流与作品积累，可能在一次小合作里相遇。先核对，它们是否真的能同时到场。',
+    question: '已经拥有的东西，怎样在一个合适的范围里共同起作用？',
+    nodes: [
+      {
+        id: 'c-method', label: '方法笔记', time: '较早 · 日期未提供',
+        quote: '我把做事时反复用到的方法记了下来。',
+        source: '虚构素材 C1 · 方法积累'
+      },
+      {
+        id: 'c-use', label: '小事试用', time: '随后 · 日期未提供',
+        quote: '后来在两个小任务里用过，至少知道哪些步骤还不顺。',
+        source: '虚构素材 C2 · 应用经历'
+      },
+      {
+        id: 'c-peer', label: '伙伴交流', time: '另一段经历 · 日期未提供',
+        quote: '有位同行愿意和我交流，我们对想解决的问题有些共识。',
+        source: '虚构素材 C3 · 交流经历'
+      },
+      {
+        id: 'c-invite', label: '合作邀约', time: '交流之后 · 日期未提供',
+        quote: '对方提过可以一起做一个小项目，具体安排还没谈。',
+        source: '虚构素材 C4 · 未落实的邀约'
+      },
+      {
+        id: 'c-record', label: '持续记录', time: '持续一段时间 · 起止未知',
+        quote: '我习惯留下做过的过程和遇到的问题。',
+        source: '虚构素材 C5 · 记录习惯'
+      },
+      {
+        id: 'c-work', label: '作品整理', time: '记录之后 · 日期未提供',
+        quote: '已经从记录里整理出几份可以拿来讨论的材料。',
+        source: '虚构素材 C6 · 已有材料'
+      },
+      {
+        id: 'c-now', label: '想合在一起', time: '本次叙述 · 日期未提供',
+        quote: '我想用现有材料试一个合作，但不清楚范围和彼此能投入多少。',
+        source: '虚构素材 C7 · 当前问题'
+      }
+    ],
+    edges: [
+      {
+        from: 'c-method', to: 'c-use', label: '在任务里试用',
+        basis: 'C1、C2 描述了方法与应用的联系，仅支持已有尝试。',
+        condition: '新任务与原方法的适用范围接近。',
+        counterexample: '在两个小任务有效，不能保证适用更复杂项目。',
+        unknown: '哪些步骤能够复用，尚未逐项核对。'
+      },
+      {
+        from: 'c-peer', to: 'c-invite', label: '从交流到邀约',
+        basis: 'C3、C4 表明有交流与口头邀约，还没有投入承诺。',
+        condition: '双方仍愿意推进，并能讨论范围。',
+        counterexample: '表达兴趣不等于有时间参加。',
+        unknown: '伙伴的时间、角色与实际可投入程度未知。'
+      },
+      {
+        from: 'c-record', to: 'c-work', label: '整理为可讨论材料',
+        basis: 'C5、C6 描述由过程记录整理材料的经历。',
+        condition: '材料与拟讨论的问题有关，且可以在本次合作中使用。',
+        counterexample: '材料丰富也可能尚不适合对方的需求。',
+        unknown: '是否需要补充授权、整理或匿名处理，尚待核对。'
+      },
+      {
+        from: 'c-use', to: 'c-now', label: '方法可能可用',
+        basis: 'C2 的应用经历可提供起点，不代表项目能力已经充分。',
+        condition: '先把合作范围缩到现有能力能够检验的一部分。',
+        counterexample: '若范围扩大，现有方法可能不足。',
+        unknown: '本次合作实际需要解决什么，还没有定稿。'
+      },
+      {
+        from: 'c-invite', to: 'c-now', label: '伙伴尚待确认',
+        basis: 'C4、C7 支持核对合作条件，不能把口头邀约画成已经到位的人手。',
+        condition: '伙伴明确同意角色、范围和可投入时间。',
+        counterexample: '伙伴可能愿意交流，但暂时不能共做。',
+        unknown: '可用时间与具体分工尚未确认。'
+      },
+      {
+        from: 'c-work', to: 'c-now', label: '材料可能成为起点',
+        basis: 'C6、C7 表明希望使用已有材料尝试合作。',
+        condition: '材料可被分享，而且与共同问题有关。',
+        counterexample: '若不匹配目标，继续积累并不等于合作准备充分。',
+        unknown: '对方是否看过材料、是否认为合用，目前未知。'
+      }
+    ],
+    graphLabels: ['可用方法', '伙伴意向', '已有材料'],
+    action: {
+      label: '试着把条件对齐', short: '对齐合作条件',
+      change: '把“可以一起做”，拆成范围、角色与投入的具体约定。',
+      cost: '需要一次沟通，也可能发现现在并不适合启动。',
+      needs: '双方愿意诚实说明现阶段能够投入什么。',
+      observe: '哪些条件已经落实，哪些仍只是愿望？'
+    },
+    alternative: {
+      label: '先整理自己的小样', protect: '保留自主节奏，让现有积累继续可用。',
+      cost: '暂时减少共同讨论与分工的帮助。',
+      needs: '范围足够小，且不依赖尚未承诺的资源。',
+      observe: '哪些部分自己可以完成，哪些确实需要合作？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果条件能对齐', title: '只启动一个小范围',
+        body: '选择现有方法与材料能支持的一部分，并约定何时核对进展。',
+        needs: '角色、可投入时间与材料使用范围得到确认。',
+        cost: '合作会占用原有事项的时间，也需要协调。',
+        observe: '实际投入是否与约定相符？范围有没有变大？'
+      },
+      {
+        id: 'b', label: '如果暂时对不齐', title: '保留联系，重新排布',
+        body: '可以延后合作、缩小范围，或先独立整理；不把尚未到位的资源算进去。',
+        needs: '知道具体缺少什么，也能接受暂不启动。',
+        cost: '共同尝试会推迟，但已有积累仍然存在。',
+        observe: '以后出现什么新条件，才值得再谈？'
+      }
+    ],
+    insights: [
+      {
+        title: '几段积累，各有来处', chain: ['形成方法', '用于小事', '留下材料'],
+        sentence: '已有经验提供起点，其适用范围仍需要通过具体任务核对。'
+      },
+      {
+        title: '意向还需要落地', chain: ['愿意交流', '说明投入', '确认范围'],
+        sentence: '关系中的善意值得保留，但不等于已经可用的项目资源。'
+      },
+      {
+        title: '汇流，也允许暂停', chain: ['核对条件', '缩小尝试', '再看反馈'],
+        sentence: '条件暂不齐时，保留已有积累也是一种合理安排。'
+      }
+    ],
+    context: {
+      scene: '用一次短讨论确认：共同做什么、各自负责什么、眼下能投入多少。',
+      against: '只有口头邀约，不能将合作画成已经落实，更不能预设项目结果。',
+      alternative: '可以延后汇流，先把自己能够独立推进的一小部分整理出来。'
+    },
+    topics: [
+      { id: 'self', name: '自我', status: '略有了解', label: '看见已有积累', points: ['能够整理过程与问题，不据此推导固定人格。'] },
+      { id: 'learning', name: '学习', status: '略有了解', label: '方法曾被试用', points: ['在两个小任务里试过方法。', '适用范围仍需要核对。'] },
+      { id: 'career', name: '事业', status: '深入', label: '一次小合作的条件', points: ['已有方法与可讨论材料。', '合作范围和投入未落实。', '是否启动取决于条件，而非画面中的汇流。'] },
+      { id: 'finance', name: '财务', status: '未展开', label: '尚未了解', points: ['没有预算、报酬或承担损失的资料。'] },
+      { id: 'relationships', name: '关系', status: '深入', label: '意向与承诺分开', points: ['有同行交流与口头邀约。', '伙伴可投入时间未知。', '本次不涉及亲密关系判断。'] },
+      { id: 'family', name: '家庭', status: '未展开', label: '尚未了解', points: ['本次没有家庭处境资料。'] },
+      { id: 'mobility', name: '迁移', status: '未展开', label: '尚未了解', points: ['本次没有迁居或异地合作限制的资料。'] },
+      { id: 'wellbeing', name: '身心', status: '未展开', label: '尚未了解', points: ['可投入精力尚未核对，不把合作意愿等同于精力充足。'] }
+    ],
+    windows: [
+      { time: '若准备启动 · 事前', title: '先确认能到场的条件', body: '核对范围、投入与材料使用，而非先把项目铺开。', kind: '现实计划' },
+      { time: '双方约定的检查点', title: '看实际投入与范围', body: '检查点由现实安排决定，此处不填虚构日期。', kind: '现实计划' },
+      { time: '时间未知', title: '合作何时能开始', body: '伙伴尚未确认可投入时间，暂不设置启动日。', kind: '信息缺失' }
+    ],
+    revision: {
+      prior: '方法、伙伴意向与已有材料，可能汇入同一次小合作。',
+      feedback: '模拟回访：沟通后才知道，伙伴愿意偶尔交流，但目前没有时间共同完成项目。',
+      current: '暂停伙伴通往合作节点的连接，只让已可用的方法与材料汇入独立小样；伙伴保留在旁侧，标作交流支持。',
+      keep: '方法试用与作品材料仍然存在，交流关系也可以保留。',
+      drop: '移除“伙伴已可参与共做”的资源假设。',
+      unknown: '以后何时具备共做条件，以及独立范围如何确定，仍需了解。',
+      title: ['不必等所有人到齐，', '先看手里已有的。'],
+      graphLabels: ['可用方法', '交流支持', '已有材料']
+    },
+    observation: '把已经承诺的资源与仍在表达意愿的资源分开记下，再决定尝试多大范围。'
+  },
+  {
+    id: 'sparse',
+    name: '知夏',
+    role: '先理解眼前 · 虚构样例',
+    structure: 'sparse',
+    title: ['还不必画出全貌，', '先看清眼前一处。'],
+    summary: '目前只知道想换一种节奏，还不确定想改变什么。留白也是这份图的一部分。',
+    question: '最近哪一个具体时刻，让你想换一种过法？',
+    nodes: [
+      {
+        id: 's-wish', label: '想换节奏', time: '本次叙述 · 日期未提供',
+        quote: '最近有时会想，是不是可以换一种节奏，但还说不清具体是什么。',
+        source: '虚构素材 S1 · 初次表达'
+      },
+      {
+        id: 's-pause', label: '暂不决定', time: '同次叙述 · 先后未定位',
+        quote: '我现在不想立刻做一个大的决定，想先弄明白自己的感受。',
+        source: '虚构素材 S2 · 当前意愿'
+      }
+    ],
+    edges: [],
+    graphLabels: ['想换节奏', '暂不决定'],
+    action: {
+      label: '先看一个具体片段', short: '观察一个片段',
+      change: '让模糊的想法多一点现场信息；现在还不足以连接成因果。',
+      cost: '需要片刻停留，也可能暂时仍说不清。',
+      needs: '只在愿意的时候记录，不要求立刻作出判断。',
+      observe: '当时发生了什么？你希望少一点什么，或多一点什么？'
+    },
+    alternative: {
+      label: '先把问题放在这里', protect: '保留不决定、不解释的空间。',
+      cost: '此刻仍没有足够信息提出具体路径。',
+      needs: '不必满足额外条件，也无需为暂停作出说明。',
+      observe: '若以后愿意，再带回一个具体片段。'
+    },
+    branches: [],
+    insights: [
+      {
+        title: '已有信息很少，也足够开始', chain: ['一个念头', '一段现场', '再理解一点'],
+        sentence: '这里只提出了解的入口，不把未知拼成一个完整故事。'
+      }
+    ],
+    context: {
+      scene: '想起一个希望换节奏的时刻，可以先描述现场，不急着解释自己。',
+      against: '尚不知道涉及工作、生活安排还是其他处境，不能判断原因。',
+      alternative: '保持空白、暂时不继续，也符合已经表达的意愿。'
+    },
+    topics: [
+      { id: 'self', name: '自我', status: '略有了解', label: '先理解感受', points: ['表达了想换节奏的念头。', '同时明确暂不作重大决定。'] },
+      { id: 'learning', name: '学习', status: '未展开', label: '尚未了解', points: ['没有学习经历资料。'] },
+      { id: 'career', name: '事业', status: '未展开', label: '尚未了解', points: ['没有工作处境资料，不假定想换节奏等于想换工作。'] },
+      { id: 'finance', name: '财务', status: '未展开', label: '尚未了解', points: ['没有财务处境资料。'] },
+      { id: 'relationships', name: '关系', status: '未展开', label: '尚未了解', points: ['没有关系经历资料。'] },
+      { id: 'family', name: '家庭', status: '未展开', label: '尚未了解', points: ['没有家庭处境资料。'] },
+      { id: 'mobility', name: '迁移', status: '未展开', label: '尚未了解', points: ['没有地域选择资料。'] },
+      { id: 'wellbeing', name: '身心', status: '未展开', label: '尚未了解', points: ['不能由“想换节奏”推断健康、情绪状态或诊断。'] }
+    ],
+    windows: [
+      { time: '愿意的时候', title: '带回一个片段', body: '时间由自己决定；现在没有需要赶上的节点。', kind: '现实计划' },
+      { time: '尚未定位', title: '不补画人生阶段', body: '经历、原因与未来条件都还需要了解。', kind: '信息缺失' }
+    ],
+    revision: {
+      prior: '现在只知道想换节奏，同时不想立刻作重大决定。',
+      feedback: '模拟回访：暂时没有想补充的片段，希望先保留这个问题。',
+      current: '保持两处已知信息分开，不新增经历、连线或未来分支。',
+      keep: '想理解自己的意愿，以及暂不决定的空间。',
+      drop: '暂不提出具体改变方案，也不填补未知原因。',
+      unknown: '涉及哪种处境、已有何种约束，目前仍未知。',
+      title: ['答案可以晚一点，', '这块留白属于你。'],
+      graphLabels: ['保留问题', '暂不决定', '原因未知']
+    },
+    observation: '没有需要完成的任务。若以后愿意，带回一个让你想换节奏的具体时刻。'
+  }
+];
+
+/*
+ * 以下为预先编写的模拟 V2，不由页面点击自动推断。
+ * 单独提供修订快照，让主图、依据、行动与解读读取同一版本；V1 保持原样。
+ * 新节点与关系仍属于虚构素材。copy 只继承未被新反馈影响的字段。
+ */
+(function addRevisionSnapshots() {
+  const copy = value => JSON.parse(JSON.stringify(value));
+  const byId = id => window.CIHOU_CASES.find(item => item.id === id);
+
+  const loop = byId('loop');
+  Object.assign(loop.revision, {
+    summary: '补充的经历把重点移向岗位空缺与派工权限。负荷仍在，先核对谁能调整安排。',
+    question: '当工作量来自岗位与资源约束，哪些安排仍可以被讨论？',
+    nodes: [
+      {
+        id: 'l-vacancy', label: '岗位空缺', time: '模拟回访 · 日期未提供',
+        quote: '这几次任务主要来自岗位空缺，原来做这些事的人暂时不在。',
+        source: '虚构素材 LR1 · 模拟回访：岗位情况'
+      },
+      {
+        id: 'l-assign', label: '明确派工', time: '模拟回访 · 日期未提供',
+        quote: '负责人明确把任务派给我。我提出过重新分配，但暂时没有补充人手。',
+        source: '虚构素材 LR2 · 模拟回访：分配与权限'
+      },
+      copy(loop.nodes.find(node => node.id === 'l-load'))
+    ],
+    edges: [
+      {
+        from: 'l-vacancy', to: 'l-assign', label: '空缺后的派工',
+        basis: '模拟回访 LR1、LR2 将这些任务与岗位空缺后的明确派工联系起来。',
+        condition: '本次讨论的任务确实来自这些空缺岗位。',
+        counterexample: '其他临时任务可能有不同来源，不能全部归入同一原因。',
+        unknown: '空缺预计持续多久、谁能决定补充人手，目前未知。'
+      },
+      {
+        from: 'l-assign', to: 'l-load', label: '原任务未减量',
+        basis: 'LR2 的明确派工与原素材 L3 的任务叠加共同支持核对总负荷。',
+        condition: '新增事项没有伴随原任务延期、减量或交接。',
+        counterexample: '若实际已经减量，仍需寻找其他导致负荷的条件。',
+        unknown: '具体优先级、总工时及可调整的任务范围尚未核对。'
+      }
+    ],
+    graphLabels: ['岗位空缺', '明确派工', '任务叠加'],
+    graphNodeIds: ['l-vacancy', 'l-assign', 'l-load'],
+    action: {
+      label: '试着讨论工作量', short: '讨论优先级与交接',
+      change: '把岗位空缺带来的额外工作量，转成有权限的人需要明确的取舍。',
+      cost: '需要整理任务与期限，也可能仍得等待资源安排。',
+      needs: '找到有权决定延期、交接或补充资源的人。',
+      observe: '哪些事项被明确延期、减量或转交？哪些仍没有负责人？'
+    },
+    alternative: {
+      label: '先核对权限与负荷', protect: '先看清可以协商的范围，减少无效重复沟通。',
+      cost: '短期负荷可能继续维持。',
+      needs: '可以记录任务来源、期限，以及分配者能调整的事项。',
+      observe: '阻碍来自人手、权限，还是没有明确优先级？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果能够调整安排', title: '确认具体取舍',
+        body: '将延期、减量或交接落实到事项与负责人，再核对实际执行。',
+        needs: '有权限的人明确决定，相关协作者知道新安排。',
+        cost: '调整可能改变他人的时间表，也需要交接。',
+        observe: '总负荷是否发生变化，而不只是得到理解？'
+      },
+      {
+        id: 'b', label: '如果资源仍无法调整', title: '保留限制，寻找支持',
+        body: '记录尚未解决的约束与可承受范围，再判断等待或寻求其他支持是否合适。',
+        needs: '能了解限制来自哪里，并评估现有支持渠道。',
+        cost: '问题可能暂时不变，不应将结果归为个人沟通失败。',
+        observe: '出现什么资源或权限变化，才值得再次讨论？'
+      }
+    ],
+    insights: [
+      {
+        title: '回环被打开了', chain: ['岗位空缺', '明确派工', '负荷叠加'],
+        sentence: '这次补充让我们撤去个人补位的回连，转向资源与分配的开链。'
+      },
+      {
+        title: '能讨论的是具体取舍', chain: ['列出总量', '找到权限', '确认安排'],
+        sentence: '你可以推动条件变清楚，不必独自承担补齐资源的责任。'
+      }
+    ],
+    context: {
+      scene: '把新增工作与原任务放在同一张清单里，请有权限的人明确优先级。',
+      against: '岗位空缺可以解释这些派工，仍不能解释所有临时任务；每项来源需要核对。',
+      alternative: '若无权调整的人已反复听过诉求，下一步可以先寻找真正的决策范围。'
+    },
+    topics: loop.topics.map(topic => topic.id === 'career'
+      ? { id: 'career', name: '事业', status: '深入', label: '岗位与权限约束', points: ['模拟回访补充了岗位空缺与明确派工。', '此前已经提出重新分配。', '重点改为总负荷、调整权限与资源。'] }
+      : topic.id === 'self'
+        ? { id: 'self', name: '自我', status: '略有了解', label: '不把负荷归于性格', points: ['已有主动沟通经历，不能将处境解释为不会拒绝。'] }
+        : topic.id === 'relationships'
+          ? { id: 'relationships', name: '关系', status: '略有了解', label: '分配与协商', points: ['已与负责人谈过分配，资源尚未补充。', '未展开其他关系领域。'] }
+          : copy(topic)),
+    windows: [
+      { time: '若再次讨论 · 事前', title: '核对任务与权限', body: '明确已有沟通、尚未处理的事项及有权调整的人。', kind: '现实计划' },
+      { time: '得到新安排之后', title: '看实际总量', body: '核对延期、交接或减量是否发生，不把口头理解当成已解决。', kind: '现实计划' },
+      { time: '时间未知', title: '资源何时变化', body: '岗位补充时间没有资料，暂不生成改善日期。', kind: '信息缺失' }
+    ],
+    observation: '下次讨论时，记下哪一项任务由谁决定调整，以及实际工作量是否随之改变。'
+  });
+
+  const bridge = byId('bridge');
+  Object.assign(bridge.revision, {
+    summary: '已经完成独立作品并做过修改。新的缺口在反馈：标准没有说清，意见还不能用于下一次改进。',
+    question: '怎样让已经做过的作品，得到具体而可使用的反馈？',
+    nodes: [
+      {
+        id: 'b-independent', label: '已有作品', time: '模拟回访 · 日期未提供',
+        quote: '其实我已经独立做过两件作品，不只是跟着教程做。',
+        source: '虚构素材 BR1 · 模拟回访：独立实践'
+      },
+      {
+        id: 'b-revised', label: '做过修改', time: '作品完成之后 · 日期未提供',
+        quote: '这两件作品后来都改过，我不是一直停在准备阶段。',
+        source: '虚构素材 BR2 · 模拟回访：既有修改'
+      },
+      {
+        id: 'b-criteria', label: '标准未明', time: '模拟回访 · 日期未提供',
+        quote: '每次请人看，都没有先说清要按什么用途、看哪一部分。',
+        source: '虚构素材 BR3 · 模拟回访：反馈条件'
+      },
+      copy(bridge.nodes.find(node => node.id === 'b-comment')),
+      {
+        id: 'b-now', label: '待具体反馈', time: '模拟回访 · 日期未提供',
+        quote: '作品已经做过也改过，接下来想知道具体哪一处需要改、为什么。',
+        source: '虚构素材 BR4 · 模拟回访：当前问题'
+      }
+    ],
+    edges: [
+      {
+        from: 'b-independent', to: 'b-revised', label: '已经历一次修改',
+        basis: '模拟回访 BR1、BR2 明确描述了独立作品与后续修改。',
+        condition: '这些修改确实发生在讨论的两件作品上。',
+        counterexample: '有修改不等于改进已经得到检验。',
+        unknown: '修改依据与实际效果还未逐项了解。'
+      },
+      {
+        from: 'b-revised', to: 'b-criteria', label: '需要共同的判断标准',
+        basis: 'BR2、BR3 显示已有修改，但反馈时尚未明确用途与评价环节。',
+        condition: '当前目标是判断作品在某一用途下是否适合。',
+        counterexample: '如果目标是自由创作，外部统一标准未必必要。',
+        unknown: '最需要核对的使用场景尚未选定。'
+      },
+      {
+        from: 'b-criteria', to: 'b-comment', label: '可能让回应过于笼统',
+        basis: 'BR3 的标准未明与 B4 的笼统回应存在可继续核对的联系。',
+        condition: '反馈者有能力评价，但缺少具体提问与用途信息。',
+        counterexample: '也可能是对方时间有限或不熟悉场景，说明用途仍未必得到具体意见。',
+        unknown: '反馈者是否合适、是否愿意深入评价，目前未知。'
+      },
+      {
+        from: 'b-comment', to: 'b-now', label: '仍难判断下一处改动',
+        basis: '原素材 B4 与模拟回访 BR4 的疑问相连；新反馈将缺口收窄到意见的可用性。',
+        condition: '确实希望据此修改，而不只是分享作品。',
+        counterexample: '自己已有充分的判断依据时，未必必须等待外部意见。',
+        unknown: '已有自检方法还未展开。'
+      }
+    ],
+    graphLabels: ['已有作品', '标准未明', '待具体反馈'],
+    graphNodeIds: ['b-independent', 'b-criteria', 'b-now'],
+    action: {
+      label: '试着问一个具体问题', short: '请求具体反馈',
+      change: '让已有作品与一个明确用途相连，再请对方针对其中一处提供依据。',
+      cost: '需要挑选问题、说明场景，也可能要寻找更合适的反馈者。',
+      needs: '选定用途，并找到愿意就此回应的人。',
+      observe: '得到的意见是否指出具体位置、理由和可尝试的改动？'
+    },
+    alternative: {
+      label: '先建立自己的检查项', protect: '保留已有作品与实践成果，不再把问题归为没有开始。',
+      cost: '自检可能看不到外部使用者的问题。',
+      needs: '能够描述一个使用场景，并列出少量可观察的要求。',
+      observe: '哪些问题自己能判断，哪些确实需要他人体验？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果得到具体依据', title: '据此改一处，再核对',
+        body: '选择一条与用途相关的意见尝试修改，比较前后变化。',
+        needs: '意见可以落实，并且适合本次作品的目标。',
+        cost: '需要一次有范围的修改，反馈也可能彼此不一致。',
+        observe: '改动是否解决了原问题？依据是否经得住再看？'
+      },
+      {
+        id: 'b', label: '如果仍只有笼统评价', title: '调整反馈条件',
+        body: '核对提问是否具体、对方是否熟悉场景，再选择换问题或换反馈方式。',
+        needs: '能够说明想验证的环节，而不是要求对方替自己做总判断。',
+        cost: '寻找适合的反馈需要时间，暂时可能仍没有结论。',
+        observe: '缺的是共同标准、适合的反馈者，还是对方的时间？'
+      }
+    ],
+    insights: [
+      {
+        title: '实践已经在这里', chain: ['独立完成', '做过修改', '保留成果'],
+        sentence: '新信息撤去了“还没开始”的理解，不必再用做更多来证明已经做过。'
+      },
+      {
+        title: '下一座桥在反馈里', chain: ['明确用途', '问一处细节', '寻找依据'],
+        sentence: '具体反馈尚未获得；图中的新连接表示一种可尝试的条件。'
+      }
+    ],
+    context: {
+      scene: '带同一件已有作品，问“在这个用途下，这一处是否清楚，为什么？”',
+      against: '说明用途也不保证得到好反馈；对方的能力、时间与视角同样重要。',
+      alternative: '先自检再请教也成立，无需为这次预演重新做一个项目。'
+    },
+    topics: bridge.topics.map(topic => topic.id === 'learning'
+      ? { id: 'learning', name: '学习', status: '深入', label: '把反馈变具体', points: ['模拟回访确认已有两件独立作品。', '已经做过修改，不能归为未实践。', '反馈用途与标准尚未对齐。'] }
+      : topic.id === 'relationships'
+        ? { id: 'relationships', name: '关系', status: '略有了解', label: '寻找合适的反馈', points: ['已有回应比较笼统。', '对方是否熟悉使用场景仍待了解。'] }
+        : copy(topic)),
+    windows: [
+      { time: '若再次请教 · 事前', title: '只选一个评价环节', body: '沿用已有作品，说明用途与具体问题。', kind: '现实计划' },
+      { time: '获得意见之后', title: '核对意见有没有依据', body: '可以采纳、继续追问，也可以保留不同意见。', kind: '现实计划' }
+    ],
+    observation: '下一次请教后，记下对方指向了哪里、为什么，以及你是否愿意据此改动。'
+  });
+
+  const confluence = byId('confluence');
+  confluence.graphNodeIds = ['c-method', 'c-invite', 'c-work'];
+  Object.assign(confluence.revision, {
+    summary: '伙伴目前没有共同完成项目的空档。方法和材料仍然可用，下一步先核对自己能承担多大范围。',
+    question: '先不计算伙伴的投入，已有方法与材料能支持怎样的小范围尝试？',
+    nodes: confluence.nodes.map(node => node.id === 'c-invite'
+      ? {
+          id: 'c-invite', label: '暂不能共做', time: '模拟回访 · 日期未提供',
+          quote: '对方愿意偶尔交流，但目前没有时间共同完成项目。',
+          source: '虚构素材 CR1 · 模拟回访：伙伴投入'
+        }
+      : node.id === 'c-now'
+        ? {
+            id: 'c-now', label: '重看可做范围', time: '模拟回访 · 日期未提供',
+            quote: '自己的方法和材料都还在，但哪些部分能独立完成，我还得重新核对。',
+            source: '虚构素材 CR2 · 模拟回访：当前问题'
+          }
+        : copy(node)),
+    edges: [
+      copy(confluence.edges.find(edge => edge.from === 'c-method')),
+      {
+        from: 'c-peer', to: 'c-invite', label: '交流保留，共做暂停',
+        basis: '原素材 C3 的交流关系保留；模拟回访 CR1 明确暂时不能投入共做。',
+        condition: '双方仍愿意交流，并尊重对方可投入的范围。',
+        counterexample: '愿意偶尔交流不等于随时能够提供帮助。',
+        unknown: '以后是否有共做时间、交流频率如何，目前未知。'
+      },
+      copy(confluence.edges.find(edge => edge.from === 'c-record')),
+      {
+        from: 'c-use', to: 'c-now', label: '核对独立适用范围',
+        basis: 'C2 的小任务经验仍在；CR2 将问题改为独立可做的范围。',
+        condition: '新尝试足够小，不依赖伙伴尚未承诺的能力。',
+        counterexample: '若关键环节只能由他人完成，不能因为有经验就默认可独立推进。',
+        unknown: '关键环节是否依赖伙伴，还需要逐项核对。'
+      },
+      {
+        from: 'c-work', to: 'c-now', label: '保留可用材料',
+        basis: '原素材 C6 与模拟回访 CR2 表明材料仍在，可用于核对小样范围。',
+        condition: '材料适合新范围，且可以独立使用。',
+        counterexample: '如果使用依赖其他人的授权，材料存在也不等于立即可用。',
+        unknown: '是否需要授权、补充与重新整理，仍待核对。'
+      }
+    ],
+    graphLabels: ['可用方法', '暂不能共做', '已有材料'],
+    graphNodeIds: ['c-method', 'c-invite', 'c-work'],
+    action: {
+      label: '试着核对独立范围', short: '缩小尝试范围',
+      change: '先移除尚未到位的伙伴投入，看看已有方法与材料能支持哪一小部分。',
+      cost: '需要重新取舍，能做的范围可能比原设想小。',
+      needs: '关键环节在自己能力、时间与材料使用权限之内。',
+      observe: '哪些环节真正可独立完成，哪些仍必须等待支持？'
+    },
+    alternative: {
+      label: '保留邀约，暂不启动', protect: '保留已有积累和交流关系，不勉强补齐所有角色。',
+      cost: '项目会延后，也可能暂时没有明确时间。',
+      needs: '接受当前条件不足；无需对伙伴追加投入要求。',
+      observe: '以后哪一项资源变化，才足以重新讨论合作？'
+    },
+    branches: [
+      {
+        id: 'a', label: '如果小范围可独立完成', title: '只试自己能承担的一部分',
+        body: '用现有方法与材料做一个边界清楚的小样，伙伴的偶尔交流不计入必要资源。',
+        needs: '关键环节、时间与使用权限都已经核对。',
+        cost: '独立尝试仍会占用时间，也缺少原设想中的分工。',
+        observe: '实际是否能独立完成？范围有没有悄悄扩大？'
+      },
+      {
+        id: 'b', label: '如果关键环节仍需支持', title: '停在缺口处也可以',
+        body: '记录依赖的具体条件，可以等待、继续缩小或另行了解支持方式。',
+        needs: '明确是哪一环需要支持，不把伙伴暂时无空档当作个人失败。',
+        cost: '启动会推迟，但不需要独自承担原定全部工作。',
+        observe: '什么样的支持真正必要？出现后是否仍值得推进？'
+      }
+    ],
+    insights: [
+      {
+        title: '把可用与愿意分开', chain: ['保留交流', '共做暂停', '重新核对'],
+        sentence: '伙伴支线暂时断开；这条变化来自补充的信息，不代表关系好坏。'
+      },
+      {
+        title: '手里的积累仍然在', chain: ['已有方法', '可用材料', '小范围检验'],
+        sentence: '能否独立推进仍待核对，图中不会替你补上缺少的能力与时间。'
+      }
+    ],
+    context: {
+      scene: '把原计划拆成几项，逐项标明是否依赖伙伴，再核对自己可做的边界。',
+      against: '方法与材料仍在，也不保证独立完成；关键能力、时间与权限仍是条件。',
+      alternative: '若拆开之后仍不合适，保留材料与联系、暂不启动同样成立。'
+    },
+    topics: confluence.topics.map(topic => topic.id === 'career'
+      ? { id: 'career', name: '事业', status: '深入', label: '重新核对小范围', points: ['方法与作品材料仍然可用。', '不能再将伙伴投入计入共做资源。', '能否独立推进取决于关键环节与可用时间。'] }
+      : topic.id === 'relationships'
+        ? { id: 'relationships', name: '关系', status: '深入', label: '交流与共做分开', points: ['模拟回访确认伙伴暂时没有共做空档。', '偶尔交流仍可以保留。', '不据此判断关系好坏或未来承诺。'] }
+        : copy(topic)),
+    windows: [
+      { time: '若继续考虑 · 事前', title: '移除未到位的投入', body: '先按现有条件核对，不把伙伴空档默认补回来。', kind: '现实计划' },
+      { time: '若做了独立小样', title: '回看实际范围', body: '记录哪些可以承担、哪些仍需要支持，再决定是否继续。', kind: '现实计划' },
+      { time: '时间未知', title: '何时能够共同投入', body: '伙伴未提供时间，不生成重新合作的日期。', kind: '信息缺失' }
+    ],
+    observation: '把每项工作需要的能力、时间与支持写清，保留“暂时做不了”的部分。'
+  });
+
+  const sparse = byId('sparse');
+  Object.assign(sparse.revision, {
+    summary: '这次没有新增经历。想理解自己、暂不决定，这两处信息继续保留，其他地方仍然留白。',
+    question: '如果以后愿意，可以从一个具体片段再开始。',
+    nodes: copy(sparse.nodes),
+    edges: [],
+    graphLabels: ['想换节奏', '暂不决定'],
+    graphNodeIds: ['s-wish', 's-pause'],
+    action: copy(sparse.action),
+    alternative: copy(sparse.alternative),
+    branches: [],
+    insights: [
+      {
+        title: '没有新信息，就不补线', chain: ['保留念头', '尊重暂停', '等待愿意'],
+        sentence: '回访也可以没有进展；两处已知信息仍不足以构成因果关系。'
+      }
+    ],
+    context: {
+      scene: '当前无需完成记录，也无需解释为什么暂时不继续。',
+      against: '没有新增片段，不能从暂停推导犹豫、逃避或其他心理原因。',
+      alternative: '若以后愿意，原先的观察入口仍保留；时间由自己决定。'
+    },
+    topics: copy(sparse.topics),
+    windows: copy(sparse.windows),
+    observation: '这次没有待完成的任务。保留问题，或以后带回一个片段，都可以。'
+  });
+}());
+</script><script>/*
+ * 此后 · 第一阶段图内交互文案。
+ * 仅对应 cases.js 中四个匿名虚构样例的 V1；不是正式报告生成规则。
+ * 热点只切换阅读强调，不改变事实、现实行动状态或观察草稿。
+ * nodeRefs / edgeRefs 指向已有素材；情景引用 branchId，不补写未来结果。
+ */
+window.CIHOU_INTERACTIONS = {
+  loop: {
+    intro: '点图上的圆点，读懂这段经历。',
+    overview: {
+      kind: 'interpretation',
+      title: '从几次帮忙，到持续承接。',
+      body: '任务正在叠加。看看它怎样延续，也看看一次沟通能让什么条件变得清楚。'
+    },
+    hotspots: [
+      {
+        id: 'past', label: '临时补位', kind: 'fact',
+        title: '最初，是几次临时帮忙。',
+        body: '你接过分工之外的任务，后来类似的事又持续交来。',
+        nodeRefs: ['l-fill', 'l-default'], edgeRefs: []
+      },
+      {
+        id: 'relation', label: '安排沿用？', kind: 'interpretation',
+        title: '安排沿用，事情又回到你这里。',
+        body: '如果分工持续沿用，下一次仍可能交给你。回边是一种理解，派工原因还需核对。',
+        nodeRefs: ['l-fill', 'l-default', 'l-load'],
+        edgeRefs: [
+          { from: 'l-fill', to: 'l-default' },
+          { from: 'l-load', to: 'l-fill' }
+        ]
+      },
+      {
+        id: 'present', label: '任务叠加', kind: 'present',
+        title: '眼下，新的事挤占了原来的事。',
+        body: '几项任务同时交来。具体负荷、派工权限与可用人手，还需要继续核对。',
+        nodeRefs: ['l-load'], edgeRefs: []
+      },
+      {
+        id: 'action', label: '先谈取舍', kind: 'action',
+        title: '下一份任务，先经过一次讨论。',
+        body: '把新旧任务一起摆出来，先确认优先级。旧负担仍在；能否调整，还要等对方回应。',
+        nodeRefs: ['l-default', 'l-load'], edgeRefs: []
+      },
+      {
+        id: 'future-a', label: '若愿协商', kind: 'scenario',
+        title: '如果愿意调整，再看安排。',
+        body: '假设沟通后达成共识，接下来要观察：哪些任务真的延期、交接或重新排序？',
+        nodeRefs: [], edgeRefs: [], branchId: 'a'
+      },
+      {
+        id: 'future-b', label: '若未同意', kind: 'scenario',
+        title: '如果暂未同意，先看条件。',
+        body: '假设沟通后仍未调整，先了解卡在人手、权限还是优先级，再决定等待或寻求支持。',
+        nodeRefs: [], edgeRefs: [], branchId: 'b'
+      }
+    ]
+  },
+
+  bridge: {
+    intro: '点图上的圆点，读懂这段经历。',
+    overview: {
+      kind: 'interpretation',
+      title: '准备已经在这里。',
+      body: '已有课程、笔记和练习。下一处连接，可能是让作品得到可以使用的反馈。'
+    },
+    hotspots: [
+      {
+        id: 'past', label: '已有练习', kind: 'fact',
+        title: '你已经有过学习与练习。',
+        body: '课程、笔记和跟做中的改动，都是已经发生的投入，不能因为仍有疑问就归零。',
+        nodeRefs: ['b-course', 'b-notes', 'b-practice'], edgeRefs: []
+      },
+      {
+        id: 'relation', label: '回应笼统', kind: 'interpretation',
+        title: '“还不错”，还没指出下一处。',
+        body: '反馈可能缺少共同标准；也可能与对方的时间有关，不能直接断言你没有实践。',
+        nodeRefs: ['b-comment', 'b-now'],
+        edgeRefs: [{ from: 'b-comment', to: 'b-now' }]
+      },
+      {
+        id: 'present', label: '想知差距', kind: 'present',
+        title: '现在想知道，离使用还有多远。',
+        body: '具体应用场景与已有独立作品还需了解。眼下不必先把问题归为学得不够。',
+        nodeRefs: ['b-now'], edgeRefs: []
+      },
+      {
+        id: 'action', label: '带问题请教', kind: 'action',
+        title: '带一件作品，问一个具体问题。',
+        body: '先说明用途，再请对方指出某一处的依据。提出请求，不等于已经得到反馈。',
+        nodeRefs: ['b-practice', 'b-comment'], edgeRefs: []
+      },
+      {
+        id: 'future-a', label: '若意见具体', kind: 'scenario',
+        title: '如果意见具体，可以试改一处。',
+        body: '假设请教后得到可用意见，挑一处修改，再看它解决了什么；也允许发现意见不适合。',
+        nodeRefs: [], edgeRefs: [], branchId: 'a'
+      },
+      {
+        id: 'future-b', label: '若仍笼统', kind: 'scenario',
+        title: '如果仍很笼统，调整反馈条件。',
+        body: '假设请教后仍难判断，核对提问、用途，以及对方是否熟悉这个场景。',
+        nodeRefs: [], edgeRefs: [], branchId: 'b'
+      }
+    ]
+  },
+
+  confluence: {
+    intro: '点图上的圆点，读懂这段经历。',
+    overview: {
+      kind: 'interpretation',
+      title: '几项积累，可能在这里相遇。',
+      body: '方法、材料与合作意向各有来处。先核对能否同时投入，再决定尝试多大范围。'
+    },
+    hotspots: [
+      {
+        id: 'past', label: '方法材料', kind: 'fact',
+        title: '已有的积累，各有来处。',
+        body: '方法曾在小事里试用，记录也整理成了材料。它们是否适合新项目，仍要核对。',
+        nodeRefs: ['c-method', 'c-use', 'c-record', 'c-work'], edgeRefs: []
+      },
+      {
+        id: 'relation', label: '伙伴意向', kind: 'interpretation',
+        title: '愿意交流，不等于已经能共做。',
+        body: '对方表达过合作意愿，但时间与分工尚未确认。这条输入仍是一项外部条件。',
+        nodeRefs: ['c-peer', 'c-invite', 'c-now'],
+        edgeRefs: [{ from: 'c-invite', to: 'c-now' }]
+      },
+      {
+        id: 'present', label: '想合在一起', kind: 'present',
+        title: '此刻，想把积累用在一件小事。',
+        body: '合作范围、角色和可投入时间还没对齐；不能把几条线汇在一起当作条件已经具备。',
+        nodeRefs: ['c-now'], edgeRefs: []
+      },
+      {
+        id: 'action', label: '对齐条件', kind: 'action',
+        title: '把“可以一起做”，说得具体。',
+        body: '明确做什么、各自承担什么、眼下能投入多少。讨论本身不会自动补齐伙伴的时间。',
+        nodeRefs: ['c-invite', 'c-now'], edgeRefs: []
+      },
+      {
+        id: 'future-a', label: '若能对齐', kind: 'scenario',
+        title: '如果条件能对齐，只试一小部分。',
+        body: '假设讨论后范围与投入得到确认，先做小范围尝试，再看实际投入和范围是否一致。',
+        nodeRefs: [], edgeRefs: [], branchId: 'a'
+      },
+      {
+        id: 'future-b', label: '若未对齐', kind: 'scenario',
+        title: '如果条件未齐，积累仍然在。',
+        body: '假设讨论后仍不合适，可以延后、缩小或先独立整理，不把未承诺的资源算进去。',
+        nodeRefs: [], edgeRefs: [], branchId: 'b'
+      }
+    ]
+  },
+
+  sparse: {
+    intro: '点图上的圆点，读懂这段经历。',
+    overview: {
+      kind: 'unknown',
+      title: '两项已知，其他地方留白。',
+      body: '想换节奏，也想暂不决定。信息还不足以连接原因，先保留一个可以继续了解的问题。'
+    },
+    hotspots: [
+      {
+        id: 'past', label: '想换节奏', kind: 'fact',
+        title: '有时，会想换一种节奏。',
+        body: '这是目前已有的叙述。还不清楚涉及工作、生活安排，还是其他处境。',
+        nodeRefs: ['s-wish'], edgeRefs: []
+      },
+      {
+        id: 'relation', label: '暂不决定', kind: 'fact',
+        title: '同时，也不想立刻作大决定。',
+        body: '这份意愿可以被保留，不需要解释成犹豫或逃避，也不能据此补画一条因果。',
+        nodeRefs: ['s-pause'], edgeRefs: []
+      },
+      {
+        id: 'present', label: '原因未知', kind: 'unknown',
+        title: '现在，还不能说明为什么。',
+        body: '两项描述同时存在，不等于一项导致另一项。中间的留白，表示尚待了解。',
+        nodeRefs: [], edgeRefs: []
+      },
+      {
+        id: 'action', label: '一个片段', kind: 'action',
+        title: '愿意时，带回一个具体时刻。',
+        body: '当时发生了什么，你希望少一点或多一点什么？现在不必回答，也不因此生成未来分支。',
+        nodeRefs: [], edgeRefs: []
+      }
+    ]
+  }
+};
+</script><script>(function () {
+  'use strict';
+
+  const PAPER = '#f6f4ee', BLUE = '#3559c7', DEEP = '#213f89', CORAL = '#d65b3e', GREY = '#929a9e';
+  const STRUCTURES = ['loop', 'bridge', 'confluence', 'sparse'];
+  const SELECTIONS = ['overview', 'past', 'relation', 'present', 'action', 'future-a', 'future-b'];
+  const running = new WeakMap();
+  const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+  const round = value => Math.round(value * 100) / 100;
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const lerp = (from, to, progress) => from + (to - from) * progress;
+
+  function modelFor(input, revised) {
+    const model = revised && input?.revision ? { ...input, ...input.revision } : { ...(input || {}) };
+    model.structure = STRUCTURES.includes(model.structure) ? model.structure : 'sparse';
+    return model;
+  }
+
+  function selectionFor(options, structure) {
+    const selected = SELECTIONS.includes(options.selected) ? options.selected : options.active ? 'action' : 'overview';
+    return structure === 'sparse' && selected.startsWith('future-') ? 'overview' : selected;
+  }
+
+  function layout(input, options = {}) {
+    const structure = modelFor(input, false).structure, mobile = Boolean(options.mobile);
+    if (structure === 'sparse') return {
+      width: mobile ? 400 : 1000, height: 440,
+      anchors: mobile
+        ? { past: [85, 175], relation: [315, 175], present: [200, 261], action: [200, 347] }
+        : { past: [202, 190], relation: [798, 190], present: [500, 215], action: [500, 331] }
+    };
+    return {
+      width: mobile ? 400 : 1000, height: 440,
+      anchors: mobile ? {
+        past: [75, 95], relation: { loop: [121, 210], bridge: [121, 210], confluence: [217, 105] }[structure],
+        present: [268, 207], action: [120, 294], 'future-a': [82, 389], 'future-b': [318, 389]
+      } : {
+        past: [132, 108], relation: { loop: [268, 329], bridge: [352, 241], confluence: [326, 133] }[structure],
+        present: [548, 220], action: [676, 269], 'future-a': [917, 126], 'future-b': [917, 329]
+      }
+    };
+  }
+
+  // Points are anchor/control coordinates plus the cross-section of the thread
+  // bundle. Corresponding points retain their identity in every focus state.
+  function geometry(structure, mobile, revised) {
+    const g = {
+      width: mobile ? 400 : 1000, height: 440, bundles: [],
+      present: mobile ? [268, 207] : [548, 220],
+      waiting: mobile ? [200, 310] : [753, 220],
+      action: mobile ? [
+        [268, 207], [263, 251, 5, 2], [151, 250, -3, 5], [120, 294, -2, 3],
+        [145, 300, 3, 2], [170, 286, 3, -2], [200, 283]
+      ] : [
+        [548, 220], [576, 229, -1, 5], [627, 263, -3, 5], [676, 269, 0, 3],
+        [697, 270, 0, 3], [696, 239, 0, 3], [708, 220]
+      ],
+      futures: mobile ? [
+        [[200, 334], [171, 345], [112, 360], [82, 389]],
+        [[200, 334], [229, 345], [288, 360], [318, 389]]
+      ] : [
+        [[794, 220], [846, 215], [870, 154], [917, 126]],
+        [[794, 220], [846, 225], [870, 301], [917, 329]]
+      ]
+    };
+    const add = (id, role, points, extra = {}) => g.bundles.push({ id, role, points, ...extra });
+    if (structure === 'loop') {
+      if (revised) {
+        add('arrival', 'past', mobile ? [
+          [35, 181, 2, -9], [85, 238, -4, 15], [112, 84, 5, -18], [166, 137, 4, -8]
+        ] : [
+          [65, 282, 3, -13], [154, 375, -6, 22], [221, 104, 7, -22], [337, 174, 5, -11]
+        ]);
+        add('open-chain', 'relation', mobile ? [
+          [166, 137, 4, -8], [210, 177, 8, 9], [219, 209, 0, 7], [242, 209, 0, 3]
+        ] : [
+          [337, 174, 5, -11], [403, 240, 10, 15], [438, 229, 0, 9], [470, 224, 0, 5]
+        ]);
+      } else {
+        add('arrival', 'past', mobile ? [
+          [59, 159, 4, -6], [24, 111, -9, 5], [65, 66, -7, -8], [145, 79, 5, -11]
+        ] : [
+          [83, 226, 7, -9], [40, 150, -15, 8], [95, 95, -11, -14], [232, 105, 7, -17]
+        ]);
+        add('return', 'relation', mobile ? [
+          [145, 79, 5, -11], [232, 84, 12, -6], [269, 153, 10, 5], [212, 188, 9, 10],
+          [162, 225, 8, 11], [76, 226, -7, 12], [47, 183, -8, 7],
+          [26, 147, -9, 1], [67, 117, -4, -9], [111, 133, 5, -7],
+          [169, 151, 5, -6], [198, 211, 5, 7], [242, 209, 0, 3]
+        ] : [
+          [232, 105, 7, -17], [400, 117, 19, -8], [448, 240, 16, 7], [357, 297, 13, 16],
+          [278, 351, 13, 19], [145, 334, -12, 17], [98, 266, -14, 10],
+          [70, 228, -18, 0], [91, 180, -8, -15], [164, 172, 9, -13],
+          [290, 159, 9, -10], [380, 243, 11, 12], [470, 224, 0, 5]
+        ]);
+      }
+      add('gather', 'present', mobile ? [[242, 209, 0, 3], [251, 209, 0, 2], [259, 207, 0, 1], [268, 207]] : [[470, 224, 0, 5], [496, 221, 0, 4], [520, 217, 0, 2], [548, 220]]);
+    } else if (structure === 'bridge') {
+      add('preparation', 'past', mobile ? [
+        [34, 164, 0, -9], [45, 125, -4, -13], [60, 95, -3, -7], [75, 95],
+        [110, 95, 5, -13], [112, 160, 5, -14], [106, 201, 0, -8]
+      ] : [
+        [62, 280, 0, -13], [58, 180, -8, -20], [90, 108, -5, -11], [132, 108],
+        [218, 90, 8, -21], [265, 205, 5, -20], [350, 205, 0, -11]
+      ]);
+      add('practice', 'present', mobile ? [
+        [149, 214, 0, -8], [188, 258, 0, 12], [234, 231, 0, 8], [268, 207]
+      ] : [
+        [389, 214, 0, -11], [432, 249, 0, 17], [489, 245, 0, 11], [548, 220]
+      ]);
+      if (revised) {
+        add('revision', 'relation', mobile ? [[106, 201, 0, -8], [120, 205, 0, -7], [134, 207, 0, -7], [149, 214, 0, -8]] : [[350, 205, 0, -11], [362, 210, 0, -10], [378, 207, 0, -10], [389, 214, 0, -11]]);
+        g.feedback = mobile ? [[224, 186], [216, 78], [125, 74], [108, 130]] : [[455, 234], [437, 77], [263, 80], [242, 173]];
+      } else {
+        // The practice is known; the gap is the unreceived feedback, not a
+        // claim that the person has never attempted anything.
+        g.gap = mobile ? [[106, 201], [149, 214]] : [[350, 205], [389, 214]];
+      }
+    } else if (structure === 'confluence') {
+      add('method', 'past', mobile ? [
+        [34, 121, 0, -10], [48, 111, -4, -10], [60, 95, -3, -6], [75, 95],
+        [114, 94, 5, -14], [147, 169, 0, 9], [190, 183, 0, 3]
+      ] : [
+        [65, 145, 0, -14], [88, 131, -6, -14], [108, 108, -4, -9], [132, 108],
+        [239, 92, 8, -22], [350, 157, 0, 13], [430, 220, 0, 5]
+      ]);
+      add('material', 'past', mobile ? [
+        [40, 227, 0, -8], [98, 251, 0, 15], [153, 213, 0, 8], [190, 183, 0, 3]
+      ] : [
+        [85, 330, 0, -12], [230, 382, 0, 21], [350, 274, 0, 13], [430, 220, 0, 5]
+      ]);
+      add('partner', 'relation', mobile ? (revised ? [
+        [222, 81, -8, 0], [218, 99, -6, 0], [213, 112, -5, 0], [208, 122, -4, 0]
+      ] : [
+        [222, 81, -8, 0], [217, 101, -6, 0], [211, 129, -5, 0], [201, 154, -4, 0]
+      ]) : (revised ? [
+        [304, 95, -12, 0], [321, 115, -9, 0], [344, 135, -6, 0], [358, 147, -5, 0]
+      ] : [
+        [304, 95, -12, 0], [335, 124, -9, 0], [365, 160, -6, 0], [388, 181, -5, 0]
+      ]), { dashed: true, external: true });
+      add('gather', 'present', mobile ? [[190, 183, 0, 3], [219, 199, 0, 7], [244, 210, 0, 5], [268, 207]] : [[430, 220, 0, 5], [466, 233, 0, 9], [507, 225, 0, 6], [548, 220]]);
+    } else {
+      add('known-left', 'past', mobile ? [[27, 198, 0, -8], [61, 140, -7, -13], [108, 154, 0, 11], [139, 171, 0, 7]] : [[90, 271, 0, -13], [160, 156, -9, -21], [243, 205, 0, 16], [319, 226, 0, 10]]);
+      add('known-right', 'relation', mobile ? [[261, 171, 0, 7], [299, 151, 0, -12], [337, 167, 0, 12], [373, 198, 0, 8]] : [[681, 226, 0, 10], [758, 185, 0, -18], [840, 210, 0, 19], [910, 271, 0, 13]]);
+      g.action = null; g.futures = [];
+    }
+    return g;
+  }
+
+  // Only local control points and thread spread change. The interaction never
+  // changes report revision, moves the camera, or closes an unknown connection.
+  function focusGeometry(g, structure, selected, mobile) {
+    const scale = mobile ? .62 : 1;
+    for (const bundle of g.bundles) {
+      const last = bundle.points.length - 1;
+      bundle.points = bundle.points.map((point, index) => {
+        let [x, y, dx = 0, dy = 0] = point;
+        const control = index % 3 !== 0;
+        if (selected === 'past' && bundle.role === 'past') {
+          dx *= 1.3; dy *= 1.45;
+          if (control) y += (bundle.id === 'material' ? 19 : -15) * scale;
+        }
+        if (selected === 'relation' && bundle.role === 'relation') {
+          dx *= 1.35; dy *= 1.35;
+          if (control) {
+            if (structure === 'loop') { x += (index < 5 ? 12 : -10) * scale; y += (index < 5 ? -13 : 17) * scale; }
+            else if (structure === 'confluence') { x += 12 * scale; y -= 8 * scale; }
+            else y -= 12 * scale;
+          }
+        }
+        if (selected === 'present') {
+          dx *= .65; dy *= .65;
+          if (control && bundle.role === 'present') { y = lerp(y, g.present[1], .45); }
+        }
+        if (selected === 'action' && bundle.role === 'present' && control) y -= 8 * scale;
+        if (selected === 'action' && structure === 'sparse' && control) {
+          x += (bundle.id === 'known-left' ? -19 : 19) * scale;
+          dy *= 1.25;
+        }
+        if (selected === 'relation' && structure === 'bridge' && g.gap) {
+          if (bundle.id === 'preparation' && index === last) { x -= 7 * scale; y -= 5 * scale; }
+          if (bundle.id === 'practice' && index === 0) { x += 7 * scale; y += 5 * scale; }
+        }
+        return [x, y, dx, dy];
+      });
+    }
+    if (selected === 'action' && g.action) g.action = g.action.map((point, index) => {
+      if (index % 3 === 0) return point;
+      const [x, y, dx = 0, dy = 0] = point;
+      if (mobile) {
+        if (index < 3) return [x - 63, y + (index === 1 ? 9 : 15), dx * 1.6, dy * 1.7];
+        return [x - 2, y + (index === 4 ? 2 : 0), dx * 1.6, dy * 1.4];
+      }
+      return [x + 14, y + 29, dx * 1.5, dy * 1.7];
+    });
+    return g;
+  }
+
+  function coordinates(points, thread = 0) {
+    return points.flatMap(([x, y, dx = 0, dy = 0]) => [x + dx * thread, y + dy * thread]);
+  }
+
+  function path(values) {
+    let result = `M ${round(values[0])} ${round(values[1])}`;
+    for (let index = 2; index < values.length; index += 6) result += ` C ${values.slice(index, index + 6).map(round).join(' ')}`;
+    return result;
+  }
+
+  function emphasis(role, selected) {
+    if (selected === 'overview') return 1;
+    if (role === selected) return 1.3;
+    if (selected === 'present' && role === 'past') return .82;
+    if (selected === 'action' && role === 'present') return .9;
+    return .53;
+  }
+
+  function makeScene(input, options = {}) {
+    const revised = Boolean(options.revised), mobile = Boolean(options.mobile);
+    const model = modelFor(input, revised), structure = model.structure;
+    const selected = selectionFor(options, structure);
+    const g = focusGeometry(geometry(structure, mobile, revised), structure, selected, mobile);
+    const paths = [], traces = [], circles = [];
+    const add = (key, role, points, style = {}) => {
+      const descriptor = { key, role, coords: coordinates(points), stroke: BLUE, width: mobile ? 1 : .8, opacity: 1, dash: '', ...style };
+      paths.push(descriptor); return descriptor;
+    };
+    const trace = (role, points, dashed = false) => {
+      if (traces.some(item => item.role === role)) return;
+      traces.push({ key: `trace-${role}`, role, coords: coordinates(points), stroke: role === 'action' ? CORAL : BLUE, width: mobile ? 2 : 1.7, opacity: 0, dash: '0.1 1', external: dashed });
+    };
+    for (const bundle of g.bundles) {
+      const total = mobile ? 23 : 29;
+      for (let index = 0; index < total; index++) {
+        const raw = index / (total - 1) * 2 - 1;
+        // Denser fine lines alternate with a few dark engraved contours.
+        const u = Math.sign(raw) * Math.pow(Math.abs(raw), 1.32);
+        const contour = index % 7 === 2, center = 1 - Math.abs(u);
+        const roleForEmphasis = g.gap && selected === 'relation' ? 'relation' : bundle.role;
+        const opacity = (.14 + center * .37 + (contour ? .1 : 0)) * emphasis(roleForEmphasis, selected);
+        paths.push({ key: `${bundle.id}-${index}`, group: bundle.id, role: bundle.role, coords: coordinates(bundle.points, u),
+          stroke: contour ? DEEP : BLUE, width: contour ? (mobile ? 1.05 : .95) : (mobile ? .65 : .52),
+          opacity: Math.min(.88, opacity), dash: bundle.dashed ? (mobile ? '3 5' : '4 7') : '', external: Boolean(bundle.external) });
+      }
+      trace(bundle.role, bundle.points, bundle.dashed);
+    }
+    if (g.gap) {
+      trace('relation', g.bundles[0].points);
+      [g.bundles[0].points.at(-1), g.bundles[1].points[0]].forEach(([x, y], index) => {
+        circles.push({ key: `feedback-gap-${index}`, x, y, r: selected === 'relation' ? 4.4 : 2.6, stroke: BLUE, width: 1.1, opacity: selected === 'relation' ? 1 : .65 });
+      });
+    }
+    if (g.feedback) { add('feedback', 'relation', g.feedback, { stroke: GREY, width: 1.3, opacity: .7, dash: '3 7', external: true }); }
+    if (structure !== 'sparse') {
+      for (const [index, u] of [-1, 0, 1].entries()) paths.push({ key: `action-${index}`, role: 'action', coords: coordinates(g.action, u), stroke: CORAL,
+        width: mobile ? 1.1 : 1, opacity: selected === 'action' ? .86 : .3, dash: '' });
+      trace('action', g.action);
+      g.futures.forEach((points, index) => {
+        const role = index ? 'future-b' : 'future-a', focused = selected === role;
+        add(role, role, points, { stroke: focused ? BLUE : GREY, width: focused ? 1.9 : 1.3, opacity: focused ? .9 : .64, dash: '3 7', external: true });
+        trace(role, points, true);
+        const [x, y] = points[points.length - 1];
+        circles.push({ key: `${role}-end`, x, y, r: focused ? 5.5 : 4, stroke: focused ? BLUE : GREY, width: 1.1, opacity: .9 });
+      });
+      circles.push({ key: 'present', x: g.present[0], y: g.present[1], r: selected === 'present' ? 8 : 5.5, stroke: DEEP, width: selected === 'present' ? 1.8 : 1.4, opacity: 1 });
+    }
+    const graph = model.graphLabels || [], nodes = model.nodes || [];
+    const past = nodes.slice(0, 2).map(node => node.label || '已有叙述').join('、');
+    const branches = Array.isArray(model.branches) ? model.branches : [];
+    const revisionDescription = revised ? {
+      loop: '模拟回访后的回连已移除，改为开放链。',
+      bridge: '已有实践和修改被保留，具体反馈仍待核对。',
+      confluence: '伙伴尚不能共同投入，对应输入在汇合前中断。', sparse: '没有新增可确认的关联。'
+    }[structure] : '';
+    const description = structure === 'sparse'
+      ? `${past}是两项已有叙述。两者没有因果连线，不生成未来分支。${model.action?.short || '补充观察'}只是了解入口，不代表已经行动。${revisionDescription}`
+      : `来处：${past}。此刻：${nodes[nodes.length - 1]?.label || graph[graph.length - 1] || '当前问题'}。线束是可修正的关系理解，不是已证实的因果。${revisionDescription}${structure === 'confluence' ? '伙伴输入为虚线并在汇合前留有断口，合作尚未确认。' : ''}可以考虑的行动：${model.action?.short || ''}。动作只介入新的条件，待回应断口始终保留。${branches.map(branch => branch.label).join('；')}是尚未发生的条件情景，线条不表示概率、优劣或完成结果。${selected.startsWith('future-') ? '当前高亮只用于阅读对应条件。' : ''}`;
+    return { g, model, structure, mobile, revised, selected, paths, traces, circles, description };
+  }
+
+  function safePrefix(value) {
+    const clean = String(value || 'cihou-editorial').replace(/[^a-zA-Z0-9_-]/g, '-');
+    return /^[a-zA-Z_]/.test(clean) ? clean : `ce-${clean}`;
+  }
+
+  function pathMarkup(item, trace = false) {
+    return `<path data-morph-key="${item.key}" data-morph-role="${item.role}"${item.group ? ` data-thread-group="${item.group}"` : ''}${item.external ? ' data-external-condition="true"' : ''}${trace ? ` data-trace-role="${item.role}" pathLength="1" stroke-dashoffset="0.12"` : ''}${item.key === 'trace-action' ? ' data-action-trace=""' : ''} d="${path(item.coords)}" fill="none" stroke="${item.stroke}" stroke-width="${item.width}" opacity="${round(item.opacity)}"${item.dash ? ` stroke-dasharray="${item.dash}"` : ''} stroke-linecap="round" stroke-linejoin="round"/>`;
+  }
+
+  function serialize(scene, idPrefix, withText, includeTraces) {
+    const { g, structure, selected, revised, mobile } = scene, id = safePrefix(idPrefix);
+    let drawing = scene.paths.map(item => pathMarkup(item)).join('');
+    if (includeTraces) drawing += `<g aria-hidden="true" data-intervention="">${scene.traces.map(item => pathMarkup(item, true)).join('')}</g>`;
+    drawing += scene.circles.map(circle => `<circle data-circle-key="${circle.key}" cx="${circle.x}" cy="${circle.y}" r="${circle.r}" fill="${PAPER}" stroke="${circle.stroke}" stroke-width="${circle.width}" opacity="${circle.opacity}"/>`).join('');
+    if (withText && structure !== 'sparse') drawing += `<text x="${g.waiting[0]}" y="${g.waiting[1]}" dominant-baseline="middle" text-anchor="middle" font-size="${mobile ? 22 : 20}" fill="#737c80">待回应</text>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" id="${id}-svg" viewBox="0 0 ${g.width} ${g.height}" role="img" aria-labelledby="${id}-title ${id}-description" data-structure="${structure}" data-revised="${revised}" data-selected="${selected}" data-active="${selected === 'action'}" style="display:block;width:100%;height:auto;overflow:visible;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif"><title id="${id}-title">${withText ? '此后 · 来处、此刻与条件未来' : '此后 · 开放的线索'}</title><desc id="${id}-description">${esc(withText ? scene.description : '无个人文字的线束作品。开放处保留未知；线条没有概率或结果保证的含义。')}</desc>${drawing}</svg>`;
+  }
+
+  function render(model, options = {}) {
+    return serialize(makeScene(model, options), options.idPrefix || 'cihou-editorial', true, true);
+  }
+
+  function art(structure, options = {}) {
+    return serialize(makeScene({ structure }, { mobile: false, revised: Boolean(options.revised), selected: 'overview' }), options.idPrefix || 'cihou-art', false, false);
+  }
+
+  function hex(color) {
+    const match = /^#([0-9a-f]{6})$/i.exec(color || '');
+    return match ? [0, 2, 4].map(index => parseInt(match[1].slice(index, index + 2), 16)) : null;
+  }
+
+  function mixedColor(from, to, progress) {
+    const a = hex(from), b = hex(to);
+    if (!a || !b) return to;
+    return '#' + a.map((value, index) => Math.round(lerp(value, b[index], progress)).toString(16).padStart(2, '0')).join('');
+  }
+
+  function pathNumbers(value) {
+    return (String(value || '').match(/[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi) || []).map(Number);
+  }
+
+  // A cancellable, finite transition over existing nodes. No detached SVG swap,
+  // accumulated loops, layout reads, timeline dependencies, or backend state.
+  function transition(svg, input, options = {}) {
+    if (!svg || typeof svg.querySelectorAll !== 'function') return { cancel() {}, finish() {} };
+    const previous = running.get(svg);
+    if (previous) previous.cancel();
+    const revised = svg.getAttribute('data-revised') === 'true';
+    const scene = makeScene(input, { ...options, revised });
+    const elements = new Map(Array.from(svg.querySelectorAll('[data-morph-key]'), element => [element.getAttribute('data-morph-key'), element]));
+    const targets = [...scene.paths, ...scene.traces];
+    const entries = targets.flatMap(target => {
+      const element = elements.get(target.key);
+      if (!element) return [];
+      const coords = pathNumbers(element.getAttribute('d'));
+      return [{ element, target, from: {
+        coords: coords.length === target.coords.length ? coords : target.coords,
+        stroke: element.getAttribute('stroke'), width: Number(element.getAttribute('stroke-width')) || target.width,
+        opacity: Number(element.getAttribute('opacity'))
+      } }];
+    });
+    const circleElements = new Map(Array.from(svg.querySelectorAll('[data-circle-key]'), element => [element.getAttribute('data-circle-key'), element]));
+    const circleEntries = scene.circles.flatMap(target => {
+      const element = circleElements.get(target.key);
+      if (!element) return [];
+      return [{ element, target, from: { x: Number(element.getAttribute('cx')), y: Number(element.getAttribute('cy')), r: Number(element.getAttribute('r')), width: Number(element.getAttribute('stroke-width')), opacity: Number(element.getAttribute('opacity')), stroke: element.getAttribute('stroke') } }];
+    });
+    const document = svg.ownerDocument, view = document?.defaultView || window;
+    let frameId = null, started = null, stopped = false;
+    const duration = 950;
+    svg.setAttribute('data-selected', scene.selected);
+    svg.setAttribute('data-active', String(scene.selected === 'action'));
+    const description = svg.querySelector('desc');
+    if (description) description.textContent = scene.description;
+
+    function draw(progress) {
+      for (const { element, target, from } of entries) {
+        element.setAttribute('d', path(target.coords.map((value, index) => lerp(from.coords[index], value, progress))));
+        element.setAttribute('stroke', mixedColor(from.stroke, target.stroke, progress));
+        element.setAttribute('stroke-width', String(round(lerp(from.width, target.width, progress))));
+        element.setAttribute('opacity', String(round(lerp(from.opacity, target.opacity, progress))));
+        if (target.dash) element.setAttribute('stroke-dasharray', target.dash);
+        else element.removeAttribute('stroke-dasharray');
+      }
+      for (const { element, target, from } of circleEntries) {
+        for (const [attribute, key] of [['cx', 'x'], ['cy', 'y'], ['r', 'r'], ['stroke-width', 'width']]) element.setAttribute(attribute, String(round(lerp(from[key], target[key], progress))));
+        element.setAttribute('stroke', mixedColor(from.stroke, target.stroke, progress));
+        element.setAttribute('opacity', String(round(lerp(from.opacity, target.opacity, progress))));
+      }
+    }
+
+    function clearTrace() {
+      for (const element of svg.querySelectorAll('[data-trace-role]')) { element.setAttribute('opacity', '0'); element.setAttribute('stroke-dashoffset', '0.12'); }
+    }
+
+    function dispose() {
+      if (frameId !== null && view.cancelAnimationFrame) view.cancelAnimationFrame(frameId);
+      frameId = null;
+      if (document) document.removeEventListener('visibilitychange', visibilityChanged);
+      if (running.get(svg) === controller) running.delete(svg);
+    }
+
+    function cancel() {
+      if (stopped) return;
+      stopped = true; dispose(); clearTrace();
+    }
+
+    function finish() {
+      if (stopped) return;
+      draw(1); clearTrace(); stopped = true; dispose();
+    }
+
+    function visibilityChanged() { if (document.hidden) finish(); }
+
+    function tick(now) {
+      if (stopped) return;
+      if (started === null) started = now;
+      const progress = clamp((now - started) / duration);
+      const eased = progress < .5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      draw(eased);
+      const flow = clamp((progress - .12) / .82);
+      const flowing = scene.selected === 'overview' ? null : elements.get(`trace-${scene.selected}`);
+      // No travelling line is allowed to close the partner-input gap, bridge
+      // gap, or response gap. Each trace uses only its own existing segment.
+      if (flowing && flow > 0 && flow < 1) {
+        flowing.setAttribute('opacity', String(round(Math.sin(flow * Math.PI) * .78)));
+        flowing.setAttribute('stroke-dashoffset', String(round(.12 - flow * 1.12)));
+      }
+      if (progress >= 1) finish();
+      else frameId = view.requestAnimationFrame(tick);
+    }
+
+    const controller = { cancel, finish };
+    running.set(svg, controller);
+    if (options.reduced || document?.hidden || typeof view.requestAnimationFrame !== 'function') finish();
+    else { if (document) document.addEventListener('visibilitychange', visibilityChanged); frameId = view.requestAnimationFrame(tick); }
+    return controller;
+  }
+
+  window.CihouEditorialScene = Object.freeze({ render, art, layout, transition });
+}());
+</script><script>(function () {
+  'use strict';
+
+  // This renderer is deliberately specific to the first, fictional loop case.
+  // A plate is a visual metaphor for an arriving task, not a measured unit.
+  // The proposed return edge and every future route remain conditional.
+  const running = new WeakMap();
+  const poses = new WeakMap();
+  const SELECTIONS = ['overview', 'past', 'relation', 'present', 'action', 'future-a', 'future-b'];
+  const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const n = value => Math.round(value * 100) / 100;
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * t;
+  const ease = t => 1 - Math.pow(1 - clamp(t), 3);
+  const selectedFor = value => SELECTIONS.includes(value) ? value : 'overview';
+
+  function layout(model, options = {}) {
+    return options.mobile ? {
+      width: 400, height: 490,
+      anchors: { past: [93, 75], relation: [307, 75], present: [248, 243], action: [80, 330], 'future-a': [80, 430], 'future-b': [318, 430] }
+    } : {
+      width: 1000, height: 370,
+      anchors: { past: [160, 84], relation: [520, 84], present: [421, 286], action: [668, 250], 'future-a': [900, 72], 'future-b': [900, 325] }
+    };
+  }
+
+  function geometry(mobile) {
+    const result = mobile ? {
+      width: 400, height: 530, cx: 200, cy: 183, rx: 140, ry: 106, bandX: 35, bandY: 29, depth: 17,
+      source: [93, 115], pile: [248, 276], gate: [80, 370], waiting: [205, 367],
+      futureA: [80, 470], futureB: [318, 470], question: [102, 249],
+      route: [[248, 283], [241, 333], [119, 310], [80, 370], [108, 396], [162, 370], [205, 367]],
+      futurePaths: [
+        [[205, 423], [171, 423], [123, 436], [80, 470]],
+        [[205, 423], [245, 422], [283, 444], [318, 470]]
+      ],
+      gapLabel: [205, 410], card: 58, pileWidth: 76, pileStep: 7
+    } : {
+      width: 1000, height: 500, cx: 340, cy: 236, rx: 235, ry: 128, bandX: 55, bandY: 32, depth: 24,
+      source: [160, 154], pile: [421, 348], gate: [668, 320], waiting: [759, 292],
+      futureA: [900, 142], futureB: [900, 395], question: [206, 323],
+      route: [[421, 356], [504, 396], [588, 371], [668, 320], [695, 306], [725, 292], [759, 292]],
+      futurePaths: [
+        [[833, 292], [856, 271], [854, 180], [900, 142]],
+        [[833, 292], [856, 310], [854, 367], [900, 395]]
+      ],
+      gapLabel: [803, 264], card: 82, pileWidth: 104, pileStep: 10
+    };
+    result.mobile = mobile;
+    return result;
+  }
+
+  function ellipsePoint(g, degrees, inset = 0) {
+    const rad = degrees * Math.PI / 180;
+    return [g.cx + (g.rx - inset) * Math.cos(rad), g.cy + (g.ry - inset * .55) * Math.sin(rad)];
+  }
+
+  function ellipse(cx, cy, rx, ry) {
+    return `M${n(cx - rx)},${n(cy)}a${n(rx)},${n(ry)} 0 1 0 ${n(rx * 2)},0a${n(rx)},${n(ry)} 0 1 0 ${n(-rx * 2)},0Z`;
+  }
+
+  function arc(g, start, end, inset = 0, offsetY = 0) {
+    const points = [];
+    for (let i = 0; i <= 52; i++) {
+      const point = ellipsePoint(g, mix(start, end, i / 52), inset);
+      points.push(`${i ? 'L' : 'M'}${n(point[0])},${n(point[1] + offsetY)}`);
+    }
+    return points.join('');
+  }
+
+  function cubic(points) {
+    return `M${points[0].map(n).join(',')}C${points.slice(1, 4).map(p => p.map(n).join(',')).join(' ')}${points.length > 4 ? `C${points.slice(4).map(p => p.map(n).join(',')).join(' ')}` : ''}`;
+  }
+
+  function bezier(points, t) {
+    const u = 1 - t;
+    return [0, 1].map(axis => u * u * u * points[0][axis] + 3 * u * u * t * points[1][axis] + 3 * u * t * t * points[2][axis] + t * t * t * points[3][axis]);
+  }
+
+  function routePoint(g, t) {
+    return t < .72 ? bezier(g.route.slice(0, 4), t / .72) : bezier([g.route[3], ...g.route.slice(4)], (t - .72) / .28);
+  }
+
+  function plate(width, depth, height, fill, edge, options = {}) {
+    const x = width / 2, y = depth / 2;
+    return `<path d="M${n(-x)},0L0,${n(y)}L${n(x)},0V${n(height)}L0,${n(y + height)}L${n(-x)},${n(height)}Z" fill="${edge}"/>
+      <path d="M${n(-x)},0L0,${n(-y)}L${n(x)},0L0,${n(y)}Z" fill="${fill}" stroke="${options.stroke || '#ffffff'}" stroke-opacity="${options.strokeOpacity == null ? '.58' : options.strokeOpacity}" stroke-width=".8"/>
+      ${options.lines ? `<path d="M${n(-x * .48)},${n(-y * .04)}l${n(x * .53)},${n(-y * .53)}M${n(-x * .25)},${n(y * .2)}l${n(x * .53)},${n(-y * .53)}" stroke="${options.lineColor || '#6c80b3'}" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>` : ''}`;
+  }
+
+  function target(selected) {
+    const values = {
+      source: .16, sourceLift: 0, stack: 3.3, loop: .35, action: .12, gate: -63,
+      waiting: .18, future: .23, aLift: 0, bLift: 0, aLight: .36, bLight: .36,
+      ringLight: .18, underGlow: .15, sourceGlow: .08, currentGlow: .18
+    };
+    if (selected === 'past') Object.assign(values, { source: 1, sourceLift: 17, stack: 1, loop: .2, action: .055, waiting: .1, future: .17, ringLight: .02, sourceGlow: 1, currentGlow: 0 });
+    if (selected === 'relation') Object.assign(values, { source: .38, stack: 4.3, loop: 1, action: .06, waiting: .1, future: .17, ringLight: .12, underGlow: .7, sourceGlow: .35, currentGlow: .25 });
+    if (selected === 'present') Object.assign(values, { source: .08, stack: 7.8, loop: .6, action: .17, waiting: .18, ringLight: .42, underGlow: 1, currentGlow: 1 });
+    if (['action', 'future-a', 'future-b'].includes(selected)) Object.assign(values, { source: .08, stack: 7.8, loop: .24, action: 1, gate: 8, waiting: 1, future: .7, ringLight: .28, underGlow: .5, currentGlow: .45 });
+    if (selected === 'future-a') Object.assign(values, { aLift: 20, aLight: 1, bLight: .43 });
+    if (selected === 'future-b') Object.assign(values, { bLift: 20, bLight: 1, aLight: .43 });
+    return values;
+  }
+
+  function render(model, options = {}) {
+    const mobile = Boolean(options.mobile), g = geometry(mobile), selected = selectedFor(options.selected);
+    const prefix = String(options.idPrefix || 'cihou-kinetic').replace(/[^a-zA-Z0-9_-]/g, '-');
+    const id = name => `${prefix}-${name}`;
+    const outer = ellipse(g.cx, g.cy, g.rx, g.ry);
+    const inner = ellipse(g.cx, g.cy, g.rx - g.bandX, g.ry - g.bandY);
+    const side = `${arc(g, 0, 180)}L${n(g.cx - g.rx)},${n(g.cy + g.depth)}${arc(g, 180, 0, 0, g.depth).replace(/^M/, 'L')}Z`;
+    const innerGeometry = { ...g, rx: g.rx - g.bandX, ry: g.ry - g.bandY };
+    const innerSide = `${arc(innerGeometry, 180, 360)}L${n(g.cx + g.rx - g.bandX)},${n(g.cy + g.depth * .7)}${arc(innerGeometry, 360, 180, 0, g.depth * .7).replace(/^M/, 'L')}Z`;
+    const path = cubic(g.route);
+    const arrows = [262, 348, 112].map((angle, index) => {
+      const p = ellipsePoint(g, angle, g.bandX * .48);
+      const r = angle + 90;
+      return `<g transform="translate(${n(p[0])} ${n(p[1])}) rotate(${r})" opacity="${index === 2 ? '.57' : '.85'}"><path d="M-6,-5L1,0L-6,5M2,-5L9,0L2,5" fill="none" stroke="#eef3ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+    }).join('');
+    const initial = target(selected);
+    const sourceCards = [0, 1, 2].map(index => {
+      const side = index - 1;
+      const x = g.source[0] + side * (mobile ? 22 : 32) * initial.source;
+      const y = g.source[1] - 9 - index * (mobile ? 6 : 8) - initial.sourceLift - Math.abs(side) * 14 * initial.source;
+      return `<g data-kinetic-source="${index}" transform="translate(${n(x)} ${n(y)}) rotate(${n(side * -9 * initial.source)})" opacity="${n(index === 2 ? 1 : mix(.4, 1, initial.source))}" filter="url(#${id('card-shadow')})">${plate(g.card, g.card * .43, mobile ? 5 : 7, index === 2 ? '#fbfcff' : '#e8eefb', '#96a9d2', { lines: true })}</g>`;
+    }).join('');
+    const stackCards = Array.from({ length: 8 }, (_, index) => `<g data-kinetic-layer="${index}" transform="translate(${g.pile[0]} ${g.pile[1] - index * g.pileStep})" opacity="${n(clamp(initial.stack - index))}" filter="${index === 0 ? `url(#${id('card-shadow')})` : ''}">${plate(g.pileWidth, g.pileWidth * .4, mobile ? 5.5 : 8, index === 7 ? `url(#${id('card-top')})` : index % 2 ? '#d7e0f6' : '#ecf1fc', index === 7 ? '#224a9f' : '#8da3d0', { lines: index === 7, lineColor: '#dce8ff' })}</g>`).join('');
+    const future = (name, location) => `<g data-kinetic-future="${name}" opacity="${initial[name === 'a' ? 'aLight' : 'bLight']}">
+      <ellipse cx="${location[0]}" cy="${location[1] + 20}" rx="${mobile ? 42 : 56}" ry="${mobile ? 10 : 12}" fill="#536899" opacity=".1"/>
+      <g data-kinetic-future-plate="${name}" transform="translate(${location[0]} ${location[1] - initial[name === 'a' ? 'aLift' : 'bLift']})">${plate(mobile ? 78 : 104, mobile ? 33 : 42, mobile ? 8 : 11, `url(#${id('future-top')})`, '#a0acc1', { stroke: '#fff' })}
+        <path d="M-11,-3L0,-8L11,-3L0,2Z" fill="#5276bf" opacity=".3"/>
+      </g></g>`;
+    const token = `<g data-kinetic-token-face>${plate(mobile ? 34 : 44, mobile ? 17 : 21, 4, '#fffbf4', '#b0bee0', { lines: true })}</g>`;
+    const markup = `<svg xmlns="http://www.w3.org/2000/svg" class="editorial-scene kinetic-scene" viewBox="0 ${mobile ? 40 : 70} ${g.width} ${mobile ? 490 : 370}" role="img" aria-labelledby="${id('title')} ${id('desc')}" data-kinetic="loop" data-focus="${selected}" data-mobile="${mobile}">
+      <title id="${id('title')}">临时补位、持续承接与任务叠加的条件性回环</title>
+      <desc id="${id('desc')}">宽环与方向箭头呈现重复承接的解释假设；前方的薄片叠层表示任务累积，不代表具体数量。橙色拨片把下一项任务引到讨论台，既有任务仍然保留。两条未来路径在待回应处断开，都需要现实反馈确认。</desc>
+      <defs>
+        <linearGradient id="${id('track')}" x1="12%" y1="0%" x2="80%" y2="100%"><stop offset="0" stop-color="#d6e0ff"/><stop offset=".27" stop-color="#98b1e8"/><stop offset=".6" stop-color="#527bc9"/><stop offset="1" stop-color="#315eaf"/></linearGradient>
+        <linearGradient id="${id('edge')}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#204984"/><stop offset=".48" stop-color="#456bb0"/><stop offset="1" stop-color="#163b7b"/></linearGradient>
+        <linearGradient id="${id('inner-edge')}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#718ec7"/><stop offset="1" stop-color="#2b5096"/></linearGradient>
+        <linearGradient id="${id('card-top')}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7397e1"/><stop offset="1" stop-color="#315aaa"/></linearGradient>
+        <linearGradient id="${id('future-top')}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f9fc"/><stop offset="1" stop-color="#d1dbef"/></linearGradient>
+        <linearGradient id="${id('copper')}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0b88f"/><stop offset=".42" stop-color="#d9784f"/><stop offset="1" stop-color="#ad4b32"/></linearGradient>
+        <radialGradient id="${id('floor')}" cx="50%" cy="50%" r="50%"><stop stop-color="#6581b8" stop-opacity=".16"/><stop offset="1" stop-color="#6581b8" stop-opacity="0"/></radialGradient>
+        <radialGradient id="${id('glow')}"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+        <filter id="${id('shadow')}" x="-30%" y="-90%" width="160%" height="280%"><feGaussianBlur stdDeviation="${mobile ? 8 : 12}"/></filter>
+        <filter id="${id('card-shadow')}" x="-45%" y="-130%" width="190%" height="400%"><feDropShadow dx="0" dy="${mobile ? 5 : 7}" stdDeviation="${mobile ? 3 : 4}" flood-color="#1d3767" flood-opacity=".2"/></filter>
+      </defs>
+      <ellipse cx="${g.cx + 14}" cy="${g.cy + 82}" rx="${g.rx + 63}" ry="${g.ry + 42}" fill="url(#${id('floor')})"/>
+      <ellipse cx="${g.cx + 12}" cy="${g.cy + g.depth + 25}" rx="${g.rx - 9}" ry="${g.ry - 1}" fill="#183e77" opacity=".13" filter="url(#${id('shadow')})"/>
+      <ellipse data-kinetic-glow="under" opacity="${initial.underGlow}" cx="${g.cx}" cy="${g.cy + 50}" rx="${g.rx + 30}" ry="${g.ry + 18}" fill="url(#${id('floor')})"/>
+      <g data-kinetic-branches="true" opacity="${initial.future}" fill="none" stroke="#7e93b5" stroke-width="${mobile ? 2 : 2.5}" stroke-linecap="round" stroke-dasharray="2 8">
+        <path data-kinetic-branch="a" d="${cubic(g.futurePaths[0])}"/>
+        <path data-kinetic-branch="b" d="${cubic(g.futurePaths[1])}"/>
+      </g>
+      ${future('a', g.futureA)}${future('b', g.futureB)}
+      <g data-kinetic-route="true" opacity="${initial.action}">
+        <path d="${path}" fill="none" stroke="#8b5039" stroke-width="${mobile ? 14 : 19}" stroke-linecap="round" transform="translate(0 ${mobile ? 8 : 12})" opacity=".24"/>
+        <path data-kinetic-route-top="true" d="${path}" fill="none" stroke="url(#${id('copper')})" stroke-width="${mobile ? 13 : 18}" stroke-linecap="round"/>
+        <path d="${path}" fill="none" stroke="#ffe4cd" stroke-width="1" stroke-linecap="round" opacity=".9"/>
+      </g>
+      <g data-kinetic-wait="true" opacity="${initial.waiting}" transform="translate(${g.waiting.join(' ')})" filter="url(#${id('card-shadow')})">
+        ${plate(mobile ? 76 : 94, mobile ? 33 : 41, 10, '#f3e3d3', '#b58d76', { stroke: '#fff9ef' })}
+        <path d="M-12,-4L-2,-9L8,-4L-2,1ZM-2,1L8,-4L18,1L8,6Z" fill="#c27955" opacity=".6"/>
+      </g>
+      <g data-kinetic-gap="true"><text x="${g.gapLabel[0]}" y="${g.gapLabel[1]}" fill="#765f51" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="${mobile ? 15 : 16}" text-anchor="middle" letter-spacing="1">待回应</text></g>
+      <path d="${side}" fill="url(#${id('edge')})"/>
+      <path d="${innerSide}" fill="url(#${id('inner-edge')})"/>
+      <path d="${outer}${inner}" fill="url(#${id('track')})" fill-rule="evenodd"/>
+      <path data-kinetic-ring-light="true" opacity="${initial.ringLight}" d="${outer}${inner}" fill="#274e97" fill-rule="evenodd"/>
+      <path d="${outer}" fill="none" stroke="#eaf0ff" stroke-opacity=".82" stroke-width="1.4"/>
+      <path d="${inner}" fill="none" stroke="#204680" stroke-opacity=".32" stroke-width="1.1"/>
+      <path d="${arc(g, 190, 350, g.bandX * .27)}" fill="none" stroke="#f5f7ff" stroke-opacity=".45" stroke-width="1"/>
+      <path d="${arc(g, 350, 537, g.bandX * .7)}" fill="none" stroke="#f0f5ff" stroke-opacity=".24" stroke-width="1"/>
+      ${arrows}
+      <g data-kinetic-return="true">
+        <path data-kinetic-return-track="true" opacity="${Math.max(.4, initial.loop)}" d="${arc(g, 77, 214, g.bandX * .5)}" fill="none" stroke="#e9f0ff" stroke-width="${mobile ? 3 : 3.5}" stroke-dasharray="3 7" stroke-linecap="round"/>
+        <rect x="${g.question[0] - (mobile ? 51 : 59)}" y="${g.question[1] - (mobile ? 19 : 22)}" width="${mobile ? 102 : 118}" height="${mobile ? 27 : 32}" rx="${mobile ? 13.5 : 16}" fill="#f6f4ee" stroke="#bac9e0" stroke-width=".8"/>
+        <text x="${g.question[0]}" y="${g.question[1]}" fill="#244779" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="${mobile ? 15 : 17}" text-anchor="middle">再次承接？</text>
+      </g>
+      <ellipse data-kinetic-glow="source" opacity="${initial.sourceGlow}" cx="${g.source[0]}" cy="${g.source[1] - 7}" rx="${mobile ? 55 : 78}" ry="${mobile ? 44 : 54}" fill="url(#${id('glow')})"/>
+      <g data-kinetic-sources="true">${sourceCards}</g>
+      <g data-kinetic-flow="0" opacity="0" filter="url(#${id('card-shadow')})">${token}</g>
+      <g data-kinetic-flow="1" opacity="0" filter="url(#${id('card-shadow')})">${token}</g>
+      <g data-kinetic-flow="2" opacity="0" filter="url(#${id('card-shadow')})">${token}</g>
+      <ellipse data-kinetic-glow="current" opacity="${initial.currentGlow}" cx="${g.pile[0]}" cy="${g.pile[1] + 6}" rx="${mobile ? 69 : 98}" ry="${mobile ? 32 : 39}" fill="url(#${id('floor')})"/>
+      <g data-kinetic-pile="true">${stackCards}</g>
+      <g data-kinetic-gate-base="true" transform="translate(${g.gate.join(' ')})">
+        <ellipse cy="13" rx="${mobile ? 27 : 35}" ry="${mobile ? 11 : 14}" fill="#614d48" opacity=".13"/>
+        <ellipse cy="4" rx="${mobile ? 23 : 29}" ry="${mobile ? 12 : 15}" fill="#985a3f"/>
+        <ellipse rx="${mobile ? 23 : 29}" ry="${mobile ? 12 : 15}" fill="url(#${id('copper')})" stroke="#f3c8a7" stroke-width="1"/>
+        <g data-kinetic-gate="true" transform="rotate(${initial.gate})">
+          <path d="M-5,-7L${mobile ? 47 : 63},-7Q${mobile ? 54 : 70},-7 ${mobile ? 54 : 70},0V5Q${mobile ? 54 : 70},10 ${mobile ? 47 : 63},10H-5Z" fill="#99492f"/>
+          <path d="M-5,-11H${mobile ? 47 : 63}Q${mobile ? 54 : 70},-11 ${mobile ? 54 : 70},-4Q${mobile ? 54 : 70},3 ${mobile ? 47 : 63},3H-5Z" fill="url(#${id('copper')})" stroke="#f5c7a2" stroke-width=".8"/>
+          <path d="M9,-5H${mobile ? 42 : 56}" stroke="#ffddc2" stroke-width="1.3" stroke-linecap="round" opacity=".9"/>
+        </g>
+        <ellipse cy="-4" rx="7" ry="4" fill="#f2c4a2"/>
+      </g>
+      <g data-kinetic-action-token="true" opacity="0" filter="url(#${id('card-shadow')})">${token}</g>
+      <g data-kinetic-waiting-card="true" transform="translate(${g.waiting[0]} ${g.waiting[1] - 8})" opacity="${initial.action > .95 ? .95 : 0}">${plate(mobile ? 40 : 51, mobile ? 18 : 23, 4, '#fff8e9', '#c19473', { lines: true, lineColor: '#a96a43' })}</g>
+    </svg>`;
+    // render() is also legible without motion; transition() keeps this SVG DOM
+    // and only updates its presentational attributes.
+    return markup;
+  }
+
+  function elements(svg) {
+    return {
+      sources: Array.from(svg.querySelectorAll('[data-kinetic-source]')),
+      layers: Array.from(svg.querySelectorAll('[data-kinetic-layer]')),
+      flow: Array.from(svg.querySelectorAll('[data-kinetic-flow]')),
+      route: svg.querySelector('[data-kinetic-route]'),
+      routeTop: svg.querySelector('[data-kinetic-route-top]'),
+      gate: svg.querySelector('[data-kinetic-gate]'),
+      gateBase: svg.querySelector('[data-kinetic-gate-base]'),
+      wait: svg.querySelector('[data-kinetic-wait]'),
+      gap: svg.querySelector('[data-kinetic-gap]'),
+      branches: svg.querySelector('[data-kinetic-branches]'),
+      branchA: svg.querySelector('[data-kinetic-branch="a"]'),
+      branchB: svg.querySelector('[data-kinetic-branch="b"]'),
+      futureA: svg.querySelector('[data-kinetic-future="a"]'),
+      futureB: svg.querySelector('[data-kinetic-future="b"]'),
+      plateA: svg.querySelector('[data-kinetic-future-plate="a"]'),
+      plateB: svg.querySelector('[data-kinetic-future-plate="b"]'),
+      return: svg.querySelector('[data-kinetic-return]'),
+      returnTrack: svg.querySelector('[data-kinetic-return-track]'),
+      light: svg.querySelector('[data-kinetic-ring-light]'),
+      glowUnder: svg.querySelector('[data-kinetic-glow="under"]'),
+      glowSource: svg.querySelector('[data-kinetic-glow="source"]'),
+      glowCurrent: svg.querySelector('[data-kinetic-glow="current"]'),
+      actionToken: svg.querySelector('[data-kinetic-action-token]'),
+      waitingCard: svg.querySelector('[data-kinetic-waiting-card]')
+    };
+  }
+
+  function applyPose(svg, el, g, pose) {
+    el.sources.forEach((element, index) => {
+      const side = index - 1;
+      const spread = pose.source;
+      const x = g.source[0] + side * (g.mobile ? 22 : 32) * spread;
+      const y = g.source[1] - 9 - index * (g.mobile ? 6 : 8) - pose.sourceLift - Math.abs(side) * 14 * spread;
+      element.setAttribute('transform', `translate(${n(x)} ${n(y)}) rotate(${n(side * -9 * spread)})`);
+      element.setAttribute('opacity', n(index === 2 ? 1 : mix(.4, 1, spread)));
+    });
+    el.layers.forEach((element, index) => {
+      const amount = clamp(pose.stack - index);
+      const offset = index % 2 ? (g.mobile ? 3 : 4) : -2;
+      element.setAttribute('transform', `translate(${n(g.pile[0] + offset)} ${n(g.pile[1] - index * g.pileStep + (1 - amount) * 12)})`);
+      element.setAttribute('opacity', n(amount));
+    });
+    el.route.setAttribute('opacity', n(pose.action));
+    el.gate.setAttribute('transform', `rotate(${n(pose.gate)})`);
+    el.gateBase.setAttribute('opacity', n(mix(.6, 1, pose.action)));
+    el.wait.setAttribute('opacity', n(pose.waiting));
+    el.gap.setAttribute('opacity', n(Math.max(.4, pose.waiting)));
+    el.branches.setAttribute('opacity', n(pose.future));
+    el.branchA.setAttribute('stroke', pose.aLight > .9 ? '#395e9f' : '#7e93b5');
+    el.branchB.setAttribute('stroke', pose.bLight > .9 ? '#395e9f' : '#7e93b5');
+    el.futureA.setAttribute('opacity', n(pose.aLight));
+    el.futureB.setAttribute('opacity', n(pose.bLight));
+    el.plateA.setAttribute('transform', `translate(${g.futureA[0]} ${n(g.futureA[1] - pose.aLift)})`);
+    el.plateB.setAttribute('transform', `translate(${g.futureB[0]} ${n(g.futureB[1] - pose.bLift)})`);
+    el.returnTrack.setAttribute('opacity', n(Math.max(.4, pose.loop)));
+    el.light.setAttribute('opacity', n(pose.ringLight));
+    el.glowUnder.setAttribute('opacity', n(pose.underGlow));
+    el.glowSource.setAttribute('opacity', n(pose.sourceGlow));
+    el.glowCurrent.setAttribute('opacity', n(pose.currentGlow));
+    const waitingCard = pose.action > .95 ? .95 : 0;
+    el.waitingCard.setAttribute('transform', `translate(${g.waiting[0]} ${g.waiting[1] - 8})`);
+    el.waitingCard.setAttribute('opacity', n(waitingCard));
+    poses.set(svg, { ...pose });
+  }
+
+  function hideFlow(el) {
+    el.flow.forEach(element => element.setAttribute('opacity', '0'));
+    el.actionToken.setAttribute('opacity', '0');
+  }
+
+  function animateFlow(el, g, selected, progress) {
+    hideFlow(el);
+    if (selected === 'past' || selected === 'present' || selected === 'relation') {
+      const count = selected === 'relation' ? 3 : selected === 'present' ? 2 : 1;
+      for (let i = 0; i < count; i++) {
+        const start = selected === 'relation' ? .06 + i * .11 : .1 + i * .12;
+        const phase = clamp((progress - start) / (selected === 'relation' ? .68 : .58));
+        if (progress <= start || phase >= 1) continue;
+        // The relation state crosses the conditional return edge before a
+        // second arrival; every other state stops at the present-day pile.
+        const angle = selected === 'relation' ? 220 + phase * 570 : 220 + phase * 210;
+        const point = ellipsePoint(g, angle, g.bandX * .35);
+        const element = el.flow[i];
+        element.setAttribute('transform', `translate(${n(point[0])} ${n(point[1] - 11)})`);
+        element.setAttribute('opacity', n(Math.min(1, phase * 10, (1 - phase) * 12)));
+      }
+    }
+    if (selected === 'action') {
+      const phase = clamp((progress - .2) / .65);
+      if (progress > .2 && phase < 1) {
+        const point = routePoint(g, ease(phase));
+        el.actionToken.setAttribute('transform', `translate(${n(point[0])} ${n(point[1] - 11)})`);
+        el.actionToken.setAttribute('opacity', n(Math.min(1, phase * 9, (1 - phase) * 12)));
+        el.waitingCard.setAttribute('opacity', '0');
+      }
+    }
+  }
+
+  function transition(svg, model, options = {}) {
+    if (!svg || !svg.querySelector('[data-kinetic-pile]')) return { cancel() {}, finish() {} };
+    const previous = running.get(svg);
+    if (previous) previous.cancel();
+    const g = geometry(Boolean(options.mobile)), el = elements(svg), selected = selectedFor(options.selected);
+    const destination = target(selected);
+    const origin = poses.get(svg) || target(selectedFor(svg.getAttribute('data-focus')));
+    let frame = null, finished = false, paused = false, start = null, elapsed = 0;
+    const duration = selected === 'relation' ? 2900 : selected === 'action' ? 2450 : 2200;
+    svg.setAttribute('data-focus', selected);
+    svg.setAttribute('data-kinetic-playing', options.reduced ? 'false' : 'true');
+    const stop = () => {
+      if (frame != null) cancelAnimationFrame(frame);
+      frame = null;
+      hideFlow(el);
+      svg.setAttribute('data-kinetic-playing', 'false');
+      if (running.get(svg) === controller) running.delete(svg);
+    };
+    const controller = {
+      cancel() { if (finished) return; finished = true; stop(); },
+      finish() { if (finished) return; finished = true; applyPose(svg, el, g, destination); stop(); },
+      pause() {
+        if (finished || paused) return;
+        paused = true;
+        if (frame != null) cancelAnimationFrame(frame);
+        frame = null;
+        start = null;
+        svg.setAttribute('data-kinetic-playing', 'false');
+      },
+      resume() {
+        if (finished || !paused) return;
+        paused = false;
+        svg.setAttribute('data-kinetic-playing', 'true');
+        frame = requestAnimationFrame(tick);
+      }
+    };
+    running.set(svg, controller);
+    applyPose(svg, el, g, origin);
+    if (options.reduced) { controller.finish(); return controller; }
+    const tick = now => {
+      if (finished || paused) return;
+      if (start == null) start = now - elapsed;
+      elapsed = now - start;
+      const progress = clamp(elapsed / duration);
+      const transformProgress = ease(progress / .63);
+      const pose = Object.keys(destination).reduce((result, key) => {
+        result[key] = mix(origin[key], destination[key], transformProgress);
+        return result;
+      }, {});
+      // New layers appear at successive arrivals, rather than popping in as
+      // an unrelated chart. Their number deliberately has no numeric label.
+      if ((selected === 'relation' || selected === 'present') && destination.stack > origin.stack) {
+        const arrivals = selected === 'relation' ? [.29, .4, .73, .84] : [.56, .68];
+        const deposited = arrivals.reduce((total, arrival) => total + ease(clamp((progress - arrival) / .12)), 0) / arrivals.length;
+        pose.stack = mix(origin.stack, destination.stack, deposited);
+      }
+      applyPose(svg, el, g, pose);
+      animateFlow(el, g, selected, progress);
+      if (progress < 1) frame = requestAnimationFrame(tick);
+      else controller.finish();
+    };
+    frame = requestAnimationFrame(tick);
+    return controller;
+  }
+
+  window.CihouKineticScene = Object.freeze({ render, layout, transition });
+})();
+</script><script>/* Additional explicitly fictional interview material for the loop demo.
+ * These reflections do not add causal edges or override the simulated V2.
+ * No birth data or traditional chart inference is supplied by this sample. */
+window.CIHOU_EXPERIENCE = {
+  loop: {
+    version: '补充虚构素材 v2 · 2026-10-16',
+    reflections: [
+      {id:'L4',kind:'决策自述',quote:'接到任务时，我常先想怎样把事情做完，过后才发现原来的安排被挤开了。'},
+      {id:'L5',kind:'价值与愿望',quote:'我希望自己是可靠的合作者，也希望可靠不等于什么都由我来扛。'},
+      {id:'L6',kind:'反例',quote:'分工和期限说清楚的时候，我会先讨论顺序，不是每次都直接答应。'}
+    ],
+    scenes: [
+      {label:'接到任务时',steps:['新任务','先想怎么做','原计划后移'],source:'L4'},
+      {label:'分工与期限清楚时',steps:['新任务','先讨论顺序','再安排投入'],source:'L6'}
+    ]
+  }
+};
+</script><script>(function () {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const cases = window.CIHOU_CASES, reduced = matchMedia('(prefers-reduced-motion:reduce)'), narrow = matchMedia('(max-width:856px)');
+  const typeLabels = {loop:'回环',bridge:'接桥',confluence:'汇流',sparse:'留白'};
+  const state = {index:0,selected:'overview'};
+  const playback = {timer:0, playing:false, position:0, mode:'ready', remaining:0, started:0};
+  const steps = [{id:'past',label:'来处',duration:3400},{id:'relation',label:'反复',duration:4500},{id:'present',label:'此刻',duration:3700},{id:'action',label:'介入',duration:4400}];
+  const drafts = new Map();
+  let sceneMotion = null, copyMotion = null, toastTimer = 0, sceneId = 0;
+  const model = () => cases[state.index];
+  const draft = () => {const id=model().id;if(!drafts.has(id))drafts.set(id,{status:'observe',note:'',correction:'',feedback:'',dirty:false,exported:false});return drafts.get(id);};
+  const revised = m => ({...m,...m.revision,structure:m.structure,id:m.id,revision:m.revision});
+  const text = (id,value) => {$(id).textContent=value;};
+  const chain = (items,cls='small-chain') => `<div class="${cls}">${items.map((v,i)=>`${i?'<i aria-hidden="true">→</i>':''}<span>${esc(v)}</span>`).join('')}</div>`;
+  function notify(message) {clearTimeout(toastTimer);text('toast',message);$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,6000);}
+  function safeArt(structure,options) {try{return window.CihouEditorialScene.art(structure,options);}catch(error){console.error(error);return '<p class="footnote">图形暂不可用，以下文字保留了理解的变化。</p>';}}
+  const kindLabels = {fact:'已有经历',interpretation:'一种理解',present:'此刻',action:'你能参与',scenario:'条件情景',unknown:'尚待了解'};
+  const sceneRenderer = () => model().structure==='loop' ? window.CihouKineticScene : window.CihouEditorialScene;
+  const interaction = () => window.CIHOU_INTERACTIONS[model().structure];
+  function cancelMotion(finish=false) {
+    if(sceneMotion){finish?sceneMotion.finish():sceneMotion.cancel();sceneMotion=null;}
+    if(copyMotion){copyMotion.cancel();copyMotion=null;}
+  }
+  function playbackUI() {
+    const available=model().structure==='loop'&&!reduced.matches;
+    $('playback-strip').hidden=!available;
+    $('playback-strip').dataset.playing=String(playback.playing);
+    text('playback-state',playback.playing?`${steps[playback.position].label} · 自动讲解`:({ready:'一段经历，怎样成为回环',paused:'已暂停 · 可直接点图',explore:'自由探索 · 点哪里，读哪里',done:'讲解结束 · 等待现实回应'}[playback.mode]));
+    text('playback-toggle',playback.playing?'Ⅱ 暂停':playback.mode==='paused'?'▷ 继续':'↻ 重播');
+    $('playback-toggle').setAttribute('aria-label',playback.playing?'暂停自动讲解':playback.mode==='paused'?'继续自动讲解':'重播自动讲解');
+    $('scene-explanation').setAttribute('aria-live',playback.playing?'off':'polite');
+    $('playback-progress').style.width=`${playback.mode==='done'?100:playback.playing?(playback.position+1)*25:playback.mode==='explore'?0:playback.position*25}%`;
+  }
+  function stopPlayback(mode='paused', finish=true) {
+    if(playback.playing)playback.remaining=Math.max(0,playback.remaining-(performance.now()-playback.started));
+    clearTimeout(playback.timer);playback.timer=0;playback.playing=false;playback.mode=mode;
+    if(mode==='paused'&&sceneMotion?.pause){sceneMotion.pause();if(copyMotion)copyMotion.pause();}
+    else if(finish)cancelMotion(true);
+    playbackUI();
+  }
+  function schedulePlayback() {
+    playback.started=performance.now();
+    playback.timer=setTimeout(()=>{
+      if(!playback.playing)return;
+      if(playback.position>=steps.length-1){stopPlayback('done');return;}
+      playback.position++;advancePlayback();
+    },playback.remaining);
+  }
+  function advancePlayback() {
+    if(!playback.playing||document.hidden||reduced.matches)return;
+    const part=steps[playback.position];
+    selectHotspot(part.id,true);playback.remaining=part.duration;playbackUI();schedulePlayback();
+  }
+  function startPlayback(resume=false) {
+    if(model().structure!=='loop'||reduced.matches||document.hidden)return;
+    clearTimeout(playback.timer);playback.position=resume?playback.position:0;
+    playback.playing=true;playback.mode='playing';
+    if(resume&&sceneMotion?.resume){sceneMotion.resume();if(copyMotion)copyMotion.play();playbackUI();schedulePlayback();}
+    else advancePlayback();
+  }
+  function renderHotspots() {
+    const layout=sceneRenderer().layout(model(),{mobile:narrow.matches});
+    $('scene-stage').style.aspectRatio=`${layout.width}/${layout.height}`;
+    $('scene-stage').dataset.structure=model().structure;
+    $('scene-stage').dataset.selected=state.selected;
+    $('scene-hotspots').innerHTML=interaction().hotspots.map(h=>{
+      const [x,y]=layout.anchors[h.id];
+      return `<button type="button" class="scene-hotspot" data-hotspot="${esc(h.id)}" data-kind="${esc(h.kind)}" aria-label="查看${esc(h.label)}${h.kind==='scenario'?'情景':''}" aria-pressed="${state.selected===h.id}" aria-controls="scene-explanation" style="left:${x/layout.width*100}%;top:${y/layout.height*100}%"><span class="hotspot-dot" aria-hidden="true"></span><span class="hotspot-label">${esc(h.label)}</span></button>`;
+    }).join('');
+  }
+  function renderScene() {
+    cancelMotion();
+    const focused=document.activeElement?.dataset?.hotspot;
+    try {
+      $('scene-host').innerHTML=sceneRenderer().render(model(),{selected:state.selected,mobile:narrow.matches,revised:false,idPrefix:'main-'+(++sceneId)});
+      renderHotspots();
+      if(focused)$('scene-hotspots').querySelector(`[data-hotspot="${focused}"]`)?.focus({preventScroll:true});
+    } catch(error){console.error(error);$('scene-hotspots').innerHTML='';$('scene-host').innerHTML=`<p class="footnote">图形暂不可用。${esc(model().summary)} ${esc(model().action.change)} 下方可以继续阅读完整说明。</p>`;}
+  }
+  function renderExplanation(animate=false) {
+    const part=interaction().hotspots.find(h=>h.id===state.selected)||interaction().overview;
+    text('scene-kind',kindLabels[part.kind]);text('scene-title',part.title);text('scene-body',part.body);
+    $('scene-explanation').dataset.kind=part.kind;
+    if(copyMotion){copyMotion.cancel();copyMotion=null;}
+    if(animate&&!reduced.matches&&$('scene-explanation').animate)copyMotion=$('scene-explanation').animate([{opacity:.35,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:360,easing:'ease-out'});
+  }
+  function renderHero() {
+    const m=model();text('report-meta',`${String(state.index+1).padStart(2,'0')} / ${m.name}的故事 · ${m.role.replace(' · 虚构样例','')}`);
+    $('report-title').innerHTML=m.title.map(v=>`<span>${esc(v)}</span>`).join('');text('hero-summary',m.summary);
+    text('future-heading',m.structure==='sparse'?'尚待了解':'此后 ／ 条件情景');
+    text('figure-caption',m.structure==='sparse'?'已知留下，原因留白。':m.structure==='loop'?'叠层示意，回环待核对。':'连线是理解，分支是情景。');
+    renderScene();renderExplanation();playbackUI();
+  }
+  function selectHotspot(id,automatic=false) {
+    if(!interaction().hotspots.some(h=>h.id===id))return;
+    if(!automatic)stopPlayback('explore',false);
+    cancelMotion();state.selected=id;
+    $('scene-hotspots').querySelectorAll('[data-hotspot]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.hotspot===id)));
+    $('scene-stage').dataset.selected=id;
+    renderExplanation(true);
+    const svg=$('scene-host').querySelector('svg');
+    if(svg)sceneMotion=sceneRenderer().transition(svg,model(),{mobile:narrow.matches,selected:id,reduced:reduced.matches});
+  }
+  function renderStory() {
+    const m=model();
+    const headings={loop:'几次临时承接，\n渐渐成了持续安排。',bridge:'准备已经在这里，\n还需要具体的回应。',confluence:'几条已有的线，\n在眼前交汇。',sparse:'先把已知的留下，\n不急着连接原因。'};
+    $('origin-title').innerHTML=esc(headings[m.structure]).replace('\n','<br>');
+    $('history').innerHTML=m.nodes.map((n,i)=>`<li><div class="history-meta"><span class="history-number">${String(i+1).padStart(2,'0')}</span><h3>${esc(n.label)}</h3></div><blockquote>${esc(n.quote)}</blockquote><span class="source-ref">${esc(n.source.split(' · ')[0])} · 日期未提供</span></li>`).join('');
+    $('interpretation').innerHTML=m.insights.map(i=>`<div class="insight">${chain(i.chain)}<p>${esc(i.sentence)}</p></div>`).join('');
+    text('counterexample',m.context.against+' '+m.context.alternative);
+    const covered=m.topics.filter(t=>t.status==='深入').map(t=>t.name),partial=m.topics.filter(t=>t.status==='略有了解').map(t=>t.name),missing=m.topics.filter(t=>t.status==='未展开').map(t=>t.name);
+    $('scope-line').innerHTML=`<strong>本次范围</strong>　${covered.length?'深入：'+esc(covered.join('、'))+'。 ':''}${partial.length?'略有了解：'+esc(partial.join('、'))+'。 ':''}${missing.length?'尚未展开：'+esc(missing.join('、'))+'。':''}`;
+    text('choice-title',m.structure==='sparse'?'眼下，可以先观察。':'你能加入一个条件。');
+    $('change-line').innerHTML=`<div><small>眼下的问题</small><p>${esc(m.question)}</p></div><span class="change-arrow" aria-hidden="true">→</span><div><small>${esc(m.action.short)}</small><p>${esc(m.action.change)}</p></div>`;
+    $('choice-facts').innerHTML=`<div><h3>需要投入</h3><p>${esc(m.action.cost)}</p></div><div><h3>也依赖外部条件</h3><p>${esc(m.action.needs)}</p></div>`;
+    $('responses').innerHTML=m.branches.length?m.branches.map(b=>`<div class="response"><span class="branch-label">${esc(b.label)} · 尚未发生的情景</span><h3>${esc(b.title)}</h3><p>${esc(b.body)}</p><dl><dt>需要</dt><dd>${esc(b.needs)}</dd><dt>代价</dt><dd>${esc(b.cost)}</dd><dt>留意</dt><dd>${esc(b.observe)}</dd></dl></div>`).join(''):'<p class="no-future">线索不足，未来暂时留白。</p>';
+    $('alternative').innerHTML=`<h3>也可以，${esc(m.alternative.label)}。</h3><p>${esc(m.alternative.protect)} ${esc(m.alternative.cost)}</p><p>需要：${esc(m.alternative.needs)} 留意：${esc(m.alternative.observe)}</p>`;
+    $('windows').innerHTML=m.windows.map(w=>`<li><small>${esc(w.kind)}<br>${esc(w.time)}</small><h4>${esc(w.title)}</h4><p>${esc(w.body)}</p></li>`).join('');
+    renderDecision();renderLifeTopics();renderRevision();renderEvidence();text('observation-question',m.observation);renderRecord();renderShare();
+  }
+  function renderDecision() {
+    const extra=window.CIHOU_EXPERIENCE[model().structure];
+    const traditional=`<aside class="traditional-reading"><div><span class="eyebrow">另一种观察角度</span><h3>命理，怎样参与这份理解？</h3></div><div><div class="basis-flow"><span>盘面与传统规则</span><i>⇢</i><span>提出观察</span><i>⇢</i><span>与经历核对</span></div><p>它可以提供传统的解释角度；具体如何作出决定，仍要回到当时的经历、想法和现实条件。</p><p class="basis-empty">本样例没有出生与命盘资料，因此保留这个阅读层次，暂不填入个人命理判断。</p></div></aside>`;
+    if(!extra){$('decision-reading').innerHTML=traditional;return;}
+    $('decision-reading').innerHTML=`<section class="decision-reading"><div class="decision-intro"><p class="eyebrow">再往里看一层</p><h2>你在意可靠，<br>也需要可持续。</h2><blockquote>“${esc(extra.reflections[1].quote)}”<cite>虚构素材 ${extra.reflections[1].id} · ${esc(extra.reflections[1].kind)}</cite></blockquote></div><div class="decision-scenes">${extra.scenes.map((part,i)=>`<div class="decision-scene"><span class="scene-scenario">${esc(part.label)}</span>${chain(part.steps,'decision-chain')}<blockquote>“${esc(extra.reflections[i===0?0:2].quote)}”</blockquote><span class="source-ref">虚构素材 ${part.source}</span></div>`).join('')}</div><p class="decision-meaning">同一个人，在不同条件下，已经会作出不同的回应。可以尝试把“先讨论顺序”放到任务进入的那一刻。为什么任务持续交来，还要看岗位、人手和派工权限。</p><p class="footnote">以上为本轮新增的虚构自述。它们说明决策时在意什么，不推断童年或固定人格；也不推翻下文 V2 对派工原因的修正。</p></section>${traditional}`;
+  }
+  function renderLifeTopics() {
+    const m=model(),known=m.topics.filter(t=>t.status!=='未展开'),unknown=m.topics.filter(t=>t.status==='未展开');
+    $('life-topics').innerHTML=`<div class="life-index" aria-label="本次生活领域覆盖">${m.topics.map(t=>`<span data-depth="${esc(t.status)}">${esc(t.name)}<i>${esc(t.status)}</i></span>`).join('')}</div><div class="life-readings">${known.map((t,i)=>`<section class="life-topic"><div class="life-topic-heading"><span class="topic-number">${String(i+1).padStart(2,'0')}</span><h3>${esc(t.name)}</h3><span class="topic-depth">${esc(t.status)}</span></div><div><h4>${esc(t.label)}</h4><ul>${t.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div></section>`).join('')}</div>${unknown.length?`<aside class="life-unknown"><span class="eyebrow">本次仍留白</span><p>${unknown.map(t=>esc(t.name)).join(' · ')}</p><ul>${unknown.map(t=>`<li><strong>${esc(t.name)}</strong> ${esc(t.label)}。${esc(t.points.join(' '))}</li>`).join('')}</ul></aside>`:''}`;
+  }
+  function renderRevision() {
+    const m=model(),r=m.revision,next=revised(m);
+    text('revision-feedback',r.feedback.replace(/^模拟回访[：:]\s*/,''));
+    $('revision-comparison').innerHTML=[{version:'V1 / 当时的理解',model:m,revised:false,body:r.prior},{version:'V2 / 新反馈后的理解 · 模拟',model:next,revised:true,body:r.current}].map((v,i)=>`<div class="revision-panel"><small>${esc(v.version)}</small><div class="revision-art">${safeArt(m.structure,{revised:v.revised,idPrefix:'revision-'+i+'-'+state.index})}</div><div class="revision-labels">${v.model.graphLabels.map(label=>`<span>${esc(label)}</span>`).join('')}</div><p>${esc(v.body)}</p><h3>${i?'下一步改为':'当时可考虑'}：${esc(v.model.action.short)}</h3><p>观察：${esc(v.model.action.observe)}</p></div>`).join('');
+    $('revision-diff').innerHTML=[['保留',r.keep],['放下 / 修正',r.drop],['仍待了解',r.unknown]].map(([a,b])=>`<div><h3>${a}</h3><p>${esc(b)}</p></div>`).join('');
+  }
+  function renderEvidence() {
+    const m=model(),next=revised(m);
+    const sourceRows=(ns)=>ns.map(n=>`<div class="source-row"><strong>${esc(n.label)}</strong><p>${esc(n.quote)}</p><small>${esc(n.time)} · ${esc(n.source)}</small></div>`).join('');
+    const edgeRows=(es,ns)=>es.length?es.map(e=>`<div class="edge-row"><h4>${esc(ns.find(n=>n.id===e.from)?.label||e.from)} → ${esc(ns.find(n=>n.id===e.to)?.label||e.to)} · ${esc(e.label)}</h4><dl><dt>依据</dt><dd>${esc(e.basis)}</dd><dt>条件</dt><dd>${esc(e.condition)}</dd><dt>反例</dt><dd>${esc(e.counterexample)}</dd><dt>未知</dt><dd>${esc(e.unknown)}</dd></dl></div>`).join(''):'<p>没有足够依据连接因果，保留未知。</p>';
+    const extra=window.CIHOU_EXPERIENCE[m.structure];
+    $('source-list').innerHTML=sourceRows(m.nodes)+(extra?`<h4>${esc(extra.version)}</h4>${extra.reflections.map(r=>`<div class="source-row"><strong>${esc(r.id)} · ${esc(r.kind)}</strong><p>${esc(r.quote)}</p><small>虚构自述；不新增主图因果边，不覆盖 V2 修正</small></div>`).join('')}`:'');
+    $('edge-list').innerHTML=edgeRows(m.edges,m.nodes)+`<details class="revision-evidence"><summary>模拟 V2 的完整依据<span class="detail-plus" aria-hidden="true">＋</span></summary>${sourceRows(next.nodes)}${edgeRows(next.edges,next.nodes)}<p class="footnote">${esc(next.action.change)} 所需条件：${esc(next.action.needs)} 投入：${esc(next.action.cost)}</p>${next.branches.map(b=>`<div class="edge-row"><h4>${esc(b.label)} · ${esc(b.title)}</h4><p>${esc(b.body)}</p><p>条件：${esc(b.needs)} 代价：${esc(b.cost)} 观察：${esc(b.observe)}</p></div>`).join('')}</details>`;
+    $('topic-list').innerHTML=m.topics.map(t=>`<div class="topic-row"><h4>${esc(t.name)}<span>${esc(t.status)}</span></h4><p>${esc(t.label)}。${esc(t.points.join(' '))}</p></div>`).join('');
+    text('provenance',`固定版本：phase1-${m.id} / V1，2026-10-15。来源：匿名虚构素材 v1；${m.structure==='loop'?'另含补充虚构自述 L4–L6（2026-10-16）；':''}V2 为预设模拟回访 v1。本原型未使用真实咨询、出生资料、历法计算或八字分析；不生成正式咨询报告。图形长度、位置、线数和颜色不代表数值、概率或因果强度；叠片不代表真实任务数量或重复次数。本地文件没有账号、上传或云同步，旧副本不会自动更新或撤回。`);
+  }
+  function renderRecord() {
+    const d=draft();$('record-status').value=d.status;$('record-note').value=d.note;$('correction-note').value=d.correction;$('feedback-note').value=d.feedback;
+    $('feedback-field').hidden=d.status!=='acted';
+    text('record-note-label',d.status==='acted'?'实际尝试了什么？（请填写）':d.status==='intend'?'想尝试的具体一步（可不填）':'我的观察或想法（可不填）');
+    text('draft-status',d.exported&&!d.dirty?'已生成本地记录 · 未提交原咨询':'仅在本页 · 未同步');
+  }
+  function recordText() {
+    const m=model(),d=draft();return ['# 此后 · 观察与纠正记录','',`匿名样例：${m.name}（虚构）`,`报告版本：phase1-${m.id} / V1`,`来源快照：虚构素材 v1${window.CIHOU_EXPERIENCE[m.structure]?' + '+window.CIHOU_EXPERIENCE[m.structure].version+'（L4、L5、L6）':''}`,`原型日期：2026-10-16`,'','这是一份本地草稿，尚未提交原咨询、尚未同步。页面 V2 是预设演示，不是对本记录的分析。','',`状态：${{observe:'先观察，尚未行动',intend:'想尝试，尚未行动',acted:'手动声明已在现实中尝试'}[d.status]}`,`观察问题：${m.observation}`,`可考虑的行动：${m.action.short}`,`所需条件：${m.action.needs}`,'','## 我的记录',d.note.trim()||'未填写','','## 实际收到的回应',d.status==='acted'?(d.feedback.trim()||'未填写，不推断有没有变化'):'未记录现实反馈','','## 对 V1 的纠正草稿',d.correction.trim()||'未填写','','页面试演不等于现实行动。把记录带回原咨询，核对后再更新正式理解。'].join('\n');
+  }
+  function download(content,type,name) {const blob=content instanceof Blob?content:new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+  // No report object enters this function. Share markup is built from an explicit
+  // field allowlist, so private text is absent from both pixels and file source.
+  function shareSVG({structure,action='',showShape=true,showAction=true,showMotto=true}) {
+    const type=['loop','bridge','confluence','sparse'].includes(structure)?structure:'sparse';
+    const artwork=showShape?window.CihouEditorialScene.art(type,{revised:false,idPrefix:'public-art'}):'';
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="840" viewBox="0 0 720 840" role="img" aria-label="此后匿名分享图"><rect width="720" height="840" fill="#f6f4ee"/><text x="48" y="69" fill="#252820" font-family="Songti SC,STSong,serif" font-size="30">此后</text><text x="672" y="66" text-anchor="end" fill="#676a64" font-family="sans-serif" font-size="11" letter-spacing="3">CIHOU</text><path d="M48 95H672" stroke="#252820"/>${showMotto?'<text x="48" y="202" font-family="Songti SC,STSong,serif" font-size="64" fill="#252820">你，也是原因。</text>':''}<svg x="25" y="245" width="670" height="350" viewBox="0 0 1000 440">${artwork}</svg>${showAction?`<text x="48" y="659" font-family="sans-serif" font-size="25" fill="#3559c7">${esc(String(action).slice(0,28))}</text>`:''}<path d="M48 727H672" stroke="#d7d8ce"/><text x="48" y="765" font-family="sans-serif" font-size="14" fill="#676a64">一种可参与的理解。未来仍然开放。</text><text x="48" y="793" font-family="sans-serif" font-size="11" fill="#676a64">匿名虚构 · 条件试演</text></svg>`;
+  }
+  window.CihouShare={create:shareSVG};
+  function currentShare() {return shareSVG({structure:model().structure,action:model().action.short,showShape:$('share-shape').checked,showAction:$('share-action').checked,showMotto:$('share-motto').checked});}
+  function renderShare() {try{$('share-preview').innerHTML=currentShare();}catch(error){console.error(error);text('share-preview','分享图暂不可用。');}}
+  async function exportShare() {
+    const svg=currentShare(),button=$('export-share');button.disabled=true;
+    try{const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml;charset=utf-8'}));try{const img=new Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url;});const canvas=document.createElement('canvas');canvas.width=1440;canvas.height=1680;const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');ctx.drawImage(img,0,0,1440,1680);const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));if(!blob)throw new Error('PNG unavailable');download(blob,'image/png','cihou-share.png');notify('已生成分享图，只包含预览中的内容。');}finally{URL.revokeObjectURL(url);}}
+    catch(error){download(svg,'image/svg+xml;charset=utf-8','cihou-share.svg');notify('已生成独立 SVG 分享图，可用浏览器打开。');}
+    finally{button.disabled=false;}
+  }
+  $('playback-toggle').addEventListener('click',()=>{if(playback.playing)stopPlayback('paused');else startPlayback(playback.mode==='paused');});
+  $('scene-hotspots').addEventListener('click',e=>{const button=e.target.closest('[data-hotspot]');if(button)selectHotspot(button.dataset.hotspot);});
+  $('record-form').addEventListener('input',e=>{const d=draft();if(e.target.id==='record-status'){d.status=e.target.value;d.dirty=true;d.exported=false;renderRecord();return;}if(e.target.id==='record-note')d.note=e.target.value;if(e.target.id==='correction-note')d.correction=e.target.value;if(e.target.id==='feedback-note')d.feedback=e.target.value;d.dirty=true;d.exported=false;text('draft-status','仅在本页 · 未同步');});
+  $('record-form').addEventListener('submit',e=>{e.preventDefault();if(draft().status==='acted'&&!draft().note.trim()){notify('请先写下实际尝试了什么。图上的预演不会计为现实行动。');$('record-note').focus();return;}download(recordText(),'text/markdown;charset=utf-8','cihou-observation.md');draft().dirty=false;draft().exported=true;renderRecord();notify('已生成本地记录，仍需由你带回原咨询。');});
+  ['share-shape','share-action','share-motto'].forEach(id=>$(id).addEventListener('change',renderShare));$('export-share').addEventListener('click',exportShare);
+  $('case-select').innerHTML=cases.map((m,i)=>`<option value="${i}">${esc(m.name)} · ${esc(typeLabels[m.structure])} · ${m.nodes.length} 项经历</option>`).join('');
+  $('case-select').addEventListener('change',()=>{stopPlayback('ready');state.index=Number($('case-select').value);state.selected='overview';renderHero();renderStory();document.querySelectorAll('details').forEach(d=>d.open=false);window.scrollTo({top:0,behavior:'instant'});$('scene-hotspots').querySelector('[data-hotspot=present]')?.focus({preventScroll:true});});
+  narrow.addEventListener('change',()=>{if(playback.playing)stopPlayback('paused');renderScene();});
+  reduced.addEventListener('change',()=>{if(reduced.matches){stopPlayback('paused');renderScene();}playbackUI();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){if(playback.playing)stopPlayback('paused');else if(playback.mode!=='paused')cancelMotion(true);}});
+  window.addEventListener('beforeunload',e=>{if([...drafts.values()].some(d=>d.dirty)){e.preventDefault();e.returnValue='';}});
+  renderHero();renderStory();startPlayback();
+  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{if(!entries[0].isIntersecting){if(playback.playing)stopPlayback('paused');else if(playback.mode!=='paused')cancelMotion(true);}},{threshold:0}).observe($('scene-stage'));
+})();
+</script>
+</body></html>

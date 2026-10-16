@@ -74,7 +74,9 @@ python3 afei-destiny-skill/scripts/calculate_bazi.py --date 1990-05-15 --time 14
 
 完整流程从出生信息与排盘口径开始，经过盲测前盘面审计、四条开场盲测、一次反馈结算和倾听式主问题，最后分别生成用户报告与技术分析。每一阶段都有状态、来源和恢复入口；输入被纠正时，旧盘和下游结论会按显式操作失效，而不是静默混用。
 
-仓库暂不展示咨询案例。旧案例基于早期的一次性回复流程，已经从当前展示层撤下；以后只有完整走过现行咨询闭环、经过隐私审查并获得公开授权的材料，才会重新进入案例区。
+仓库暂不展示真实咨询案例。旧案例基于早期的一次性回复流程，已经从当前展示层撤下；以后只有完整走过现行咨询闭环、经过隐私审查并获得公开授权的材料，才会重新进入案例区。
+
+「此后」的[当前匿名交互原型](design-demos/cihou-stage1.html)用于探索主图、行动试演与连续图文阅读。它包含人工编排的虚构样例，尚未接入正式咨询生成；不能只替换姓名或资料就用于另一位用户。当前基线、个性化边界和下一次完整咨询模拟见[新对话交接](docs/CIHOU_HANDOFF.md)，历史版本见[设计演示索引](design-demos/README.md)。
 
 ## 仓库结构
 
@@ -94,7 +96,7 @@ python3 afei-destiny-skill/scripts/calculate_bazi.py --date 1990-05-15 --time 14
 │  └─ archive/            上一代 MingLi/BaziQA 实验归档
 ├─ docs/                  工作区说明、方法报告和演示指南
 ├─ assets/                项目主视觉、社交预览、能力图和联系图片
-├─ design-demos/          生成展示图片时使用的 HTML/渲染脚本
+├─ design-demos/          匿名产品原型、历史演示与展示图源稿
 ├─ dist/                  本地生成的发布压缩包；ZIP 不进入 Git
 ├─ tools/                 工作区开发检查；不属于可安装 Skill
 ├─ requirements-dev.txt   开发校验依赖
@@ -130,6 +132,7 @@ python tools/check_workspace.py
 ## 文档导航
 
 - [工作区地图：每个目录和文件是什么](docs/WORKSPACE_GUIDE.md)
+- [此后：当前原型与新对话交接](docs/CIHOU_HANDOFF.md)
 - [评测与迭代方法报告](docs/EVALUATION_AND_ITERATION_METHOD.md)
 - [知识与推理缺口审计](docs/KNOWLEDGE_AUDIT.md)
 - [文档总索引](docs/README.md)

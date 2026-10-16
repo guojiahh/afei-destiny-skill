@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="人生海图：现代纸质航海图、可播放航程与连续长解读。人物与海域全部为虚构演示。">
+  <title>人生海图 · 林舟的阶段探索 | 阿飞命运探索</title>
+  <style>
+    :root { --paper:#f6f4ec; --white:#fcfbf6; --ink:#203c39; --quiet:#63736c; --dim:#78887e; --line:#d5dbcf; --sea:#e5ece5; --land:#f4f0df; --coast:#9eb5a6; --route:#365f57; --rust:#a15e3e; --soft:#eef0e5; --serif:"Songti SC","STSong","Noto Serif CJK SC",serif; --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:25px; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.85 var(--sans); -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,p,figure { margin:0; }
+    h1,h2,h3 { font-weight:500; }
+    a { color:inherit; text-underline-offset:4px; }
+    button { font:inherit; color:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+    button:focus-visible,a:focus-visible { outline:2px solid var(--rust); outline-offset:5px; }
+    ::selection { background:#ceddcd; }
+    .wrap { width:min(1240px,calc(100% - 72px)); margin-inline:auto; }
+    .skip { position:absolute; z-index:20; left:16px; top:-70px; background:var(--ink); color:white; padding:10px 15px; }
+    .skip:focus { top:12px; }
+    .masthead { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; border-bottom:1px solid var(--line); }
+    .brand { display:flex; gap:12px; align-items:center; font-size:15px; letter-spacing:.08em; }
+    .brand .mark { font:italic 33px/1 var(--serif); color:var(--route); }
+    .brand small { font-size:10px; letter-spacing:.18em; color:var(--dim); }
+    .masthead-note { font-size:11px; color:var(--quiet); }
+    .masthead-note::before { content:""; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--rust); margin-right:8px; }
+    .intro { display:flex; justify-content:space-between; align-items:flex-end; gap:35px; padding:30px 0 26px; }
+    .eyebrow { font-size:11px; letter-spacing:.18em; color:var(--quiet); margin-bottom:12px; }
+    h1 { font:500 clamp(44px,5.5vw,70px)/1.12 var(--serif); letter-spacing:.045em; }
+    .title-row { display:flex; align-items:flex-end; gap:26px; }
+    .title-row p { font:20px/1.5 var(--serif); padding-bottom:4px; color:var(--quiet); }
+    .intro-copy { max-width:25em; color:var(--quiet); font-size:13px; line-height:1.95; }
+    .intro-copy strong { color:var(--ink); font-weight:500; }
+    .chart-sheet { border:1px solid #b7c7ba; padding:8px; background:var(--white); box-shadow:0 16px 45px #50644d08; }
+    .map-frame { border:1px solid #c5d1c3; background:var(--sea); }
+    .map-top { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:17px 24px 0; }
+    .map-title .folio { font-size:10px; letter-spacing:.18em; color:#667c70; }
+    .map-title h2 { font:21px/1.5 var(--serif); margin-top:2px; }
+    .map-tools { display:flex; align-items:center; gap:12px; }
+    .map-button { display:flex; gap:8px; align-items:center; justify-content:center; padding:9px 17px; border:1px solid #b4c4b5; min-height:42px; background:#f6f7edc9; font-size:12px; }
+    .map-button.primary { background:var(--ink); border-color:var(--ink); color:var(--white); }
+    .map-button:hover { box-shadow:0 3px 9px #3e625518; }
+    .play-symbol { font-size:10px; }
+    .map { width:100%; height:430px; position:relative; overflow:hidden; }
+    .map svg { display:block; width:100%; height:100%; }
+    .port-button { position:absolute; transform:translate(-50%,-50%); width:46px; height:46px; border:0; padding:0; background:transparent; z-index:3; display:grid; place-items:center; }
+    .port-button::before { content:""; width:9px; height:9px; border:2px solid var(--white); background:var(--route); border-radius:50%; box-shadow:0 0 0 1px #6d9580; transition:box-shadow .2s; }
+    .port-button.future::before { width:9px; height:9px; background:#d6e3d8; border-color:var(--route); box-shadow:none; }
+    .port-button.current::before { width:13px; height:13px; background:var(--rust); border-color:var(--white); box-shadow:0 0 0 1px #a96948,0 0 0 8px #a9694815; }
+    .port-button.selected::before { box-shadow:0 0 0 1px var(--rust),0 0 0 7px #a9694820; }
+    .port-button:hover::before { box-shadow:0 0 0 1px var(--route),0 0 0 6px #5170601b; }
+    .port-label { position:absolute; pointer-events:none; white-space:nowrap; z-index:2; line-height:1.5; }
+    .port-label .age { display:block; font-size:10px; line-height:1.4; color:#6d8075; letter-spacing:.04em; }
+    .port-label .port { display:block; font:18px/1.5 var(--serif); color:var(--ink); margin-top:3px; }
+    .port-label .meaning { display:block; font-size:11px; color:#556a60; margin-top:2px; }
+    .port-label .condition { display:block; font-size:10px; color:#63766c; margin-top:4px; }
+    .port-label.current .age { color:var(--rust); }
+    .port-label.current .port { font-size:24px; color:#804829; }
+    .port-label.current .meaning { color:#804829; }
+    .map-footer { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:2px 24px 17px; font-size:11px; color:#546d60; }
+    .legend { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+    .legend span { display:flex; align-items:center; gap:7px; }
+    .legend i { display:block; width:21px; border-top:2px solid var(--route); }
+    .legend .future-key { border-top-style:dashed; border-color:#73988b; }
+    .legend .current-key { width:6px; height:6px; border:0; border-radius:50%; background:var(--rust); }
+    .arrival { display:grid; grid-template-columns:170px 1fr; gap:28px; padding:22px 24px 17px; }
+    .arrival .phase { font-size:10px; color:var(--rust); letter-spacing:.08em; }
+    .arrival .place { display:block; font:22px/1.5 var(--serif); margin-top:5px; }
+    .arrival h3 { font-size:17px; line-height:1.6; margin-bottom:5px; }
+    .arrival p { font-size:13px; color:var(--quiet); max-width:67em; }
+    .arrival .source { font-size:10px; color:var(--dim); margin-top:9px; }
+    .map-caption { display:flex; justify-content:space-between; gap:22px; padding:13px 1px 0; color:var(--dim); font-size:10px; line-height:1.9; }
+    .map-caption .hint { color:var(--route); white-space:nowrap; }
+    .status-line { min-height:21px; margin-top:7px; font-size:12px; color:var(--rust); text-align:right; }
+    .reading-start { padding:45px 0 28px; display:flex; justify-content:space-between; align-items:flex-end; gap:35px; border-bottom:1px solid var(--line); }
+    .reading-start .label { font-size:10px; color:var(--quiet); letter-spacing:.18em; margin-bottom:12px; }
+    .reading-start h2 { font:31px/1.5 var(--serif); }
+    .reading-start p { font-size:13px; max-width:30em; color:var(--quiet); }
+    .reading-layout { display:grid; grid-template-columns:210px minmax(0,760px); gap:65px; justify-content:space-between; padding-top:36px; }
+    .contents { position:sticky; top:25px; align-self:start; padding-top:10px; }
+    .contents .label { font-size:10px; letter-spacing:.15em; color:var(--dim); margin-bottom:15px; }
+    .contents a { display:block; padding:10px 0; text-decoration:none; font-size:12px; color:var(--quiet); border-bottom:1px solid #dee1d7; }
+    .contents a:hover { color:var(--rust); }
+    .contents span { font-size:10px; color:#84978a; margin-right:12px; }
+    .contents .motto { font:22px/1.8 var(--serif); color:var(--route); margin-top:33px; }
+    .essay { max-width:760px; }
+    .essay-chapter { padding:6px 0 42px; border-bottom:1px solid var(--line); margin-bottom:34px; counter-increment:chapter; }
+    .essay-chapter::before { content:"航行笔记 / 0" counter(chapter); display:block; font-size:10px; color:var(--rust); letter-spacing:.12em; margin-bottom:12px; }
+    .essay-chapter h2 { font:28px/1.5 var(--serif); margin-bottom:20px; }
+    .essay-chapter h3 { font-size:17px; margin:27px 0 10px; }
+    .essay-chapter p { font-size:15px; line-height:2.05; }
+    .essay-chapter p+p { margin-top:16px; }
+    .essay-chapter ol,.essay-chapter ul { padding-left:24px; margin:18px 0; }
+    .essay-chapter li { padding-left:4px; }
+    .essay-chapter li+li { margin-top:12px; }
+    .essay-chapter li::marker { color:var(--rust); font-size:12px; }
+    .essay-chapter li h3 { margin-top:18px; }
+    .essay-chapter dl { margin:24px 0 0; }
+    .essay-chapter dt { font-size:14px; font-weight:500; border-top:1px solid var(--line); padding-top:17px; color:var(--route); }
+    .essay-chapter dd { margin:6px 0 18px; font-size:14px; color:var(--quiet); line-height:2; }
+    #lf-routes dt { font:21px/1.5 var(--serif); color:var(--ink); }
+    #lf-mechanism-title+ol { padding:17px 22px 17px 40px; background:var(--soft); border-left:2px solid #8da68d; }
+    #lf-closure { font:24px/1.5 var(--serif); color:var(--rust); }
+    .references { font-size:11px; color:var(--quiet); line-height:1.9; padding:5px 0 35px; }
+    .footer { border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:25px; color:var(--dim); padding:25px 0 32px; font-size:10px; }
+    .footer .motto { font:16px/1.7 var(--serif); color:var(--route); }
+    .noscript { padding:14px; background:#eae6d5; font-size:14px; }
+    @media(max-width:1050px) { .wrap { width:calc(100% - 48px); } .title-row { gap:18px; } .intro-copy { max-width:21em; font-size:12px; } .map { height:410px; } .reading-layout { grid-template-columns:175px minmax(0,1fr); gap:38px; } }
+    @media(max-width:780px) { .intro-copy { display:none; } .reading-layout { display:block; padding-top:28px; } .contents { position:static; display:flex; flex-wrap:wrap; gap:4px 14px; padding:0 0 28px; } .contents .label,.contents .motto { display:none; } .contents a { padding:8px 0; min-height:40px; font-size:11px; } .contents a span { margin-right:6px; } .reading-start p { max-width:22em; font-size:12px; } }
+    @media(max-width:720px) {
+      .wrap { width:calc(100% - 32px); }
+      .masthead { padding:17px 0; }
+      .brand { font-size:13px; gap:8px; }
+      .brand .mark { font-size:29px; }
+      .brand small { display:none; }
+      .masthead-note { font-size:10px; }
+      .intro { padding:24px 0 22px; }
+      .eyebrow { font-size:10px; margin-bottom:12px; }
+      .title-row { display:block; }
+      h1 { font-size:48px; }
+      .title-row p { font-size:18px; margin-top:12px; padding:0; }
+      .chart-sheet { padding:5px; }
+      .map-top { padding:13px 13px 0; gap:12px; align-items:flex-start; }
+      .map-title .folio { font-size:9px; letter-spacing:.09em; }
+      .map-title h2 { font-size:17px; }
+      .map-tools { gap:6px; }
+      .map-button { min-height:44px; font-size:11px; padding:7px 10px; gap:5px; }
+      .map { height:510px; }
+      .port-label .age { font-size:10px; }
+      .port-label .port { font-size:17px; }
+      .port-label .meaning { font-size:12px; }
+      .port-label .condition { display:none; }
+      .port-label.current .port { font-size:21px; }
+      .port-label.future .port { font-size:15px; }
+      .port-label.future .meaning { font-size:11px; }
+      .map-footer { font-size:10px; padding:1px 13px 15px; }
+      .map-footer .sea-note { display:none; }
+      .legend { gap:13px; width:100%; justify-content:space-between; }
+      .legend i { width:17px; }
+      .arrival { display:block; padding:19px 16px 15px; }
+      .arrival .place { display:inline; font-size:19px; margin-left:9px; }
+      .arrival h3 { font-size:17px; line-height:1.75; margin-top:14px; }
+      .arrival p { font-size:14px; line-height:1.95; }
+      .arrival .source { font-size:10px; }
+      .map-caption { display:block; font-size:10px; }
+      .map-caption .hint { display:block; margin-top:6px; text-align:right; }
+      .reading-start { display:block; padding:28px 0 22px; }
+      .reading-start h2 { font-size:28px; }
+      .reading-start p { font-size:13px; max-width:none; margin-top:13px; }
+      .reading-layout { padding-top:20px; }
+      .contents { gap:4px 11px; padding-bottom:25px; }
+      .essay-chapter h2 { font-size:25px; }
+      .essay-chapter p { font-size:15px; }
+      .essay-chapter dt { font-size:14px; }
+      .essay-chapter dd { font-size:14px; }
+      .footer { display:block; }
+      .footer p+p { margin-top:9px; }
+    }
+    @media(max-width:360px) { .wrap { width:calc(100% - 24px); } .map-title .folio { font-size:8px; } .map-title h2 { font-size:16px; } .map-button { padding-inline:8px; font-size:10px; } .map { height:490px; } .port-label.future .port { font-size:14px; } .port-label.future .meaning { font-size:10px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .port-button::before { transition:none; } }
+    @media print { @page { size:A4; margin:15mm; } body { background:white; font-size:11pt; } .wrap { width:100%; } .masthead { padding:12px 0; } .intro { padding:20px 0; } h1 { font-size:38pt; } .map-tools,.contents,.skip,.status-line,.map-caption .hint { display:none; } .map { height:390px; } .chart-sheet { break-inside:avoid; box-shadow:none; } .chart-sheet,.map-frame { print-color-adjust:exact; -webkit-print-color-adjust:exact; } .reading-layout { display:block; } .essay { max-width:none; } .essay-chapter h2,.essay-chapter h3,.essay-chapter dt { break-after:avoid; } .essay-chapter dd { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#sea-map">跳到人生海图</a>
+  <header class="masthead wrap"><div class="brand"><span class="mark" aria-hidden="true">a.</span><span>阿飞命运探索</span><small>AFEI DESTINY</small></div><span class="masthead-note">匿名虚构 · 设计演示</span></header>
+  <main class="wrap">
+    <div class="intro"><div><p class="eyebrow">林舟 / 34 岁 / 职业发展与责任边界</p><div class="title-row"><h1>人生海图</h1><p>从这里，重新定航向。</p></div></div><p class="intro-copy">沿着这段航程，看清你已经积累的资源，<br>以及下一站需要什么条件。<br><strong>未来向几条路展开，选择仍在途中。</strong></p></div>
+    <figure class="chart-sheet" id="sea-map" aria-labelledby="sea-map-title">
+      <div class="map-frame">
+        <div class="map-top"><div class="map-title"><p class="folio">PERSONAL ATLAS / 001</p><h2 id="sea-map-title">林舟的阶段航程</h2></div><div class="map-tools"><button class="map-button primary" type="button" id="play" aria-pressed="false"><span class="play-symbol" aria-hidden="true">▶</span><span id="play-text">回看航程</span></button><button class="map-button" type="button" id="save">保存海图</button></div></div>
+        <div class="map" id="map"><svg id="sea" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">林舟的虚构人生海图</title><desc id="chart-desc">起步港、信任湾、满载海峡与当前转向港由已走航线连接。边界港、专业港与新岸是三个有条件的未来选择。海域与人物均为虚构，图形位置不表示优劣、分值或概率。</desc></svg></div>
+        <div class="map-footer"><div class="legend"><span><i aria-hidden="true"></i>已走航线</span><span><i class="current-key" aria-hidden="true"></i>此刻</span><span><i class="future-key" aria-hidden="true"></i>可能航线</span></div><span class="sea-note">虚构海域 · 选择关系示意</span></div>
+      </div>
+      <figcaption class="arrival" id="arrival" aria-live="polite" aria-atomic="true"><div><span class="phase" id="phase">34 岁 / 现在</span><span class="place" id="place">转向港</span></div><div><h3 id="arrival-title">你已经用可靠赢得信任。现在，让责任与资源重新同行。</h3><p id="arrival-body">先观察环境如何回应边界，再决定下一段航向。点选三个目的港，可以预演它们各自需要的条件。</p><p class="source" id="arrival-source">人物、经历与路线全部虚构 · 本次示例的核心理解</p></div></figcaption>
+    </figure>
+    <div class="map-caption"><span>人物、年龄、港口与海域全部为虚构演示。航线展示阶段和选择关系，距离、岛屿大小与方位没有评分、概率或优劣含义。</span><span class="hint">点选目的港，预演下一段航程 ↗</span></div>
+    <p class="status-line" id="status" role="status" aria-live="polite"></p>
+    <noscript><p class="noscript">海图播放与节点交互需要 JavaScript；下方完整解读可以直接阅读。</p></noscript>
+    <div class="reading-start"><div><p class="label">THE LOGBOOK / 航行笔记</p><h2>地图给你全景，<br>这几页，慢慢读懂自己。</h2></div><p>先记住三件事：能力已经积累，边界需要兑现，方向可以验证。下面把地图上的几站，放回具体生活中。</p></div>
+    <div class="reading-layout"><nav class="contents" aria-label="解读章节"><p class="label">阅读目录</p><a href="#lf-journey"><span>01</span>怎样走到这里</a><a href="#lf-panorama"><span>02</span>日常生活全景</a><a href="#lf-routes"><span>03</span>三条可能航线</a><a href="#lf-preparation"><span>04</span>验证与准备</a><a href="#lf-feedback"><span>05</span>反馈与未解问题</a><p class="motto">风会改变。<br>航向，仍有选择。</p></nav><article class="essay" aria-label="林舟的完整虚构报告">
+      <section class="essay-chapter" id="lf-journey" aria-labelledby="lf-journey-title">
+  <h2 id="lf-journey-title">你怎样走到转向港</h2>
+  <p>以下是一份连续阅读的虚构报告。林舟是三十四岁的虚构人物，从事项目协作工作；人物、经历、对话、反馈与航线均为演示编写，没有出生资料，也未进行排盘。</p>
+  <p>模拟对话中，他这样形容自己的处境：“大家都觉得我可靠，可所有事情最后都会落到我这里。我想往前走，又怕一停下来就显得不够负责。”他已经证明自己能把复杂事情理顺。现在需要确认的，是每一份新增责任是否获得相应的授权、资源与恢复空间。</p>
+  <h3 id="lf-mechanism-title">这段航程中，责任怎样逐渐满载</h3>
+  <ol aria-labelledby="lf-mechanism-title">
+    <li>事情出现空缺，他先补上，让协作继续推进。</li>
+    <li>团队逐渐默认由他收尾，新增责任没有被重新约定。</li>
+    <li>临时任务挤压专业主线，他把自己的工作移到晚上。</li>
+    <li>为了保持被信任的安心，他继续投入，休息也容易被打断。</li>
+  </ol>
+  <p>这是一种需要继续核验的理解。最强反例是：当负责人明确、优先级可以协商时，他能够合作，也能够拒绝。个人习惯与环境安排都影响结果。下一步可以观察一次具体沟通之后，工作实际改变了什么。</p>
+</section>
+
+<section class="essay-chapter" id="lf-panorama" aria-labelledby="lf-panorama-title">
+  <h2 id="lf-panorama-title">把这份理解放回日常生活</h2>
+  <p>职业是本次重点，也与学习、恢复和现实资源相互关联。以下八个主题保留各自的反馈状态；没有深入的部分，仍然留作问题。</p>
+  <dl>
+    <dt>自我与行为节奏 · 模拟已确认</dt>
+    <dd>他常常先承担、再确认余力。组织混乱是长处，代价是自己的需要被延后；观察答应前是否开始确认优先级。</dd>
+    <dt>学习与能力 · 模拟已确认</dt>
+    <dd>系统整理是可用资源，碎片救火挤走深入练习。观察能否保留完整时间，稳定产出一项专业成果。</dd>
+    <dt>事业与职责 · 模拟反馈后修正</dt>
+    <dd>规则缺失时，他较难退出。新增任务是否有负责人、授权与明确取舍，比笼统讨论“会不会拒绝”更有用。</dd>
+    <dt>财务与资源 · 模拟部分确认</dt>
+    <dd>稳定收入支持选择，也可能让他继续忍耐。变化需要结合现金流与现实承受条件，先整理条件，再比较路径。</dd>
+    <dt>感情与边界 · 尚未核验</dt>
+    <dd>工作是否压缩陪伴，目前没有足够反馈。可以观察约定是否常被推迟，不据此推断关系状态。</dd>
+    <dt>家庭与期待 · 本次未深入</dt>
+    <dd>家人真实的态度与支持方式仍待了解。不能把对稳定的常见期待，写成这个家庭已经存在的事实。</dd>
+    <dt>居住与环境 · 模拟判断未吻合</dt>
+    <dd>搬迁判断已经放下，目前没有证据支持需要搬迁。只有实际机会提出相关要求，才需要重新比较生活成本。</dd>
+    <dt>身心与恢复 · 模拟已确认</dt>
+    <dd>恢复时间容易被工作打断。观察能否保留不被消息占用的休息；这里只讨论作息与压力，不作健康诊断。</dd>
+  </dl>
+</section>
+
+<section class="essay-chapter" id="lf-routes" aria-labelledby="lf-routes-title">
+  <h2 id="lf-routes-title">三条航线，各自需要什么</h2>
+  <p>能力已经积累，边界需要兑现，方向可以验证。三条路径都需要现实条件支持；可以先获得信息，再形成决定。</p>
+  <dl>
+    <dt>边界港：留下，重谈职责</dt>
+    <dd><p>收益是保留熟悉的协作资源，让已有贡献获得明确安排。成本是沟通与持续跟进。适合团队愿意调整，而且能够把调整落实到负责人、优先级和支持资源的情况。</p></dd>
+    <dt>专业港：内部，转向专业</dt>
+    <dd><p>收益是继续使用已有经验，把投入集中到专业主线。成本是重新建立定位与协作关系。适合内部存在清晰岗位，工作内容能够承接长处，并保护成长时间的情况。</p></dd>
+    <dt>新岸：外部，探索机会</dt>
+    <dd><p>收益是增加信息与选择空间。成本是探索所需的时间，以及变化带来的不确定。适合当前调整回应有限，同时仍有准备余力的情况；可以先整理成果，再验证机会与现实成本。</p></dd>
+  </dl>
+</section>
+
+<section class="essay-chapter" id="lf-preparation" aria-labelledby="lf-preparation-title">
+  <h2 id="lf-preparation-title">接下来，怎样验证方向</h2>
+  <p>这些相对窗口只是示例准备节奏，不是未来事件预测，也不来自历法计算。</p>
+  <ol>
+    <li><h3 id="lf-window-one">现在至两周</h3><p>整理近期主线、临时任务与实际负责人，让沟通有具体依据。同时保护一段恢复时间，新增任务先确认优先级。</p></li>
+    <li><h3 id="lf-window-two">两周至三个月</h3><p>开展一次职责沟通，约定支持、取舍与回看时间。观察口头认可是否落实，也整理能够呈现专业贡献的成果。</p></li>
+    <li><h3 id="lf-window-three">三至六个月</h3><p>根据反馈比较内部与外部路径，选择一个主要探索方向。关注可用余力，避免同时推进过多方向增加消耗。</p></li>
+    <li><h3 id="lf-window-four">六至十二个月</h3><p>回看专业积累、恢复空间与职责变化。观察改善能否持续，并将收入、家庭责任、真实机会和个人价值纳入决定。</p></li>
+  </ol>
+</section>
+
+<section class="essay-chapter" id="lf-feedback" aria-labelledby="lf-feedback-title">
+  <h2 id="lf-feedback-title">哪些理解保留，哪些已经放下</h2>
+  <p>以下完整保留四项模拟开场判断与反馈，包括没有说中的部分。</p>
+  <ol>
+    <li><h3 id="lf-feedback-one">模拟确认：职责不清时补位</h3><p>原判断：“你经常在职责不清时补上空缺。”反馈：“很多跨团队事项都是我收尾。”保留主动兜底的模式，不推广到所有环境。</p></li>
+    <li><h3 id="lf-feedback-two">模拟部分吻合：拒绝需要规则</h3><p>原判断：“你可能不擅长拒绝。”反馈：“有规则时我会拒绝，主要怕项目没人管。”修正为规则缺失时较难退出，放下笼统的性格判断。</p></li>
+    <li><h3 id="lf-feedback-three">模拟未命中：搬迁判断放下</h3><p>原判断：“过去一年可能有搬迁。”反馈：“没有，一直住在原来的地方。”这项没有说中，不继续牵强解释。</p></li>
+    <li><h3 id="lf-feedback-four">模拟无法确认：关系中的陪伴</h3><p>原判断：“工作可能影响关系中的陪伴。”反馈：“这部分还没想清楚。”保留为待观察问题，不写成已发生的事实。</p></li>
+  </ol>
+  <h3 id="lf-boundaries">阅读边界</h3>
+  <p>反馈不换算准确率，也不倒写成命盘独立预测。航线的位置、曲率与长度用于排布，不代表运势数值、成功概率或路径优劣。感情与家庭未充分展开；环境愿意改变多少仍待验证。正式报告还应保留独立技术文档与来源，本演示没有虚构命盘或推导。</p>
+  <h3 id="lf-closure">心结收束</h3>
+  <p>他反复想确认的，也许不只是换工作能否成功，而是不再把每件事都接住，自己是否仍值得信任。他已经付出真实劳动，也积累了可以带走的能力。环境如何回应，需要信息与行动继续回答，不必全部由自责承担。</p>
+  <p>表达边界、安排准备、保护恢复，仍在他的主动权之内。今天可以先确认下一步，把尚未得到答案的部分暂时放在这里。</p>
+</section>
+      <div class="references">设计参考：<a href="https://www.mapbox.com/insights/map-design-process" target="_blank" rel="noopener noreferrer">Mapbox 地图设计指南</a>、<a href="https://storymaps.esri.com/downloads/Telling%20Stories%20with%20Maps.pdf" target="_blank" rel="noopener noreferrer">Esri 地图叙事</a>。本演示未进行排盘，也未接入正式咨询报告流程。</div>
+    </article></div>
+  </main>
+  <footer class="footer wrap"><p class="motto">看见自己，也看见选择。</p><p>AFEI DESTINY · 匿名虚构设计演示 · 2026.10.14</p></footer>
+  <script>
+    (() => {
+      const NS='http://www.w3.org/2000/svg';
+      const svg=document.getElementById('sea'), map=document.getElementById('map');
+      const play=document.getElementById('play'), playText=document.getElementById('play-text'), status=document.getElementById('status');
+      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+      const nodes=[
+        {id:'skill',age:'24 岁',port:'起步港',meaning:'站稳专业',title:'把复杂事情理顺，逐渐赢得信任。',body:'专业能力与协作经验开始积累。这些资源帮助你走过上一段，也可以带往下一站。',source:'虚构过往阶段 · 非真实履历'},
+        {id:'needed',age:'28 岁',port:'信任湾',meaning:'越来越被需要',title:'机会与责任一起增加，可靠成为你的标记。',body:'信任让你获得更多机会。值得分清的是：哪些贡献形成成长，哪些只是不断填补空缺。',source:'虚构过往阶段 · 年龄与叙事均为示例'},
+        {id:'loaded',age:'32 岁',port:'满载海峡',meaning:'责任挤压成长',title:'承担仍在增加，专业与恢复开始让位。',body:'示例中，林舟先接住临时任务，再把主线移到晚上。需要验证的是支持是否跟上，而不是把它解释成能力不足。',source:'虚构过往阶段 · 需要继续核验的理解'},
+        {id:'now',age:'34 岁 / 现在',port:'转向港',meaning:'重新约定责任与资源',title:'你已经用可靠赢得信任。现在，让责任与资源重新同行。',body:'先观察环境如何回应边界，再决定下一段航向。点选三个目的港，可以预演它们各自需要的条件。',source:'人物、经历与路线全部虚构 · 本次示例的核心理解'},
+        {id:'stay',age:'可能航线 A',port:'边界港',meaning:'留下，重谈职责',short:'重谈职责',condition:'团队能够兑现调整',title:'留在熟悉的海域，让承担获得相应的回应。',body:'先就一个新增任务，谈清负责人、优先级与支持。观察约定是否带来执行变化；口头认可不等于安排已经改变。',source:'成立条件：团队愿意且能够兑现调整 · 不是确定事件'},
+        {id:'internal',age:'可能航线 B',port:'专业港',meaning:'内部，转向专业',short:'内部转向',condition:'岗位清晰，能承接长处',title:'把经验带到更清晰的位置，让专业主线继续积累。',body:'核对真实的工作内容、协作方式与评价标准，避免只换岗位名称，却继续承担同样的模糊责任。',source:'成立条件：存在合适岗位且职责明确 · 不是确定事件'},
+        {id:'external',age:'可能航线 C',port:'新岸',meaning:'外部，探索机会',short:'外部探索',condition:'有准备余力与承受条件',title:'先让信息打开空间，再考虑驶向新的海域。',body:'整理成果，了解一个真实机会，再核对时间、现金流与恢复空间。探索可以逐步进行，不必立即离职。',source:'成立条件：有探索余力与现实准备 · 不是确定事件'}
+      ];
+      let selected='now', points=[], dims={w:0,h:0,mobile:false}, trip=null, frame=null, resizeFrame=null;
+      const create=(tag,attrs={},text)=>{const node=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));if(text!==undefined)node.textContent=text;return node;};
+      function geometry(w,h,mobile) { const destX=w<900?.70:.79; return (mobile?[[.19,.12],[.73,.28],[.22,.45],[.49,.64],[.14,.83],[.50,.83],[.86,.83]]:[[.085,.64],[.245,.24],[.385,.67],[.53,.46],[destX,.18],[destX,.46],[destX,.75]]).map(([x,y])=>({x:x*w,y:y*h})); }
+      function segment(a,b,mobile) { return mobile?`M ${a.x} ${a.y} C ${a.x} ${a.y+(b.y-a.y)*.55},${b.x} ${b.y-(b.y-a.y)*.55},${b.x} ${b.y}`:`M ${a.x} ${a.y} C ${a.x+(b.x-a.x)*.5} ${a.y},${b.x-(b.x-a.x)*.5} ${b.y},${b.x} ${b.y}`; }
+      function islandPath(cx,cy,rx,ry,seed) { const list=[];for(let i=0;i<32;i++){const angle=i/32*Math.PI*2;const r=1+.12*Math.sin(angle*3+seed)+.055*Math.cos(angle*5-seed);list.push({x:cx+Math.cos(angle)*rx*r,y:cy+Math.sin(angle)*ry*r});}const mids=list.map((p,i)=>({x:(p.x+list[(i+1)%list.length].x)/2,y:(p.y+list[(i+1)%list.length].y)/2}));let d=`M ${mids[31].x} ${mids[31].y}`;list.forEach((p,i)=>d+=` Q ${p.x} ${p.y} ${mids[i].x} ${mids[i].y}`);return d+' Z'; }
+      function addCompass(parent,x,y,r) { const g=create('g',{transform:`translate(${x},${y})`,'aria-hidden':'true'});g.append(create('circle',{r,fill:'none',stroke:'#879f8e','stroke-width':.6,opacity:.7}));for(let i=0;i<8;i++){const angle=i*Math.PI/4;g.append(create('line',{x1:Math.cos(angle)*r*.25,y1:Math.sin(angle)*r*.25,x2:Math.cos(angle)*r*.85,y2:Math.sin(angle)*r*.85,stroke:'#879f8e','stroke-width':.6,opacity:.65}));}g.append(create('path',{d:`M 0 ${-r*.85} L ${r*.2} 0 L 0 ${r*.85} L ${-r*.2} 0 Z`,fill:'#688778',opacity:.75}),create('text',{x:0,y:-r-8,'text-anchor':'middle','font-size':10,fill:'#6b8476','font-family':'Georgia, serif'},'N'));parent.append(g); }
+      function background(parent,w,h,mobile) {
+        parent.append(create('rect',{width:w,height:h,fill:'#e5ece5'}));
+        const grid=create('g',{'aria-hidden':'true',stroke:'#92a998','stroke-width':.5,opacity:.23});for(let i=1;i<7;i++)grid.append(create('line',{x1:w*i/7,y1:0,x2:w*i/7,y2:h}));for(let i=1;i<5;i++)grid.append(create('line',{x1:0,y1:h*i/5,x2:w,y2:h*i/5}));parent.append(grid);
+        const p=geometry(w,h,mobile);
+        const islands=mobile?[[p[0].x+17,p[0].y+10,42,29],[p[1].x-13,p[1].y-15,42,28],[p[2].x+16,p[2].y+10,47,31],[p[3].x+20,p[3].y-13,45,28],...p.slice(4).map(n=>[n.x,n.y+15,Math.min(33,w*.105),24])]:[[p[0].x+38,p[0].y+20,62,38],[p[1].x-24,p[1].y-18,66,39],[p[2].x-28,p[2].y+24,69,42],[p[3].x+22,p[3].y-21,69,41],...p.slice(4).map(n=>[n.x+23,n.y-10,60,34])];
+        islands.forEach(([x,y,rx,ry],i)=>{const group=create('g',{'aria-hidden':'true'});[1.28,1.14].forEach(scale=>group.append(create('path',{d:islandPath(x,y,rx*scale,ry*scale,i+.7),fill:'none',stroke:'#a9c0af','stroke-width':.7,opacity:.65})));group.append(create('path',{d:islandPath(x,y,rx,ry,i+.7),fill:'#f3efde',stroke:'#96ad99','stroke-width':.9}));group.append(create('path',{d:islandPath(x,y,rx*.68,ry*.64,i+.7),fill:'none',stroke:'#c3c6ae','stroke-width':.6,opacity:.6}));parent.append(group);});
+        addCompass(parent,mobile?w-31:55,mobile?32:56,mobile?17:23);
+        if(!mobile){const ray=create('g',{'aria-hidden':'true',stroke:'#839f8a','stroke-width':.6,opacity:.12});[[0,h*.12],[w,h*.12],[w,h*.89],[0,h*.89]].forEach(([x,y])=>ray.append(create('line',{x1:55,y1:56,x2:x,y2:y})));parent.append(ray);}
+      }
+      function makeBoat() { const g=create('g',{id:'boat','aria-hidden':'true','pointer-events':'none'});g.append(create('ellipse',{cx:-1,cy:2,rx:19,ry:10,fill:'#f8f7ee',opacity:.78}),create('path',{d:'M -12 -6 Q -5 -9 4 -7 L 15 0 L 4 7 Q -5 9 -12 6 Z',fill:'#a56241',stroke:'#fbf9ec','stroke-width':1.2}),create('rect',{x:-7,y:-3.5,width:11,height:7,rx:1.5,fill:'#fbf8e9'}),create('rect',{x:-5,y:-2,width:3,height:4,rx:.5,fill:'#719085'}));return g; }
+      function draw() {
+        if(trip){stopTrip();status.textContent='已停泊在'+nodes.find(n=>n.id===selected).port+'。可以重新回看航程。';}
+        const w=map.clientWidth,h=map.clientHeight,mobile=window.matchMedia('(max-width:720px)').matches;
+        dims={w,h,mobile};points=geometry(w,h,mobile);
+        svg.replaceChildren(create('title',{id:'chart-title'},'林舟的虚构人生海图'),create('desc',{id:'chart-desc'},'四个过往与当下港口由实线连接，三条有条件的路线通向边界港、专业港与新岸。全部海域与阶段为虚构，位置、岛屿大小和距离没有分值、概率或优劣含义。'));
+        svg.setAttribute('viewBox',`0 0 ${w} ${h}`);background(svg,w,h,mobile);
+        for(let i=0;i<3;i++)svg.append(create('path',{id:'past-'+i,d:segment(points[i],points[i+1],mobile),fill:'none',stroke:'#365f57','stroke-width':2.3,'stroke-linecap':'round'}));
+        for(let i=4;i<7;i++)svg.append(create('path',{id:'route-'+nodes[i].id,d:segment(points[3],points[i],mobile),fill:'none',stroke:'#73988b','stroke-width':1.8,'stroke-dasharray':'4 6','stroke-linecap':'round'}));
+        svg.append(create('path',{id:'travel-line',fill:'none',stroke:'#a15e3e','stroke-width':2.7,'stroke-linecap':'round',opacity:.9}));
+        svg.append(makeBoat());
+        map.querySelectorAll('.port-button,.port-label').forEach(item=>item.remove());
+        nodes.forEach((node,i)=>{
+          const p=points[i],button=document.createElement('button');button.type='button';button.className='port-button'+(i===3?' current':'')+(i>3?' future':'');button.dataset.port=node.id;button.style.left=p.x+'px';button.style.top=p.y+'px';button.setAttribute('aria-label',node.age+'，'+node.port+'，'+node.meaning);button.setAttribute('aria-pressed',String(node.id===selected));button.addEventListener('click',()=>{stopTrip();if(i>3)startTrip('future',node.id);else {select(node.id);park(i);}});map.appendChild(button);
+          const label=document.createElement('div');label.className='port-label'+(i===3?' current':'')+(i>3?' future':'');label.setAttribute('aria-hidden','true');[['age',node.age],['port',node.port],['meaning',mobile&&i>3?node.short:node.meaning],...(i>3?[['condition','条件：'+node.condition]]:[])].forEach(([cls,text])=>{const span=document.createElement('span');span.className=cls;span.textContent=text;label.appendChild(span);});
+          let x,y,align='left';
+          if(mobile){if(i===0||i===2){x=p.x+25;y=p.y-20;}else if(i===1){x=p.x-28;y=p.y-28;align='right';}else if(i===3){x=p.x+26;y=p.y-37;}else{x=p.x;y=p.y+23;align='center';}}
+          else if(i===3){x=p.x;y=p.y-106;align='center';}else if(i>3){x=p.x+25;y=p.y-35;}else{x=p.x;y=p.y+(i===1?-75:25);align='center';}
+          label.style.left=x+'px';label.style.top=y+'px';label.style.textAlign=align;label.style.transform=align==='center'?'translateX(-50%)':align==='right'?'translateX(-100%)':'none';map.appendChild(label);
+        });
+        select(selected);park(nodes.findIndex(n=>n.id===selected));
+      }
+      function select(id) { selected=id;const node=nodes.find(n=>n.id===id);map.querySelectorAll('.port-button').forEach(button=>{const active=button.dataset.port===id;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active));});nodes.slice(4).forEach(n=>{const route=document.getElementById('route-'+n.id);route.setAttribute('stroke',n.id===id?'#a15e3e':'#73988b');route.setAttribute('stroke-width',n.id===id?'2.4':'1.8');});document.getElementById('phase').textContent=node.age;document.getElementById('place').textContent=node.port;document.getElementById('arrival-title').textContent=node.title;document.getElementById('arrival-body').textContent=node.body;document.getElementById('arrival-source').textContent=node.source; }
+      function park(index) { const p=points[index];document.getElementById('boat').setAttribute('transform',`translate(${p.x},${p.y-15}) rotate(${dims.mobile?90:0})`);document.getElementById('travel-line').removeAttribute('d'); }
+      function stopTrip() { if(frame!==null){cancelAnimationFrame(frame);frame=null;}trip=null;play.setAttribute('aria-pressed','false');playText.textContent='回看航程';play.querySelector('.play-symbol').textContent='▶'; }
+      function updateBoat(path,ratio) { const length=path.getTotalLength(),at=Math.min(length,Math.max(0,length*ratio)),p=path.getPointAtLength(at);const before=path.getPointAtLength(Math.max(0,at-1)),after=path.getPointAtLength(Math.min(length,at+1));const angle=Math.atan2(after.y-before.y,after.x-before.x)*180/Math.PI;document.getElementById('boat').setAttribute('transform',`translate(${p.x},${p.y}) rotate(${angle})`);const line=document.getElementById('travel-line');line.setAttribute('d',path.getAttribute('d'));line.setAttribute('stroke-dasharray',String(length)+' '+String(length));line.setAttribute('stroke-dashoffset',String(length-at)); }
+      function startTrip(mode,id='now') {
+        stopTrip();const target=nodes.findIndex(n=>n.id===id);
+        if(reduced.matches){select(id);park(target);status.textContent='已直接抵达'+nodes[target].port+'；遵循减少动态效果设置。';return;}
+        const segments=mode==='history'?[{path:'past-0',to:1},{path:'past-1',to:2},{path:'past-2',to:3}]:[{path:'route-'+id,to:target}];
+        select(mode==='history'?'skill':'now');trip={mode,id,segments,index:0,elapsed:0,last:0,paused:false,arrived:false};
+        play.setAttribute('aria-pressed','true');playText.textContent='暂停航程';play.querySelector('.play-symbol').textContent='Ⅱ';status.textContent=mode==='history'?'回看航程：从起步港驶向转向港。':'路线预演：从转向港驶向'+nodes[target].port+'。';frame=requestAnimationFrame(tick);
+      }
+      function tick(time) {
+        if(!trip||trip.paused)return;const item=trip.segments[trip.index],path=document.getElementById(item.path);if(!path){stopTrip();return;}
+        if(trip.last)trip.elapsed+=Math.min(80,time-trip.last);trip.last=time;
+        const duration=trip.mode==='history'?1500:1700,hold=trip.mode==='history'?600:0;
+        updateBoat(path,Math.min(1,trip.elapsed/duration));
+        if(trip.elapsed>=duration&&!trip.arrived){trip.arrived=true;select(nodes[item.to].id);status.textContent='已抵达'+nodes[item.to].port+'。';}
+        if(trip.elapsed>=duration+hold){trip.index++;if(trip.index>=trip.segments.length){const mode=trip.mode;stopTrip();status.textContent=mode==='history'?'已抵达转向港。点选目的港，预演下一段。':'已到达示例目的港。能否沿这条路前进，还需要现实条件支持。';return;}trip.elapsed=0;trip.last=time;trip.arrived=false;}
+        frame=requestAnimationFrame(tick);
+      }
+      play.addEventListener('click',()=>{if(!trip){startTrip('history');return;}if(trip.paused){trip.paused=false;trip.last=0;play.setAttribute('aria-pressed','true');playText.textContent='暂停航程';play.querySelector('.play-symbol').textContent='Ⅱ';frame=requestAnimationFrame(tick);}else{trip.paused=true;if(frame!==null){cancelAnimationFrame(frame);frame=null;}play.setAttribute('aria-pressed','false');playText.textContent='继续航程';play.querySelector('.play-symbol').textContent='▶';status.textContent='航程已暂停，可继续。';}});
+      document.addEventListener('visibilitychange',()=>{if(document.hidden&&trip&&!trip.paused)play.click();});
+      reduced.addEventListener('change',()=>{if(reduced.matches&&trip){const id=trip.id;stopTrip();select(id);park(nodes.findIndex(n=>n.id===id));status.textContent='已直接抵达'+nodes.find(n=>n.id===id).port+'；遵循减少动态效果设置。';}});
+      function exportSvg() {
+        const w=1500,h=1090,pw=1390,ph=480,offset={x:55,y:225};const root=create('svg',{xmlns:NS,width:w,height:h,viewBox:`0 0 ${w} ${h}`});root.append(create('rect',{width:w,height:h,fill:'#f6f4ec'}));
+        const text=(x,y,value,size=20,fill='#203c39',extra={})=>root.append(create('text',{x,y,fill,'font-size':size,'font-family':'PingFang SC, Microsoft YaHei, sans-serif',...extra},value));
+        text(65,54,'AFEI DESTINY / 阿飞命运探索',15,'#66796d',{'letter-spacing':2});text(1435,54,'匿名虚构 · 设计演示',14,'#66796d',{'text-anchor':'end'});text(65,134,'人生海图',61,'#203c39');text(350,134,'从这里，重新定航向。',26,'#66796d');text(65,180,'林舟 / 34 岁 / 职业发展与责任边界',18,'#66796d');
+        const group=create('g',{transform:`translate(${offset.x},${offset.y})`});background(group,pw,ph,false);const p=geometry(pw,ph,false);for(let i=0;i<3;i++)group.append(create('path',{d:segment(p[i],p[i+1],false),fill:'none',stroke:'#365f57','stroke-width':2.8}));for(let i=4;i<7;i++)group.append(create('path',{d:segment(p[3],p[i],false),fill:'none',stroke:selected===nodes[i].id?'#a15e3e':'#73988b','stroke-width':2.2,'stroke-dasharray':'5 7'}));
+        nodes.forEach((n,i)=>{const point=p[i];group.append(create('circle',{cx:point.x,cy:point.y,r:i===3?7:4.5,fill:i===3?'#a15e3e':'#365f57',stroke:'#fcfbf6','stroke-width':2}));let x=point.x,y=point.y+(i===1?-59:i===3?-87:i>3?-21:37),anchor='middle';if(i>3){x+=26;anchor='start';}const values=[[n.age,12,'#66796d'],[n.port,i===3?26:21,i===3?'#804829':'#203c39'],[n.meaning,13,'#556a60']];values.forEach(([value,size,color],j)=>group.append(create('text',{x,y:y+j*25,'text-anchor':anchor,'font-family':'PingFang SC, sans-serif','font-size':size,fill:color},value)));if(i>3)group.append(create('text',{x,y:y+77,'text-anchor':anchor,'font-family':'PingFang SC, sans-serif','font-size':12,fill:'#66796d'},'条件：'+n.condition));});root.append(group);
+        const boat=makeBoat(),chosen=p[nodes.findIndex(n=>n.id===selected)];boat.setAttribute('transform',`translate(${chosen.x},${chosen.y-15})`);group.append(boat);
+        root.append(create('line',{x1:65,y1:750,x2:1435,y2:750,stroke:'#c2d0c1'}));const node=nodes.find(n=>n.id===selected);text(65,804,node.age+' / '+node.port,16,'#a15e3e');text(65,856,node.title,28);const line1=node.body.slice(0,57),line2=node.body.slice(57);text(65,902,line1,17,'#63736c');if(line2)text(65,934,line2,17,'#63736c');text(65,1038,'人物与海域全部虚构。航线展示选择关系；距离、岛屿大小和方位不代表评分、概率或优劣。',13,'#78887e');text(1435,1038,'看见自己，也看见选择。',13,'#78887e',{'text-anchor':'end'});return new XMLSerializer().serializeToString(root);
+      }
+      const save=document.getElementById('save');save.addEventListener('click',async()=>{stopTrip();save.disabled=true;save.textContent='生成中';let url;try{url=URL.createObjectURL(new Blob([exportSvg()],{type:'image/svg+xml;charset=utf-8'}));const image=new Image();await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=reject;image.src=url;});const canvas=document.createElement('canvas');canvas.width=1500;canvas.height=1090;const ctx=canvas.getContext('2d');if(!ctx)throw new Error('canvas unavailable');ctx.drawImage(image,0,0);const png=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!png)throw new Error('PNG unavailable');const pngUrl=URL.createObjectURL(png),link=document.createElement('a');link.href=pngUrl;link.download='afei-life-atlas-fictional-demo.png';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(pngUrl),30000);status.textContent='海图已生成，可以保存为图片。';}catch(error){status.textContent='图片生成未完成，可以用浏览器截图保存海图。';}finally{if(url)URL.revokeObjectURL(url);save.disabled=false;save.textContent='保存海图';}});
+      const resize=()=>{if(map.clientWidth===dims.w&&map.clientHeight===dims.h)return;if(resizeFrame!==null)cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{resizeFrame=null;draw();});};new ResizeObserver(resize).observe(map);
+      window.addEventListener('beforeprint',()=>{stopTrip();draw();});window.addEventListener('afterprint',resize);
+      draw();
+    })();
+  </script>
+</body>
+</html>
