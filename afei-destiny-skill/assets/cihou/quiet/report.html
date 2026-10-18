@@ -2,60 +2,44 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f2ed">
-  <meta name="description" content="此后个人咨询报告：本次咨询的核心理解、行动尝试、其他领域与完整分析依据。">
-  <title>此后 · @@TITLE@@</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f1eade">
+  <meta name="description" content="本次咨询的核心理解、行动尝试、其他领域与完整分析依据。">
+  <title>@@TITLE@@</title>
   <style>@@CSS@@</style>
 </head>
 <body>
   <a class="skip" href="#reading">跳到完整解读</a>
-  <header class="masthead">
-    <a class="wordmark" href="#top" aria-label="此后，重新看主图">此后<span aria-hidden="true">.</span></a>
-    <span class="edition">个人咨询报告 <span class="edition-date">/ @@DATE@@</span></span>
-  </header>
   <main>
+    <h1 class="sr-only">@@TITLE@@</h1>
     <section class="hero" id="top" aria-label="本次咨询的核心关系" data-state="0">
-      <div class="hero-heading"><h1 id="scene-title">@@FIRST_TITLE@@</h1></div>
-      <div class="scene-wrap">
-        <button class="scene" id="scene" type="button" aria-label="@@FIRST_LABEL@@" aria-describedby="scene-description">
-          <span class="artwork">
-            <img class="scene-image road-image" src="@@ROAD_IMAGE@@" alt="近处的纸带路面向前伸展，看不到它的全貌" width="1200" height="900" fetchpriority="high" draggable="false">
-            <img class="scene-image loop-image" src="@@LOOP_IMAGE@@" alt="拉远后，纸带回转成环；朱红人物沿着环行走" width="1200" height="900" draggable="false">
-            <svg class="walker-layer" viewBox="0 0 1200 900" aria-hidden="true">
-              <g id="road-marker" opacity="0"><path d="M-14 0H14" fill="none" stroke="#f4f2ed" stroke-width="2" stroke-linecap="round"/></g>
-              <g id="walker" transform="translate(620 566)" opacity="0">
-                <ellipse class="walker-shadow" cx="0" cy="1" rx="12" ry="3.5"/>
-                <g class="walker-body">
-                  <circle cx="0" cy="-39" r="5"/>
-                  <path class="walker-torso" d="M-4-30 Q0-33 4-30 L6-15 -5-15Z"/>
-                  <path class="walker-limb arm-back" d="M-3-28 -10-16"/>
-                  <path class="walker-limb arm-front" d="M3-28 10-19"/>
-                  <path class="walker-limb leg-back" d="M-2-15 -7 0"/>
-                  <path class="walker-limb leg-front" d="M2-15 8 0"/>
-                </g>
-              </g>
-            </svg>
-          </span>
-          <span class="scene-hint" id="scene-hint"><span class="signal" aria-hidden="true"></span>@@FIRST_HINT@@</span>
-        </button>
+      <a class="hero-reading" href="#reading">阅读正文</a>
+      <div class="scene" id="scene" role="button" tabindex="0" aria-label="@@FIRST_LABEL@@" aria-describedby="scene-instructions scene-description"></div>
+      <p class="sr-only" id="scene-instructions">按住鼠标、触摸画面或按住空格键，让视角慢慢拉远；松开停在当前视角。也可随时跳到完整解读。</p>
+      <p class="sr-only" id="scene-description">@@FIRST_DESCRIPTION@@</p>
+      <p class="sr-only" id="scene-status" aria-live="polite" aria-atomic="true"></p>
+      <div class="scene-invitation" id="scene-invitation" aria-hidden="true">
+        <svg class="press-mark" viewBox="0 0 24 24"><circle class="press-base" cx="12" cy="12" r="10"/><circle class="press-progress" id="press-progress" cx="12" cy="12" r="10"/></svg>
+        <span class="invitation-words" id="scene-invitation-words">按住，看见更多</span>
       </div>
-      <div class="hero-explanation" aria-live="polite" aria-atomic="true"><p id="scene-description">@@FIRST_DESCRIPTION@@</p></div>
+      <div class="scene-completion" id="scene-completion" hidden>
+        <button class="text-button" id="step-out" type="button">再往前一步 ↗</button>
+        <div class="scene-final-actions" id="scene-final-actions" hidden><button class="text-button secondary" id="replay-final" type="button">再看一次</button><a class="continue-reading" href="#reading">继续阅读<span aria-hidden="true">↘</span></a></div>
+      </div>
       <div class="scene-tools" aria-label="画面播放控制">
         <button class="tool replay" id="replay" type="button" aria-label="重新观看" hidden>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 8A8 8 0 1 1 4 13M5 3v6h6"/></svg><span>重看</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 8A8 8 0 1 1 4 13M5 3v6h6"/></svg><span hidden>重看</span>
         </button>
-        <button class="tool pause" id="pause" type="button" aria-label="暂停人物行走" aria-pressed="false">
+        <button class="tool pause" id="pause" type="button" aria-label="暂停画面中的移动" aria-pressed="false">
           <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg>
-          <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg><span id="pause-label">暂停</span>
+          <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg><span id="pause-label" hidden>暂停</span>
         </button>
       </div>
-      <span class="reading-cue" aria-hidden="true">向下，慢慢读 <span>↓</span></span>
     </section>
     <article class="reading" id="reading" aria-label="完整个人咨询解读">
       <div class="report-context">@@SUBTITLE@@</div>
       <noscript>
-        <style>.scene-hint,.scene-tools{display:none}.scene{cursor:default}</style>
+        <style>.hero{display:none}.reading{padding-top:52px}</style>
         <ol class="static-story">@@FALLBACK@@</ol>
       </noscript>
       @@CHAPTERS@@
@@ -70,9 +54,14 @@
       <div class="report-ending"><div class="closing-thought">@@CLOSING@@</div><div class="report-limits">@@LIMITS@@</div></div>
     </article>
   </main>
-  <footer class="page-footer"><span>此后.</span><p>@@DATE@@ · 个人咨询报告 <span class="version">/ @@VERSION@@</span></p></footer>
   <script id="report-data" type="application/json">@@DATA@@</script>
   <script id="report-provenance" type="application/json">@@PROVENANCE@@</script>
+  <script id="hero-assets" type="application/json">@@HERO_ASSETS@@</script>
+  <script id="hero-rig-meta" type="application/json">@@RIG_META@@</script>
+  <script id="hero-marker-meta" type="application/json">@@MARKER_META@@</script>
+  <script id="three-runtime">@@THREE_JS@@</script>
+  <script id="hero-rig-runtime">@@RIG_JS@@</script>
+  <script id="hero-scene-runtime">@@SCENE_JS@@</script>
   <script>@@JS@@</script>
 </body>
 </html>

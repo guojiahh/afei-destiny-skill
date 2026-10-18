@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "name": "Cihou selected V8 baseline",
+  "savedOn": "2026-10-18",
+  "HERO_BUNDLE": {
+    "version": "painted-v8",
+    "constructor": "CihouHeroSceneV8",
+    "rig_constructor": "CihouCharacterRigV8",
+    "reveal_duration": 10.5,
+    "exit_duration": 9.5,
+    "three": "three.min.js",
+    "three_license": "THREE-LICENSE.txt",
+    "rig": "hero-character-rig-v8.js",
+    "scene": "hero-scene-v8.js",
+    "world": "world-keyart-v3.png",
+    "road": "paper-road-v1.png",
+    "marker": "flower-stone-v1.png",
+    "marker_meta": "flower-stone-v1.json",
+    "character": "girl-rig-parts-v5.png",
+    "rig_meta": "girl-rig-parts-v5.json"
+  },
+  "rendering": {
+    "mode": "illustrated-2.5d",
+    "description": "Authored painted world layers and an articulated paper character, rendered and projected with Three.js. The loop is a painted visual metaphor; this bundle is not a mathematical Mobius surface or the later native three-dimensional scene.",
+    "componentVersions": {
+      "scene": 8,
+      "characterRig": 8,
+      "characterAtlas": 5,
+      "worldPainting": 3
+    },
+    "revealDurationSeconds": 10.5,
+    "exitDurationSeconds": 9.5
+  },
+  "selection": {
+    "basis": "User selected V8 as the saved display and report baseline.",
+    "independentDesignReview": {
+      "round": 7,
+      "scoreOutOf10": 4.5,
+      "status": "Recorded historical review; user selection does not imply independent aesthetic acceptance."
+    }
+  },
+  "runtimeAssets": [
+    {
+      "key": "three",
+      "file": "three.min.js",
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+      "sizeBytes": 669884,
+      "sourceRecord": "THREE-LICENSE.txt"
+    },
+    {
+      "key": "three_license",
+      "file": "THREE-LICENSE.txt",
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+      "sizeBytes": 1081,
+      "sourceRecord": "THREE-LICENSE.txt"
+    },
+    {
+      "key": "rig",
+      "file": "hero-character-rig-v8.js",
+      "sha256": "b0b4cdaa0c3883672d4616ec7a62d0574e336947633af946bf1ed17a7590f5c2",
+      "sizeBytes": 24077,
+      "source": "Project-authored JavaScript; independent versioned implementation."
+    },
+    {
+      "key": "scene",
+      "file": "hero-scene-v8.js",
+      "sha256": "560758df760f10d8aefe2dea1d0c66d0180f089008a6bc50edc1631b530861a3",
+      "sizeBytes": 50725,
+      "source": "Project-authored JavaScript; independent versioned implementation."
+    },
+    {
+      "key": "world",
+      "file": "world-keyart-v3.png",
+      "sha256": "d519eff02518334dc3057882a1e92c6674c02feb832cab4113c3b212547e0370",
+      "sizeBytes": 1666510,
+      "sourceRecord": "world-keyart-v3-provenance.json"
+    },
+    {
+      "key": "road",
+      "file": "paper-road-v1.png",
+      "sha256": "e74f9a10cf6cfa29933a359485a4dff2e810e46635204d7ec6fa52e08a5097c9",
+      "sizeBytes": 2825637,
+      "sourceRecord": "paper-road-v1-source.json"
+    },
+    {
+      "key": "marker",
+      "file": "flower-stone-v1.png",
+      "sha256": "8ccc71bd77b1fcf06d08c22c8de0d2c75afe589256105019b64ebe14ac108054",
+      "sizeBytes": 1407153,
+      "sourceRecord": "flower-stone-v1.json"
+    },
+    {
+      "key": "marker_meta",
+      "file": "flower-stone-v1.json",
+      "sha256": "9575e45b1933e47ee53793ee7569e3e90557e2ce64e0132c7830e055701de510",
+      "sizeBytes": 917,
+      "sourceRecord": "flower-stone-v1.json"
+    },
+    {
+      "key": "character",
+      "file": "girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+      "sizeBytes": 1859084,
+      "sourceRecord": "generation-notes-rig-v5.json"
+    },
+    {
+      "key": "rig_meta",
+      "file": "girl-rig-parts-v5.json",
+      "sha256": "ffcc083bbec330064b1d51fe484d588effcd58c2dea66d0794c71c1a5894cfcf",
+      "sizeBytes": 10916,
+      "sourceRecord": "generation-notes-rig-v5.json"
+    }
+  ],
+  "prototype": {
+    "file": "prototype-v8.html",
+    "sha256": "ed3610c92a76f430063bbacb1a9c8c3245efa6e0a3f7c5b5c81ebbb7bbb4c3b2",
+    "sizeBytes": 21633,
+    "scope": "Original standalone V8 hero prototype; report delivery uses the shared source-bound renderer and controller."
+  },
+  "sources": {
+    "artwork": {
+      "kind": "Original generated artwork directed for this project",
+      "character": "generation-notes-rig-v5.json",
+      "world": "world-keyart-v3-provenance.json",
+      "road": "paper-road-v1-source.json",
+      "marker": "flower-stone-v1.json",
+      "referenceUse": "Benchmark screenshots were visual style references; no benchmark character, scene object, UI or source artwork is included as a runtime asset.",
+      "licenseNote": "No CC0 claim; the historical GameArt2D character license does not describe these generated assets."
+    },
+    "three": {
+      "project": "three.js",
+      "author": "three.js authors",
+      "license": "MIT",
+      "licenseFile": "THREE-LICENSE.txt",
+      "officialSource": "https://github.com/mrdoob/three.js",
+      "bundledFile": "three.min.js"
+    }
+  },
+  "provenanceFiles": [
+    {
+      "file": "generation-notes-rig-v5.json",
+      "sha256": "1ff6a413d68d2999f6b43fef64c5663ff2d9a5690a9f490a6925cab03e491a67",
+      "sizeBytes": 3409
+    },
+    {
+      "file": "world-keyart-v3-provenance.json",
+      "sha256": "866a79169fc435559d3f4bc106a09a5d5576bbff62a1b66e3bf2409d716f336f",
+      "sizeBytes": 11813
+    },
+    {
+      "file": "paper-road-v1-source.json",
+      "sha256": "2dafe46f3c10f8c26af4f59f38ff6b94bf754dc9ac676cb3a6c1d64715dd16e4",
+      "sizeBytes": 1073
+    }
+  ],
+  "contentBoundary": "Shared assets contain the reusable visual framework only. Personal report text, source-bound content models and consultation artifacts remain in their individual ignored sessions and are not part of this bundle.",
+  "historyPolicy": "Existing historical assets are preserved without modification. This manifest records the selected V8 chain without rewriting older or newer versions."
+}

@@ -1,0 +1,402 @@
+{
+  "version": 5,
+  "asset": "girl-rig-parts-v5.png",
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "coordinateSystem": "All sourceRect, pivotPx, endPx, and named *Px points use ABSOLUTE ATLAS PIXELS. Origin at top-left; x right; y down. sourceRect is [x,y,width,height]. Named points are approximate hand-annotated landmarks for rigging and require preview QA.",
+  "sourceRectAlphaThreshold": 8,
+  "recommendedAlphaTest": 0.03,
+  "originalCharacter": true,
+  "renderingNote": "This is a nonuniform parts atlas, NOT an equal-cell walking sprite. The dress intentionally extends across its nominal cell boundary but does not touch the arm. Use the actual sourceRect for each part. PNG is copied without modifications.",
+  "dimensionsRelativeToStandingHeight": {
+    "standingHeight": 1,
+    "headHeight": 0.265,
+    "headWidth": 0.3,
+    "neckHeight": 0.755,
+    "shoulderHeight": 0.72,
+    "waistHeight": 0.6,
+    "hipHeight": 0.43,
+    "dressHemHeight": 0.27,
+    "dressHeight": 0.48,
+    "dressWidth": 0.46,
+    "thighLength": 0.215,
+    "shinLength": 0.18,
+    "ankleHeight": 0.035,
+    "footLength": 0.085,
+    "footHeight": 0.045,
+    "upperArmLength": 0.14,
+    "forearmLength": 0.135,
+    "hipSeparation": 0.055,
+    "shoulderSeparation": 0.16,
+    "thighThickness": 0.05,
+    "kneeThickness": 0.04,
+    "ankleThickness": 0.025
+  },
+  "parts": {
+    "head": {
+      "sourceRect": [
+        32,
+        47,
+        376,
+        326
+      ],
+      "pivotPx": [
+        263,
+        354
+      ],
+      "endPx": [
+        230,
+        100
+      ],
+      "neckPx": [
+        263,
+        354
+      ],
+      "contentTopPx": [
+        274,
+        49
+      ],
+      "relativeHeight": 0.265,
+      "relativeWidth": 0.3,
+      "drawOrder": 6,
+      "hairWarpRegionPx": [
+        35,
+        75,
+        315,
+        255
+      ],
+      "note": "Neck stub overlaps dress neckline; hair tips at image-left can receive very small delayed lateral mesh displacement."
+    },
+    "dress": {
+      "sourceRect": [
+        428,
+        49,
+        521,
+        464
+      ],
+      "pivotPx": [
+        659,
+        195
+      ],
+      "endPx": [
+        655,
+        475
+      ],
+      "neckPx": [
+        689,
+        62
+      ],
+      "shoulderCenterPx": [
+        691,
+        94
+      ],
+      "leftShoulderPx": [
+        613,
+        97
+      ],
+      "rightShoulderPx": [
+        770,
+        105
+      ],
+      "waistPx": [
+        659,
+        195
+      ],
+      "leftHipPx": [
+        637,
+        323
+      ],
+      "rightHipPx": [
+        683,
+        317
+      ],
+      "hemPx": [
+        654,
+        480
+      ],
+      "bagBBoxPx": [
+        505,
+        231,
+        132,
+        130
+      ],
+      "strapBBoxPx": [
+        551,
+        51,
+        177,
+        207
+      ],
+      "relativeHeight": 0.48,
+      "relativeWidth": 0.46,
+      "drawOrder": 4,
+      "hemWarpStartYpx": 245,
+      "note": "Torso has no arms or legs. Small red shoulder fabric is part of the garment; overlap isolated puff sleeves on shoulder attachment to hide seams. Light horizontal hem deformation may begin below waist, with tiny bag-region lag.",
+      "bagOpeningPx": [
+        584,
+        250
+      ]
+    },
+    "leftArm": {
+      "sourceRect": [
+        950,
+        124,
+        232,
+        336
+      ],
+      "pivotPx": [
+        989,
+        157
+      ],
+      "endPx": [
+        1150,
+        438
+      ],
+      "shoulderPx": [
+        989,
+        157
+      ],
+      "elbowPx": [
+        1103,
+        353
+      ],
+      "handPx": [
+        1150,
+        438
+      ],
+      "sleeveEndPx": [
+        1037,
+        279
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 2,
+      "note": "Whole shoulder-to-hand piece, including sleeve. Use elbow landmark for two-bone skinning or rotate subtly as a whole if far arm is obscured."
+    },
+    "rightArm": {
+      "sourceRect": [
+        1290,
+        124,
+        215,
+        330
+      ],
+      "pivotPx": [
+        1345,
+        167
+      ],
+      "endPx": [
+        1476,
+        433
+      ],
+      "shoulderPx": [
+        1345,
+        167
+      ],
+      "elbowPx": [
+        1435,
+        351
+      ],
+      "handPx": [
+        1476,
+        433
+      ],
+      "sleeveEndPx": [
+        1384,
+        281
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 5
+    },
+    "leftThigh": {
+      "sourceRect": [
+        140,
+        549,
+        165,
+        333
+      ],
+      "pivotPx": [
+        226,
+        592
+      ],
+      "endPx": [
+        223,
+        850
+      ],
+      "hipPx": [
+        226,
+        592
+      ],
+      "kneePx": [
+        223,
+        850
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 0,
+      "note": "Rounded knee and hip overlap supplied. Most of upper thigh should sit behind skirt. Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height.",
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4,
+      "widthScale": 0.4
+    },
+    "leftShin": {
+      "sourceRect": [
+        506,
+        573,
+        178,
+        366
+      ],
+      "pivotPx": [
+        626,
+        610
+      ],
+      "endPx": [
+        589,
+        836
+      ],
+      "kneePx": [
+        626,
+        610
+      ],
+      "anklePx": [
+        589,
+        836
+      ],
+      "heelPx": [
+        527,
+        931
+      ],
+      "toePx": [
+        655,
+        924
+      ],
+      "soleCenterPx": [
+        560,
+        931
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 0,
+      "note": "Shoe redrawn in a neutral weight-bearing rear three-quarter side view. Leather upper, side wall and heel are visible; the sole is a thin bottom edge. Existing knee and ankle landmarks retained. Runtime should keep heel/toe on the support plane in stance and lift heel only in swing. Foot landmarks are approximate manual annotations; inspect preview alignment. V5 silhouette calibration: upper shin is narrowed transversely to half its atlas width; smoothly restored to full width by the ankle. Shoe/sole alpha coordinates remain unchanged.",
+      "relativeWidthIncludingShoe": 0.085,
+      "kneeWidthScale": 0.5,
+      "kneeSlimUntil": 0.55,
+      "kneeSlimEnd": 0.98
+    },
+    "rightThigh": {
+      "sourceRect": [
+        868,
+        563,
+        159,
+        341
+      ],
+      "pivotPx": [
+        950,
+        611
+      ],
+      "endPx": [
+        958,
+        877
+      ],
+      "hipPx": [
+        950,
+        611
+      ],
+      "kneePx": [
+        958,
+        877
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 1,
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4,
+      "note": " Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height.",
+      "widthScale": 0.4
+    },
+    "rightShin": {
+      "sourceRect": [
+        1216,
+        571,
+        179,
+        370
+      ],
+      "pivotPx": [
+        1329,
+        611
+      ],
+      "endPx": [
+        1292,
+        837
+      ],
+      "kneePx": [
+        1329,
+        611
+      ],
+      "anklePx": [
+        1292,
+        837
+      ],
+      "heelPx": [
+        1236,
+        933
+      ],
+      "toePx": [
+        1371,
+        925
+      ],
+      "soleCenterPx": [
+        1280,
+        933
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 1,
+      "relativeWidthIncludingShoe": 0.085,
+      "note": "Shoe redrawn in a neutral weight-bearing rear three-quarter side view. Leather upper, side wall and heel are visible; the sole is a thin bottom edge. Existing knee and ankle landmarks retained. Runtime should keep heel/toe on the support plane in stance and lift heel only in swing. Foot landmarks are approximate manual annotations; inspect preview alignment. V5 silhouette calibration: upper shin is narrowed transversely to half its atlas width; smoothly restored to full width by the ankle. Shoe/sole alpha coordinates remain unchanged.",
+      "kneeWidthScale": 0.5,
+      "kneeSlimUntil": 0.55,
+      "kneeSlimEnd": 0.98
+    }
+  },
+  "qualityReview": {
+    "partsCount": 8,
+    "sourceRects": "Measured from the unmodified generated PNG alpha >=8, with 2px padding inside disjoint parts regions.",
+    "artStyle": "Visual review: cleaner broad color, a visible child profile/eye, reduced hair and cotton flecks.",
+    "landmarks": "Recalibrated v5 neck/collar and shoulder center, elbow/hand, actual bag opening, thigh knee centers and heel/toe. Reviewed against actual browser screenshots of the new v5 PNG with the v8 rig; old v4 rectangles are not reused.",
+    "runtimeStatus": "PASS for the reviewed actor poses: look, crouch, reach, carry, drop and backward glance, plus three alternating walk phases at 0.02s, 0.32s and 0.63s. Root and browser QA agents captured the real UI at 1280x720 and 1440x900 with debug hidden; this actor agent inspected every supplied frame. Neck/collar, solved hand contact, bag opening, narrowed knee overlap and painted sole contact were checked. Full hero composition and event timing remain scene-level review.",
+    "runtimeChecks": {
+      "rig": "hero-character-rig-v8.js",
+      "poseScreenshots": [
+        "v8-character-qa/look-second.jpg",
+        "v8-browser-qa/actor-crouch.jpg",
+        "v8-character-qa/reach-second.jpg",
+        "v8-character-qa/carry-second.jpg",
+        "v8-character-qa/drop-second.jpg",
+        "v8-browser-qa/actor-glance-final.jpg"
+      ],
+      "walkScreenshots": [
+        "v8-browser-qa/actor-walk-a.jpg",
+        "v8-browser-qa/actor-walk-b.jpg",
+        "v8-browser-qa/actor-walk-c.jpg"
+      ],
+      "screenshotRoot": "design-demos/cihou-reference-study",
+      "supportContactMaxError": 0,
+      "sampledGaitPoses": 1000,
+      "sourceContactAlphaMinimum": 33,
+      "nonFiniteVertices": 0,
+      "reachableHandTargetError": 0,
+      "hipLoweringRelativeToHeight": 0.105,
+      "turningProfile": "Two profiles from the same original painted head, crossfaded around a fixed neck anchor; no extra image dependency."
+    }
+  },
+  "derivedFrom": "girl-rig-parts-v4.json",
+  "editScope": "Original-character atlas was edited for a cleaner child profile/visible eye, simplified broad hair and fabric color shapes, fewer small pale flecks, and the same intended eight-part layout. The image generator drifted some silhouettes and landmarks; v5 sourceRects were remeasured from alpha and landmarks were recalibrated. PNG remains unmodified."
+}

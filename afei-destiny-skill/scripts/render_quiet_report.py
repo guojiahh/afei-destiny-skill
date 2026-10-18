@@ -8,11 +8,25 @@ from __future__ import annotations
 import base64
 import hashlib
 import html
+import json
 import re
 from pathlib import Path
 
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets' / 'cihou' / 'quiet'
+# The artwork can evolve without changing the personal model or chapter contract.
+# Keep all version selection here; the controller consumes this bundle's API.
+HERO_BUNDLE = {
+    'version': 'painted-v8', 'constructor': 'CihouHeroSceneV8',
+    'rig_constructor': 'CihouCharacterRigV8',
+    'reveal_duration': 10.5, 'exit_duration': 9.5,
+    'three': 'three.min.js', 'three_license': 'THREE-LICENSE.txt',
+    'rig': 'hero-character-rig-v8.js', 'scene': 'hero-scene-v8.js',
+    'world': 'world-keyart-v3.png',
+    'road': 'paper-road-v1.png', 'marker': 'flower-stone-v1.png',
+    'marker_meta': 'flower-stone-v1.json',
+    'character': 'girl-rig-parts-v5.png', 'rig_meta': 'girl-rig-parts-v5.json',
+}
 
 
 def render_quiet(model, sources):
@@ -73,21 +87,56 @@ def render_quiet(model, sources):
     provenance = {'schema_version': 1, 'session_id': model['session_id'], 'sources': model['sources'],
                   'model_sha256': hashlib.sha256(safe_json(model).encode('utf-8')).hexdigest(), 'presentation': 'quiet-v1'}
     fallback = ''.join('<li><h3>' + esc(''.join(state['lines'])) + '</h3><p>' + esc(state['description']) + '</p></li>' for state in states)
+    immersive = ASSETS / 'immersive'
+    bundle_metadata = {'version', 'constructor', 'rig_constructor', 'reveal_duration', 'exit_duration'}
+    bundle_bytes = {key: (immersive / filename).read_bytes()
+                    for key, filename in HERO_BUNDLE.items() if key not in bundle_metadata}
+    rig_meta = json.loads(bundle_bytes['rig_meta'])
+    marker_meta = json.loads(bundle_bytes.get('marker_meta', b'{}'))
+    provenance['hero'] = {
+        'version': HERO_BUNDLE['version'],
+        'assets': {key: {'file': HERO_BUNDLE[key], 'sha256': hashlib.sha256(content).hexdigest()}
+                   for key, content in bundle_bytes.items()},
+        'character': {'original_generated_artwork': bool(rig_meta.get('originalCharacter')),
+                      'rig_metadata': HERO_BUNDLE['rig_meta']},
+        'three': {'license': 'MIT', 'license_file': HERO_BUNDLE['three_license']},
+    }
+
+    def image_data(key):
+        return 'data:image/png;base64,' + base64.b64encode(bundle_bytes[key]).decode('ascii')
+
+    def script_text(key):
+        # A literal closing tag in a bundled comment/string must never end the
+        # containing script element. Model data uses safe_json independently.
+        return re.sub(r'</script', r'<\\/script', bundle_bytes[key].decode('utf-8'), flags=re.I)
+
+    hero_assets = {key: image_data(key) for key in ('road', 'character')}
+    for key in ('marker', 'world', 'terrain', 'ground', 'grass'):
+        if key in bundle_bytes:
+            hero_assets[key] = image_data(key)
+    if 'grass_meta' in bundle_bytes:
+        hero_assets['grassMetadata'] = json.loads(bundle_bytes['grass_meta'])
+    hero_assets.update(version=HERO_BUNDLE['version'], constructor=HERO_BUNDLE['constructor'],
+                       rigConstructor=HERO_BUNDLE.get('rig_constructor', 'CihouCharacterRig'))
+    if 'exit_duration' in HERO_BUNDLE:
+        hero_assets['exitDuration'] = HERO_BUNDLE['exit_duration']
+    if 'reveal_duration' in HERO_BUNDLE:
+        hero_assets['revealDuration'] = HERO_BUNDLE['reveal_duration']
     first = states[0]
     replacements = {
-        'TITLE': esc(model['title']), 'FIRST_TITLE': '<br>'.join(esc(line) for line in first['lines']),
-        'FIRST_DESCRIPTION': esc(first['description']), 'FIRST_HINT': esc(first['hint']),
+        'TITLE': esc(model['title']), 'FIRST_DESCRIPTION': esc(first['description']),
         'FIRST_LABEL': esc(first['label'], quote=True), 'SUBTITLE': paragraphs(model['subtitle']),
         'CLOSING': paragraphs(model['closing']), 'LIMITS': paragraphs(model['limits']),
-        'DATE': esc(sources['user']['artifact'].get('created_at', '')[:10]), 'VERSION': provenance['model_sha256'][:8],
         'CHAPTERS': ''.join(chapters), 'TECHNICAL_INTRO': paragraphs(model['technical_intro']),
         'TECHNICAL_CARDS': cards(model['technical_cards'], 'technical-summary'),
         'USER_ORIGINALS': originals('user'), 'TECHNICAL_ORIGINALS': originals('technical'),
         'PREFACE': source_markup(sources['user']['preface']) + source_markup(sources['technical']['preface']),
         'DOWNLOADS': downloads, 'FALLBACK': fallback,
         'DATA': safe_json({'hero_states': states}), 'PROVENANCE': safe_json(provenance),
-        'ROAD_IMAGE': 'data:image/png;base64,' + base64.b64encode((ASSETS / 'road.png').read_bytes()).decode('ascii'),
-        'LOOP_IMAGE': 'data:image/png;base64,' + base64.b64encode((ASSETS / 'loop.png').read_bytes()).decode('ascii'),
+        'HERO_ASSETS': safe_json(hero_assets), 'RIG_META': safe_json(rig_meta),
+        'MARKER_META': safe_json(marker_meta),
+        'THREE_JS': '/*\n' + bundle_bytes['three_license'].decode('utf-8') + '\n*/\n' + script_text('three'),
+        'RIG_JS': script_text('rig'), 'SCENE_JS': script_text('scene'),
         'CSS': (ASSETS / 'report.css').read_text(encoding='utf-8'),
         'JS': (ASSETS / 'report.js').read_text(encoding='utf-8'),
     }

@@ -1,0 +1,10 @@
+{
+  "name": "Cihou ink blue paper road",
+  "author": "OpenAI ImageGen, directed for this project",
+  "source": "AI-generated original diffuse texture; benchmark screenshots used as style references only",
+  "file": "paper-road-v1.png",
+  "references": ["Nomadic Tribe n10 voyage keyframe", "Wayfinder w19 tundra keyframe"],
+  "generated_source": "/Users/afei/.codex/generated_images/01a1477d-b5ee-75a2-842f-52f165b2f4ff/exec-05acfddf-1786-48ee-84e2-53ba7f9d18e6.png",
+  "prompt": "Original opaque top-down blue paper road diffuse texture. Slate ink blue #435978 with handmade pigment, paper fibres, sparse horizontal clusters of slender ice blue and chalk yellow dry-brush strokes, fine dark hatching; center kept open. Opposite horizontal edges should repeat. No perspective, characters, scene, text, copied benchmark elements, gradients, or triangular speed lines. Reference images provided for painted surface language only.",
+  "rights_note": "No third-party textures, fonts, or character assets copied into this image; this metadata is not a third-party CC0 grant."
+}

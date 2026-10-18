@@ -1,0 +1,19 @@
+{
+  "asset": "girl-rig-parts-v5.png",
+  "prompt": "Use case: precise-object-edit.\nAsset type: transparent isolated puppet-parts atlas for an animated literary website.\nInput 1 is the EDIT TARGET, the existing original character atlas. Inputs 2, 3, 4 are style references only: Nomadic Tribe's economical thin ink and controlled flat color, Kaizen's broad quiet painted shapes, Wayfinder's highly legible small red protagonist and restrained shape vocabulary. Do not copy reference characters, UI or words.\nPrimary request: preserve EXACTLY the 1536x1024 layout, eight separate body parts, their bounds, positions, poses, proportions and attachment landmarks, and the original red-dress/beige-satchel/brown-shoes/bob-haired girl identity. Simplify and refine the painting so she reads as a charming young child, rather than a pile of scratchy textures. The atlas is rigged already: all joints and source crop rectangles must remain unchanged.\nHead: keep the same outer bob silhouette and bottom neck attachment, but turn the face gently about 20 degrees toward the viewer while still looking to image-right. Reveal one small natural dark eye, a little round cheek and a subtle curious expression; short child nose and soft short chin, not an adult jaw. No giant glossy anime eyes, no doll face, no pink makeup, no added accessories. Make the bob hair a few broad deep chestnut painted shapes with restrained lighter facets, no hundreds of individual white strokes.\nDress and sleeves: same exact geometry and folds, muted warm vermilion red, two or three broad painted shadow areas, a few confident thin ink fold accents. Remove the white flecks and dense scratch marks; it is plain soft cotton, never glittery or sequined. Retain beige crossbody satchel and strap precisely. The natural warm skin areas need clean broad color and a few anatomical ink accents, not mottled grain.\nKeep both thighs, shins, grounded brown shoes, elbow/knee/ankle positions, shoe heel and toe points exactly fixed. Shoes show leather uppers and a thin sole edge, never turned-up soles. No anatomical additions or missing fingers.\nStyle: clear confident gouache shapes and fine intermittent ink, very subtle paper tooth only, no embossed or crumpled texture, no woodcut noise, no glossy 3D rendering, no decorative pattern.\nConstraints: eight parts remain separated in the same places, no assembled full character, no repeated parts, no labels, no words, no border/grid. Fully transparent outside all eight isolated parts, true alpha, no backdrop or colored halo. Preserve the atlas layout precisely.",
+  "source": "/Users/afei/.codex/generated_images/01a1477d-b5ee-75a2-842f-52f165b2f4ff/exec-98d9f58b-6db1-4539-9978-d59d0d59b323.png",
+  "mode": "built-in image_gen edit",
+  "inputs": [
+    "girl-rig-parts-v4.png",
+    "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+    "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+    "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg"
+  ],
+  "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+  "size": [
+    1536,
+    1024
+  ],
+  "alpha_zero_fraction": 0.7158629099527994,
+  "geometry": "Eight separate parts retained, but exact source rectangles/hand/hem extents drifted. Metadata has measured source rectangles and draft recalibrated landmarks. Await v8 actor visual QA."
+}

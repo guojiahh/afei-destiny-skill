@@ -1,0 +1,313 @@
+{
+  "version": 3,
+  "asset": "world-keyart-v3.png",
+  "kind": "quieter gouache and ink surface edit of calibrated Mobius road key art",
+  "generator": "built-in image_gen__imagegen",
+  "createdUtc": "2026-10-17T06:36:46.325Z",
+  "generatedLocalPath": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-710b1cba-dd28-465e-bc35-c40a62d399ec.png",
+  "sha256": "d519eff02518334dc3057882a1e92c6674c02feb832cab4113c3b212547e0370",
+  "prompt": "Edit target: IMAGE 1, world-keyart-v2.png, a 1536x1024 transparent Mobius paper-road illustration. The current road geometry is ALREADY CALIBRATED to an animated character. Preserve its exact road silhouette, central hole, perspective, fold/turnover shapes, occlusion contours, position, dimensions and blue travel-path geometry. DO NOT redesign, rotate, move, resize or recenter the loop. Keep the same complete loop within the same pixels.\nThe other THREE images are explicitly STYLE REFERENCES: Image 2 is Nomadic's flight scene: learn its CLEAR CONTROLLED FLAT COLOR PLANES and deliberately drawn long shadow shapes. Image 3 is Kaizen's garden: learn its LARGE QUIET AREAS OF COLOR and human restraint. Image 4 is Wayfinder's snow world: learn its FEW PURPOSEFUL painterly marks. Do not copy any character, object, UI, symbol, lettering or scene arrangement from these references. The output is ONLY the edited road world, no figures or UI.\nMake a decisive SURFACE-PAINTING correction while keeping the geometry:\n1. REMOVE ALL THREE GROUPS OF ROCKS, GRASS, YELLOW LEAVES AND TWIGS completely: the upper-left cluster, upper-right cluster, and lower-front cluster. Do not relocate them, replace them, or add anything. Restore the natural clean blue road and thin paper edge underneath the clusters. Where they protruded outside the ribbon, leave true transparent background. The road alone remains; there are ZERO objects or decorations anywhere.\n2. REMOVE the entire dense embossed/crumpled/wrinkled surface effect from ALL road and reverse-paper areas. Remove the small broken scratches, glitter, tiny stipples, granular noise, sandpaper finish, weathering, fuzz, little yellow streaks and all-over microtexture. It must NOT look like embossed paper, a 3D bump-map, crinkled foil, rubber or a noisy textured asset.\n3. Repaint the large ink/slate-blue road in CALM MATTE GOUACHE COLOR PLANES. Approximately ninety percent of each blue road plane is quiet, continuous, visually smooth painted color. Let only TWO OR THREE very broad, long, low-contrast human brush passes follow the curved form. These marks must have the size and simplicity of a painter's deliberate large brush, not hundreds of strokes. Keep the existing large darker curved plane/shadow near the lower-left interior as a simple flat shape if needed for depth. No small scratches, no yellow highlights, no white racing streaks, no speckling. No grain or noise, even on close inspection. Preserve blue path geometry and all folds.\n4. The pink paper edge is currently too regular and uniform. Keep the exact OUTER SILHOUETTE but make the pale dusty-pink strip THIN, slightly uneven in width and quietly hand painted; extend the blue field inside it to reduce the heavy rim. Use a delicate, imperfect, NOT FULLY CONTINUOUS charcoal ink line, with occasional small gaps. Avoid a bold black outline, CAD precision, neon rim, or thick uniform piping. Hand-drawn does not mean frayed or jittery.\n5. The warm-ivory paper reverse/fold faces remain in exactly their existing shapes but are quiet matte ivory areas with, at most, one broad very soft warm tint change and a small purposeful ink fold line. No crumple pattern, no scuffs, no all-over brush grain, no intricate texture.\nDesired result: literary hand-painted gouache and ink, an artist consciously leaving large areas empty. Clear shape design and quiet elegant color hierarchy like a considered animated-film background. It should feel DRAWN and AUTHORED, without looking like an unpainted 3D product, vector icon, uniform shader noise or generic AI texture.\nPalette: same controlled slate/ink blue #405879, thin desaturated dusty pink #dfafa8 paper edge, warm pale ivory #f1eade reverse, sparse delicate charcoal ink. ZERO yellow or gold marks. Keep a tiny natural painterly irregularity in large shapes without microtexture.\nInvariant constraints: SAME 1536x1024 size, SAME projection and every major contour/path, SAME central transparent hole. Genuine RGBA transparency outside the ribbon and inside the hole. No ground, backdrop, glow, ambient haze, cast shadow, labels, text, UI, people, animals, stones, plants, particles or any new object. Do not fill the hole or the surrounding transparency. Only change the existing surface paint and remove the three attached prop clusters.",
+  "references": [
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/world-keyart-v2.png",
+      "role": "edit target: calibrated road silhouette, center opening, projection, folds and path"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "role": "actual benchmark screenshot: controlled flat color planes and intentional drawn shadow shapes"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "role": "actual benchmark screenshot: broad quiet color and painterly restraint"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "role": "actual benchmark screenshot: purposeful authored brush marks, no borrowed objects"
+    }
+  ],
+  "visualInspection": {
+    "performed": "Original v2 and all three benchmark screenshots inspected before generation. Generated v3 inspected with view_image.",
+    "achieved": "All three rock/grass clusters removed. Dense embossed/crumpled microtexture and yellow scratch marks removed. Main blue surfaces are now large calm matte planes with a few broad directional brush shapes. Transparent center and outside retained.",
+    "limits": "The pink edge and black ink outline remain more continuous and uniform than requested. Very subtle paint texture persists. The generative edit preserved overall shape and path closely but is not pixel-identical to v2; see measured alpha-mask and row-span comparison.",
+    "geometry": "Major foreground road boundaries differ by approximately 0–4 pixels on sampled rows. Far section at y=200 has local boundary differences up to 25 pixels. No browser or character-path alignment QA performed.",
+    "browserQA": false,
+    "approvalStatus": "Candidate surface asset only; parent must inspect actual stage and independent design review."
+  },
+  "processing": "Selected generated PNG copied byte-for-byte into workspace. No external image editing, drawing, compositing, cropping, resizing or background removal. Alpha and mask comparisons are read-only.",
+  "licenseNote": "Original generated artwork. Three benchmark screenshots were style references only; no characters, scene objects, UI or text extracted. No CC0 claim.",
+  "unchangedFiles": "No engine, JS, HTML, original v2 image or rig assets modified.",
+  "alphaAndGeometryQA": {
+    "size": [
+      1536,
+      1024
+    ],
+    "channels": 4,
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "fullyTransparentRatio": 0.5521717071533203,
+    "alpha1to7Ratio": 0.012359619140625,
+    "contentBoundsAlpha8": [
+      26,
+      123,
+      1498,
+      798
+    ],
+    "sha256": "d519eff02518334dc3057882a1e92c6674c02feb832cab4113c3b212547e0370",
+    "samplePoints": [
+      {
+        "point": [
+          0,
+          0
+        ],
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          512
+        ],
+        "rgba": [
+          82,
+          69,
+          68,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          400
+        ],
+        "rgba": [
+          47,
+          38,
+          35,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          50
+        ],
+        "rgba": [
+          11,
+          11,
+          12,
+          0
+        ]
+      },
+      {
+        "point": [
+          1535,
+          1023
+        ],
+        "rgba": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          970
+        ],
+        "rgba": [
+          94,
+          75,
+          70,
+          0
+        ]
+      }
+    ],
+    "geometryComparisonToV2": {
+      "alpha8MaskIoU": 0.9736599123193723,
+      "excludedRemovedPropZones": [
+        [
+          205,
+          75,
+          215,
+          170
+        ],
+        [
+          1180,
+          70,
+          260,
+          240
+        ],
+        [
+          395,
+          795,
+          300,
+          170
+        ]
+      ],
+      "alpha8MaskIoUOutsideRemovedPropZones": 0.987786047526625,
+      "rowSpansAlpha128": [
+        {
+          "y": 200,
+          "v2": [
+            [
+              251,
+              720
+            ],
+            [
+              927,
+              1364
+            ]
+          ],
+          "v3": [
+            [
+              245,
+              737
+            ],
+            [
+              912,
+              1339
+            ]
+          ]
+        },
+        {
+          "y": 300,
+          "v2": [
+            [
+              126,
+              391
+            ],
+            [
+              935,
+              1439
+            ]
+          ],
+          "v3": [
+            [
+              123,
+              390
+            ],
+            [
+              943,
+              1441
+            ]
+          ]
+        },
+        {
+          "y": 400,
+          "v2": [
+            [
+              75,
+              168
+            ],
+            [
+              1171,
+              1507
+            ]
+          ],
+          "v3": [
+            [
+              74,
+              168
+            ],
+            [
+              1173,
+              1508
+            ]
+          ]
+        },
+        {
+          "y": 500,
+          "v2": [
+            [
+              41,
+              265
+            ],
+            [
+              1027,
+              1519
+            ]
+          ],
+          "v3": [
+            [
+              38,
+              266
+            ],
+            [
+              1024,
+              1521
+            ]
+          ]
+        },
+        {
+          "y": 600,
+          "v2": [
+            [
+              30,
+              1495
+            ]
+          ],
+          "v3": [
+            [
+              31,
+              1495
+            ]
+          ]
+        },
+        {
+          "y": 700,
+          "v2": [
+            [
+              73,
+              1418
+            ]
+          ],
+          "v3": [
+            [
+              73,
+              1419
+            ]
+          ]
+        },
+        {
+          "y": 800,
+          "v2": [
+            [
+              175,
+              1065
+            ]
+          ],
+          "v3": [
+            [
+              174,
+              1067
+            ]
+          ]
+        },
+        {
+          "y": 900,
+          "v2": [
+            [
+              432,
+              790
+            ]
+          ],
+          "v3": [
+            [
+              435,
+              794
+            ]
+          ]
+        }
+      ],
+      "note": "Source and output have same 1536x1024 canvas. Overall mask comparison includes intentional prop removal. Outside excluded old prop zones, alpha-mask IoU estimates preserved road silhouette. Generative edits are not pixel-identical; these comparisons do not replace browser alignment QA."
+    }
+  }
+}

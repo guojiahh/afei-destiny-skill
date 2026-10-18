@@ -1,45 +1,55 @@
-# 此后 · 第一阶段完成与新上下文交接
+# 此后 · V8 保存基线与完整报告交接
 
-更新：2026-10-16。**第一阶段已完成并获用户确认。所有新咨询的完整报告统一使用莫比乌斯环和固定正文模板。** 下一次开发从本文进入，不再回到多图型选型或重新设计整套视觉。
+更新：2026-10-18。用户从历史对照页指定 **V8** 为保存版本，并要求提交 Git、查看完整 HTML。当前渲染器默认已切换为 `painted-v8`。这是用户选择的版本基线；没有产生新的独立设计评分，也不能把它写成达到某个评分要求。
 
-## 已确定的产品基线
+## 当前产品与唯一入口
 
-- 交付：一份同会话的个人 HTML；两份 Markdown 是内容底稿和页尾可选下载。
-- 主图：米白纸面、深色纸带、宋体标题、朱红人物；路上 → 看见全环 → 主动跨出三个图内点击状态。
-- 动效：持续行走、短淡化与二维 SVG 路径；暂停、重看、离屏停止与减少动态可用。当前没有视频或连续 3D 运镜。
-- 正文：九段固定顺序，主问题优先，其他领域随后，完整依据集中在末尾原地展开；不放逐段来源跳转。
-- 每次保留相同构图、交互与阅读骨架，重新编写本人的问题、事实、关系解释、条件、事例和行动。
-- 莫比乌斯环是统一的困局隐喻。它不能证明每个问题都由个人心理循环造成；外部限制、未核实关系和没有适当行动均可如实表达。
+- 最终交付是一份同会话的完整个人 HTML。两份 Markdown 是内容底稿和页尾下载；真实报告、个人模型、截图和会话状态都只保存在被 Git 忽略的 `consultation_state/<session>/`。
+- 首屏为居中绘本画面，不显示品牌、报告标识、日期和个人大标题。保留必要的按住提示、阅读入口与播放控制。
+- 主图固定为 V8：深蓝纸路、原创红裙纸偶、拾花、揭环、投种、离环与回望。采用 WebGL 中的二维原画、关节纸偶与 2.5D 运镜，不是原生三维地形，也不把画稿称为数学莫比乌斯曲面。
+- 正文保持九章顺序、主问题优先、其他领域随后、依据原地展开。个体事实、解释、反例、行动条件与未来窗口由本会话模型填写，不能写进共享美术或场景代码。
+- 环是可修正的困局隐喻，不能证明每个问题都由个人心理循环造成。外部限制、未知或暂缓均可如实表达；离环不是现实成功承诺。
 
-## 唯一现役入口
-
-| 要做什么 | 从哪里开始 |
+| 要做什么 | 权威入口 |
 |---|---|
-| 理解现阶段产品与后续范围 | [产品方案](CIHOU_PRODUCT_PLAN.md) |
-| 保持第一阶段的视觉与阅读约束 | [第一阶段基线](CIHOU_PHASE1_REDESIGN.md) |
-| 开始或继续咨询 | [Skill](../afei-destiny-skill/SKILL.md)、[会话协议](../afei-destiny-skill/references/consultation-harness.md) |
-| 生成个人报告 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md) |
-| 修改固定模型及校验 | [生成器](../afei-destiny-skill/scripts/generate_html_report.py)、[模型模板](../afei-destiny-skill/assets/cihou/mobius-model-template.json) |
-| 修改正式页面 | [渲染器](../afei-destiny-skill/scripts/render_quiet_report.py)、[quiet 资产](../afei-destiny-skill/assets/cihou/quiet/report.html) |
-| 修改两份底稿结构 | [用户模板](../afei-destiny-skill/assets/cihou/user-report-template.md)、[技术模板](../afei-destiny-skill/assets/cihou/technical-report-template.md) |
-| 看匿名视觉和历史设计 | [quiet 样机](../design-demos/cihou-quiet.html)、[演示索引](../design-demos/README.md) |
+| 产品与后续范围 | [产品方案](CIHOU_PRODUCT_PLAN.md) |
+| 继续单一咨询 | [Skill](../afei-destiny-skill/SKILL.md)、[会话协议](../afei-destiny-skill/references/consultation-harness.md) |
+| 生成完整个人报告 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md) |
+| 填写固定九章内容 | [生成器](../afei-destiny-skill/scripts/generate_html_report.py)、[模型模板](../afei-destiny-skill/assets/cihou/mobius-model-template.json) |
+| 修改正式页面与版本选择 | [渲染器](../afei-destiny-skill/scripts/render_quiet_report.py)、[HTML](../afei-destiny-skill/assets/cihou/quiet/report.html)、[控制器](../afei-destiny-skill/assets/cihou/quiet/report.js) |
+| 复核 V8 素材、版本与哈希 | [V8 说明](../afei-destiny-skill/assets/cihou/quiet/immersive/README.md)、[冻结清单](../afei-destiny-skill/assets/cihou/quiet/immersive/v8-bundle.json) |
+| 单独体验同版主图 | [V8 原型](../afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v8.html) |
+| 底稿结构 | [用户八节模板](../afei-destiny-skill/assets/cihou/user-report-template.md)、[技术十一节模板](../afei-destiny-skill/assets/cihou/technical-report-template.md) |
+| 更早的完整匿名样机 | [演示索引](../design-demos/README.md) |
 
-正式页面源码在 Skill 内；`design-demos/cihou-quiet/` 是获认可视觉的匿名对照，不再作为个人交付入口。旧海图、stage1 多人物样机和未采用的关键帧保留为历史，不能从这些目录继续实现现役功能。
+## V8 的确定性运行链
 
-## 每次咨询的固定完成链路
+渲染器 `HERO_BUNDLE` 集中选择 `CihouHeroSceneV8`、`CihouCharacterRigV8`、人物图集 V5 与世界原画 V3。场景版本、人物图集和原画有各自编号，不能因为使用图集 V5 就把整版称为 V5。所有运行 PNG、JSON、Three.js、MIT 全文、关节与场景代码都内联到最终 HTML，来源清单逐项记录 SHA-256；不依赖远程素材或元数据。
 
-1. 先 `discover`，按用户选择新建或继续单一会话；继续时 `status`、`audit`、`resume`。不得读取其他会话补齐内容。
-2. 完成资料、计算、锁定、反馈、主问题深入与未来展望。一次性模式没有反馈时保持未核验。
-3. 按各自来源计划，使用固定模板完成并登记 `final_report.md` 与 `technical_analysis.md`。用户底稿八节、技术底稿十一节；技术来源防火墙不变。
-4. 用 `generate_html_report.py --init-model visual_report_model.json` 生成来源绑定的九章草稿。根据本次底稿逐项填写，移除草稿标记与占位符；不把模板原句冒充个人结论。
-5. 生成预览，核对主图与正文、条件和反例、桌面与窄屏；再 `--register`、`--check`、Harness `audit`。
-6. 最终回复突出 HTML 一个入口并打开。默认 HTML 会话只有双底稿、模型与页面有效登记后才为 `complete`，写完 Markdown 不能算完成。
+保留原 V8 的 **10.5 秒揭示、9.5 秒离环**。按住路面、触摸、空格或回车控制拉远；松开保留进度。揭环并短暂停顿后可主动再往前一步，结束后阅读或重看。暂停、重看、键盘、离屏／后台停止、减少动态与无脚本阅读由正式控制器维护。WebGL 无法使用时显示静态说明，正文和来源仍可阅读。
 
-新会话记录 `report_template=cihou-mobius-v1`。生成器要求统一 quiet 主图、三状态与九章 ID／顺序／布局，不合模板或草稿未填写完会拒绝。脚本负责结构、来源和确定性构建，个人解释仍由咨询代理撰写并复核，不是无须阅读底稿的一键占卜。
+人物与纸路均为本轮原创生成美术，参考了三个原站的画面语言，没有从原站提取角色或物件；不能沿用旧 `girl-walk` 图集的 CC0 署名。素材来源和限制见 V8 目录中的生成记录。Three.js 单独使用 MIT 授权。
 
-历史会话没有该模板字段时保持旧契约；旧渲染器仅用于复核历史登记内容，不再作为新报告选项。用户明确只要 Markdown 仍可按原协议记录选择。更新已登记内容先 `supersede`，使用新版本文件名，不覆盖旧文件。
+## 每份咨询的完成链路
 
-## 开发接续
+1. 先 `discover`，只对用户选中的单一会话执行 `status`、`audit`、`resume`。不读取其他会话补内容。
+2. 按各自来源计划，完成并登记用户八节、技术十一节底稿；技术来源防火墙保持。
+3. 完整阅读本次双底稿，使用 `--init-model` 初始化 `cihou-mobius-v1` 草稿。填入三态个人含义与九章内容，保留事实、假设、条件、反例、未核验未来及反馈撤回。
+4. 生成预览，核对 V8 实际运镜、桌面与窄屏、暂停与重看、键盘、正文及来源展开。不能只打开匿名原型就认为完整模板通过。
+5. 更新已有登记先按产物 ID 精确 `supersede`，使用新版本文件名。`--register` 后 `--check`，再 Harness `audit`。不覆盖历史有效文件，不为美术切换重写咨询事实。
+6. 最终回复突出完整 HTML 一个入口并打开。只有双底稿、来源绑定模型与 HTML 均有效登记，默认 HTML 会话才算 `complete`。
+
+新会话统一 `report_template=cihou-mobius-v1`。旧会话无模板字段时保持原契约；需要升级时用新模型显式选择模板。框架固定复用，每次填的是当前会话内容，不能直接把匿名样机改名为个人报告。
+
+## 历史与评审边界
+
+旧海图、stage1、quiet 石墨纸路、人物比例预览、V1–V14 和全部本地研究记录保留。V9–V14 是后续工程探索，本次选择 V8 不会删除或反向覆盖这些原件。历史比较页放在选定会话内，包含早期个人页面，因此不能加入 Git 或安装包。
+
+V8 的第 07 轮独立评论员亲自完成当前原型及 Wayfinder、Kaizen、Nomadic Tribe 的主流程，评分为 **4.5/10**；V10 的第 08 轮评分为 **5.8/10**。这些评分没有因用户选定 V8 而改变。V11–V14 尚无新的独立评分；V13 查出低帧跨步沉髋和穿坡，V14 的后续专项在用户要求历史对照时中断，不能宣称全部通过。
+
+如以后继续设计评审，每轮仍需全新上下文、同一提示词、当前版本截图与交互过程；评论员亲自体验三个原站完整流程。既有研究截图、工程测试和用户选定均不能代替独立审美判断。原站抓取代码、第三方截图和大批可重建 QA 页面保留在本地研发资料，本次运行基线提交不将其作为可分发资产。
+
+## 验证与后续范围
 
 从仓库根运行：
 
@@ -48,20 +58,6 @@ source .venv/bin/activate
 python tools/check_workspace.py --skill
 ```
 
-真实咨询仅在被 Git 忽略的 `consultation_state/<session>/`。已用用户指定的完整咨询跑通此版；具体当前文件由该会话 `status` 的活动产物确定，不能凭固定文件名或修改时间猜测。真实报告、截图、出生资料与密钥不进入 Git 或可安装模板。代码测试只用合成材料。
+回归测试只用合成材料。当前交付记录以会话活动产物和实际 QA 为准；桌面／手机视口测试不等于实体手机接收与打开验证。`127.0.0.1` 只是本机预览，最终入口链接实际 HTML 文件。
 
-### 可直接给新对话的提示
-
-> 请完整阅读 AGENTS.md、docs/CIHOU_HANDOFF.md 和本次相关协议。此后第一阶段已经完成，主图固定为 quiet 莫比乌斯环，HTML 正文和两份底稿都有固定模板。保留已确认视觉与交互，在这条正式生成链路上继续开发。先核对当前代码、Git 状态和第二阶段范围，不重开多图型设计，不把真实咨询复制到公共样例。
-
-新开完整咨询时：
-
-> 请按当前 Skill 新开一次由我逐轮反馈的咨询，最后生成固定莫比乌斯环版个人 HTML。先完成本次两份底稿，再初始化、填写、校验并登记个人模型与 HTML；主图文字、事例与行动必须来自本次内容。
-
-## 已验收与下一阶段
-
-第一阶段验收范围是用户认可的本地体验：完整个人内容、三态交互、持续行走、连续阅读、依据展开、离线交付和来源登记；桌面与 320／390px 浏览器视口已检查。独立真人理解测试、实体手机接收与打开体验尚未完成，不能写成验证过普遍效果。
-
-第二阶段尚未在本轮启动。候选重点是：真实手机交付、受访问控制的私人阅读副本、回访纠正与版本对照、单独脱敏分享图。账号、云端存储、私有托管、跨设备同步及完整在线咨询均未实现。`127.0.0.1` 仅是临时本机预览地址，交付入口应链接实际 HTML 文件。
-
-工作区按现役与历史索引整理；历史设计、评测、分支、缓存和发布包未作破坏性清理。Git 提交是本地版本记录，不代表推送、发布或上线。
+私有在线托管、账号、云端存储、跨设备同步、在线咨询和回访服务尚未实现。Git 提交只保存本地可重建源码、共享美术与模板，不代表推送、发布或上线。

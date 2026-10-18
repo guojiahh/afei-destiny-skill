@@ -1,0 +1,25 @@
+{
+  "name": "Cihou three-flower cracked stone landmark",
+  "author": "OpenAI ImageGen, directed for this project",
+  "asset": "flower-stone-v1.png",
+  "source": "Original generated artwork using Wayfinder surface and original Cihou girl as style references, without copying original objects",
+  "imageSize": [
+    1536,
+    1024
+  ],
+  "alphaBBox8": [
+    394,
+    142,
+    1266,
+    900
+  ],
+  "alphaBBox128": [
+    394,
+    143,
+    1265,
+    899
+  ],
+  "alphaTest": 0.035,
+  "sha256": "8ccc71bd77b1fcf06d08c22c8de0d2c75afe589256105019b64ebe14ac108054",
+  "prompt": "Single low cracked slate stone with a slender bent stem of exactly three golden wildflowers and two sage leaves, three-quarter slightly elevated view, thin ink outline, original gouache drawing matching character. Transparent padding, no scenery/floor/shadow/text/glow. References: w19-tundra-second-line.jpg and original girl-rig-parts-v3.png."
+}
