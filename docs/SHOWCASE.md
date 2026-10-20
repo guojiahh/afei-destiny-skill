@@ -2,7 +2,7 @@
 
 当前演示为 **「此后」V21**：现在 → 之前 → 此后 → 完整解读。以下是实际浏览器截图，使用合成求职材料，没有对应的真实咨询者。画面中的原作素材来自 [Wayfinder](https://wayfinder.nfb.ca/)，具体权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。
 
-[查看构建资料](../design-demos/cihou-wayfinder-v21/README.md) · [返回项目首页](../README.md)
+[下载完整 HTML](https://github.com/guojiahh/afei-destiny-skill/raw/refs/heads/main/design-demos/cihou-wayfinder-v21/final_report.html) · [查看构建资料](../design-demos/cihou-wayfinder-v21/README.md) · [返回项目首页](../README.md)
 
 ## 一次体验怎样展开
 
@@ -46,7 +46,9 @@
 
 ## 本地打开
 
-已有完整本地工作区时，在仓库根目录启动仅服务匿名演示目录的本地服务器：
+**只看演示：** 下载上方完整 HTML，保存后用现代浏览器打开。约 68 MB 的文件包含原资源和内容，首次加载需稍等。GitHub 的文件页只展示源码，不运行页面。
+
+**已克隆仓库：** 在仓库根目录启动仅服务匿名演示目录的本地服务器：
 
 ```sh
 python3 -m http.server 8785 --bind 127.0.0.1 --directory design-demos/cihou-wayfinder-v21
@@ -54,7 +56,7 @@ python3 -m http.server 8785 --bind 127.0.0.1 --directory design-demos/cihou-wayf
 
 浏览器打开 [本地演示](http://127.0.0.1:8785/final_report.html)。Windows 用 `python`；结束时在终端按 `Ctrl+C`。不要将包含私人咨询的目录作为公开服务器根目录。
 
-也可以直接用现代浏览器打开本地 `design-demos/cihou-wayfinder-v21/final_report.html`。约 68 MB 的文件包含原资源和内容，首次加载需稍等。GitHub 的文件页只展示源码，不运行页面。完整原作素材的公开分发范围以[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)为准。
+也可以直接用现代浏览器打开本地 `design-demos/cihou-wayfinder-v21/final_report.html`。原作素材的权属见[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
 
 想重建时运行：
 

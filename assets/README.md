@@ -1,6 +1,6 @@
 # 仓库展示素材
 
-此目录保存本地展示与 GitHub 首页候选素材；报告运行资产在 [`afei-destiny-skill/assets/cihou/`](../afei-destiny-skill/assets/cihou/)。
+此目录服务 GitHub 首页与公开说明；报告运行资产在 [`afei-destiny-skill/assets/cihou/`](../afei-destiny-skill/assets/cihou/)。
 
 | 文件 | 用途与来源 |
 |---|---|

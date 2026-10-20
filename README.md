@@ -12,8 +12,6 @@ A Codex skill for Bazi / Four Pillars exploration, reflective dialogue, and inte
 
 *当前 V21 的真实界面截图，内容为合成求职案例。画面复用 Wayfinder，原作与素材归属见[致谢与来源](afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。*
 
-**同步状态（2026-10-20）：** 本地工作区已更新到 V21；公开 GitHub 主分支仍为较早版本。完整原作素材的公开再分发范围待确认，克隆公开仓库暂不等于取得下方展示的完整 V21 页面。
-
 ## 你会得到什么
 
 一次从出生信息与现实问题开始的对话，以及最终可以在本地打开的 **`final_report.html`**。报告中的「此后」体验用四步引导阅读：
@@ -41,9 +39,9 @@ A Codex skill for Bazi / Four Pillars exploration, reflective dialogue, and inte
 
 ### 先看报告
 
-无需安装 Skill：[查看 V21 匿名演示说明](design-demos/cihou-wayfinder-v21/README.md)。本地完整 HTML 约 **68 MB**，包含场景素材和正文；首次加载需稍等。公开分发范围见[第三方说明](afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
+无需安装 Skill：[下载 V21 匿名演示 HTML](https://github.com/guojiahh/afei-destiny-skill/raw/refs/heads/main/design-demos/cihou-wayfinder-v21/final_report.html)，保存后用现代浏览器打开。文件约 **68 MB**，包含场景素材和正文；首次加载需稍等。[演示说明与构建资料](design-demos/cihou-wayfinder-v21/README.md)。
 
-GitHub 的文件预览不会运行交互页面。已有完整本地工作区时，可以按[本地预览步骤](docs/SHOWCASE.md#本地打开)体验。当前提供本地 HTML，私有在线托管、账号与跨设备同步尚未实现。
+GitHub 的文件预览不会运行交互页面。已克隆仓库时，也可以按[本地预览步骤](docs/SHOWCASE.md#本地打开)体验。当前提供本地 HTML，私有在线托管、账号与跨设备同步尚未实现。
 
 ### 安装并开始自己的探索
 
@@ -119,7 +117,7 @@ python tools/check_workspace.py
 项目自有代码和文档采用 [MIT License](LICENSE)。**第三方运行时、美术、字体、音频和视频保留各自许可证与权利，不由本项目的 MIT 许可覆盖。** 详细清单见[第三方说明](afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
 
 - [lunar_python](https://github.com/6tail/lunar-python)：确定性历法计算，内置版本 1.4.8，MIT。
-- [Wayfinder](https://wayfinder.nfb.ca/)：当前交互报告复用的原作，Matt DesLauriers 与 NFB 制作，Tiffany Beucher 插画、Guillaume Le Roux 动画与三维。[素材、补丁与授权状态说明](afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。
+- [Wayfinder](https://wayfinder.nfb.ca/)：当前交互报告复用的原作，Matt DesLauriers 与 NFB 制作，Tiffany Beucher 插画、Guillaume Le Roux 动画与三维。[素材、补丁与权属说明](afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。
 
 ## English overview
 

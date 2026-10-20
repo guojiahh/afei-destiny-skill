@@ -2,7 +2,7 @@
 
 更新：2026-10-20。当前默认 `presentation.hero_runtime="wayfinder-v21"`。用户可见路径为 **现在 → 之前 → 此后 → 完整解读**：前两景按住沿路读，第三景点击选择留卡，得到一张卡就能主动进入九章解读。顶部始终可以跳看或直接阅读，不要求凑齐三张卡。
 
-第一次了解项目先看[截图与操作演示](SHOWCASE.md)；找实现看[工作区地图](WORKSPACE_GUIDE.md)。本页开头是当前契约，下方折叠部分保留历史决策。原作素材的再分发授权尚未核实，见[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
+第一次了解项目先看[截图与操作演示](SHOWCASE.md)；找实现看[工作区地图](WORKSPACE_GUIDE.md)。本页开头是当前契约，下方折叠部分保留历史决策。原作署名与权属独立于项目 MIT，见[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
 
 - 当前演示：[V21 完整匿名 HTML](../design-demos/cihou-wayfinder-v21/final_report.html)／[说明与来源](../design-demos/cihou-wayfinder-v21/README.md)／[构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py)。复用 V20 的合成个人分析、六节点、三种反馈和九章内容；本轮只强化导览与阅读连接，独立生成模型、双底稿和来源计划。
 - “现在”按住看六节点循环；“之前”按住看三个来源绑定锚点。只计数实际长按行走时经过的不同节点，走过全部并主动松开后突出下一步；不自动切场、不锁导航。第一景仍可重复循环，阶段覆盖数不写入咨询事实。解释按钮注明用途，展开后引用当前句、暂停行走并隐藏重复浮字，收起后可继续长按。

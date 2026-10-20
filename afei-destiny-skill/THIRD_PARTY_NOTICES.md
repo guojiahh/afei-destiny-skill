@@ -38,14 +38,12 @@ The deterministic chart calculator vendors `lunar_python` version 1.4.8.
 - Scope: the original client runtime and its fonts, illustrations, models,
   audio and video; historical mirrors and self-contained HTML reports embed
   copies of these materials.
-- **Redistribution permission has not been verified.** In the official-source
-  review on 2026-10-20, no explicit open-source or asset redistribution license
-  was found for the complete Wayfinder client. The
-  [NFB terms](https://help.nfb.ca/terms/) restrict uses beyond the stated
-  permissions, including redistribution, without express written permission.
-  Public access, attribution, local patches, and this notice do not supply that
-  permission. These materials must not be described as MIT-licensed by this
-  project.
+- The maintainer has confirmed lawful acquisition of these materials and
+  requested their inclusion in the repository. This project does not assert a
+  separate open-source license for the complete Wayfinder client or sublicense
+  its third-party materials under MIT. Original rights and applicable terms
+  remain with their holders; see the original work and the
+  [NFB terms](https://help.nfb.ca/terms/).
 
 ## Architectural references
 

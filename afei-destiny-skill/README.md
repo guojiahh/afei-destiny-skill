@@ -4,7 +4,7 @@
 
 默认完整咨询交付为一份个人 `final_report.html`。当前 V21 按 **现在 → 之前 → 此后 → 完整解读** 引导：前两景按住沿路看循环与可能的形成路径；此后首次选一项完成有限体验并收卡，已得卡点开直读，仅显式重播才重新播放。一张卡就能进入九章解读，也可以收齐三张后比较。收卡只保存在本页，切章与从头体验保留，刷新新页面后重置。原资源、依据及双底稿下载包含在单份 HTML 中，原作权属见[来源说明](assets/cihou/quiet/wayfinder/PROVENANCE.md)。
 
-具体解释每次来自本次资料。过去可用“你可能曾经……”表达有机制依据的形成路径，不补造具体人物、事件或诊断。完整生成、来源和登记要求见 [HTML 报告协议](references/html-report.md)与[闭环叙事协议](references/loop-narrative.md)。当前 V21 可在已有完整本地工作区中预览，参见仓库的 `docs/SHOWCASE.md`；截至 2026-10-20，公开主分支尚未同步这一版本，完整原作素材的分发范围待确认。匿名演示不随独立 Skill 安装，也不能换名当作个人报告。
+具体解释每次来自本次资料。过去可用“你可能曾经……”表达有机制依据的形成路径，不补造具体人物、事件或诊断。完整生成、来源和登记要求见 [HTML 报告协议](references/html-report.md)与[闭环叙事协议](references/loop-narrative.md)。想先看匿名界面，可从[仓库演示指南](https://github.com/guojiahh/afei-destiny-skill/blob/main/docs/SHOWCASE.md)查看截图、下载完整 HTML 或启动本地预览。匿名演示不随独立 Skill 安装，也不能换名当作个人报告。
 
 ## 运行环境
 
