@@ -84,10 +84,10 @@ python .\afei-destiny-skill\scripts\doctor.py
 
 ## 可视化报告设计演示
 
-当前匿名视觉入口为[「此后」quiet 样机](../design-demos/cihou-quiet.html)。暖白纸面、深灰纸带与朱红人物保持一个视觉重点：点道路看全环，再点环看人物主动跨出；文字随画面解释，向下自然阅读。动效为透明图片与二维路径，不是视频或连续 3D 运镜。
+当前匿名入口为 [V19 求职完整演示](../design-demos/cihou-wayfinder-v19/final_report.html)：原站 Wayfinder 引擎、角色、风景与视听资源承载闭环路线，按住沿固定路线前进、松开停下，首景六句随同一个循环重复并平滑浮现；叙述直接面向读者，来处用自然的“你可能曾经……”连接可能的学习路径。顶部主动切换此刻、来处与可能，比较三项有条件的走法；正文入口打开同页九章和完整依据。
 
-样机正文是匿名虚构片段，用于公开展示风格；完整个人交付由独立的 [HTML 生成流程](../afei-destiny-skill/references/html-report.md)生成。所有新完整报告统一三态莫比乌斯主图、九章正文、八节用户底稿和十一节技术底稿，具体事实、困局与行动每次重新编写。模板一致不等于人生解释一致。
+示例采用显式合成的八节用户底稿、十一节技术边界与来源绑定模型，没有出生输入或真实咨询者。完整个人交付沿 [HTML 生成流程](../afei-destiny-skill/references/html-report.md)重新生成，模板一致不等于人生解释一致。
 
-第一阶段已于 2026-10-16 获用户确认。正式页面能离线打开，完整依据在页尾展开；真实报告不进入公开样例。旧 stage1 四图型、蓝色轨道和铜橙拨片只作为[历史对照](../design-demos/README.md)，不再是开发入口。
+第一阶段于 2026-10-16 获用户确认；V19 是 2026-10-20 的加载期文字定位更新，沿用 V18 叙事，没有新的独立审美评分。全部原资源、正文和下载内嵌为单份 HTML；原作署名与权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。V8、V15、[V16](../design-demos/cihou-wayfinder-v16/final_report.html)、[V17](../design-demos/cihou-wayfinder-v17/final_report.html)、[V18](../design-demos/cihou-wayfinder-v18/final_report.html)、早期 quiet 和 stage1 保留在[历史对照索引](../design-demos/README.md)，真实报告不进入公开示例。
 
-源码与视觉边界见[样机说明](../design-demos/cihou-quiet/README.md)，正式开发从[新对话交接](CIHOU_HANDOFF.md)进入。手机尺寸浏览器检查不等于真实手机交付；本机预览服务停止后地址会失效，保留 HTML 文件才是本地交付。
+正式开发和实际 QA 记录从[新对话交接](CIHOU_HANDOFF.md)进入。手机尺寸浏览器检查不等于实体手机交付；本机预览服务停止后地址会失效，实际 HTML 文件是本地交付入口。私有在线托管尚未实现。

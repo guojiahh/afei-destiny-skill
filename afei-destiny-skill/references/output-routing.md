@@ -29,7 +29,7 @@ python scripts/consultation_output_router.py `
 ## 呈现纪律
 
 - 技术审计、客户短总结、用户报告、独立技术底稿和最终 HTML 是不同呈现层，不是重新改写历史的机会。
-- 客户总结可以减少术语、改善节奏，但必须保留主要反证、反馈修正和不确定项。
+- 客户总结按 `client-voice.md` 减少术语与重复编写说明；主要反证、反馈修正和会改变选择的现实条件仍保留。可能的形成经历自然写成“你可能曾经……”，来源记录不因此升级为确认事实。
 - 用户说“结束”“总结一下”时，路由到 `consultation_summary`；不要因为还没做 HTML 而阻止正常收束。
 - 用户同意生成后，读取 `markdown-report.md` 和 `technical-report.md`：分别用 `report_source`、`technical_report_source` 写入当前 `<session-dir>/final_report.md`、`<session-dir>/technical_analysis.md`。用户报告先运行 `validate_final_report.py`；通过后再登记为 `markdown_report`、`technical_report`。两个来源计划只能消费同一 `session_id` 的活动产物。
 - 双底稿按固定八节／十一节模板完成后，按 `html-report.md` 用 `--init-model` 初始化本会话的 `cihou-mobius-v1` 草稿；填完三态莫比乌斯环与九章正文，再生成、校验、登记 `html_report`。图形和文案只来自本次活动报告，不能扫描目录自行拼接旧文件。默认最终回复只突出 HTML；底稿下载位于页面末尾。

@@ -1,0 +1,8 @@
+<script>
+// Explicit production-QA environment: native animation callbacks are delivered
+// at a chosen real cadence. No story state, target, speed, clock or phase is set.
+(function(){var nativeRequest=window.requestAnimationFrame.bind(window),nativeCancel=window.cancelAnimationFrame.bind(window),previous=new WeakMap(),pending=new Map(),id=0;window.cihouQACadence=12;
+window.requestAnimationFrame=function(callback){var key=++id,entry={native:0,cancelled:false};pending.set(key,entry);function frame(time){if(entry.cancelled)return;var last=previous.has(callback)?previous.get(callback):-Infinity;if(time-last>=1000/window.cihouQACadence-1){pending.delete(key);previous.set(callback,time);callback(time);}else entry.native=nativeRequest(frame);}entry.native=nativeRequest(frame);return key;};
+window.cancelAnimationFrame=function(key){var entry=pending.get(key);if(entry){entry.cancelled=true;nativeCancel(entry.native);pending.delete(key);}};
+})();
+</script>

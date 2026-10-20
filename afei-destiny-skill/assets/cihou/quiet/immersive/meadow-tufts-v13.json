@@ -1,0 +1,209 @@
+{
+  "version": "meadow-tufts-v13",
+  "image": "meadow-tufts-v13.png",
+  "imageSize": [
+    1254,
+    1254
+  ],
+  "sha256": "ba86e8539c3bdf14150002aaa150e8cce3df41ac2ae53ea2bd63bef6a9c50cdb",
+  "originalPngUnmodified": true,
+  "coordinateSystem": {
+    "origin": "top-left",
+    "positiveX": "right",
+    "positiveY": "down",
+    "sourceRectFormat": "[left, top, width, height], 2 px padding around alpha >= 8 extent of each isolated cell.",
+    "rootPxFormat": "[x,y] full atlas pixels. Find x median of alpha >= 64 in lowest 15 strong-alpha rows; choose lowest actual alpha >= 64 pixel within +/-3 px of that x. Root is a real visible pixel, excludes faint tails/fringe.",
+    "rootNormalizedFormat": "[(rootPx.x-sourceRect.x)/sourceRect.width, (rootPx.y-sourceRect.y)/sourceRect.height]"
+  },
+  "alpha": {
+    "measurementThreshold": 8,
+    "rootMeasurementThreshold": 64,
+    "rootBandRows": 15,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "transparentPixelPercent": 64.70541476207555,
+    "visibleAlpha8Percent": 18.889473938579957,
+    "recommendedAlphaTest": 0.05,
+    "fringe": {
+      "brightYellow": {
+        "pixelCount": 46027,
+        "maxAlpha": 3,
+        "pixelsAtAlpha8OrAbove": 0
+      },
+      "brightRed": {
+        "pixelCount": 20836,
+        "maxAlpha": 3,
+        "pixelsAtAlpha8OrAbove": 0
+      }
+    },
+    "warning": "Original contains alpha 1–3 vivid RGB fringe. No bright yellow/red at alpha >= 8. Preserve PNG; reject faint fringe in material alphaTest. Bounds/root exclude it."
+  },
+  "parts": [
+    {
+      "name": "grassA",
+      "kind": "grass",
+      "variant": "low-wide",
+      "sourceRect": [
+        48,
+        285,
+        766,
+        345
+      ],
+      "visibleAlpha8Rect": [
+        50,
+        287,
+        762,
+        341
+      ],
+      "rootPx": [
+        465,
+        621
+      ],
+      "rootAlpha": 89,
+      "rootNormalized": [
+        0.5443864229765013,
+        0.9739130434782609
+      ],
+      "sourceAspect": 2.2202898550724637,
+      "heightRelativeToGirl": [
+        0.08,
+        0.12
+      ],
+      "recommendedHeightRelativeToGirl": 0.1,
+      "description": "Linked low wide patch of three unequal grass clusters; curved sage and straw strokes, uneven root baseline."
+    },
+    {
+      "name": "grassB",
+      "kind": "grass",
+      "variant": "tall-wheat",
+      "sourceRect": [
+        853,
+        78,
+        378,
+        558
+      ],
+      "visibleAlpha8Rect": [
+        855,
+        80,
+        374,
+        554
+      ],
+      "rootPx": [
+        1029,
+        631
+      ],
+      "rootAlpha": 83,
+      "rootNormalized": [
+        0.4656084656084656,
+        0.9910394265232975
+      ],
+      "sourceAspect": 0.6774193548387096,
+      "heightRelativeToGirl": [
+        0.18,
+        0.28
+      ],
+      "recommendedHeightRelativeToGirl": 0.23,
+      "description": "Taller wheat-grass tuft, narrow stems with broad painted seed heads; keep scarce."
+    },
+    {
+      "name": "grassC",
+      "kind": "grass",
+      "variant": "wind-lean",
+      "sourceRect": [
+        130,
+        722,
+        568,
+        450
+      ],
+      "visibleAlpha8Rect": [
+        132,
+        724,
+        564,
+        446
+      ],
+      "rootPx": [
+        316,
+        1160
+      ],
+      "rootAlpha": 72,
+      "rootNormalized": [
+        0.3274647887323944,
+        0.9733333333333334
+      ],
+      "sourceAspect": 1.2622222222222221,
+      "heightRelativeToGirl": [
+        0.14,
+        0.21
+      ],
+      "recommendedHeightRelativeToGirl": 0.17,
+      "description": "Right-leaning grass mass, common wind gesture and fine curved foreground blades."
+    },
+    {
+      "name": "grassD",
+      "kind": "grass",
+      "variant": "short-sparse",
+      "sourceRect": [
+        839,
+        898,
+        368,
+        274
+      ],
+      "visibleAlpha8Rect": [
+        841,
+        900,
+        364,
+        270
+      ],
+      "rootPx": [
+        1014,
+        1168
+      ],
+      "rootAlpha": 82,
+      "rootNormalized": [
+        0.47554347826086957,
+        0.9854014598540146
+      ],
+      "sourceAspect": 1.3430656934306568,
+      "heightRelativeToGirl": [
+        0.08,
+        0.11
+      ],
+      "recommendedHeightRelativeToGirl": 0.09,
+      "description": "Short asymmetric grass tuft, fewer stems and mixed grey-sage/ivory strokes."
+    }
+  ],
+  "integration": {
+    "options": {
+      "atlas": "grassAtlasUrl",
+      "metadata": "grassMetadata"
+    },
+    "bundleKeys": {
+      "atlas": "grass",
+      "metadata": "grass_meta"
+    },
+    "requiresDistributionAdaptation": true,
+    "distributionWarning": "Four distinct grass parts, NO twig. Existing scene kind % 3 placement and name === twig logic cannot directly consume this atlas: first/fourth grass can overlap. Explicitly implement four unequal authored distributions before replacing atlas. Do not rename grassD to twig.",
+    "material": "sRGB, linear filtering/mipmaps, alphaTest about 0.05, native depth test and occlusion; matte lighting matching terrain. Do not disable depth test to conceal rooting problems.",
+    "rootToWorldFormula": "localX=(px-rootPx.x)/sourceRect.height*worldHeight; localY=(rootPx.y-py)/sourceRect.height*worldHeight. WorldWidth=sourceRect.width/sourceRect.height*worldHeight. Full plane centerOffsetX=(0.5-rootNormalized.x)*worldWidth; centerOffsetY=(rootNormalized.y-0.5)*worldHeight.",
+    "scale": "At girl height 120 CSSpx: low about 10–14px high, tall 22–34px, wind tuft 17–25px, short 10–13px. Provisional guidance; native camera QA required.",
+    "wind": "Very small root-locked tip sway, no whole-card root translation.",
+    "ground": "Place root at actual terrain. Wide patch has irregular root baseline; avoid steep slopes and inspect real depth occlusion. Keep road/flower interaction area clear.",
+    "runtimeLimit": "Optional isolated vegetation art only. No scene/rig/controller/model/default bundle modified; not independent acceptance evidence."
+  },
+  "validation": {
+    "referenceInputsExplicitlyViewed": true,
+    "selectedOriginalExplicitlyViewed": true,
+    "oldMeadowPartsV12Compared": true,
+    "readOnlyAlphaBoundsRootMeasurement": true,
+    "copiedBytesMatchOriginal": true,
+    "nativeSmallSizeAndSceneQARequired": true,
+    "equalQuadrants": false,
+    "quadrantNote": "Generated left column wider; measured custom sourceRects isolate all tufts without visible clipping."
+  },
+  "assessment": {
+    "improvementOverV12": "More grouped fine curved strokes and asymmetric low patch, four meadow rhythms instead of a few broad aloe-like leaves.",
+    "limitations": "Tall/leaning tufts remain dense painted masses and broad seed heads; at 10px blades may merge. Requires restrained authored distribution and native scene review; not finished design acceptance."
+  }
+}

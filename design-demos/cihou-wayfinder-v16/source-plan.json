@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "purpose": "synthetic_design_content_build",
+  "consultation_registered": false,
+  "id": "synthetic-wayfinder-job-v16",
+  "synthetic_demo": true,
+  "notice": "匿名求职示例 · 合成情境。所有经历、顾虑和路径均用于展示报告结构，没有对应真实咨询者；未提供出生资料，未排盘，未进行心理诊断。",
+  "inputs": [
+    {
+      "path": "../cihou-wayfinder-v15/build_demo.py",
+      "sha256": "9e93b2affba4a5de657bf67922d7fbd21c01f9e69ec4aa5bb823010ce05b8ae1",
+      "use": "Explicit synthetic user outline, technical non-calculation boundaries and nine-chapter content"
+    },
+    {
+      "path": "build_demo.py",
+      "sha256": "8f01ea11390dbd09be6255379a8d34720fa0a8488f31e586b23b1a37fc647e0c",
+      "use": "Three-stage original Chinese anchors, runtime locale copy and source-bound orchestration"
+    }
+  ],
+  "sources": {
+    "user": {
+      "path": "final_report.md",
+      "artifact_id": "synthetic-user-source-v16",
+      "sha256": "c5b984398812f2d944f3a0d785f0c953d0fdb4c541b15ecae60bffc190a79812",
+      "sections": [
+        {
+          "ref": "user:1",
+          "title": "一、一页总览"
+        },
+        {
+          "ref": "user:2",
+          "title": "二、本次重点问题"
+        },
+        {
+          "ref": "user:3",
+          "title": "三、人生全景图"
+        },
+        {
+          "ref": "user:4",
+          "title": "四、当前阶段与未来窗口"
+        },
+        {
+          "ref": "user:5",
+          "title": "五、行动与选择提示"
+        },
+        {
+          "ref": "user:6",
+          "title": "六、开场判断、用户反馈与修正"
+        },
+        {
+          "ref": "user:7",
+          "title": "七、结论边界与未解问题"
+        },
+        {
+          "ref": "user:8",
+          "title": "八、技术文档与阅读说明"
+        }
+      ]
+    },
+    "technical": {
+      "path": "technical_analysis.md",
+      "artifact_id": "synthetic-technical-source-v16",
+      "sha256": "f1db323d76a8863796f66132db70c4519a2dcff3d12bd46d6665364b2175dc50",
+      "sections": [
+        {
+          "ref": "technical:1",
+          "title": "一、计算版本与时间口径"
+        },
+        {
+          "ref": "technical:2",
+          "title": "二、四柱、十神与原局事实"
+        },
+        {
+          "ref": "technical:3",
+          "title": "三、月令、根气与承载"
+        },
+        {
+          "ref": "technical:4",
+          "title": "四、格局与四类用神的竞争解释"
+        },
+        {
+          "ref": "technical:5",
+          "title": "五、合冲刑害的结构裁决"
+        },
+        {
+          "ref": "technical:6",
+          "title": "六、大运事实与口径差异"
+        },
+        {
+          "ref": "technical:7",
+          "title": "七、领域映射的证据边界"
+        },
+        {
+          "ref": "technical:8",
+          "title": "八、历史与未来窗口"
+        },
+        {
+          "ref": "technical:9",
+          "title": "九、候选筛选、锁定与反馈"
+        },
+        {
+          "ref": "technical:10",
+          "title": "十、最强反证与未解疑点"
+        },
+        {
+          "ref": "technical:11",
+          "title": "十一、来源与可复核文件"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "report-model.json": {
+      "sha256": "5b90f86d52d2280a6e9739716921b4d87d42921e09dd638e942a6879573bfeab"
+    },
+    "story-data.js": {
+      "sha256": "c52e599c8d546300f59cc2f654896955734534f3e70e1c04f4be2ea668aa3848"
+    },
+    "final_report.html": {
+      "sha256": "473ac2b62df404b97aad4cc814cdd3be753ae9b611053d26862574a5fd050a90"
+    }
+  },
+  "exclusions": [
+    "No real consultation files",
+    "No birth input or chart facts",
+    "No historical benchmark",
+    "No clinical diagnosis",
+    "No real user feedback or action outcome"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "status": "engineering-first-take, not frozen acceptance evidence",
+  "viewport": {
+    "02-through-11": [
+      1280,
+      720
+    ],
+    "01": [
+      1470,
+      710
+    ]
+  },
+  "limitations": [
+    "First take remained loaded in memory while small source planning and end-camera patches were written. These captures do not claim byte-identical final source.",
+    "Underpass and revealing peak were missed in this take; independent actor take will explicitly sample them.",
+    "Foot error values are scene-to-rig rendered-alpha attachment checks; independent mesh-UV verification is delegated separately.",
+    "New meadow-tufts-v13 atlas was integrated after this take; none of images 01–11 prove the new meadow appearance."
+  ],
+  "frames": {
+    "02-wide-first.jpg": {
+      "phase": "walking",
+      "travel": 0.061,
+      "actorPixels": 123.2
+    },
+    "03-real-hand-contact.jpg": {
+      "phase": "picking",
+      "progress": 0.4605,
+      "travel": 2.33,
+      "actorPixels": 188.3,
+      "actualPalmZ": 0.0048,
+      "minimumActualPalmGripDistance": 0,
+      "footTargetDistance": 0
+    },
+    "05-choice.jpg": {
+      "phase": "choice",
+      "travel": 68.714,
+      "actorPixels": 188.7,
+      "footTargetDistance": 0
+    },
+    "07-place-contact.jpg": {
+      "phase": "placing",
+      "progress": 0.94533,
+      "ownership": "ground",
+      "note": "Filename is historical shorthand; this is after the .78 transfer, not the exact transfer frame.",
+      "minimumActualPalmGripDistance": 0,
+      "footTargetDistance": 0
+    },
+    "08-cross-release.jpg": {
+      "phase": "crossing",
+      "progress": 0.32087,
+      "note": "Taken immediately on release, before natural continuation reaches safe stop .40. Not proof of stable .40 yet.",
+      "footTargetDistance": 0
+    },
+    "09-end-context.jpg": {
+      "phase": "complete",
+      "exitDistance": 3.521,
+      "actorPixels": 66.6,
+      "presentationReady": false,
+      "note": "This early memory take uses larger end camera than current source. Current source has a closer end camera, awaiting actual recheck."
+    },
+    "11-exit-after-29m.jpg": {
+      "phase": "complete",
+      "exitDistance": 29.746,
+      "actorPixels": 106.4,
+      "presentationReady": true,
+      "footTargetDistance": 0,
+      "legsReachable": true
+    }
+  },
+  "observed": {
+    "choice400ms": "Release stayed choice, choiceHoldProgress reset 0.",
+    "choice1800ms": "Same hold entered placing.",
+    "consoleErrors": [],
+    "pathAfter29m": "Continuous diagonal road stayed visible through top-right; no terrain/grass obstruction or finite cut end in the viewed frame."
+  }
+}

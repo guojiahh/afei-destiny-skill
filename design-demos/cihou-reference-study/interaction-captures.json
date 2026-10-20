@@ -1,0 +1,77 @@
+[
+  {
+    "name": "kaizen-00-entry",
+    "utc": "2026-10-17T03:15:28.415Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t5 container\n\t\t\t\t6 image Makemepulse logo\n\t\t\t\t7 heading A makemepulse production, Value: 3\n\t\t\t\t\t8 text A makemepulse\n\t\t\t\t\t9 text production\n\t\t\t10 text Click to Start\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-00-entry",
+    "utc": "2026-10-17T03:15:28.537Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t2 image\n\t\t3 container\n\t\t\t4 container\n\t\t\t\t5 text START\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-01-after-start",
+    "utc": "2026-10-17T03:15:28.800Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t5 container\n\t\t\t\t6 image Makemepulse logo\n\t\t\t\t7 heading A makemepulse production, Value: 3\n\t\t\t\t\t8 text A makemepulse\n\t\t\t\t\t9 text production\n\t\t\t10 text Click to Start\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-02-intro",
+    "utc": "2026-10-17T03:15:30.015Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 container\n\t\t\t\t16 image Headphones\n\t\t\t\t17 heading Use headphones for best experience., Value: 3\n\t\t\t\t\t18 text Use headphones for best experience.\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-03-intro",
+    "utc": "2026-10-17T03:15:30.993Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 container\n\t\t\t\t16 image Headphones\n\t\t\t\t17 heading Use headphones for best experience., Value: 3\n\t\t\t\t\t18 text Use headphones for best experience.\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-04-intro",
+    "utc": "2026-10-17T03:15:31.928Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 container\n\t\t\t\t16 image Headphones\n\t\t\t\t17 heading Use headphones for best experience., Value: 3\n\t\t\t\t\t18 text Use headphones for best experience.\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-05-intro",
+    "utc": "2026-10-17T03:15:32.937Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t16 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-06-intro",
+    "utc": "2026-10-17T03:15:33.895Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t17 button SKIP\n\t\t\t\t18 text SKIP\n\t\t\t15 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t16 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-07-intro",
+    "utc": "2026-10-17T03:15:34.887Z",
+    "ax": "Browser tab: 12, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t17 button SKIP\n\t\t\t\t18 text SKIP\n\t\t\t15 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t16 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-01-after-start",
+    "utc": "2026-10-17T03:15:41.380Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t2 image\n\t\t3 container\n\t\t\t4 container\n\t\t\t\t5 text START\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-02-opening",
+    "utc": "2026-10-17T03:15:42.545Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-03-opening",
+    "utc": "2026-10-17T03:15:43.589Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t11 text A year has gone since we set foot on this island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-04-opening",
+    "utc": "2026-10-17T03:15:44.666Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t11 text A year has gone since we set foot on this island.\n\t\t12 text Today is a big day for our tribe. The year ends…\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-05-opening",
+    "utc": "2026-10-17T03:15:45.749Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t11 text A year has gone since we set foot on this island.\n\t\t12 text Today is a big day for our tribe. The year ends…\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-06-opening",
+    "utc": "2026-10-17T03:15:46.893Z",
+    "ax": "Browser tab: 14, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t13 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t11 text A year has gone since we set foot on this island.\n\t\t12 text Today is a big day for our tribe. The year ends…\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  }
+]

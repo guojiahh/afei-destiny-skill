@@ -1,0 +1,366 @@
+{
+  "version": 3,
+  "asset": "girl-rig-parts-v3.png",
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "coordinateSystem": "All sourceRect, pivotPx, endPx, and named *Px points use ABSOLUTE ATLAS PIXELS. Origin at top-left; x right; y down. sourceRect is [x,y,width,height]. Named points are approximate hand-annotated landmarks for rigging and require preview QA.",
+  "sourceRectAlphaThreshold": 8,
+  "recommendedAlphaTest": 0.03,
+  "originalCharacter": true,
+  "renderingNote": "This is a nonuniform parts atlas, NOT an equal-cell walking sprite. The dress intentionally extends across its nominal cell boundary but does not touch the arm. Use the actual sourceRect for each part. PNG is copied without modifications.",
+  "dimensionsRelativeToStandingHeight": {
+    "standingHeight": 1,
+    "headHeight": 0.265,
+    "headWidth": 0.3,
+    "neckHeight": 0.755,
+    "shoulderHeight": 0.72,
+    "waistHeight": 0.6,
+    "hipHeight": 0.43,
+    "dressHemHeight": 0.27,
+    "dressHeight": 0.48,
+    "dressWidth": 0.46,
+    "thighLength": 0.215,
+    "shinLength": 0.18,
+    "ankleHeight": 0.035,
+    "footLength": 0.085,
+    "footHeight": 0.045,
+    "upperArmLength": 0.14,
+    "forearmLength": 0.135,
+    "hipSeparation": 0.055,
+    "shoulderSeparation": 0.16,
+    "thighThickness": 0.05,
+    "kneeThickness": 0.04,
+    "ankleThickness": 0.025
+  },
+  "parts": {
+    "head": {
+      "sourceRect": [
+        41,
+        51,
+        355,
+        311
+      ],
+      "pivotPx": [
+        264,
+        344
+      ],
+      "endPx": [
+        230,
+        100
+      ],
+      "neckPx": [
+        264,
+        344
+      ],
+      "contentTopPx": [
+        245,
+        58
+      ],
+      "relativeHeight": 0.265,
+      "relativeWidth": 0.3,
+      "drawOrder": 6,
+      "hairWarpRegionPx": [
+        45,
+        83,
+        307,
+        246
+      ],
+      "note": "Neck stub overlaps dress neckline; hair tips at image-left can receive very small delayed lateral mesh displacement."
+    },
+    "dress": {
+      "sourceRect": [
+        408,
+        50,
+        481,
+        456
+      ],
+      "pivotPx": [
+        659,
+        195
+      ],
+      "endPx": [
+        655,
+        475
+      ],
+      "neckPx": [
+        660,
+        59
+      ],
+      "shoulderCenterPx": [
+        663,
+        92
+      ],
+      "leftShoulderPx": [
+        592,
+        93
+      ],
+      "rightShoulderPx": [
+        744,
+        102
+      ],
+      "waistPx": [
+        659,
+        195
+      ],
+      "leftHipPx": [
+        637,
+        323
+      ],
+      "rightHipPx": [
+        683,
+        317
+      ],
+      "hemPx": [
+        654,
+        480
+      ],
+      "bagBBoxPx": [
+        480,
+        217,
+        139,
+        154
+      ],
+      "strapBBoxPx": [
+        551,
+        51,
+        177,
+        207
+      ],
+      "relativeHeight": 0.48,
+      "relativeWidth": 0.46,
+      "drawOrder": 4,
+      "hemWarpStartYpx": 245,
+      "note": "Torso has no arms or legs. Small red shoulder fabric is part of the garment; overlap isolated puff sleeves on shoulder attachment to hide seams. Light horizontal hem deformation may begin below waist, with tiny bag-region lag."
+    },
+    "leftArm": {
+      "sourceRect": [
+        945,
+        119,
+        202,
+        329
+      ],
+      "pivotPx": [
+        989,
+        157
+      ],
+      "endPx": [
+        1120,
+        420
+      ],
+      "shoulderPx": [
+        989,
+        157
+      ],
+      "elbowPx": [
+        1079,
+        344
+      ],
+      "handPx": [
+        1120,
+        420
+      ],
+      "sleeveEndPx": [
+        1037,
+        279
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 2,
+      "note": "Whole shoulder-to-hand piece, including sleeve. Use elbow landmark for two-bone skinning or rotate subtly as a whole if far arm is obscured."
+    },
+    "rightArm": {
+      "sourceRect": [
+        1299,
+        128,
+        195,
+        311
+      ],
+      "pivotPx": [
+        1345,
+        167
+      ],
+      "endPx": [
+        1468,
+        410
+      ],
+      "shoulderPx": [
+        1345,
+        167
+      ],
+      "elbowPx": [
+        1427,
+        343
+      ],
+      "handPx": [
+        1468,
+        410
+      ],
+      "sleeveEndPx": [
+        1384,
+        281
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 5
+    },
+    "leftThigh": {
+      "sourceRect": [
+        155,
+        562,
+        147,
+        305
+      ],
+      "pivotPx": [
+        226,
+        592
+      ],
+      "endPx": [
+        225,
+        838
+      ],
+      "hipPx": [
+        226,
+        592
+      ],
+      "kneePx": [
+        225,
+        838
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 0,
+      "note": "Rounded knee and hip overlap supplied. Most of upper thigh should sit behind skirt. Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height.",
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4
+    },
+    "leftShin": {
+      "sourceRect": [
+        516,
+        587,
+        163,
+        367
+      ],
+      "pivotPx": [
+        626,
+        610
+      ],
+      "endPx": [
+        589,
+        836
+      ],
+      "kneePx": [
+        626,
+        610
+      ],
+      "anklePx": [
+        589,
+        836
+      ],
+      "heelPx": [
+        547,
+        908
+      ],
+      "toePx": [
+        650,
+        924
+      ],
+      "soleCenterPx": [
+        602,
+        930
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 0,
+      "note": "Shoe included. The drawing shows a rear view with visible sole; orient heel/toe into ground contact during support and allow heel lift only in swing. Requires runtime foot rotation/mesh deformation; raw rigid lower-leg rotation alone is insufficient.",
+      "relativeWidthIncludingShoe": 0.085
+    },
+    "rightThigh": {
+      "sourceRect": [
+        890,
+        580,
+        144,
+        313
+      ],
+      "pivotPx": [
+        961,
+        611
+      ],
+      "endPx": [
+        969,
+        866
+      ],
+      "hipPx": [
+        961,
+        611
+      ],
+      "kneePx": [
+        969,
+        866
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 1,
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4,
+      "note": " Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height."
+    },
+    "rightShin": {
+      "sourceRect": [
+        1220,
+        587,
+        156,
+        367
+      ],
+      "pivotPx": [
+        1329,
+        611
+      ],
+      "endPx": [
+        1292,
+        837
+      ],
+      "kneePx": [
+        1329,
+        611
+      ],
+      "anklePx": [
+        1292,
+        837
+      ],
+      "heelPx": [
+        1250,
+        908
+      ],
+      "toePx": [
+        1355,
+        924
+      ],
+      "soleCenterPx": [
+        1305,
+        931
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 1,
+      "relativeWidthIncludingShoe": 0.085
+    }
+  },
+  "qualityReview": {
+    "partsCount": 8,
+    "anatomySeparation": "PASS: detached head, torso/skirt without limbs, two arms, two thighs, two shin/shoe pieces.",
+    "artStyle": "PASS: original gouache/ink character with consistent bob, red dress, beige satchel.",
+    "noWholeDuplicateCharacters": true,
+    "sourceRects": "PASS: distinct visible parts do not touch. Dress crosses nominal equal-cell boundary; actual rectangles provided.",
+    "transparency": "PASS: RGBA, majority fully transparent. Very faint alpha 1–7 residue exists outside painted parts; alphaTest 0.03 recommended to avoid fringe.",
+    "walkCycle": "Not a baked sprite cycle. Natural alternating foot contact, knee flexion, arm counter-swing, hair/hem lag must be implemented and visually reviewed in runtime.",
+    "landmarks": "Approximate hand annotations, not automatic skeletal measurement. Preview joint alignment before final integration."
+  }
+}

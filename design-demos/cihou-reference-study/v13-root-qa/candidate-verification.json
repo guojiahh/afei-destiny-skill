@@ -1,0 +1,71 @@
+{
+  "status": "Unapproved frozen candidate; next independent design critic09 has not started.",
+  "artifact": "../formal-adapter-v13.html",
+  "artifact_sha256": "2c3e1ea99a30542ed0dc3edc434cdfa4f3cada2ab5906b8bdd76b916ef421e75",
+  "asset_manifest": "../formal-adapter-v13.provenance.json",
+  "actual_root_browser_checks": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "browser": "Native IAB3, no viewport override",
+    "screenshot_states": [
+      {
+        "file": "final-start.jpg",
+        "phase": "walking",
+        "travel_m": 0.187,
+        "girl_px": 123.0
+      },
+      {
+        "file": "final-pick.jpg",
+        "phase": "picking",
+        "action_progress": 0.60926,
+        "ownership": "hand",
+        "girl_px": 188.3
+      },
+      {
+        "file": "final-bridge.jpg",
+        "phase": "returning",
+        "travel_m": 61.186,
+        "girl_px": 189.0,
+        "note": "Paused after bridge. This frame is not the actual58.2m bridge-center frame."
+      }
+    ],
+    "input": [
+      "400ms press at initial encounter leaves walking/waitingtrue.",
+      "4000ms continuation enters actual pick; later physical Space28s twice follows route without document scroll.",
+      "Ordinary pause freezes phase/route, actual girl remains visible in saved61.186m frame."
+    ],
+    "limits": "Root stopped further final desktop/mobile review after independent low-frame-rate diagnostics found new pose/slope defects. Previous input fixture remains a distinct older source snapshot."
+  },
+  "independent_production_evidence": {
+    "normal_take": "../v12-acting-qa/SPATIAL_TAKE01.md",
+    "new_12fps_source": "../v12-acting-qa/transition-v13-take02-source.json",
+    "new_12fps_analysis": "../v12-acting-qa/transition-v13-take02-analysis.json",
+    "actual_low_fps_limit": "Artificial12FPS RAF delivery in the app; not a hardware performance benchmark.",
+    "reduced_protocol": "../v12-acting-qa/v13-take02-reduced-protocol.json",
+    "reduced_limit": "Explicit QA preference protocol button, not real OS setting change."
+  },
+  "blocking_results": [
+    {
+      "kind": "cross body",
+      "maximum_extra_pelvis_sink_m": 0.247159,
+      "phase": "crossing",
+      "action_progress": 0.66455,
+      "travel_m": 68.713828,
+      "exit_distance_m": 0.218237,
+      "finding": "Rear foot stays at its old anchor until follow starts at.67 while root has already transferred forward. Zero foot-anchor error does not validate the body pose."
+    },
+    {
+      "kind": "shoe contour slope",
+      "maximum_road_penetration_m": 0.031618,
+      "phase": "returning",
+      "travel_m": 46.260874,
+      "finding": "Sole pitch stays angle0 while road inclines. True alpha contour/heel intersects the actual road triangle even though the selected support point is close."
+    }
+  ],
+  "followup": "Preserve13 scene/rig/prototype, inline artifact and actual records. Develop14 with rear follow.40–.67 and real road-triangle support/sole inclination, then verify before critic09.",
+  "default_bundle": "painted-v4 unchanged",
+  "private_consultation": "No personal HTML regenerated or re-registered.",
+  "cleanup": "Root temporary tab42 closed. No viewport override used."
+}

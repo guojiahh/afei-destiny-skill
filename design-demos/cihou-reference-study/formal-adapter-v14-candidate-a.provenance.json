@@ -1,0 +1,38 @@
+{
+  "output": "design-demos/cihou-reference-study/formal-adapter-v14-candidate-a.html",
+  "bytes": 14546956,
+  "sha256": "d3a806cd36f927a9dde3d11f2f709b7a254326b6f828f35f2c4a82a0e0bb94e9",
+  "scope": "Anonymous synthetic source-bound nine-chapter fixture; not a personal report. Repository default unchanged.",
+  "bundle": {
+    "version": "paper-valley-v14",
+    "constructor": "CihouHeroSceneV14",
+    "rig_constructor": "CihouCharacterRigV14",
+    "three": "three.min.js",
+    "three_license": "THREE-LICENSE.txt",
+    "rig": "hero-character-rig-v14.js",
+    "scene": "hero-scene-v14.js",
+    "road": "paper-road-v10.png",
+    "terrain": "paper-terrain-v10.png",
+    "ground": "paper-meadow-v12.png",
+    "grass": "meadow-tufts-v13.png",
+    "grass_meta": "meadow-tufts-v13.json",
+    "character": "girl-rig-parts-v5.png",
+    "rig_meta": "girl-rig-parts-v5.json"
+  },
+  "source_files": {
+    "afei-destiny-skill/assets/cihou/quiet/immersive/three.min.js": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/THREE-LICENSE.txt": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/hero-character-rig-v14.js": "b4f76ba6d814a2791c6c393fc8b43e0fefc836a2d726bf82524466768b4fa95c",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/hero-scene-v14.js": "0ce3fbd9e038817840c72b50f30969b76bfd21b50eddf98c38d89098383ab29d",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/paper-road-v10.png": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/paper-terrain-v10.png": "ea95afe3f51863954b4a8fd7bee736526518e95134d88924566680c8f7cdf67d",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/paper-meadow-v12.png": "647714980d09821340e25336d4339bb265cb739bf557acbe9e563e70d786b084",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/meadow-tufts-v13.png": "ba86e8539c3bdf14150002aaa150e8cce3df41ac2ae53ea2bd63bef6a9c50cdb",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/meadow-tufts-v13.json": "be8e91c91d1aeeebf38424b21931d0ad520153baf11150982c724827c8a19c65",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+    "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.json": "ffcc083bbec330064b1d51fe484d588effcd58c2dea66d0794c71c1a5894cfcf",
+    "afei-destiny-skill/assets/cihou/quiet/report.html": "98a41614ba392e7d0f87f2627668eeb4b6b646ccbd855802ffdeb90b6baa0bcf",
+    "afei-destiny-skill/assets/cihou/quiet/report.css": "63d70a85511d09c15e8e9dde81dad27d5ef133b3c149c3e80ceb304e205a04bc",
+    "afei-destiny-skill/assets/cihou/quiet/report.js": "4b2fd5d913f1a3b5cb21dd71eb322794a738bd63d5f963e5587a6a7c9b1b64ae"
+  }
+}

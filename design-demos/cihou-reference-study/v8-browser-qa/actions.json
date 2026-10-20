@@ -1,0 +1,414 @@
+{
+  "testedAt": "2026-10-17T07:06:39.163Z",
+  "browser": "Codex In-app Browser (IAB)",
+  "localOnly": true,
+  "events": [
+    {
+      "event": "actor-crouch",
+      "at": "2026-10-17T06:46:31.925Z",
+      "viewport": {
+        "dpr": 2,
+        "height": 720,
+        "width": 1280
+      },
+      "state": "crouch 0.00s; debug unchecked; paused"
+    },
+    {
+      "event": "actor-glance",
+      "at": "2026-10-17T06:46:32.366Z",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": "glance 0.00s; debug unchecked; paused"
+    },
+    {
+      "event": "actor-walk-a",
+      "at": "2026-10-17T06:46:49.796Z",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "state": "walk 0.10s; debug unchecked; paused"
+    },
+    {
+      "event": "actor-walk-a-corrected",
+      "at": "2026-10-17T06:46:58.803Z",
+      "state": "行走\n看花\n下沉\n伸手\n收包\n落种\n回望\n连续演出\n继续\n关节与鞋底\n时间\nwalk 0.02s\n\n独立表演检查页。浅金点=手端，蓝点=包口，脚边小阴影随真实鞋底接触改变；背景与花标仅供动作对位。",
+      "note": "Walk restarted then paused; previous slider image replaced because slider switches mode to sequence."
+    },
+    {
+      "event": "actor-walk-b",
+      "at": "2026-10-17T06:46:59.810Z",
+      "state": "行走\n看花\n下沉\n伸手\n收包\n落种\n回望\n连续演出\n继续\n关节与鞋底\n时间\nwalk 0.63s\n\n独立表演检查页。浅金点=手端，蓝点=包口，脚边小阴影随真实鞋底接触改变；背景与花标仅供动作对位。"
+    },
+    {
+      "event": "actor-walk-c",
+      "at": "2026-10-17T06:47:04.261Z",
+      "state": "行走\n看花\n下沉\n伸手\n收包\n落种\n回望\n连续演出\n继续\n关节与鞋底\n时间\nwalk 0.32s\n\n独立表演检查页。浅金点=手端，蓝点=包口，脚边小阴影随真实鞋底接触改变；背景与花标仅供动作对位。"
+    },
+    {
+      "event": "wide-opening",
+      "at": "2026-10-17T06:47:18.442Z",
+      "viewport": {
+        "dpr": 2,
+        "height": 720,
+        "width": 1280
+      },
+      "state": "fresh reload after scene freeze"
+    },
+    {
+      "event": "wide-hold-segment-1",
+      "at": "2026-10-17T06:47:26.024Z",
+      "requestedMs": 2000,
+      "actionElapsedMs": 2032,
+      "state": "released; cumulative requested hold 2.0s"
+    },
+    {
+      "event": "wide-release-settled",
+      "at": "2026-10-17T06:47:34.705Z",
+      "state": "No hold; after 1.8s purposeful wait; encounter remains zoomed"
+    },
+    {
+      "event": "wide-hold-segment-2",
+      "at": "2026-10-17T06:47:47.140Z",
+      "requestedMs": 3000,
+      "actionElapsedMs": 3039,
+      "state": "released; cumulative requested hold 5.0s"
+    },
+    {
+      "event": "wide-hold-segment-3",
+      "at": "2026-10-17T06:47:56.592Z",
+      "requestedMs": 5500,
+      "actionElapsedMs": 5537,
+      "state": "released; cumulative requested hold 10.5s"
+    },
+    {
+      "event": "wide-ring-cta",
+      "at": "2026-10-17T06:48:11.153Z",
+      "state": "full ring and next-step control visible after release"
+    },
+    {
+      "event": "wide-depart-seed-sample",
+      "at": "2026-10-17T06:48:13.592Z",
+      "sinceClickMs": 2439
+    },
+    {
+      "event": "wide-depart-end-current-scroll",
+      "at": "2026-10-17T06:48:28.156Z",
+      "sinceClickMs": 17004,
+      "scroll": {
+        "scrollY": 280.5
+      }
+    },
+    {
+      "event": "actor-glance-final",
+      "at": "2026-10-17T06:48:44.467Z",
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "width": 1440
+      },
+      "state": "glance 0.00; debug off; frozen after turn-head patch"
+    },
+    {
+      "event": "wide-reading-entry",
+      "at": "2026-10-17T06:48:55.969Z",
+      "scroll": {
+        "hash": "#reading",
+        "scrollY": 598
+      },
+      "note": "Native coordinate click Continue Reading"
+    },
+    {
+      "event": "wide-replay",
+      "at": "2026-10-17T06:49:14.769Z",
+      "holdMs": 2000,
+      "actionElapsedMs": 2325,
+      "state": "Replay native click restored opening; native hold resumed encounter"
+    },
+    {
+      "event": "1440-encounter-final-rig",
+      "at": "2026-10-17T06:49:35.009Z",
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "width": 1440
+      },
+      "requestedHoldMs": 3800,
+      "actionElapsedMs": 4217
+    },
+    {
+      "event": "1440-ring-final-rig",
+      "at": "2026-10-17T06:49:49.108Z",
+      "requestedHoldMs": 6800,
+      "cumulativeRequestedHoldMs": 10600,
+      "actionElapsedMs": 8880,
+      "scrollY": 0
+    },
+    {
+      "event": "1440-03-seed",
+      "at": "2026-10-17T06:50:01.459Z",
+      "targetAfterClickMs": 2050,
+      "captureStartAfterClickMs": 2052,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-04-road",
+      "at": "2026-10-17T06:50:02.977Z",
+      "targetAfterClickMs": 3550,
+      "captureStartAfterClickMs": 3553,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-05-flower",
+      "at": "2026-10-17T06:50:05.298Z",
+      "targetAfterClickMs": 5850,
+      "captureStartAfterClickMs": 5853,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-06-glance",
+      "at": "2026-10-17T06:50:07.064Z",
+      "targetAfterClickMs": 7650,
+      "captureStartAfterClickMs": 7653,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-07-finished",
+      "at": "2026-10-17T06:50:09.704Z",
+      "targetAfterClickMs": 10300,
+      "captureStartAfterClickMs": 10303,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "390-current-end-before-road-fix",
+      "at": "2026-10-17T07:01:46.475Z",
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      },
+      "note": "Responsive check only; old road geometry; no new sequence run"
+    },
+    {
+      "event": "390-opening-final-road",
+      "at": "2026-10-17T07:04:05.051Z",
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollY": 0,
+        "width": 390
+      },
+      "note": "Fresh reload after stable cross-section road fix"
+    },
+    {
+      "event": "390-hold-2s-release",
+      "at": "2026-10-17T07:04:07.311Z",
+      "requestedHoldMs": 2000,
+      "actionElapsedMs": 2254
+    },
+    {
+      "event": "390-hold-total-5s",
+      "at": "2026-10-17T07:04:16.609Z",
+      "requestedHoldMs": 3000,
+      "actionElapsedMs": 3383
+    },
+    {
+      "event": "390-ring-cta",
+      "at": "2026-10-17T07:04:24.146Z",
+      "requestedHoldMs": 5500,
+      "cumulativeHoldMs": 10500,
+      "actionElapsedIncludingWaitMs": 7537,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-05-seed",
+      "at": "2026-10-17T07:04:32.941Z",
+      "targetAfterClickMs": 2050,
+      "captureStartAfterClickMs": 2053,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-06-road",
+      "at": "2026-10-17T07:04:34.354Z",
+      "targetAfterClickMs": 3550,
+      "captureStartAfterClickMs": 3551,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-07-flower-growth",
+      "at": "2026-10-17T07:04:36.684Z",
+      "targetAfterClickMs": 5850,
+      "captureStartAfterClickMs": 5852,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-08-glance",
+      "at": "2026-10-17T07:04:38.455Z",
+      "targetAfterClickMs": 7650,
+      "captureStartAfterClickMs": 7651,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-09-finished",
+      "at": "2026-10-17T07:04:41.342Z",
+      "targetAfterClickMs": 10500,
+      "captureStartAfterClickMs": 10502,
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-reading",
+      "at": "2026-10-17T07:04:52.684Z",
+      "state": {
+        "hash": "#reading",
+        "height": 844,
+        "scrollY": 675,
+        "width": 390
+      }
+    },
+    {
+      "event": "390-replay-hold",
+      "at": "2026-10-17T07:05:03.399Z",
+      "requestedHoldMs": 2000,
+      "state": "Replay native click reset opening and new hold revealed flower again",
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "scrollY": 0,
+        "width": 390
+      }
+    },
+    {
+      "event": "1440-final-ring",
+      "at": "2026-10-17T07:05:28.881Z",
+      "requestedHoldMs": 10600,
+      "actionElapsedIncludingWaitMs": 12711,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-final-02-seed",
+      "at": "2026-10-17T07:05:40.608Z",
+      "targetAfterClickMs": 2050,
+      "captureStartAfterClickMs": 2051,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-final-03-road",
+      "at": "2026-10-17T07:05:42.135Z",
+      "targetAfterClickMs": 3550,
+      "captureStartAfterClickMs": 3553,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-final-04-glance",
+      "at": "2026-10-17T07:05:46.169Z",
+      "targetAfterClickMs": 7650,
+      "captureStartAfterClickMs": 7652,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "1440-final-05-finished",
+      "at": "2026-10-17T07:05:49.041Z",
+      "targetAfterClickMs": 10500,
+      "captureStartAfterClickMs": 10503,
+      "viewport": {
+        "dpr": 1,
+        "height": 900,
+        "scrollY": 0,
+        "width": 1440
+      }
+    },
+    {
+      "event": "viewport-reset",
+      "at": "2026-10-17T07:06:39.152Z",
+      "viewport": {
+        "dpr": 2,
+        "height": 720,
+        "width": 1280
+      }
+    }
+  ]
+}

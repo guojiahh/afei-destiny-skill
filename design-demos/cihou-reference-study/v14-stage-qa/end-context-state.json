@@ -1,0 +1,22 @@
+{
+  "cihouActionProgress": "0.00000",
+  "cihouActorPixels": "84.5",
+  "cihouChoiceHoldProgress": "1.0000",
+  "cihouExitDistance": "3.251",
+  "cihouFootWorldError": "0.000000",
+  "cihouLegReachability": "[{\"side\":\"right\",\"requestedDistance\":0.43245714266659313,\"maxLength\":0.45425,\"overreach\":0,\"reachable\":true,\"hip\":[-0.035081520649151716,0.5237179789203554,0.0008],\"ankle\":[-0.06801658540720429,0.09468978474257381,0.04403505930710305]},{\"side\":\"left\",\"requestedDistance\":0.4323692441446309,\"maxLength\":0.45425,\"overreach\":0,\"reachable\":true,\"hip\":[0.02816847935084828,0.5237179789203554,0.0024000000000000002],\"ankle\":[0.03422112306559141,0.09297449927802652,-0.03456733060257955]}]",
+  "cihouOwnership": "ground",
+  "cihouPelvisSink": "0.000000",
+  "cihouPhase": "complete",
+  "cihouPickContactGap": "0.00000",
+  "cihouPickTargetDepth": "0.00480",
+  "cihouPitchWeight": "0.0000",
+  "cihouPlaceContactGap": "0.00000",
+  "cihouPresentationReady": "false",
+  "cihouRouteLength": "65.314",
+  "cihouSpatialPelvisAdjustment": "0.000000",
+  "cihouTravel": "68.714",
+  "cihouWaiting": "false",
+  "exitProgress": "1",
+  "storyProgress": "1"
+}

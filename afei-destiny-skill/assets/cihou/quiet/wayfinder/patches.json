@@ -1,0 +1,12 @@
+{
+  "origin": "https://wayfinder.nfb.ca/",
+  "downloadedAt": "2026-10-19",
+  "changes": [
+    "engine query defaults",
+    "localized copy overrides",
+    "poem count configuration",
+    "439 local asset resolvers"
+  ],
+  "analysisEvidence": "ev_69f05eb77ee05f550f4052a6b4d872e99cb06bbc7d028b51f5aadb9cb0f65d40",
+  "analysisCoverage": "Partial static semantic analysis; source map and browser tests used separately."
+}

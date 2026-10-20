@@ -119,6 +119,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | 总结、技术审计、报告内容准备 | `output-routing.md`；先运行输出路由器 |
 | 准备内部 Markdown 底稿 | `markdown-report.md`、`technical-report.md`、`output-routing.md`、`client-voice.md` |
 | 完整咨询最终交付、个人 HTML、可视化报告 | `html-report.md`、`output-routing.md`；用当前活动双报告生成个人内容，校验并登记 HTML |
+| 当前模式、可能的来处、循环叙事与主图文案 | `client-voice.md`、`loop-narrative.md`；可推演学习路径，正文自然表达，来源与已确认经历分开记录 |
 | 学习推理示例 | `worked-examples.md`；不得把示例结论套到新命盘 |
 
 知识优先级：确定性历法事实 > 原局结构与月令 > 大运流年触发 > 领域十神/宫位 > 神煞和单句口诀。Benchmark 另采用：题干明示事实与文本逻辑 > 确定性排盘事实 > 强复合命理信号 > 弱命理信号。不同流派冲突时，陈述采用的口径，不拼成一个伪共识。
@@ -146,6 +147,8 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 7. **技术入口**：指向独立 `technical_analysis.md`，不在正文重复技术章节。
 
 语气可以庄重、凝练、有仪式感，但专业感来自结构、证据和一致口径，不来自绝对化措辞。优先使用“更易表现为”“在某条件下被引动”“倾向”而不是“必定”。情绪承接要看见用户为何放不下，帮助其重新获得理解与选择权；不得用空泛安慰、虚构经历或命定承诺换取认同。
+
+全 Skill 的客户语言统一按 `client-voice.md`：允许从当前模式推演可能的学习经历，以“你可能曾经……”自然解释形成与维持的联系。正文不反复展示“假设、无依据、待核对”等编写说明；来源类型、反证和未确认状态保留在底层记录与集中校验区。推演不补造具体人物、年份或事件，也不替代用户对自身经历的描述。
 
 ### 高风险主题
 

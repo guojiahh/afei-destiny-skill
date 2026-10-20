@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>人物步态检查</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f1eade;color:#405879;font:13px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}#stage{height:82svh;min-height:420px}canvas{display:block;width:100%;height:100%}.controls{max-width:820px;margin:0 auto;padding:15px 24px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}button{font:inherit;color:inherit;background:none;border:1px solid #c4c4b9;padding:7px 15px;cursor:pointer}label{display:flex;gap:12px;align-items:center}.note{font-size:11px;opacity:.65;width:100%;margin:0}input{accent-color:#405879}
+</style></head><body><div id="stage"></div><div class="controls"><button id="pause">暂停</button><button id="step">前进一帧</button><label>速度 <input id="speed" type="range" min="0.25" max="1.6" value="1" step=".05"></label><label><input id="debug" type="checkbox">脚底接触参考</label><p class="note">独立人物动作检查：交替领先腿、膝盖弯曲、鞋底接触、手臂反摆、头发与裙摆迟滞。此页不是正式主图。</p></div>
+<script id="rig-meta" type="application/json">{
+  "version": 4,
+  "asset": "girl-rig-parts-v4.png",
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "coordinateSystem": "All sourceRect, pivotPx, endPx, and named *Px points use ABSOLUTE ATLAS PIXELS. Origin at top-left; x right; y down. sourceRect is [x,y,width,height]. Named points are approximate hand-annotated landmarks for rigging and require preview QA.",
+  "sourceRectAlphaThreshold": 8,
+  "recommendedAlphaTest": 0.03,
+  "originalCharacter": true,
+  "renderingNote": "This is a nonuniform parts atlas, NOT an equal-cell walking sprite. The dress intentionally extends across its nominal cell boundary but does not touch the arm. Use the actual sourceRect for each part. PNG is copied without modifications.",
+  "dimensionsRelativeToStandingHeight": {
+    "standingHeight": 1,
+    "headHeight": 0.265,
+    "headWidth": 0.3,
+    "neckHeight": 0.755,
+    "shoulderHeight": 0.72,
+    "waistHeight": 0.6,
+    "hipHeight": 0.43,
+    "dressHemHeight": 0.27,
+    "dressHeight": 0.48,
+    "dressWidth": 0.46,
+    "thighLength": 0.215,
+    "shinLength": 0.18,
+    "ankleHeight": 0.035,
+    "footLength": 0.085,
+    "footHeight": 0.045,
+    "upperArmLength": 0.14,
+    "forearmLength": 0.135,
+    "hipSeparation": 0.055,
+    "shoulderSeparation": 0.16,
+    "thighThickness": 0.05,
+    "kneeThickness": 0.04,
+    "ankleThickness": 0.025
+  },
+  "parts": {
+    "head": {
+      "sourceRect": [
+        41,
+        51,
+        355,
+        311
+      ],
+      "pivotPx": [
+        264,
+        344
+      ],
+      "endPx": [
+        230,
+        100
+      ],
+      "neckPx": [
+        264,
+        344
+      ],
+      "contentTopPx": [
+        245,
+        58
+      ],
+      "relativeHeight": 0.265,
+      "relativeWidth": 0.3,
+      "drawOrder": 6,
+      "hairWarpRegionPx": [
+        45,
+        83,
+        307,
+        246
+      ],
+      "note": "Neck stub overlaps dress neckline; hair tips at image-left can receive very small delayed lateral mesh displacement."
+    },
+    "dress": {
+      "sourceRect": [
+        408,
+        50,
+        481,
+        456
+      ],
+      "pivotPx": [
+        659,
+        195
+      ],
+      "endPx": [
+        655,
+        475
+      ],
+      "neckPx": [
+        660,
+        59
+      ],
+      "shoulderCenterPx": [
+        663,
+        92
+      ],
+      "leftShoulderPx": [
+        592,
+        93
+      ],
+      "rightShoulderPx": [
+        744,
+        102
+      ],
+      "waistPx": [
+        659,
+        195
+      ],
+      "leftHipPx": [
+        637,
+        323
+      ],
+      "rightHipPx": [
+        683,
+        317
+      ],
+      "hemPx": [
+        654,
+        480
+      ],
+      "bagBBoxPx": [
+        480,
+        217,
+        139,
+        154
+      ],
+      "strapBBoxPx": [
+        551,
+        51,
+        177,
+        207
+      ],
+      "relativeHeight": 0.48,
+      "relativeWidth": 0.46,
+      "drawOrder": 4,
+      "hemWarpStartYpx": 245,
+      "note": "Torso has no arms or legs. Small red shoulder fabric is part of the garment; overlap isolated puff sleeves on shoulder attachment to hide seams. Light horizontal hem deformation may begin below waist, with tiny bag-region lag."
+    },
+    "leftArm": {
+      "sourceRect": [
+        945,
+        119,
+        202,
+        329
+      ],
+      "pivotPx": [
+        989,
+        157
+      ],
+      "endPx": [
+        1120,
+        420
+      ],
+      "shoulderPx": [
+        989,
+        157
+      ],
+      "elbowPx": [
+        1079,
+        344
+      ],
+      "handPx": [
+        1120,
+        420
+      ],
+      "sleeveEndPx": [
+        1037,
+        279
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 2,
+      "note": "Whole shoulder-to-hand piece, including sleeve. Use elbow landmark for two-bone skinning or rotate subtly as a whole if far arm is obscured."
+    },
+    "rightArm": {
+      "sourceRect": [
+        1299,
+        128,
+        195,
+        311
+      ],
+      "pivotPx": [
+        1345,
+        167
+      ],
+      "endPx": [
+        1468,
+        410
+      ],
+      "shoulderPx": [
+        1345,
+        167
+      ],
+      "elbowPx": [
+        1427,
+        343
+      ],
+      "handPx": [
+        1468,
+        410
+      ],
+      "sleeveEndPx": [
+        1384,
+        281
+      ],
+      "relativeLength": 0.275,
+      "upperLength": 0.14,
+      "forearmLength": 0.135,
+      "drawOrder": 5
+    },
+    "leftThigh": {
+      "sourceRect": [
+        155,
+        562,
+        147,
+        305
+      ],
+      "pivotPx": [
+        226,
+        592
+      ],
+      "endPx": [
+        225,
+        838
+      ],
+      "hipPx": [
+        226,
+        592
+      ],
+      "kneePx": [
+        225,
+        838
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 0,
+      "note": "Rounded knee and hip overlap supplied. Most of upper thigh should sit behind skirt. Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height.",
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4
+    },
+    "leftShin": {
+      "sourceRect": [
+        524,
+        587,
+        157,
+        339
+      ],
+      "pivotPx": [
+        626,
+        610
+      ],
+      "endPx": [
+        589,
+        836
+      ],
+      "kneePx": [
+        626,
+        610
+      ],
+      "anklePx": [
+        589,
+        836
+      ],
+      "heelPx": [
+        542,
+        922
+      ],
+      "toePx": [
+        655,
+        916
+      ],
+      "soleCenterPx": [
+        598,
+        922
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 0,
+      "note": "Shoe redrawn in a neutral weight-bearing rear three-quarter side view. Leather upper, side wall and heel are visible; the sole is a thin bottom edge. Existing knee and ankle landmarks retained. Runtime should keep heel/toe on the support plane in stance and lift heel only in swing. Foot landmarks are approximate manual annotations; inspect preview alignment.",
+      "relativeWidthIncludingShoe": 0.085
+    },
+    "rightThigh": {
+      "sourceRect": [
+        890,
+        580,
+        144,
+        313
+      ],
+      "pivotPx": [
+        961,
+        611
+      ],
+      "endPx": [
+        969,
+        866
+      ],
+      "hipPx": [
+        961,
+        611
+      ],
+      "kneePx": [
+        969,
+        866
+      ],
+      "relativeLength": 0.215,
+      "overlapRadiusRelative": 0.018,
+      "drawOrder": 1,
+      "relativeWidth": 0.052,
+      "suggestedTransverseScale": 0.4,
+      "note": " Generated isolated thigh artwork is enlarged and broad. Do not preserve its raw aspect ratio after bone-length scaling; target thigh thickness around 0.05 of standing height."
+    },
+    "rightShin": {
+      "sourceRect": [
+        1219,
+        587,
+        159,
+        340
+      ],
+      "pivotPx": [
+        1329,
+        611
+      ],
+      "endPx": [
+        1292,
+        837
+      ],
+      "kneePx": [
+        1329,
+        611
+      ],
+      "anklePx": [
+        1292,
+        837
+      ],
+      "heelPx": [
+        1237,
+        923
+      ],
+      "toePx": [
+        1352,
+        917
+      ],
+      "soleCenterPx": [
+        1295,
+        923
+      ],
+      "relativeLength": 0.18,
+      "footLength": 0.085,
+      "footHeight": 0.045,
+      "overlapRadiusRelative": 0.017,
+      "drawOrder": 1,
+      "relativeWidthIncludingShoe": 0.085,
+      "note": "Shoe redrawn in a neutral weight-bearing rear three-quarter side view. Leather upper, side wall and heel are visible; the sole is a thin bottom edge. Existing knee and ankle landmarks retained. Runtime should keep heel/toe on the support plane in stance and lift heel only in swing. Foot landmarks are approximate manual annotations; inspect preview alignment."
+    }
+  },
+  "qualityReview": {
+    "partsCount": 8,
+    "anatomySeparation": "PASS: detached head, torso/skirt without limbs, two arms, two thighs, two shin/shoe pieces.",
+    "artStyle": "PASS: original gouache/ink character with consistent bob, red dress, beige satchel.",
+    "noWholeDuplicateCharacters": true,
+    "sourceRects": "PASS: distinct visible parts do not touch. Dress crosses nominal equal-cell boundary; actual rectangles provided.",
+    "transparency": "PASS: RGBA, majority fully transparent. Very faint alpha 1–7 residue exists outside painted parts; alphaTest 0.03 recommended to avoid fringe.",
+    "walkCycle": "Not a baked sprite cycle. Natural alternating foot contact, knee flexion, arm counter-swing, hair/hem lag must be implemented and visually reviewed in runtime.",
+    "landmarks": "Approximate hand annotations, not automatic skeletal measurement. Preview joint alignment before final integration.",
+    "shoePerspective": "PASS by visual inspection of atlas: both shoes now show grounded leather uppers and thin sole edges instead of broad dark sole surfaces.",
+    "runtimeStatus": "Awaiting actual gait preview with the v4 atlas. Do not assume full walk QA from atlas alone."
+  },
+  "derivedFrom": "girl-rig-parts-v3.json",
+  "editScope": "Only shoe perspective was requested for image_gen. Existing non-shoe landmarks and all six other sourceRects are retained. The generator slightly refreshed paint texture and changed alpha silhouette bounds by at most a few pixels, so non-target pixels are visually stable but are not byte-identical."
+}
+</script>
+<script src="three.min.js"></script><script src="hero-character-rig.js?v=6"></script><script>
+(async function(){'use strict';const T=THREE,stage=document.getElementById('stage'),renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor('#f1eade',1);renderer.outputColorSpace=T.SRGBColorSpace;stage.appendChild(renderer.domElement);const scene=new T.Scene(),camera=new T.OrthographicCamera(-.9,.9,.9,-.1,.01,20);camera.position.set(0,.4,5);camera.lookAt(0,.4,0);const rig=window.rig=await CihouCharacterRig.create({atlasUrl:'girl-rig-parts-v4.png',metadata:JSON.parse(document.getElementById('rig-meta').textContent),height:.8});scene.add(rig.group);const line=new T.Line(new T.BufferGeometry().setFromPoints([new T.Vector3(-1.5,0,-.01),new T.Vector3(1.5,0,-.01)]),new T.LineBasicMaterial({color:'#b9bcad'}));scene.add(line);const dots=[];for(let i=0;i<2;i++){const dot=new T.Mesh(new T.CircleGeometry(.009,16),new T.MeshBasicMaterial({color:i?'#ad4f37':'#405879'}));dot.position.z=.1;scene.add(dot);dots.push(dot)}let time=0,last=0,paused=false;const speed=document.getElementById('speed'),debug=document.getElementById('debug');function resize(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);camera.left=-.55*w/h;camera.right=.55*w/h;camera.top=.55;camera.bottom=-.55;camera.updateProjectionMatrix()}new ResizeObserver(resize).observe(stage);resize();document.getElementById('pause').onclick=function(){paused=!paused;this.textContent=paused?'继续':'暂停'};document.getElementById('step').onclick=function(){paused=true;document.getElementById('pause').textContent='继续';time+=1/30;draw()};function draw(){rig.update(time,Number(speed.value));rig.getFootContacts().forEach((foot,i)=>{dots[i].visible=debug.checked;dots[i].position.set(foot.x,foot.contactY,.1)});renderer.render(scene,camera)}function tick(now){const dt=last?Math.min(.04,(now-last)/1000):0;last=now;if(!paused)time+=dt*Number(speed.value);draw();requestAnimationFrame(tick)}requestAnimationFrame(tick);window.rigPreview={rig,renderer,scene,camera,pose:function(t){time=t;paused=true;draw()}};})();
+</script></body></html>

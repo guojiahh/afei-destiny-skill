@@ -1,8 +1,101 @@
-# 此后 · V8 保存基线与完整报告交接
+# 此后 · V19 加载期文字定位与完整报告交接
 
-更新：2026-10-18。用户从历史对照页指定 **V8** 为保存版本，并要求提交 Git、查看完整 HTML。当前渲染器默认已切换为 `painted-v8`。这是用户选择的版本基线；没有产生新的独立设计评分，也不能把它写成达到某个评分要求。
+更新：2026-10-20。当前默认 `presentation.hero_runtime="wayfinder-v19"`。本版沿用 V18 全部读者文案、可能形成路径与六节点结构，只处理首次加载时浮字定位的稳定性；原站美术、固定路线、按住前进／松开停下和此刻／来处／可能不变。
 
-## 当前产品与唯一入口
+- 当前入口：[V19 完整匿名 HTML](../design-demos/cihou-wayfinder-v19/final_report.html)／[构建脚本](../design-demos/cihou-wayfinder-v19/build_demo.py)。双底稿与 V18 保持相同文字，模型与来源计划使用独立 V19 身份。
+- 加载期定位修复针对适配层校正与原生文字投影缓存的衔接，使用浏览器序列化后的 transform 识别自己写入的坐标，避免校正值被反复当成新的原生基准。具体行为以当前适配器和本轮验证为准。
+- 内容继续遵循[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)和 [HTML 协议](../afei-destiny-skill/references/html-report.md)。[V18 完整演示](../design-demos/cihou-wayfinder-v18/final_report.html)及更早历史保留，不回写旧 HTML。
+- 浏览器冷启动、文字动效、桌面／窄屏和回归结果以本轮实际记录为准，不用旧版验收代替。没有新增独立审美评分或实体手机接收验证；私有在线服务仍未实现。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v19/build_demo.py
+python design-demos/cihou-wayfinder-v19/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+以下保留 V18 及更早记录，其中“当前”指对应版本当时的状态。
+
+## V18 自然叙事（2026-10-20 历史记录）
+
+- [匿名求职完整 HTML](../design-demos/cihou-wayfinder-v18/final_report.html)与[构建脚本](../design-demos/cihou-wayfinder-v18/build_demo.py)展示新版文案。设计说明集中一处，主图短句、六节点、说明、九章与完整用户底稿采用直接、温和的第二人称，不轮番重复方法声明。
+- [闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)保留每位读者必填的 `loop_story`。可以从当前情境、应对与即时作用提出“你可能曾经……”的广义形成路径，解释它曾怎样有用、今天怎样继续。具体人物、年龄、事件与诊断不凭空补造；来源模型、技术依据与来源计划继续区分事实和推演，不将可能路径回写成传记。
+- 这套结构适用于工作、学习、关系与其他实际困局。固定的是触发、含义、应对、即时作用、后续代价与再次回到；每次替换的是行为的功能、处境和可行选择，不能把“准备换安心”套给所有人。
+- 首景始终留在六节点循环，完成一圈不自动进入来处。读者可主动切场、停下或阅读；未来是带条件的小尝试。文字的原生投影与平滑浮现沿用当前适配层，长解释由“读这一句”按需展开。
+- 单文件原资源、九章正文、双底稿与下载、来源绑定和登记流程继续遵循 [HTML 协议](../afei-destiny-skill/references/html-report.md)及[原作来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。[V17 完整演示](../design-demos/cihou-wayfinder-v17/final_report.html)、V16、V15、V8 与历史原型保留，不批量改写已交付 HTML。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v18/build_demo.py
+python design-demos/cihou-wayfinder-v18/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+浏览器交互、文字动效、桌面／窄屏、减少动态与失败阅读等验收以本轮实际记录为准；没有新的独立审美评分或实体手机文件接收验证。私有在线托管、账号、跨设备同步与回访服务尚未实现。
+
+以下保存 V17 及更早交接，其中“当前”与对应文案规则指该版本当时的状态。
+
+## V17 固定路线与六节点循环（2026-10-20 历史记录）
+
+- [匿名求职完整 HTML](../design-demos/cihou-wayfinder-v17/final_report.html)与[构建脚本](../design-demos/cihou-wayfinder-v17/build_demo.py)使用显式合成材料，没有真实咨询、出生输入、排盘或真实反馈。双底稿、模型与来源计划在同目录；不能给匿名演示换名当作个人报告。
+- 新完整报告须按[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)填写 `presentation.loop_story`：六项固定顺序为 `trigger/meaning/response/relief/cost/return`，每项 `text`≤24字、`detail`≤300字且有 `refs`；`present/future` 必填，`past` 可省略，各段 `text`≤600字且有引用。固定的是结构，每位读者的经历、假设、限制与尝试重新写。
+- 此刻先看“触发→含义→应对→即时作用→后续代价→再次回到”。第一景持续循环，圈数不是诊断、完成度或命运结论。来处只写有材料的经历，未知可以留白；可能只表示带条件的小实验、观察、求助或暂缓，不承诺外部结果。
+- 鼠标／触摸按住或按住空格键沿同一固定路线前进，松开停下；指针位置不决定方向。顶部可主动切换三态，也可直接阅读。过去／现在／未来的说明与六节点来自同一个来源绑定模型；原生 DOMTextSystem 承载场景文字，九章、双底稿与下载保持。
+- 原资源的内嵌、Blob URL、哈希核验和署名继续由[Wayfinder 渲染器](../afei-destiny-skill/scripts/render_wayfinder_report.py)与[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)维护。完整咨询的生成、登记、失效与审计仍按 [HTML 协议](../afei-destiny-skill/references/html-report.md)。
+- [V16 完整演示](../design-demos/cihou-wayfinder-v16/final_report.html)、V15、V8 与历史原型保留。`wayfinder-v16` 仍可用于历史模型兼容，不批量重写已交付的自包含 HTML；新模板不能通过选择旧运行时省略 `loop_story`。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v17/build_demo.py
+python design-demos/cihou-wayfinder-v17/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+浏览器交互、桌面／窄屏、减少动态与失败阅读等验收以本轮实际记录为准；没有新的独立审美评分，也没有实体手机文件接收验证。私有在线托管、账号、跨设备同步与回访服务尚未实现。
+
+以下保留 V16 及更早交接，其中“当前”指对应历史记录当时的状态。
+
+## V16 原站引擎复用（2026-10-19 历史记录）
+
+- [匿名求职完整 HTML](../design-demos/cihou-wayfinder-v16/final_report.html)使用显式合成材料，没有真实咨询者、出生输入、排盘或真实用户反馈。其[构建脚本](../design-demos/cihou-wayfinder-v16/build_demo.py)复用合成双底稿，经过正式来源合同、模型校验与渲染器生成；[来源计划](../design-demos/cihou-wayfinder-v16/source-plan.json)记录构建输入和输出哈希，不是咨询 Harness 登记。
+- [Wayfinder 渲染器](../afei-destiny-skill/scripts/render_wayfinder_report.py)与[原站资源来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)是当前工程入口。原版角色、植物、地表、氛围、后处理、音频和叶片视频随原运行时复用；闭合路线、三态文字与条件选择由独立[适配器](../afei-destiny-skill/assets/cihou/quiet/wayfinder/adapter.js)接入。原站自由漫游本身不是莫比乌斯环，此后的闭合路线也不声称是数学莫比乌斯曲面。
+- 画面优先。鼠标左右移动、触摸或方向键控制沿环路前进／回走，中央停下；顶部可直接切换“来处／此刻／可能”。每态的三条 `anchors` 短句使用原站 DOMTextSystem 投影到景色中，两行主句旁的“读这一句”按需展开解释。没有过去材料就保留未知。
+- 三条 `hero_choices` 同等可选，先看条件、说明和对应世界，再主动选择视觉尝试；选择或场景变化不表示现实行动已完成。循环、缺口、外部限制与本人纠正仍由模型和正文解释，共享资产不含求职个案。
+- 阅读入口打开同页九章解读，保留用户八节／技术十一节原文、来源和 Markdown 下载。无脚本时呈现阅读内容；动态引擎不可用时仍保留三态说明、选择与正文入口。暂停、声音、重走、后台停止与减少动态由本轮适配层维护，浏览器验收以实际 QA 记录为准。
+- 全部原资源先按 `asset-manifest.json` 核验，再以 Base64 随 HTML 内嵌，运行时转换为本地 Blob URL。无需旁带素材目录；当前示例约 67.8 MB。原作署名和资源权属保留，不能把原站插画、字体、音频、模型或视频称为此后原创或套用旧 CC0／单一 MIT 声明。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v16/build_demo.py
+python design-demos/cihou-wayfinder-v16/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+模型与底稿来源校验、单文件重建一致性已通过。浏览器行为、桌面／窄屏与视觉效果由本轮实际 QA 继续记录；没有新的独立审美评分，也没有实体手机收取文件的验证。私有在线托管、账号、跨设备同步与回访服务尚未实现。
+
+## V15 程序绘画探索（历史对照）
+
+- [匿名求职完整 HTML](../design-demos/cihou-wayfinder-v15/final_report.html)为合成示例，没有读取真实咨询，也没有排盘或用户事实。附同来源的八节/十一节底稿与九章模型；[构建脚本](../design-demos/cihou-wayfinder-v15/build_demo.py)可重建，`--check` 只读比对。
+- [Wayfinder 研究](WAYFINDER_STUDY.md)记录公开发行代码、SHA-256、REA Evidence ID、观察与推断边界。原站是 Three.js/Svelte/ECS，鼠标地面射线加按住行走、镜头阻尼跟随、DOM文字投影、叶片视频遮屏换世界。原站不是莫比乌斯无限环。
+- 新[场景](../afei-destiny-skill/assets/cihou/quiet/immersive/hero-scene-v15.js)采用真实三维闭合路面、原创程序生成的植物/纸纹/地形和 V8 人物关节/V5 原创图集；没有把原站美术、代码或 MP4 放进安装包。环是困局的可修改隐喻。
+- 新[控制器](../afei-destiny-skill/assets/cihou/quiet/immersive/report-exploration-v15.js)支持鼠标左右前进/回走、中央停下、触摸与键盘。实际移动累积揭环，之后仍可循环。顶部可直接查看来处、此刻与可能；三态短句和解释在画面稳定留白处可见。
+- 可选 `presentation.hero_choices` 恰好三条，各自有 `id/title/condition/text/refs`。选择只预览条件和森林/草甸/旷野，再主动展开一次视觉尝试；可以换回其他选择。没有真实过去材料就说未知，不能自动补童年、把困局归因本人或把离环等同录用。
+- 个人内容仍从本会话双底稿和模型填入；共享场景没有硬编码求职。九章、来源防火墙、SHA资产清单、离线内联、Three.js MIT、正文和下载保留。减少动态为静态视角；WebGL失败时保留文字与选择比较；离屏/后台暂停。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v15/build_demo.py
+python design-demos/cihou-wayfinder-v15/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+本轮视觉与交互验收记录放在[示例目录](../design-demos/cihou-wayfinder-v15/)内；没有新的独立审美评分，不能把旧 V8 或 V10 的评审分数用于 V15。原站视频、自由漫游诗作收集和音景没有逐项复制。私有在线交付仍未实现。
+
+## 以下为 V8 保存交接记录（历史基线）
+
+2026-10-18。用户从历史对照页指定 **V8** 为保存版本，并要求提交 Git、查看完整 HTML。当时渲染器默认切换为 `painted-v8`。这是历史保存记录；当前选择以本文上方 V19 为准。
+
+## V8 当时的产品与唯一入口
 
 - 最终交付是一份同会话的完整个人 HTML。两份 Markdown 是内容底稿和页尾下载；真实报告、个人模型、截图和会话状态都只保存在被 Git 忽略的 `consultation_state/<session>/`。
 - 首屏为居中绘本画面，不显示品牌、报告标识、日期和个人大标题。保留必要的按住提示、阅读入口与播放控制。

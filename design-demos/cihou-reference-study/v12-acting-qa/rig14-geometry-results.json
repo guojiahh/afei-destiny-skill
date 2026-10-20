@@ -1,0 +1,114 @@
+{
+  "rig": 14,
+  "standingPixels": 202,
+  "gaitSamples": 1001,
+  "actionSamples": 804,
+  "supportMaxAbsY": 4.408728476930471e-18,
+  "sourceContactAlphaMinimum": 33,
+  "nonFiniteVertices": 0,
+  "gaitMetricsMaxDelta": 0.09496774193548388,
+  "walkingSoleMaxDelta": 0.032,
+  "walkingLowerLegOverreach": 0,
+  "walkingPelvisLowest": 0.3573954392162082,
+  "stanceVelocityMaxError": 0.06370235646920952,
+  "coreStanceVelocityMaxError": 3.968492201522622e-12,
+  "worldPace": {
+    "idleMetersPerSecond": 0.28,
+    "holdMetersPerSecond": 0.6,
+    "worldHeight": 1.15,
+    "idleFootfallsPerSecond": 1.7759590792838877,
+    "holdFootfallsPerSecond": 2.3961352657004826
+  },
+  "bagBoundaryErrors": {
+    "pick@0.86": {
+      "xy": 4.014808444181104e-9,
+      "depth": 0.0008000000000000004
+    },
+    "reconsider@0.08": {
+      "xy": 5.190506695295334e-9,
+      "depth": 0.0008000000000000004
+    },
+    "reconsider@0.94": {
+      "xy": 3.928590296159958e-9,
+      "depth": 0.0008000000000000004
+    },
+    "place@0.2": {
+      "xy": 5.190506695295334e-9,
+      "depth": 0.0008000000000000004
+    }
+  },
+  "contactTargetErrors": {
+    "pick@0.43": 3.082574044743448e-9,
+    "place@0.78": 1.5401642805711368e-9
+  },
+  "crossSafeStops": [
+    {
+      "progress": 0,
+      "rootTravel": 0,
+      "feet": [
+        {
+          "y": 0,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 0.4,
+      "rootTravel": 0,
+      "feet": [
+        {
+          "y": 0,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 0.67,
+      "rootTravel": 0.15200000000000002,
+      "feet": [
+        {
+          "y": 4.408728476930471e-18,
+          "stance": 0
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 1,
+      "rootTravel": 0.24,
+      "feet": [
+        {
+          "y": 4.408728476930471e-18,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 0.75
+        }
+      ]
+    }
+  ],
+  "spatial": {
+    "samples": 301,
+    "actualSoleGeometryMaxError": 2.1656334833001614e-8,
+    "handPaintedPointMaxError": 6.750259192434115e-9,
+    "bagPaintedPointMaxError": 6.223482456235867e-9,
+    "maxLegOverreach": 0,
+    "sourceAlphaMinimum": 33,
+    "impossibleTargetReported": true,
+    "actualHandDepth": 0.0048000000000000004,
+    "actualBagMouthDepth": 0.004
+  },
+  "velocityNote": "Core flat stance excludes the short heel/toe roll; the all-stance contact-point velocity includes changing measured alpha contact during that roll. Old-v10 delta fields are intentional wider-stride differences, not pass criteria."
+}

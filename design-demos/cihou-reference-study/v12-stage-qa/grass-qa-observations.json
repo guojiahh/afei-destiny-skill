@@ -1,0 +1,157 @@
+{
+  "status": "未评审工程草稿；制作方只读 QA，不评分",
+  "scope": "v12 1280×720 初始 idle 待花与原生 hold 4 秒取花近景；仅草簇透明边缘与根部观察",
+  "browser": {
+    "name": "Chrome",
+    "browserId": "1",
+    "tabId": "274989148",
+    "session": "🌿 v12 grass QA"
+  },
+  "interaction": "独立标签；原生坐标 hold 4 秒；未读取或修改产品代码；未跑完整路线",
+  "observations": [
+    "真实 DOM viewport 1280×720，scrollY=0。",
+    "idle 待花镜头中，环内左侧近草两簇在屏幕上约 25–30px 宽；另有右侧更远的小簇。",
+    "原始像素 screenshot clip 中，两簇边缘主要呈灰绿/灰褐，未见明显红色或黄色描边、亮色矩形边界。",
+    "两簇底部呈灰绿/灰褐的实像素收束，未见一条清楚的地色缝贯穿整簇底下，不能据此指认整簇悬空。",
+    "接地暗部较弱，边缘只占少量屏幕像素；本次只能报告没有明显可见的整簇悬根，无法排除更细小差异。",
+    "native hold 4 秒后到 picking，ownership=hand；同一组近草仍可见，未继续完整流程。",
+    "第 04 张局部截取时已因松手轻走自然到 returning（travel=12.952）；未追加按住动作。该帧只作后续 10–30px 小草样本，不冒充第 03 张 picking 镜头。"
+  ],
+  "limitations": [
+    "仅检查此刻页面加载版本与指定两簇近草的实际屏幕样本。",
+    "不作技术原因推断、不作审美评分；没有宣称源 alpha 像素完全无色边。",
+    "未检查移动端、返回/短揭/出口或随后可能进行的热修。"
+  ],
+  "records": [
+    {
+      "name": "grass-qa-01-wide-idle",
+      "note": "未评审草稿；1280×720 初始 idle 近花视角。",
+      "clip": null,
+      "timestamp": "2026-10-17T09:16:44.390Z",
+      "state": {
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "浅谷中的路 · v12 原生世界草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v12.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "worldDataset": {
+          "cihouActionProgress": "0.00000",
+          "cihouActorPixels": "186.4",
+          "cihouExitDistance": "0.000",
+          "cihouOwnership": "stem",
+          "cihouPhase": "walking",
+          "cihouPitchWeight": "0.0000",
+          "cihouTravel": "1.780",
+          "cihouWaiting": "true",
+          "exitProgress": "0",
+          "storyProgress": "0.08543999999999999"
+        }
+      }
+    },
+    {
+      "name": "grass-qa-02-wide-inner-clumps",
+      "note": "未评审草稿；直接 screenshot clip，保留屏幕原始像素；两簇约 25–30px 宽的草与地面。",
+      "clip": {
+        "x": 390,
+        "y": 350,
+        "width": 180,
+        "height": 100
+      },
+      "timestamp": "2026-10-17T09:16:49.930Z",
+      "state": {
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "浅谷中的路 · v12 原生世界草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v12.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "worldDataset": {
+          "cihouActionProgress": "0.00000",
+          "cihouActorPixels": "186.4",
+          "cihouExitDistance": "0.000",
+          "cihouOwnership": "stem",
+          "cihouPhase": "walking",
+          "cihouPitchWeight": "0.0000",
+          "cihouTravel": "1.780",
+          "cihouWaiting": "true",
+          "exitProgress": "0",
+          "storyProgress": "0.08543999999999999"
+        }
+      }
+    },
+    {
+      "name": "grass-qa-03-wide-event",
+      "note": "未评审草稿；native hold 4 秒后的事件近景，未跑完整路线。",
+      "clip": null,
+      "timestamp": "2026-10-17T09:16:54.195Z",
+      "state": {
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "浅谷中的路 · v12 原生世界草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v12.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "worldDataset": {
+          "cihouActionProgress": "0.66192",
+          "cihouActorPixels": "188.3",
+          "cihouExitDistance": "0.000",
+          "cihouOwnership": "hand",
+          "cihouPhase": "picking",
+          "cihouPitchWeight": "0.0000",
+          "cihouTravel": "2.286",
+          "cihouWaiting": "false",
+          "exitProgress": "0",
+          "storyProgress": "0.19924526315789481"
+        }
+      }
+    },
+    {
+      "name": "grass-qa-04-wide-later-clumps",
+      "note": "未评审草稿；hold 4 秒释放后，整理观察期间自然 idle 已进入 returning；此直接 screenshot clip 是后续小草样本，不作 picking 近景证据。",
+      "clip": {
+        "x": 345,
+        "y": 335,
+        "width": 190,
+        "height": 100
+      },
+      "timestamp": "2026-10-17T09:17:22.181Z",
+      "state": {
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "浅谷中的路 · v12 原生世界草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v12.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "worldDataset": {
+          "cihouActionProgress": "0.00000",
+          "cihouActorPixels": "129.7",
+          "cihouExitDistance": "0.000",
+          "cihouOwnership": "bag",
+          "cihouPhase": "returning",
+          "cihouPitchWeight": "0.0000",
+          "cihouTravel": "12.952",
+          "cihouWaiting": "false",
+          "exitProgress": "0",
+          "storyProgress": "0.33506438450624904"
+        }
+      }
+    }
+  ]
+}

@@ -10,3 +10,13 @@ LICENSE text eol=lf
 *.png binary
 *.ico binary
 *.woff2 binary
+
+# Preserve byte-exact imported assets used by SHA-256 manifests.
+afei-destiny-skill/assets/cihou/quiet/wayfinder/assets/** -text -whitespace
+afei-destiny-skill/assets/cihou/quiet/wayfinder/runtime/** -text -whitespace
+design-demos/cihou-wayfinder-v16/wayfinder/** -text
+design-demos/cihou-wayfinder-v16/wayfinder/assets/** -whitespace
+
+# Archived research sources retain their original formatting.
+design-demos/cihou-reference-study/** -text -whitespace
+design-demos/cihou-wayfinder-v16/wayfinder/reference/recovered-source/** -whitespace

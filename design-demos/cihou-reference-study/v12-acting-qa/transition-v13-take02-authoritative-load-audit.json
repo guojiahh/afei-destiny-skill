@@ -1,0 +1,6 @@
+{
+  "criteria": "Authoritative stance>=.75 regardless of planner mode; adjacent observer interval<=250ms. Cross rear can be physically planted despite old mode label swing.",
+  "maximumWorldDrift": 1.414213563826845e-06,
+  "maximumStrongFrameStep": 1.414213563826845e-06,
+  "eventsOver03m": []
+}

@@ -1,0 +1,544 @@
+{
+  "version": 3,
+  "kind": "original generated riggable character-parts atlas",
+  "generator": "built-in image_gen__imagegen",
+  "createdUtc": "2026-10-17T04:41:57.145Z",
+  "generatedLocalPath": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-38ec062d-b438-4957-8180-7f9ae5f068f6.png",
+  "asset": "girl-rig-parts-v3.png",
+  "metadata": "girl-rig-parts-v3.json",
+  "sha256": "36abfc1daba00e061d5430517a6ac34b919362f09a6b3e22157ad07ed7bf6446",
+  "prompt": "Use case: illustration-story\nAsset type: a production-ready, RIGGABLE 2D CHARACTER PARTS ATLAS. This is NOT a walking sprite sheet: do NOT draw eight whole girls.\nInput images: Image 1 is the ORIGINAL CHARACTER DESIGN reference: preserve this girl's gentle rear three-quarter appearance, short dark bob hair, red gouache dress, beige crossbody satchel, small brown shoes, delicate uneven ink outlines, matte painterly texture. Image 2 is a STRUCTURAL PARTS GUIDE ONLY. Follow its 4-column, 2-row cell order and the pictured isolated anatomical parts. The crude flat shapes, numbers, text, cell lines and white pivot circles are technical guide marks, NOT the final art style. The output must contain NO labels, grids or pivot markers.\nPrimary request: Cut this original girl's design into EIGHT independent beautifully painted transparent paper-puppet pieces. The runtime will articulate these actual pieces into a natural walk, so anatomical joints must be usable. Keep all parts in the same rear three-quarter camera direction, facing upper right, lit and colored consistently. Continue the paint surface naturally behind occluded joints so pieces can overlap without gaps.\nOutput: EXACTLY 1536 by 1024 pixel transparent PNG, FOUR equal columns TWO equal rows, eight equal 384x512 cells. Each cell contains ONLY the specified detached part centered with generous transparent margin. Keep the relative lengths and visual appearance of the structural guide, use sensitive hand-painted gouache and ink from Image 1.\nCell 1 (top left): HEAD AND SHORT BOB HAIR with a small cheek profile and short neck stub. No torso or shoulders. Mostly rear view, tiny sliver of face, no oversized visible eye. The neckline stub is at the bottom for attaching to torso.\nCell 2: DRESS TORSO AND FLARED SKIRT with beige CROSSBODY SATCHEL AND STRAP. From neckline to knee-length hem, no head, no arms, no legs. The dress torso has clean small armholes without sleeves. Slender waist, gentle wind-curved hem. Keep the soft red texture and subtle ink folds. The upper arm sleeve is supplied separately in cells 3 and 4.\nCell 3: ONE COMPLETE LEFT ARM, shoulder-to-hand, with the dress's small red puff SLEEVE at top, slender pale forearm and tiny hand at bottom. Keep a softly bent relaxed elbow. No body attached. The shoulder overlaps into the torso's armhole.\nCell 4: ONE COMPLETE RIGHT ARM with sleeve and hand, matching cell 3's length, same shoulder-to-hand construction, subtly bent natural elbow. No torso.\nCell 5 (bottom left): LEFT UPPER LEG / THIGH ONLY, pale slender skin, short rounded overlap at hip and rounded knee, NO calf and NO shoe. Vertical neutral pose for rigging, not a walking pose.\nCell 6: LEFT LOWER LEG / SHIN AND BROWN SHOE ONLY, rounded knee overlap at top, narrow ankle, small soft brown shoe at bottom pointing upper right in the same perspective. No thigh. Neutral knee-to-foot piece.\nCell 7: RIGHT UPPER LEG / THIGH ONLY matching cell 5, subtly different shaded far-leg side. No calf, no shoe.\nCell 8: RIGHT LOWER LEG / SHIN AND BROWN SHOE ONLY matching cell 6, same size, perspective and palette, subtly far-leg shading. No thigh.\nMaterials: original delicate charcoal ink contours, warm matte gouache, tiny dry-brush marks, human handmade sensitivity, quiet adult storybook world. Do not reproduce the crude flat guide shape style.\nConstraints: exactly eight isolated pieces in this order, each fully inside its own cell. No whole characters. Nothing touching cell edges. Actual transparent alpha background and fully clear gaps. NO halo or haze. NO floor, cast shadow, box, checkerboard, text, numbers, labels, joint circles or watermark. No plastic 3D, no kawaii icon, no giant head redesign.",
+  "references": [
+    {
+      "path": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-152fc75a-9735-47d7-932a-18d19d697685.png",
+      "role": "original generated character identity and hand-painted art"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/rig-parts-guide-v3.png",
+      "source": "rig-parts-guide-v3.svg",
+      "role": "code-generated structural reference only; eight isolated part order and anatomy"
+    }
+  ],
+  "earlierVisualStyleReferences": [
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg",
+      "url": "https://wayfinder.nfb.ca/"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/"
+    }
+  ],
+  "processing": "The generated atlas was copied byte-for-byte. No non-image_gen image painting, extraction, resizing or background removal. Only the explicitly authorized structural SVG guide was drawn in code and rasterized with sharp. Alpha decoding and bounding-box computation were read-only QA.",
+  "copyrightNote": "Original generated character, no CC0 claim. No third-party assets or characters were extracted. Benchmarks were visual references only.",
+  "alphaQA": {
+    "source": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-38ec062d-b438-4957-8180-7f9ae5f068f6.png",
+    "asset": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v3.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "channels": 4,
+    "sha256": "36abfc1daba00e061d5430517a6ac34b919362f09a6b3e22157ad07ed7bf6446",
+    "alphaBins": {
+      "0-0": {
+        "pixels": 1166811,
+        "ratio": 0.7418384552001953
+      },
+      "1-7": {
+        "pixels": 34225,
+        "ratio": 0.021759668986002605
+      },
+      "8-31": {
+        "pixels": 3932,
+        "ratio": 0.0024998982747395835
+      },
+      "32-63": {
+        "pixels": 2512,
+        "ratio": 0.0015970865885416667
+      },
+      "64-127": {
+        "pixels": 3842,
+        "ratio": 0.0024426778157552085
+      },
+      "128-239": {
+        "pixels": 9128,
+        "ratio": 0.005803426106770833
+      },
+      "240-254": {
+        "pixels": 352414,
+        "ratio": 0.22405878702799478
+      },
+      "255-255": {
+        "pixels": 0,
+        "ratio": 0
+      }
+    },
+    "parts": {
+      "head": {
+        "zone": [
+          0,
+          0,
+          400,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            35,
+            47,
+            365,
+            457
+          ],
+          "4": [
+            40,
+            51,
+            357,
+            312
+          ],
+          "8": [
+            41,
+            51,
+            355,
+            311
+          ],
+          "16": [
+            41,
+            52,
+            354,
+            310
+          ],
+          "64": [
+            42,
+            53,
+            352,
+            309
+          ],
+          "128": [
+            42,
+            55,
+            352,
+            307
+          ],
+          "240": [
+            50,
+            74,
+            335,
+            287
+          ]
+        },
+        "sourceRect": [
+          41,
+          51,
+          355,
+          311
+        ]
+      },
+      "dress": {
+        "zone": [
+          400,
+          0,
+          520,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            400,
+            29,
+            513,
+            483
+          ],
+          "4": [
+            407,
+            50,
+            484,
+            458
+          ],
+          "8": [
+            408,
+            50,
+            481,
+            456
+          ],
+          "16": [
+            408,
+            50,
+            481,
+            455
+          ],
+          "64": [
+            409,
+            51,
+            479,
+            453
+          ],
+          "128": [
+            410,
+            51,
+            478,
+            453
+          ],
+          "240": [
+            410,
+            52,
+            477,
+            451
+          ]
+        },
+        "sourceRect": [
+          408,
+          50,
+          481,
+          456
+        ]
+      },
+      "leftArm": {
+        "zone": [
+          920,
+          0,
+          232,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            933,
+            51,
+            219,
+            417
+          ],
+          "4": [
+            945,
+            119,
+            204,
+            329
+          ],
+          "8": [
+            945,
+            119,
+            202,
+            329
+          ],
+          "16": [
+            945,
+            119,
+            202,
+            329
+          ],
+          "64": [
+            946,
+            120,
+            200,
+            328
+          ],
+          "128": [
+            946,
+            120,
+            200,
+            327
+          ],
+          "240": [
+            947,
+            121,
+            198,
+            326
+          ]
+        },
+        "sourceRect": [
+          945,
+          119,
+          202,
+          329
+        ]
+      },
+      "rightArm": {
+        "zone": [
+          1152,
+          0,
+          384,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            1152,
+            55,
+            352,
+            457
+          ],
+          "4": [
+            1299,
+            128,
+            195,
+            313
+          ],
+          "8": [
+            1299,
+            128,
+            195,
+            311
+          ],
+          "16": [
+            1299,
+            128,
+            195,
+            311
+          ],
+          "64": [
+            1300,
+            129,
+            193,
+            310
+          ],
+          "128": [
+            1300,
+            129,
+            193,
+            309
+          ],
+          "240": [
+            1301,
+            130,
+            191,
+            308
+          ]
+        },
+        "sourceRect": [
+          1299,
+          128,
+          195,
+          311
+        ]
+      },
+      "leftThigh": {
+        "zone": [
+          0,
+          512,
+          384,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            0,
+            513,
+            384,
+            511
+          ],
+          "4": [
+            154,
+            561,
+            148,
+            306
+          ],
+          "8": [
+            155,
+            562,
+            147,
+            305
+          ],
+          "16": [
+            155,
+            562,
+            147,
+            305
+          ],
+          "64": [
+            155,
+            563,
+            147,
+            304
+          ],
+          "128": [
+            155,
+            564,
+            146,
+            302
+          ],
+          "240": [
+            156,
+            564,
+            145,
+            301
+          ]
+        },
+        "sourceRect": [
+          155,
+          562,
+          147,
+          305
+        ]
+      },
+      "leftShin": {
+        "zone": [
+          384,
+          512,
+          384,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            385,
+            512,
+            383,
+            488
+          ],
+          "4": [
+            515,
+            586,
+            164,
+            369
+          ],
+          "8": [
+            516,
+            587,
+            163,
+            367
+          ],
+          "16": [
+            516,
+            588,
+            163,
+            365
+          ],
+          "64": [
+            517,
+            588,
+            161,
+            365
+          ],
+          "128": [
+            517,
+            588,
+            161,
+            365
+          ],
+          "240": [
+            518,
+            589,
+            159,
+            363
+          ]
+        },
+        "sourceRect": [
+          516,
+          587,
+          163,
+          367
+        ]
+      },
+      "rightThigh": {
+        "zone": [
+          768,
+          512,
+          384,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            769,
+            527,
+            383,
+            497
+          ],
+          "4": [
+            889,
+            579,
+            146,
+            315
+          ],
+          "8": [
+            890,
+            580,
+            144,
+            313
+          ],
+          "16": [
+            890,
+            580,
+            143,
+            313
+          ],
+          "64": [
+            890,
+            580,
+            143,
+            312
+          ],
+          "128": [
+            891,
+            581,
+            142,
+            311
+          ],
+          "240": [
+            892,
+            582,
+            140,
+            309
+          ]
+        },
+        "sourceRect": [
+          890,
+          580,
+          144,
+          313
+        ]
+      },
+      "rightShin": {
+        "zone": [
+          1152,
+          512,
+          384,
+          512
+        ],
+        "alphaBoundsByThreshold": {
+          "1": [
+            1153,
+            531,
+            285,
+            429
+          ],
+          "4": [
+            1219,
+            586,
+            157,
+            370
+          ],
+          "8": [
+            1220,
+            587,
+            156,
+            367
+          ],
+          "16": [
+            1220,
+            588,
+            156,
+            366
+          ],
+          "64": [
+            1221,
+            588,
+            154,
+            365
+          ],
+          "128": [
+            1221,
+            588,
+            154,
+            365
+          ],
+          "240": [
+            1222,
+            589,
+            152,
+            363
+          ]
+        },
+        "sourceRect": [
+          1220,
+          587,
+          156,
+          367
+        ]
+      }
+    }
+  }
+}

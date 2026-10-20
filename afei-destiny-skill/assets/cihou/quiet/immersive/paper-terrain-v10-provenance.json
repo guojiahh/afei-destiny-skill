@@ -1,0 +1,108 @@
+{
+  "asset": "paper-terrain-v10.png",
+  "createdAtUTC": "2026-10-17T08:13:13Z",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "intent": "generate original material; then correct tone with built-in image edit",
+  "generationSource": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-2b7a9e4a-05c2-40c1-b7a2-f6a27f58a294.png",
+  "output": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "transparent": false,
+    "sha256": "ea95afe3f51863954b4a8fd7bee736526518e95134d88924566680c8f7cdf67d"
+  },
+  "inputs": [
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "sha256": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+      "role": "Actual benchmark browser screenshot; economical paint mass and ink-world coherence only"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "sha256": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+      "role": "Actual benchmark browser screenshot; broad soft painterly fields only"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "sha256": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+      "role": "Actual benchmark browser screenshot; readable world scale of ground brush work only"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+      "role": "Existing original project girl; matte gouache compatibility, no image modification"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/paper-road-v10.png",
+      "sha256": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754",
+      "role": "Existing original project blue material; direct brush-scale and texture-weight companion"
+    }
+  ],
+  "generationHistory": [
+    {
+      "stage": "initial-generation",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE flat square opaque warm-grey paper-and-gouache MATERIAL TEXTURE, not a picture or scene. It will be mapped onto native 3D terrain and multiplied by stone color on native 3D rocks. Its painterly mark scale must match the existing blue material in image 5.\n\nInput image roles:\nImage 1: actual Nomadic Tribe browser screenshot, reference only for economical hand-painted surface and ink-world coherence. Do not copy composition, blue river, birds, scenery, words or UI.\nImage 2: actual Kaizen browser screenshot, reference only for soft broad hand-painted color planes. Do not include flowers, scenery, letters or UI.\nImage 3: actual Wayfinder grassland browser screenshot, reference only for broad horizontal-to-irregular ground paint strokes at an intelligible world scale. Do not include grass, leaves, trees, rocks, flowers, character, text, UI or green/yellow pigment.\nImage 4: existing original project girl sprite, reference only for matte gouache and fine paper compatibility. Do not reproduce any body part, character, dress or outline.\nImage 5: existing generated original project blue material, the direct scale and texture-weight match. This new image should be the warm grey companion swatch, with gentler softer edges and less directional movement, not a blue recolor.\n\nPrimary request: a calm original low-saturation WARM GREY material swatch around #EEE8D9. Edge-to-edge opaque paint over fine paper. A few very broad, soft, irregular overlapping dry-brush fields, differing in value only around 2-4 percent, neutral warm-grey throughout. At small screen size it reads almost flat; up close the paint marks feel physical and hand painted. Delicate matte paper grain, never embossed. The largest brush fields should occupy about one quarter to one third of the texture width. Keep middle and all corners equally bright on average. Very light grey-beige, never yellow, cream glow, orange, muddy brown or green. It must also work as a neutral multiplication texture on grey rocks without baked light or shadow.\n\nConstraints: square flat texture sample with no camera perspective, no horizon, no road shape, no objects of any kind, no recognizable pattern or focal center, no border, no vignette, no baked illumination, no highlight, no cast shadow, no ambient occlusion, no bevel or normal-map effect. Seamless wrap requested left-right and top-bottom; all edges neutral and closely matched. This is albedo only.\nStyle/medium: economical opaque gouache, broad softly broken dry brush, very subtle fine paper, same physical illustrated world as image 5 and the red-clothed girl.\nAvoid: wrinkles, crumples, relief, embossed paper, gritty speckles, plaster, concrete, sand, stones, cracks, black hatch marks, splatter, fibers, decorative noise, strong linear streaks, cream-yellow wash, bright shine, gradient from top to bottom, heavy roughness, dirty watercolor tide marks, images, scenery, lettering, watermark.",
+      "inputOrder": [
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png",
+        "afei-destiny-skill/assets/cihou/quiet/immersive/paper-road-v10.png"
+      ],
+      "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-f1583a5f-9241-4b0a-bdae-855eab94a12e.png",
+      "sha256": "8873fa1c9e6d00309d8c24573744e4c36a85f7ec169c509fe96ec61cbdca0bdb",
+      "review": "Measured mean RGB206,194,180 was too tan and dark for pale terrain. Not selected."
+    },
+    {
+      "stage": "selected-color-correction",
+      "prompt": "Use case: lighting-weather / precise-object-edit.\nAsset type: albedo material correction, SINGLE flat opaque square material swatch, not a scene.\nEdit target Image 1 is our original generated terrain material. Its average measured RGB is (206,194,180), too brown/dark for the requested neutral pale paper. Correct this target materially: lift the full tonal range substantially, reduce warmth/saturation, and soften the fine texture. Target average color approximately RGB (238,232,217), hex #EEE8D9, with all three channel standard deviations about 3-4, so the output reads pale neutral warm grey at small size. No golden lighting. No cream-yellow tint. It should be almost white warm-grey paper, not tan plaster.\n\nPreserve: original square edge-to-edge opaque material, broad irregular gouache fields and no imagery. Keep center and all corners uniformly pale. Reduce small ridged/dry speckle detail by about half. Only subtle large softly brushed tonal differences. No baked shadow, no directional illumination, no bright highlights, no vignette, no embossed texture, no wrinkles, no relief, no perspective, no border, no text, no objects.\n\nOther inputs are actual user-requested benchmark references, not edit targets:\nImage 2 Nomadic Tribe screenshot: economy of paint masses only; copy no shapes or scene.\nImage 3 Kaizen screenshot: soft broad painterly fields only; copy no objects or UI.\nImage 4 Wayfinder screenshot: ground brush scale only; no green, yellow, grass, leaves, stones, figures or UI.\nImage 5 original project girl sprite: physical matte gouache compatibility only, no body parts or sprite included in output.\nThe correction should remain an original neutral pale MATERIAL SAMPLE for native 3D ground and multiplicative rock albedo. Closely match opposite edges for wrapping but do not introduce a repeating pattern.",
+      "inputOrder": [
+        "initial-generation output",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png"
+      ],
+      "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-2b7a9e4a-05c2-40c1-b7a2-f6a27f58a294.png",
+      "review": "Paler neutral companion to the blue material; original square and broad brush distribution preserved, no scenery or baked illumination. The generated selected file is copied byte-for-byte."
+    }
+  ],
+  "review": {
+    "actualV10ScreenshotViewed": "design-demos/cihou-reference-study/v10-root-qa/early-space.jpg",
+    "directBrowserLimitation": "This reused art-production agent's IAB provider was unavailable; diagnosis used the root agent's actual browser screenshot, not an asserted independent live run. No score supplied.",
+    "viewedActualInputsBeforeGeneration": true,
+    "selectedOutputCopiedUnmodified": true,
+    "noPythonVisualEditing": true,
+    "readOnlyAnalysis": {
+      "rgbMean": [
+        232.632,
+        224.716,
+        213.153
+      ],
+      "rgbStd": [
+        4.957,
+        5.085,
+        4.924
+      ],
+      "opposingEdgeMeanAbsChannelDifference": {
+        "leftRight": 3.155,
+        "topBottom": 3.224
+      }
+    },
+    "tileability": "Requested seamless wrap but not mathematically pixel-periodic. Opposite edges are close in mean; one tile or mirrored wrapping recommended pending actual scene seam QA.",
+    "limits": "Material alone cannot solve regular low-poly rock silhouettes, hard projected shadow blocks, shadow-map acne, empty composition or character-to-ground contact. Whole-scene composition and aesthetics require actual live review."
+  },
+  "usage": {
+    "colorSpace": "sRGB",
+    "materialColor": "Start near white on the ground: the albedo is already warm-grey. Do not multiply by a second warm-yellow tint. Rock may use a pale cool-grey multiplier around #C3C7C6.",
+    "scale": "Match paper-road-v10 world brush scale. One tile across approximately 5-7 character heights along travel; avoid dense tiny repeats on rocks.",
+    "lighting": "Neutral white light and high roughness. No normal or displacement map, no specular sheen. Upper-left key light, lower-right soft cast shadows.",
+    "anchor": "Material UV only; no alpha or object anchor.",
+    "rockShape": "A low asymmetric slanted wedge with one broad lit top plane and one broad cool side plane. No evenly triangulated icosahedron or random per-triangle palette. Keep one short ink crack and irregular silhouette."
+  },
+  "licenseBoundary": "Original generated material. Benchmark screenshots are style references only; no screenshot pixels, characters, UI, scene layout or commercial artwork are distributed as runtime material."
+}

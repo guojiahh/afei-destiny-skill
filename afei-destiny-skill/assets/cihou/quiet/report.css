@@ -51,6 +51,63 @@ button { touch-action: manipulation; }
 .pause[aria-pressed="true"] .pause-icon { display: none; }
 .pause[aria-pressed="true"] .play-icon { display: block; }
 .scene.scene-unavailable { background: linear-gradient(146deg, transparent 42%, #dfafa8 42.2%, #405879 42.5%, #405879 57.5%, #dfafa8 57.8%, transparent 58%); }
+/* V15: type stays in a quiet, stable part of the painting. */
+.hero { color: #324d51; background: #e5e9dc; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: .13; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23475540' opacity='.45' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E"); mix-blend-mode: multiply; }
+.scene-chapters { position: absolute; z-index: 4; top: max(13px, env(safe-area-inset-top)); left: 4.8%; display: flex; gap: 24px; }
+.scene-chapters button { min-height: 44px; border: 0; border-bottom: 1px solid transparent; background: transparent; padding: 8px 0; font: 12px var(--sans); color: #3d5653; cursor: pointer; letter-spacing: .1em; }
+.scene-chapters span { font-size: 10px; margin-right: 6px; opacity: .65; }
+.scene-chapters button[aria-current="step"] { border-bottom-color: currentColor; }
+.scene-copy { position: absolute; z-index: 2; top: 22%; left: 7.2%; width: min(29%, 330px); pointer-events: none; color: #304b4d; text-shadow: 0 1px 20px #eef0e5; }
+.scene-kicker { margin: 0 0 24px; font-size: 10px; letter-spacing: .18em; opacity: .8; }
+.scene-copy h2 { font: 400 clamp(28px, 3.1vw, 46px)/1.55 var(--serif); letter-spacing: .02em; }
+.scene-copy h2 span { display: block; }
+#scene-caption { font-size: 13px; line-height: 2; margin: 22px 0 0; max-width: 300px; text-wrap: pretty; }
+.hero[data-state="2"] .scene-copy { top: 16%; }
+.hero-reading { right: 4.8%; color: #304b4d; }
+.hero-reading::before, .invitation-words, .press-mark, .tool::before, .text-button::before, .continue-reading::before { background-color: #e9eddf; }
+.scene-invitation { bottom: 10%; font-size: 12px; }
+.invitation-words, .text-button, .continue-reading { color: #304b4d; }
+.scene-footnote { position: absolute; z-index: 2; bottom: 20px; left: 4.8%; margin: 0; color: #4c605b; font-size: 10px; letter-spacing: .08em; pointer-events: none; }
+.scene-transition { position: absolute; z-index: 2; inset: -20%; pointer-events: none; opacity: 0; background: radial-gradient(ellipse at 45% 45%, #e9ecdd 0%, #e9ecddaa 35%, transparent 68%); transform: translateX(-65%) rotate(-15deg); }
+.scene-transition.passing { animation: mist-pass 2.6s ease-in-out both; }
+@keyframes mist-pass { 0% { opacity: 0; transform: translateX(-65%) rotate(-15deg); } 40% { opacity: .95; } 65% { opacity: .85; } 100% { opacity: 0; transform: translateX(65%) rotate(12deg); } }
+.scene-choices { position: absolute; z-index: 4; right: 5.5%; bottom: 10%; width: min(48%, 590px); color: #304b4d; }
+.choices-intro { font: 12px/1.8 var(--serif); letter-spacing: .08em; margin: 0 0 14px; }
+.choice-tabs { display: flex; gap: 9px; align-items: stretch; }
+.choice-tabs button { flex: 1; min-width: 0; min-height: 62px; padding: 12px; cursor: pointer; border: 1px solid #53665b55; background: #eff1e4e6; color: inherit; font: 13px/1.8 var(--serif); transition: background .4s, border-color .4s; }
+.choice-tabs button:hover, .choice-tabs button[aria-pressed="true"] { background: #f7f7e9; border-color: #53665b; }
+.choice-detail { margin-top: 12px; padding: 16px 20px 8px; background: #f0f1e5ed; border-left: 1px solid #66796799; }
+#choice-condition { margin: 0 0 8px; font-size: 11px; line-height: 1.8; color: #5b685c; }
+#choice-text { margin: 0; font-size: 13px; line-height: 1.95; }
+#choice-walk { font-size: 12px; }
+#choice-walk::before { display: none; }
+.hero[data-biome="1"] .scene-transition { background: radial-gradient(ellipse at 45% 45%, #efe3c9 0%, #efe3c9aa 35%, transparent 68%); }
+.hero[data-biome="2"] .scene-transition { background: radial-gradient(ellipse at 45% 45%, #dbe7ea 0%, #dbe7eaaa 35%, transparent 68%); }
+@media (max-width: 760px) {
+  .scene-chapters { left: 22px; gap: 16px; }
+  .scene-chapters button { font-size: 11px; }
+  .scene-chapters span { margin-right: 3px; }
+  .scene-copy, .hero[data-state="2"] .scene-copy { left: 7%; top: 15%; width: 76%; max-width: 350px; }
+  .scene-kicker { margin-bottom: 12px; }
+  .scene-copy h2 { font-size: 30px; line-height: 1.45; }
+  #scene-caption { margin-top: 13px; max-width: 310px; font-size: 12px; line-height: 1.85; }
+  .scene-choices { right: 7%; left: 7%; bottom: max(74px, calc(env(safe-area-inset-bottom) + 58px)); width: auto; }
+  .choice-tabs { gap: 6px; }
+  .choice-tabs button { min-height: 58px; font-size: 12px; padding: 9px 6px; }
+  .choices-intro { margin-bottom: 8px; }
+  .choice-detail { margin-top: 8px; padding: 11px 14px 2px; }
+  #choice-text { font-size: 12px; line-height: 1.8; }
+  #choice-condition { margin-bottom: 5px; }
+  .scene-footnote { left: 7%; right: 70px; bottom: 21px; font-size: 9px; line-height: 1.6; }
+}
+@media (max-height: 650px) and (min-width: 761px) {
+  .scene-copy, .hero[data-state="2"] .scene-copy { top: 18%; }
+  .scene-copy h2 { font-size: 30px; }
+  .scene-kicker { margin-bottom: 12px; }
+  #scene-caption { margin-top: 12px; }
+  .scene-choices { bottom: 13%; }
+}
 .reading { width: min(920px, calc(100% - 112px)); margin: 0 auto; padding: 0 0 90px; }
 .reading-section { border-top: 1px solid var(--line); padding: 54px 0 64px; }
 .section-index { margin: 0 0 30px; color: var(--muted); font-size: 12px; letter-spacing: .07em; }

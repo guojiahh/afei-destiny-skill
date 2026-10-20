@@ -1,0 +1,80 @@
+{
+  "title": "v12 optional composition research",
+  "status": "Concept art only. Not an actual webpage, not an accepted design, not an independent review. No automatic adoption.",
+  "createdAtUTC": "2026-10-17T08:57:18Z",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "intent": "generate with actual benchmark and current prototype references",
+  "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-8aca0356-f5ec-4485-9e99-1b45ea80150b.png",
+  "output": {
+    "path": "design-demos/cihou-reference-study/v12-art-study/concept.png",
+    "width": 1672,
+    "height": 940,
+    "mode": "RGB",
+    "transparent": false,
+    "sha256": "1e28ca147faec1acec9de85e3b0c2efe9459429e745474c1ffd2ef3b1157a7ce"
+  },
+  "inputs": [
+    {
+      "path": "design-demos/cihou-reference-study/v10-root-qa/frozen-start.jpg",
+      "sha256": "a0075d4b091a314e6e3ce785af00b846044a4abe84939a2970b59aad9d03c0cd",
+      "role": "Actual frozen current hero screenshot; preserve project girl/blue road/story landmark; redesign empty stage and full-loop presentation"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/v10-root-qa/frozen-choice.jpg",
+      "sha256": "9c82a513590ee743dcddb7cec4be4557b72875336f4974dfd6623542c2d06986",
+      "role": "Actual frozen current hero choice screenshot; project girl identity and stone/flower relation, not target composition"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "sha256": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+      "role": "Actual benchmark screenshot; diagonal broad plane, sparse ink contours, matte shadow language only; not characters/UI/layout"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "sha256": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+      "role": "Actual benchmark screenshot; distant color layers, atmospheric depth and quiet paint only"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "sha256": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+      "role": "Actual benchmark screenshot; coherent ground and sparse/dense world vegetation relation only; not existing red-hooded character or objects"
+    }
+  ],
+  "prompt": "Use case: illustration-story / stylized-concept.\nAsset type: ONE widescreen 16:9 concept art composition study for an interactive 3D picture-book web hero. This is visual production research, not an actual webpage screenshot. No text or UI.\n\nInput roles:\nImages 1 and 2 are ACTUAL frozen screenshots of the current prototype. Retain its original little girl identity, the warm red knee-length dress, chestnut bob, cream small cross-body bag, small brown shoes, blue walkable road and a SINGLE pale tilted stone with one distinctive ochre flower. The current empty showroom and oversized complete blue loop are precisely what must be redesigned. DO NOT copy the empty platform composition.\nImage 3 is an ACTUAL Nomadic Tribe screenshot: study the diagonal grand color plane, sparse fine confident dark ink contours, matte drawn shadows and unified illustrative world. Copy none of its birds, UI, text, scene layout or commercial characters.\nImage 4 is an ACTUAL Kaizen screenshot: study soft distant color layers, atmospheric depth, quiet negative space and economical paint. Copy none of its flowers, lettering, UI or scene.\nImage 5 is an ACTUAL Wayfinder screenshot: study coherent ground brush marks, meaningful natural terrain, clear relation of small character to land, sparse-to-dense vegetation clusters and grounded contact. Copy none of its red-hooded character, tree, objects, rings or UI.\nPreserve the project's own girl's identity as clearly visible in Images 1 and 2. Do not design or copy a new recognizable commercial character. Her physical proportions and readable profile come from the current original girl.\n\nPrimary request:\nA small red-dressed girl is walking naturally toward the upper right on a matte slate-blue road embedded in a believable quiet painterly landscape. The road enters the extreme LOWER LEFT corner, passes beneath her feet near image center, then bends gently toward the UPPER RIGHT and disappears behind a low ridge. She remains the clear emotional center, about 17 percent of the entire image height, full body, roughly x=50 percent and feet y=64 percent, three-quarter side/back view moving right. A slight readable profile, hair and dress hem caught softly in a step, one foot actually planted and a tiny soft contact shadow. No heroic pose or floating avatar.\n\nComposition and environment:\nThe surface is a real continuous place, not a giant raised ribbon on a blank display stage. Ground fills the lower two thirds and recedes gently into two broad low muted terrain layers in the distance. Use a shallow irregular depression/low gully to one side, a quiet rising bank to the other, and a low distant ridge; just two or three large natural landforms, not an assortment of props. The road is a PATH within this land, broad in the lower left and narrower toward the upper right; at far right it may briefly rise over a small natural arch/half-turn shoulder and disappear into terrain, suggesting a continuous return route without displaying a giant complete ring or infinity logo. Keep the local walking surface almost level and physically walkable.\nOne and only one story landmark: an asymmetric pale grey slanted stone, low and broad with a recognizable chipped corner, next to the road a few girl-lengths ahead/right. One thin inward-leaning olive stem rises behind it with one asymmetric ochre THREE-PETAL flower and a single dark flower heart; it is big enough to be recognized later but modest compared with the girl. No other flowers, gold leaves or magical objects.\nSparse grey-olive grasses grow as two or three UNEQUAL loose patches following the land, not evenly spaced or cloned. At lower left, a very small cropped dark twig/grass silhouette overlaps the foreground for real depth, under 8 percent of the frame; do not decorate every corner. Most terrain stays quiet broad paint. No trees, houses, birds, extra people or invented story objects.\nUpper third: pale warm-grey sky/fog with one low desaturated mauve-grey land layer, no sunset sun, no clouds as clip-art, no vertical gradient glow. It is distant air, not empty beige studio backdrop.\n\nVisual language:\nAll parts are one coherent drawn ink-and-opaque-gouache world: economical broad color fields, gentle irregular dry-brush edges, restrained fine ink on selected silhouettes and one or two useful rock cracks, two or three clear tonal values on each form. Paper grain subtle and at a consistent physical scale. The girl's own illustration is simplified enough to belong to the same paint world; no photoreal tiny grain on one object and giant brush texture on another.\nWarm-grey paper #EEE8D9, slate-blue road #506983 with cool shadow #3A4D66, muted grey-olive vegetation, distant grey-mauve #B8B3BD. The girl's warm red dress is the main color accent; the single flower #D5AA52 is the secondary accent. Very little pink: no regular pink border. Fine dark ink #3D3F46, never thick cartoon outlines. Neutral daylight from upper left, modest soft shadows lower right; no cinematic bloom.\n\nAvoid:\nA complete visible loop, infinity symbol, giant ring logo, floating ribbon, empty product showroom, game board, toy diorama, faceted low-poly placeholder stone, thick road border, evenly spaced props, three identical stone-grass clusters, ornate vegetation, crowded fantasy landscape, waterfalls, deep dramatic mountains, generic fairytale castle, sparkles, glowing dust, magical particles, dappled lens flare, textured noise everywhere, watercolor mud, AI embossed wrinkles, photoreal 3D rendering, cel-shaded anime screenshot, plastic gloss, atmospheric title typography, cards, UI buttons, text, lettering, watermark.\n",
+  "constraintsAndActions": {
+    "actualInputImagesViewedBeforeGeneration": true,
+    "generatedOutputExplicitlyViewedAfterSave": true,
+    "sourceCopiedByteForByte": true,
+    "noPythonVisualEditing": true,
+    "didNotModify": [
+      "v10 product implementation",
+      "v11 product implementation",
+      "formal default bundle",
+      "review-current",
+      "consultation_state",
+      "renderer",
+      "runtime assets"
+    ],
+    "toolInputLimit": "At most 5 image paths were supported. A first 6-input call was rejected before generation. The completed generation used BOTH current frozen screenshots plus one actual screenshot from EACH benchmark. The girl's own identity was referenced through the actual current screenshots; no sixth atlas was used.",
+    "licenseBoundary": "Original project composition study guided by actual reference screenshots. Commercial screenshot pixels and characters are not copied into runtime assets; this study is not a distributed world texture."
+  },
+  "productionSelfObservation": {
+    "strengths": [
+      "Diagonal blue road now belongs to continuous land rather than a large object on an empty display plane.",
+      "A lower-left cropped branch, local shallow gully and two pale distant ridges create distinct depth layers.",
+      "The small red girl and sole pale stone/ochre flower remain readable and the upper air has quiet space."
+    ],
+    "mismatchesToCorrectBeforeImplementation": [
+      "Girl is approximately 20 percent of image height by visual estimate, larger than the requested 15-18 percent initial-view target; reduce initial framing and reserve this size for an action shot.",
+      "Vegetation and grass flecks are more numerous than requested. Retain the big color masses but cut local grass-mark coverage substantially; do not instance dense grass everywhere.",
+      "Flower head is large relative to the girl and the stone. Runtime silhouette should remain recognizable while using roughly 0.10-0.12 of character height for the flower crown.",
+      "Fine ink on the landscape is weaker than in Nomadic. Add only a few selected rock/road-edge structure lines in native objects, not a full road border.",
+      "No full loop or half-twist is proven by this single image. Fixed Möbius product semantics and continuity still need native geometry, camera staging and actual interaction review."
+    ],
+    "scope": "These are production observations from the viewed concept, not a score or a claim of passing an independent review."
+  }
+}

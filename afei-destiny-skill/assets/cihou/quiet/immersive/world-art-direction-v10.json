@@ -1,0 +1,83 @@
+{
+  "name": "cihou-small-world-v10-art-direction",
+  "purpose": "Original restrained ink-and-gouache 3D picture-book hero. Geometry, camera, contact, occlusion and recurring landmark supply the story. Images supply only a common surface language.",
+  "palette": {
+    "paper": "#EEE8D9",
+    "road": "#506983",
+    "roadShadow": "#3A4D66",
+    "distantTerrain": "#A7B2BA",
+    "flower": "#D5AA52",
+    "flowerHeart": "#64503B",
+    "stem": "#65715B",
+    "rockLight": "#C8C6B8",
+    "rockShade": "#818C92",
+    "girl": "Use the warm red and chestnut colors already painted in girl-rig-parts-v5.png unchanged",
+    "darkestInk": "#3D3F46",
+    "shadow": "#58606B"
+  },
+  "materialRules": [
+    "Two or three broad color values per material; matte opaque gouache; subtle grain only. No embossed wrinkles, busy white streaks, glitter, glow or AO black halos.",
+    "Fine ink only around selected silhouettes and one or two useful structure lines. No triangle wireframe and no equal border on every road edge.",
+    "One soft directional light from upper-left; all cast shadows lower-right. A tiny grounded foot-contact shadow supports every stance.",
+    "Warm pink belongs to a rare exposed paper edge or reflected warm light, not a uniform outline around the whole loop.",
+    "Keep paint detail at one consistent world scale: do not use huge brush marks on the road and tiny photoreal grain on the stone."
+  ],
+  "spatialComposition": [
+    "Begin with a local walk view: road enters offscreen bottom-left, passes the central feet, exits offscreen upper-right. The girl is a small living subject in a traversable place.",
+    "Place one cropped irregular foreground branch at an edge only if it truly occludes the world; stay under 12 percent of the frame. Do not frame every side with decorative plants.",
+    "One distinctive tilted stone and one flower define the middle ground. One or two pale low terrain planes define the distance.",
+    "A continuous road can become a natural arched half-twist bridge. Reveal the reversed surface relationship once in a later pullback; avoid a full-size flat ring dominating the whole experience.",
+    "Recognize the return through the same tilted stone silhouette and flower asymmetry before reading the whole loop. Camera parallax should move near, middle and far ground at distinct rates."
+  ],
+  "commonScale": {
+    "characterHeight": 1.5,
+    "localRoadWidth": [
+      2.4,
+      3.3
+    ],
+    "stone": {
+      "length": 1.2,
+      "height": 0.55,
+      "width": 0.7,
+      "shape": "Asymmetric low wedge with a slanted cut. One broad lit top face, one broad cool shadow face, one short angled crack; never a generic sphere or three identical rocks."
+    },
+    "flower": {
+      "height": [
+        0.6,
+        0.7
+      ],
+      "shape": "Single slim ink stem leans inward toward the road, two unequal matte olive leaves, one flower with three broad asymmetric ochre petals and one dark heart; lower petal has a small notch. No five-petal emoji and no three identical branches.",
+      "identity": "The same geometry/material/relative petal arrangement must appear on the original stem, at the hand, at the bag and at the ending. A specific recognizable object recurs, not an unrelated generic seed particle."
+    }
+  },
+  "narrativeStaging": [
+    "Allow head/eyes to lead attention, then bend hips and knees, make fingertip contact, transfer the exact visible flower and regain weight. Keep ground contact readable.",
+    "The visible recurring flower can supply the causal connection across local view, ring revelation and departure. Every transition must preserve its identity.",
+    "Let the final viewpoint show the act and its consequence clearly, then settle. Avoid dissolving into an empty blue logo or particle bloom."
+  ],
+  "assets": {
+    "new": [
+      "paper-road-v10.png",
+      "paper-road-v10-provenance.json",
+      "paper-terrain-v10.png",
+      "paper-terrain-v10-provenance.json"
+    ],
+    "preserve": [
+      "girl-rig-parts-v5.png",
+      "girl-rig-parts-v5.json"
+    ],
+    "stopUsingAsWholeWorld": [
+      "world-keyart-v3.png"
+    ],
+    "materialReplacement": "paper-road-v10 replaces paper-road-v1 for the new true 3D surface. Old assets are preserved."
+  },
+  "selectedReferenceFramesInspected": [
+    "n10-voyage-arrival.jpg",
+    "n14-new-island-bloom.jpg",
+    "k05-curiosity-subtitle.jpg",
+    "k14-precision-full-jump.jpg",
+    "w12-grassland-arrival.jpg",
+    "w19-tundra-second-line.jpg"
+  ],
+  "authorship": "Art production notes only; not an independent review or a benchmark score."
+}

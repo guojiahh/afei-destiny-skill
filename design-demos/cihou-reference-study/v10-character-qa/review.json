@@ -1,0 +1,102 @@
+{
+  "version": "actor-v10",
+  "scope": "Actor-only production QA; no independent design score, no full hero/camera acceptance.",
+  "retainedArtwork": "girl-rig-parts-v5.png and girl-rig-parts-v5.json are unchanged.",
+  "referenceFramesViewed": [
+    "full-run-v2/n10-voyage-arrival.jpg",
+    "full-run-v2/n14-new-island-bloom.jpg",
+    "full-run-v2/k05-curiosity-subtitle.jpg",
+    "full-run-v2/k14-precision-full-jump.jpg",
+    "full-run-v2/w12-grassland-arrival.jpg",
+    "full-run-v2/w19-tundra-second-line.jpg"
+  ],
+  "realBrowser": "Codex In-app Browser, 1280 x 720; UI buttons and native range control used; no simulated screenshot composition.",
+  "reviewed": [
+    "Pick notice/reach/hand inspect/bag stow/rise",
+    "Reconsider hand flower, back profile, shoulder and hip hesitation, decide",
+    "Place retrieve/confirm/deep crouch/contact/withdraw",
+    "Cross probe/press/hip transfer/follow/settle; safe points 0.40, 0.67 and 1 are planted",
+    "Three walk phases 0.02, 0.32, 0.63 and purposeful walking pose"
+  ],
+  "fixesFromRealScreenshots": [
+    "Deep-crouch skirt now drapes with gravity instead of rotating as one stiff panel; lower dress vertices stay above support plane.",
+    "Preview flower uses the transparent render queue to avoid being painted over by the transparent torso at the bag opening.",
+    "Preview cut stem reaches the support plane when replanted; the unique scene flower remains scene-owned."
+  ],
+  "api": {
+    "constructor": "CihouCharacterRigV10.create({atlasUrl, metadata, height})",
+    "update": "update(gaitSeconds, speed, {action, progress, flowerTarget:[x,y], renderFlower:false, intent, impulse, hasFlower})",
+    "actions": [
+      "pick",
+      "reconsider",
+      "place",
+      "cross"
+    ],
+    "coordinates": "Unmirrored local XY; Y is vertical; actual painted shoe sole y=0. Scene places the group in world XYZ and billboards around world Y.",
+    "attachments": [
+      "hand",
+      "leftHand",
+      "rightHand",
+      "bag",
+      "flower",
+      "head",
+      "neck",
+      "hip",
+      "leftFoot",
+      "rightFoot"
+    ],
+    "state": "getActionState() returns action, progress, phase, flowerOwnership, rootTravel, safeStops, nextSafeStop, contact, feet, hand, bag, flower.",
+    "flowerOwnership": "pick stem->hand at .43, hand->bag at .86; reconsider bag->hand at .08, hand->bag at .94; place bag->hand at .20, hand->ground at .78; cross ground.",
+    "flowerContact": "flowerTarget/getAttachment(flower) denotes stem grip, not plant root. Scene offsets its unique flower mesh to that grip and owns its planted root.",
+    "cross": "Scene moves actor group by state.rootTravel along the new route. Complete release to nextSafeStop(progress): 0, .40, .67, 1. Feet subtract rootTravel in local X; new route should project approximately screen-right, or scene supplies event.feetTargets left/right local sole x/y/stance.",
+    "gait": "Use getGaitMetrics(1,intent).travelPerGaitSecond to convert actual distance into gait seconds. Interpolate intent; do not accelerate the clock independently of travel."
+  },
+  "limits": [
+    "World flower mesh/grip offset and world depth occlusion must be verified in the composed scene.",
+    "No claim of frame-by-frame video inspection or audio review. Captured key poses and actual timed playback endpoint were inspected.",
+    "Independent critic must personally experience all three benchmark websites; this actor QA is not that critic."
+  ],
+  "files": {
+    "hero-character-rig-v10.js": "b57cef27a03b1a530f5648186dd997e4fdd9d79a284f79713a78f407441eb355",
+    "character-acting-preview-v10.html": "6c4f2652a95dd12c2c3cf9e76dd2df37ad485489b3a61c164efe240b1805f599"
+  },
+  "finalScreenshots": [
+    "final-cross-press.jpg",
+    "final-cross-settle.jpg",
+    "final-cross-transfer.jpg",
+    "final-pick-bag.jpg",
+    "final-pick-contact.jpg",
+    "final-pick-inspect.jpg",
+    "final-pick-stow.jpg",
+    "final-place-ground.jpg",
+    "final-place-touch.jpg",
+    "final-purpose.jpg",
+    "final-reconsider.jpg",
+    "final-walk-a.jpg",
+    "final-walk-b.jpg",
+    "final-walk-c.jpg"
+  ],
+  "status": "FROZEN actor implementation; body/contact poses reviewed; small-size flower/bag readability remains unresolved at composed-scene level.",
+  "actualSizeCheck": {
+    "urlQuery": "?size=small",
+    "standingHeightPixelsApproximate": 113,
+    "crouchedHeightPixelsApproximate": 67,
+    "screenshots": [
+      "small-pick-bag.jpg",
+      "small-pick-contact.jpg",
+      "small-pick-inspect.jpg",
+      "small-place-before.jpg",
+      "small-place-ground.jpg",
+      "small-place-transfer.jpg"
+    ],
+    "result": "BODY readable; FLOWER/BAG readability NOT PASSED at this size. Flower crown only about 5-6px. Need composed-scene closer event camera or larger unique flower crown, with actual scene screenshot validation.",
+    "recommendedFlowerCrownRelativeToHeight": [
+      0.1,
+      0.12
+    ],
+    "recommendedEventStandingHeightPixels": [
+      170,
+      200
+    ]
+  }
+}

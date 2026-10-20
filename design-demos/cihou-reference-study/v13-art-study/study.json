@@ -1,0 +1,23 @@
+{
+  "scope": "Independent material A/B snapshot, not production or independent review input. Geometry/rig/controller untouched.",
+  "source_sha256": "456aecd7820be88f7d357ccf6b2265e6dc1bd7a09dcabd21d9ebd9863eaab0f3",
+  "delta": {
+    "baseline": "mix(.45,.18,max(smoothstep(10.,25.,groundDistance),smoothstep(.05,.45,groundSlope)))",
+    "ink-a": "mix(.85,.38,max(smoothstep(10.,25.,groundDistance),smoothstep(.05,.45,groundSlope)))"
+  },
+  "scene_files": {
+    "baseline.js": "456aecd7820be88f7d357ccf6b2265e6dc1bd7a09dcabd21d9ebd9863eaab0f3",
+    "ink-a.js": "c568b370d3596896d2c4a5fc74752ad7b0a3629d0fa9ba216060c94fa0cd435d"
+  },
+  "actual_capture": {
+    "browser": "IAB3 default native1280x720; no viewport override.",
+    "position": "Both scenes walking/encounterWaitingtrue/travel1.780m/girl182.5px; same camera/space. Feet settled at different gait phases, not pixel-identical animation frames.",
+    "screenshots": [
+      "baseline-wait.jpg",
+      "ink-a-wait.jpg"
+    ]
+  },
+  "assessment": "Higher ink contrast restores dark olive strokes, but makes flattened/stretched brush patterns on slopes more obvious. No clear overall improvement; not selected for production. This test does not resolve the broader art-direction gap.",
+  "limits": "Material-only snapshot with prototype controller. No final artifact, mobile, full-route or design score implied. Navigation anchors inherit the asset base and were not used.",
+  "cleanup": "Temporary IAB tabs40 and41 closed. Production scene/prototype unchanged."
+}

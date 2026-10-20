@@ -114,7 +114,7 @@ class HtmlReportTests(unittest.TestCase):
 
     def quiet(self):
         self.model['diagram']['type']='loop'
-        self.model['presentation']={'style':'quiet-v1','hero_states':[
+        self.model['presentation']={'style':'quiet-v1','hero_runtime':'paper-v15','hero_states':[
             {'lines':['Synthetic','state '+str(i)],'description':'State description '+str(i),
              'hint':'State hint','label':'Scene action','node_id':node,'refs':['user:2']}
             for i,node in enumerate(['past','present','action'])]}
@@ -309,14 +309,16 @@ async function check({mode,customRig=false,supportsRig=true,revealDuration,exitD
         result=subprocess.run([node,'-e',script,str(controller)],capture_output=True,text=True,timeout=15)
         self.assertEqual(0,result.returncode,result.stdout+result.stderr)
 
-    def test_quiet_keeps_personal_state_copy_accessible_without_hero_headlines(self):
+    def test_quiet_displays_sourced_scene_copy_and_keeps_reading_accessible(self):
         self.quiet();generate(self.s,self.model_path,self.out)
         result=self.out.read_text()
         hero=result.split('<section class="hero"',1)[1].split('</section>',1)[0]
         self.assertNotIn('<h1',hero)
-        self.assertNotIn('state 0',hero)
+        self.assertIn('id="scene-line-2">state 0</span>',hero)
         self.assertNotIn('个人咨询报告',hero)
         self.assertIn('id="scene-description">State description 0</p>',hero)
+        self.assertIn('id="scene-caption">State description 0</p>',hero)
+        self.assertIn('id="scene-chapters"',hero)
         self.assertIn('aria-describedby="scene-instructions scene-description"',hero)
         self.assertIn('id="step-out"',hero)
         self.assertIn('href="#reading"',hero)
@@ -324,6 +326,26 @@ async function check({mode,customRig=false,supportsRig=true,revealDuration,exitD
         self.assertNotIn('按住，随她往前',result)
         fallback=result.split('<noscript>',1)[1].split('</noscript>',1)[0]
         for i in range(3):self.assertIn('State description '+str(i),fallback)
+
+    def test_hero_choices_require_distinct_ids_conditions_and_current_sources(self):
+        self.quiet()
+        choices = [{'id': 'route'+str(i), 'title': 'Route '+str(i), 'condition': 'When this condition holds',
+                    'text': 'One controllable experiment, without a promised result', 'refs': ['user:5']}
+                   for i in range(3)]
+        self.model['presentation']['hero_choices'] = choices
+        self.save(); generate(self.s,self.model_path,self.out)
+        result = self.out.read_text()
+        data = json.loads(re.search(r'<script id="report-data" type="application/json">(.*?)</script>', result, re.S)[1])
+        self.assertEqual(choices, data['hero_choices'])
+        for mutate, message in [
+            (lambda c: c.pop(), 'three conditional alternatives'),
+            (lambda c: c[1].update(id='route0'), 'duplicate hero choice'),
+            (lambda c: c[0].update(condition=''), 'hero choice condition'),
+            (lambda c: c[0].update(refs=['user:99']), 'section references'),
+        ]:
+            self.model['presentation']['hero_choices'] = copy.deepcopy(choices)
+            mutate(self.model['presentation']['hero_choices']); self.save()
+            with self.assertRaisesRegex(ValueError,message): generate(self.s,self.model_path,self.out)
 
     def test_quiet_controller_preserves_input_progress_and_static_navigation(self):
         # Execute the real controller against deterministic clocks and a minimal

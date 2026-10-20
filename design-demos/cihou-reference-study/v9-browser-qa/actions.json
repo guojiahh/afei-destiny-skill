@@ -1,0 +1,535 @@
+{
+  "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html",
+  "browser": "Codex In-app Browser via CUA",
+  "note": "Native coordinate mouse interaction only. sinceHoldMs/sinceCtaMs include dispatch and observation overhead. AX snapshots may be diffs: no change is not absence. Mobile means responsive viewport, not touch hardware.",
+  "actions": [
+    {
+      "id": "desktop-00",
+      "action": "set viewport 1440x900; fresh tab",
+      "metrics": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "clientWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "evidence": "desktop-00-initial.jpg"
+    },
+    {
+      "id": "desktop-01",
+      "action": "native coordinate hold at [720,450], 400ms; release",
+      "elapsedMs": 841,
+      "evidence": "desktop-01-short400-release.jpg"
+    },
+    {
+      "id": "desktop-02",
+      "action": "observe released idle for 3s",
+      "evidence": "desktop-02-short400-idle3s.jpg"
+    },
+    {
+      "id": "desktop-03",
+      "action": "second native hold 600ms and release",
+      "evidence": "desktop-03-short600.jpg"
+    },
+    {
+      "id": "desktop-04",
+      "action": "third native hold 800ms and release",
+      "evidence": "desktop-04-short800.jpg"
+    },
+    {
+      "id": "desktop-05",
+      "action": "fourth native hold 800ms and release",
+      "evidence": "desktop-05-short800.jpg"
+    },
+    {
+      "id": "desktop-06",
+      "action": "fifth native hold 800ms and release",
+      "evidence": "desktop-06-short800.jpg"
+    },
+    {
+      "id": "desktop-07",
+      "action": "sixth native hold 600ms, release at encounter",
+      "evidence": "desktop-07-encounter-release.jpg"
+    },
+    {
+      "id": "desktop-08",
+      "action": "idle 700ms during encounter",
+      "evidence": "desktop-08-encounter-idle.jpg"
+    },
+    {
+      "id": "desktop-09",
+      "action": "idle 3s after encounter; still close-up",
+      "evidence": "desktop-09-closeup-idle3s.jpg"
+    },
+    {
+      "id": "desktop-10",
+      "action": "continue native hold 7000ms to full ring",
+      "evidence": "desktop-10-continued-fullring.jpg"
+    },
+    {
+      "id": "desktop-11",
+      "action": "observe full ring settled",
+      "evidence": "desktop-11-fullring-ready.jpg"
+    },
+    {
+      "id": "desktop-12",
+      "action": "reload before single continuous hold",
+      "evidence": "desktop-12-reloaded.jpg"
+    },
+    {
+      "id": "desktop-13",
+      "action": "single continuous native hold10500, mid-hold screenshot",
+      "sinceHoldMs": 2652,
+      "evidence": "desktop-13-hold-t2600.jpg"
+    },
+    {
+      "id": "desktop-14",
+      "action": "same continuous hold, encounter frame",
+      "sinceHoldMs": 3402,
+      "evidence": "desktop-14-hold-t3400.jpg"
+    },
+    {
+      "id": "desktop-15",
+      "action": "same continuous hold, encounter frame",
+      "sinceHoldMs": 4134,
+      "evidence": "desktop-15-hold-t4200.jpg"
+    },
+    {
+      "id": "desktop-16",
+      "action": "same continuous hold, encounter frame",
+      "sinceHoldMs": 4919,
+      "evidence": "desktop-16-hold-t5000.jpg"
+    },
+    {
+      "id": "desktop-17",
+      "action": "single continuous10500ms hold released",
+      "sinceHoldMs": 10904,
+      "evidence": "desktop-17-hold10500-release.jpg"
+    },
+    {
+      "id": "desktop-18",
+      "action": "long hold final settled state",
+      "evidence": "desktop-18-longhold-ready.jpg"
+    },
+    {
+      "id": "desktop-19",
+      "action": "native click final CTA [720,806]",
+      "evidence": "desktop-19-cta-click.jpg"
+    },
+    {
+      "id": "desktop-20",
+      "action": "observe CTA continuation",
+      "sinceCtaMs": 5632,
+      "evidence": "desktop-20-after-cta.jpg"
+    },
+    {
+      "id": "desktop-21",
+      "action": "observe continuation flower/backlook",
+      "sinceCtaMs": 12159,
+      "evidence": "desktop-21-cta-flower.jpg"
+    },
+    {
+      "id": "desktop-22",
+      "action": "observe completion and reading entrance",
+      "sinceCtaMs": 14892,
+      "evidence": "desktop-22-cta-complete.jpg"
+    },
+    {
+      "id": "desktop-23",
+      "action": "native click Continue Reading [760,806]",
+      "evidence": "desktop-23-reading.jpg"
+    },
+    {
+      "id": "desktop-24",
+      "action": "reading anchor settles",
+      "evidence": "desktop-24-reading-settled.jpg"
+    },
+    {
+      "id": "desktop-25",
+      "action": "native click back-to-picture [400,654]",
+      "evidence": "desktop-25-back-to-top.jpg"
+    },
+    {
+      "id": "desktop-26",
+      "action": "back at top; completed new-road scene preserved",
+      "evidence": "desktop-26-top-state-preserved.jpg"
+    },
+    {
+      "id": "desktop-27",
+      "action": "native click replay [670,806]",
+      "evidence": "desktop-27-replay.jpg"
+    },
+    {
+      "id": "desktop-28",
+      "action": "after replay native hold400ms and release",
+      "evidence": "desktop-28-replay-short400.jpg"
+    },
+    {
+      "id": "mobile-00",
+      "action": "fresh tab created at default1280x720; requested override had not carried to new tab",
+      "metrics": {
+        "innerWidth": 1280,
+        "innerHeight": 720,
+        "clientWidth": 1280,
+        "scrollWidth": 1280
+      },
+      "evidence": "mobile-00-initial.jpg"
+    },
+    {
+      "id": "mobile-01",
+      "action": "apply override after fresh tab, actual390x844 confirmed",
+      "metrics": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "evidence": "mobile-01-verified390-initial.jpg"
+    },
+    {
+      "id": "mobile-02",
+      "action": "fresh reload at verified390x844",
+      "evidence": "mobile-02-fresh390.jpg"
+    },
+    {
+      "id": "mobile-03",
+      "action": "native hold400ms at [195,422] and release",
+      "evidence": "mobile-03-short400-release.jpg"
+    },
+    {
+      "id": "mobile-04",
+      "action": "idle3s after short400",
+      "evidence": "mobile-04-short400-idle3s.jpg"
+    },
+    {
+      "id": "mobile-05",
+      "action": "native repeated hold800ms and release",
+      "evidence": "mobile-05-short800.jpg"
+    },
+    {
+      "id": "mobile-06",
+      "action": "native repeated hold800ms and release",
+      "evidence": "mobile-06-short800.jpg"
+    },
+    {
+      "id": "mobile-07",
+      "action": "native repeated hold800ms and release",
+      "evidence": "mobile-07-short800.jpg"
+    },
+    {
+      "id": "mobile-08",
+      "action": "native repeated hold800ms and release",
+      "evidence": "mobile-08-short800.jpg"
+    },
+    {
+      "id": "mobile-09",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-09-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-10",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-10-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-11",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-11-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-12",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-12-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-13",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-13-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-14",
+      "action": "idle250ms released during flower encounter",
+      "evidence": "mobile-14-released-encounter.jpg"
+    },
+    {
+      "id": "mobile-15",
+      "action": "continued native hold7000ms to full ring",
+      "evidence": "mobile-15-continued-fullring.jpg"
+    },
+    {
+      "id": "mobile-16",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 4742,
+      "evidence": "mobile-16-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-17",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 5030,
+      "evidence": "mobile-17-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-18",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 5365,
+      "evidence": "mobile-18-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-19",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 5667,
+      "evidence": "mobile-19-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-20",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 5967,
+      "evidence": "mobile-20-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-21",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 6275,
+      "evidence": "mobile-21-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-22",
+      "action": "single continuous10500ms native hold, encounter sampling",
+      "sinceHoldMs": 6577,
+      "evidence": "mobile-22-longhold-encounter.jpg"
+    },
+    {
+      "id": "mobile-23",
+      "action": "single continuous10500ms native hold released",
+      "sinceHoldMs": 10916,
+      "evidence": "mobile-23-longhold-release.jpg"
+    },
+    {
+      "id": "mobile-24",
+      "action": "longhold final CTA settled; DOM width confirmed",
+      "evidence": "mobile-24-longhold-ready.jpg"
+    },
+    {
+      "id": "mobile-25",
+      "action": "native click CTA [72,762]",
+      "sinceCtaMs": 407,
+      "evidence": "mobile-25-cta-click.jpg"
+    },
+    {
+      "id": "mobile-26",
+      "action": "observe native CTA continuation seed",
+      "sinceCtaMs": 1578,
+      "evidence": "mobile-26-cta-seed.jpg"
+    },
+    {
+      "id": "mobile-27",
+      "action": "observe native CTA continuation new-road",
+      "sinceCtaMs": 3141,
+      "evidence": "mobile-27-cta-new-road.jpg"
+    },
+    {
+      "id": "mobile-28",
+      "action": "observe native CTA continuation new-road",
+      "sinceCtaMs": 4755,
+      "evidence": "mobile-28-cta-new-road.jpg"
+    },
+    {
+      "id": "mobile-29",
+      "action": "observe native CTA continuation flower",
+      "sinceCtaMs": 6153,
+      "evidence": "mobile-29-cta-flower.jpg"
+    },
+    {
+      "id": "mobile-30",
+      "action": "observe native CTA continuation lookback",
+      "sinceCtaMs": 7828,
+      "evidence": "mobile-30-cta-lookback.jpg"
+    },
+    {
+      "id": "mobile-31",
+      "action": "observe native CTA continuation reading-ready",
+      "sinceCtaMs": 10002,
+      "evidence": "mobile-31-cta-reading-ready.jpg"
+    },
+    {
+      "id": "mobile-32",
+      "action": "final continuation settled",
+      "sinceCtaMs": 16176,
+      "evidence": "mobile-32-cta-complete.jpg"
+    },
+    {
+      "id": "mobile-33",
+      "action": "native click Continue Reading [330,763]",
+      "evidence": "mobile-33-reading-click.jpg"
+    },
+    {
+      "id": "mobile-34",
+      "action": "reading settled, no horizontal overflow",
+      "evidence": "mobile-34-reading-settled.jpg"
+    },
+    {
+      "id": "mobile-35",
+      "action": "native back-to-picture [58,564]",
+      "evidence": "mobile-35-back-click.jpg"
+    },
+    {
+      "id": "mobile-36",
+      "action": "completed scene preserved after returning top",
+      "evidence": "mobile-36-top-state-preserved.jpg"
+    },
+    {
+      "id": "mobile-37",
+      "action": "native replay [55,763]",
+      "evidence": "mobile-37-replay.jpg"
+    },
+    {
+      "id": "mobile-38",
+      "action": "native400ms after replay",
+      "evidence": "mobile-38-replay-short400.jpg"
+    },
+    {
+      "id": "mobile-39",
+      "action": "supplement: native hold5100ms; release while kneeling",
+      "sinceHoldMs": 5500,
+      "evidence": "mobile-39-action-release.jpg"
+    },
+    {
+      "id": "mobile-40",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 6001,
+      "evidence": "mobile-40-action-released.jpg"
+    },
+    {
+      "id": "mobile-41",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 6563,
+      "evidence": "mobile-41-action-released.jpg"
+    },
+    {
+      "id": "mobile-42",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 6969,
+      "evidence": "mobile-42-action-released.jpg"
+    },
+    {
+      "id": "mobile-43",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 7476,
+      "evidence": "mobile-43-action-released.jpg"
+    },
+    {
+      "id": "mobile-44",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 7935,
+      "evidence": "mobile-44-action-released.jpg"
+    },
+    {
+      "id": "mobile-45",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 8281,
+      "evidence": "mobile-45-action-released.jpg"
+    },
+    {
+      "id": "mobile-46",
+      "action": "supplement: released during action; observe250ms",
+      "sinceHoldMs": 8619,
+      "evidence": "mobile-46-action-released.jpg"
+    },
+    {
+      "id": "mobile-47",
+      "action": "released after full take/bag action; idle3s, close-up retained",
+      "evidence": "mobile-47-action-released-idle3s.jpg"
+    },
+    {
+      "id": "mobile-48",
+      "action": "continued native hold7000ms",
+      "evidence": "mobile-48-continued-final.jpg"
+    },
+    {
+      "id": "mobile-timing-start",
+      "action": "second native CTA click [72,762] for completion timing"
+    },
+    {
+      "id": "mobile-49",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 8949,
+      "evidence": "mobile-49-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": false
+    },
+    {
+      "id": "mobile-50",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 9490,
+      "evidence": "mobile-50-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": false
+    },
+    {
+      "id": "mobile-51",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 10049,
+      "evidence": "mobile-51-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": false
+    },
+    {
+      "id": "mobile-52",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 10498,
+      "evidence": "mobile-52-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": true
+    },
+    {
+      "id": "mobile-53",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 10994,
+      "evidence": "mobile-53-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": false
+    },
+    {
+      "id": "mobile-54",
+      "action": "CTA completion timing sample",
+      "sinceCtaMs": 11423,
+      "evidence": "mobile-54-cta-completion-timing.jpg",
+      "finalActionsInReturnedAXDiff": false
+    },
+    {
+      "id": "cleanup",
+      "action": "reset temporary viewport",
+      "metrics": {
+        "mobile": {
+          "clientWidth": 390,
+          "innerHeight": 844,
+          "innerWidth": 390,
+          "scrollWidth": 390
+        },
+        "desktop": {
+          "clientWidth": 390,
+          "innerHeight": 844,
+          "innerWidth": 390,
+          "scrollWidth": 390
+        }
+      }
+    },
+    {
+      "id": "cleanup-settled",
+      "action": "mobile viewport reset settled1280x720; original desktop tab still390x844 before closure",
+      "metrics": {
+        "mobile": {
+          "clientWidth": 1280,
+          "innerHeight": 720,
+          "innerWidth": 1280,
+          "scrollWidth": 1280
+        },
+        "desktop": {
+          "clientWidth": 390,
+          "innerHeight": 844,
+          "innerWidth": 390,
+          "scrollWidth": 390
+        }
+      },
+      "evidence": "cleanup-after-viewport-reset.jpg"
+    },
+    {
+      "id": "cleanup-tabs-closed",
+      "action": "temporary QA tabs closed after viewport.reset; mobile DOM confirmed default1280x720; original desktop tab retained390 override until closure, now removed"
+    }
+  ]
+}

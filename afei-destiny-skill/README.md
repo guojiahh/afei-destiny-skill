@@ -1,6 +1,6 @@
 # Afei Destiny Skill · 阿飞命运探索使用说明
 
-默认完整咨询交付为一份个人 HTML：固定莫比乌斯三态主图、九章连续图文解读和可展开技术依据。视觉与结构一致，具体困局、事例、行动及未知按本次资料编写。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)。
+默认完整咨询交付为一份个人 HTML：当前 V19 以 Wayfinder 原站引擎与资源承载闭环三态主图：按住沿固定路线前进、松开停下，首景反复经过六个循环位置，主动切换“此刻／来处／可能”，同页阅读九章图文解读和可展开技术依据。原资源和双底稿下载随单文件内嵌，原作署名与权属见[来源说明](assets/cihou/quiet/wayfinder/PROVENANCE.md)。视觉与结构一致，个人短句随景色平滑浮现；V19 保留 V18 文案，处理首次加载阶段的浮字定位。全 Skill 采用自然的第二人称叙述；过去可用“你可能曾经……”提出有机制依据的学习路径，来源与解释层级保留在底稿和依据中，具体困局与行动按本次资料编写。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)，每份新报告必填的 `loop_story` 与来源边界见[闭环叙事协议](references/loop-narrative.md)。
 这是仓库中**可直接安装**的技能目录，技能 ID 为 `afei-destiny-skill`。它是 afei 的实验性命运探索技能，当前以四柱八字为核心，包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
 
 如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/afei-destiny-skill)。

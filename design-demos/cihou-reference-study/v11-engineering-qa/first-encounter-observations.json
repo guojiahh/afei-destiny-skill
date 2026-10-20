@@ -1,0 +1,77 @@
+{
+  "status": "unreviewed engineering draft; not selected",
+  "wideSequence": [
+    {
+      "frame": "idle-01-waiting-after-10s.jpg",
+      "action": "idle at least 10s",
+      "phase": "walking",
+      "waiting": true,
+      "travel": 1.754,
+      "ownership": "stem",
+      "actorPixels": 154.1
+    },
+    {
+      "frame": "idle-02-after-400ms.jpg",
+      "action": "native 400ms press then release",
+      "phase": "walking",
+      "waiting": true,
+      "travel": 1.754,
+      "ownership": "stem"
+    },
+    {
+      "frame": "idle-03-after-3s-hold.jpg",
+      "action": "native 3000ms hold",
+      "phase": "picking",
+      "waiting": false,
+      "travel": 2.26,
+      "actionProgress": 0.38595,
+      "actorPixels": 186.2
+    }
+  ],
+  "finalMobile": [
+    {
+      "frame": "final-mobile-05-revealing.jpg",
+      "phase": "revealing",
+      "storyProgress": 0.835036666666667,
+      "pitchWeight": 1,
+      "actorPixels": 70.2,
+      "travel": 32.018
+    },
+    {
+      "frame": "final-mobile-06-choice.jpg",
+      "phase": "choice",
+      "pitchWeight": 0.0014,
+      "actorPixels": 221.3,
+      "travel": 32.018
+    },
+    {
+      "frame": "final-mobile-07-cross-release.jpg",
+      "phase": "crossing",
+      "actionProgress": 0.67,
+      "ownership": "ground"
+    },
+    {
+      "frame": "final-mobile-08-complete.jpg",
+      "phase": "complete",
+      "exitProgress": 1,
+      "exitDistance": 4.671,
+      "actorPixels": 135.1,
+      "scrollY": 0,
+      "scrollWidth": 390
+    },
+    {
+      "frame": "final-mobile-09-replay.jpg",
+      "phase": "walking",
+      "waiting": false,
+      "travel": 0.06,
+      "ownership": "stem"
+    },
+    {
+      "frame": "final-mobile-10-replay-waiting.jpg",
+      "phase": "walking",
+      "waiting": true,
+      "travel": 1.754,
+      "ownership": "stem"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "purpose": "Anonymous layout-only preview, not a consultation delivery. Girl is one static walking pose; only the road surface animates.",
+  "character_height": "clamp(48px, 10svh, 96px)",
+  "position": "Viewport centre, on diagonal road",
+  "generator": "Built-in image_gen tool",
+  "source_concept": "exec-21dee17c-77ec-4d11-850c-9c0494a1457c.png",
+  "cutout": "girl-walking-v1.png",
+  "prompt": "Isolate the middle walking girl from the original character sheet; preserve her design and pose, remove the other figures, use a transparent background with no text. Render in HTML at approximately 10% viewport height."
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f1eade">
+<title>路的另一面 · 主图原型</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#405879;background:#f1eade}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}button:focus-visible,a:focus-visible{outline:1px solid #405879;outline-offset:8px}.hero{height:100svh;min-height:480px;position:relative;overflow:hidden}.world{position:absolute;inset:0;touch-action:none;user-select:none;cursor:default}.skip{transform:translateY(-90px);position:absolute;right:32px;top:28px;z-index:3;color:#405879;text-decoration:none;font-size:11px;letter-spacing:.08em;opacity:.7}.skip:focus-visible{transform:translateY(0);opacity:1}.invitation{position:absolute;left:50%;bottom:8.5%;transform:translateX(-50%);display:flex;align-items:center;gap:11px;font-size:12px;letter-spacing:.12em;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .8s}.invitation.visible{opacity:.85}.invitation.held .words{opacity:0}.words{transition:opacity .25s}.press-mark{width:25px;height:25px;flex:none;transform:rotate(-90deg)}.press-mark circle{fill:none;stroke:#405879;stroke-width:.75}.press-mark .base{opacity:.25}.press-mark .progress{stroke-dasharray:62.83;stroke-dashoffset:62.83;stroke-width:1.25;opacity:.8}.completion{position:absolute;inset:auto 5.5% 8%;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity 1.1s,transform 1.1s}.completion.visible{opacity:1;transform:translateY(0);pointer-events:auto}.thought{font:400 14px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:.10em;margin:0}.actions{display:flex;align-items:center;gap:26px}.text-button{border:0;background:none;cursor:pointer;padding:12px 0;font-size:12px;letter-spacing:.08em;white-space:nowrap}.text-button.secondary{color:#7a8472}.continue{font-size:13px;text-decoration:none;color:inherit;white-space:nowrap}.continue span{display:inline-block;margin-left:10px;transition:transform .3s}.continue:hover span{transform:translate(2px,2px)}.reading{min-height:80vh;max-width:760px;padding:110px 28px 120px;margin:auto;border-top:1px solid #d0d4c5}.reading h1{font:400 clamp(28px,4vw,40px)/1.6 "Songti SC","STSong",serif;margin:0 0 28px}.reading p{max-width:32em;font-size:15px;line-height:2;color:#6b7566}.reading .back{display:inline-block;margin-top:48px;color:inherit;font-size:12px;text-decoration:none}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:600px){.skip{top:24px;right:22px}.hero{min-height:420px}.completion{left:25px;right:25px;bottom:7%;align-items:flex-start;flex-direction:column;gap:24px}.actions{width:100%;justify-content:space-between}.thought{font-size:14px}.invitation{bottom:9%;font-size:11px}.reading{padding-top:70px}.completion.visible~.invitation{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<section class="hero" id="top" aria-label="道路与莫比乌斯环的互动主图">
+  <a class="skip" href="#reading">阅读正文</a>
+  <div class="world" id="world" role="button" tabindex="0" aria-label="按住鼠标或空格键，让镜头慢慢拉远；松开停在当前视角。"></div>
+  <div class="invitation" id="invitation"><svg class="press-mark" viewBox="0 0 24 24" aria-hidden="true"><circle class="base" cx="12" cy="12" r="10"/><circle class="progress" cx="12" cy="12" r="10"/></svg><span class="words" id="instruction">按住，随她往前</span></div>
+  <div class="completion" id="completion"><p class="thought">风继续向前。</p><div class="actions"><button class="text-button secondary" id="replay" type="button">再看一次</button><a class="continue" href="#reading">继续阅读<span aria-hidden="true">↘</span></a></div></div>
+  <p class="sr" id="status" aria-live="polite"></p>
+</section>
+<main class="reading" id="reading"><h1>从眼前的路，<br>到另一种看法。</h1><p>这里是正文衔接位置。主图与阅读互相独立，可以先停下来看看，也可以随时开始阅读。</p><p>此页只用于打磨画面与交互，不包含个人咨询内容。</p><a class="back" href="#top">回到画面 ↑</a></main>
+<script src="three.min.js"></script>
+<script src="hero-scene-v3.js"></script>
+<script>
+(function(){
+'use strict';
+var world=document.getElementById('world'),invite=document.getElementById('invitation'),completion=document.getElementById('completion'),arc=invite.querySelector('.progress'),status=document.getElementById('status'),replay=document.getElementById('replay');
+var scene=window.heroScene=new CihouHeroSceneV3(world,{spriteUrl:'girl-walk-v2.png',spriteFrames:8,spriteColumns:4,spriteRows:2,spriteFps:8,onSpriteReady:function(){window.heroSpriteReady=true}}),reduced=scene.reducedMotion,progress=0,holding=false,last=0,revealFinished=false,settleAt=0,rewindStart=0,rewindFrom=0;
+var query=new URLSearchParams(location.search);if(query.has('progress')){progress=Math.max(0,Math.min(1,Number(query.get('progress'))));scene.progress=scene.targetProgress=progress;scene.render();}if(query.get('paused')==='1')scene.setPaused(true);
+function announce(text){status.textContent=text;}
+function start(event){if(event&&event.button!==undefined&&event.button!==0)return;if(revealFinished||rewindStart)return;if(reduced){progress=1;scene.setProgress(1);holding=false;finish();return;}holding=true;scene.setInteraction(1);invite.classList.add('held','visible');if(event&&event.pointerId!==undefined)world.setPointerCapture(event.pointerId);}
+function stop(){holding=false;scene.setInteraction(0);invite.classList.remove('held');if(progress>0&&!revealFinished)document.getElementById('instruction').textContent='继续按住';}
+function finish(){if(revealFinished)return;revealFinished=true;holding=false;scene.setInteraction(0);invite.classList.remove('visible','held');settleAt=performance.now()+1500;announce('已看见完整环面。可以继续阅读，或重新观看。');}
+world.addEventListener('pointerdown',start);world.addEventListener('pointerup',stop);world.addEventListener('pointercancel',stop);world.addEventListener('lostpointercapture',stop);world.addEventListener('contextmenu',function(event){event.preventDefault()});
+world.addEventListener('keydown',function(event){if((event.code==='Space'||event.code==='Enter')&&!event.repeat){event.preventDefault();start();}});world.addEventListener('keyup',function(event){if(event.code==='Space'||event.code==='Enter'){event.preventDefault();stop();}});window.addEventListener('blur',stop);
+if(reduced)document.getElementById('instruction').textContent='点击，看见全貌';
+setTimeout(function(){if(!revealFinished&&!rewindStart)invite.classList.add('visible')},1800);
+replay.addEventListener('click',function(){completion.classList.remove('visible');settleAt=0;revealFinished=false;rewindFrom=progress;rewindStart=performance.now();stop();announce('重新回到路上。');});
+document.addEventListener('visibilitychange',function(){stop();scene.setActive(!document.hidden)});
+if('IntersectionObserver'in window)new IntersectionObserver(function(entries){scene.setActive(entries[0].isIntersecting&&!document.hidden);if(!entries[0].isIntersecting)stop();},{threshold:.02}).observe(world);
+window.addEventListener('pagehide',function(){scene.setActive(false);stop()});window.addEventListener('pageshow',function(){scene.setActive(true)});
+function tick(now){var dt=last?Math.min(.05,(now-last)/1000):0;last=now;if(holding&&!revealFinished){progress=Math.min(1,progress+dt/6.5);scene.setProgress(progress);if(progress===1)finish();}if(rewindStart){var t=reduced?1:Math.min(1,(now-rewindStart)/1900);progress=rewindFrom*(1-t*t*(3-2*t));scene.setProgress(progress);if(t===1){rewindStart=0;document.getElementById('instruction').textContent=reduced?'点击，看见全貌':'按住，随她往前';invite.classList.add('visible');world.focus({preventScroll:true})}}arc.style.strokeDashoffset=String(62.83*(1-progress));if(settleAt&&now>=settleAt){settleAt=0;completion.classList.add('visible')}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+if(progress===1)finish();
+})();
+</script>
+</body>
+</html>

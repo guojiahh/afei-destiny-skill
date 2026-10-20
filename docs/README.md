@@ -18,8 +18,8 @@
 | 想了解此后的产品形态与后续规划 | [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md) |
 | 想查看第一阶段完成范围与设计约束 | [主图与连续阅读重构方案](CIHOU_PHASE1_REDESIGN.md)：莫比乌斯视觉与九章正文已固定为新报告模板 |
 | 想了解主图与完整咨询报告如何衔接 | [主图与完整报告体验方案](CIHOU_REPORT_EXPERIENCE.md)（历史研究，非现役选型） |
-| 想查看默认最终交付的生成流程 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md) |
-| 想体验当前匿名视觉样机 | [quiet 页面](../design-demos/cihou-quiet.html)及[源码与设计说明](../design-demos/cihou-quiet/README.md)；完整个人报告由正式生成器另行生成 |
+| 想查看默认最终交付的生成流程 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md)、[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md) |
+| 想体验当前完整匿名演示 | [V19 求职示例](../design-demos/cihou-wayfinder-v19/final_report.html)及[构建脚本](../design-demos/cihou-wayfinder-v19/build_demo.py)；显式合成材料，真实个人报告另用本次来源生成 |
 | 想区分当前样机和历史设计 | [设计演示索引](../design-demos/README.md) |
 
 ## 项目说明

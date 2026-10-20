@@ -1,0 +1,13 @@
+{
+  "scope": "Frozen current v10 evidence only; no design score yet",
+  "files": {
+    "hero-scene-v10.js": "19fddce3047dc986c655cc111b4faeada6092331fdfb2b241dd5dc24986bd36a",
+    "prototype-v10.html": "c6b006a53bcb9c74bafc027d19d8ab806d8a2d9087da21ab13a312b17e0db0e1",
+    "hero-character-rig-v10.js": "b57cef27a03b1a530f5648186dd997e4fdd9d79a284f79713a78f407441eb355",
+    "paper-road-v10.png": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754",
+    "paper-terrain-v10.png": "ea95afe3f51863954b4a8fd7bee736526518e95134d88924566680c8f7cdf67d",
+    "girl-rig-parts-v5.png": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+    "girl-rig-parts-v5.json": "ffcc083bbec330064b1d51fe484d588effcd58c2dea66d0794c71c1a5894cfcf"
+  },
+  "prompt_sha256": "7c18467d9ac9d6cbadaa3d0392309b460d283af1a333357bfb127181cb930190"
+}

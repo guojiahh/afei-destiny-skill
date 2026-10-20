@@ -136,7 +136,7 @@ evaluation/
 - `assets/showcase/`：README 主视觉、社交预览、能力闭环图和抽象背景。
 - `assets/contact/`：联系图片。
 - `design-demos/`：匿名产品原型、保留的历史设计，以及上述展示图的 HTML 源稿和渲染脚本；以[设计演示索引](../design-demos/README.md)区分用途。
-- 当前匿名视觉入口为 `design-demos/cihou-quiet.html`，源码在 `design-demos/cihou-quiet/`；它只演示视觉与交互，不承担完整咨询生成。正式开发从 [此后交接](CIHOU_HANDOFF.md)进入 Skill 内的生成器与 `assets/cihou/quiet/`。
+- 当前完整匿名入口为 [V19 求职示例](../design-demos/cihou-wayfinder-v19/final_report.html)，合成双底稿、模型与构建脚本位于同目录；由正式生成器输出原站引擎与资源内嵌的单份 HTML。`design-demos/cihou-quiet.html`、V8、V15、[V16](../design-demos/cihou-wayfinder-v16/final_report.html)、[V17](../design-demos/cihou-wayfinder-v17/final_report.html)和 [V18](../design-demos/cihou-wayfinder-v18/final_report.html)保留为历史设计对照。正式开发从 [此后交接](CIHOU_HANDOFF.md)进入 Skill 内的生成器与 `assets/cihou/quiet/wayfinder/`。
 - `design-demos/cihou-stage1.html` 及同名目录是四个人工匿名案例的历史设计对照，不再是当前开发入口。真实个人报告只保存在对应 `consultation_state/<session>/`。
 
 它们不会影响 Skill 的推理准确率。做功能优化时无需加载这些文件。
@@ -176,7 +176,7 @@ evaluation/
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
 | 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；完成双底稿、个人模型与 HTML，校验登记后才完成默认交付 |
 | 修改正式 HTML 交付 | [HTML 协议](../afei-destiny-skill/references/html-report.md)、`scripts/generate_html_report.py`、`assets/cihou/`（均在 Skill 内） | 运行来源、覆盖、失效与安全回归；核对完整内容和桌面／窄屏交互 |
-| 修改此后匿名视觉样机 | [quiet 源码说明](../design-demos/cihou-quiet/README.md) | 重建单文件 HTML，核对桌面／窄屏、图内点击、暂停与减少动画；正式页面改动同时检查 Skill 渲染器 |
+| 修改此后匿名视觉样机 | [V19 构建脚本](../design-demos/cihou-wayfinder-v19/build_demo.py)、[此后交接](CIHOU_HANDOFF.md) | 重建并 `--check` 单文件 HTML，核对桌面／窄屏、行走、换景、选择、暂停与减少动态；不覆盖历史原型 |
 | 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，继续按 [HTML 协议](../afei-destiny-skill/references/html-report.md) 编排模型，生成并登记主交付 HTML |
 
 ## 文件治理规则
@@ -192,7 +192,7 @@ evaluation/
 
 - Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
 - 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；默认个人 HTML 生成、校验、登记与下游失效已接通，双 Markdown 保留为底稿。
-- 当前此后：第一阶段已于 2026-10-16 完成并获用户确认；quiet 视觉已用于正式个人 HTML，所有新完整报告统一莫比乌斯主图，支持三状态图内点击、持续行走与主动跨出，正文连续承接完整咨询。当前共享纸带几何并固定九章正文与双底稿结构；连续 3D、视频与私有在线交付的后续范围以[交接说明](CIHOU_HANDOFF.md)为准。
+- 当前此后：第一阶段已于 2026-10-16 完成并获用户确认；quiet 视觉已用于正式个人 HTML，所有新完整报告统一莫比乌斯隐喻、三态、九章正文与双底稿结构。2026-10-20 的 V19 继续复用 Wayfinder 原站运行时与美术、音频及视频，按住沿固定路线行走，首景重复六节点循环，三态为此刻／来处／可能；每份新模板按[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)必填 `loop_story`，采用自然的第二人称与可能的形成路径，方法说明集中于依据，场景短句平滑浮现；原资源与九章全文内嵌为单份 HTML。V19 沿用 V18 文案，仅集中处理首次加载浮字定位。原 V8、V15、V16、V17、V18 与历史交付保留。原作权属、实际验收与私有在线交付的后续范围以[交接说明](CIHOU_HANDOFF.md)为准。
 - 当前本地门禁：Skill 与评测两组回归测试（数量以当前检查输出为准）、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。

@@ -1,0 +1,64 @@
+{
+  "title": "Optional v12 native production direction derived from concept",
+  "status": "Research only. Adopt selectively only after the current independent review and an explicit production decision.",
+  "concept": "concept.png",
+  "mainComposition": {
+    "aspect": "16:9 study; actual mobile reframe must be separately designed",
+    "camera": "Low elevated three-quarter travelling view, not top-down isometric product shot. Look across continuous terrain toward upper-right route.",
+    "roadPath": "Enter beyond lower-left corner, pass near center feet, curve toward upper-right ridge and become occluded by land. Do not present the complete loop at initial view.",
+    "character": "Use original rig and original v5 artwork; target 15-18% initial viewport height, grounded stance, head near center. Concept is about20%, so do not copy pixel size directly.",
+    "landmark": "One slanted pale stone and one identifiable three-petal ochre flower ahead-right. Preserve identical flower geometry from stem to hand to bag to final recurrence.",
+    "depthLayers": [
+      "Cropped foreground twig or grass at lower-left occupying under8% frame",
+      "Local continuous land, road, girl, low stone and flower",
+      "Shallow gully and one rising bank",
+      "Two broad pale grey-mauve low ridges and quiet distant air"
+    ]
+  },
+  "native3DComponents": [
+    {
+      "component": "Continuous land",
+      "method": "One low-complexity heightfield or stitched broad curved patches, with a shallow depression and a rising bank. Use original low-frequency albedo as material. Keep real world contact and intersection with road; avoid a giant flat beige floor plus detached path."
+    },
+    {
+      "component": "Walkable blue road",
+      "method": "Native mesh following the local terrain/camera path; nearly level around the girl. Road starts broad and recedes by actual perspective. No complete large ring sprite, uniform pink edge or baked world PNG."
+    },
+    {
+      "component": "Möbius reveal",
+      "method": "Place the continuous return and half-twist/bridge relation behind actual terrain at initial view. Reveal through camera travel and genuine occlusion once later; verify mathematical surface continuity and character footing in implementation. The concept alone supplies no solution or proof."
+    },
+    {
+      "component": "Stone",
+      "method": "One asymmetric low wedge with few broad planes and a chipped corner. Broad cool shadow side and quiet light top; original paper-terrain material at consistent world scale; one short selected ink crack."
+    },
+    {
+      "component": "Flower",
+      "method": "A single reusable native mesh hierarchy or separately authored transparent component. Three unequal ochre petals, dark heart, slim olive stem and two unequal leaves. One production mesh reused for every story attachment state; crown about0.10-0.12 character height."
+    },
+    {
+      "component": "Vegetation",
+      "method": "A few original irregular blade/clump shapes in unequal sparse patches that follow the bank and gully. Reserve empty soil around girl/landmark. Reduce the concept's grass-mark density by at least about half. Do not clone three equally sized stone-grass kits."
+    },
+    {
+      "component": "Distant ridges",
+      "method": "Two broad actual silhouette meshes or low-detail depth-separated shapes with muted grey-mauve and atmospheric desaturation. No fixed background horizon plate that prevents camera parallax."
+    },
+    {
+      "component": "Shadows",
+      "method": "Native neutral directional lighting from upper-left and soft lower-right cast shadows; tiny contact shadow at planted foot and stone base. Avoid giant opaque hard shadow blocks and inspect shadow acne."
+    }
+  ],
+  "localImageAssetUse": {
+    "allowed": "Use existing original generated low-frequency road/terrain materials as local albedo. If additional foliage/rock detail is needed, author isolated original material/cutout assets with clean alpha and no perspective or lighting baked into them.",
+    "prohibited": "Do not use concept.png as a giant world plane, crop it into misleading runtime layers, claim it is a live browser capture, or count it as an interaction review. It contains perspective, depth, girl, terrain, flower and shadows baked together and cannot supply genuine parallax or contact.",
+    "reason": "The live hero needs camera movement, visible footing, flower transfer, occlusion, route continuity and final state causality. A single painted concept cannot implement these."
+  },
+  "interactionImplications": [
+    "First let the user recognize a walkable local place and the single landmark before any pullback.",
+    "A repeat encounter should be understood from the exact stone corner and flower silhouette; reveal the loop afterward.",
+    "Keep user input tied to a visible action, and preserve flower identity across every action. This concept says nothing about timing performance and must not be used as evidence of those qualities."
+  ],
+  "acceptance": "Requires actual rendered desktop/mobile composition, real interaction and fresh independent review. Do not automatically replace a version that already passes review.",
+  "untouched": "No product code, runtime image or formal bundle changed by this study."
+}

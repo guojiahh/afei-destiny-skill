@@ -1,0 +1,78 @@
+{
+  "version": "meadow-tufts-v13",
+  "status": "Optional original art candidate; not integrated or independently accepted",
+  "tool": "builtin image_gen.imagegen",
+  "transparent_background": true,
+  "output": "meadow-tufts-v13.png",
+  "originalPngUnmodified": true,
+  "postProcessing": "None. Selected original PNG copied byte-for-byte into workspace.",
+  "attempts": [
+    {
+      "kind": "generate",
+      "prompt": "Use case: illustration-story\nAsset type: original transparent sprite atlas for a small hand-painted storybook WebGL meadow, rendered on screen at only 10–40 pixels per tuft. Make ONE square PNG, exactly FOUR isolated different grass tufts arranged in a spacious 2 by 2 grid, with generous fully transparent gutters and margins. TRUE alpha transparency, not a checkerboard or painted background.\nInput images and roles, in supplied order: (1) Kaizen screenshot: reference for broad expressive dry gouache marks and paper pigment. (2) Nomadic Tribe screenshot: reference for confidently authored silhouettes and limited contrasting color blocks, NOT for birds or characters. (3) Wayfinder grassland screenshot: reference for low clusters of thin grass with clear grouped rhythms rather than large leafy plants. (4) Project concept painting: main palette and fine meadow-grass art direction, quiet grey sage/olive grasses, warm ivory straw and very occasional subdued ochre tip, a gently windblown hillside. (5) Actual project widebank scene: palette and viewing-scale compatibility; improve its sparse vegetation with natural low meadow tufts, NOT broad aloe leaves. Create original vegetation only.\nLayout: upper-left = a wide LOW patch of fine short meadow blades, about 18–26 irregular blades grouped in 3 linked clusters across a gently undulating root baseline; upper-right = a taller slender wheat-grass tuft with about 9–13 thin stems and a few tiny non-floral seed heads; lower-left = a medium tuft leaning consistently to the right in one wind gesture, 12–16 tapered varied thin blades; lower-right = a sparse short tuft of 6–9 irregular blades. Give each silhouette a different rhythm, width and asymmetry. Roots all meet a clearly defined narrow bottom baseline that can be placed on actual terrain; do not show literal roots below that line. Each cell should have ample empty transparent space around the whole tuft. No clipping, no overlap across cells.\nMedium: carefully painted flat gouache/tempera botanical marks with a few drybrush notches inside the shapes. The overall tuft should read as 2–4 bold tapered grouped gestures when reduced; avoid hairline lace or sand-like stipple. Slender individual blades must remain grass, not wide tropical leaves. Mostly muted grey-sage and olive, a few warm straw-ivory blades and subdued ochre seed tips. No neon yellow, red fringe, black contour, or photo-real detail. Soft handmade pigment, crisp readable outer silhouettes, subtle surface texture, no 3D gloss. Cohesive with the supplied concept art without reproducing its character or scenery.\nBackground and exclusions: fully transparent alpha around and between all four tufts; no ground patch, soil, rocks, flowers, petals, branches, bushes, cactus, succulent, aloe, large leaves, character, sky, scene, border, labels, symbols, text, watermark, cast shadows or ambient haze. Not repeated V symbols. Do not paint a black or white backdrop. The four grass tufts are the ONLY visible content.",
+      "referenced_image_paths": [
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "design-demos/cihou-reference-study/v12-art-study/concept.png",
+        "design-demos/cihou-reference-study/v12-stage-qa/widebank-01-first.jpg"
+      ],
+      "rawOutput": "/Users/afei/.codex/generated_images/01a14960-c1cb-70e1-ae31-d686359e8de0/exec-adf1611e-922d-4d1f-b064-0d97f4d6cfbd.png",
+      "selected": false,
+      "assessment": "Four usable separated shapes, but too broad and succulent-like; targeted edit requested.",
+      "rawOutputSha256": "533b54a6e4e3d64bbc4e198fde9e4af675b8b216e4f78719e9542ee7eca37373",
+      "inputSha256": {
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+        "design-demos/cihou-reference-study/v12-art-study/concept.png": "1e28ca147faec1acec9de85e3b0c2efe9459429e745474c1ffd2ef3b1157a7ce",
+        "design-demos/cihou-reference-study/v12-stage-qa/widebank-01-first.jpg": "17da99d4a9ba45a04dd0e39d4c7f41157358eac6f062740fc50dfc14bbc2e484"
+      }
+    },
+    {
+      "kind": "edit",
+      "prompt": "Use case: precise-object-edit. Target is image 1, the generated four-tuft transparent atlas. Improve ONLY grass morphology: all four groups must become genuinely FINE MEADOW GRASS, like the needle-thin grasses in the supplied project concept (image 5) and Wayfinder ground (image 4), with narrow tapered curved stems. The current atlas has thick flat pointed leaf blades that resemble small succulents; replace those with thin wiry grass. Each blade width should be about 1/40 to 1/65 of its tuft width, several can overlap into small painterly masses at the root only. A few taller seed-bearing stems, but no wide leaves, no aloe and no fleshy shapes. Long clear tapered flowing pen-and-gouache strokes, small-scale silhouette readability, not granular noise. Preserve the four different silhouettes and placement, true transparent alpha, their quiet muted grey-sage/olive/straw palette, and original handmade pigment surface. Make upper-left lower and wider with three low linked grass clusters; upper-right a few elegant taller airy stems; lower-left all lean right as one gentle gust; lower-right very short and sparse. Root baselines narrow and clearly grounded, no soil. Keep full tufts within four non-overlapping cells with wide transparent margins/gutters. Reference images 2–4 are Kaizen/Nomadic Tribe/Wayfinder for art direction only; image 5 project concept is the strongest botanical cue. Preserve the current atlas palette that was derived from the actual world screenshot. No scenery, characters, flowers, rocks, ground, shadow, text, labels, border, painted black or white background. Maintain REAL transparency. This is a small original vegetation sprite sheet, not a scene.",
+      "referenced_image_paths": [
+        "/Users/afei/.codex/generated_images/01a14960-c1cb-70e1-ae31-d686359e8de0/exec-adf1611e-922d-4d1f-b064-0d97f4d6cfbd.png",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "design-demos/cihou-reference-study/v12-art-study/concept.png"
+      ],
+      "rawOutput": "/Users/afei/.codex/generated_images/01a14960-c1cb-70e1-ae31-d686359e8de0/exec-e71df189-3698-4173-ae67-4faa1b22d45e.png",
+      "selected": true,
+      "assessment": "More fine curved grass and grouped rhythms than v12 broad leaves. Still dense clump masses, especially tall/leaning tufts, and seed heads remain broad. Runtime small-size and alpha-tested native scene QA required.",
+      "rawOutputSha256": "ba86e8539c3bdf14150002aaa150e8cce3df41ac2ae53ea2bd63bef6a9c50cdb",
+      "inputSha256": {
+        "/Users/afei/.codex/generated_images/01a14960-c1cb-70e1-ae31-d686359e8de0/exec-adf1611e-922d-4d1f-b064-0d97f4d6cfbd.png": "533b54a6e4e3d64bbc4e198fde9e4af675b8b216e4f78719e9542ee7eca37373",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+        "design-demos/cihou-reference-study/v12-art-study/concept.png": "1e28ca147faec1acec9de85e3b0c2efe9459429e745474c1ffd2ef3b1157a7ce"
+      }
+    }
+  ],
+  "referenceInputPolicy": "The generation included all three original-site screenshots plus project concept and actual widebank scene. The follow-up edit included target plus all three original-site screenshots and concept (tool maximum five paths); actual world palette inherited through target.",
+  "validation": {
+    "referenceImagesExplicitlyViewed": true,
+    "selectedRawPngExplicitlyViewed": true,
+    "oldMeadowPartsV12ExplicitlyViewed": true,
+    "alphaAndBoundsReadOnlyMeasured": true,
+    "pngPostProcessing": false,
+    "browserUsed": false,
+    "sceneModified": false
+  },
+  "limits": [
+    "Not evidence of completed design, native small-size readability, terrain rooting, depth/shadow behavior or acceptance.",
+    "Requested equal quadrants were not strictly obeyed: left column wider. Metadata source rectangles isolate all four without clipping at alpha>=8.",
+    "Low-alpha RGB fringe exists in original generated output; preserve original bytes and discard faint fringe at material alphaTest around 0.05.",
+    "Do not scatter tall or wide patches uniformly; use varied sparse authored groups and keep walk/flower contact areas clear."
+  ],
+  "outputSha256": "ba86e8539c3bdf14150002aaa150e8cce3df41ac2ae53ea2bd63bef6a9c50cdb",
+  "outputSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "integrationWarning": "Four distinct grass parts, NO twig. Existing scene kind % 3 placement and name === twig logic cannot directly consume this atlas: first/fourth grass can overlap. Explicitly implement four unequal authored distributions before replacing atlas. Do not rename grassD to twig."
+}

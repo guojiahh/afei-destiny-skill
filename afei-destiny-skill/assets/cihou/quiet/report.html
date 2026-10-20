@@ -14,8 +14,19 @@
     <h1 class="sr-only">@@TITLE@@</h1>
     <section class="hero" id="top" aria-label="本次咨询的核心关系" data-state="0">
       <a class="hero-reading" href="#reading">阅读正文</a>
+      <nav class="scene-chapters" id="scene-chapters" aria-label="探索视角">
+        <button type="button" id="chapter-road" aria-current="step"><span>01</span> 来处</button>
+        <button type="button" id="chapter-ring"><span>02</span> 此刻</button>
+        <button type="button" id="chapter-choices"><span>03</span> 可能</button>
+      </nav>
       <div class="scene" id="scene" role="button" tabindex="0" aria-label="@@FIRST_LABEL@@" aria-describedby="scene-instructions scene-description"></div>
-      <p class="sr-only" id="scene-instructions">按住鼠标、触摸画面或按住空格键，让视角慢慢拉远；松开停在当前视角。也可随时跳到完整解读。</p>
+      <div class="scene-copy" id="scene-copy">
+        <p class="scene-kicker" id="scene-kicker">路上 · 01 / 03</p>
+        <h2 id="scene-headline"><span id="scene-line-1">@@FIRST_LINE_1@@</span><span id="scene-line-2">@@FIRST_LINE_2@@</span></h2>
+        <p id="scene-caption">@@FIRST_DESCRIPTION@@</p>
+      </div>
+      <div class="scene-transition" id="scene-transition" aria-hidden="true"></div>
+      <p class="sr-only" id="scene-instructions">鼠标左右移动，沿环路前进或回走；移回中央停下。触摸或方向键也可行走，顶部可直接切换视角，随时阅读正文。</p>
       <p class="sr-only" id="scene-description">@@FIRST_DESCRIPTION@@</p>
       <p class="sr-only" id="scene-status" aria-live="polite" aria-atomic="true"></p>
       <div class="scene-invitation" id="scene-invitation" aria-hidden="true">
@@ -23,9 +34,19 @@
         <span class="invitation-words" id="scene-invitation-words">按住，看见更多</span>
       </div>
       <div class="scene-completion" id="scene-completion" hidden>
-        <button class="text-button" id="step-out" type="button">再往前一步 ↗</button>
+        <button class="text-button" id="step-out" type="button">看看其他走法 ↗</button>
         <div class="scene-final-actions" id="scene-final-actions" hidden><button class="text-button secondary" id="replay-final" type="button">再看一次</button><a class="continue-reading" href="#reading">继续阅读<span aria-hidden="true">↘</span></a></div>
       </div>
+      <section class="scene-choices" id="scene-choices" aria-label="比较有条件的走法" hidden>
+        <p class="choices-intro">换一处风景，看看这条路的条件。</p>
+        <div class="choice-tabs" role="group" aria-label="可选走法">
+          <button type="button" id="choice-0" aria-pressed="false"></button>
+          <button type="button" id="choice-1" aria-pressed="false"></button>
+          <button type="button" id="choice-2" aria-pressed="false"></button>
+        </div>
+        <div id="choice-detail" class="choice-detail" hidden><p id="choice-condition"></p><p id="choice-text"></p><button class="text-button" id="choice-walk" type="button">试着走一步 ↗</button></div>
+      </section>
+      <p class="scene-footnote" id="scene-footnote">画面里的路，可以停下，也可以重新选择。</p>
       <div class="scene-tools" aria-label="画面播放控制">
         <button class="tool replay" id="replay" type="button" aria-label="重新观看" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 8A8 8 0 1 1 4 13M5 3v6h6"/></svg><span hidden>重看</span>

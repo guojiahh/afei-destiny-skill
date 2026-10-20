@@ -1,0 +1,108 @@
+{
+  "createdAtUTC": "2026-10-17T09:06:35Z",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "sourcePngCopiedUnmodified": true,
+  "noPythonVisualEditing": true,
+  "inputs": [
+    {
+      "path": "design-demos/cihou-reference-study/v12-art-study/concept.png",
+      "sha256": "1e28ca147faec1acec9de85e3b0c2efe9459429e745474c1ffd2ef3b1157a7ce",
+      "role": "Original project composition research; local meadow palette and paint-scale reference only, no whole-world bitmap use"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "sha256": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+      "role": "Actual benchmark screenshot; economy of broad paint planes and ink contours only, no screenshot objects/layout/UI copied"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "sha256": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+      "role": "Actual benchmark screenshot; quiet low-frequency painterly material and soft distant colors only"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "sha256": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+      "role": "Actual benchmark screenshot; coherent terrain brush scale and irregular grounded vegetation silhouette principles only"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+      "role": "Original project girl; material compatibility only, no character copying or alteration"
+    }
+  ],
+  "researchStatus": "Optional v12 production assets. No acceptance score implied; no automatic adoption into a currently reviewed or formal default design.",
+  "licenseBoundary": "Original generated local assets. Benchmark images are actual research references, not distributed runtime scene textures. No commercial characters, UI or screenshot pixels copied as runtime artwork.",
+  "untouched": [
+    "v10/v11 code and previews",
+    "review-current",
+    "formal default bundle",
+    "consultation_state",
+    "renderer"
+  ],
+  "compositionLimit": "Only local terrain albedo and isolated vegetation atlas. Must be combined with genuine native 3D terrain, road, character, shadows, depth and interaction. Never lay the whole concept image beneath a scene and call it a 3D world.",
+  "asset": "paper-ground-v12.png",
+  "intent": "Generate original opaque local terrain material from all five references; then correct pigment warmth with built-in edit.",
+  "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-777e2f51-580b-46be-8081-14c4403901fb.png",
+  "output": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "transparent": false,
+    "sha256": "b42cff7d5f20a9d77261c721df5c2895d3d61d0950685b71c1a26e0349068408"
+  },
+  "generationHistory": [
+    {
+      "stage": "initial-generation",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE square RGB opaque albedo material swatch for a native 3D gently sloping paper meadow. This is a MATERIAL SAMPLE only, not a landscape illustration.\n\nFive actual reference inputs:\nImage 1: original project concept. Use its muted grey-olive and wheat paper meadow colors and broad physical gouache brush scale only. Do NOT include its landscape composition, road, girl, rock, flower, sky, horizon, twigs or cast shadows.\nImage 2: actual Nomadic Tribe browser screenshot. Study economical paint color fields and world consistency only, no birds, water, UI, lettering or composition.\nImage 3: actual Kaizen browser screenshot. Study soft broad painterly planes and quiet values only, no flowers, atmosphere scene, words or UI.\nImage 4: actual Wayfinder browser screenshot. Study coherent grounded broad terrain brush direction only, no leaves, grass objects, trees, flower, rocks, character, UI or bright green.\nImage 5: original project girl atlas. Match its matte opaque paper gouache material weight at a coherent physical scale, without copying any body part or character imagery into this swatch.\n\nPrimary request:\nA quiet original pale paper meadow ground material, edge to edge. A low saturation grey-wheat background around #D4CCB3, softened by very sparse grey-olive broad dry brush patches around #A7AA96 and dusty muted wheat around #C4B890. Large softly broken irregular opaque paint passages, about 6-10 broad marks across the whole texture. Roughly 70-80 percent stays quiet pale paper ground. Painterly marks must be big and low frequency; at web hero size this reads broad natural painted land, never busy grit or a stamped grass pattern. Restrained values and no yellow-gold highlight. Use fine nearly invisible matte paper grain. Color fields stay largely flat, no relief, no specular, no baked lighting.\n\nConstraints:\nCompletely flat square material sample. NO horizon, NO perspective, NO slope shape, NO road, NO blue areas, NO visible grass blades, NO stems, NO flowers, NO leaves, NO rocks, NO characters, NO branches, NO objects or scene, NO shadows, NO highlights, NO glow, NO text, NO border, NO vignette. All corners and center have similar average tone. Request a seamless repeat with closely matching opposite edges, no directional light, no center focal point, no repetitive motif.\nStyle: original understated ink-and-opaque-gouache picture-book world material, but no outlines in the albedo itself; broad paint first, subtle fine paper last.\nAvoid: crumpled paper, wrinkles, embossed relief, plaster, concrete, noise everywhere, speckle, bright scratch streaks, hatching, small repeated tufts, white scratch marks, hard angular pattern, strong gradients, realistic dry grass photograph, yellow-green lawn, painterly landscape painting, decorative pattern, lettering or watermark.\n",
+      "inputOrder": [
+        "design-demos/cihou-reference-study/v12-art-study/concept.png",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png"
+      ],
+      "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-c59742b6-6cad-478d-9c79-97a68eff06e4.png",
+      "sha256": "54017f95f948f1131c656cf7f022a98ae9f8dfd217be2758130a5125b324d8ef",
+      "review": "Actual mean RGB195,181,152 was too tan/yellow; not selected."
+    },
+    {
+      "stage": "selected-pigment-correction",
+      "prompt": "Use case: precise-object-edit.\nAsset type: neutralization correction to original project terrain albedo Image 1. Keep it a flat square opaque MATERIAL SWATCH only, not a scene.\nImage 1 was generated from the original project concept plus the three benchmark screenshots and girl reference. Its measured mean RGB is (195,181,152), too yellow/tan and with too much contrast for a quiet grey-olive/wheat paper world. Correct only its pigment values and texture contrast:\nLift its mean to approximately RGB(216,213,196). Reduce warmth and saturation substantially, taking the golden mustard patches toward PALE GREY-WHEAT and the olive patches toward cool GREY-OLIVE. Lighten everything gently, compress total variation by about half. It should look like pale desaturated chalky gouache paint on warm-grey paper, never bright yellow sand. Keep only 6-10 broad irregular soft broken drybrush marks across the square and make the empty pale base occupy about 75 percent. Minimize high-frequency granular/paper relief detail; almost invisible fine paper, broad flat painted fields. The grey-green patches remain just visible and do not become a camouflage pattern. Absolutely no shadows/highlights, no light direction, no normal or embossed effect.\nReference inputs 2,3,4 are the ACTUAL Nomadic Tribe, Kaizen and Wayfinder screenshots respectively, for original common painterly economy only. Do not copy characters, UI, objects or scene compositions.\nImage 5 is the existing original project girl asset, material compatibility only; no body part in output.\nPreserve original square layout and original no-object albedo intent. No grass blades, no stems, no rocks, no flowers, no dirt objects, no branches, no horizon, no landscape, no road, no blue, no person, no text, no border, no watermark, no gradient or vignette, no crumples or wrinkles. Opposite edges should stay close and neutral for wrapping.\n",
+      "inputOrder": [
+        "initial-generation output",
+        "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+        "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+        "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png"
+      ],
+      "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-777e2f51-580b-46be-8081-14c4403901fb.png",
+      "review": "Paler, less saturated grey-olive/grey-wheat color fields. No scene objects, horizon, road, person or baked lighting. The original concept participates directly in the initial generation and through its resulting edit target in this correction; all three actual benchmark screenshots and girl remain direct inputs."
+    }
+  ],
+  "review": {
+    "actualInputImagesViewedBeforeGeneration": true,
+    "selectedOutputExplicitlyViewed": true,
+    "readOnlyMeasurements": {
+      "rgbMean": [
+        203.355,
+        197.195,
+        181.593
+      ],
+      "rgbStd": [
+        11.738,
+        10.346,
+        9.143
+      ],
+      "opposingEdgeMeanAbsChannelDifference": {
+        "leftRight": 5.516746411483253,
+        "topBottom": 5.418128654970761
+      }
+    },
+    "limits": "Not mathematically periodic; edge difference remains visible under close scrutiny. Prefer one large mapping or mirrored wrap and actual scene seam QA. Too dense repetition would turn broad paint into a camouflage pattern. Never use this as normal/displacement or baked lighting.",
+    "usage": "sRGB albedo, white/neutral material tint, high roughness, no shine. Match road-v10 physical brush scale. options.groundTextureUrl; HERO_BUNDLE ground."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "Immutable anonymous nine-chapter input regression fixture. Old grass and camera draft; not final visual version or an independent design review input.",
+  "artifact": "design-demos/cihou-reference-study/formal-adapter-v13-input-qa.html",
+  "sha256": "90c71bf7bf38d46c6539a18d33e0a0866fcbea674a8245b83342f476cceb2271",
+  "bytes": 13589585,
+  "hero_assets": {
+    "version": "paper-valley-v13",
+    "assets": {
+      "three": {
+        "file": "three.min.js",
+        "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+      },
+      "three_license": {
+        "file": "THREE-LICENSE.txt",
+        "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+      },
+      "rig": {
+        "file": "hero-character-rig-v13.js",
+        "sha256": "11f6389407b73df0ccd5f8613d7b2cac85a08a2ce08f544e6e7ace52094f23cf"
+      },
+      "scene": {
+        "file": "hero-scene-v13.js",
+        "sha256": "05af8a216975a21e24cc891282db90ae4945a0018f3a9749cb0561ba9a6cf756"
+      },
+      "road": {
+        "file": "paper-road-v10.png",
+        "sha256": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754"
+      },
+      "terrain": {
+        "file": "paper-terrain-v10.png",
+        "sha256": "ea95afe3f51863954b4a8fd7bee736526518e95134d88924566680c8f7cdf67d"
+      },
+      "ground": {
+        "file": "paper-meadow-v12.png",
+        "sha256": "647714980d09821340e25336d4339bb265cb739bf557acbe9e563e70d786b084"
+      },
+      "grass": {
+        "file": "meadow-parts-v12.png",
+        "sha256": "634878ff0c62823a19b4a0acfb761926fd34752b7b77550fce96f6fcc416cd98"
+      },
+      "grass_meta": {
+        "file": "meadow-parts-v12.json",
+        "sha256": "05f65684ccf7c7c0d028c52b9bb1a6f7fe1db34bc5231512dfdd1d803ff4814f"
+      },
+      "character": {
+        "file": "girl-rig-parts-v5.png",
+        "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5"
+      },
+      "rig_meta": {
+        "file": "girl-rig-parts-v5.json",
+        "sha256": "ffcc083bbec330064b1d51fe484d588effcd58c2dea66d0794c71c1a5894cfcf"
+      }
+    },
+    "character": {
+      "original_generated_artwork": true,
+      "rig_metadata": "girl-rig-parts-v5.json"
+    },
+    "three": {
+      "license": "MIT",
+      "license_file": "THREE-LICENSE.txt"
+    }
+  },
+  "browser": "Codex in-app browser native 1280x720; no viewport override.",
+  "actual_actions": [
+    "Native pointer hold28s, then physical Space28s and Enter28s around actual65.314m loop: scene stays focused and document scrollY remains0.",
+    "At actual choice, first button pointer400ms leaves phasechoice; focus transfers to step-out.",
+    "Physical Enter580ms on choice button leaves phasechoice, resets choice hold progress0 on release, scrollY0. This observation alone does not prove native key repeat occurred.",
+    "Pointer250ms on world restores scenefocus; then first pointer1800ms on choice button enters placing and returns focus toscene without canceling the held gesture.",
+    "Continue Space8000ms completes actual flower placement/crossing and enters leaving: flowerground, focus scene, scrollY0.",
+    "Actual complete/presentationReadytrue shows final controls; exitdistance11.729m with girl106.4px in this draft camera.",
+    "Continue reading reaches scrollY720 and9 fixed chapter sections; browser back restores scrollY0 and complete.",
+    "Replay hides final controls, focuses scene and returns to walking/travel0.112m."
+  ],
+  "limits": [
+    "Foot error0 and reachability were read from scene DOM; these are not independent UV-mesh footplant verification.",
+    "This fixture predates the later underpass visibility/camera fix and new grass integration.",
+    "Final composition, mobile, reduced-motion tail switch and final exact artifact still require joint QA."
+  ],
+  "evidence": [
+    "input-draft-complete.jpg"
+  ],
+  "cleanup": "Root temporary IAB tabs38 and39 closed; no viewport override used. User tabs untouched."
+}

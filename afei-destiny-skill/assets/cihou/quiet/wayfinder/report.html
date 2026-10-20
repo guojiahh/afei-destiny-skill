@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="connect-src blob: data:; img-src blob: data:; media-src blob: data:; font-src blob: data:; object-src 'none'; frame-src 'none'; base-uri 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#585a2a">
+  <meta name="description" content="在风景中回看走过的路，理解当下的循环，比较更多选择。">
+  <title>@@TITLE@@</title>
+  <style>@@ENGINE_CSS@@</style>
+  <style>@@READING_CSS@@</style>
+  <style>@@CSS@@</style>
+</head>
+<body>
+  <a class="skip" href="#reading">跳到完整解读</a>
+  <main class="content" aria-label="在风景中探索自己的循环"></main>
+  <div class="loader" id="story-loader" role="status"><span>此 后</span><p>风景正在展开</p></div>
+  <header class="story-bar">
+    <span class="story-brand">此后</span>
+    <nav aria-label="探索视角"><button data-chapter="0" aria-current="step">01 来处</button><button data-chapter="1">02 此刻</button><button data-chapter="2">03 可能</button></nav>
+    <div class="bar-tools"><button id="sound" aria-pressed="false">声音 · 关</button><button id="pause" aria-pressed="false">暂停</button><button id="read-report">完整解读 ↗</button></div>
+  </header>
+  <div id="story-surface" tabindex="0" role="group" aria-label="长按鼠标或触摸画面，沿固定环路行走，松开停下；也可按住空格或方向键" aria-describedby="story-instruction"></div>
+  <section class="story-copy" aria-label="这段路上的理解">
+    <p class="story-kicker" id="story-kicker">来处 · 01</p>
+    <h1 id="story-title"></h1>
+    <details id="story-note"><summary>读这一句 <span aria-hidden="true">＋</span></summary><p id="story-description"></p></details>
+  </section>
+  <section id="story-choices" class="story-choices" aria-label="比较不同的选择" hidden>
+    <div id="choice-tabs" class="story-choice-tabs" role="group" aria-label="三种有条件的走法"></div>
+    <div id="choice-detail" hidden><p class="choice-condition" id="choice-condition"></p><p id="choice-description"></p><button id="walk-choice">试着走一步 ↗</button></div>
+  </section>
+  <footer class="story-footer"><p id="story-instruction">长按画面，沿环行走 · 松开停下 · 也可按住空格键</p><button id="next-chapter">回看这条路的来处 ↗</button><button id="restart" hidden>重新走一遍 ↺</button></footer>
+  <p class="sr-only" id="story-status" aria-live="polite" aria-atomic="true"></p>
+  <div id="story-error" hidden role="status"><p>这个浏览器暂时无法展开动态风景。三段理解与完整正文仍可阅读。</p><button id="error-read">阅读完整解读</button></div>
+  <dialog id="reading-dialog" aria-labelledby="reading-title">
+    <div class="reading-toolbar"><span id="reading-title">此后 · 完整解读</span><button id="close-reading" autofocus>回到风景 ×</button></div>
+    <article class="reading" id="reading" aria-label="完整个人咨询解读">
+      <h1>@@TITLE@@</h1><div class="report-context">@@SUBTITLE@@</div>
+      <ol class="static-story">@@FALLBACK@@</ol>
+      @@CHAPTERS@@
+      <section class="reading-section sources-section" id="technical">
+        <header class="reading-heading"><p class="section-index">依据 / 按需展开</p><h2>理解，也可以继续核对。</h2><div class="section-intro">@@TECHNICAL_INTRO@@</div></header>
+        @@TECHNICAL_CARDS@@
+        <div class="source-group"><h3 class="source-group-title">完整咨询底稿</h3>@@USER_ORIGINALS@@</div>
+        <div class="source-group"><h3 class="source-group-title">计算与分析依据</h3>@@TECHNICAL_ORIGINALS@@</div>
+        <details class="source-detail"><summary>本次资料与报告口径</summary><div class="prose">@@PREFACE@@</div></details>
+        <div class="source-downloads">@@DOWNLOADS@@</div>
+      </section>
+      <div class="report-ending"><div class="closing-thought">@@CLOSING@@</div><div class="report-limits">@@LIMITS@@</div></div>
+      <details class="art-credit"><summary>关于这片风景</summary><p>视觉与运行引擎来自 <a href="https://wayfinder.nfb.ca/" target="_blank" rel="noopener noreferrer">Wayfinder</a>：Matt DesLauriers / National Film Board of Canada；插画 Tiffany Beucher；动画与三维 Guillaume Le Roux。此后加入闭环路线、分场叙事和条件式选择。原作资源保留原权利归属。</p></details>
+    </article>
+  </dialog>
+  <noscript><style>.content,.story-bar,#story-surface,.story-copy,.story-footer,.loader{display:none!important}#reading-dialog{display:block;position:static;height:auto;max-height:none}html,body{overflow:auto}#close-reading{display:none}</style></noscript>
+  <script id="report-data" type="application/json">@@DATA@@</script>
+  <script id="report-provenance" type="application/json">@@PROVENANCE@@</script>
+  <script id="wayfinder-assets" type="application/json">@@ASSET_PACK@@</script>
+  <script>@@BOOTSTRAP_JS@@</script>
+  <script id="wayfinder-runtime">@@ENGINE_JS@@</script>
+  <script>@@ADAPTER_JS@@</script>
+  <script>@@UI_JS@@</script>
+</body>
+</html>

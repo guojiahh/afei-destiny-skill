@@ -1,0 +1,30 @@
+{
+  "qaEnvironment": {
+    "actualRafCadenceFPS": 12,
+    "method": "Native RAF delivery gate only; no app phase/travel/time/targets commands"
+  },
+  "kind": "passive real-world transition production take, not acceptance",
+  "builtAt": "2026-10-17T10:44:52.179250+00:00",
+  "loadedFiles": {
+    "hero-scene-v13.js": {
+      "sha256": "456aecd7820be88f7d357ccf6b2265e6dc1bd7a09dcabd21d9ebd9863eaab0f3",
+      "snapshot": "scene-snapshot-v13-take02.js"
+    },
+    "hero-character-rig-v13.js": {
+      "sha256": "11f6389407b73df0ccd5f8613d7b2cac85a08a2ce08f544e6e7ace52094f23cf",
+      "snapshot": "rig-snapshot-v13-take02.js"
+    },
+    "prototype-v13.html": {
+      "sha256": "812eabb0f7110d6bc629e09c37d218a9f70998c55f03cbb7ba88440edfe01c13",
+      "scope": "public event controller cloned without story forcing"
+    },
+    "diagnostics-snapshot-v13-take02.js": {
+      "sha256": "61183ad3ca179190611b958b83e812680a06ad9faae66cbfc76b53ddf9dda8a0",
+      "scope": "Passive UV mesh + actual road triangle raycast observer"
+    },
+    "raf-cadence-v13-take02.html": {
+      "sha256": "cf92d10637e283248e01d40ae3de978255d7a3dc5093b0a18ce096a16e3f301b",
+      "scope": "Native 12FPS callback cadence environment; no story forcing"
+    }
+  }
+}

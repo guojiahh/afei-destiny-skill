@@ -1,0 +1,179 @@
+{
+  "version": "meadow-parts-v12",
+  "image": "meadow-parts-v12.png",
+  "imageSize": [
+    1254,
+    1254
+  ],
+  "sha256": "634878ff0c62823a19b4a0acfb761926fd34752b7b77550fce96f6fcc416cd98",
+  "originalPngUnmodified": true,
+  "coordinateSystem": {
+    "origin": "top-left",
+    "positiveX": "right",
+    "positiveY": "down",
+    "sourceRectFormat": "[left, top, width, height] in atlas pixels, integer bounds with 2px padding around alpha>=8 extent",
+    "rootPxFormat": "[x,y] in full-atlas pixels; planted lower stem/root median of last3 visible alpha>=8 rows, rounded to integer",
+    "rootNormalizedFormat": "[(rootPx.x-sourceRect.x)/sourceRect.width, (rootPx.y-sourceRect.y)/sourceRect.height], top-left-origin local coordinates"
+  },
+  "alpha": {
+    "measurementThreshold": 8,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "transparentPixelPercent": 84.74940795514958,
+    "visibleAlpha8Percent": 11.816922689498867,
+    "recommendedAlphaTest": 0.05,
+    "warning": "The generated PNG contains alpha1-7 fringe noise, including bright RGB values at extremely low alpha. No bright-yellow pixels were found at alpha>=8 in the read-only check. Preserve source PNG and discard the faint fringe in material alphaTest. Do not render every alpha1 pixel as visible geometry bounds."
+  },
+  "parts": [
+    {
+      "name": "grassA",
+      "kind": "grass",
+      "sourceRect": [
+        29,
+        107,
+        582,
+        414
+      ],
+      "visibleAlpha8Rect": [
+        31,
+        109,
+        578,
+        410
+      ],
+      "rootPx": [
+        394,
+        518
+      ],
+      "heightRelativeToGirl": [
+        0.1,
+        0.18
+      ],
+      "recommendedHeightRelativeToGirl": 0.14,
+      "description": "Five broad unequal grey-olive/dusty-wheat blades, wider leftward sweep",
+      "rootNormalized": [
+        0.627147766323024,
+        0.9927536231884058
+      ],
+      "sourceAspect": 1.4057971014492754
+    },
+    {
+      "name": "grassB",
+      "kind": "grass",
+      "sourceRect": [
+        658,
+        187,
+        579,
+        322
+      ],
+      "visibleAlpha8Rect": [
+        660,
+        189,
+        575,
+        318
+      ],
+      "rootPx": [
+        910,
+        506
+      ],
+      "heightRelativeToGirl": [
+        0.08,
+        0.14
+      ],
+      "recommendedHeightRelativeToGirl": 0.11,
+      "description": "Lower wider four-blade pale wheat tuft, unequal sideways blade",
+      "rootNormalized": [
+        0.43523316062176165,
+        0.9906832298136646
+      ],
+      "sourceAspect": 1.7981366459627328
+    },
+    {
+      "name": "grassC",
+      "kind": "grass",
+      "sourceRect": [
+        112,
+        640,
+        488,
+        562
+      ],
+      "visibleAlpha8Rect": [
+        114,
+        642,
+        484,
+        558
+      ],
+      "rootPx": [
+        353,
+        1199
+      ],
+      "heightRelativeToGirl": [
+        0.14,
+        0.24
+      ],
+      "recommendedHeightRelativeToGirl": 0.19,
+      "description": "Taller slim six-blade olive-grey tuft, slight right lean",
+      "rootNormalized": [
+        0.49385245901639346,
+        0.994661921708185
+      ],
+      "sourceAspect": 0.8683274021352313
+    },
+    {
+      "name": "twig",
+      "kind": "foreground",
+      "sourceRect": [
+        830,
+        675,
+        336,
+        513
+      ],
+      "visibleAlpha8Rect": [
+        832,
+        677,
+        332,
+        509
+      ],
+      "rootPx": [
+        845,
+        1185
+      ],
+      "heightRelativeToGirl": [
+        0.3,
+        0.55
+      ],
+      "recommendedHeightRelativeToGirl": 0.42,
+      "description": "One diagonal warm grey-brown stem with three unequal tapered olive leaves; use only one at foreground edge",
+      "rootNormalized": [
+        0.044642857142857144,
+        0.9941520467836257
+      ],
+      "sourceAspect": 0.6549707602339181
+    }
+  ],
+  "integration": {
+    "options": {
+      "atlas": "grassAtlasUrl",
+      "metadata": "grassMetadata"
+    },
+    "bundleKeys": {
+      "atlas": "grass",
+      "metadata": "grass_meta"
+    },
+    "material": "sRGB atlas, linear filtering/mipmaps, DoubleSide as appropriate, alphaTest0.05; neutral matte lighting matching the world. Use native depth and shadows and actual rooted transform.",
+    "uvRectFormula": "u0=x/W,u1=(x+w)/W; vTop=1-y/H,vBottom=1-(y+h)/H when using standard bottom-left UV coordinates. Respect texture-upload flipY convention exactly once.",
+    "rootToWorldFormula": "For a pixel (px,py) and chosen worldHeight: localX=(px-rootPx.x)/sourceRect.height*worldHeight; localY=(rootPx.y-py)/sourceRect.height*worldHeight. WorldWidth=sourceRect.width/sourceRect.height*worldHeight. If centering a plane: centerOffsetX=(0.5-rootNormalized.x)*worldWidth; centerOffsetY=(rootNormalized.y-0.5)*worldHeight.",
+    "scale": "At a girl height of roughly100-125 CSSpx, grasses are about10-30px tall. Use sparse irregular unequal clumps. twig is a unique larger foreground piece; never scatter it as a generic meadow object.",
+    "wind": "Small root-locked upper-blade sway only. No full-card bob or root translation.",
+    "ground": "Actual terrain point supplies world root; cards must be occluded by real land/stone/road and cast modest alpha-tested shadows.",
+    "runtimeLimit": "This atlas is isolated local vegetation only. Do not use concept.png as a world plane or claim these assets implement interaction, path continuity or acceptance."
+  },
+  "validation": {
+    "originalOutputExplicitlyViewed": true,
+    "actualAlphaReadOnlyMeasured": true,
+    "exactQuadrantExtentsMeasured": true,
+    "sourceRectAndRootManuallyComparedToVisibleSilhouettes": true,
+    "nativeSmallSizeCompositionStillRequiresQA": true
+  }
+}

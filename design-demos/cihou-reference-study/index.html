@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>行走、行动与叙事 — 此后参考作品研究</title>
+  <style>
+    :root { --paper:#f5f3ed; --ink:#242a28; --muted:#646c66; --line:#cdd1c7; --accent:#5d704c; --wash:#e9ece3; }
+    * { box-sizing:border-box; }
+    html { scroll-padding-top:24px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei",sans-serif; font-size:15px; line-height:1.8; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-underline-offset:.22em; text-decoration-thickness:1px; }
+    a:hover { color:var(--accent); }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+    .skip { position:absolute; left:24px; top:-100px; padding:8px 16px; background:var(--paper); z-index:2; }
+    .skip:focus { top:12px; }
+    .wrap { width:min(1168px,calc(100% - 64px)); margin-inline:auto; }
+    .masthead { display:flex; justify-content:space-between; gap:24px; padding-block:24px 18px; border-bottom:1px solid var(--ink); font-size:12px; letter-spacing:.07em; }
+    .masthead p { margin:0; }
+    header { padding-block:58px 36px; }
+    .eyebrow { margin:0 0 12px; color:var(--accent); font-size:12px; letter-spacing:.15em; }
+    h1,h2,h3,p,figure { margin-top:0; }
+    h1,h2 { font-family:"Songti SC","STSong",serif; font-weight:500; }
+    h1 { margin-bottom:22px; font-size:clamp(38px,5.2vw,66px); line-height:1.2; letter-spacing:-.025em; }
+    .intro { max-width:760px; margin-bottom:25px; font-size:17px; line-height:1.9; }
+    .external-links { display:flex; flex-wrap:wrap; column-gap:26px; row-gap:8px; margin:0; padding:0; list-style:none; font-size:14px; }
+    .external-links span { color:var(--muted); font-size:12px; margin-right:8px; }
+    nav { display:flex; flex-wrap:wrap; gap:10px 24px; padding-block:19px; border-block:1px solid var(--line); font-size:13px; }
+    nav a { text-decoration:none; }
+    .scope { display:grid; grid-template-columns:1fr 1fr; gap:40px; padding-block:27px 32px; }
+    .scope h2 { margin-bottom:9px; font-family:inherit; font-size:13px; font-weight:600; }
+    .scope p { margin:0; color:var(--muted); font-size:13px; }
+    .scope strong { color:var(--ink); font-weight:500; }
+    section { padding-block:36px 40px; border-top:1px solid var(--line); }
+    .section-head { display:grid; grid-template-columns:55px 1fr; gap:17px; align-items:start; margin-bottom:27px; }
+    .number { font-family:Georgia,serif; font-size:26px; line-height:1.4; color:var(--accent); }
+    h2 { margin-bottom:9px; font-size:30px; line-height:1.4; }
+    .section-head p { max-width:780px; margin-bottom:0; font-size:14px; color:var(--muted); }
+    .comparison { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+    figure { margin:0; min-width:0; }
+    .figure-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:10px; font-size:14px; font-weight:600; }
+    .figure-head span { font-weight:400; color:var(--muted); font-size:11px; white-space:nowrap; }
+    .image-link { display:block; background:#e2e4dc; line-height:0; }
+    .image-link img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; }
+    figcaption { padding-top:13px; font-size:13px; line-height:1.85; color:var(--muted); }
+    figcaption strong { display:block; margin-bottom:4px; color:var(--ink); font-weight:500; font-size:14px; }
+    .takeaway { margin:25px 0 0; padding-left:15px; border-left:2px solid var(--accent); color:var(--ink); font-size:14px; }
+    .takeaway span { color:var(--accent); font-size:12px; margin-right:12px; }
+    .sampling-note { max-width:850px; margin-bottom:23px; padding:16px 20px; background:var(--wash); color:#4f5c4c; font-size:13px; }
+    .filmstrip { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(300px,38%); gap:18px; overflow-x:auto; padding-bottom:16px; scroll-snap-type:x proximity; scrollbar-color:#839078 #e5e7df; scrollbar-width:thin; }
+    .filmstrip figure { scroll-snap-align:start; }
+    .filmstrip figcaption { padding-top:9px; font-size:12px; }
+    .filmstrip figcaption b { font-family:Georgia,serif; font-weight:400; color:var(--accent); margin-right:9px; }
+    .strip-instruction { margin:12px 0 0; color:var(--muted); font-size:12px; }
+    .cross-evidence { display:grid; grid-template-columns:1.15fr 1fr; align-items:start; gap:36px; margin-top:33px; padding-top:26px; border-top:1px solid var(--line); }
+    .cross-evidence h3 { margin-bottom:10px; font-size:16px; font-weight:500; }
+    .cross-evidence p { margin-bottom:12px; color:var(--muted); font-size:14px; }
+    .cross-evidence small { font-size:12px; color:var(--muted); }
+    .evidence-key { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
+    .evidence-key h3 { margin-bottom:8px; font-size:15px; font-weight:500; }
+    .evidence-key p { color:var(--muted); font-size:13px; margin-bottom:12px; }
+    .route-list { margin-top:27px; border-top:1px solid var(--line); }
+    .route { display:grid; grid-template-columns:150px 1fr 175px; gap:22px; padding-block:15px; border-bottom:1px solid var(--line); font-size:13px; }
+    .route b { font-weight:500; }
+    .route p { margin:0; color:var(--muted); }
+    .route a { justify-self:start; }
+    .limits { margin:26px 0 0; padding-left:20px; color:var(--muted); font-size:13px; }
+    .limits li { padding-left:3px; margin-bottom:7px; }
+    footer { display:flex; justify-content:space-between; gap:25px; padding-block:24px 40px; border-top:1px solid var(--ink); color:var(--muted); font-size:12px; }
+    footer p { margin:0; max-width:750px; }
+    @media (min-width:1600px) { .wrap { width:min(1400px,calc(100% - 96px)); } }
+    @media (max-width:800px) { .wrap { width:calc(100% - 36px); } header { padding-top:38px; } .comparison { grid-template-columns:1fr; gap:29px; } .scope { gap:24px; } .section-head { grid-template-columns:34px 1fr; gap:12px; } h2 { font-size:26px; } .number { font-size:23px; } .image-link { max-width:100%; } .evidence-key { grid-template-columns:1fr; gap:16px; } .route { grid-template-columns:120px 1fr; gap:8px 16px; } .route a { grid-column:2; } .filmstrip { grid-auto-columns:86%; } .cross-evidence { grid-template-columns:1fr; gap:18px; } footer { flex-direction:column; } }
+    @media (max-width:480px) { body { font-size:14px; } .masthead { font-size:10px; gap:12px; padding-top:18px; } .scope { grid-template-columns:1fr; gap:20px; } .intro { font-size:15px; } .external-links { gap:8px 18px; } .external-links span { display:none; } nav { gap:10px 19px; font-size:12px; } section { padding-block:28px 32px; } .section-head { margin-bottom:21px; } .route { grid-template-columns:1fr; gap:5px; } .route a { grid-column:1; } .filmstrip { grid-auto-columns:93%; } }
+    @media print { body { background:white; } .wrap { width:100%; } nav,.skip { display:none; } .comparison { grid-template-columns:repeat(3,minmax(0,1fr)); } .filmstrip { display:grid; grid-template-columns:repeat(3,1fr); grid-auto-flow:row; overflow:visible; } figure { break-inside:avoid; } a { text-decoration:none; } }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">跳到研究内容</a>
+  <div class="wrap">
+    <div class="masthead"><p>此后 · 参考作品现场研究</p><p>2026.10.17 / 关键状态证据</p></div>
+    <header>
+      <p class="eyebrow">WAYFINDER / KAIZEN / NOMADIC TRIBE</p>
+      <h1>行走、行动与叙事。</h1>
+      <p class="intro">先看角色如何属于一个世界，再看一次动作如何改变画面。这里把三部作品的入口、操作、反馈与片尾放在一起，为此后主图提供可以核对的视觉依据。</p>
+      <ul class="external-links" aria-label="官方作品链接">
+        <li><a href="https://wayfinder.nfb.ca/" target="_blank" rel="noopener"><span>01</span>Wayfinder ↗</a></li>
+        <li><a href="https://kaizen.makemepulse.com/" target="_blank" rel="noopener"><span>02</span>Kaizen ↗</a></li>
+        <li><a href="https://2019.makemepulse.com/" target="_blank" rel="noopener"><span>03</span>Nomadic Tribe ↗</a></li>
+      </ul>
+    </header>
+    <nav aria-label="研究章节">
+      <a href="#opening">01 开场</a><a href="#interaction">02 操作</a><a href="#feedback">03 反馈</a><a href="#ending">04 片尾</a><a href="#environments">05 三种环境</a><a href="#sequence">06 末段抽样</a><a href="#evidence">07 证据与边界</a>
+    </nav>
+    <div class="scope">
+      <div><h2>本轮实际覆盖</h2><p><strong>三站主线均已到达片尾。</strong>Wayfinder 经过森林、草地、雪地，完成六首诗与最终返程；Kaizen 经过四幕；Nomadic Tribe 经过四章。主线完成与所有可选反馈均已验证，是两个不同结论。</p></div>
+      <div><h2>如何阅读</h2><p>图片按研究主题编组，并非三站时间对齐。所有图片保留完整 16∶9 画面，点击可打开原图。它们是实际操作的关键状态截图；本页没有自动播放，也没有把离散截图称为逐帧录像。</p></div>
+    </div>
+    <main id="main">
+      <section id="opening" aria-labelledby="opening-title">
+        <div class="section-head"><span class="number">01</span><div><h2 id="opening-title">先建立世界，再交给用户。</h2><p>三个不同的起点：标题入口、叙事开场、首个操作场景。比较的是如何把注意力收拢，不是同一秒发生了什么。</p></div></div>
+        <div class="comparison">
+          <figure><div class="figure-head">Wayfinder <span>W01 · 标题入口</span></div><a class="image-link" href="full-run-v2/w01-start.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w01-start.jpg" width="1280" height="720" alt="Wayfinder 森林入口，前景树干与橙叶包围中央标题及 start 按钮"></a><figcaption><strong>标题落在已经存在的森林里。</strong>近处树干形成遮挡，远处地表与小动物延伸空间。中央入口由背景压暗获得可读性。</figcaption></figure>
+          <figure><div class="figure-head">Kaizen <span>K02 · 开场短句</span></div><a class="image-link" href="full-run-v2/k02-intro.jpg" target="_blank" rel="noopener"><img src="full-run-v2/k02-intro.jpg" width="1280" height="720" alt="Kaizen 深蓝笔触背景中央的一行奶油色手写开场短句" loading="lazy"></a><figcaption><strong>先留下一个安静的声音。</strong>深蓝笔触上只有居中短句、手画下划线和少量光点。跳过入口退到右下角。</figcaption></figure>
+          <figure><div class="figure-head">Nomadic Tribe <span>N02 · 首个场景</span></div><a class="image-link" href="full-run-v2/n02-plant-instruction.jpg" target="_blank" rel="noopener"><img src="full-run-v2/n02-plant-instruction.jpg" width="1280" height="720" alt="Nomadic Tribe 细线插画森林，前景叶片围住中央空地和卷曲嫩芽" loading="lazy"></a><figcaption><strong>让操作对象先被看见。</strong>裁切的大叶与藤蔓围住草地，卷曲嫩芽留在可操作的空地里。这张静帧没有捕获明确的文字操作提示。</figcaption></figure>
+        </div>
+        <p class="takeaway"><span>设计推断</span>主图的第一件事是建立观看关系；文字、角色与操作提示不必同时争取第一眼。</p>
+      </section>
+
+      <section id="interaction" aria-labelledby="interaction-title">
+        <div class="section-head"><span class="number">02</span><div><h2 id="interaction-title">用户做的事，就是画面发生的事。</h2><p>实际过程分别是沿词链移动、长按完成跳跃、按住并调整飞行方向。截图证明对应状态，连续动作由操作日志补充。</p></div></div>
+        <div class="comparison">
+          <figure><div class="figure-head">Wayfinder <span>W05 · 第一条词链</span></div><a class="image-link" href="full-run-v2/w05-first-word-chain.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w05-first-word-chain.jpg" width="1280" height="720" alt="Wayfinder 森林中弯曲的白色虚线与浮现的 twinkling 单词，角色被前景树部分遮挡" loading="lazy"></a><figcaption><strong>走过世界，词才出现。</strong>白色虚线穿过树木，单词在地景中浮现；前景仍会遮住角色。文字参与空间，而不只是固定在屏幕边缘。</figcaption></figure>
+          <figure><div class="figure-head">Kaizen <span>K13 · 第三幕建立镜头</span></div><a class="image-link" href="full-run-v2/k13-precision-overhead.jpg" target="_blank" rel="noopener"><img src="full-run-v2/k13-precision-overhead.jpg" width="1280" height="720" alt="Kaizen 俯视亮色细长河道，小蛙在中央石上，画面叠有 Third Act 与底部字幕" loading="lazy"></a><figcaption><strong>俯视先交代路线与落点。</strong>暗色两岸围住亮河，蛙停在小石上。这是第三幕建立状态，仍有章节字；并非长按高潮帧。</figcaption></figure>
+          <figure><div class="figure-head">Nomadic Tribe <span>N11 · 按住飞行后</span></div><a class="image-link" href="full-run-v2/n11-voyage-hold.jpg" target="_blank" rel="noopener"><img src="full-run-v2/n11-voyage-hold.jpg" width="1280" height="720" alt="Nomadic Tribe 三只鸟沿左下到右上的深蓝斜带飞行，中央 Hold 光标与顶部 Next 入口" loading="lazy"></a><figcaption><strong>斜向前进，主体仍靠近中央。</strong>大鸟、较小同伴、影子与彩色短线共同给出位移参照。Hold 靠近操作位置，Next 独立留在顶部。</figcaption></figure>
+        </div>
+        <p class="takeaway"><span>设计推断</span>“左下到右上、女孩保持中央”需要地面、阴影与沿途参照物共同移动；单独摇晃一张角色图片，难以建立行走空间。</p>
+      </section>
+
+      <section id="feedback" aria-labelledby="feedback-title">
+        <div class="section-head"><span class="number">03</span><div><h2 id="feedback-title">反馈先发生在世界里。</h2><p>完成可以被收拢成诗卡，也可以改变镜头尺度，或让植物在操作位置长成。它们并不都用同一种弹窗宣布成功。</p></div></div>
+        <div class="comparison">
+          <figure><div class="figure-head">Wayfinder <span>W23 · 六首完成</span></div><a class="image-link" href="full-run-v2/w23-six-poems-complete.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w23-six-poems-complete.jpg" width="1280" height="720" alt="Wayfinder 压暗的雪地上出现三行诗卡，顶部六个进度格均已填充，下方是 continue" loading="lazy"></a><figcaption><strong>分散的词句，收成一张纸。</strong>环境压暗，三行诗成为阅读焦点，六个进度格全部填充。此时还要继续并返树，不能把采集完成等同于片尾。</figcaption></figure>
+          <figure><div class="figure-head">Kaizen <span>K14 · 长按后的主题帧</span></div><a class="image-link" href="full-run-v2/k14-precision-full-jump.jpg" target="_blank" rel="noopener"><img src="full-run-v2/k14-precision-full-jump.jpg" width="1280" height="720" alt="Kaizen 河道由俯视切为低机位纵深，大幅 Precision 手写字横穿画面，底部有小字幕" loading="lazy"></a><figcaption><strong>同一条河，被重新观看。</strong>镜头转为低机位纵深，Precision 取得一次很大的尺度，底部字幕仍然较小。下一张休息帧又回到俯视。</figcaption></figure>
+          <figure><div class="figure-head">Nomadic Tribe <span>N14 · 新岛开花</span></div><a class="image-link" href="full-run-v2/n14-new-island-bloom.jpg" target="_blank" rel="noopener"><img src="full-run-v2/n14-new-island-bloom.jpg" width="1280" height="720" alt="Nomadic Tribe 浅色新岛上生长出高花茎与粉花，上方偏右纸片字幕，远处有微小人群" loading="lazy"></a><figcaption><strong>动作的结果留在原来的土地上。</strong>上拉后，花茎与花进入中景并投下影子，顶部 Next 已出现。小人群留在远处，字幕纸片在上方偏右，避开主要操作区。</figcaption></figure>
+        </div>
+        <p class="takeaway"><span>设计推断</span>安静状态与动作高潮需要尺度差异。先让脚步、路面和镜头产生可见后果，再决定是否需要文字确认。</p>
+      </section>
+
+      <section id="ending" aria-labelledby="ending-title">
+        <div class="section-head"><span class="number">04</span><div><h2 id="ending-title">结束之后，世界仍有回声。</h2><p>本轮实际到达的三站片尾。完成状态由这些画面与相邻操作记录共同确认，不由截图文件名推断。</p></div></div>
+        <div class="comparison">
+          <figure><div class="figure-head">Wayfinder <span>W26 · 结束入口</span></div><a class="image-link" href="full-run-v2/w26-ending-thanks.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w26-ending-thanks.jpg" width="1280" height="720" alt="Wayfinder 草地背景上的 Thanks for playing 结束文字以及 poems 和 info 按钮" loading="lazy"></a><figcaption><strong>回到土地，留下诗集入口。</strong>最终返树演出后出现 Thanks for playing。背景恢复暖色草地，poems 允许回看一路收集的内容。</figcaption></figure>
+          <figure><div class="figure-head">Kaizen <span>K20 · 四幕回顾入口</span></div><a class="image-link" href="full-run-v2/k20-end-portals.jpg" target="_blank" rel="noopener"><img src="full-run-v2/k20-end-portals.jpg" width="1280" height="720" alt="Kaizen 奶油色片尾，中央彩色笔刷与蝴蝶构成形体，右侧列出四幕入口" loading="lazy"></a><figcaption><strong>把场景收拢成笔触。</strong>蝴蝶、颜色与运动线凝成中央形体，四幕入口退到右侧。片尾延续了前文的绘画材料。</figcaption></figure>
+          <figure><div class="figure-head">Nomadic Tribe <span>N15 · 祝福片尾</span></div><a class="image-link" href="full-run-v2/n15-ending.jpg" target="_blank" rel="noopener"><img src="full-run-v2/n15-ending.jpg" width="1280" height="720" alt="Nomadic Tribe 纸色片尾，中央窄形窗口收拢植物与晶体，两侧是 Happy 和 2019" loading="lazy"></a><figcaption><strong>一段旅程变成一枚画面。</strong>纸底上保留细线、植物与晶体，收在中央窄形窗口内。左右祝福与左下手写署意保持较大的留白。</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="environments" aria-labelledby="environment-title">
+        <div class="section-head"><span class="number">05</span><div><h2 id="environment-title">Wayfinder：换了季节，不必重学动作。</h2><p>森林、草地与雪地都保留词链、红衣角色和同一套采集反馈。章节变化主要由地表、植物、色温与空间密度承担。</p></div></div>
+        <div class="comparison">
+          <figure><div class="figure-head">森林 <span>W05</span></div><a class="image-link" href="full-run-v2/w05-first-word-chain.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w05-first-word-chain.jpg" width="1280" height="720" alt="Wayfinder 森林环境，橙绿树冠密集遮挡白色词链" loading="lazy"></a><figcaption><strong>遮挡与密度。</strong>橙绿树冠挤入前景，词链在树间穿行。角色有时被遮住，世界并未为了始终露出人物而变成空地。</figcaption></figure>
+          <figure><div class="figure-head">草地 <span>W14</span></div><a class="image-link" href="full-run-v2/w14-grassland-first-line.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w14-grassland-first-line.jpg" width="1280" height="720" alt="Wayfinder 草地岸边，白色完成词链连出 shadows in the sun，红衣角色在右上" loading="lazy"></a><figcaption><strong>展开与岸线。</strong>草痕铺开大面积地表，蓝水围出边界。完成词链变为亮线，底部小纸片短暂确认整句。</figcaption></figure>
+          <figure><div class="figure-head">雪地 <span>W19</span></div><a class="image-link" href="full-run-v2/w19-tundra-second-line.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w19-tundra-second-line.jpg" width="1280" height="720" alt="Wayfinder 蓝灰雪地，白色词链绕过岩石，红衣角色与文字 an acorn falls" loading="lazy"></a><figcaption><strong>降温与聚焦。</strong>蓝灰横痕、岩石和稀疏植物降低色彩密度；红衣轮廓继续保持识别，词链机制无需再次教学。</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="sequence" aria-labelledby="sequence-title">
+        <div class="section-head"><span class="number">06</span><div><h2 id="sequence-title">Wayfinder 片尾末段：12 张静帧。</h2><p>树周光带消退，完成短句出现，再交还标题与诗集入口。后半组保留了片尾文字稳定、背景继续变化的状态。</p></div></div>
+        <p class="sampling-note">采样采用<strong>计划每 2 秒一次</strong>的间隔，截图调用本身会增加实际间隔。第 00 张已经处于演出后段；这里没有精确的结局触发时间，序号不代表触发后的秒数。这组材料既不是完整结局演出的起始记录，也不是连续录屏或逐帧录像。</p>
+        <div class="filmstrip" tabindex="0" role="region" aria-label="可横向滚动的十二张片尾静帧">
+          <figure><a class="image-link" href="full-run-v2/w25-ending-00.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-00.jpg" width="1280" height="720" alt="片尾抽样 00，绿地中央树被白色光带环绕，花围成一圈" loading="lazy"></a><figcaption><b>00</b>已在末段：树周光带与竖向亮片。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-01.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-01.jpg" width="1280" height="720" alt="片尾抽样 01，树枝上出现青色圆点，白色环带变少" loading="lazy"></a><figcaption><b>01</b>光带变少，枝上青色圆点可见。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-02.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-02.jpg" width="1280" height="720" alt="片尾抽样 02，树与环绕的黄紫花留在草地，没有标题文字" loading="lazy"></a><figcaption><b>02</b>演出回落，树与花留在空镜里。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-03.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-03.jpg" width="1280" height="720" alt="片尾抽样 03，画面压暗并在中央出现找回诗意碎片的完成短句" loading="lazy"></a><figcaption><b>03</b>界面回归，中央出现完成短句。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-04.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-04.jpg" width="1280" height="720" alt="片尾抽样 04，完成短句仍在，Wayfinder 标题开始淡入" loading="lazy"></a><figcaption><b>04</b>短句停留，标题开始淡入。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-05.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-05.jpg" width="1280" height="720" alt="片尾抽样 05，Wayfinder 标题、完成短句、poems 与 info 入口完整出现" loading="lazy"></a><figcaption><b>05</b>标题与 poems／info 入口完整出现。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-06.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-06.jpg" width="1280" height="720" alt="片尾抽样 06，完成短句换成 Thanks for playing，按钮仍在" loading="lazy"></a><figcaption><b>06</b>完成短句换成 Thanks for playing。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-07.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-07.jpg" width="1280" height="720" alt="片尾抽样 07，结束界面保持，背景树向左侧移动" loading="lazy"></a><figcaption><b>07</b>文字固定，背景视点继续漂移。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-08.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-08.jpg" width="1280" height="720" alt="片尾抽样 08，中央标题与按钮稳定，树与花更多移向左侧" loading="lazy"></a><figcaption><b>08</b>标题与按钮稳定，地景继续变化。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-09.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-09.jpg" width="1280" height="720" alt="片尾抽样 09，树位于左侧，结束文字与诗集入口仍在中央" loading="lazy"></a><figcaption><b>09</b>树移至左侧，保留诗集回看入口。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-10.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-10.jpg" width="1280" height="720" alt="片尾抽样 10，结束界面无新增操作提示，草地背景继续漂移" loading="lazy"></a><figcaption><b>10</b>结束界面停留，没有新增操作要求。</figcaption></figure>
+          <figure><a class="image-link" href="full-run-v2/w25-ending-11.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w25-ending-11.jpg" width="1280" height="720" alt="片尾抽样 11，树接近左边缘，Wayfinder 标题和 Thanks for playing 仍在中央" loading="lazy"></a><figcaption><b>11</b>仍停留在片尾，等待用户回看。</figcaption></figure>
+        </div>
+        <p class="strip-instruction">横向滚动查看 00—11；也可点击任一图片打开原始静帧。</p>
+        <div class="cross-evidence">
+          <figure><a class="image-link" href="full-run-v2/w27-complete-poem-collection.jpg" target="_blank" rel="noopener"><img src="full-run-v2/w27-complete-poem-collection.jpg" width="1280" height="720" alt="Wayfinder 片尾打开 poems 后，六张各含三行的诗卡排成两行三列" loading="lazy"></a><figcaption>W27 · 片尾打开 poems，六张完整诗卡同时可见。</figcaption></figure>
+          <div><h3>完成不只靠一个“结束”页面证明。</h3><p>W23 的六格进度、W26 的结束入口与 W27 的六首诗集相互印证；相邻日志另记录三种环境与最终返树的实际操作。</p><p>六首诗采集完成后，仍需返中央树触发结尾。这使“收集完成”与“旅程结束”拥有不同的画面与节奏。</p><small>现场记录：<a href="full-run-v2/events.json">events.json</a></small></div>
+        </div>
+      </section>
+
+      <section id="evidence" aria-labelledby="evidence-title">
+        <div class="section-head"><span class="number">07</span><div><h2 id="evidence-title">什么看到了，什么核对了，什么是建议。</h2><p>本页是研究证据入口，不是报告模板，也不代表此后主图已经完成设计评审。第三方画面仅用于比较研究。</p></div></div>
+        <div class="evidence-key">
+          <div><h3>现场事实</h3><p>截图证明构图、可见文字与当下姿态；动作日志补充实际点击、拖动与按住。三站交替操作，日志的时间差不能直接当成章节时长。</p><a href="full-run-v2/events.json">查看动作与事件记录 ↗</a></div>
+          <div><h3>来源规则</h3><p>字体、字幕设定和交互门槛来自发布包或公开源码核对。程序设定不等同于现场精确测量；公开仓库也未逐文件证明与现站完全一致。</p><a href="study-timing-v2.md">查看时间与规则核对 ↗</a></div>
+          <div><h3>设计推断</h3><p>本页带“设计推断”的句子，是对此后主图的转化建议。它们需要在新画面与实际交互中验证，不是原站已经给出的项目答案。</p><a href="full-run-v2/observations.md">查看详细现场观察 ↗</a></div>
+        </div>
+        <div class="route-list" aria-label="三站主线完成路径">
+          <div class="route"><b>Wayfinder</b><p>森林两诗 → 返树 → 草地两诗 → 返树 → 雪地两诗 → 最终返树 → 片尾与六首诗集。</p><a href="full-run-v2/w27-complete-poem-collection.jpg" target="_blank" rel="noopener">完成交叉证据 ↗</a></div>
+          <div class="route"><b>Kaizen</b><p>花园／好奇 → 水面／驱动 → 河道／精准 → 鸟群／同行 → 结语 → 四幕回顾入口。</p><a href="full-run-v2/k20-end-portals.jpg" target="_blank" rel="noopener">片尾证据 ↗</a></div>
+          <div class="route"><b>Nomadic Tribe</b><p>嫩芽生长 → 湖岸热点 → 鸟背旅途 → 新岛种花 → 祝福片尾。</p><a href="full-run-v2/n15-ending.jpg" target="_blank" rel="noopener">片尾证据 ↗</a></div>
+        </div>
+        <ul class="limits">
+          <li>主线完成不代表全部可选反馈已验证。Nomadic Tribe 的 <a href="full-run-v2/n09-farewell-all-hotspots.jpg" target="_blank" rel="noopener">N09</a> 中仍有一枚小晶体呈灰色；三处均尝试过操作，不足以证明所有变色反馈完成。</li>
+          <li>Kaizen 第四幕主题大字没有被捕获；<a href="full-run-v2/k18-togetherness-theme.jpg" target="_blank" rel="noopener">K18</a> 实际是粉色云层空镜与片尾入口，不能依据文件名补写不存在的画面。</li>
+          <li>Wayfinder 自动化操作中曾出现释放后继续行走。是否由工具未送达 mouseup 引起尚未证实；这是操作测量的限制，不能据此声称原作采用自动行走设计。</li>
+          <li>静帧没有覆盖全部动作中间过程，也不足以测量完整的声画同步、逐词出现速度或每个转场曲线。三站主线完成，不等于已经获得三站逐帧录像。</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>截图来自对应官方作品的现场浏览与操作。本页只整理研究材料；没有将原作资产复制进此后的原型或可安装技能。</p><a href="#top" aria-label="返回页面顶部">返回顶部 ↑</a></footer>
+  </div>
+</body>
+</html>

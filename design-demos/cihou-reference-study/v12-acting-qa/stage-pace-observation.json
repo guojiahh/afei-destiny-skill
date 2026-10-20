@@ -1,0 +1,34 @@
+{
+  "before": {
+    "time": 1792229521457,
+    "state": {
+      "cihouActionProgress": "0.00000",
+      "cihouActorPixels": "115.4",
+      "cihouExitDistance": "0.000",
+      "cihouOwnership": "bag",
+      "cihouPhase": "returning",
+      "cihouPitchWeight": "0.0000",
+      "cihouRouteLength": "49.433",
+      "cihouTravel": "7.181",
+      "cihouWaiting": "false",
+      "exitProgress": "0",
+      "storyProgress": "0.2850422126662753"
+    }
+  },
+  "after": {
+    "time": 1792229526751,
+    "state": {
+      "cihouActionProgress": "0.00000",
+      "cihouActorPixels": "121.4",
+      "cihouExitDistance": "0.000",
+      "cihouOwnership": "bag",
+      "cihouPhase": "returning",
+      "cihouPitchWeight": "0.0000",
+      "cihouRouteLength": "49.433",
+      "cihouTravel": "10.249",
+      "cihouWaiting": "false",
+      "exitProgress": "0",
+      "storyProgress": "0.313551034235528"
+    }
+  }
+}

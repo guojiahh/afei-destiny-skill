@@ -1,0 +1,902 @@
+{
+  "source": {
+    "qaEnvironment": {
+      "actualRafCadenceFPS": 12,
+      "method": "Native RAF delivery gate only; no app phase/travel/time/targets commands"
+    },
+    "kind": "passive real-world transition production take, not acceptance",
+    "builtAt": "2026-10-17T10:44:52.179250+00:00",
+    "loadedFiles": {
+      "hero-scene-v13.js": {
+        "sha256": "456aecd7820be88f7d357ccf6b2265e6dc1bd7a09dcabd21d9ebd9863eaab0f3",
+        "snapshot": "scene-snapshot-v13-take02.js"
+      },
+      "hero-character-rig-v13.js": {
+        "sha256": "11f6389407b73df0ccd5f8613d7b2cac85a08a2ce08f544e6e7ace52094f23cf",
+        "snapshot": "rig-snapshot-v13-take02.js"
+      },
+      "prototype-v13.html": {
+        "sha256": "812eabb0f7110d6bc629e09c37d218a9f70998c55f03cbb7ba88440edfe01c13",
+        "scope": "public event controller cloned without story forcing"
+      },
+      "diagnostics-snapshot-v13-take02.js": {
+        "sha256": "61183ad3ca179190611b958b83e812680a06ad9faae66cbfc76b53ddf9dda8a0",
+        "scope": "Passive UV mesh + actual road triangle raycast observer"
+      },
+      "raf-cadence-v13-take02.html": {
+        "sha256": "cf92d10637e283248e01d40ae3de978255d7a3dc5093b0a18ce096a16e3f301b",
+        "scope": "Native 12FPS callback cadence environment; no story forcing"
+      }
+    }
+  },
+  "viewport": [
+    1470,
+    710
+  ],
+  "frames": 2728,
+  "seconds": 235.5812,
+  "cadence": {
+    "observedFramesPerSceneSecond": 11.579871398906194,
+    "wallIntervalMedianMs": 83.4,
+    "p95": 100,
+    "maximumMs": 101,
+    "qualifiedMaxFrameGapMs": 250
+  },
+  "maximumPelvisSample": {
+    "sceneTime": 229.9145,
+    "phaseTag": "crossing",
+    "actionProgress": 0.66455,
+    "gaitTime": 184.486969,
+    "travel": 68.713828,
+    "exitDistance": 0.218237,
+    "rightMeshSoleWorld": [
+      -2.235208,
+      0.121304,
+      -0.915393
+    ],
+    "rightStance": 1,
+    "rightFootMode": "stance",
+    "leftMeshSoleWorld": [
+      -1.990973,
+      0.121301,
+      -1.242992
+    ],
+    "leftStance": 0.280868,
+    "leftFootMode": "swing",
+    "actorRoot": [
+      -2.20296,
+      0.117303,
+      -0.98923
+    ],
+    "wallFrameDeltaMs": 99.9,
+    "rightStanceWorldDrift": 0,
+    "rightStanceScreenX": -3.3e-05,
+    "rightStanceScreenY": -7.9e-05,
+    "rightShadowPixelGap": 0.159963,
+    "leftStanceWorldDrift": 0,
+    "leftStanceScreenX": 0,
+    "leftStanceScreenY": 0,
+    "leftShadowPixelGap": 0.161103,
+    "legOverreach": 0,
+    "billboardPitch": 0,
+    "spatialPelvisAdjustment": 0.24715924484976934,
+    "rightHeelToeWorldYDifference": 0,
+    "leftHeelToeWorldYDifference": 0,
+    "rightMeshToPlanned": 0,
+    "leftMeshToPlanned": 0,
+    "overviewWeight": 0,
+    "phaseAge": 2.6582,
+    "actorScreenPixels": 206.47982958303103
+  },
+  "nearMaximumCrossSamples": [
+    {
+      "sceneTime": 229.6479,
+      "phaseTag": "crossing",
+      "actionProgress": 0.5979,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.180078,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -1.990973,
+        0.121301,
+        -1.242992
+      ],
+      "leftStance": 0.406606,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.175868,
+        0.117302,
+        -1.016102
+      ],
+      "wallFrameDeltaMs": 83.3,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.4e-05,
+      "rightStanceScreenY": -8e-05,
+      "rightShadowPixelGap": 0.15998,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.161075,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.16281571109273069,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.3916,
+      "actorScreenPixels": 206.47987752144226
+    },
+    {
+      "sceneTime": 229.7309,
+      "phaseTag": "crossing",
+      "actionProgress": 0.61865,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.197796,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -1.990973,
+        0.121301,
+        -1.242992
+      ],
+      "leftStance": 0.348222,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.188443,
+        0.117302,
+        -1.00362
+      ],
+      "wallFrameDeltaMs": 83,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.4e-05,
+      "rightStanceScreenY": -8e-05,
+      "rightShadowPixelGap": 0.159973,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.161085,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.19727054377410352,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.4746,
+      "actorScreenPixels": 206.48027181845063
+    },
+    {
+      "sceneTime": 229.8146,
+      "phaseTag": "crossing",
+      "actionProgress": 0.639575,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.210802,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -1.990973,
+        0.121301,
+        -1.242992
+      ],
+      "leftStance": 0.305367,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.197678,
+        0.117302,
+        -0.994463
+      ],
+      "wallFrameDeltaMs": 83.7,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.3e-05,
+      "rightStanceScreenY": -7.9e-05,
+      "rightShadowPixelGap": 0.159968,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.161094,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.22732900942501091,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.5583,
+      "actorScreenPixels": 206.4803463788428
+    },
+    {
+      "sceneTime": 229.9145,
+      "phaseTag": "crossing",
+      "actionProgress": 0.66455,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.218237,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -1.990973,
+        0.121301,
+        -1.242992
+      ],
+      "leftStance": 0.280868,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.20296,
+        0.117303,
+        -0.98923
+      ],
+      "wallFrameDeltaMs": 99.9,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.3e-05,
+      "rightStanceScreenY": -7.9e-05,
+      "rightShadowPixelGap": 0.159963,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.161103,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.24715924484976934,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.6582,
+      "actorScreenPixels": 206.47982958303103
+    },
+    {
+      "sceneTime": 229.9979,
+      "phaseTag": "crossing",
+      "actionProgress": 0.6854,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.2185,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -1.996632,
+        0.133118,
+        -1.237381
+      ],
+      "leftStance": 0,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.203147,
+        0.117303,
+        -0.989045
+      ],
+      "wallFrameDeltaMs": 83.4,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.2e-05,
+      "rightStanceScreenY": -7.9e-05,
+      "rightShadowPixelGap": 0.159961,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.16146,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.21894283813346543,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.7416,
+      "actorScreenPixels": 206.47907800120615
+    },
+    {
+      "sceneTime": 230.0807,
+      "phaseTag": "crossing",
+      "actionProgress": 0.7061,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.2185,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -2.01992,
+        0.14791,
+        -1.214289
+      ],
+      "leftStance": 0,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.203147,
+        0.117303,
+        -0.989045
+      ],
+      "wallFrameDeltaMs": 82.8,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.3e-05,
+      "rightStanceScreenY": -7.9e-05,
+      "rightShadowPixelGap": 0.15996,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.161894,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.1477156603335596,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.8244,
+      "actorScreenPixels": 206.4785626391556
+    },
+    {
+      "sceneTime": 230.1646,
+      "phaseTag": "crossing",
+      "actionProgress": 0.727075,
+      "gaitTime": 184.486969,
+      "travel": 68.713828,
+      "exitDistance": 0.2185,
+      "rightMeshSoleWorld": [
+        -2.235208,
+        0.121304,
+        -0.915393
+      ],
+      "rightStance": 1,
+      "rightFootMode": "stance",
+      "leftMeshSoleWorld": [
+        -2.05789,
+        0.160312,
+        -1.17664
+      ],
+      "leftStance": 0,
+      "leftFootMode": "swing",
+      "actorRoot": [
+        -2.203147,
+        0.117303,
+        -0.989045
+      ],
+      "wallFrameDeltaMs": 83.9,
+      "rightStanceWorldDrift": 0,
+      "rightStanceScreenX": -3.3e-05,
+      "rightStanceScreenY": -7.9e-05,
+      "rightShadowPixelGap": 0.159959,
+      "leftStanceWorldDrift": 0,
+      "leftStanceScreenX": 0,
+      "leftStanceScreenY": 0,
+      "leftShadowPixelGap": 0.162249,
+      "legOverreach": 0,
+      "billboardPitch": 0,
+      "spatialPelvisAdjustment": 0.07045031316361627,
+      "rightHeelToeWorldYDifference": 0,
+      "leftHeelToeWorldYDifference": 0,
+      "rightMeshToPlanned": 0,
+      "leftMeshToPlanned": 0,
+      "overviewWeight": 0,
+      "phaseAge": 2.9083,
+      "actorScreenPixels": 206.47821834235762
+    }
+  ],
+  "worstActualRoadRaycast": {
+    "index": 1233,
+    "time": 106.9814,
+    "phase": "returning",
+    "travel": 46.260874,
+    "side": "left",
+    "surface": {
+      "samples": [
+        {
+          "kind": "support",
+          "sourceAlphaPoint": [
+            636,
+            932
+          ],
+          "world": [
+            -11.740384,
+            1.140412,
+            -9.762785
+          ],
+          "clearance": -0.00141,
+          "surface": [
+            -11.740384,
+            1.141823,
+            -9.762785
+          ]
+        },
+        {
+          "kind": "heel",
+          "sourceAlphaPoint": [
+            527,
+            931
+          ],
+          "world": [
+            -11.643009,
+            1.146695,
+            -9.77644
+          ],
+          "clearance": -0.030725,
+          "surface": [
+            -11.643009,
+            1.17742,
+            -9.77644
+          ]
+        },
+        {
+          "kind": "toe",
+          "sourceAlphaPoint": [
+            655,
+            924
+          ],
+          "world": [
+            -11.757758,
+            1.146695,
+            -9.760349
+          ],
+          "clearance": 0.008168,
+          "surface": [
+            -11.757758,
+            1.138527,
+            -9.760349
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            510,
+            924
+          ],
+          "world": [
+            -11.628156,
+            1.153852,
+            -9.778523
+          ],
+          "clearance": -0.026748,
+          "surface": [
+            -11.628156,
+            1.1806,
+            -9.778523
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            520,
+            929
+          ],
+          "world": [
+            -11.63685,
+            1.148846,
+            -9.777304
+          ],
+          "clearance": -0.029893,
+          "surface": [
+            -11.63685,
+            1.178739,
+            -9.777304
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            530,
+            932
+          ],
+          "world": [
+            -11.645641,
+            1.145644,
+            -9.776071
+          ],
+          "clearance": -0.031212,
+          "surface": [
+            -11.645641,
+            1.176857,
+            -9.776071
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            540,
+            934
+          ],
+          "world": [
+            -11.654482,
+            1.143346,
+            -9.774831
+          ],
+          "clearance": -0.031618,
+          "surface": [
+            -11.654482,
+            1.174964,
+            -9.774831
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            550,
+            935
+          ],
+          "world": [
+            -11.663371,
+            1.14195,
+            -9.773585
+          ],
+          "clearance": -0.028572,
+          "surface": [
+            -11.663371,
+            1.170522,
+            -9.773585
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            560,
+            935
+          ],
+          "world": [
+            -11.672309,
+            1.141456,
+            -9.772332
+          ],
+          "clearance": -0.023246,
+          "surface": [
+            -11.672309,
+            1.164702,
+            -9.772332
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            570,
+            935
+          ],
+          "world": [
+            -11.681247,
+            1.140962,
+            -9.771078
+          ],
+          "clearance": -0.017919,
+          "surface": [
+            -11.681247,
+            1.158882,
+            -9.771078
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            580,
+            935
+          ],
+          "world": [
+            -11.690185,
+            1.140469,
+            -9.769825
+          ],
+          "clearance": -0.012592,
+          "surface": [
+            -11.690185,
+            1.153061,
+            -9.769825
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            590,
+            928
+          ],
+          "world": [
+            -11.699465,
+            1.146293,
+            -9.768524
+          ],
+          "clearance": -0.003293,
+          "surface": [
+            -11.699465,
+            1.149586,
+            -9.768524
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            600,
+            930
+          ],
+          "world": [
+            -11.708305,
+            1.143994,
+            -9.767284
+          ],
+          "clearance": -0.003914,
+          "surface": [
+            -11.708305,
+            1.147909,
+            -9.767284
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            610,
+            931
+          ],
+          "world": [
+            -11.717194,
+            1.142598,
+            -9.766037
+          ],
+          "clearance": -0.003624,
+          "surface": [
+            -11.717194,
+            1.146222,
+            -9.766037
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            620,
+            932
+          ],
+          "world": [
+            -11.726083,
+            1.141202,
+            -9.764791
+          ],
+          "clearance": -0.003334,
+          "surface": [
+            -11.726083,
+            1.144536,
+            -9.764791
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            630,
+            932
+          ],
+          "world": [
+            -11.735021,
+            1.140709,
+            -9.763537
+          ],
+          "clearance": -0.002132,
+          "surface": [
+            -11.735021,
+            1.14284,
+            -9.763537
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            640,
+            931
+          ],
+          "world": [
+            -11.744008,
+            1.141118,
+            -9.762277
+          ],
+          "clearance": -1.8e-05,
+          "surface": [
+            -11.744008,
+            1.141135,
+            -9.762277
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            650,
+            928
+          ],
+          "world": [
+            -11.753093,
+            1.143332,
+            -9.761003
+          ],
+          "clearance": 0.00392,
+          "surface": [
+            -11.753093,
+            1.139412,
+            -9.761003
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            660,
+            923
+          ],
+          "world": [
+            -11.762275,
+            1.147351,
+            -9.759716
+          ],
+          "clearance": 0.009681,
+          "surface": [
+            -11.762275,
+            1.13767,
+            -9.759716
+          ]
+        },
+        {
+          "kind": "alpha-bottom",
+          "sourceAlphaPoint": [
+            670,
+            914
+          ],
+          "world": [
+            -11.771653,
+            1.15498,
+            -9.758401
+          ],
+          "clearance": 0.019089,
+          "surface": [
+            -11.771653,
+            1.135891,
+            -9.758401
+          ]
+        }
+      ],
+      "minimum": {
+        "kind": "alpha-bottom",
+        "sourceAlphaPoint": [
+          540,
+          934
+        ],
+        "world": [
+          -11.654482,
+          1.143346,
+          -9.774831
+        ],
+        "clearance": -0.031618,
+        "surface": [
+          -11.654482,
+          1.174964,
+          -9.774831
+        ]
+      },
+      "maximum": {
+        "kind": "alpha-bottom",
+        "sourceAlphaPoint": [
+          670,
+          914
+        ],
+        "world": [
+          -11.771653,
+          1.15498,
+          -9.758401
+        ],
+        "clearance": 0.019089,
+        "surface": [
+          -11.771653,
+          1.135891,
+          -9.758401
+        ]
+      },
+      "misses": 0
+    }
+  },
+  "surfaceByPhase": {
+    "walking": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023707,
+      "misses": 0,
+      "sampledFeet": 42
+    },
+    "walking-wait": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023663,
+      "misses": 0,
+      "sampledFeet": 42
+    },
+    "picking": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023664,
+      "misses": 0,
+      "sampledFeet": 32
+    },
+    "returning": {
+      "minimumClearance": -0.031618,
+      "maximumClearance": 0.047106,
+      "misses": 0,
+      "sampledFeet": 689
+    },
+    "reconsidering": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023658,
+      "misses": 0,
+      "sampledFeet": 24
+    },
+    "revealing": {
+      "minimumClearance": 0.003096,
+      "maximumClearance": 0.024941,
+      "misses": 0,
+      "sampledFeet": 28
+    },
+    "choice": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023658,
+      "misses": 0,
+      "sampledFeet": 160
+    },
+    "placing-approach": {
+      "minimumClearance": 0.003978,
+      "maximumClearance": 0.023629,
+      "misses": 0,
+      "sampledFeet": 7
+    },
+    "placing-action": {
+      "minimumClearance": 0.003978,
+      "maximumClearance": 0.023618,
+      "misses": 0,
+      "sampledFeet": 172
+    },
+    "crossing": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023594,
+      "misses": 0,
+      "sampledFeet": 12
+    },
+    "leaving": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023594,
+      "misses": 0,
+      "sampledFeet": 16
+    },
+    "complete": {
+      "minimumClearance": 0.004,
+      "maximumClearance": 0.023586,
+      "misses": 0,
+      "sampledFeet": 6
+    }
+  },
+  "limits": [
+    "Actual world sole/root are recorded at the maximum; per-frame local ankle targets, actor quaternion and full pelvis state were not retained for that exact frame. No local-target reconstruction is presented as a measurement.",
+    "Ground raycasts sampled real alpha-bottom contour pixels every 3 observed frames, only when stance>=.75 and planner mode stance; no swing samples enter the worst penetration.",
+    "After the explicit reduced-motion protocol button, passive overlay dots are stale because sceneTime did not advance; protocol screenshots prove readiness callbacks, not a new static feet verification."
+  ]
+}

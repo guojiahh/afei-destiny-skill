@@ -1,0 +1,27 @@
+{
+  "asset": "world-keyart-v2.png",
+  "prompt": "Use case: precise-object-edit.\nAsset type: transparent painted world plate for an animated literary website.\nInput images: Image 1 is the EDIT TARGET, the original blue/pink paper Möbius road painting. Images 2, 3, 4 are STYLE REFERENCES only: Nomadic Tribe's controlled indigo plane and purposeful graphic line scale; Kaizen's large calm washes and gentle restrained detail; Wayfinder's economical faceted rock shapes and brush-ground vocabulary. Do not copy their UI, text, creatures, characters, or exact layouts.\nPrimary request: Refine ONLY the mark-making and color noise of Image 1. Keep the EXACT road silhouette, all road edges, inner hole, camera perspective, center fold, pink paper underside, and all three rock/grass cluster positions and sizes. The runtime animation path is calibrated to those positions. Do not move, add, remove or change the size of any scene element.\nPaint the road as predominantly quiet, desaturated indigo-blue with a few broad subtly varied painted tonal fields. Reduce the number of conspicuous short white, icy blue and yellow scratches by roughly 75 percent. Most of the road must be calm continuous painted ground, subtle paper tooth, never a glossy smooth 3D material. Retain only a few controlled, delicate ink/dry-brush direction lines at curves and folds; keep the blue large and simple so a small red-dress girl remains the focal point in close-up. Remove golden streaks from the blue road; golden ochre is reserved for the existing few leaves. Reduce busy rock hatching to two or three quiet broad blue-gray facets with a thin intermittent ink edge, in the restrained spirit of the Wayfinder reference. Keep rocks and grasses physically rooted to the existing paper edge.\nStyle: confident hand-painted gouache and economical ink, literary illustrated film background, calm and authored, no decorative texture overkill, no procedural regular scratches, no vector-clean gradients, no embossed rim, no product rendering.\nConstraints: no characters, no words, no logos, no interface, no new ornaments. Preserve Image 1 canvas 1536x1024 framing and precise geometry/locations. Fully TRANSPARENT outside the road/rocks/grass AND within the central hole; keep real alpha, no colored backdrop or shadow halo.",
+  "source": "/Users/afei/.codex/generated_images/01a1477d-b5ee-75a2-842f-52f165b2f4ff/exec-143f3c5b-f25f-47b2-839a-ec1c5d82b8d4.png",
+  "mode": "built-in image_gen edit",
+  "inputs": [
+    "world-keyart-v1.png",
+    "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+    "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+    "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg"
+  ],
+  "sha256": "aed89b93315c399926a989f32531f990c46e0feab59503f5e9359b04de37b79d",
+  "size": [
+    1536,
+    1024
+  ],
+  "alpha_bbox_at_8": [
+    26,
+    91,
+    1522,
+    933
+  ],
+  "alpha_zero_fraction": 0.5476067860921224,
+  "alpha_1_to_7_fraction": 0.014017105102539062,
+  "central_hole_alpha": 0,
+  "status": "Visual inspection: road silhouette, fold and three rock clusters retained; fewer bright surface scratches. Requires actual browser path/contact QA."
+}

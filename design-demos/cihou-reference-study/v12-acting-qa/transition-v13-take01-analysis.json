@@ -1,0 +1,1067 @@
+{
+  "source": {
+    "kind": "passive real-world transition production take, not acceptance",
+    "builtAt": "2026-10-17T10:31:27.712856+00:00",
+    "loadedFiles": {
+      "hero-scene-v13.js": {
+        "sha256": "e39661ffc36f73295daf053d23821a25e6d185c1a4c4430a7e5298b98ec29b15",
+        "snapshot": "scene-snapshot-v13-take01.js"
+      },
+      "hero-character-rig-v13.js": {
+        "sha256": "11f6389407b73df0ccd5f8613d7b2cac85a08a2ce08f544e6e7ace52094f23cf",
+        "snapshot": "rig-snapshot-v13-take01.js"
+      },
+      "prototype-v13.html": {
+        "sha256": "3a7fb38dfc71ab27ad100e01be201331cfe6e35f4e3817d2293fbcf09bb8f960",
+        "scope": "public event controller cloned without story forcing"
+      }
+    }
+  },
+  "viewport": [
+    1470,
+    710
+  ],
+  "frames": 12497,
+  "sceneSeconds": 209.1747,
+  "summary": {
+    "qualifiedStrongJumpCount": 0,
+    "transitionCount": 12,
+    "ownershipChanges": 6,
+    "frameJump": 1.0000000010279564e-06,
+    "stanceWorld": 1.0000000010279564e-06,
+    "stanceScreen": 0.0001120779994601999,
+    "stanceScreenX": 0.00010998452478361287,
+    "stanceScreenY": 9.934182935467106e-05,
+    "meshToReported": 0,
+    "meshToPlanned": 0,
+    "legOverreach": 0,
+    "pelvisAdjustment": 0.08062878677969176
+  },
+  "transitions": [
+    {
+      "from": "walking",
+      "to": "walking-wait",
+      "deltaMs": 16.6,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "walking-wait",
+      "to": "walking",
+      "deltaMs": 16.7,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.006646420164268951
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "walking",
+      "to": "picking",
+      "deltaMs": 16.9,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0.000474,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "swing",
+          "currentMode": "settling"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 0,
+          "previousMode": "swing",
+          "maxNext80msDisplacement": 0.009371604451746582
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "picking",
+      "to": "returning",
+      "deltaMs": 18.3,
+      "strongMax": 1e-06,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 1e-06,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 9.999999996956888e-07
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "returning",
+      "to": "reconsidering",
+      "deltaMs": 17.9,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0.000431,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "swing",
+          "currentMode": "settling"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 0,
+          "previousMode": "swing",
+          "maxNext80msDisplacement": 0.008031832543075197
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "reconsidering",
+      "to": "revealing",
+      "deltaMs": 16.7,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "revealing",
+      "to": "choice",
+      "deltaMs": 18,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "choice",
+      "to": "placing-approach",
+      "deltaMs": 16.8,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "placing-approach",
+      "to": "placing-action",
+      "deltaMs": 17.2,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0.000434,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "swing",
+          "currentMode": "settling"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 0,
+          "previousMode": "swing",
+          "maxNext80msDisplacement": 0.008774000000000004
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        }
+      ]
+    },
+    {
+      "from": "placing-action",
+      "to": "crossing",
+      "deltaMs": 16.6,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "stance",
+          "currentMode": "swing"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "stance",
+          "currentMode": "swing"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.012585455454611094
+        }
+      ]
+    },
+    {
+      "from": "crossing",
+      "to": "leaving",
+      "deltaMs": 15.9,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 0.750002,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.006242767094806547
+        }
+      ]
+    },
+    {
+      "from": "leaving",
+      "to": "complete",
+      "deltaMs": 16.6,
+      "strongMax": 0,
+      "perFoot": [
+        {
+          "side": "right",
+          "delta": 0,
+          "bothStrong": true,
+          "frameQualified": true,
+          "previousMode": "stance",
+          "currentMode": "stance"
+        },
+        {
+          "side": "left",
+          "delta": 0.009826,
+          "bothStrong": false,
+          "frameQualified": false,
+          "previousMode": "swing",
+          "currentMode": "swing"
+        }
+      ],
+      "next80ms": [
+        {
+          "side": "right",
+          "previousStance": 1,
+          "previousMode": "stance",
+          "maxNext80msDisplacement": 0.0
+        },
+        {
+          "side": "left",
+          "previousStance": 0,
+          "previousMode": "swing",
+          "maxNext80msDisplacement": 0.07402621310049558
+        }
+      ]
+    }
+  ],
+  "strongStanceWindows": {
+    "maxWorldDrift": {
+      "side": "right",
+      "startIndex": 750,
+      "startTime": 13.1661,
+      "phaseTags": [
+        "picking"
+      ],
+      "anchor": [
+        -2.61976,
+        0.122378,
+        -2.254848
+      ],
+      "last": [
+        -2.619759,
+        0.122378,
+        -2.254848
+      ],
+      "worldPath": 4.7e-05,
+      "maxWorldDrift": 1e-06,
+      "maxScreenDrift": 9.4e-05,
+      "maxScreenX": 6.7e-05,
+      "maxScreenY": 6.7e-05,
+      "maxShadowPixelGap": 0.152643,
+      "endIndex": 843,
+      "endTime": 14.7161,
+      "duration": 1.55
+    },
+    "maxScreenDrift": {
+      "side": "right",
+      "startIndex": 7067,
+      "startTime": 118.6453,
+      "phaseTags": [
+        "returning"
+      ],
+      "anchor": [
+        -9.04573,
+        0.121449,
+        -10.304302
+      ],
+      "last": [
+        -9.04573,
+        0.121449,
+        -10.304302
+      ],
+      "worldPath": 0,
+      "maxWorldDrift": 0,
+      "maxScreenDrift": 0.000112,
+      "maxScreenX": 8.2e-05,
+      "maxScreenY": 7.8e-05,
+      "maxShadowPixelGap": 0.143083,
+      "endIndex": 7105,
+      "endTime": 119.2768,
+      "duration": 0.6315
+    },
+    "maxScreenX": {
+      "side": "left",
+      "startIndex": 11251,
+      "startTime": 188.4246,
+      "phaseTags": [
+        "crossing",
+        "leaving"
+      ],
+      "anchor": [
+        -2.277492,
+        0.121304,
+        -0.957678
+      ],
+      "last": [
+        -2.277492,
+        0.121304,
+        -0.957678
+      ],
+      "worldPath": 5e-05,
+      "maxWorldDrift": 1e-06,
+      "maxScreenDrift": 0.00011,
+      "maxScreenX": 0.00011,
+      "maxScreenY": 2.3e-05,
+      "maxShadowPixelGap": 0.161117,
+      "endIndex": 11412,
+      "endTime": 191.109,
+      "duration": 2.6844
+    },
+    "maxScreenY": {
+      "side": "right",
+      "startIndex": 650,
+      "startTime": 11.4995,
+      "phaseTags": [
+        "walking"
+      ],
+      "anchor": [
+        -2.652837,
+        0.122425,
+        -2.287925
+      ],
+      "last": [
+        -2.652837,
+        0.122425,
+        -2.287925
+      ],
+      "worldPath": 0,
+      "maxWorldDrift": 0,
+      "maxScreenDrift": 0.000108,
+      "maxScreenX": 4.4e-05,
+      "maxScreenY": 9.9e-05,
+      "maxShadowPixelGap": 0.148763,
+      "endIndex": 727,
+      "endTime": 12.7823,
+      "duration": 1.2828
+    },
+    "maxShadowPixelGap": {
+      "side": "left",
+      "startIndex": 10492,
+      "startTime": 175.7597,
+      "phaseTags": [
+        "choice",
+        "placing-approach"
+      ],
+      "anchor": [
+        -1.734753,
+        0.121359,
+        -1.567162
+      ],
+      "last": [
+        -1.734753,
+        0.121359,
+        -1.567162
+      ],
+      "worldPath": 0,
+      "maxWorldDrift": 0,
+      "maxScreenDrift": 9.3e-05,
+      "maxScreenX": 7.3e-05,
+      "maxScreenY": 8.7e-05,
+      "maxShadowPixelGap": 0.167301,
+      "endIndex": 10528,
+      "endTime": 176.3762,
+      "duration": 0.6165
+    }
+  },
+  "byPhase": {
+    "choice": {
+      "frames": 788,
+      "firstTime": 162.7601,
+      "lastTime": 175.8762,
+      "maxPelvisAdjustment": {
+        "value": 0.007448106314113856,
+        "time": 175.708,
+        "phase": "choice",
+        "travel": 68.713828,
+        "pitch": 0.000272
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 162.7601,
+        "phase": "choice",
+        "travel": 68.713828,
+        "pitch": 0.003063
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "complete": {
+      "frames": 669,
+      "firstTime": 198.042,
+      "lastTime": 209.1747,
+      "maxPelvisAdjustment": {
+        "value": 0,
+        "time": 198.042,
+        "phase": "complete",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 198.042,
+        "phase": "complete",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "crossing": {
+      "frames": 241,
+      "firstTime": 187.0591,
+      "lastTime": 191.0583,
+      "maxPelvisAdjustment": {
+        "value": 0.048707918059717255,
+        "time": 189.7257,
+        "phase": "crossing",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 187.0591,
+        "phase": "crossing",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "leaving": {
+      "frames": 418,
+      "firstTime": 191.0742,
+      "lastTime": 198.0254,
+      "maxPelvisAdjustment": {
+        "value": 0.00539684785466088,
+        "time": 191.7923,
+        "phase": "leaving",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 191.0742,
+        "phase": "leaving",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "picking": {
+      "frames": 224,
+      "firstTime": 12.8495,
+      "lastTime": 16.6475,
+      "maxPelvisAdjustment": {
+        "value": 0,
+        "time": 12.8495,
+        "phase": "picking",
+        "travel": 2.33,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 12.8495,
+        "phase": "picking",
+        "travel": 2.33,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "placing-action": {
+      "frames": 605,
+      "firstTime": 176.9753,
+      "lastTime": 187.0425,
+      "maxPelvisAdjustment": {
+        "value": 0,
+        "time": 176.9753,
+        "phase": "placing-action",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 176.9753,
+        "phase": "placing-action",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "placing-approach": {
+      "frames": 64,
+      "firstTime": 175.893,
+      "lastTime": 176.9581,
+      "maxPelvisAdjustment": {
+        "value": 0.03742734486700294,
+        "time": 176.3929,
+        "phase": "placing-approach",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 175.893,
+        "phase": "placing-approach",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "reconsidering": {
+      "frames": 191,
+      "firstTime": 155.927,
+      "lastTime": 159.1269,
+      "maxPelvisAdjustment": {
+        "value": 0.007314013386050998,
+        "time": 157.0937,
+        "phase": "reconsidering",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 155.927,
+        "phase": "reconsidering",
+        "travel": 68.713828,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "returning": {
+      "frames": 8349,
+      "firstTime": 16.6658,
+      "lastTime": 155.9091,
+      "maxPelvisAdjustment": {
+        "value": 0.08062878677969176,
+        "time": 97.6619,
+        "phase": "returning",
+        "travel": 45.634981,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 16.6658,
+        "phase": "returning",
+        "travel": 2.33,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "revealing": {
+      "frames": 217,
+      "firstTime": 159.1436,
+      "lastTime": 162.7421,
+      "maxPelvisAdjustment": {
+        "value": 0.02579696189289088,
+        "time": 159.5425,
+        "phase": "revealing",
+        "travel": 68.713828,
+        "pitch": 0.2
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 159.1436,
+        "phase": "revealing",
+        "travel": 68.713828,
+        "pitch": 0.000272
+      },
+      "maxHeelToeWorldYDifference": 0.002518
+    },
+    "walking": {
+      "frames": 506,
+      "firstTime": 0.5499,
+      "lastTime": 12.8326,
+      "maxPelvisAdjustment": {
+        "value": 0.07535241354824962,
+        "time": 11.5813,
+        "phase": "walking",
+        "travel": 2.072029,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 0.5499,
+        "phase": "walking",
+        "travel": 0.153972,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    },
+    "walking-wait": {
+      "frames": 225,
+      "firstTime": 7.3163,
+      "lastTime": 11.0495,
+      "maxPelvisAdjustment": {
+        "value": 0,
+        "time": 7.3163,
+        "phase": "walking-wait",
+        "travel": 1.78,
+        "pitch": 0
+      },
+      "maxOverreach": {
+        "value": 0,
+        "time": 7.3163,
+        "phase": "walking-wait",
+        "travel": 1.78,
+        "pitch": 0
+      },
+      "maxHeelToeWorldYDifference": 0
+    }
+  },
+  "contactBoundaries": [
+    {
+      "from": "stem",
+      "to": "hand",
+      "phase": "picking",
+      "progress": 0.433658,
+      "flowerStep": 1e-06,
+      "handToPlanned": 0,
+      "handToActual": 0,
+      "bagToActual": 0.457796,
+      "truePaintedHandWorld": [
+        -2.572453,
+        0.618089,
+        -1.835483
+      ],
+      "actualFlowerGripWorld": [
+        -2.572453,
+        0.618089,
+        -1.835483
+      ]
+    },
+    {
+      "from": "hand",
+      "to": "bag",
+      "phase": "picking",
+      "progress": 0.863974,
+      "flowerStep": 0.000847,
+      "handToPlanned": 0.468062,
+      "handToActual": 0.0008,
+      "bagToActual": 0,
+      "truePaintedHandWorld": [
+        -2.556483,
+        0.799494,
+        -2.266667
+      ],
+      "actualFlowerGripWorld": [
+        -2.555683,
+        0.799494,
+        -2.266637
+      ]
+    },
+    {
+      "from": "bag",
+      "to": "hand",
+      "phase": "reconsidering",
+      "progress": 0.083375,
+      "flowerStep": 0.00168,
+      "handToPlanned": null,
+      "handToActual": 0,
+      "bagToActual": 0.0008,
+      "truePaintedHandWorld": [
+        -1.624401,
+        0.78355,
+        -1.719931
+      ],
+      "actualFlowerGripWorld": [
+        -1.624401,
+        0.78355,
+        -1.719931
+      ]
+    },
+    {
+      "from": "hand",
+      "to": "bag",
+      "phase": "reconsidering",
+      "progress": 0.942188,
+      "flowerStep": 0.000801,
+      "handToPlanned": null,
+      "handToActual": 0.0008,
+      "bagToActual": 0,
+      "truePaintedHandWorld": [
+        -1.632855,
+        0.787182,
+        -1.712182
+      ],
+      "actualFlowerGripWorld": [
+        -1.632083,
+        0.787182,
+        -1.712394
+      ]
+    },
+    {
+      "from": "bag",
+      "to": "hand",
+      "phase": "placing",
+      "progress": 0.203778,
+      "flowerStep": 0.001023,
+      "handToPlanned": 0.624906,
+      "handToActual": 0,
+      "bagToActual": 0.0008,
+      "truePaintedHandWorld": [
+        -1.960152,
+        0.788468,
+        -1.234923
+      ],
+      "actualFlowerGripWorld": [
+        -1.960152,
+        0.788468,
+        -1.234923
+      ]
+    },
+    {
+      "from": "hand",
+      "to": "ground",
+      "phase": "placing",
+      "progress": 0.78,
+      "flowerStep": 0,
+      "handToPlanned": 0,
+      "handToActual": 0,
+      "bagToActual": 0.343605,
+      "truePaintedHandWorld": [
+        -2.194618,
+        0.257301,
+        -1.00385
+      ],
+      "actualFlowerGripWorld": [
+        -2.194618,
+        0.257301,
+        -1.00385
+      ]
+    }
+  ],
+  "maximumPelvisAdjustment": {
+    "value": 0.08062878677969176,
+    "time": 97.6619,
+    "phase": "returning",
+    "travel": 45.634981,
+    "pitch": 0
+  },
+  "maximumOverreach": {
+    "value": 0,
+    "time": 0.5499,
+    "phase": "walking",
+    "travel": 0.153972,
+    "pitch": 0
+  },
+  "underpassSamples": {
+    "targetTravel": 58.21,
+    "nearestSample": [
+      121.9118,
+      "returning",
+      0,
+      137.558369,
+      58.211408,
+      0,
+      [
+        -9.001024,
+        0.123981,
+        -9.087726
+      ],
+      1,
+      "stance",
+      [
+        -8.957585,
+        0.137583,
+        -8.841595
+      ],
+      0,
+      "swing",
+      [
+        -8.999536,
+        0.12,
+        -8.99888
+      ],
+      16.7,
+      0,
+      1.7e-05,
+      -4.1e-05,
+      0.106824,
+      0,
+      0,
+      0,
+      0.105116,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "cautions": [
+    "Production QA, not independent design acceptance.",
+    "Mesh sole comes from independently read actual indexed UV triangles.",
+    "Strong stance is load>=.75 and planner mode stance; world drift compares with same-window fixed initial point, screen drift reprojects that fixed world point through the current camera.",
+    "Whole-shoe heel/toe roll can differ from a changing instantaneous lowest pixel; external XYZ take uses a fixed alpha sole material landmark and reports heel-toe world Y difference."
+  ]
+}

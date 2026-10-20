@@ -1,0 +1,230 @@
+{
+  "note": "Read-only raw subset: gait phase/duty in [.12,.88], stance>=.75, same moving phase; foot roll and phase entries excluded. World drift remains real; per-axis screen drift requires new passive fixed-material-point probe.",
+  "top": [
+    {
+      "side": "right",
+      "phase": "returning",
+      "startFrame": 8300,
+      "startTime": 138.4654,
+      "anchor": [
+        -2.379687,
+        0.118021,
+        -1.9244
+      ],
+      "maxWorldDrift": 0.22606458900500095,
+      "lastFrame": 8384,
+      "endTime": 139.8654,
+      "duration": 1.4000000000000057
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 2732,
+      "startTime": 45.6491,
+      "anchor": [
+        5.65442,
+        0.160525,
+        5.632854
+      ],
+      "maxWorldDrift": 0.22373706555016737,
+      "lastFrame": 2754,
+      "endTime": 46.0163,
+      "duration": 0.36720000000000397
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 779,
+      "startTime": 13.0998,
+      "anchor": [
+        -2.580193,
+        0.118261,
+        -1.959658
+      ],
+      "maxWorldDrift": 0.21866436959184726,
+      "lastFrame": 802,
+      "endTime": 13.4813,
+      "duration": 0.38149999999999906
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 8226,
+      "startTime": 137.2321,
+      "anchor": [
+        -2.586995,
+        0.11827,
+        -1.963183
+      ],
+      "maxWorldDrift": 0.21459062880284388,
+      "lastFrame": 8295,
+      "endTime": 138.3807,
+      "duration": 1.1485999999999876
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 3132,
+      "startTime": 52.3161,
+      "anchor": [
+        7.615963,
+        0.202171,
+        2.136271
+      ],
+      "maxWorldDrift": 0.2060258278007877,
+      "lastFrame": 3155,
+      "endTime": 52.6995,
+      "duration": 0.38340000000000174
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 3082,
+      "startTime": 51.4811,
+      "anchor": [
+        7.64189,
+        0.196864,
+        2.673115
+      ],
+      "maxWorldDrift": 0.20281511024822624,
+      "lastFrame": 3105,
+      "endTime": 51.8661,
+      "duration": 0.3850000000000051
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 2682,
+      "startTime": 44.8162,
+      "anchor": [
+        5.091084,
+        0.154184,
+        5.583892
+      ],
+      "maxWorldDrift": 0.2020979260383438,
+      "lastFrame": 2704,
+      "endTime": 45.1829,
+      "duration": 0.3666999999999945
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 2782,
+      "startTime": 46.4815,
+      "anchor": [
+        6.162763,
+        0.166764,
+        5.356127
+      ],
+      "maxWorldDrift": 0.20040861307588567,
+      "lastFrame": 2804,
+      "endTime": 46.8496,
+      "duration": 0.3681000000000054
+    },
+    {
+      "side": "right",
+      "phase": "returning",
+      "startFrame": 804,
+      "startTime": 13.5165,
+      "anchor": [
+        -2.368961,
+        0.118015,
+        -1.931103
+      ],
+      "maxWorldDrift": 0.19915810522045038,
+      "lastFrame": 832,
+      "endTime": 13.9831,
+      "duration": 0.4665999999999997
+    },
+    {
+      "side": "right",
+      "phase": "returning",
+      "startFrame": 5652,
+      "startTime": 94.3324,
+      "anchor": [
+        -11.136753,
+        1.454428,
+        -9.513135
+      ],
+      "maxWorldDrift": 0.19830475838214204,
+      "lastFrame": 5675,
+      "endTime": 94.7158,
+      "duration": 0.38339999999999463
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 3182,
+      "startTime": 53.1495,
+      "anchor": [
+        7.457267,
+        0.203424,
+        1.625117
+      ],
+      "maxWorldDrift": 0.1982935810887486,
+      "lastFrame": 3205,
+      "endTime": 53.5315,
+      "duration": 0.3819999999999979
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 2832,
+      "startTime": 47.3154,
+      "anchor": [
+        6.548738,
+        0.172147,
+        4.983944
+      ],
+      "maxWorldDrift": 0.19827185939260245,
+      "lastFrame": 2855,
+      "endTime": 47.6996,
+      "duration": 0.3841999999999999
+    },
+    {
+      "side": "right",
+      "phase": "returning",
+      "startFrame": 5602,
+      "startTime": 93.4991,
+      "anchor": [
+        -10.688623,
+        1.641641,
+        -9.408739
+      ],
+      "maxWorldDrift": 0.19636660069115744,
+      "lastFrame": 5625,
+      "endTime": 93.8805,
+      "duration": 0.3813999999999993
+    },
+    {
+      "side": "right",
+      "phase": "returning",
+      "startFrame": 5702,
+      "startTime": 95.1645,
+      "anchor": [
+        -11.551853,
+        1.251357,
+        -9.678661
+      ],
+      "maxWorldDrift": 0.19577999238686286,
+      "lastFrame": 5725,
+      "endTime": 95.5492,
+      "duration": 0.38469999999999516
+    },
+    {
+      "side": "left",
+      "phase": "returning",
+      "startFrame": 3032,
+      "startTime": 50.6496,
+      "anchor": [
+        7.539306,
+        0.191546,
+        3.184901
+      ],
+      "maxWorldDrift": 0.19567108778508852,
+      "lastFrame": 3055,
+      "endTime": 51.0324,
+      "duration": 0.38280000000000314
+    }
+  ]
+}

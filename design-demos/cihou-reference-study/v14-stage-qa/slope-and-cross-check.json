@@ -1,0 +1,174 @@
+{
+  "generatedAt": "2026-10-17T10:58:05.394Z",
+  "evidenceKind": "Node/native Three.js offline math and Mesh-ray checks; no browser or joint rendered take",
+  "sources": [
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/hero-scene-v14.js",
+      "sha256": "0ce3fbd9e038817840c72b50f30969b76bfd21b50eddf98c38d89098383ab29d"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/hero-character-rig-v14.js",
+      "sha256": "b4f76ba6d814a2791c6c393fc8b43e0fefc836a2d726bf82524466768b4fa95c"
+    }
+  ],
+  "executedProductionMethods": [
+    "SceneV14._prepareWorldFeet",
+    "SceneV14._roadContact",
+    "RigV14._prepareFoot",
+    "RigV14._actionPose"
+  ],
+  "boundaries": [
+    "Normal/heel-toe check uses real Three Groups and their matrixWorld, with synthetic foot metadata and fixed world-plane normals.",
+    "The transform grid includes facing reflection, uniform and nonuniform scale, yaw, pitch, and fixed .07-radian roll.",
+    "Ray check invokes actual _roadContact against a real synthetic sloped top Mesh using native Three Raycaster.",
+    "Rear-follow check starts with pre-seeded crossFeet and compares actual scene planning with actual rig action pose at 11 progress values.",
+    "No browser, WebGL, real atlas alpha pixels, full rig.update/IK, production road geometry, camera animation, or end-to-end rendered take is exercised.",
+    "The transform cases are independent; they do not test long-running surface-normal cache invalidation."
+  ],
+  "normalFormula": {
+    "transformCases": 162,
+    "heelToeChecks": 324,
+    "maxAbsWorldTangentDotSurfaceNormal": 2.5396351688300456e-15,
+    "yawsRadians": [
+      0,
+      0.65,
+      2.2
+    ],
+    "pitchesRadians": [
+      0,
+      0.2,
+      -0.35
+    ],
+    "rollRadians": 0.07,
+    "facings": [
+      1,
+      -1
+    ],
+    "scales": [
+      [
+        0.75,
+        0.75,
+        0.75
+      ],
+      [
+        1.15,
+        1.15,
+        1.15
+      ],
+      [
+        1.3,
+        0.8,
+        0.6
+      ]
+    ],
+    "surfaceNormals": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -0.1440046082211958,
+        0.9600307214746386,
+        0.24000768036865966
+      ],
+      [
+        0.28221626051507914,
+        0.9407208683835973,
+        -0.18814417367671946
+      ]
+    ]
+  },
+  "roadRay": {
+    "plane": "y = .14 + .2*x + .1*z",
+    "queryPoint": [
+      0.3,
+      0.24400000000000002,
+      0.4
+    ],
+    "heightError": 3.6694108584978125e-9,
+    "normalError": 2.4144595506338485e-9,
+    "contactPoint": [
+      0.3,
+      0.24000000366941088,
+      0.4
+    ]
+  },
+  "rearFollow": {
+    "interval": [
+      0.4,
+      0.67
+    ],
+    "landingLoadInterval": [
+      0.67,
+      0.75
+    ],
+    "maxXError": 2.7755575615628914e-17,
+    "maxYError": 6.938893903907228e-18,
+    "maxLoadError": 1.6653345369377348e-16,
+    "samples": [
+      {
+        "p": 0,
+        "mode": "stance",
+        "stance": 1
+      },
+      {
+        "p": 0.3999,
+        "mode": "stance",
+        "stance": 1
+      },
+      {
+        "p": 0.4,
+        "mode": "stance",
+        "stance": 1
+      },
+      {
+        "p": 0.4001,
+        "mode": "swing",
+        "stance": 0
+      },
+      {
+        "p": 0.535,
+        "mode": "swing",
+        "stance": 0
+      },
+      {
+        "p": 0.6699,
+        "mode": "swing",
+        "stance": 0
+      },
+      {
+        "p": 0.67,
+        "mode": "stance",
+        "stance": 0
+      },
+      {
+        "p": 0.7,
+        "mode": "stance",
+        "stance": 0.31640624999999856
+      },
+      {
+        "p": 0.75,
+        "mode": "stance",
+        "stance": 1
+      },
+      {
+        "p": 0.88,
+        "mode": "stance",
+        "stance": 1
+      },
+      {
+        "p": 1,
+        "mode": "stance",
+        "stance": 1
+      }
+    ]
+  },
+  "assertions": {
+    "worldHeelToeDirectionTangent": true,
+    "topMeshRayHeightMatchesPlane": true,
+    "topMeshRayNormalMatchesPlane": true,
+    "sceneRigRearPositionAndLoadMatch": true
+  },
+  "allPassed": true
+}

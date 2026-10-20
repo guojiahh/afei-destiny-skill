@@ -1,19 +1,23 @@
 # 设计演示索引
 
-更新：2026-10-16。这里存放匿名样机、历史设计和项目展示源稿，不属于可安装 Skill，不存放真实咨询。第一阶段已完成，所有新报告统一莫比乌斯环与固定正文模板。
+更新：2026-10-20。这里存放匿名样机、历史设计和项目展示源稿，不属于可安装 Skill，不存放真实咨询。第一阶段已完成，所有新报告统一莫比乌斯环与固定正文模板。
 
-## 当前匿名视觉基线
+## 当前完整匿名演示
 
-[此后 · quiet 单文件样机](cihou-quiet.html)／[源码与设计记录](cihou-quiet/README.md)。统一米白页面、透明深色纸带与中文排版，包含图内三状态、持续行走、人物跨出和两段匿名正文片段。没有外部运行依赖；PNG、样式与脚本均内嵌。当前转场为淡化与二维路径，未生成视频。
+[V19 求职完整 HTML](cihou-wayfinder-v19/final_report.html)直接复用 Wayfinder 的原站运行时、风景和视听资源，按住沿固定路线行走，松开停下；首景重复六个循环位置，主动切换“此刻／来处／可能”，再比较三种有条件的走法。V19 沿用 V18 文案，集中修复加载期文字定位。自然的第二人称连接当下机制、可能的形成路径与下一步，短句随景色平滑浮现。九章正文与[每位读者的闭环叙事合同](../afei-destiny-skill/references/loop-narrative.md)保持来源绑定。全部资源内嵌到单份 HTML；[构建脚本](cihou-wayfinder-v19/build_demo.py)、合成双底稿、来源绑定模型和来源计划位于同目录。
 
-获认可的视觉已进入 [Skill 正式渲染器](../afei-destiny-skill/scripts/render_quiet_report.py)和[页面资产](../afei-destiny-skill/assets/cihou/quiet/report.html)。以后修改正式产品从这些文件开始，匿名样机只作为对照，不把它改名字后当作个人报告。
-
-完整个人页面依照 [HTML 协议](../afei-destiny-skill/references/html-report.md)，读取同会话已登记的双底稿，填写固定模型，生成并登记。开发接续见[交接说明](../docs/CIHOU_HANDOFF.md)，产品决策见[产品方案](../docs/CIHOU_PRODUCT_PLAN.md)。
+这是显式合成的设计材料，未使用真实咨询或出生数据。原作署名和权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)，运行与验收状态见[交接说明](../docs/CIHOU_HANDOFF.md)。个人报告仍必须按 [HTML 协议](../afei-destiny-skill/references/html-report.md)，使用本次已登记双底稿与模型生成，不能给匿名样机换名。
 
 ## 历史演示：只用于比较
 
 | 版本 | 保留价值 |
 |---|---|
+| [V18 自然叙事](cihou-wayfinder-v18/final_report.html) | 自然第二人称、可能学习路径与集中依据说明的历史版本；V19 保留同一文案 |
+| [V17 固定路线循环](cihou-wayfinder-v17/final_report.html) | 按住固定路线、首景六节点重复与此刻／来处／可能结构的历史版本 |
+| [V16 原站引擎复用](cihou-wayfinder-v16/final_report.html) | 原站世界、中文锚点与九章报告的历史演示，保留原文件，不随新版本更新 |
+| [V15 程序绘画探索](cihou-wayfinder-v15/final_report.html) | 闭环鼠标行走、分场字幕与条件选择的早期完整演示，采用原创程序环境和纸偶 |
+| [V8 独立主图](../afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v8.html) | 用户指定的历史保存基线，原画、关节纸偶与 2.5D 运镜 |
+| [quiet 单文件样机](cihou-quiet.html)／[源码与设计记录](cihou-quiet/README.md) | 第一阶段透明图片、二维路径、三态与匿名正文片段 |
 | [stage1 回环与积累](cihou-stage1.html)／[源码与研究](cihou-stage1/README.md) | 历史四个人工匿名案例、多图型、模拟回访和分享研究；不再是现役产品入口 |
 | [第一阶段早期版](cihou-stage1-v1.html) | 比较较多交互入口与连续阅读 |
 | [墨蓝机关方向](cihou-phase1-direction/README.md) | 已替代的器物与风格探索 |

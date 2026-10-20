@@ -1,0 +1,42 @@
+[
+  {
+    "name": "nomadic-01-intro",
+    "utc": "2026-10-17T03:19:36.742Z",
+    "ax": "Browser tab: 17, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-02-intro-mid",
+    "utc": "2026-10-17T03:19:46.960Z",
+    "ax": "Browser tab: 16, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 button SKIP\n\t\t\t\t16 text SKIP\n\t\t\t17 container\n\t\t\t\t18 text KAIZEN, WAKE UP.\n\t\t\t\t19 image\n\t\t\t20 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t21 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-02-drag-instruction",
+    "utc": "2026-10-17T03:19:47.266Z",
+    "ax": "Browser tab: 17, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "wayfinder-02-intro",
+    "utc": "2026-10-17T03:19:47.406Z",
+    "ax": "Browser tab: 15, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t27 container\n\t\t\t28 container\n\t\t\t\t29 image skip\n\t\t\t\t30 text skip\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "nomadic-03-after-drag",
+    "utc": "2026-10-17T03:20:02.201Z",
+    "ax": "Browser tab: 17, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-04-after-vertical-drag",
+    "utc": "2026-10-17T03:20:15.348Z",
+    "ax": "Browser tab: 17, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "nomadic-05-flower-complete",
+    "utc": "2026-10-17T03:20:45.624Z",
+    "ax": "Browser tab: 17, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "kaizen-03-curiosity-hold",
+    "utc": "2026-10-17T03:21:11.528Z",
+    "ax": "Browser tab: 16, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t20 button\n\t\t\t22 container\n\t\t\t\t23 container\n\t\t\t\t\t24 text HOLD\n\t\t\t\t25 image\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t21 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  }
+]

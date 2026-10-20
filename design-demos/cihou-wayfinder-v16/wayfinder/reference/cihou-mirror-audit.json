@@ -1,0 +1,103 @@
+{
+  "audit_date": "2026-10-19",
+  "scope": "Local static provenance and dependency audit of copied mirror baseline, before Cihou integration patches.",
+  "origin": "https://wayfinder.nfb.ca/",
+  "origin_bundle_url": "https://wayfinder.nfb.ca/src.effdb523.js",
+  "origin_bundle_sha256": "b6fbdca8d55595f538e4f06f498e01b464f7098794678650c93adca3b2c17b85",
+  "mirror_runtime_sha256": "7c2652c135afd6a294b0429f56668d199854cba326c518bd314c101ef75f130b",
+  "mirror_runtime_bytes": 1767992,
+  "public_bundle_reconstructed_by_reversing_documented_patches_except_sourcemap_comment": true,
+  "asset_resolver_replacements": 439,
+  "other_reversible_patches": {
+    "query_defaults": 1,
+    "poem_count": 1,
+    "locale_copy": 1,
+    "tracking_pixel_to_data": 1,
+    "remote_header_to_data": 1
+  },
+  "assets": {
+    "manifest": "asset-manifest.json",
+    "files": 444,
+    "bytes": 49137963,
+    "mismatches": [],
+    "public_bundle_static_paths": 439,
+    "missing_original_paths": [],
+    "extra_css_font_paths": [
+      "/enreal-bold.3515d0c0.woff",
+      "/enreal-light.56b577ee.woff",
+      "/enreal-regular.6c6a55ab.woff",
+      "/enreal-semibold.83d6ac43.woff",
+      "/hkkontrast-bold.582b6791.woff"
+    ],
+    "extensions": {
+      ".svg": 30,
+      ".png": 174,
+      ".ogg": 77,
+      ".mp3": 78,
+      ".sheet": 15,
+      ".gltf": 2,
+      ".jpg": 56,
+      ".woff": 5,
+      ".glb": 4,
+      ".mp4": 2,
+      ".woff2": 1
+    }
+  },
+  "models": [
+    {
+      "file": "grasslands.240dd99b.glb",
+      "external_uris": []
+    },
+    {
+      "file": "tundra.b5961f14.glb",
+      "external_uris": []
+    },
+    {
+      "file": "hat.309be9d2.gltf",
+      "external_uris": []
+    },
+    {
+      "file": "forest.247e38a1.glb",
+      "external_uris": []
+    },
+    {
+      "file": "coin.31c26154.gltf",
+      "external_uris": []
+    },
+    {
+      "file": "origin.f79198b4.glb",
+      "external_uris": []
+    }
+  ],
+  "telemetry": {
+    "nfb_header_default": false,
+    "facebook_loader_in_shell": false,
+    "doubleclick_destination": "data:,",
+    "nfb_header_destination": "data:text/javascript,",
+    "conditional_google_analytics_hook_remains": true,
+    "google_analytics_hook_defined_by_local_shell": false
+  },
+  "minimum_runtime": [
+    "index.html (or compatible host shell)",
+    "config.js",
+    "template.js",
+    "template.css",
+    "runtime/wayfinder.js",
+    "runtime/fonts.525e81a0.css",
+    "runtime/main.7011abb4.css",
+    "runtime/src.1489fb19.css",
+    "assets/ (444 files; omit only after coverage of relevant paths)"
+  ],
+  "not_required_at_runtime": [
+    "reference/",
+    "Python tooling after serving through another HTTP server",
+    "original remote NFB header and stylesheet",
+    "source map"
+  ],
+  "limits": [
+    "No full browser or network replay in this audit.",
+    "Existing verification.md records an earlier local browser test, not this audit.",
+    "Source-map-recovered source provenance is recorded by the earlier evidence; the original source map is not retained here, so this audit proves runtime byte lineage independently.",
+    "Conditional analytics hook remains inert only while the host does not define google_analytics."
+  ]
+}

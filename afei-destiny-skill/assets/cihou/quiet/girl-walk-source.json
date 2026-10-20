@@ -1,0 +1,19 @@
+{
+  "name": "Cute Girl - Free Sprites",
+  "author": "pzUH / GameArt2D",
+  "license": "CC0-1.0",
+  "source": "https://opengameart.org/node/72730",
+  "author_page": "https://www.gameart2d.com/cute-girl-free-sprites.html",
+  "license_evidence": "https://www.gameart2d.com/license.html",
+  "download": "https://opengameart.org/sites/default/files/CuteGirlFiles.zip",
+  "retrieved": "2026-10-17",
+  "source_zip_sha256": "facd021364fba2cfb25c21172ce890aea1bedbebab437be51c4426ee0dc9257d",
+  "atlas_sha256": "130ac2b9da69e6f8de12c96c91b0e077d1bf52944a4d3e5c7ce6b284007c5819",
+  "frame_width": 416,
+  "frame_height": 454,
+  "columns": 5,
+  "rows": 4,
+  "frames": 20,
+  "fps": 24,
+  "processing": "Unmodified Walk (1).png through Walk (20).png, packed row-major on a transparent atlas with original canvas alignment. No per-frame cropping or colour changes."
+}

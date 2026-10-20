@@ -1,0 +1,144 @@
+{
+  "createdAtUTC": "2026-10-17T09:06:35Z",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "sourcePngCopiedUnmodified": true,
+  "noPythonVisualEditing": true,
+  "inputs": [
+    {
+      "path": "design-demos/cihou-reference-study/v12-art-study/concept.png",
+      "sha256": "1e28ca147faec1acec9de85e3b0c2efe9459429e745474c1ffd2ef3b1157a7ce",
+      "role": "Original project composition research; local meadow palette and paint-scale reference only, no whole-world bitmap use"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "sha256": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+      "role": "Actual benchmark screenshot; economy of broad paint planes and ink contours only, no screenshot objects/layout/UI copied"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "sha256": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+      "role": "Actual benchmark screenshot; quiet low-frequency painterly material and soft distant colors only"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w12-grassland-arrival.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "sha256": "23149359ddbfb3867f1991186643cc88447882928ec1be8982f819d9c3efb486",
+      "role": "Actual benchmark screenshot; coherent terrain brush scale and irregular grounded vegetation silhouette principles only"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+      "role": "Original project girl; material compatibility only, no character copying or alteration"
+    }
+  ],
+  "researchStatus": "Optional v12 production assets. No acceptance score implied; no automatic adoption into a currently reviewed or formal default design.",
+  "licenseBoundary": "Original generated local assets. Benchmark images are actual research references, not distributed runtime scene textures. No commercial characters, UI or screenshot pixels copied as runtime artwork.",
+  "untouched": [
+    "v10/v11 code and previews",
+    "review-current",
+    "formal default bundle",
+    "consultation_state",
+    "renderer"
+  ],
+  "compositionLimit": "Only local terrain albedo and isolated vegetation atlas. Must be combined with genuine native 3D terrain, road, character, shadows, depth and interaction. Never lay the whole concept image beneath a scene and call it a 3D world.",
+  "asset": "meadow-parts-v12.png",
+  "metadata": "meadow-parts-v12.json",
+  "intent": "Generate original isolated transparent local vegetation atlas, four parts from all five references.",
+  "source": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-7740319e-3f13-447b-ac47-c0bdb5ecce99.png",
+  "output": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "transparent": true,
+    "sha256": "634878ff0c62823a19b4a0acfb761926fd34752b7b77550fce96f6fcc416cd98"
+  },
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE transparent-background 2×2 atlas of FOUR isolated hand-painted meadow parts for native 3D billboard/instancing. Actual transparency is essential. This is a production parts sheet, not a scene. No text, labels, grid or visible square backgrounds.\n\nActual reference inputs:\nImage 1 is original project concept: match muted grey-olive / dusty wheat paint and selected foreground twig, but much sparser. No copy of the whole composition, no road/girl/rock/flower/sky/ground.\nImage 2 is actual Nomadic Tribe screenshot: borrow economical confident sparse ink contours and opaque drawn color mass only. No birds/UI/words.\nImage 3 is actual Kaizen screenshot: broad quiet soft painted forms only. No flowers/UI/words.\nImage 4 is actual Wayfinder screenshot: grass-to-land scale, irregular shape variety and grounded lower root only. No leaves scattered as particles, characters/rocks/tree/UI or bright yellow-green.\nImage 5 is this project's original girl atlas: match her fine dark contour and matte gouache world, without including any character or body part.\n\nFour precise subjects and layout:\nSquare sheet, four well-separated quadrants, at least 10% of full image width/height clear transparent gutter between every object. Every silhouette entirely inside its own quadrant with generous transparent margins and no clipping. No object overlaps another. Do not paint any connecting marks between parts.\nTOP LEFT: one LOW asymmetrical sparse grass clump of 5 broad gently curving blades, grey-olive with one dusty wheat blade. Three heights, widest leftward bend, stems converge visibly at one compact root point at bottom. Silhouette broad and readable, not a hedgehog or ornamental fan.\nTOP RIGHT: a DIFFERENT LOWER, WIDER grass clump of 4 bent blades, mostly pale dusty wheat with one grey-olive blade, one blade points sideways. Short compact shared root point. Not a mirror or repetition of top-left.\nBOTTOM LEFT: one TALLER BUT STILL SPARSE slim grass tuft of 6 unequal broader blades, muted olive-grey, a little broken opaque drybrush color on 2 leaves. Slight lean right, root clearly converges at bottom. No seed heads.\nBOTTOM RIGHT: ONE slender irregular leafy TWIG suitable for a cropped lower-left foreground. One slim warm grey-brown stem rises diagonally with only 3 or 4 small tapered oval leaves in muted deep olive; unequal leaf placement, no bush or dense shrub. Bottom stem end clearly visible as an anchor. Keep whole twig in its own quadrant; do not crop at image border.\n\nStyle and scale:\nOriginal ink plus opaque gouache paper illustration, simplified legible silhouettes. The final grass clumps will often be only 10–30 pixels tall on a webpage, so use 4–6 broad meaningful blades rather than dozens of thin black hairs or detailed veins. Thin warm dark ink only on selected outer edges, NOT a black contour around every leaf interior. Brush texture gentle and low frequency with no embossed ridges. Stem/blade widths must remain readable when small. Root lower contacts must be fully opaque colored paint, not smoke fades. The transparent surroundings should be fully clear, without light halos, white fringes, brown glow or cast shadows. Grey-olive colors around #858D75 and #A7AA91; dusty wheat #BCAD88, stem warm muted brown #6B6755. No bright green or shiny gold.\n\nAvoid:\nGround patch, soil, stones, rock, flowers, yellow blossoms, seed head, gem, sparkles, particles, water droplet, illustration backdrop, blue road, landscape, horizon, perspective, baked shadow, cast shadow, glow, white border/halo, texture rectangle, checkered transparency painted into RGB, labels, letters, numbers, UI, watermark, circle, symmetric logo, grass carpet, repeated near-identical clumps, extremely thin black filaments, dense fur or dozens of crossing grass lines.\n",
+  "review": {
+    "actualInputImagesViewedBeforeGeneration": true,
+    "selectedOutputExplicitlyViewed": true,
+    "readOnlyAlphaAndGeometryMeasured": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "transparentPixelPercent": 84.74940795514958,
+    "visibleAlpha8Percent": 11.816922689498867,
+    "geometry": "Four separate objects, transparent gutters, no clipping of opaque shape. sourceRect measured at alpha>=8 plus2px padding. Roots identified from bottom3 visible rows and manually checked against actual shape.",
+    "edgeLimit": "The generator left some alpha1-7 fringe RGB noise, including apparent vivid pixels against a black viewer background. Read-only scan found zero bright-yellow pixels at alpha>=8. Native alphaTest0.05 removes this faint fringe. Original PNG is preserved unchanged; no Python trimming, recoloring or masking.",
+    "scale": "Intentional broad simplified blades remain legible at about10-30 CSSpx high. Actual final web combination and mobile edge aliasing still require live browser QA.",
+    "usage": "sRGB local atlas, native quad/instancing rooted with exact metadata and Y-up conversion; native depth/occlusion and moderate alpha-tested shadows. options.grassAtlasUrl + grassMetadata; HERO_BUNDLE grass + grass_meta."
+  },
+  "parts": [
+    {
+      "name": "grassA",
+      "sourceRect": [
+        29,
+        107,
+        582,
+        414
+      ],
+      "rootPx": [
+        394,
+        518
+      ],
+      "heightRelativeToGirl": [
+        0.1,
+        0.18
+      ]
+    },
+    {
+      "name": "grassB",
+      "sourceRect": [
+        658,
+        187,
+        579,
+        322
+      ],
+      "rootPx": [
+        910,
+        506
+      ],
+      "heightRelativeToGirl": [
+        0.08,
+        0.14
+      ]
+    },
+    {
+      "name": "grassC",
+      "sourceRect": [
+        112,
+        640,
+        488,
+        562
+      ],
+      "rootPx": [
+        353,
+        1199
+      ],
+      "heightRelativeToGirl": [
+        0.14,
+        0.24
+      ]
+    },
+    {
+      "name": "twig",
+      "sourceRect": [
+        830,
+        675,
+        336,
+        513
+      ],
+      "rootPx": [
+        845,
+        1185
+      ],
+      "heightRelativeToGirl": [
+        0.3,
+        0.55
+      ]
+    }
+  ]
+}

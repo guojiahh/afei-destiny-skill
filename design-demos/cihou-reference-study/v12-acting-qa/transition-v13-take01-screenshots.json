@@ -1,0 +1,97 @@
+{
+  "viewport": [
+    1470,
+    710
+  ],
+  "scope": "Actual CUA browser screenshot bytes; frame numbers read from visible passive overlay. No montage or fabricated screenshot. All source image pixels unchanged.",
+  "captures": [
+    {
+      "file": "v13-take01-opening.jpg",
+      "visibleDiagnosticFrame": 265,
+      "sceneTimeAtFrame": 5.0831,
+      "phaseTag": "walking",
+      "progress": 0,
+      "travel": 1.421152,
+      "exitDistance": 0,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-after-pick.jpg",
+      "visibleDiagnosticFrame": 1040,
+      "sceneTimeAtFrame": 18.0826,
+      "phaseTag": "returning",
+      "progress": 0,
+      "travel": 2.726704,
+      "exitDistance": 0,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-underpass.jpg",
+      "visibleDiagnosticFrame": 7279,
+      "sceneTimeAtFrame": 122.1776,
+      "phaseTag": "returning",
+      "progress": 0,
+      "travel": 58.349793,
+      "exitDistance": 0,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-before-reconsider.jpg",
+      "visibleDiagnosticFrame": 9300,
+      "sceneTimeAtFrame": 155.8604,
+      "phaseTag": "returning",
+      "progress": 0,
+      "travel": 68.70671,
+      "exitDistance": 0,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-after-reveal.jpg",
+      "visibleDiagnosticFrame": 9750,
+      "sceneTimeAtFrame": 163.3921,
+      "phaseTag": "choice",
+      "progress": 0,
+      "travel": 68.713828,
+      "exitDistance": 0,
+      "billboardPitch": 0.00033,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-place.jpg",
+      "visibleDiagnosticFrame": 10736,
+      "sceneTimeAtFrame": 179.8428,
+      "phaseTag": "placing-action",
+      "progress": 0.78,
+      "travel": 68.713828,
+      "exitDistance": 0,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-after-cross.jpg",
+      "visibleDiagnosticFrame": 11420,
+      "sceneTimeAtFrame": 191.2421,
+      "phaseTag": "leaving",
+      "progress": 0,
+      "travel": 68.713828,
+      "exitDistance": 0.421262,
+      "billboardPitch": 0,
+      "sceneCompleteAge": null
+    },
+    {
+      "file": "v13-take01-complete.jpg",
+      "visibleDiagnosticFrame": 12134,
+      "sceneTimeAtFrame": 203.1401,
+      "phaseTag": "complete",
+      "progress": 0,
+      "travel": 68.713828,
+      "exitDistance": 3.806876,
+      "billboardPitch": 0,
+      "sceneCompleteAge": 5.098099999999988
+    }
+  ]
+}

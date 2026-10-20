@@ -24,7 +24,7 @@
 | 可恢复会话 | 状态机记录阶段、产物哈希与来源；资料纠正会自动使旧盘和下游结论失效 |
 | 多会话隔离 | `consultation_state/` 下每次咨询独立成目录；开始时先发现未完成会话，再由用户选择继续或新开 |
 | 输出路由 | 对话、技术审计、咨询总结、用户报告和独立技术报告只读取仍有效的对应产物 |
-| 个人 HTML 交付 | 一张可点击主图聚焦重点，下方图文承接完整咨询，技术依据同页展开；双 Markdown 作为内部底稿与可选下载 |
+| 个人 HTML 交付 | 沉浸式三态主图聚焦重点，同页阅读九章与技术依据；双 Markdown 作为内部底稿与可选下载 |
 | 场景化与心结收束 | 重要判断配具体生活例子、反例和情绪成本；帮助用户看清执念背后的需要与仍有的选择权 |
 | 可回归验证 | 计算器有自动测试；评测流程与可安装技能隔离，避免答案泄漏 |
 | 安全表达 | 不编造经历，不把倾向写成必然，不用灾祸、疾病等表述制造恐惧 |
@@ -76,7 +76,7 @@ python3 afei-destiny-skill/scripts/calculate_bazi.py --date 1990-05-15 --time 14
 
 仓库暂不展示真实咨询案例。旧案例基于早期的一次性回复流程，已经从当前展示层撤下；以后只有完整走过现行咨询闭环、经过隐私审查并获得公开授权的材料，才会重新进入案例区。
 
-「此后」第一阶段已于 **2026-10-16 完成并获用户确认**。[默认个人 HTML 交付](afei-destiny-skill/references/html-report.md)已接通：咨询代理根据本次有效底稿编排有来源的主图与完整详解，脚本校验、生成并登记离线页面。当前视觉基线为[米白纸面与深色纸带](design-demos/cihou-quiet.html)，所有新完整报告统一“路上 → 看见环 → 主动跨出”三态与九章正文，双底稿也固定为八节／十一节。困局的具体解释、事实、行动和未知按本次资料编写；同一个环不代表同一种心理原因。私有在线托管尚未实现。新上下文从[交接说明](docs/CIHOU_HANDOFF.md)继续开发，旧匿名原型保留为历史对照。
+「此后」第一阶段已于 **2026-10-16 完成并获用户确认**。[默认个人 HTML 交付](afei-destiny-skill/references/html-report.md)已接通：咨询代理根据本次有效底稿编排有来源的主图与完整详解，脚本校验、生成并登记离线页面。2026-10-20 的 [V19 匿名求职完整演示](design-demos/cihou-wayfinder-v19/final_report.html)继续复用 [Wayfinder 的原站运行时与资源](afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)，改为按住沿固定路线行走、松开停下，首景重复六个有来源的循环位置；读者主动切换“此刻／来处／可能”，比较三种有条件的选择。每份新报告按[闭环叙事协议](afei-destiny-skill/references/loop-narrative.md)填写自己的 `loop_story`，用自然的第二人称解释循环与可能的形成路径，文字随景色平滑浮现；V19 沿用 V18 文案，集中修复首次加载时的浮字定位；原作资源、正文与双底稿下载都包含在单份 HTML 中。所有新完整报告仍统一三态与九章正文，双底稿固定为八节／十一节。困局的具体解释、事实、行动和未知按本次资料编写；同一个环不代表同一种心理原因。私有在线托管尚未实现。新上下文从[交接说明](docs/CIHOU_HANDOFF.md)继续开发，V8 保存基线、[V15 程序绘画探索](design-demos/cihou-wayfinder-v15/final_report.html)、[V16 原站引擎版本](design-demos/cihou-wayfinder-v16/final_report.html)、[V17 固定路线版本](design-demos/cihou-wayfinder-v17/final_report.html)、[V18 自然叙事版本](design-demos/cihou-wayfinder-v18/final_report.html)与旧匿名原型保留为历史对照。
 
 ## 仓库结构
 

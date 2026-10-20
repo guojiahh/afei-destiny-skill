@@ -1,0 +1,894 @@
+{
+  "status": "未评审工程草稿；制作方只读 QA，不评分",
+  "scope": "v11 初次长按完整路线/choice/exit；此记录完成于随后手机 reveal pitch 修复之前",
+  "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+  "browser": {
+    "name": "Chrome",
+    "browserId": "1",
+    "tabId": "274989143",
+    "session": "🧪 v11 route QA"
+  },
+  "interaction": "仅 CUA UI 原生坐标点击/按住；未读或改产品代码，未用私有 API 跳进度",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "observations": [
+    "所有保存帧 DOM viewport 均为 1280×720，scrollY=0。",
+    "26 秒长按后 returning，ownership=bag；截图可见随角色携带的花。",
+    "再按住 15 秒后 reconsidering，ownership=hand；原石旁可见空梗。",
+    "再按住 4.5 秒到 choice，显示“再往前一步 ↗”；独立 revealing 瞬间未命中截图。",
+    "native 坐标点击 CTA 后 placing，出现“按住，往前走”，没有滚动。",
+    "按住 1 秒 ownership=hand；再按住 2.6 秒 ownership=ground；再按住 1.4 秒为 crossing。",
+    "crossing 中段释放后动作进度从 0.39565 收束到 0.40000，exit progress=0.51，截图为双脚着地姿态。",
+    "随后续按 8 秒到 complete，exit progress=1，出现“再看一次 / 继续阅读”。"
+  ],
+  "limitations": [
+    "不构成视觉评审或评分。",
+    "首次等待 gate 不在本次 QA 范围，由制作方另测。",
+    "未独立截获短揭 phase；从 reconsidering 到 choice 的路径完成记录存在。",
+    "未验证手机或随后 reveal pitch 修复。"
+  ],
+  "records": [
+    {
+      "name": "qa-route-01-fresh",
+      "note": "未评审草稿；fresh reload，尚未交互。",
+      "timestamp": "2026-10-17T08:42:58.848Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，陪她走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "walking"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "1.699"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "stem"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "153.9"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.00000"
+            ],
+            [
+              "data-story-progress",
+              "0.07562234046443846"
+            ],
+            [
+              "data-exit-progress",
+              "0"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-02-held-26s",
+      "note": "未评审草稿；native 坐标按住 26 秒后释放，记录花与路线。",
+      "timestamp": "2026-10-17T08:43:28.908Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，陪她走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "returning"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "20.855"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "bag"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "109.2"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.00000"
+            ],
+            [
+              "data-story-progress",
+              "0.5076531228289809"
+            ],
+            [
+              "data-exit-progress",
+              "0"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-03-returning",
+      "note": "未评审草稿；继续 native 坐标按住 15 秒，空梗返回阶段。",
+      "timestamp": "2026-10-17T08:43:49.020Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，陪她走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "reconsidering"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "hand"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "188.7"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.62500"
+            ],
+            [
+              "data-story-progress",
+              "0.7271549999999999"
+            ],
+            [
+              "data-exit-progress",
+              "0"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-04-choice",
+      "note": "未评审草稿；从 reconsidering 继续按住 4.5 秒后已经到 choice。未单独命中 revealing 截图，不把此帧误称为短揭。",
+      "timestamp": "2026-10-17T08:44:03.501Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，陪她走\n再往前一步 ↗\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "choice"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "bag"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "188.7"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.00000"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-05-exit-click",
+      "note": "未评审草稿；native 点击可见出口 CTA，未使用 AX 激活或页面私有 API。",
+      "timestamp": "2026-10-17T08:44:07.868Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，往前走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "placing"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "bag"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "224.8"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.00000"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-06-placing",
+      "note": "未评审草稿；出口点击后按住 1 秒，再释放：放花动作中段。",
+      "timestamp": "2026-10-17T08:44:13.572Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，往前走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "placing"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "hand"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "210.4"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.07408"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0.10000249999999979"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-07-placed-crossing",
+      "note": "未评审草稿；再按住 2.6 秒后释放，记录花已放回与跨路阶段。",
+      "timestamp": "2026-10-17T08:44:19.831Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，往前走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "placing"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "ground"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "209.4"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.97778"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0.33656750000000035"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-08-detached-release",
+      "note": "未评审草稿；再按住 1.4 秒后释放，检查跨路后的稳脚姿态。",
+      "timestamp": "2026-10-17T08:44:30.540Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，往前走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "crossing"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "ground"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "209.4"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.39565"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0.49998999999999927"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-09-release-still",
+      "note": "未评审草稿；跨路中段释放后再次只读取帧，未输入；对比动作进度与落脚。",
+      "timestamp": "2026-10-17T08:44:33.999Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，往前走\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "crossing"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "0.000"
+            ],
+            [
+              "data-cihou-ownership",
+              "ground"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "209.4"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.40000"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "0.51"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "name": "qa-route-10-completed",
+      "note": "未评审草稿；跨路释放后继续 native 按住 8 秒，完整出口完成帧。",
+      "timestamp": "2026-10-17T08:44:47.320Z",
+      "state": {
+        "bodyDataset": {},
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "title": "首次相遇 · v11 工程草稿",
+        "url": "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v11.html",
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "visibleText": "阅读正文\nⅡ\n按住，陪她走\n再看一次\n继续阅读\n↘\n\n从眼前的路，\n到另一种看法。\n\n这里是正文衔接位置。可以随时开始阅读，也可以回到路上继续。\n\n原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。\n\n回到画面 ↑",
+        "world": {
+          "attributes": [
+            [
+              "class",
+              "world"
+            ],
+            [
+              "id",
+              "world"
+            ],
+            [
+              "role",
+              "button"
+            ],
+            [
+              "tabindex",
+              "0"
+            ],
+            [
+              "aria-label",
+              "按住鼠标或空格让女孩走得更有目的，松手轻走；遇见花后，陪她继续向前。"
+            ],
+            [
+              "data-cihou-phase",
+              "complete"
+            ],
+            [
+              "data-cihou-waiting",
+              "false"
+            ],
+            [
+              "data-cihou-travel",
+              "32.018"
+            ],
+            [
+              "data-cihou-exit-distance",
+              "5.522"
+            ],
+            [
+              "data-cihou-ownership",
+              "ground"
+            ],
+            [
+              "data-cihou-actor-pixels",
+              "105.7"
+            ],
+            [
+              "data-cihou-action-progress",
+              "0.00000"
+            ],
+            [
+              "data-story-progress",
+              "1"
+            ],
+            [
+              "data-exit-progress",
+              "1"
+            ]
+          ],
+          "rect": {
+            "height": 720,
+            "width": 1280,
+            "x": 0,
+            "y": 0
+          },
+          "tag": "DIV"
+        }
+      }
+    }
+  ]
+}

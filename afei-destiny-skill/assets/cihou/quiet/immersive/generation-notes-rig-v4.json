@@ -1,0 +1,338 @@
+{
+  "version": 4,
+  "kind": "local shoe-perspective correction to original generated rig parts atlas",
+  "generator": "built-in image_gen__imagegen",
+  "createdUtc": "2026-10-17T04:50:02.122Z",
+  "asset": "girl-rig-parts-v4.png",
+  "metadata": "girl-rig-parts-v4.json",
+  "generatedLocalPath": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-7999eba6-e8b9-4e63-9b5f-35a3183c9b93.png",
+  "sha256": "4207643cc184b8aba961e2265df9a1328442014f79d539557350b14287bef190",
+  "prompt": "Edit target: Image 1, a transparent original hand-painted girl-parts atlas. Image 2 is ONLY an in-engine diagnostic screenshot showing the problem: both shoes show their entire dark sole toward the viewer, so even the support foot looks suspended. Do NOT output the screenshot or a whole girl. Output only the edited atlas, same 1536x1024 RGBA transparent PNG.\nMake one precise local correction: redraw ONLY the TWO BROWN SHOES at the bottom of the two detached shin pieces, around atlas rectangles x=516..679,y=810..954 and x=1220..1376,y=810..954. Keep the shin skin and ankle attachment positions. The other SIX parts (head, dress, both arms, both thighs) must remain unchanged in design, position, dimensions and texture. Keep ALL eight pieces at their current atlas coordinates and size. Do not rearrange, scale or recenter anything.\nRequired shoe perspective: the girl is facing away toward the upper-right, seen from a gentle rear three-quarter camera. Both shoes must be NEUTRAL WEIGHT-BEARING STANDING SHOES. We primarily see warm brown leather UPPERS, a little outside SIDE WALL and the BACK HEEL. The sole is just a THIN DARK EDGE at the very bottom that lies flat along the ground-contact line. NO broad black sole surface may face the viewer. Do not show a lifted heel, foot flexed upward, tiptoe, dancing foot, or shoe bottom. The two ankles descend naturally into shoes; each shoe has a low heel and gently rounded small toe pointing upper-right / toward the right in this view. Draw the sole contact edge almost horizontal with only a slight diagonal perspective. One can clearly imagine the shoe resting on a floor.\nStyle: preserve the existing sensitive gouache and ink artwork, same small brown shoes with muted highlights, delicate dark contour, tiny soft brush marks; no 3D, no glossy plastic. Keep the shoes approximately the same overall left-right bounding width, but a normal grounded shoe can be vertically shorter than the old upturned sole. Keep both ankle joints anchored to their existing exact atlas location. Use a gentle rounded leather toe, no oversized boots.\nBackground must remain truly transparent, no floor or shadow or glow, no grid, no captions, no annotations. Preserve existing transparency. Keep every non-shoe region as close to pixel-identical as possible. Only two local shoes are the edit target; no extra objects.",
+  "references": [
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v3.png",
+      "role": "edit target: original character parts atlas"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/gait-check-v3/00.jpg",
+      "role": "diagnostic preview: demonstrated raised soles problem; not a scene/style input"
+    }
+  ],
+  "requestedChange": "Only both shoes, from broad sole-facing-viewer floating pose to normal grounded rear-three-quarter shoes.",
+  "retained": "All non-foot joints and landmarks and the six non-shin sourceRects retained. Generated non-target parts have minor texture refresh and alpha-bound shifts; not pixel-identical.",
+  "processing": "Output copied byte-for-byte from built-in image_gen. No external image editing, compositing, cropping, drawing, resizing or background removal performed. Alpha analysis was read-only.",
+  "licenseNote": "Original generated character; no CC0 claim.",
+  "alphaQA": {
+    "source": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-7999eba6-e8b9-4e63-9b5f-35a3183c9b93.png",
+    "asset": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v4.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "4207643cc184b8aba961e2265df9a1328442014f79d539557350b14287bef190",
+    "alphaBins": {
+      "0-0": {
+        "pixels": 1161689,
+        "ratio": 0.7385819753011068
+      },
+      "1-7": {
+        "pixels": 38523,
+        "ratio": 0.024492263793945312
+      },
+      "8-31": {
+        "pixels": 3586,
+        "ratio": 0.0022799173990885415
+      },
+      "32-127": {
+        "pixels": 5487,
+        "ratio": 0.0034885406494140625
+      },
+      "128-239": {
+        "pixels": 7890,
+        "ratio": 0.005016326904296875
+      },
+      "240-254": {
+        "pixels": 355689,
+        "ratio": 0.22614097595214844
+      },
+      "255-255": {
+        "pixels": 0,
+        "ratio": 0
+      }
+    },
+    "parts": {
+      "head": {
+        "sourceRect": [
+          41,
+          52,
+          354,
+          311
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            40,
+            50,
+            357,
+            315
+          ],
+          "8": [
+            41,
+            52,
+            354,
+            311
+          ],
+          "16": [
+            41,
+            52,
+            354,
+            311
+          ],
+          "128": [
+            49,
+            53,
+            345,
+            309
+          ]
+        }
+      },
+      "dress": {
+        "sourceRect": [
+          408,
+          50,
+          482,
+          455
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            407,
+            50,
+            485,
+            457
+          ],
+          "8": [
+            408,
+            50,
+            482,
+            455
+          ],
+          "16": [
+            409,
+            50,
+            481,
+            455
+          ],
+          "128": [
+            409,
+            51,
+            480,
+            453
+          ]
+        }
+      },
+      "leftArm": {
+        "sourceRect": [
+          945,
+          118,
+          203,
+          331
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            945,
+            117,
+            204,
+            332
+          ],
+          "8": [
+            945,
+            118,
+            203,
+            331
+          ],
+          "16": [
+            945,
+            118,
+            203,
+            330
+          ],
+          "128": [
+            946,
+            119,
+            201,
+            329
+          ]
+        }
+      },
+      "rightArm": {
+        "sourceRect": [
+          1299,
+          128,
+          195,
+          312
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            1299,
+            128,
+            197,
+            313
+          ],
+          "8": [
+            1299,
+            128,
+            195,
+            312
+          ],
+          "16": [
+            1299,
+            128,
+            195,
+            311
+          ],
+          "128": [
+            1300,
+            129,
+            194,
+            310
+          ]
+        }
+      },
+      "leftThigh": {
+        "sourceRect": [
+          154,
+          561,
+          149,
+          308
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            153,
+            561,
+            150,
+            309
+          ],
+          "8": [
+            154,
+            561,
+            149,
+            308
+          ],
+          "16": [
+            154,
+            561,
+            149,
+            307
+          ],
+          "128": [
+            155,
+            562,
+            147,
+            306
+          ]
+        }
+      },
+      "leftShin": {
+        "sourceRect": [
+          524,
+          587,
+          157,
+          339
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            522,
+            587,
+            161,
+            340
+          ],
+          "8": [
+            524,
+            587,
+            157,
+            339
+          ],
+          "16": [
+            524,
+            587,
+            157,
+            339
+          ],
+          "128": [
+            525,
+            588,
+            155,
+            337
+          ]
+        }
+      },
+      "rightThigh": {
+        "sourceRect": [
+          890,
+          579,
+          146,
+          315
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            888,
+            578,
+            149,
+            317
+          ],
+          "8": [
+            890,
+            579,
+            146,
+            315
+          ],
+          "16": [
+            890,
+            579,
+            145,
+            315
+          ],
+          "128": [
+            891,
+            580,
+            143,
+            313
+          ]
+        }
+      },
+      "rightShin": {
+        "sourceRect": [
+          1219,
+          587,
+          159,
+          340
+        ],
+        "alphaBoundsByThreshold": {
+          "4": [
+            1218,
+            586,
+            162,
+            342
+          ],
+          "8": [
+            1219,
+            587,
+            159,
+            340
+          ],
+          "16": [
+            1219,
+            587,
+            159,
+            340
+          ],
+          "128": [
+            1220,
+            588,
+            158,
+            339
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A game of poetry and animated exploration across the land.">
+  <title>Wayfinder</title>
+  <link rel="icon" type="image/png" href="./assets/ico_about.56b312e6.png">
+  <link rel="stylesheet" href="./runtime/fonts.525e81a0.css">
+  <link rel="stylesheet" href="./runtime/main.7011abb4.css">
+  <link rel="stylesheet" href="./runtime/src.1489fb19.css">
+  <link rel="stylesheet" href="./template.css">
+  <script src="./config.js"></script>
+  <script src="./template.js"></script>
+</head>
+<body>
+  <header class="template-header" aria-label="Navigation">
+    <a class="brand" href="./index.html" aria-label="Home"><img src="./assets/nfblogo.e49de5c7.svg" alt="NFB / ONF"></a>
+    <a class="header-cell grid-icon" href="./customize.html" aria-label="Customize template"><span>⠿</span></a>
+    <button class="header-cell" id="header-info" aria-label="About this experience">ⓘ</button>
+    <div class="header-spacer"></div>
+    <button class="header-cell language" id="header-language" aria-label="Switch language">FR</button>
+    <button class="header-cell" id="header-audio" aria-label="Mute sound"><svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3z"/><path class="sound-waves" d="M16 8q5 4 0 8m3-11q8 7 0 14" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <button class="header-cell" id="header-fullscreen" aria-label="Full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7m0-7-7 7M10 21H3v-7m0 7 7-7"/></svg></button>
+  </header>
+  <div class="loader visible"><img src="./assets/ico_about.56b312e6.png" alt="loading"><div class="loader-text">loading</div></div>
+  <main class="content"></main>
+  <dialog id="template-info"><button class="dialog-close" aria-label="Close">×</button><h2>WAYFINDER</h2><p>An animated journey across the poetry of the land.</p><p>Original work by Matt DesLauriers and the National Film Board of Canada, with illustrations by Tiffany Beucher, animation and 3D modelling by Guillaume Le Roux.</p><p>This local edition preserves the original client runtime and artwork, with a configurable HTML shell.</p><p><a href="./customize.html">Customize this template →</a></p><p><a href="https://wayfinder.nfb.ca/" target="_blank" rel="noopener">Visit the original work ↗</a></p></dialog>
+  <div id="load-error" role="alert" hidden><h2>无法加载场景</h2><p>请通过本地 HTTP 服务打开本页，并使用支持 WebGL2 的电脑浏览器。</p><p id="load-error-detail"></p><button onclick="location.reload()">重新加载</button></div>
+  <script src="./runtime/wayfinder.js"></script>
+  <script>WayfinderTemplate.connect();</script>
+</body>
+</html>

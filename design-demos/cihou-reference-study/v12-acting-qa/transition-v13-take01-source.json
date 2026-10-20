@@ -1,0 +1,18 @@
+{
+  "kind": "passive real-world transition production take, not acceptance",
+  "builtAt": "2026-10-17T10:31:27.712856+00:00",
+  "loadedFiles": {
+    "hero-scene-v13.js": {
+      "sha256": "e39661ffc36f73295daf053d23821a25e6d185c1a4c4430a7e5298b98ec29b15",
+      "snapshot": "scene-snapshot-v13-take01.js"
+    },
+    "hero-character-rig-v13.js": {
+      "sha256": "11f6389407b73df0ccd5f8613d7b2cac85a08a2ce08f544e6e7ace52094f23cf",
+      "snapshot": "rig-snapshot-v13-take01.js"
+    },
+    "prototype-v13.html": {
+      "sha256": "3a7fb38dfc71ab27ad100e01be201331cfe6e35f4e3817d2293fbcf09bb8f960",
+      "scope": "public event controller cloned without story forcing"
+    }
+  }
+}

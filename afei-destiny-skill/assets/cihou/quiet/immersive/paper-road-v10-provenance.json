@@ -1,0 +1,74 @@
+{
+  "asset": "paper-road-v10.png",
+  "createdAtUTC": "2026-10-17T08:00:15Z",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "intent": "generate; reference images used for art direction only",
+  "generationSource": "/Users/afei/.codex/generated_images/01a148de-6ab9-7db1-97c6-30dd036d22cf/exec-8c9caa5b-8b8e-4841-a40a-da17e8ef973d.png",
+  "output": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "transparent": false,
+    "sha256": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754"
+  },
+  "inputs": [
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "sha256": "a6fe65e9cb2f5dd3438f6565acb728815207b9fd1459a4a2d8117b1449803d67",
+      "role": "Actual browser screenshot, style reference: economical blue color masses and drawn surface language, no copying of composition or object"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "sha256": "6ca934f269f4e973d1a2a4133bf383e775b7a11b83f9d2f4d465ea1838e89357",
+      "role": "Actual browser screenshot, style reference: broad painterly planes and quiet low frequency paint"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "sha256": "aa43f3c874d15522134566e4de84914500baf333aef42d110b770081f6e688ff",
+      "role": "Actual browser screenshot, style reference: coherent sparse brush scale on walkable ground"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5",
+      "role": "Existing original project character; compatibility of opaque gouache with red cotton; not edited or reproduced"
+    }
+  ],
+  "prompt": "Use case: stylized-concept.\nAsset type: A SINGLE seamless square painted material texture for the BLUE ROAD SURFACE of an original small 3D picture-book world, not a scene, not a road illustration. The developer will map this onto a real 3D walking path with its own geometry, perspective, shadows, terrain and character.\n\nInput images and their limited role:\nImage 1 is a genuine screenshot of Nomadic Tribe. Study the economical blue color fields and confident drawn surface language only. Do not copy its birds, river, UI, composition, bright streaks or objects.\nImage 2 is a genuine screenshot of Kaizen. Study its broad painterly planes and quiet low-frequency paint texture only. Do not reproduce its flowers, scene, words or UI.\nImage 3 is a genuine screenshot of Wayfinder. Study the coherent scale of sparse brush work on a navigable ground plane only. Do not reproduce its avatar, rocks, UI, snow, words or scene.\nImage 4 is the EXISTING original girl character asset in this project. It is a palette/material compatibility reference only. The new blue road material should feel like the same physical opaque gouache world as her red cotton dress. DO NOT include a character, body part or illustration of her in the texture.\n\nPrimary request: an original flat, edge-to-edge, opaque square texture consisting only of subdued blue opaque gouache paint on very fine paper. Calm slate-blue base around #506983. Two or three VERY broad irregular interlocking painterly fields differing in value by only 3-5%, softly brushed and largely flat. Use sparse broad soft dry-brush passages with tiny barely visible paper grain. The surface must read quiet and matte at small screen size. No camera lighting or vignette baked in: all corners and center have the same average tone. No directional shadow and no cast shadow. Texture wraps seamlessly left/right and top/bottom. Keep the outermost edges uniform enough to tile without a seam.\n\nStyle: hand-painted picture-book gouache, deliberately economical, confident wide brush masses, balanced and unprecious, flat material sample. Pixel-level grain is nearly invisible. All color stays in a narrow blue family. The lightest paint should not exceed about #5C748A and darkest not below about #465D74. No sharp contour lines in this material; the geometry supplies the silhouette and selected ink details.\nComposition: no horizon, no perspective, no road shape, no border, no center motif, no focal point, no visible object; just a continuous square material swatch.\nAvoid: embossed paper, crumpled paper, wrinkles, ripples, water, sky, asphalt, stones, sand, scratches, white flecks, cream streaks, gold streaks, speed lines, dark hatch marks, splatter, heavy noise, decorative pattern, repeated motifs, gradient from top to bottom, blue ring, ribbon, logo, text, watermark.",
+  "review": {
+    "viewedActualInputsBeforeGeneration": true,
+    "originalOutputPreserved": true,
+    "copiedUnmodified": true,
+    "summary": "Quiet low contrast opaque blue gouache, broad brush planes, no scene, object, white streak or embossed wrinkle. Intended only as texture on a true 3D mesh.",
+    "numericReadOnlyAnalysis": {
+      "rgbMean": [
+        78.626,
+        101.462,
+        126.086
+      ],
+      "rgbStd": [
+        4.11,
+        4.261,
+        3.768
+      ],
+      "opposingEdgeMeanAbsChannelDifference": {
+        "leftRight": 2.649,
+        "topBottom": 2.263
+      }
+    },
+    "tileability": "Prompt requested seamless wrapping; output is low contrast with closely matching edge means but not pixel-identical tile edges. It is a material swatch, not a proven exact periodic texture. Use one stretch over a road segment or mirrored repeat; inspect actual mapped seam before release.",
+    "alpha": "Opaque RGB; transparent cutout not applicable.",
+    "licenseBoundary": "Original generated material. Benchmark screenshots remain research references, are not copied into distributed artwork, and are not texture inputs at runtime."
+  },
+  "usage": {
+    "colorSpace": "sRGB",
+    "filtering": "Linear with mipmaps. No displacement, no specular normal map, no baked lighting.",
+    "repeat": "Prefer one tile over approx 5-7 character-heights of travel; mirrored repeating is safer than exact periodic repeat. Never stretch a single scratch texture across the whole landscape.",
+    "ink": "No ink in the texture. Geometry may supply a single thin irregular silhouette only; no full pink ribbon border and no wireframe edges.",
+    "anchor": "UV material only, no world object anchor.",
+    "scale": "If character is 1.5 world units tall, use road width about 2.4-3.3 world units in local walk view; route and camera establish diagonal perspective."
+  }
+}

@@ -1,0 +1,14 @@
+Cute Girl - Free Sprites
+Author: pzUH / GameArt2D
+License: Creative Commons Zero v1.0 Universal (CC0-1.0)
+License text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Source: https://opengameart.org/node/72730
+Author's page: https://www.gameart2d.com/cute-girl-free-sprites.html
+Author's free-asset license: https://www.gameart2d.com/license.html
+Retrieved: 2026-10-17
+
+The source's 20 Walk PNG frames are packed without creative changes into
+ girl-walk.png. The original frame canvas is preserved to retain the artist's
+ gait, hair and dress animation. The source archive and atlas hashes are
+ recorded in girl-walk-source.json. Runtime scaling and facing are applied
+ by the report renderer. No online access is needed to play the animation.

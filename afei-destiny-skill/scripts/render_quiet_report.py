@@ -14,17 +14,16 @@ from pathlib import Path
 
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets' / 'cihou' / 'quiet'
-# The artwork can evolve without changing the personal model or chapter contract.
-# Keep all version selection here; the controller consumes this bundle's API.
+# Historical paper-v15 bundle. New reports use render_wayfinder_report below;
+# the model's explicit hero_runtime selector keeps older presentations reproducible.
 HERO_BUNDLE = {
-    'version': 'painted-v8', 'constructor': 'CihouHeroSceneV8',
+    'version': 'wayfinder-v15', 'constructor': 'CihouHeroSceneV15',
     'rig_constructor': 'CihouCharacterRigV8',
-    'reveal_duration': 10.5, 'exit_duration': 9.5,
+    'reveal_duration': 16, 'exit_duration': 6,
     'three': 'three.min.js', 'three_license': 'THREE-LICENSE.txt',
-    'rig': 'hero-character-rig-v8.js', 'scene': 'hero-scene-v8.js',
-    'world': 'world-keyart-v3.png',
-    'road': 'paper-road-v1.png', 'marker': 'flower-stone-v1.png',
-    'marker_meta': 'flower-stone-v1.json',
+    'rig': 'hero-character-rig-v8.js', 'scene': 'hero-scene-v15.js',
+    'controller': 'report-exploration-v15.js',
+    'road': 'paper-road-v1.png',
     'character': 'girl-rig-parts-v5.png', 'rig_meta': 'girl-rig-parts-v5.json',
 }
 
@@ -87,6 +86,17 @@ def render_quiet(model, sources):
     provenance = {'schema_version': 1, 'session_id': model['session_id'], 'sources': model['sources'],
                   'model_sha256': hashlib.sha256(safe_json(model).encode('utf-8')).hexdigest(), 'presentation': 'quiet-v1'}
     fallback = ''.join('<li><h3>' + esc(''.join(state['lines'])) + '</h3><p>' + esc(state['description']) + '</p></li>' for state in states)
+    if model['presentation'].get('hero_runtime', 'wayfinder-v19') in {'wayfinder-v16', 'wayfinder-v17', 'wayfinder-v18', 'wayfinder-v19'}:
+        from render_wayfinder_report import render_wayfinder
+        return render_wayfinder(model, {
+            'TITLE': esc(model['title']), 'SUBTITLE': paragraphs(model['subtitle']),
+            'CHAPTERS': ''.join(chapters), 'TECHNICAL_INTRO': paragraphs(model['technical_intro']),
+            'TECHNICAL_CARDS': cards(model['technical_cards'], 'technical-summary'),
+            'USER_ORIGINALS': originals('user'), 'TECHNICAL_ORIGINALS': originals('technical'),
+            'PREFACE': source_markup(sources['user']['preface']) + source_markup(sources['technical']['preface']),
+            'DOWNLOADS': downloads, 'FALLBACK': fallback,
+            'CLOSING': paragraphs(model['closing']), 'LIMITS': paragraphs(model['limits']),
+        }, provenance)
     immersive = ASSETS / 'immersive'
     bundle_metadata = {'version', 'constructor', 'rig_constructor', 'reveal_duration', 'exit_duration'}
     bundle_bytes = {key: (immersive / filename).read_bytes()
@@ -132,13 +142,15 @@ def render_quiet(model, sources):
         'USER_ORIGINALS': originals('user'), 'TECHNICAL_ORIGINALS': originals('technical'),
         'PREFACE': source_markup(sources['user']['preface']) + source_markup(sources['technical']['preface']),
         'DOWNLOADS': downloads, 'FALLBACK': fallback,
-        'DATA': safe_json({'hero_states': states}), 'PROVENANCE': safe_json(provenance),
+        'DATA': safe_json({'hero_states': states, 'hero_choices': model['presentation'].get('hero_choices', [])}),
+        'PROVENANCE': safe_json(provenance),
+        'FIRST_LINE_1': esc(first['lines'][0]), 'FIRST_LINE_2': esc(first['lines'][1]),
         'HERO_ASSETS': safe_json(hero_assets), 'RIG_META': safe_json(rig_meta),
         'MARKER_META': safe_json(marker_meta),
         'THREE_JS': '/*\n' + bundle_bytes['three_license'].decode('utf-8') + '\n*/\n' + script_text('three'),
         'RIG_JS': script_text('rig'), 'SCENE_JS': script_text('scene'),
         'CSS': (ASSETS / 'report.css').read_text(encoding='utf-8'),
-        'JS': (ASSETS / 'report.js').read_text(encoding='utf-8'),
+        'JS': script_text('controller') if 'controller' in bundle_bytes else (ASSETS / 'report.js').read_text(encoding='utf-8'),
     }
     template = (ASSETS / 'report.html').read_text(encoding='utf-8')
-    return re.sub(r'@@([A-Z_]+)@@', lambda match: replacements[match[1]], template)
+    return re.sub(r'@@([A-Z_0-9]+)@@', lambda match: replacements[match[1]], template)

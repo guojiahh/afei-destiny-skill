@@ -6,8 +6,10 @@
   "sources": {},
   "authoring_notes": [
     "固定的是莫比乌斯视觉与章节阅读顺序；事实、困局、行动、分支和语言必须逐次来自本次完整咨询与双报告。",
+    "主图采用此刻／来处／可能三视角；第一视角六个loop_story节点顺序固定、逐圈复现，具体短句和解释每次从当前资料填写。填写前读references/loop-narrative.md。",
+    "全篇按client-voice.md写作：可从当前模式推演可能的学习经历，以“你可能曾经……”自然引入；不逐段重复假设、无依据、待核对等编写说明。来源状态和反证保留在底层与集中校验区。",
     "不要把莫比乌斯隐喻当作已经证实的心理因果。证据不足时保留 unknown/hypothesis，无依据的边不要添加。",
-    "第三幅画面表示可控尝试而非保证成功；外部回应只能写成 condition，不能进入自动叙事。",
+    "第三幅画面表示可控尝试而非保证成功；外部回应只能写成 condition，不能进入自动叙事。可选 hero_choices 需恰好三条有条件、等权的路径，各含 id/title/condition/text/refs；不能以通用励志句填充。",
     "补全所有占位符并审阅来源后设 draft=false。代码能核对结构与出处，语义真实性仍需逐段人工审阅。"
   ],
   "title": "__CIHOU_FILL__: 个人报告标题",
@@ -30,10 +32,10 @@
     "nodes": [
       {
         "id": "experience",
-        "kind": "unknown",
+        "kind": "hypothesis",
         "label": "__CIHOU_FILL__: 短标签",
-        "title": "__CIHOU_FILL__: 过去与现在的具体事实",
-        "text": "__CIHOU_FILL__: 只写有来源的经历；未确认处保留未知",
+        "title": "__CIHOU_FILL__: 这种做法可能怎样逐渐形成",
+        "text": "__CIHOU_FILL__: 承接已知经历或从当前模式推演学习路径；已确认经历改kind为fact，推演保留hypothesis，正文自然使用“你可能……”",
         "refs": [
           "user:2"
         ]
@@ -61,23 +63,24 @@
     ],
     "edges": [],
     "tour": [
-      "experience",
       "pattern",
+      "experience",
       "action"
     ]
   },
   "presentation": {
     "style": "quiet-v1",
+    "hero_runtime": "wayfinder-v19",
     "hero_states": [
       {
         "lines": [
           "__CIHOU_FILL__: 第一行",
           "__CIHOU_FILL__: 第二行"
         ],
-        "description": "__CIHOU_FILL__: 第一视角：本次困扰的真实感受或处境",
-        "hint": "__CIHOU_FILL__: 点击图片的简短引导",
-        "label": "__CIHOU_FILL__: 第一状态无障碍说明",
-        "node_id": "experience",
+        "description": "__CIHOU_FILL__: 此刻：当前困局怎样逐步被维持，哪部分是尚待核对的解释",
+        "hint": "__CIHOU_FILL__: 长按沿环行走，松开停下；每圈重现相同六句",
+        "label": "__CIHOU_FILL__: 第一视角的循环概述",
+        "node_id": "pattern",
         "refs": [
           "user:2"
         ]
@@ -87,10 +90,10 @@
           "__CIHOU_FILL__: 第一行",
           "__CIHOU_FILL__: 第二行"
         ],
-        "description": "__CIHOU_FILL__: 全环视角：重复机制；尚属假设则在这句明确",
-        "hint": "__CIHOU_FILL__: 点击图片进入行动的引导",
-        "label": "__CIHOU_FILL__: 第二状态无障碍说明",
-        "node_id": "pattern",
+        "description": "__CIHOU_FILL__: 来处：承接已知往事或由当前模式推演可能的学习经历，用自然的“你可能曾经……”讲清其作用与变化",
+        "hint": "__CIHOU_FILL__: 回看这套做法如何逐渐成为熟悉的选择",
+        "label": "__CIHOU_FILL__: 第二视角的来处概述",
+        "node_id": "experience",
         "refs": [
           "user:2"
         ]
@@ -108,7 +111,80 @@
           "user:5"
         ]
       }
-    ]
+    ],
+    "loop_story": {
+      "nodes": [
+        {
+          "id": "trigger",
+          "text": "__CIHOU_FILL__: 什么情境再次出现",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        },
+        {
+          "id": "meaning",
+          "text": "__CIHOU_FILL__: 当时怎样理解、担心或感受",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        },
+        {
+          "id": "response",
+          "text": "__CIHOU_FILL__: 接下来具体怎样应对",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        },
+        {
+          "id": "relief",
+          "text": "__CIHOU_FILL__: 这样做立即带来了什么帮助",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        },
+        {
+          "id": "cost",
+          "text": "__CIHOU_FILL__: 稍后有哪些代价或现实阻碍",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        },
+        {
+          "id": "return",
+          "text": "__CIHOU_FILL__: 这些后果怎样让原来的情境更容易重现",
+          "detail": "__CIHOU_FILL__: 解释眼前这一环节及其作用；推演自然用“你可能……”引入，保留实际条件，不反复加入编写说明",
+          "refs": [
+            "user:2"
+          ]
+        }
+      ],
+      "present": {
+        "text": "__CIHOU_FILL__: 本人要什么、正在遇到什么，以及当前循环如何维持；允许本人纠正",
+        "refs": [
+          "user:1",
+          "user:2"
+        ]
+      },
+      "past": {
+        "text": "__CIHOU_FILL__: 从当前模式或已知往事解释可能的学习路径：你可能曾经怎样做、当时为何有用、现在什么条件变了；不补造人物或具体事件",
+        "refs": [
+          "user:2"
+        ],
+        "kind": "hypothesis"
+      },
+      "future": {
+        "text": "__CIHOU_FILL__: 在明确条件下可以改变哪一小步、需要什么支持、观察什么反馈；不承诺外部结果",
+        "refs": [
+          "user:5",
+          "user:6"
+        ]
+      }
+    }
   },
   "chapters": [
     {

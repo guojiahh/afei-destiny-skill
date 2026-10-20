@@ -1,0 +1,34 @@
+{
+  "status": "Engineering baseline only, not independently reviewed or approved. Do not use for final report bundle. New grounded actor work continues in v13.",
+  "files": {
+    "hero-scene-v12.js": "977677fb6986247ee507232117b7c0f8c9080740f492ea4513447b11261ab6e9",
+    "prototype-v12.html": "af0bbc1fc7a3404749ab7e8b93162a12b1ba722fb7d5ee7f84f98a9bd7ced8b2",
+    "hero-character-rig-v12.js": "cb0f28ed53b74ee73dcfff6da9e9f33858ef766703cb957034833ff6ef0f8313"
+  },
+  "worldRouteMeters": 65.314,
+  "selectedLocalAssets": {
+    "road": "paper-road-v10.png",
+    "terrain": "paper-terrain-v10.png",
+    "ground": "paper-meadow-v12.png",
+    "grass": "meadow-parts-v12.png",
+    "grassMetadata": "meadow-parts-v12.json",
+    "character": "girl-rig-parts-v5.png",
+    "characterMetadata": "girl-rig-parts-v5.json"
+  },
+  "actualLatestFrame": "widebank-01-first.jpg",
+  "actualLatestViewport": [
+    1280,
+    720
+  ],
+  "limitations": [
+    "True stance anchors and phase transitions failed independent passive capture; v13 will implement native XYZ foot targets.",
+    "Only first frame of latest wider bank geometry was observed; prior hill/valley complete takes are not latest geometry QA.",
+    "Latest mobile full journey and latest outward exit at 29m not yet verified."
+  ],
+  "historyCautions": [
+    "four-06-revealing.jpg and four-07-overview.jpg actually show choice, not overview.",
+    "space-01-idle10-waiting.jpg is 1280x618 and must not be presented as a 1280x720 frame.",
+    "layout-* frames use obsolete 85.638m route and failed early reveal fog.",
+    "valley-* uses 60.799m terrain before higher inner hills and latest 65.314m lateral widening."
+  ]
+}

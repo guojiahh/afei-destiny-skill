@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "synthetic-wayfinder-job-v18",
+  "synthetic_demo": true,
+  "consultation_registered": false,
+  "notice": "匿名求职演示。人物情境为合成内容，来处以可能的形成路径表达；没有对应真实咨询者。",
+  "inputs": [
+    {
+      "path": "build_demo.py",
+      "sha256": "ec59d8aa2496ce6c7d7c193d880e1d429be16696ac57368ea89343cbe8f8ecfc"
+    },
+    {
+      "path": "../cihou-wayfinder-v15/build_demo.py",
+      "sha256": "9e93b2affba4a5de657bf67922d7fbd21c01f9e69ec4aa5bb823010ce05b8ae1"
+    }
+  ],
+  "inference": [
+    {
+      "id": "formation-pathway",
+      "kind": "hypothesis",
+      "inference_type": "mechanism-grounded-possible-past",
+      "refs": [
+        "user:2",
+        "technical:7"
+      ],
+      "verified_biography": false
+    }
+  ],
+  "sources": {
+    "user": {
+      "path": "final_report.md",
+      "artifact_id": "synthetic-user-source-v18",
+      "sha256": "d04a6a034811376812a7b8c5f174674db3280baf32e9b845f681c6609903e514"
+    },
+    "technical": {
+      "path": "technical_analysis.md",
+      "artifact_id": "synthetic-technical-source-v18",
+      "sha256": "09287440560ce58a2c514f32c10a47c51db50b77406602edcc369a6879c42983"
+    }
+  },
+  "outputs": {
+    "report-model.json": {
+      "sha256": "57298c983c518b96868173ea6eb290417cae0e5caf520aafaa3f36016c23cd6a"
+    },
+    "story-data.js": {
+      "sha256": "f419e6a74e1cb8e0a925fb5ee58c08d973a34f9714761b5b3128e8ae5c3af667"
+    },
+    "final_report.html": {
+      "sha256": "5716a8dba7c6d21ea5d0e97e37b920f0fab4690e27c3ef3203f71e38ab610013"
+    }
+  }
+}

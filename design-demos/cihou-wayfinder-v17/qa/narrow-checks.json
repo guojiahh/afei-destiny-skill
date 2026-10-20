@@ -1,0 +1,116 @@
+[
+  {
+    "state": {
+      "anchorVisit": "3",
+      "holding": "false",
+      "loopNode": "response",
+      "loopTurns": "0.37066279341127456",
+      "progress": "0.37066279341127456",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 312.925537109375,
+        "left": 16.011703491210938,
+        "right": 373.9995574951172,
+        "text": "再改一轮，今天先不投",
+        "top": 207.4782867431641
+      }
+    ]
+  },
+  {
+    "state": {
+      "anchorVisit": "4",
+      "holding": "false",
+      "loopNode": "relief",
+      "loopTurns": "0.5391593613205228",
+      "progress": "0.5391593613205228",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 286.80377197265625,
+        "left": 16.011856079101562,
+        "right": 373.9997100830078,
+        "text": "暂时安心，还不用面对结果",
+        "top": 181.35650634765625
+      }
+    ]
+  },
+  {
+    "state": {
+      "anchorVisit": "5",
+      "holding": "false",
+      "loopNode": "cost",
+      "loopTurns": "0.7076592992285285",
+      "progress": "0.7076592992285285",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 297.7027587890625,
+        "left": 16.000045776367188,
+        "right": 373.98789978027344,
+        "text": "投递推迟，真实反馈更少",
+        "top": 192.25550842285156
+      }
+    ]
+  },
+  {
+    "state": {
+      "anchorVisit": "6",
+      "holding": "false",
+      "loopNode": "return",
+      "loopTurns": "0.876155867137776",
+      "progress": "0.876155867137776",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 310.3999938964844,
+        "left": 16,
+        "right": 373.98785400390625,
+        "text": "没有把握，又想继续准备",
+        "top": 204.95274353027344
+      }
+    ]
+  },
+  {
+    "state": {
+      "anchorVisit": "7",
+      "holding": "false",
+      "loopNode": "trigger",
+      "loopTurns": "1.0446524350470234",
+      "progress": "1",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 318.485107421875,
+        "left": 16,
+        "right": 326.59197998046875,
+        "text": "想到投递和被评价",
+        "top": 265.761474609375
+      }
+    ]
+  },
+  {
+    "state": {
+      "anchorVisit": "8",
+      "holding": "false",
+      "loopNode": "meaning",
+      "loopTurns": "1.213152372955028",
+      "progress": "1",
+      "ready": "true"
+    },
+    "labels": [
+      {
+        "bottom": 320.0359191894531,
+        "left": 16.012435913085938,
+        "right": 374.0002899169922,
+        "text": "如果被拒，是不是我不够好",
+        "top": 214.5886688232422
+      }
+    ]
+  }
+]

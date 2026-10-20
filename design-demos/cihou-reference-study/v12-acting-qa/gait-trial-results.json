@@ -1,0 +1,93 @@
+{
+  "rig": 12,
+  "standingPixels": 190,
+  "gaitSamples": 1001,
+  "actionSamples": 804,
+  "supportMaxAbsY": 4.408728476930471e-18,
+  "sourceContactAlphaMinimum": 33,
+  "nonFiniteVertices": 0,
+  "gaitMetricsMaxDelta": 0.09496774193548388,
+  "walkingSoleMaxDelta": 0.032,
+  "walkingLowerLegOverreach": 1.1102230246251565e-16,
+  "walkingPelvisLowest": 0.3574173845919542,
+  "bagBoundaryErrors": {
+    "pick@0.86": {
+      "xy": 1.3877787807814457e-17,
+      "depth": 0.0020000000000000018
+    },
+    "reconsider@0.08": {
+      "xy": 1.3877787807814457e-17,
+      "depth": 0.0020000000000000018
+    },
+    "reconsider@0.94": {
+      "xy": 4.163336342344337e-17,
+      "depth": 0.0020000000000000018
+    },
+    "place@0.2": {
+      "xy": 1.3877787807814457e-17,
+      "depth": 0.0020000000000000018
+    }
+  },
+  "contactTargetErrors": {
+    "pick@0.43": 0,
+    "place@0.78": 1.3877787807814457e-17
+  },
+  "crossSafeStops": [
+    {
+      "progress": 0,
+      "rootTravel": 0,
+      "feet": [
+        {
+          "y": 0,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 0.4,
+      "rootTravel": 0,
+      "feet": [
+        {
+          "y": 0,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 0.67,
+      "rootTravel": 0.15200000000000002,
+      "feet": [
+        {
+          "y": 0,
+          "stance": 0
+        },
+        {
+          "y": 0,
+          "stance": 1
+        }
+      ]
+    },
+    {
+      "progress": 1,
+      "rootTravel": 0.24,
+      "feet": [
+        {
+          "y": 4.408728476930471e-18,
+          "stance": 1
+        },
+        {
+          "y": 0,
+          "stance": 0.75
+        }
+      ]
+    }
+  ]
+}

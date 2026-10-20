@@ -101,6 +101,8 @@ def validate_model(model, state, sources):
     presentation = model.get('presentation')
     if presentation is not None:
         require(isinstance(presentation, dict) and presentation.get('style') == 'quiet-v1', 'unsupported presentation style')
+        runtime = presentation.get('hero_runtime', 'wayfinder-v19')
+        require(runtime in {'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17', 'wayfinder-v16', 'paper-v15'}, 'unsupported hero runtime')
         require(diagram['type'] == 'loop', 'quiet-v1 requires a sourced loop model')
         states = presentation.get('hero_states')
         require(isinstance(states, list) and len(states) == 3, 'quiet-v1 requires three hero states')
@@ -108,11 +110,48 @@ def validate_model(model, state, sources):
             require(isinstance(scene, dict), 'invalid hero state')
             lines = scene.get('lines')
             require(isinstance(lines, list) and len(lines) == 2 and all(isinstance(v, str) and v.strip() and len(v) <= 18 for v in lines), 'hero requires two short lines')
+            if 'anchors' in scene:
+                require(isinstance(scene['anchors'], list) and len(scene['anchors']) == 3
+                        and all(isinstance(v, str) and v.strip() and len(v) <= 80 for v in scene['anchors']),
+                        'hero anchors require three short sourced strings')
             for field in ('description', 'hint', 'label'):
                 require(isinstance(scene.get(field), str) and scene[field].strip(), 'missing hero ' + field)
             require(scene.get('node_id') in ids, 'hero has unknown node')
             require(next(n for n in nodes if n['id'] == scene['node_id'])['kind'] != 'condition', 'hero must not decide external responses')
             refs(scene)
+        loop_story = presentation.get('loop_story')
+        if runtime in {'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17'} or loop_story is not None:
+            require(isinstance(loop_story, dict), 'Wayfinder requires a sourced loop_story')
+            loop_nodes = loop_story.get('nodes')
+            require(isinstance(loop_nodes, list) and len(loop_nodes) == 6
+                    and all(isinstance(node, dict) for node in loop_nodes), 'loop_story requires six fixed nodes')
+            require([node.get('id') for node in loop_nodes] ==
+                    ['trigger', 'meaning', 'response', 'relief', 'cost', 'return'], 'invalid loop_story node order')
+            for node in loop_nodes:
+                for field, limit in [('text', 24), ('detail', 300)]:
+                    require(nonempty_string(node.get(field)) and len(node[field]) <= limit,
+                            'invalid loop_story node ' + field)
+                refs(node)
+            for field in ('present', 'past', 'future'):
+                if field == 'past' and field not in loop_story:
+                    continue
+                section = loop_story.get(field)
+                require(isinstance(section, dict) and nonempty_string(section.get('text'))
+                        and len(section['text']) <= 600, 'invalid loop_story ' + field)
+                refs(section)
+        choices = presentation.get('hero_choices', [])
+        require(isinstance(choices, list) and len(choices) in {0, 3}, 'hero choices require three conditional alternatives')
+        choice_ids = set()
+        for choice in choices:
+            require(isinstance(choice, dict), 'invalid hero choice')
+            choice_id = choice.get('id', '')
+            require(isinstance(choice_id, str) and re.fullmatch(r'[a-z][a-z0-9_-]{0,35}', choice_id)
+                    and choice_id not in choice_ids, 'invalid or duplicate hero choice id')
+            choice_ids.add(choice_id)
+            for field, limit in [('title', 32), ('condition', 80), ('text', 400)]:
+                require(isinstance(choice.get(field), str) and choice[field].strip()
+                        and len(choice[field]) <= limit, 'invalid hero choice ' + field)
+            refs(choice)
     chapters = model.get('chapters', [])
     require(3 <= len(chapters) <= 10, 'requires a complete editorial report')
     validate_template_contract(model, state, sources)

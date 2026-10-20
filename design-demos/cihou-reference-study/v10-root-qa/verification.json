@@ -1,0 +1,130 @@
+{
+  "scope": "Root production QA of frozen v10 and an anonymous synthetic fixed-template adapter; separate independent review 08 has completed at 5.8/10. Engineering checks are not aesthetic acceptance.",
+  "prototype_scene_sha256": "19fddce3047dc986c655cc111b4faeada6092331fdfb2b241dd5dc24986bd36a",
+  "prototype_html_sha256": "c6b006a53bcb9c74bafc027d19d8ab806d8a2d9087da21ab13a312b17e0db0e1",
+  "formal_adapter_sha256": "4deda261d9b2a831ddc46bd63bc38aad159b82d7d430a37bd352f7d0343b7966",
+  "formal_fixture": "Synthetic test consultation, three legacy fixture chapters; never a real personal report or the required final nine-chapter deliverable.",
+  "formal_assets": {
+    "three": {
+      "file": "three.min.js",
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+    },
+    "three_license": {
+      "file": "THREE-LICENSE.txt",
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    "rig": {
+      "file": "hero-character-rig-v10.js",
+      "sha256": "b57cef27a03b1a530f5648186dd997e4fdd9d79a284f79713a78f407441eb355"
+    },
+    "scene": {
+      "file": "hero-scene-v10.js",
+      "sha256": "19fddce3047dc986c655cc111b4faeada6092331fdfb2b241dd5dc24986bd36a"
+    },
+    "road": {
+      "file": "paper-road-v10.png",
+      "sha256": "23cd5d1968d2651d8692afc5649c4a5be0f26deb97ca91116c56919434e4a754"
+    },
+    "terrain": {
+      "file": "paper-terrain-v10.png",
+      "sha256": "ea95afe3f51863954b4a8fd7bee736526518e95134d88924566680c8f7cdf67d"
+    },
+    "character": {
+      "file": "girl-rig-parts-v5.png",
+      "sha256": "4391f5592e6dee5c5c01e424b6b24c305c23fe999b3d5397399e3a70a89fffb5"
+    },
+    "rig_meta": {
+      "file": "girl-rig-parts-v5.json",
+      "sha256": "ffcc083bbec330064b1d51fe484d588effcd58c2dea66d0794c71c1a5894cfcf"
+    }
+  },
+  "checks": {
+    "workspace_command": ".venv/bin/python tools/check_workspace.py --skill",
+    "exit_code": 0,
+    "skill_tests": 78,
+    "evaluation_tests": 6,
+    "html_tests_included": 31,
+    "markdown_files": 75,
+    "missing_markdown_links": 0,
+    "doctor": "passed",
+    "quick_validate": "passed",
+    "git_diff_check": "passed",
+    "node_syntax": [
+      "report.js",
+      "hero-scene-v10.js",
+      "hero-character-rig-v10.js"
+    ],
+    "inline_resource_tags": "No external script/stylesheet tags; road/terrain/character embedded as data URLs.",
+    "latest_scope": "Full workspace check repeated after adding optional ground/grass/grassMetadata channels to the renderer and controller. All 78 skill tests, 6 evaluation tests, doctor, quick_validate, whitespace and 75 Markdown local-target checks passed. Frozen v10 review input and the default v4 bundle remain unchanged."
+  },
+  "actual_desktop_actions": [
+    "400ms press and release",
+    "sustained press, first flower encounter",
+    "carried same flower, one route, return to fixed stone with cut stem",
+    "reconsider, short overview, return to stable choice",
+    "select direction; press/release while placing; continue and release at cross",
+    "complete, road exits both diagonal corners; girl continues centered",
+    "continue reading, return to scene, replay resets flower and controls",
+    "formal template: actual scene ready gate, actual exit completion, replay and pause checkbox"
+  ],
+  "frozen_evidence": {
+    "opening": "frozen-start.jpg",
+    "reconsider": "frozen-return-progress.jpg",
+    "stable_choice": "frozen-choice.jpg",
+    "placing_release": "frozen-place-release.jpg",
+    "crossing_release": "frozen-cross-release.jpg",
+    "complete": "frozen-end.jpg",
+    "replay": "frozen-replay.jpg",
+    "formal_choice": "formal-frozen-choice.jpg",
+    "formal_complete": "formal-frozen-end.jpg",
+    "formal_replay": "formal-frozen-replay.jpg",
+    "formal_pause": "formal-frozen-pause.jpg"
+  },
+  "naming_correction": "frozen-pick.jpg captured a walking segment before encounter, not a pick contact. It is not used as contact evidence. Frozen contact evidence is v10-stage-qa/frozen-wide-01-pick.jpg.",
+  "pre_freeze_evidence": "early-space.jpg, non-frozen filenames and end-before-corrections.jpg describe superseded development snapshots, not the immutable reviewed v10.",
+  "limits": [
+    "No sound evaluation, physical phone/touch hardware, Safari, OS-level reduced-motion switch, measured frame rate or WebGL hardware-failure visual test.",
+    "In-app browser rejected file:// navigation; no circumvention was attempted. File is self-contained by build inspection and localhost browser QA."
+  ],
+  "default_bundle": "painted-v4 unchanged; no real consultation HTML regenerated in this production iteration.",
+  "additional_observation": {
+    "scenario": "reload, observe without input for 10 seconds, press 400ms and release, then hold 3 seconds",
+    "result": "Girl has already passed the initial stone; flower remains at the original stone until a later loop. This is a responsiveness concern, not a failure of eventual completion.",
+    "evidence": [
+      "idle-probe-start.jpg",
+      "idle-probe-ten-seconds.jpg",
+      "idle-probe-after-3s-hold.jpg"
+    ],
+    "next_step": "Separate unreviewed v11 engineering draft; frozen v10 and critic08 materials remain unchanged."
+  },
+  "mobile_formal_validation": {
+    "viewport": [
+      390,
+      844
+    ],
+    "actions": [
+      "reload and real hold through flower and return",
+      "stable choice, select, hold to complete",
+      "continue reading, browser back returns at scrollY0 preserving complete state",
+      "replay resets flower and hides completion"
+    ],
+    "final_actions": {
+      "y": 724,
+      "height": 44
+    },
+    "playback_controls": {
+      "y": 782,
+      "height": 44
+    },
+    "vertical_gap_px": 14,
+    "evidence": [
+      "formal-mobile-run.jpg",
+      "formal-mobile-choice-stable.jpg",
+      "formal-mobile-end-spaced.jpg",
+      "formal-mobile-replay.jpg"
+    ],
+    "mid_transition_observation": "formal-mobile-choice.jpg is actually an in-progress high-camera reveal and shows actor vertically foreshortened; stable choice is a separate frame. This is retained as evidence and addressed only in the separate v11 draft.",
+    "temporary_viewport": "reset; own temporary tab closed",
+    "change_after_full_check": "CSS-only mobile completion offset adjusted to avoid target overlap; actual final 44px targets and 14px gap verified."
+  }
+}

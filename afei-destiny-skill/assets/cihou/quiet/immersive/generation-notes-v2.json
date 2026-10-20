@@ -1,0 +1,770 @@
+{
+  "version": 2,
+  "asset": "girl-walk-v2.png",
+  "asset_type": "original generated character sprite candidate",
+  "created_utc": "2026-10-17T04:36:39.436Z",
+  "generator": "built-in image_gen__imagegen",
+  "selected_generated_path": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-152fc75a-9735-47d7-932a-18d19d697685.png",
+  "original_character": true,
+  "license_note": "Original AI-generated character. No CC0 claim. Reference screenshots were used for visual style study only; no third-party character or scene assets were extracted.",
+  "reference_images": [
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "role": "style reference: restrained traveler silhouette, handmade painted atmosphere"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "role": "style reference: delicate ink contours, matte gouache, directional texture"
+    }
+  ],
+  "requested_spec": {
+    "width": 1536,
+    "height": 1024,
+    "columns": 4,
+    "rows": 2,
+    "cell_width": 384,
+    "cell_height": 512,
+    "frame_count": 8,
+    "view": "three-quarter rear facing upper-right",
+    "character": "small original girl with deep-black bob, warm red dress, slender legs, beige crossbody satchel",
+    "transparent_background": true
+  },
+  "prompts": [
+    {
+      "kind": "initial generation",
+      "prompt": "Use case: illustration-story\nAsset type: production-ready transparent walking sprite sheet for an interactive painterly website hero.\nInput images: Image 1 is a STYLE REFERENCE only: Wayfinder's tiny warm red traveler inside a painted world. Borrow only the restraint, handmade texture, small silhouette readability and quiet poetic mood; do NOT reproduce its hooded character. Image 2 is a STYLE REFERENCE only: Nomadic's delicate uneven ink contours, matte gouache fill, small directional strokes, restrained desaturated palette and handmade storybook animation. No background, UI, birds, words, routes or scenery from either reference in the output.\nPrimary request: Create ONE ORIGINAL little girl in a complete EIGHT FRAME WALK CYCLE, shown consistently from a three-quarter REAR view, facing toward the upper-right of the screen. A graceful, genuinely appealing tiny traveler rather than an exaggerated mascot. Short soft deep-black bob haircut with a small curved fringe and gently moving tips. A simple warm burnt-ochre-red knee-length dress, slender pale legs, tiny dark brown shoes, a small ivory-beige crossbody satchel with a thin strap. Head height about one quarter of total body height. Face is mostly turned away; a tiny quiet cheek profile may be visible. No big eyes, no oversized head.\nStyle/medium: hand painted gouache on paper cutout character, sparse sensitive charcoal ink contours, subtly uneven paint edges, delicate dry-brush texture within color, fine restrained garment folds. Flat matte artistic shading with believable form, absolutely no plastic 3D toy rendering, no vector icon finish, no generic Disney face, no anime kawaii.\nComposition/framing: EXACT 1536 by 1024 pixel RGBA image, FOUR equal columns and TWO equal rows, yielding EIGHT equal 384 by 512 pixel cells. Chronological order left to right on first row then left to right second row. Exactly ONE complete same girl per cell. In EACH cell place the girl within approximately x=100..284 and y=80..440, leaving generous fully transparent margins. Same body scale, same three-quarter rear orientation, same head location, same planted-foot baseline y=440 and same center anchor x=192 in all cells. All eight characters fully in frame, no touching cell edges, no extra samples.\nMotion: eight distinct equally spaced phases of ONE seamless natural walk, not running or hopping. Phases in order: left heel contact and right toe lifting; left support and right passing; left trailing and right swinging forward; right heel lowering; right heel contact and left toe lifting; right support and left passing; right trailing and left swinging forward; left heel lowering. Gentle opposite arm swing, small weight shift, subtle tiny vertical head bob of no more than 4 pixels. Hem and bob-hair tips lag gently and settle across the cycle. Feet anatomically sensible from this rear diagonal camera; neither foot slides across its ground contact during support. Keep backpack shape and strap consistent.\nBackground: actual transparent alpha background, preserve transparency in every gap including between arms and body and legs. No checkerboard baked in.\nText: NONE.\nConstraints: eight figures only; identical original design; beautiful small-scale silhouette; restrained palette; no floor, no cast shadow, no props beyond satchel, no border, no grid, no labels, no text, no watermark, no scenery. Transparent output.",
+      "output": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-5add1a0d-a247-40ee-b37d-1a894f260cf7.png"
+    },
+    {
+      "kind": "selected edit: walk-cycle and anchor correction",
+      "prompt": "Edit target: Image 1, the generated transparent 8-frame girl sprite sheet. Keep her EXACT original identity and handmade gouache/ink appearance: bob haircut, burnt-red dress, beige satchel, rear three-quarter upper-right facing camera, proportions, palette and surface texture.\nMake ONE targeted production correction: turn the poses into a physically complete 8-phase walk cycle AND align the feet to one consistent per-cell ground anchor. The present sheet repeats one leg forward in every frame and its lower row sits higher; correct those errors.\nOutput remains exactly 1536x1024 RGBA with true transparent alpha, FOUR columns TWO rows, each 384x512 cell. EXACT same size of head and body in every cell, same head top at y=70 relative to each cell, same planted-foot baseline at y=440 relative to each cell, same center of stance at x=192. Keep plenty of transparent margin. No global shift between rows.\nWalking order reading left to right top row then bottom row: frame 1 LEFT foot planted clearly forward with RIGHT foot behind; frame 2 left support and RIGHT knee passes left; frame 3 RIGHT leg reaching distinctly forward, LEFT heel lifts behind; frame 4 RIGHT heel contact ahead and LEFT toes behind; frame 5 RIGHT foot planted clearly forward with LEFT foot behind; frame 6 right support and LEFT knee passes right; frame 7 LEFT leg reaching distinctly forward, RIGHT heel lifts behind; frame 8 LEFT heel contact ahead and RIGHT toes behind. Feet alternate visibly; show natural counter-swing of arms and tiny lagging flutter of skirt and hair. This is walking, not running: one foot always supports weight. Every two adjacent poses should change modestly; frames 4 and 8 blend naturally into 5 and 1.\nNo background, no floor, no cast shadow, no baked checkerboard, no text, no grid, no extra drawings. Preserve actual transparency; do not paint dark pixels in transparent regions. Avoid motion blur.",
+      "output": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-152fc75a-9735-47d7-932a-18d19d697685.png"
+    },
+    {
+      "kind": "rejected edit: attempted stronger phase correction",
+      "prompt": "Edit Image 1 into a genuine hand-drawn walk-cycle sprite. KEEP HER IDENTITY AND ART STYLE. Only fix WALK POSES AND LAYOUT. The image currently has 8 copies of one scissor-leg pose. That is not a walk cycle. Make the feet and lower legs change substantially from frame to frame: the two legs must SWITCH which one is forward.\nEight poses: [1] very open stride, visible left leg ahead right leg behind; [2] feet come close beneath hips, right knee bent in swing; [3] right leg swings ahead with bent knee, left leg straight support; [4] very open stride, right leg ahead left leg behind; [5] right leg forward weighted, left heel lifts behind; [6] feet come close beneath hips, left knee bent in swing; [7] left leg swings ahead with bent knee, right leg straight support; [8] very open stride, left leg ahead right leg behind. Use slight leg foreshortening and visible bending from this rear three-quarter direction. Opposite arm swing. Show the skirt's hem alternately higher on each side. Head and torso keep the same appearance and position, only tiny natural bob.\nDo not draw every frame with the same leading leg, same skirt silhouette or same arm pose. This must animate like a gentle grounded natural walk.\nEXACT 4 columns x 2 rows, 1536x1024 total, each cell 384x512. For both rows use the SAME local foot baseline 460px, head top 60px, stance centered x=192. Each girl is 400px tall, including shoes. Equal scale. Plenty of transparent space around her.\nEverything outside the character must be TRUE FULLY TRANSPARENT alpha zero, NO glow, halo, ambient shadow, dark haze, background, cast shadow, ground, labels or grid. Preserve original warm dark bob haircut, textured red dress and ivory satchel. No text.",
+      "output": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-76eaefd9-a308-4c93-bf7c-f32a3c7104b7.png"
+    },
+    {
+      "kind": "rejected edit: attempted complete alternating gait",
+      "prompt": "Use Image 1 solely as the original girl's character design reference. Create a NEW 8-frame WALK ANIMATION sheet with her exact bob hair, red dress and ivory satchel, delicate gouache and ink texture. This is an animation production task: her LEFT and RIGHT feet must ALTERNATE as the leading foot. Avoid 8 near-identical fashion poses.\nShe walks away diagonally to the upper right. Keep the three-quarter rear viewpoint. Her hips move subtly, dress sways, shoulders counter-rotate. The walk is a relaxed slow grounded walk with SMALL steps. At least four frames must clearly have her LEFT leg forward and her RIGHT leg back, and the other four frames must clearly have the RIGHT leg forward and LEFT leg back. Include passing poses with feet close together beneath the hips, and contact poses with feet apart. Bend knees naturally. Do not keep the same leg in front in every frame. The first frame and fifth frame must be clearly opposite leg poses.\nOrdered anatomy guide: frame 1 left foot lands; frame 2 left foot supports as right knee swings past; frame 3 right knee in front, left leg now behind; frame 4 right foot lands; frame 5 right foot supports as left heel lifts; frame 6 right foot supports as left knee swings past; frame 7 left knee in front, right leg now behind; frame 8 left foot lands. Hands counter-swing.\nSheet layout: 1536 x 1024 PNG, 4 x 2 grid, eight equal 384 x 512 cells. One whole figure in each cell, no cropping. All eight have same size, same center, same foot baseline. Each figure only 340 pixels tall with transparent margin above and below: hair top near y=90, supporting shoe at y=430 within each cell. Make the second row exactly match the first row's relative positions and scale.\nTrue transparent alpha outside the figure and between legs. Matte flat paint. NO atmospheric haze, glow, shadow, ground, color outside her silhouette, checkerboard, captions or grid. Preserve the beauty and sensitivity of the character; it is for a tiny traveler in an adult poetic interactive world, not a cartoon sticker.",
+      "output": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-2af6ffd7-0f00-4b08-84ba-6f9d47432bd0.png"
+    }
+  ],
+  "quality_review": {
+    "style": "Usable original character design, matte hand-painted gouache and restrained ink. No 3D toy treatment.",
+    "identity": "Hair, clothing, bag, orientation and proportions visually stable.",
+    "walking_cycle": "FAIL: generated poses do not reliably alternate the leading leg. Not approved as a physically complete eight-phase natural walk.",
+    "alignment": "FAIL: raw cell anchors differ, especially between rows. Per-frame content bounds and baseline metadata provided for renderer correction.",
+    "alpha": "RGBA transparency present. Large brown RGB haze seen in some image viewers is mostly under alpha zero. Very faint alpha 1–7 fringes remain and need actual compositing QA.",
+    "recommended_use": "Treat as character art candidate. Normalize bounds/foot anchor per frame. A renderer-controlled gait or a manually authored animation is still needed for natural grounded walking."
+  },
+  "processing": "No image editing, drawing, resizing or background removal performed outside image_gen. Selected PNG copied byte-for-byte. PNG decoding below is read-only QA.",
+  "qa": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "png_color_type": 6,
+    "bit_depth": 8,
+    "interlaced": false,
+    "sha256": "2f194c48a3af4a517decf216904119df64946c41bab75f7fd86f0181d1472b19",
+    "copied_byte_for_byte": true,
+    "bytes": 2264643,
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "alpha_histogram_bins": {
+      "0-0": {
+        "pixels": 1034371,
+        "ratio": 0.6576353708902994
+      },
+      "1-7": {
+        "pixels": 65380,
+        "ratio": 0.041567484537760414
+      },
+      "8-31": {
+        "pixels": 8387,
+        "ratio": 0.0053323109944661455
+      },
+      "32-63": {
+        "pixels": 5302,
+        "ratio": 0.0033709208170572915
+      },
+      "64-127": {
+        "pixels": 8510,
+        "ratio": 0.005410512288411458
+      },
+      "128-239": {
+        "pixels": 18598,
+        "ratio": 0.011824289957682291
+      },
+      "240-254": {
+        "pixels": 432316,
+        "ratio": 0.27485911051432294
+      },
+      "255-255": {
+        "pixels": 0,
+        "ratio": 0.0
+      }
+    },
+    "cell_alpha_bounds_inclusive_by_threshold": {
+      "1": [
+        [
+          17,
+          34,
+          383,
+          511
+        ],
+        [
+          0,
+          37,
+          383,
+          491
+        ],
+        [
+          1,
+          35,
+          383,
+          511
+        ],
+        [
+          1,
+          33,
+          363,
+          511
+        ],
+        [
+          41,
+          15,
+          383,
+          477
+        ],
+        [
+          0,
+          16,
+          379,
+          511
+        ],
+        [
+          1,
+          5,
+          383,
+          493
+        ],
+        [
+          1,
+          6,
+          365,
+          511
+        ]
+      ],
+      "4": [
+        [
+          97,
+          39,
+          350,
+          508
+        ],
+        [
+          81,
+          39,
+          333,
+          489
+        ],
+        [
+          66,
+          39,
+          326,
+          508
+        ],
+        [
+          77,
+          39,
+          329,
+          507
+        ],
+        [
+          101,
+          18,
+          358,
+          475
+        ],
+        [
+          90,
+          18,
+          334,
+          476
+        ],
+        [
+          74,
+          16,
+          326,
+          476
+        ],
+        [
+          87,
+          18,
+          335,
+          475
+        ]
+      ],
+      "8": [
+        [
+          97,
+          40,
+          349,
+          506
+        ],
+        [
+          81,
+          40,
+          332,
+          488
+        ],
+        [
+          67,
+          41,
+          324,
+          507
+        ],
+        [
+          78,
+          40,
+          327,
+          505
+        ],
+        [
+          103,
+          18,
+          357,
+          474
+        ],
+        [
+          91,
+          18,
+          333,
+          475
+        ],
+        [
+          75,
+          16,
+          324,
+          475
+        ],
+        [
+          88,
+          18,
+          335,
+          474
+        ]
+      ],
+      "16": [
+        [
+          97,
+          42,
+          349,
+          506
+        ],
+        [
+          82,
+          42,
+          332,
+          488
+        ],
+        [
+          68,
+          41,
+          324,
+          507
+        ],
+        [
+          78,
+          41,
+          327,
+          505
+        ],
+        [
+          103,
+          19,
+          356,
+          474
+        ],
+        [
+          91,
+          19,
+          333,
+          475
+        ],
+        [
+          75,
+          18,
+          324,
+          475
+        ],
+        [
+          89,
+          18,
+          335,
+          474
+        ]
+      ],
+      "64": [
+        [
+          98,
+          43,
+          348,
+          506
+        ],
+        [
+          82,
+          44,
+          331,
+          487
+        ],
+        [
+          68,
+          44,
+          324,
+          506
+        ],
+        [
+          79,
+          44,
+          326,
+          505
+        ],
+        [
+          103,
+          21,
+          356,
+          473
+        ],
+        [
+          91,
+          21,
+          332,
+          474
+        ],
+        [
+          76,
+          21,
+          323,
+          474
+        ],
+        [
+          89,
+          23,
+          335,
+          474
+        ]
+      ],
+      "128": [
+        [
+          98,
+          44,
+          348,
+          506
+        ],
+        [
+          82,
+          48,
+          331,
+          487
+        ],
+        [
+          69,
+          45,
+          323,
+          506
+        ],
+        [
+          79,
+          45,
+          326,
+          504
+        ],
+        [
+          104,
+          22,
+          356,
+          473
+        ],
+        [
+          91,
+          21,
+          332,
+          474
+        ],
+        [
+          76,
+          22,
+          323,
+          474
+        ],
+        [
+          90,
+          28,
+          334,
+          473
+        ]
+      ],
+      "240": [
+        [
+          99,
+          54,
+          347,
+          505
+        ],
+        [
+          83,
+          55,
+          330,
+          486
+        ],
+        [
+          69,
+          54,
+          323,
+          505
+        ],
+        [
+          80,
+          54,
+          326,
+          504
+        ],
+        [
+          105,
+          32,
+          355,
+          472
+        ],
+        [
+          93,
+          32,
+          331,
+          473
+        ],
+        [
+          77,
+          32,
+          322,
+          473
+        ],
+        [
+          91,
+          32,
+          334,
+          473
+        ]
+      ]
+    },
+    "rgba_pixel_samples": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "rgba": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "position": [
+          192,
+          30
+        ],
+        "rgba": [
+          47,
+          38,
+          34,
+          0
+        ]
+      },
+      {
+        "position": [
+          100,
+          100
+        ],
+        "rgba": [
+          32,
+          25,
+          22,
+          0
+        ]
+      },
+      {
+        "position": [
+          20,
+          240
+        ],
+        "rgba": [
+          46,
+          26,
+          19,
+          0
+        ]
+      },
+      {
+        "position": [
+          192,
+          240
+        ],
+        "rgba": [
+          138,
+          58,
+          39,
+          253
+        ]
+      },
+      {
+        "position": [
+          350,
+          240
+        ],
+        "rgba": [
+          144,
+          87,
+          68,
+          0
+        ]
+      },
+      {
+        "position": [
+          192,
+          500
+        ],
+        "rgba": [
+          65,
+          41,
+          35,
+          251
+        ]
+      },
+      {
+        "position": [
+          600,
+          510
+        ],
+        "rgba": [
+          74,
+          56,
+          47,
+          0
+        ]
+      },
+      {
+        "position": [
+          384,
+          512
+        ],
+        "rgba": [
+          46,
+          27,
+          21,
+          0
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "cell_rect": [
+          0,
+          0,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          97,
+          42,
+          253,
+          465
+        ],
+        "suggested_foot_anchor_cell": [
+          223.0,
+          506
+        ],
+        "suggested_foot_anchor_uv": [
+          0.5807291666666666,
+          0.98828125
+        ],
+        "content_height": 465
+      },
+      {
+        "index": 1,
+        "cell_rect": [
+          384,
+          0,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          82,
+          42,
+          251,
+          447
+        ],
+        "suggested_foot_anchor_cell": [
+          207.0,
+          488
+        ],
+        "suggested_foot_anchor_uv": [
+          0.5390625,
+          0.953125
+        ],
+        "content_height": 447
+      },
+      {
+        "index": 2,
+        "cell_rect": [
+          768,
+          0,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          68,
+          41,
+          257,
+          467
+        ],
+        "suggested_foot_anchor_cell": [
+          196.0,
+          507
+        ],
+        "suggested_foot_anchor_uv": [
+          0.5104166666666666,
+          0.990234375
+        ],
+        "content_height": 467
+      },
+      {
+        "index": 3,
+        "cell_rect": [
+          1152,
+          0,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          78,
+          41,
+          250,
+          465
+        ],
+        "suggested_foot_anchor_cell": [
+          202.5,
+          505
+        ],
+        "suggested_foot_anchor_uv": [
+          0.52734375,
+          0.986328125
+        ],
+        "content_height": 465
+      },
+      {
+        "index": 4,
+        "cell_rect": [
+          0,
+          512,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          103,
+          19,
+          254,
+          456
+        ],
+        "suggested_foot_anchor_cell": [
+          229.5,
+          474
+        ],
+        "suggested_foot_anchor_uv": [
+          0.59765625,
+          0.92578125
+        ],
+        "content_height": 456
+      },
+      {
+        "index": 5,
+        "cell_rect": [
+          384,
+          512,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          91,
+          19,
+          243,
+          457
+        ],
+        "suggested_foot_anchor_cell": [
+          212.0,
+          475
+        ],
+        "suggested_foot_anchor_uv": [
+          0.5520833333333334,
+          0.927734375
+        ],
+        "content_height": 457
+      },
+      {
+        "index": 6,
+        "cell_rect": [
+          768,
+          512,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          75,
+          18,
+          250,
+          458
+        ],
+        "suggested_foot_anchor_cell": [
+          199.5,
+          475
+        ],
+        "suggested_foot_anchor_uv": [
+          0.51953125,
+          0.927734375
+        ],
+        "content_height": 458
+      },
+      {
+        "index": 7,
+        "cell_rect": [
+          1152,
+          512,
+          384,
+          512
+        ],
+        "alpha_bounds_16": [
+          89,
+          18,
+          247,
+          457
+        ],
+        "suggested_foot_anchor_cell": [
+          212.0,
+          474
+        ],
+        "suggested_foot_anchor_uv": [
+          0.5520833333333334,
+          0.92578125
+        ],
+        "content_height": 457
+      }
+    ],
+    "normalization_guidance": "Use frame alpha_bounds_16 as content extent and suggested_foot_anchor_cell as an approximate image anchor. Keep draw height proportional to reference source size; do not mistake low-alpha RGB haze for opaque backdrop. Foot anchor is an image-space heuristic, not biomechanical IK data."
+  }
+}

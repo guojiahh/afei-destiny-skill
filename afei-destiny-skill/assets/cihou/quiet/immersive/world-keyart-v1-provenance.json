@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "asset": "world-keyart-v1.png",
+  "kind": "original painterly Mobius road-world key-art exploration",
+  "generator": "built-in image_gen__imagegen",
+  "createdUtc": "2026-10-17T05:04:14.872Z",
+  "generatedLocalPath": "/Users/afei/.codex/generated_images/01a14820-e727-7fe3-b981-32d0bda80b1b/exec-b8fcbe24-fb7c-4430-971c-8bb2ea88ae93.png",
+  "prompt": "Use case: illustration-story\nAsset type: a superb ORIGINAL TRANSPARENT hand-painted 2.5D story-world key art for an interactive website. One complete centered Möbius road world. No characters, words, UI or ground plane.\nInput images: Image 1 is Nomadic's flight scene, a STYLE REFERENCE for the long diagonal ink-blue road, pale pink paper edges, human ink drawing, painterly directional streaks, organic uneven lines and sophisticated handmade composition. Image 2 is Wayfinder's snow world, a STYLE REFERENCE for genuinely brushed ground, small angular but organically drawn rocks and sparse illustrated plants, coherent story-world detail. Image 3 is Kaizen's garden, a STYLE REFERENCE for delicate painterly brushwork and atmospheric color grouping, not glossy surfaces. Image 4 is OUR OWN ORIGINAL GIRL ART, a STYLE REFERENCE for sensitive fine charcoal contours, rich matte gouache and tangible hand-painted marks. Do NOT copy characters, birds, UI, symbols, words or scene layouts from the references. No girl or figure in this artwork.\nPrimary request: draw a SINGLE physically coherent MOBIUS STRIP MADE INTO A LITTLE TRAVELER'S PAPER ROAD WORLD. It is one broad continuous ribbon with exactly ONE 180-degree half twist before reconnecting to itself. A clear SINGLE large central opening, one continuous boundary, recognizable half-twist, correctly overlapping near and far sections. The road surface gradually rolls from face-up to edge-on to its reverse through the twist. No infinity-sign figure-eight shape, no planar self-crossing, no extra loop, no ordinary two-sided oval racetrack, no cut ends. Think a human artist has built one paper Möbius model, observed it, then painted it in gouache with the expressiveness of an illustrated film background.\nComposition: landscape 1536x1024. The COMPLETE loop centered, comfortably within about x=150..1380 and y=100..910. Generous actual transparent outside margins. Three-quarter slightly elevated view, not directly overhead. An asymmetrical elegant diagonal composition: a very broad, comfortably walkable FOREGROUND blue road segment sweeps from LOWER LEFT toward UPPER RIGHT, its middle area clean and uncluttered for an independently animated tiny girl. This broad front diagonal section is suitable for a dramatic close camera crop. It flows into the far curve and comes around as a narrower receding rear section. The near ribbon passes clearly in front of the far ribbon at the half twist without becoming a flat figure-eight; a restrained dark ink overlap line explains depth. The half twist is genuinely readable as a turnover of paper, with pale warm underside showing. The far curve is quieter and narrower with a slightly softened ink line. Leave the central opening fully transparent.\nStyle and paint: an AUTHORED HAND-DRAWN GOUACHE ILLUSTRATION, not a product render. Delicate uneven charcoal ink outlines, wandering handmade paper edges, small irregular broken contour strokes. Broad matte ink-blue paint with visible individual BRUSHSTROKES: varied widths, varied lengths, occasional tiny dry-brush skips and thin translucent patches, all following the road's flow. Some deliberate pale icy-blue and muted golden-yellow strokes as sparse directional paint marks. Pale dusty-pink and warm ivory PAPER EDGES with tiny irregular fibers and slight folds. Color changes and the turnover are articulated with brushed blocks and sparse hatch marks, not smooth gradients, shader noise or specular highlights. Maintain a quiet mature storybook aesthetic matching our girl's tangible gouache paint.\nRoadside details: only THREE carefully composed little clusters that grow directly out of the road's paper edge: a few fine dark grass stems, one or two tiny muted golden paper-cut blades, and a few low irregular blue-gray stones with pale gouache facets and thin ink marks. They belong physically to the ribbon, not to an external ground. They are asymmetrical, minuscule compared with the road, and leave nearly all of the road clear. One cluster near the left far bend, one near the upper-right turning edge, one small near lower front edge. NO repeated scattered decoration, no all-over plants, no floating confetti or sparkles.\nPalette: ink/slate blue #405879 road, dusty blush #dfafa8 thin edge, warm ivory #f1eade paper underside, small desaturated golden ochre highlights, deep charcoal hairline outlines. Real uneven painterly coverage and warm paper showing through locally. No bright candy palette.\nBackground: TRUE transparent alpha outside the single loop and in its center hole. Absolutely NO tabletop, floor, landscape, sky, flat backdrop, cast shadow, ambient shadow, glow or vignette. The isolated loop itself contains all illustrated scenery. No words, no brands, no numerals, no labels, no characters, no UI.\nAvoid: glossy rubber ring, polished smooth plastic ribbon, perfect CAD edges, 3D product photography, uniform procedural grain, smooth uniform noise shader, randomly placed props, overly clean vector icon, metallic rim, glow, generic AI fantasy decoration. Create a genuinely beautiful, tactile and coherent painterly miniature world.",
+  "references": [
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/n10-voyage-arrival.jpg",
+      "url": "https://2019.makemepulse.com/",
+      "role": "actual experienced benchmark screenshot: ink-blue diagonal road, pink edge, fine ink, directional hand-painted marks"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/w19-tundra-second-line.jpg",
+      "url": "https://wayfinder.nfb.ca/",
+      "role": "actual experienced benchmark screenshot: brushed story-world terrain, organic gouache-faceted rocks and sparse vegetation"
+    },
+    {
+      "path": "design-demos/cihou-reference-study/full-run-v2/k05-curiosity-subtitle.jpg",
+      "url": "https://kaizen.makemepulse.com/",
+      "role": "actual experienced benchmark screenshot: atmospheric painterly surface and restrained organic groupings"
+    },
+    {
+      "path": "afei-destiny-skill/assets/cihou/quiet/immersive/girl-rig-parts-v4.png",
+      "role": "self-generated character art: tactile gouache, uneven ink contour; no character copied into world"
+    }
+  ],
+  "visualReview": {
+    "status": "Exploratory artwork only; not approved final design and not integrated into runtime.",
+    "strengths": "Unified hand-painted road, edges, stones and vegetation; substantial directional paint variation; complete isolated loop; broad uncluttered foreground surface.",
+    "limits": "Side margins are smaller than requested. Half-turn is illustrated at the receding far band and near right fold, but mathematical topology and a walkable projected path require additional human review. No depth, occlusion mask or rig path supplied by this PNG.",
+    "notPresent": "No figures, text, UI, logos, standalone ground plane or baked scene shadows."
+  },
+  "processing": "Generated PNG copied byte-for-byte. No external image editing, cropping, repainting, background removal or resizing. Alpha analysis is read-only.",
+  "licenseNote": "Original generated artwork. Benchmark screenshots used as style-study references only; no third-party scene assets extracted. No CC0 claim.",
+  "alphaQA": {
+    "width": 1536,
+    "height": 1024,
+    "channels": 4,
+    "alphaMin": 0,
+    "alphaMax": 254,
+    "fullyTransparentRatio": 0.5471986134847006,
+    "alpha1to7Ratio": 0.017603556315104168,
+    "contentBoundsAlpha8": [
+      25,
+      92,
+      1497,
+      839
+    ],
+    "transparentMarginAlpha8": {
+      "left": 25,
+      "top": 92,
+      "right": 14,
+      "bottom": 93
+    },
+    "samples": [
+      {
+        "point": [
+          0,
+          0
+        ],
+        "rgba": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          512
+        ],
+        "rgba": [
+          84,
+          74,
+          71,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          400
+        ],
+        "rgba": [
+          42,
+          35,
+          32,
+          0
+        ]
+      },
+      {
+        "point": [
+          100,
+          100
+        ],
+        "rgba": [
+          10,
+          8,
+          7,
+          0
+        ]
+      },
+      {
+        "point": [
+          1535,
+          1023
+        ],
+        "rgba": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          50
+        ],
+        "rgba": [
+          11,
+          10,
+          10,
+          0
+        ]
+      },
+      {
+        "point": [
+          768,
+          970
+        ],
+        "rgba": [
+          98,
+          80,
+          73,
+          0
+        ]
+      }
+    ],
+    "sha256": "3b27e29d805bbecf44d5a39389c1536b2ee8ceb1ab9e4a3940d974514da834a1"
+  }
+}

@@ -1,0 +1,1 @@
+{"ran":true,"kind":"Protocol simulation through explicit QA button, not OS reduced-motion setting","before":{"phase":"complete","phaseAge":0.9582999999999886,"ready":false,"reduced":false,"paused":false},"after":{"ready":true,"paused":true,"readyCallbacks":1},"readyCallbacksAfterRepeatedPause":1,"passed":true}

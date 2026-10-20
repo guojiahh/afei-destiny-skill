@@ -1,0 +1,19 @@
+Browser tab: 2, Title: "从花到路 · v9 相遇与视点", URL: "http://127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#top".
+1 AXWebArea 从花到路 · v9 相遇与视点, URL: 127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#top
+	2 container Description: 道路与莫比乌斯环的互动主图, ID: top
+		3 link Description: 阅读正文, Value: 127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#reading
+		4 button Description: 按住鼠标或空格键，观看女孩与花的相遇，再展开眼前的路；松开停在当前景别。, ID: world
+		14 text 继续按住
+		15 container final-actions
+			16 button 再看一次, ID: replay
+			17 link Description: 继续阅读, Value: 127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#reading
+		18 text 已走出环面。可以继续阅读或重新观看。
+	7 container reading
+		8 heading 从眼前的路， 到另一种看法。, Value: 1
+			9 text 从眼前的路，
+			10 text 到另一种看法。
+		11 text 这里是正文衔接位置。主图与阅读互相独立，可以先停下来看看，也可以随时开始阅读。
+		12 text 原画、纸偶与镜头共同完成一次遇见、回望与出发。此页只用于主图视觉打磨。
+		13 link Description: 回到画面 ↑, Value: 127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#top
+
+The focused UI element is 1 AXWebArea 从花到路 · v9 相遇与视点, URL: 127.0.0.1:52781/afei-destiny-skill/assets/cihou/quiet/immersive/prototype-v9.html#top

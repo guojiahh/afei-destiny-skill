@@ -1,0 +1,368 @@
+[
+  {
+    "name": "n01-start",
+    "utc": "2026-10-17T03:23:25.215Z",
+    "note": "Click START; begin first chapter",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t2 image\n\t\t3 container\n\t\t\t4 container\n\t\t\t\t5 text START\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "k01-start",
+    "utc": "2026-10-17T03:23:33.696Z",
+    "note": "Begin full intro without skipping",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t5 container\n\t\t\t\t6 image Makemepulse logo\n\t\t\t\t7 heading A makemepulse production, Value: 3\n\t\t\t\t\t8 text A makemepulse\n\t\t\t\t\t9 text production\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "w01-start",
+    "utc": "2026-10-17T03:23:34.203Z",
+    "note": "Begin intro without skipping",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 image\n\t\t\t19 text an animated journey across\n\t\t\t20 text the poetry of the land\n\t\t\t21 container\n\t\t\t\t22 image Start experience\n\t\t\t\t23 text start\n\t\t\t24 container\n\t\t\t\t25 image About\n\t\t\t\t26 text info\n\t\t27 container\n\t\t\t28 container\n\t\t\t\t29 image skip\n\t\t\t\t30 text skip\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "n02-plant-instruction",
+    "utc": "2026-10-17T03:23:40.263Z",
+    "note": "Chapter Last Touches: three spiral seedlings invite drag",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n03-first-seedling-drag",
+    "utc": "2026-10-17T03:23:40.994Z",
+    "note": "Drag first spiral upward",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n04-plants-grow",
+    "utc": "2026-10-17T03:23:47.329Z",
+    "note": "Two more spirals pulled; line/shape unfolds with drag distance",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "k02-intro",
+    "utc": "2026-10-17T03:23:47.614Z",
+    "note": "Observe intro elapsed while completing plant interactions",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 button SKIP\n\t\t\t\t16 text SKIP\n\t\t\t17 container\n\t\t\t\t18 text I DON'T WANT TO\n\t\t\t\t19 text GET UP\n\t\t\t\t20 text YET...\n\t\t\t21 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "n05-next",
+    "utc": "2026-10-17T03:23:53.346Z",
+    "note": "After flower blooms, Next becomes visible at top centre; advance",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "w02-intro",
+    "utc": "2026-10-17T03:23:53.665Z",
+    "note": "Observe animated opening montage without skip",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t27 container\n\t\t\t28 container\n\t\t\t\t29 image skip\n\t\t\t\t30 text skip\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "k03-intro-still",
+    "utc": "2026-10-17T03:24:02.600Z",
+    "note": "Stay on Kaizen to observe staged text and scene entrance",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t15 button SKIP\n\t\t\t\t16 text SKIP\n\t\t\t17 container\n\t\t\t\t23 text LET US\n\t\t\t\t24 text EXPLORE\n\t\t\t\t25 image\n\t\t\t\t26 text THE WORLD.\n\t\t\t21 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k04-first-scene",
+    "utc": "2026-10-17T03:24:27.535Z",
+    "note": "Transition from dark intro into Curiosity",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t11 container\n\t\t\t\t12 text Built with \n\t\t\t\t13 image\n\t\t\t\t14 text by Makemepulse\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k05-curiosity-subtitle",
+    "utc": "2026-10-17T03:24:46.253Z",
+    "note": "Landscape appears before subtitle; handwriting at lower centre; phrase reveals progressively",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 text LOOK DEEP WITHIN, AND RELEASE MY STRENGTH. I WILL GIVE YOU THE WINGS TO FLY.\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k06-hold-14s",
+    "utc": "2026-10-17T03:25:00.505Z",
+    "note": "Hold in centre for 14 seconds; observe wing activation/progression",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k07-curiosity-progress",
+    "utc": "2026-10-17T03:25:20.606Z",
+    "note": "Hold after the explicit HOLD cue appears",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 text I DISCOVERED\n\t\t\t\t25 text CURIOSITY.\n\t\t\t\t26 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k08-curiosity-next",
+    "utc": "2026-10-17T03:27:09.124Z",
+    "note": "首章主题出现后，允许继续按住重玩，Next Act 作为独立章间按钮开放。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 button N e x t A c t N e x t A c t bg next btn\n\t\t\t\t24 container\n\t\t\t\t\t25 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t26 text N\n\t\t\t\t\t\t27 text e\n\t\t\t\t\t\t28 text x\n\t\t\t\t\t\t29 text t\n\t\t\t\t\t\t30 text A\n\t\t\t\t\t\t31 text c\n\t\t\t\t\t\t32 text t\n\t\t\t\t\t33 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t34 text N\n\t\t\t\t\t\t35 text e\n\t\t\t\t\t\t36 text x\n\t\t\t\t\t\t37 text t\n\t\t\t\t\t\t38 text A\n\t\t\t\t\t\t39 text c\n\t\t\t\t\t\t40 text t\n\t\t\t\t41 container\n\t\t\t\t\t42 image bg next btn\n\t\t\t43 container\n\t\t\t\t44 container\n\t\t\t\t\t45 text HOLD\n\t\t\t\t46 image\n\t\t\t\t\t47 container\n\t\t\t\t\t\t48 text HOLD FOR MORE HOLD FOR MORE\n\t\t\t\t49 image\n\t\t\t\t50 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k09-drive-title",
+    "utc": "2026-10-17T03:27:34.679Z",
+    "note": "第二幕用薄雾绿色水面建立横向留白，中景苔石构成文字落点；笔写标题从场景中消隐，字幕仍在下方。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k10-drive-short-hold",
+    "utc": "2026-10-17T03:27:40.801Z",
+    "note": "可交互后短按0.7秒，鱼仍在水下，提示继续HOLD；尚未出现主题。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t29 button N e x t A c t N e x t A c t bg next btn\n\t\t\t\t30 container\n\t\t\t\t\t31 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t32 text N\n\t\t\t\t\t\t33 text e\n\t\t\t\t\t\t34 text x\n\t\t\t\t\t\t35 text t\n\t\t\t\t\t\t36 text A\n\t\t\t\t\t\t37 text c\n\t\t\t\t\t\t38 text t\n\t\t\t\t\t39 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t40 text N\n\t\t\t\t\t\t41 text e\n\t\t\t\t\t\t42 text x\n\t\t\t\t\t\t43 text t\n\t\t\t\t\t\t44 text A\n\t\t\t\t\t\t45 text c\n\t\t\t\t\t\t46 text t\n\t\t\t\t47 container\n\t\t\t\t\t48 image bg next btn\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k11-drive-leap",
+    "utc": "2026-10-17T03:28:03.631Z",
+    "note": "长按16秒后捕获鱼离水：镜头靠近、鱼身卷曲、水花向外铺开，反应文字比普通字幕更大；Next已开放。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 text LIKE THE CARP,\n\t\t\t\t25 image\n\t\t\t\t26 text I PUSHED BEYOND THE CURRENT.\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k12-drive-rest",
+    "utc": "2026-10-17T03:28:24.592Z",
+    "note": "动作结束恢复到水面远景，保留重玩与NextAct，节奏由高潮回落。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 button N e x t A c t N e x t A c t bg next btn\n\t\t\t\t24 container\n\t\t\t\t\t25 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t26 text N\n\t\t\t\t\t\t27 text e\n\t\t\t\t\t\t28 text x\n\t\t\t\t\t\t29 text t\n\t\t\t\t\t\t30 text A\n\t\t\t\t\t\t31 text c\n\t\t\t\t\t\t32 text t\n\t\t\t\t\t33 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t34 text N\n\t\t\t\t\t\t35 text e\n\t\t\t\t\t\t36 text x\n\t\t\t\t\t\t37 text t\n\t\t\t\t\t\t38 text A\n\t\t\t\t\t\t39 text c\n\t\t\t\t\t\t40 text t\n\t\t\t\t41 container\n\t\t\t\t\t42 image bg next btn\n\t\t\t43 container\n\t\t\t\t44 container\n\t\t\t\t\t45 text HOLD\n\t\t\t\t46 image\n\t\t\t\t\t47 container\n\t\t\t\t\t\t48 text HOLD FOR MORE HOLD FOR MORE\n\t\t\t\t49 image\n\t\t\t\t50 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k13-precision-overhead",
+    "utc": "2026-10-17T03:28:43.325Z",
+    "note": "第三幕改用垂直俯视河流，冷暗两岸围出中央路线；小蛙是亮色焦点，旁白询问落点，标题与提示分时出现。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 text WITH\n\t\t\t\t25 text FOCUS\n\t\t\t\t26 text AND\n\t\t\t\t27 text SKILL\n\t\t\t\t28 image\n\t\t\t\t29 text YOU WILL\n\t\t\t\t30 image\n\t\t\t\t31 text TRIUMPH.\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k14-precision-full-jump",
+    "utc": "2026-10-17T03:29:16.910Z",
+    "note": "第三幕长按16秒，蛙离开石头跃向前方，镜头沿河道追随；正在捕获动作完成前后的反应。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 text LIKE THE\n\t\t\t\t25 image\n\t\t\t\t26 text FROG, I NAVIGATED MY PATH WITH SKILL.\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k15-precision-rest",
+    "utc": "2026-10-17T03:29:29.018Z",
+    "note": "完成后没有回到原来的俯视图，而是保持低机位侧面世界，蛙在新石上休息，操作改变了观看方式。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 button N e x t A c t N e x t A c t bg next btn\n\t\t\t\t24 container\n\t\t\t\t\t25 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t26 text N\n\t\t\t\t\t\t27 text e\n\t\t\t\t\t\t28 text x\n\t\t\t\t\t\t29 text t\n\t\t\t\t\t\t30 text A\n\t\t\t\t\t\t31 text c\n\t\t\t\t\t\t32 text t\n\t\t\t\t\t33 heading N e x t A c t, Value: 3\n\t\t\t\t\t\t34 text N\n\t\t\t\t\t\t35 text e\n\t\t\t\t\t\t36 text x\n\t\t\t\t\t\t37 text t\n\t\t\t\t\t\t38 text A\n\t\t\t\t\t\t39 text c\n\t\t\t\t\t\t40 text t\n\t\t\t\t41 container\n\t\t\t\t\t42 image bg next btn\n\t\t\t43 container\n\t\t\t\t44 container\n\t\t\t\t\t45 text HOLD\n\t\t\t\t46 image\n\t\t\t\t47 image\n\t\t\t\t48 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k16-togetherness-sky",
+    "utc": "2026-10-17T03:29:55.395Z",
+    "note": "第四幕大面积粉紫天空，鹤保持较小比例，云层笔触承担速度参照；底部字幕留在净空区。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k17-togetherness-flock",
+    "utc": "2026-10-17T03:30:14.818Z",
+    "note": "长按16秒完成第四幕，更多鹤进入队列，字幕在动作之后解释同行；多主体仍有主次。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t29 heading W O O O W !, Value: 3\n\t\t\t\t30 container\n\t\t\t\t\t31 text W O O O W !\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k18-togetherness-theme",
+    "utc": "2026-10-17T03:30:31.818Z",
+    "note": "第四幕完成后 The End 入口开放。当前截图是鸟群经过后的粉紫云层空镜；未在此帧捕获主题大字。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t29 button T h e E n d T h e E n d bg next btn\n\t\t\t\t30 container\n\t\t\t\t\t31 heading T h e E n d, Value: 3\n\t\t\t\t\t\t32 text T\n\t\t\t\t\t\t33 text h\n\t\t\t\t\t\t34 text e\n\t\t\t\t\t\t35 text E\n\t\t\t\t\t\t36 text n\n\t\t\t\t\t\t37 text d\n\t\t\t\t\t38 heading T h e E n d, Value: 3\n\t\t\t\t\t\t39 text T\n\t\t\t\t\t\t40 text h\n\t\t\t\t\t\t41 text e\n\t\t\t\t\t\t42 text E\n\t\t\t\t\t\t43 text n\n\t\t\t\t\t\t44 text d\n\t\t\t\t45 container\n\t\t\t\t\t46 image bg next btn\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text HOLD\n\t\t\t\t26 image\n\t\t\t\t\t47 container\n\t\t\t\t\t\t48 text HOLD FOR MORE HOLD FOR MORE\n\t\t\t\t27 image\n\t\t\t\t28 image\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k19-conclusion",
+    "utc": "2026-10-17T03:31:03.160Z",
+    "note": "从第四幕进入结语，字幕回到简短的自我回顾，场景通过纯色笔触连接到片尾。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 container\n\t\t\t\t24 container\n\t\t\t\t\t25 text AT MAKEMEPULSE, PASSION FUELS EVERYTHING WE DO. WITH EACH PROJECT, WE BRING A NEW\n\t\t\t\t\t26 text PERSPECTIVE\n\t\t\t\t\t27 image\n\t\t\t\t\t28 text TO THE TABLE, ENSURING EVERY EXPERIENCE IS TRULY ONE-OF-A-KIND.\n\t\t\t\t29 image kaizen logo\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "k20-end-portals",
+    "utc": "2026-10-17T03:31:24.566Z",
+    "note": "四幕游玩后到达片尾回顾入口与制作名单，完整主线已走完。",
+    "ax": "Browser tab: 18, Title: \"Kaizen - makemepulse\", URL: \"https://kaizen.makemepulse.com/\".\n0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/\n\t1 container\n\t\t4 container\n\t\t\t21 button\n\t\t\t23 button Informations\n\t\t\t\t24 image Informations\n\t\t\t25 content list\n\t\t\t\t26 link Description: C U R I O S I T Y, Value: kaizen.makemepulse.com/#\n\t\t\t\t27 link Description: D R I V E, Value: kaizen.makemepulse.com/#\n\t\t\t\t28 link Description: P R E C I S I O N, Value: kaizen.makemepulse.com/#\n\t\t\t\t29 link Description: T O G E T H E R N E S S, Value: kaizen.makemepulse.com/#\n\t\t\t22 image\n\t\t3 image\n\nThe focused UI element is 0 AXWebArea Kaizen - makemepulse, URL: kaizen.makemepulse.com/"
+  },
+  {
+    "name": "n06-farewell-hotspots",
+    "utc": "2026-10-17T03:31:31.871Z",
+    "note": "第二章湖岸采用细线轮廓、粉纸天空和低饱和植物；瀑布、蘑菇、石头三处有白色脉冲圆。Next有等待兜底，但仍逐个体验热点。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n07-farewell-second-hotspot",
+    "utc": "2026-10-17T03:31:36.381Z",
+    "note": "点击第二处蘑菇热点，晶体上的白线与场景变化形成反馈，交互光圈在完成处撤去。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Click\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n08-farewell-rock-activated",
+    "utc": "2026-10-17T03:31:49.727Z",
+    "note": "悬停显示Click后再按下，石头热点触发，持杖人物抬手；第一次移入后的立即点击未能稳定触发，已保留该操作差异。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Click\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n09-farewell-all-hotspots",
+    "utc": "2026-10-17T03:31:58.642Z",
+    "note": "三处热点均操作后，中央晶体由灰转亮蓝色，完成反馈融入世界；圆形光标继续承担指示。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Click\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n10-voyage-arrival",
+    "utc": "2026-10-17T03:32:14.193Z",
+    "note": "第三章转场进入鸟背旅途：人物缩小，近景翅膀与远景云岛建立空间层次。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Hold\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\t\t18 text At night time, the majestic birds guide us along the oceans.\n\t\t19 text Like every year, as the sun breaks at dawn...\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n11-voyage-hold",
+    "utc": "2026-10-17T03:32:23.648Z",
+    "note": "按住5秒使鸟群加速，海面亮线与阴影提供运动参照；主体沿左下至右上的对角线行进，镜头跟随，主体保持中央。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Hold\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\t\t18 text At night time, the majestic birds guide us along the oceans.\n\t\t19 text Like every year, as the sun breaks at dawn...\n\t\t20 text they will leave us on the new island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n12-voyage-steer",
+    "utc": "2026-10-17T03:32:29.074Z",
+    "note": "按住并向右上拖动，鸟身倾斜、构图向飞行方向偏转；操作不只控制按钮进度。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Hold\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\t\t18 text At night time, the majestic birds guide us along the oceans.\n\t\t19 text Like every year, as the sun breaks at dawn...\n\t\t20 text they will leave us on the new island.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n13-new-island-instruction",
+    "utc": "2026-10-17T03:32:47.073Z",
+    "note": "第四章荒岛与第一章种花呼应。人物在远处很小，拖动提示借用已经学会的动作；叙事纸片放左侧。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\n0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/\n\t1 container\n\t\t6 image gl-canvas\n\t\t7 text Best experienced with sound\n\t\t11 text Drag\n\t\t8 image\n\t\t9 container\n\t\t\t10 text NEXT\n\t\t12 text A year has gone since we set foot on this island.\n\t\t13 text Today is a big day for our tribe. The year ends…\n\t\t14 text It is time to leave the island.\n\t\t15 text Let us hear one last time the sweet melody of the waterfalls, the whisper of leaves and the ancient words of the rocks.\n\t\t16 text The rest of the tribe is already on the reef...\n\t\t17 text soon ready to fly away towards new adventures in unknown lands.\n\t\t18 text At night time, the majestic birds guide us along the oceans.\n\t\t19 text Like every year, as the sun breaks at dawn...\n\t\t20 text they will leave us on the new island.\n\t\t21 text With the rising of the sun, the air buzzes with excitement as we set foot on this arid sand.\n\t\t22 text Everything is still to be done, it is a new adventure that is given to us.\n\t\t23 text Quietly, the first flower blooms and shines, offering a symbol of hope for the wonders to come.\n\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n14-new-island-bloom",
+    "utc": "2026-10-17T03:32:51.982Z",
+    "note": "拖动后细长茎向上延伸，首朵花开始绽放；同一个生长手势在新环境中赋予新的意义。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "n15-ending",
+    "utc": "2026-10-17T03:33:10.482Z",
+    "note": "四章后进入新年祝福和片尾，主线完成。结尾延续纸张描边的界面与插画。",
+    "ax": "Browser tab: 19, Title: \"Nomadic Tribe — makemepulse\", URL: \"https://2019.makemepulse.com/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Nomadic Tribe — makemepulse, URL: 2019.makemepulse.com/"
+  },
+  {
+    "name": "w03-world-entry",
+    "utc": "2026-10-17T03:33:17.956Z",
+    "note": "进入自由探索。橙色斗篷小人占画面高度约一成，黄叶空地标记中心；纸灰地面有连续笔触、石块与草形成层次。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w04-compass-guidance",
+    "utc": "2026-10-17T03:33:35.265Z",
+    "note": "右上罗盘展开脚下白色方向圈，符号与箭头指向采集物；底部短暂出现收集说明。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w05-first-word-chain",
+    "utc": "2026-10-17T03:34:23.604Z",
+    "note": "靠近星形符号后，弯曲亮点链出现，首个词在人物附近浮现；文字被行走逐步揭开。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 text twinkling\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w06-first-line-complete",
+    "utc": "2026-10-17T03:34:35.425Z",
+    "note": "词链走完后顶部第一个槽填入星形符号，三个词合成一条完整诗行，底部短暂确认。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text twinkling\n\t\t\t19 text starry\n\t\t\t20 text sky\n\t\t21 container\n\t\t\t22 text twinkling starry sky\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w07-second-line-complete",
+    "utc": "2026-10-17T03:35:41.312Z",
+    "note": "第二条词链完成，顶部两槽填满。地面路径、脚步扬起的小痕迹、角色衣摆与文字同处一个空间。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text fleeting\n\t\t\t19 text sun\n\t\t\t20 text shadows\n\t\t21 container\n\t\t\t22 text fleeting sun shadows\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w08-forest-poem-one",
+    "utc": "2026-10-17T03:37:44.695Z",
+    "note": "第一首诗完成，世界变暗，中央纸卡收拢三行，顶部六小格分三环境显示已得一格；continue独立开放。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text between\n\t\t\t19 text raindrops\n\t\t20 container\n\t\t\t21 image\n\t\t\t22 image\n\t\t\t23 image\n\t\t\t24 image\n\t\t\t25 image\n\t\t\t26 image\n\t\t\t27 image\n\t\t\t28 text twinkling starry sky fleeting sun shadows between raindrops\n\t\t\t29 image continue\n\t\t\t30 text continue\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w09-forest-second-poem-fragment",
+    "utc": "2026-10-17T03:38:59.020Z",
+    "note": "森林第二首的花朵片段完成。花朵、睡狐、树木由不同尺度的手绘平面构成，角色行走时衣摆变形，脚下影子保持联系。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text when\n\t\t\t19 text lavendar\n\t\t\t20 text blooms\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w10-forest-poem-two",
+    "utc": "2026-10-17T03:41:43.244Z",
+    "note": "森林两首完成，顶部森林两格填满，角色脚下出现单一回树箭头；采集转为返回。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text between\n\t\t\t19 text the\n\t\t\t20 text trees\n\t\t21 container\n\t\t\t22 image\n\t\t\t23 image\n\t\t\t24 image\n\t\t\t25 image\n\t\t\t26 image\n\t\t\t27 image\n\t\t\t28 image\n\t\t\t29 text when lavendar blooms each leaf brimming between the trees\n\t\t\t30 image continue\n\t\t\t31 text continue\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w11-forest-return-tree",
+    "utc": "2026-10-17T03:43:29.735Z",
+    "note": "成功回到黄叶中心树，白色记忆碎片围着树与角色聚拢，返回不需再点击树。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w12-grassland-arrival",
+    "utc": "2026-10-17T03:43:49.138Z",
+    "note": "完成森林返回后，颜色连续转到浅黄草地，中心树仍是熟悉的锚点；章节由环境变化表达。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w13-grassland-water",
+    "utc": "2026-10-17T03:45:07.190Z",
+    "note": "草地探索进入水面，步伐扬尘变成水纹与小飞溅，角色与环境的接触反馈随地表改变。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w14-grassland-first-line",
+    "utc": "2026-10-17T03:46:06.719Z",
+    "note": "草地首条词链完成；相同的文字行走机制进入新材质和地表，交互无需重新教学。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text shadows\n\t\t\t19 text in\n\t\t\t20 text the\n\t\t\t21 text sun\n\t\t22 container\n\t\t\t23 text shadows in the sun\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w15-grassland-poem-one",
+    "utc": "2026-10-17T03:49:14.603Z",
+    "note": "草地第一首完成，总进度三格。诗卡把之前在世界中分散出现的词汇收拢成三行。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w16-grassland-poem-two",
+    "utc": "2026-10-17T03:57:36.976Z",
+    "note": "草地第二首完成，总进度四格，进入第二次回树阶段。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text as\n\t\t\t19 text the\n\t\t\t20 text trout\n\t\t\t21 text rises\n\t\t22 container\n\t\t\t23 image\n\t\t\t24 image\n\t\t\t25 image\n\t\t\t26 image\n\t\t\t27 image\n\t\t\t28 image\n\t\t\t29 image\n\t\t\t30 text caught in sudden rain a fresh bloom as the trout rises\n\t\t\t31 image continue\n\t\t\t32 text continue\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w17-tundra-arrival",
+    "utc": "2026-10-17T04:01:53.745Z",
+    "note": "第二次回树后进入雪地，地面换成蓝灰横向雪痕、白色飘屑与兔子，中心黄叶与红衣角色保持识别。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w18-tundra-first-line",
+    "utc": "2026-10-17T04:03:52.333Z",
+    "note": "雪地首条诗行完成，白色线条在蓝灰雪地上更清晰；红衣人物是唯一稳定的高饱和焦点。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text following\n\t\t\t19 text wolf\n\t\t\t20 text prints\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w19-tundra-second-line",
+    "utc": "2026-10-17T04:07:41.920Z",
+    "note": "完成雪地第二条词句 an acorn falls。三节点逐一走过后，虚线连成实线，底部纸片短暂确认。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text an\n\t\t\t19 text acorn\n\t\t\t20 text falls\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w20-tundra-poem-one",
+    "utc": "2026-10-17T04:08:24.422Z",
+    "note": "雪地第一首完成；画面压暗，三行词句合成纸片。六个小格中五个已填充，最后一首待完成。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t24 text falls\n\t\t\t21 text between\n\t\t\t22 text the\n\t\t\t23 text moon\n\t\t25 container\n\t\t\t26 image\n\t\t\t27 image\n\t\t\t28 image\n\t\t\t29 image\n\t\t\t30 image\n\t\t\t31 image\n\t\t\t32 image\n\t\t\t33 text following wolf prints an acorn falls between the moon\n\t\t\t34 image continue\n\t\t\t35 text continue\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w21-tundra-final-poem-line",
+    "utc": "2026-10-17T04:10:25.859Z",
+    "note": "最后一首第一句完成：three petals falling，词在世界坐标中逐一出现，路径整体描亮。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text three\n\t\t\t19 text petals\n\t\t\t20 text falling\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w22-tundra-star-line",
+    "utc": "2026-10-17T04:14:04.383Z",
+    "note": "最后一首第二句 another star appears 完成，剩最后一条词句。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text another\n\t\t\t19 text star\n\t\t\t20 text appears\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w23-six-poems-complete",
+    "utc": "2026-10-17T04:17:31.884Z",
+    "note": "三种环境、六首诗全部完成，六格全部填充；最后三句合成纸片。接下来仍需返回中心树完成结尾。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\t\t17 container\n\t\t\t18 text through\n\t\t\t19 text the\n\t\t\t20 text rain\n\t\t21 container\n\t\t\t22 image\n\t\t\t23 image\n\t\t\t24 image\n\t\t\t25 image\n\t\t\t26 image\n\t\t\t27 image\n\t\t\t28 image\n\t\t\t29 text three petals falling another star appears through the rain\n\t\t\t30 image continue\n\t\t\t31 text continue\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w24-final-tree-arrival",
+    "utc": "2026-10-17T04:23:04.617Z",
+    "note": "最终返程到中央树；脚下箭头消失、镜头锁到树，雪地开始转暖，末段演出启动。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\n0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/\n\t1 container\n\t\t2 container interactive-header\n\t\t\t3 link Description: NFB.ca, Value: nfb.ca/\n\t\t\t4 container Explore all NFB interactive works\n\t\t\t\t5 button aria.grid\n\t\t\t\t6 link Description: See all WORKS , Value: nfb.ca/explore-all-interactive-projects/\n\t\t\t7 container Learn more about this work\n\t\t\t\t8 button aria.info\n\t\t\t\t\t9 text \n\t\t\t\t10 link Description: Get MORE INFO , Value: nfb.ca/interactive/wayfinder\n\t\t\t11 link Description: go to the french version, Help: Switch language, Value: traversees.onf.ca/\n\t\t\t12 button Description: Cut sound / Add sound, Help: Mute\n\t\t\t\t13 text \n\t\t\t14 button Description: Go full screen / Exit full screen, Help: Full screen\n\t\t\t\t15 text \n\t\t16 image\n\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w26-ending-thanks",
+    "utc": "2026-10-17T04:23:47.936Z",
+    "note": "已实际走到 Thanks for playing 结束入口；三环境六首诗与三次回树完成。末段约23秒，最终画面转为草地树和诗集入口。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  },
+  {
+    "name": "w27-complete-poem-collection",
+    "utc": "2026-10-17T04:24:09.950Z",
+    "note": "结尾诗集展示六首完整记录，作为三种环境主流程完成的交叉证据。",
+    "ax": "Browser tab: 20, Title: \"Wayfinder\", URL: \"https://wayfinder.nfb.ca/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Wayfinder, URL: wayfinder.nfb.ca/"
+  }
+]
