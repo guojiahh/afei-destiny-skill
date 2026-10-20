@@ -1,0 +1,33 @@
+name: 功能建议
+description: 提出计算、安装或交互体验的改进建议。
+title: "[建议] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issue 是公开的。请用合成场景说明需求，不要贴真实出生资料、私人咨询内容或含答案的题库缓存。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 改进范围
+      options:
+        - 历法计算与口径
+        - Skill 安装与调用
+        - HTML 报告与交互
+        - 文档与其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现在遇到什么困难
+      description: 写明使用场景和当前影响。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望怎样改进
+      description: 描述期望的行为，以及怎样判断改进有效；有替代办法也可以写在这里。
+    validations:
+      required: true

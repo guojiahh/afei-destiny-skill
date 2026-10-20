@@ -49,26 +49,44 @@ def render_wayfinder(model, replacements, provenance):
         'anchors': [state.get('anchors', [*state['lines'], ''.join(state['lines'])]) for state in states],
         'choices': model['presentation'].get('hero_choices', []),
         'title': model['title'],
+        'reading_chapters': [
+            {'id': 'chapter-' + str(chapter.get('id', index)), 'title': chapter['title'],
+             'refs': list(dict.fromkeys(ref for card in chapter['cards'] for ref in card['refs']))}
+            for index, chapter in enumerate(model['chapters'], 1)
+        ],
     }
+    replacements['READING_NAV'] = ''.join(
+        '<a href="#' + html.escape(chapter['id'], quote=True) + '" data-reading-chapter="'
+        + html.escape(chapter['id'], quote=True) + '"><span>' + f'{index:02d}' + '</span>'
+        + html.escape(chapter['title']) + '</a>'
+        for index, chapter in enumerate(story['reading_chapters'], 1))
     loop_story = model['presentation'].get('loop_story')
+    for choice in story['choices']:
+        feedback = choice.get('feedback')
+        if feedback:
+            replacements['FALLBACK'] += '<li><h3>' + html.escape(choice['title']) + '</h3><p>' \
+                + html.escape(choice['condition']) + '</p><ol>' + ''.join(
+                    '<li>' + html.escape(line) + '</li>' for line in feedback['lines']) \
+                + '</ol><p>' + html.escape(feedback['result']) + '</p></li>'
     if loop_story:
         story['loop_story'] = loop_story
         # The complete loop remains readable without WebGL, scripts or motion.
         replacements['FALLBACK'] += '<li class="loop-reading"><h3>这条循环</h3><ol>' + ''.join(
             '<li><strong>' + html.escape(node['text']) + '</strong><p>'
             + html.escape(node['detail']) + '</p></li>' for node in loop_story['nodes']) + '</ol></li>'
-        for field, label in [('present', '此刻'), ('past', '来处'), ('future', '可能')]:
+        labels = ['现在', '之前', '此后'] if model['presentation'].get('hero_runtime', 'wayfinder-v21') == 'wayfinder-v21' else ['此刻', '来处', '可能']
+        for field, label in zip(['present', 'past', 'future'], labels):
             if field in loop_story:
                 replacements['FALLBACK'] += '<li><h3>' + label + '</h3><p>' + html.escape(loop_story[field]['text']) + '</p></li>'
     runtime = (ASSETS / 'runtime' / 'wayfinder.js').read_text()
     provenance['hero'] = {
-        'version': model['presentation'].get('hero_runtime', 'wayfinder-v19'),
+        'version': model['presentation'].get('hero_runtime', 'wayfinder-v21'),
         'origin': 'https://wayfinder.nfb.ca/',
         'runtime_sha256': hashlib.sha256(runtime.encode()).hexdigest(),
         'adapter_assets': {name: hashlib.sha256((ASSETS / name).read_bytes()).hexdigest()
-                           for name in ['adapter.js', 'bootstrap.js', 'ui.js', 'report.css', 'report.html']},
+                           for name in ['adapter.js', 'choice-effects.js', 'bootstrap.js', 'ui.js', 'report.css', 'report.html']},
         'resources': entries,
-        'adaptation': 'press-and-hold closed route, recurring sourced loop waypoints, equal conditional choices',
+        'adaptation': 'guided present/past/possibilities with optional hold progression; one-click finite choice playback and original poem card linked to source-related reading chapters',
     }
     css_parts = []
     for filename in ['fonts.525e81a0.css', 'main.7011abb4.css', 'src.1489fb19.css']:
@@ -87,6 +105,7 @@ def render_wayfinder(model, replacements, provenance):
         'PROVENANCE': safe_json(provenance),
         'BOOTSTRAP_JS': script((ASSETS / 'bootstrap.js').read_text()),
         'ENGINE_JS': script(runtime),
+        'CHOICE_EFFECTS_JS': script((ASSETS / 'choice-effects.js').read_text()),
         'ADAPTER_JS': script((ASSETS / 'adapter.js').read_text()),
         'UI_JS': script((ASSETS / 'ui.js').read_text()),
     })

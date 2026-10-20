@@ -63,7 +63,9 @@ def render_quiet(model, sources):
                    + f'{index:02d}' + (' / ' + esc(chapter['kicker']) if chapter.get('kicker') else '')
                    + '</p><h2>' + esc(chapter['title']) + '</h2><div class="section-intro">'
                    + paragraphs(chapter['lead']) + '</div></header>')
-        chapters.append('<section class="reading-section chapter-' + esc(chapter['layout'], quote=True) + '">'
+        chapter_id = 'chapter-' + str(chapter.get('id', index))
+        chapters.append('<section class="reading-section chapter-' + esc(chapter['layout'], quote=True)
+                        + '" id="' + esc(chapter_id, quote=True) + '" tabindex="-1">'
                         + heading + cards(chapter['cards'], chapter['layout']) + '</section>')
 
     def source_markup(text):
@@ -86,7 +88,7 @@ def render_quiet(model, sources):
     provenance = {'schema_version': 1, 'session_id': model['session_id'], 'sources': model['sources'],
                   'model_sha256': hashlib.sha256(safe_json(model).encode('utf-8')).hexdigest(), 'presentation': 'quiet-v1'}
     fallback = ''.join('<li><h3>' + esc(''.join(state['lines'])) + '</h3><p>' + esc(state['description']) + '</p></li>' for state in states)
-    if model['presentation'].get('hero_runtime', 'wayfinder-v19') in {'wayfinder-v16', 'wayfinder-v17', 'wayfinder-v18', 'wayfinder-v19'}:
+    if model['presentation'].get('hero_runtime', 'wayfinder-v21') in {'wayfinder-v16', 'wayfinder-v17', 'wayfinder-v18', 'wayfinder-v19', 'wayfinder-v20', 'wayfinder-v21'}:
         from render_wayfinder_report import render_wayfinder
         return render_wayfinder(model, {
             'TITLE': esc(model['title']), 'SUBTITLE': paragraphs(model['subtitle']),

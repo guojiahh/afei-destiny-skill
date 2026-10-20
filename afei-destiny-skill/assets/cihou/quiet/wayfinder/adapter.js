@@ -12,16 +12,19 @@
   var names = ['forest', 'grasslands', 'tundra'];
   var api = { ready: false, error: null };
   var world, tags, engine, template, THREE, route, routeLength, routeCenter, marker, focus;
-  var moveState, originalMove, envState, originalEnvProcess, pendingBiome = null;
+  var moveState, originalMove, envState, originalEnvProcess, pendingBiome = null, biomeSwapSeen = false;
   var stoppedSystems = [], hint = null, stateKey = '', anchorKey = '', lastAnchorText = '', destroyed = false;
   var postRenderLease = null, hintLayouts = [], ownedHints = [];
+  var choiceEffects = null, choiceRun = null;
+  var choiceModes = ['attempt', 'prepare', 'sustain'];
   var reduced = global.matchMedia && global.matchMedia('(prefers-reduced-motion: reduce)');
   var story = global.CIHOU_STORY_DATA || {};
   var state = { chapter: 0, beat: 0, biome: 0, biomeName: 'forest', selectedChoice: null,
     canExit: false, phase: 'road', holdProgress: 0, exitProgress: 0, exitComplete: false,
     presentationReady: false, transitioning: false, paused: false, active: true,
     travel: 0, loopTurns: 0, lapIndex: 0, lapPhase: 0, loopNodeId: null,
-    waypointIndex: 0, anchorVisit: 0, anchorPosition: null, interacting: false, ready: false };
+    waypointIndex: 0, anchorVisit: 0, anchorPosition: null, interacting: false, ready: false,
+    choiceMode: null, choiceProgress: 0, choiceElapsed: 0, choiceStep: 0, choiceRunning: false, choiceRunId: 0 };
   var steering = 0, interaction = 0, velocity = 0, lastDirection = 1;
   var explored = 0, minimumTravel = 0, maximumTravel = 0, progressFloor = 0;
   var exitOrigin = null, exitDirection = null, exitDistance = 0;
@@ -50,6 +53,7 @@
     var key = [state.chapter, state.beat, state.biome, state.selectedChoice, state.canExit, state.phase,
       state.exitComplete, state.presentationReady, state.transitioning, state.paused, state.active,
       state.interacting, state.lapIndex, state.loopNodeId, state.anchorVisit,
+      state.choiceRunId, state.choiceMode, state.choiceStep, state.choiceRunning, Math.floor(state.choiceProgress * 30),
       Math.floor(state.holdProgress * 20), Math.floor(state.exitProgress * 12), Math.floor(state.loopTurns * 20)].join(':');
     if (force || key !== stateKey) { stateKey = key; emit('state', copyState()); }
   }
@@ -61,6 +65,14 @@
     return anchors ? { anchors: Array.isArray(anchors) ? anchors : [anchors] } : null;
   }
   function waypointAnchor() {
+    if (state.chapter === 2 && choiceRun) {
+      var step = state.choiceStep, choiceText = choiceRun.lines[step];
+      var choicePosition = choiceRun.curve.getPointAt([.13, .5, .86][step]).add(new THREE.Vector3(0, 3, 0));
+      state.waypointIndex = step; state.loopNodeId = 'choice-' + step;
+      state.anchorPosition = choicePosition.toArray();
+      return {key: 'choice:' + state.choiceRunId + ':' + step, node: {text: choiceText},
+        stage: sourceNode(), text: choiceText, position: choicePosition};
+    }
     var stage = sourceNode();
     var nodes = state.chapter === 0 && story.loop_story && Array.isArray(story.loop_story.nodes)
       ? story.loop_story.nodes : stage && stage.anchors || story.anchors && story.anchors[state.chapter];
@@ -160,11 +172,35 @@
     if (!(width > 0 && height > 0)) return;
     var scaleMatch = /scale\(\s*([-+\d.eE]+)/.exec(inner.style.transform || '');
     var scale = scaleMatch ? Math.max(.1, Math.abs(Number(scaleMatch[1]) || 1)) : 1;
-    inner.style.width = 'max-content'; inner.style.maxWidth = Math.max(40, (width - 32) / scale) + 'px';
-    inner.style.whiteSpace = 'normal'; inner.style.overflowWrap = 'anywhere'; inner.style.wordBreak = 'break-word'; inner.style.lineHeight = '1.42';
-    var rect = inner.getBoundingClientRect(), narrow = width <= 700;
+    var narrow = width <= 700, right = width - 16;
     var top = Math.min(80, height * .18), bottom = narrow ? height * .55 : height - 44;
-    var targetX = rect.left < 16 ? 16 - rect.left : rect.right > width - 16 ? width - 16 - rect.right : 0;
+    var guidePanel = typeof document.querySelector === 'function' && document.querySelector('#story-guide');
+    var guideRect = guidePanel && typeof guidePanel.getBoundingClientRect === 'function' && guidePanel.getBoundingClientRect();
+    if (guideRect && guideRect.top > top + 60) bottom = Math.min(bottom, guideRect.top - 18);
+    // The guidance version keeps the heading and explanation near the top.
+    // On narrow screens the next world phrase belongs below those controls.
+    if (guidePanel && narrow && state.chapter < 2) {
+      var copyPanel = document.querySelector('.story-copy');
+      var copyRect = copyPanel && typeof copyPanel.getBoundingClientRect === 'function' && copyPanel.getBoundingClientRect();
+      if (copyRect) top = Math.min(copyRect.bottom + 14, bottom - 65);
+    }
+    if (state.chapter === 2 && choiceRun) {
+      // Leave room for the choice controls throughout playback, including
+      // the larger result card. The original world anchor is unchanged.
+      top = Math.min(narrow ? 145 : 160, height * .24);
+      var panel = typeof document.querySelector === 'function' && document.querySelector('#story-choices');
+      var panelRect = panel && typeof panel.getBoundingClientRect === 'function' && panel.getBoundingClientRect();
+      if (narrow) {
+        if (panelRect && panelRect.top > top + 60) bottom = Math.min(bottom, panelRect.top - 18);
+      } else {
+        right = panelRect && panelRect.left > 80 ? panelRect.left - 24 :
+          width * .95 - Math.min(380, width * .38) - 24;
+      }
+    }
+    inner.style.width = 'max-content'; inner.style.maxWidth = Math.max(40, (right - 16) / scale) + 'px';
+    inner.style.whiteSpace = 'normal'; inner.style.overflowWrap = 'anywhere'; inner.style.wordBreak = 'break-word'; inner.style.lineHeight = '1.42';
+    var rect = inner.getBoundingClientRect();
+    var targetX = rect.left < 16 ? 16 - rect.left : rect.right > right ? right - rect.right : 0;
     var targetY = rect.top < top ? top - rect.top : rect.bottom > bottom ? bottom - rect.bottom : 0;
     // Give the original character's hat and cape a little room. This affects
     // only screen typography; the fixed world waypoint and camera are intact.
@@ -203,7 +239,7 @@
     record.targetX = targetX; record.targetY = targetY;
     // Viewport safety is a final projection constraint. It does not store a
     // hidden overshoot that could rebound when the word leaves a screen edge.
-    var dx = clamp(record.offsetX, 16 - rect.left, width - 16 - rect.right);
+    var dx = clamp(record.offsetX, 16 - rect.left, right - rect.right);
     var dy = clamp(record.offsetY, top - rect.top, bottom - rect.bottom);
     record.offsetX = dx; record.offsetY = dy;
     var position = /translate\(\s*([-+\d.eE]+)px\s*,\s*([-+\d.eE]+)px\s*\)/.exec(record.nativeTransform || '');
@@ -280,15 +316,83 @@
     if (zoom) zoom.distance = initialZoom;
     if (focus) { focus.kill(); focus = null; }
   }
+  function clearChoice() {
+    if (choiceEffects) choiceEffects.clear();
+    choiceRun = null;
+    state.choiceRunId++; state.choiceMode = null; state.choiceProgress = 0;
+    state.choiceElapsed = 0; state.choiceStep = 0; state.choiceRunning = false;
+    state.exitComplete = state.presentationReady = false;
+  }
+  function choiceData(index) {
+    var choice = (story.choices || [])[index] || {}, feedback = choice.feedback || {};
+    var stage = sourceNode(), anchors = stage && stage.anchors || [];
+    return {mode: choiceModes.indexOf(feedback.mode) >= 0 ? feedback.mode : choiceModes[index],
+      lines: Array.isArray(feedback.lines) && feedback.lines.length === 3 ? feedback.lines :
+        [choice.title || anchors[0] || '', choice.condition || anchors[1] || '', choice.text || anchors[2] || '']};
+  }
+  function beginChoice() {
+    if (state.chapter !== 2 || state.selectedChoice === null || state.transitioning || destroyed) return;
+    var data = choiceData(state.selectedChoice);
+    var start = point(state.travel), direction = tangent(state.travel);
+    // Each replay starts at the same landmark, not at the previous ending.
+    var result = choiceEffects ? choiceEffects.start(data.mode, start, direction, data.lines) : null;
+    var points = result && result.points || [start, start.clone().addScaledVector(direction, 20)];
+    var curve = new THREE.CatmullRomCurve3(points, false, 'centripetal');
+    curve.arcLengthDivisions = 300;
+    var length = curve.getLength();
+    choiceRun = {curve: curve, length: length, lines: data.lines, elapsed: 0, ended: false,
+      duration: Math.max(8.4, Math.min(18, length / speed)),
+      settle: data.mode === 'prepare' ? 6.8 : 1.4};
+    state.choiceMode = data.mode; state.choiceRunning = true; state.choiceStep = 0;
+    state.choiceElapsed = state.choiceProgress = 0; state.phase = 'playing';
+    state.canExit = false; state.exitComplete = state.presentationReady = false;
+    anchorKey = ''; processMove(0); announce(true);
+  }
+  function requestChoiceScene() {
+    if (state.chapter !== 2 || state.selectedChoice === null || state.transitioning) return;
+    var name = names[state.selectedChoice];
+    if (activeBiome() === name) { beginChoice(); return; }
+    state.transitioning = true; pendingBiome = name; biomeSwapSeen = false; velocity = steering = interaction = 0;
+    world.entity('CihouExplicitBiomeChoice').add(tags.TransitionToNextBiome);
+    if (activeBiome() === 'tundra') {
+      var store = read(tags.GameUIStore);
+      if (store) store.update(function (data) { return Object.assign({}, data, {
+        transitionOverlay: true, transitionCurrentBiome: 'tundra'}); });
+    }
+  }
+  function processChoice(dt) {
+    choiceRun.elapsed += dt;
+    var progress = Math.min(1, choiceRun.elapsed / choiceRun.duration);
+    state.choiceElapsed = choiceRun.elapsed; state.choiceProgress = state.exitProgress = progress;
+    state.choiceStep = Math.min(2, Math.floor(progress * 3));
+    var position = choiceRun.curve.getPointAt(progress);
+    var direction = choiceRun.curve.getTangentAt(progress).setY(0).normalize();
+    velocity = progress < 1 && dt > 0 ? choiceRun.length / choiceRun.duration : 0;
+    state.interacting = velocity > .02;
+    updateTarget(dt, position, direction, state.interacting);
+    if (choiceEffects) choiceEffects.update(dt, position, progress);
+    if (progress >= 1 && !choiceRun.ended) {
+      choiceRun.ended = true; state.phase = 'settling';
+      if (choiceEffects) choiceEffects.finish();
+    }
+    if (choiceRun.elapsed >= choiceRun.duration + choiceRun.settle) {
+      state.phase = 'done'; state.choiceRunning = false;
+      state.exitComplete = state.presentationReady = true;
+    }
+    narrativeAnchor(); announce();
+  }
   function processMove(dt) {
     if (destroyed || !api.ready) return;
     clearTutorialArtifacts();
     dt = clamp(Number(dt) || 0, 0, .1);
-    if (state.paused || !state.active || state.transitioning || (reduced && reduced.matches)) dt = 0;
+    if (state.paused || !state.active || document.hidden || state.transitioning || (reduced && reduced.matches)) dt = 0;
+    if (state.chapter === 2 && choiceRun) {
+      processChoice(state.choiceRunning ? dt : 0); return;
+    }
     var turn = Math.abs(steering) > .13 ? Math.sign(steering) * smooth((Math.abs(steering) - .13) / .67) : 0;
     // Holding always walks forward at a constant route speed, even after an
     // optional reverse-steering probe. Releasing has no adapter-side coast.
-    var intent = interaction > 0 ? interaction : turn;
+    var intent = state.chapter === 2 ? 0 : interaction > 0 ? interaction : turn;
     if (intent) lastDirection = intent < 0 ? -1 : 1;
     if (state.exitComplete) intent = 0;
     velocity = dt > 0 ? intent * speed : 0;
@@ -326,6 +430,18 @@
     var current = world.findEntity([tags.EnvironmentState, tags.ActiveEnvironmentState]);
     return current ? current.get(tags.EnvironmentState).name : state.biomeName;
   }
+  function nativeTransitionVisible() {
+    var visible = false, store = read(tags.GameUIStore);
+    if (store && typeof store.subscribe === 'function') {
+      var unsubscribe = store.subscribe(function (data) { visible = !!data.transitionOverlay; });
+      if (typeof unsubscribe === 'function') unsubscribe();
+    }
+    // The original Svelte overlay has a 1s outro after its store flag clears.
+    // Reopening it during that outro reuses the old component, so onMount
+    // never emits a second SafeToSwapBiomes. Wait for its actual removal.
+    return visible || (typeof document.querySelector === 'function' &&
+      !!document.querySelector('.container.svelte-xjm3ff'));
+  }
   function setSystemEnabled(id, enabled) {
     var System = global.parcelRequire(id).default, system = world.getSystem(System);
     if (system) { stoppedSystems.push({ state: system, enabled: system.enabled }); system.enabled = enabled; }
@@ -355,7 +471,17 @@
       clearTutorialArtifacts();
       if (pendingBiome && activeBiome() === pendingBiome && !entities(tags.TransitionToNextBiome).length) {
         state.biomeName = pendingBiome; state.biome = names.indexOf(pendingBiome);
+        // Observe a whole normal world tick without the transition tag.
+        // Also keep the first feedback line behind the gate: it must not
+        // play while the leaf video still covers the newly loaded scenery.
+        if (!biomeSwapSeen) { biomeSwapSeen = true; announce(true); return; }
+        if (!(dt > 0) || state.paused || !state.active || document.hidden ||
+            (reduced && reduced.matches) || nativeTransitionVisible() ||
+            entities(tags.SafeToSwapBiomes).length) return;
         pendingBiome = null; state.transitioning = false; velocity = 0;
+        // The leaf transition owns its in-flight destination. Once it clears,
+        // honor the latest click; obsolete requests never start a playback.
+        if (state.chapter === 2 && state.selectedChoice !== null) requestChoiceScene();
         processMove(0); narrativeAnchor(true); announce(true); emit('biome', copyState());
       }
     };
@@ -380,29 +506,19 @@
   api.setChapter = function (chapter) {
     chapter = clamp(Math.round(Number(chapter) || 0), 0, 2);
     if (!api.ready) return api;
+    clearChoice(); state.selectedChoice = null;
     state.chapter = chapter; state.beat = 0;
     api.setExit(0); if (chapter === 0) api.setProgress(0); else api.setProgress(1);
     narrativeAnchor(true); announce(true); return api;
   };
   api.setChoice = function (value) {
-    if (!api.ready || state.transitioning) return api;
+    if (!api.ready) return api;
     var index = typeof value === 'string' ? names.indexOf(value) : Number(value);
     if (!Number.isInteger(index) || index < 0 || index > 2) return api;
-    state.chapter = 2; state.beat = index; state.selectedChoice = index;
+    clearChoice(); state.chapter = 2; state.beat = index; state.selectedChoice = index;
     state.holdProgress = 1; state.canExit = true; state.phase = 'choice';
     api.setExit(0);
-    if (activeBiome() !== names[index]) {
-      state.transitioning = true; pendingBiome = names[index]; velocity = 0; steering = interaction = 0;
-      // GameUISystem sees this tag and mounts its original TransitionOverlay;
-      // that component's video adds SafeToSwapBiomes at 1250 ms.
-      world.entity('CihouExplicitBiomeChoice').add(tags.TransitionToNextBiome);
-      // The original game skips this overlay on its final tundra resolution.
-      // Explicit comparison still uses that exact original video component.
-      if (activeBiome() === 'tundra') {
-        var store = read(tags.GameUIStore);
-        if (store) store.update(function (data) { return Object.assign({}, data, { transitionOverlay: true, transitionCurrentBiome: 'tundra' }); });
-      }
-    }
+    requestChoiceScene();
     narrativeAnchor(true); announce(true); return api;
   };
   api.setExit = function (value) {
@@ -433,7 +549,8 @@
   api.setActive = function (value) { state.active = !!value; syncActivity(); return api; };
   api.setMuted = function (value) { if (template && template.setMuted) template.setMuted(!!value); return api; };
   api.reset = function () {
-    if (!api.ready) return api; api.setExit(0); steering = interaction = velocity = explored = progressFloor = 0;
+    if (!api.ready) return api; clearChoice(); state.selectedChoice = null;
+    api.setExit(0); steering = interaction = velocity = explored = progressFloor = 0;
     minimumTravel = maximumTravel = 0;
     state.travel = state.loopTurns = state.holdProgress = state.beat = state.chapter = 0;
     state.lapIndex = state.lapPhase = state.anchorVisit = 0; state.loopNodeId = null;
@@ -443,6 +560,7 @@
   };
   api.destroy = function () {
     if (destroyed) return; destroyed = true;
+    clearChoice();
     if (postRenderLease && postRenderLease.owner === clampHintToViewport) postRenderLease.owner = null;
     releaseHintLayout();
     ownedHints.forEach(function (entity) { if (entity.alive) entity.kill(); }); ownedHints.length = 0;
@@ -459,6 +577,7 @@
     if (!template || !template.world) return;
     try {
       world = template.world; tags = template.tags; engine = template.engine; THREE = global.parcelRequire('N5rp');
+      if (global.CihouChoiceEffects) choiceEffects = global.CihouChoiceEffects({world: world, tags: tags, THREE: THREE});
       var Move = global.parcelRequire('OAsz').default;
       moveState = world.getSystem(Move); if (!moveState || !moveState.instance) throw new Error('Wayfinder UserMoveSystem is unavailable');
       originalMove = moveState.instance; moveState.instance = processMove;

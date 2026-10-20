@@ -1,28 +1,59 @@
 # Afei Destiny Skill · 阿飞命运探索使用说明
 
-默认完整咨询交付为一份个人 HTML：当前 V19 以 Wayfinder 原站引擎与资源承载闭环三态主图：按住沿固定路线前进、松开停下，首景反复经过六个循环位置，主动切换“此刻／来处／可能”，同页阅读九章图文解读和可展开技术依据。原资源和双底稿下载随单文件内嵌，原作署名与权属见[来源说明](assets/cihou/quiet/wayfinder/PROVENANCE.md)。视觉与结构一致，个人短句随景色平滑浮现；V19 保留 V18 文案，处理首次加载阶段的浮字定位。全 Skill 采用自然的第二人称叙述；过去可用“你可能曾经……”提出有机制依据的学习路径，来源与解释层级保留在底稿和依据中，具体困局与行动按本次资料编写。双 Markdown 保留为内容底稿及可选下载。执行流程见 [HTML 报告协议](references/html-report.md)，每份新报告必填的 `loop_story` 与来源边界见[闭环叙事协议](references/loop-narrative.md)。
-这是仓库中**可直接安装**的技能目录，技能 ID 为 `afei-destiny-skill`。它是 afei 的实验性命运探索技能，当前以四柱八字为核心，包含技能入口、确定性排盘器、自动测试和按任务拆分的参考资料，不包含 benchmark 原题、答案或历史预测。
+这是仓库中**可直接安装**的技能包，技能 ID 为 `afei-destiny-skill`。Python 计算历法与四柱事实，Codex 按问题加载传统规则，并在独立咨询会话中组织证据、反证和现实选择。根目录的 `evaluation/`、`docs/`、`design-demos/` 不属于安装包。
 
-如果你想了解整个项目、评测结果和设计思路，请先看[源码仓库首页](https://github.com/guojiahh/afei-destiny-skill)。
+默认完整咨询交付为一份个人 `final_report.html`。当前 V21 按 **现在 → 之前 → 此后 → 完整解读** 引导：前两景按住沿路看循环与可能的形成路径；此后首次选一项完成有限体验并收卡，已得卡点开直读，仅显式重播才重新播放。一张卡就能进入九章解读，也可以收齐三张后比较。收卡只保存在本页，切章与从头体验保留，刷新新页面后重置。原资源、依据及双底稿下载包含在单份 HTML 中，原作权属见[来源说明](assets/cihou/quiet/wayfinder/PROVENANCE.md)。
+
+具体解释每次来自本次资料。过去可用“你可能曾经……”表达有机制依据的形成路径，不补造具体人物、事件或诊断。完整生成、来源和登记要求见 [HTML 报告协议](references/html-report.md)与[闭环叙事协议](references/loop-narrative.md)。当前 V21 可在已有完整本地工作区中预览，参见仓库的 `docs/SHOWCASE.md`；截至 2026-10-20，公开主分支尚未同步这一版本，完整原作素材的分发范围待确认。匿名演示不随独立 Skill 安装，也不能换名当作个人报告。
+
+## 运行环境
+
+- Codex 可读取本地 Skill，并具备运行 Python、读写本地文件的权限。
+- Python **3.9–3.13**。核心计算依赖 `lunar_python 1.4.8` 已放在 `scripts/vendor/`，无需另外 `pip install`。
+- 完整 HTML 用现代浏览器阅读；动态画面依赖 WebGL，减少动态或引擎失败时仍有文字与正文入口。当前交付是本地文件，尚无私有在线托管、账户或跨设备同步。
+- Node.js 用于开发时的 JavaScript 行为回归；计算和生成 HTML 不依赖 Node.js。
 
 ## 安装
 
-将当前目录复制到 Codex 的 skills 目录，并将目标文件夹命名为 `afei-destiny-skill`。在 macOS / Linux 上，可在仓库根目录执行：
+先获取[源码仓库](https://github.com/guojiahh/afei-destiny-skill)，在含 `afei-destiny-skill/` 的仓库根目录运行。只复制这一层，目标首层必须直接有 `SKILL.md`。
+
+macOS / Linux：
 
 ```sh
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./afei-destiny-skill "${CODEX_HOME:-$HOME/.codex}/skills/afei-destiny-skill"
+SKILLS_DIR="${CODEX_HOME:-$HOME/.codex}/skills"
+python3 - "$SKILLS_DIR" <<'PY'
+from pathlib import Path
+import shutil
+import sys
+
+destination = Path(sys.argv[1]) / "afei-destiny-skill"
+shutil.copytree("afei-destiny-skill", destination)
+print(destination / "SKILL.md")
+PY
 ```
 
-如果目标目录已存在，先备份并移开旧安装，再复制，避免把新目录嵌套进旧安装。Windows PowerShell 中，已配置 `CODEX_HOME` 时执行：
+`SKILLS_DIR` 必须指向实际的 **skills 目录**，不是它的上级；自定义安装时改这一变量即可。复制命令会拒绝已存在的目标，不合并旧安装。升级前先备份并移开旧目录，咨询文件另行保留。
+
+Windows PowerShell：
 
 ```powershell
-Copy-Item -Recurse .\afei-destiny-skill "$env:CODEX_HOME\skills\afei-destiny-skill"
+$skillsDir = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME "skills" } else { Join-Path $HOME ".codex\skills" }
+$destination = Join-Path $skillsDir "afei-destiny-skill"
+if (Test-Path -LiteralPath $destination) { throw "目标已存在，请先备份并移开旧安装。" }
+New-Item -ItemType Directory -Force -Path $skillsDir | Out-Null
+Copy-Item -LiteralPath ".\afei-destiny-skill" -Destination $destination -Recurse
 ```
 
-重新打开 Codex 或开始一个新任务后，用 `$afei-destiny-skill` 显式调用技能。
+安装后开启新的 Codex 会话，用 `$afei-destiny-skill` 显式调用。若技能列表没有更新，再重新打开 Codex。
 
-安装成功后，目标目录的第一层应直接包含 `SKILL.md`，而不是再次嵌套一层 `afei-destiny-skill/`。
+第一次运行或环境变化时，在**已安装 Skill 的目录**执行自检；macOS / Linux 示例：
+
+```sh
+cd "$SKILLS_DIR/afei-destiny-skill"
+python3 scripts/doctor.py
+```
+
+Windows 使用 `Set-Location $destination` 后运行 `python scripts/doctor.py`。自检会核对 Python、内置依赖、必要文件和固定命例；它不发起咨询或生成报告。
 
 ### 从旧名称迁移
 
@@ -65,11 +96,13 @@ Copy-Item -Recurse .\afei-destiny-skill "$env:CODEX_HOME\skills\afei-destiny-ski
 
 ## 直接使用计算器
 
-从当前技能目录运行（macOS 未激活虚拟环境时使用 `python3`）：
+从技能目录运行；macOS / Linux 用 `python3`，Windows 或已激活虚拟环境时可用 `python`：
 
-```text
-python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
+```sh
+python3 scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
 ```
+
+此命例未传经度，采用民用时；`four_pillars.text` 为 `庚午 辛巳 庚辰 癸未`，`target_year.ganzhi` 为 `丙午`。命令只计算，不自动完成咨询或生成 HTML。
 
 常用参数：
 
@@ -98,7 +131,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | `scripts/consultation_harness.py` | 多会话发现、独立目录创建、阶段门禁、产物血缘、替代/重启和来源防火墙 |
 | `scripts/consultation_output_router.py` | 对话、技术审计、总结与报告来源的活动产物路由 |
 | `scripts/validate_final_report.py` | 固定用户报告的读者优先顺序，拒绝技术章节重新前置 |
-| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py` | 初始化来源绑定模型、校验固定模板、生成并登记离线 HTML |
+| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py`、`scripts/render_wayfinder_report.py` | 初始化来源模型、按版本分派、校验并内嵌原资源生成离线 HTML |
 | `assets/cihou/` | 用户八节／技术十一节底稿、九章模型与 quiet 页面资产 |
 | `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
 | `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
@@ -118,6 +151,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 | `references/consultation-harness.md` | 会话集合目录、继续/新开决策、恢复、操作语义、状态血缘与信息防火墙 |
 | `references/output-routing.md` | 对话、审计、总结、双底稿来源与默认 HTML 的输出边界 |
 | `references/html-report.md` | 默认个人 HTML、模型编排、生成登记、完整覆盖与更新规则 |
+| `references/loop-narrative.md` | 个人六节点、可能形成路径、选择反馈与四步引导 |
 | `references/markdown-report.md` | 先讲重点问题和人生全景的用户报告固定格式、未来展望与交付检查 |
 | `references/technical-report.md` | 独立技术分析文档的来源、结构、一致性和隐私边界 |
 | `references/classical-texts.md` | 古籍来源、流派冲突与新规则入库门槛 |
@@ -127,7 +161,7 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 ## 开发验证
 
-在当前目录执行：
+只拿到独立 Skill 时，在技能目录执行；macOS / Linux 未激活虚拟环境时将 `python` 换成 `python3`：
 
 ```text
 python -m unittest discover -s scripts -p "test_*.py"
@@ -141,7 +175,7 @@ python scripts/validate_final_report.py --help
 
 修改计算逻辑时应先补测试；修改推理规则时应给出适用条件、反例和冲突口径。Benchmark 相关内容必须继续留在仓库根目录的 `evaluation/` 中。
 
-源码仓库的开发环境与完整验证入口见[参与开发](https://github.com/guojiahh/afei-destiny-skill/blob/main/CONTRIBUTING.md)；2026-08-11 的知识补全历史见[知识与推理缺口审计](https://github.com/guojiahh/afei-destiny-skill/blob/main/docs/KNOWLEDGE_AUDIT.md)。这些仓库文档不随独立 Skill 安装包分发。
+完整仓库中另有 `tools/check_workspace.py`、匿名 V21 构建和隔离评测；这些入口不在独立 Skill 目录。源码仓库的开发环境与完整验证入口见[参与开发](https://github.com/guojiahh/afei-destiny-skill/blob/main/CONTRIBUTING.md)；2026-08-11 的知识补全历史见[知识与推理缺口审计](https://github.com/guojiahh/afei-destiny-skill/blob/main/docs/KNOWLEDGE_AUDIT.md)。这些仓库文档不随独立 Skill 安装包分发。
 
 ## 使用边界
 

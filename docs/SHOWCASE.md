@@ -1,93 +1,78 @@
-# 三分钟演示指南
+# 演示与截图
 
-这份文档用于向第一次接触项目的人快速说明：它解决什么问题、为什么可信度边界更清楚、现场应该展示哪些内容。
+当前演示为 **「此后」V21**：现在 → 之前 → 此后 → 完整解读。以下是实际浏览器截图，使用合成求职材料，没有对应的真实咨询者。画面中的原作素材来自 [Wayfinder](https://wayfinder.nfb.ca/)，具体权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。
 
-## 一句话介绍
+[查看构建资料](../design-demos/cihou-wayfinder-v21/README.md) · [返回项目首页](../README.md)
 
-> Afei Destiny Skill（阿飞命运探索）是 afei 的实验性命理探索技能，当前以四柱八字为核心：Python 负责可测试的四柱与岁运事实，Codex 按问题加载传统规则，用证据、反证和置信度组织回答，帮助用户观察自己并思考现实选择。
+## 一次体验怎样展开
 
-## 推荐演示流程
+### 1. 现在：按住看循环，松开停下来
 
-### 1. 先展示输入（约 20 秒）
+按住画面或底部按钮，人物沿固定路线行走；键盘也可长按空格。沿路六句反复出现，帮助读者看到“触发 → 解释 → 应对 → 暂时作用 → 后续代价 → 再次回到”。点击“读懂路上这句话”会停下来展开解释，收起后可以继续。
 
-```text
-请用 $afei-destiny-skill 分析：公历 1990-05-15 14:30，女性。
-我只问 2026–2027 年是否适合换工作。
-请先说明排盘口径，再给最强证据、最强反证和现实建议。
+![现在：六个位置形成循环，走过后清晰提示下一步](../assets/showcase/cihou-now.png)
+
+走过本景短句并松开后，下一步按钮会突出。点“接着看 · 之前”，以同样的按住操作回看一种应对可能怎样形成。顶部导航始终可用，也可以直接阅读。
+
+### 2. 此后：选一个，就收到一张卡
+
+点一个待收集选择，会自动换场并完成一段有限体验，随后留下对应卡片；不用再次确认或继续长按。得到第一张就能进入正文，其余两张可以稍后收集。
+
+![第一张卡立即可读，另外两项仍显示待收集](../assets/showcase/cihou-first-card.png)
+
+这个求职演示有三种反馈，正式报告会按每个人的资料重写：
+
+| 选择 | 体验侧重 | 卡片帮助读者带走什么 |
+|---|---|---|
+| 材料够了，先投一份 | 向外迈出一小步 | 允许一次尝试成为本轮完成点，再观察反馈 |
+| 还缺一项，就把它补清楚 | 有限、具体的准备 | 识别一个真实缺口，为准备设置可完成的边界 |
+| 留给时间跟坚持 | 有支持的持续 | 安排小步、休息与支持，记录并调整节奏 |
+
+### 3. 收集后：点卡直接看，不必重过动画
+
+三项显示各自收集状态。点已得卡直接切换短句与结果；只有明确点“重播这段体验”才再次播放。切章和从头体验会保留本页卡片，刷新页面后重置。
+
+![三张卡收集完成，可以逐张独立翻看](../assets/showcase/cihou-cards.png)
+
+### 4. 完整解读：带着自己的选择深入读
+
+点“带着这一步，进入完整解读”，正文保留当前选择摘要，并提供九章目录、技术依据与双底稿下载。关闭阅读会回到原卡片。
+
+![九章完整解读入口，保留刚才选择的行动摘要](../assets/showcase/cihou-reading.png)
+
+手机窄屏上，卡片内容可滚动，进入正文的按钮保持可见：
+
+<p align="center"><img src="../assets/showcase/cihou-mobile.png" alt="390 像素窄屏中，已收集卡片与阅读按钮" width="320"></p>
+
+## 本地打开
+
+已有完整本地工作区时，在仓库根目录启动仅服务匿名演示目录的本地服务器：
+
+```sh
+python3 -m http.server 8785 --bind 127.0.0.1 --directory design-demos/cihou-wayfinder-v21
 ```
 
-说明重点：用户问的是聚焦问题，技能不会用一份大而全的模板淹没它。
+浏览器打开 [本地演示](http://127.0.0.1:8785/final_report.html)。Windows 用 `python`；结束时在终端按 `Ctrl+C`。不要将包含私人咨询的目录作为公开服务器根目录。
 
-### 2. 展示确定性计算（约 40 秒）
+也可以直接用现代浏览器打开本地 `design-demos/cihou-wayfinder-v21/final_report.html`。约 68 MB 的文件包含原资源和内容，首次加载需稍等。GitHub 的文件页只展示源码，不运行页面。完整原作素材的公开分发范围以[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)为准。
 
-```powershell
-python .\afei-destiny-skill\scripts\calculate_bazi.py `
-  --date 1990-05-15 --time 14:30 --gender female `
-  --target-year 2026 --compact
+想重建时运行：
+
+```sh
+python3 design-demos/cihou-wayfinder-v21/build_demo.py
+python3 design-demos/cihou-wayfinder-v21/build_demo.py --check
 ```
 
-可指出三个字段：
+构建脚本使用正式渲染器和合成双底稿。旧版设计与 V15 内容构建依赖保留，详见[设计索引](../design-demos/README.md)。完整自动回归与浏览器证据见 [V21 QA](../design-demos/cihou-wayfinder-v21/QA.md) 和[逐张收集验收](../design-demos/cihou-wayfinder-v21/QA-COLLECTION.md)。
 
-- `conventions`：采用什么换年、换月和换日口径。
-- `four_pillars`：四柱及其十神、藏干等事实。
-- `target_year`：目标流年、当步大运和与原局的关系。
+## 展示与真实使用的区别
 
-示例四柱为 `庚午 辛巳 庚辰 癸未`。现场不必逐行讲完整 JSON。
+本页展示的是产品交互和阅读方式。正式个人报告需从本次会话的有效资料、分析和来源计划生成，不能为演示换名后交付。当前没有在线账号、跨设备收藏或私有托管服务。
 
-### 3. 展示回答结构（约 60 秒）
+如要展示计算能力，从仓库根目录运行：
 
-让观众关注回答有没有明确分开：
-
-1. 排盘事实：计算器直接得到、可以复核的内容。
-2. 结构判断：使用了哪些传统规则，证据强弱如何。
-3. 岁运触发：为什么关注某个时间窗口，而不是只报一个年份。
-4. 反证与变量：什么信息可能让判断改变。
-5. 现实建议：不以命理替代现金流、合同、健康等现实信息。
-
-### 4. 展示工程验证（约 40 秒）
-
-```powershell
-python -m unittest discover -s .\afei-destiny-skill\scripts -p "test_*.py"
-python -m unittest discover -s .\evaluation -p "test_*.py"
-python .\afei-destiny-skill\scripts\doctor.py
+```sh
+python3 afei-destiny-skill/scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
 ```
 
-说明：两组测试分别覆盖 Skill 的计算、盲测、会话、报告门禁，以及评测实验室的脱敏、锁定和污染检查；环境自检确认当前机器能运行这些能力。它们都不是证明八字具有科学预测力。当前选择题方法与限制见[评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md)，上一代实验见[归档报告](../evaluation/archive/mingli-baziqa/final_report.md)。
-
-## 可切换的演示问题
-
-### 时辰不确定
-
-```text
-请用 $afei-destiny-skill 分析我的职业方向。出生时间只知道是下午，先比较可能时辰的共同结论，
-不要假装存在唯一命盘。
-```
-
-展示点：缺少信息时主动降低结论粒度。
-
-### 真太阳时边界
-
-```text
-请用 $afei-destiny-skill 比较民用时和真太阳时两种排盘口径；如果时柱发生变化，
-分别说明哪些结论稳定、哪些结论需要保留。
-```
-
-展示点：边界问题不是悄悄选一个口径，而是显式比较。
-
-### 传统命理选择题
-
-```text
-请用 $afei-destiny-skill 解这道题。先核对题干事实并检查最强反例，最后只按题目要求输出选项。
-```
-
-展示点：内部推理可以完整，提交格式保持严格。
-
-## 可视化报告设计演示
-
-当前匿名入口为 [V19 求职完整演示](../design-demos/cihou-wayfinder-v19/final_report.html)：原站 Wayfinder 引擎、角色、风景与视听资源承载闭环路线，按住沿固定路线前进、松开停下，首景六句随同一个循环重复并平滑浮现；叙述直接面向读者，来处用自然的“你可能曾经……”连接可能的学习路径。顶部主动切换此刻、来处与可能，比较三项有条件的走法；正文入口打开同页九章和完整依据。
-
-示例采用显式合成的八节用户底稿、十一节技术边界与来源绑定模型，没有出生输入或真实咨询者。完整个人交付沿 [HTML 生成流程](../afei-destiny-skill/references/html-report.md)重新生成，模板一致不等于人生解释一致。
-
-第一阶段于 2026-10-16 获用户确认；V19 是 2026-10-20 的加载期文字定位更新，沿用 V18 叙事，没有新的独立审美评分。全部原资源、正文和下载内嵌为单份 HTML；原作署名与权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)。V8、V15、[V16](../design-demos/cihou-wayfinder-v16/final_report.html)、[V17](../design-demos/cihou-wayfinder-v17/final_report.html)、[V18](../design-demos/cihou-wayfinder-v18/final_report.html)、早期 quiet 和 stage1 保留在[历史对照索引](../design-demos/README.md)，真实报告不进入公开示例。
-
-正式开发和实际 QA 记录从[新对话交接](CIHOU_HANDOFF.md)进入。手机尺寸浏览器检查不等于实体手机交付；本机预览服务停止后地址会失效，实际 HTML 文件是本地交付入口。私有在线托管尚未实现。
+结果四柱为 `庚午 辛巳 庚辰 癸未`。这只证明计算命例可复核，不能代替对解释与建议的验证。[安装并开始自己的探索 →](../afei-destiny-skill/README.md)

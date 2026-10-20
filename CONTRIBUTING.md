@@ -7,6 +7,7 @@
 - 计算事实：修改 `afei-destiny-skill/scripts/`，并补充自动测试。
 - 推理或表达：修改 `afei-destiny-skill/references/`，写清适用条件、反例和冲突口径。
 - 技能路由：只有任务识别、文件路由或全局边界变化时才修改 `SKILL.md`。
+- 报告交互：当前实现位于 `afei-destiny-skill/assets/cihou/quiet/wayfinder/`；从 [V21 交接](docs/CIHOU_HANDOFF.md)和[工作区地图](docs/WORKSPACE_GUIDE.md)定位渲染器、内容模型和匿名演示。
 - Benchmark：只放在 `evaluation/`，不得复制原题、答案、人物标识或历史预测进技能包。
 
 ## 本地检查
@@ -15,11 +16,14 @@
 
 在仓库根目录执行。项目支持 Python 3.9–3.13，运行依赖已内置于
 `afei-destiny-skill/scripts/vendor/`。开发时额外安装 PyYAML，供 Skill 结构校验使用。
+**完整回归还需要 Node.js（CI 使用 Node 22）**，用于界面、适配器与播放状态测试；
+只运行计算器或生成 HTML 不需要 Node。
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-dev.txt
+node --version
 python tools/check_workspace.py
 ```
 
@@ -36,15 +40,13 @@ GitHub。推送代码需要单独配置 GitHub HTTPS 或 SSH 认证。
 
 ### Windows PowerShell
 
-历史 Windows 工作区仍可使用下面的验证命令；切换到 Mac 时使用上面的
-macOS 命令。两端的虚拟环境需要分别创建，不要复制 `.venv/`。
+在仓库根目录使用下面的统一入口。两端的虚拟环境需要分别创建，不要复制 `.venv/`。
 
 ```powershell
-python -m unittest discover -s .\afei-destiny-skill\scripts -p "test_*.py"
-python -m unittest discover -s .\evaluation -p "test_*.py"
-python .\afei-destiny-skill\scripts\doctor.py
-python .\afei-destiny-skill\scripts\calculate_bazi.py --help
-git diff --check
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+node --version
+.\.venv\Scripts\python.exe tools/check_workspace.py
 ```
 
 ### 从 Windows 迁移到 Mac
@@ -53,14 +55,24 @@ git diff --check
 - PowerShell 的反引号续行和 `\` 路径不能直接粘贴进 zsh；在 Mac 上使用 `/` 路径和 `\` 续行，或写成一行。
 - 文本换行规则由 `.gitattributes` 管理。旧工作区可能仍包含 CRLF，Git 会提示后续转换；不要对整个仓库批量执行换行转换或 `git add --renormalize .`，以免改变已锁定评测原件。
 - `consultation_state/`、`.benchmark-cache/` 和 `dist/*.zip` 被 Git 忽略，GitHub 克隆不会恢复它们。需要继续旧咨询或使用原缓存时，应单独安全迁移，并保留原文件内容与路径关系。
-- 核心 Python 功能无需 Node.js；只有重新渲染 `design-demos/render-final.js` 的展示图时才需要 Node.js、Playwright 及可用浏览器。
+- 完整 JavaScript 行为回归需要 Node.js；缺少它时相关测试会跳过。重拍浏览器截图另需可用浏览器；历史 `design-demos/render-final.js` 还需 Playwright。
 
 GitHub 集成授权与本机终端认证相互独立。需要从终端推送时，可安装
 [GitHub CLI](https://cli.github.com/)，执行 `gh auth login --hostname github.com --git-protocol https --web`，
 随后执行 `gh auth setup-git` 和 `gh auth status`。参见[官方登录说明](https://cli.github.com/manual/gh_auth_login)。
 
 仓库的[自动验证配置](.github/workflows/validate.yml)覆盖 macOS、Windows 和 Linux；
-推送到 GitHub 后会运行统一工作区检查。本机测试通过不代表尚未运行的远端任务已通过。
+推送到 GitHub 后会运行统一工作区检查，并显式安装 Node 以执行 JavaScript 回归。本机测试通过不代表尚未运行的远端任务已通过。
+
+改动报告后，在仓库根目录重建并检查当前匿名演示：
+
+```sh
+python design-demos/cihou-wayfinder-v21/build_demo.py
+python design-demos/cihou-wayfinder-v21/build_demo.py --check
+```
+
+按[演示指南](docs/SHOWCASE.md#本地打开)检查实际长按、逐张收卡、已得卡直读和正文返回。
+`design-demos/` 保留历史快照和构建依赖，不要因版本旧就移除。
 
 涉及评测时，再按 [`evaluation/README.md`](evaluation/README.md) 的流程进行预登记、答案隔离、预测锁定和评分。
 
@@ -69,12 +81,14 @@ GitHub 集成授权与本机终端认证相互独立。需要从终端推送时�
 - 对计算口径使用明确术语，不把流派差异写成唯一标准。
 - 引用古籍时必须可核验；无法确认原文时改为概述，不制造引文。
 - 新增推理规则时必须写明语境、适用条件、最强反例和冲突口径；只有口诀不得进入自动裁决层。
-- 现代资料或开源项目必须先核对许可证；不兼容或非商业许可证内容只能用于比较，不能复制进 MIT 技能包。
+- 新增第三方代码或素材必须核对许可证、保留原声明，并更新[第三方清单](afei-destiny-skill/THIRD_PARTY_NOTICES.md)。项目 MIT 只覆盖自有部分；当前 Wayfinder 复用的出处与授权状态单独记录，公开可访问不能当作开放许可。
 - 合成示例必须明确标注，不得伪装成真实用户案例。
 - 高风险主题使用条件性、风险管理语言，不诊断、不恐吓、不承诺。
 - 不根据已揭晓的 benchmark 答案反向添加只对固定题目有效的规则。
 
 ## 提交说明建议
+
+通过 [Issues](https://github.com/guojiahh/afei-destiny-skill/issues/new/choose) 报告问题或建议。公开材料请使用合成输入；不要附真实出生资料、私人咨询、访问令牌或含答案的缓存。界面问题可提供浏览器版本、复现步骤和匿名截图。
 
 提交或 Pull Request 请说明：
 

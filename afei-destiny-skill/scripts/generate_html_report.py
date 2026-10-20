@@ -101,8 +101,8 @@ def validate_model(model, state, sources):
     presentation = model.get('presentation')
     if presentation is not None:
         require(isinstance(presentation, dict) and presentation.get('style') == 'quiet-v1', 'unsupported presentation style')
-        runtime = presentation.get('hero_runtime', 'wayfinder-v19')
-        require(runtime in {'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17', 'wayfinder-v16', 'paper-v15'}, 'unsupported hero runtime')
+        runtime = presentation.get('hero_runtime', 'wayfinder-v21')
+        require(runtime in {'wayfinder-v21', 'wayfinder-v20', 'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17', 'wayfinder-v16', 'paper-v15'}, 'unsupported hero runtime')
         require(diagram['type'] == 'loop', 'quiet-v1 requires a sourced loop model')
         states = presentation.get('hero_states')
         require(isinstance(states, list) and len(states) == 3, 'quiet-v1 requires three hero states')
@@ -120,7 +120,7 @@ def validate_model(model, state, sources):
             require(next(n for n in nodes if n['id'] == scene['node_id'])['kind'] != 'condition', 'hero must not decide external responses')
             refs(scene)
         loop_story = presentation.get('loop_story')
-        if runtime in {'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17'} or loop_story is not None:
+        if runtime in {'wayfinder-v21', 'wayfinder-v20', 'wayfinder-v19', 'wayfinder-v18', 'wayfinder-v17'} or loop_story is not None:
             require(isinstance(loop_story, dict), 'Wayfinder requires a sourced loop_story')
             loop_nodes = loop_story.get('nodes')
             require(isinstance(loop_nodes, list) and len(loop_nodes) == 6
@@ -142,6 +142,7 @@ def validate_model(model, state, sources):
         choices = presentation.get('hero_choices', [])
         require(isinstance(choices, list) and len(choices) in {0, 3}, 'hero choices require three conditional alternatives')
         choice_ids = set()
+        feedback_modes = []
         for choice in choices:
             require(isinstance(choice, dict), 'invalid hero choice')
             choice_id = choice.get('id', '')
@@ -152,6 +153,23 @@ def validate_model(model, state, sources):
                 require(isinstance(choice.get(field), str) and choice[field].strip()
                         and len(choice[field]) <= limit, 'invalid hero choice ' + field)
             refs(choice)
+            feedback = choice.get('feedback')
+            if runtime in {'wayfinder-v21', 'wayfinder-v20'} or feedback is not None:
+                require(isinstance(feedback, dict), 'hero choice requires feedback')
+                require(isinstance(feedback.get('mode'), str)
+                        and feedback['mode'] in {'attempt', 'prepare', 'sustain'}, 'invalid hero choice feedback mode')
+                lines = feedback.get('lines')
+                require(isinstance(lines, list) and len(lines) == 3
+                        and all(nonempty_string(line) and len(line) <= 32 for line in lines),
+                        'hero choice feedback requires three short lines')
+                require(nonempty_string(feedback.get('result')), 'missing hero choice feedback result')
+                # The entire feedback is sourced by its enclosing choice, so it
+                # cannot silently introduce a second, unrelated citation set.
+                require('refs' not in feedback, 'hero choice feedback inherits choice references')
+                feedback_modes.append(feedback['mode'])
+        if runtime in {'wayfinder-v21', 'wayfinder-v20'} and choices:
+            require(sorted(feedback_modes) == ['attempt', 'prepare', 'sustain'],
+                    'V20+ hero choices require each feedback mode once')
     chapters = model.get('chapters', [])
     require(3 <= len(chapters) <= 10, 'requires a complete editorial report')
     validate_template_contract(model, state, sources)

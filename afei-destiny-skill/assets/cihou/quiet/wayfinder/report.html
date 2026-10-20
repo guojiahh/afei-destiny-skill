@@ -17,27 +17,51 @@
   <div class="loader" id="story-loader" role="status"><span>此 后</span><p>风景正在展开</p></div>
   <header class="story-bar">
     <span class="story-brand">此后</span>
-    <nav aria-label="探索视角"><button data-chapter="0" aria-current="step">01 来处</button><button data-chapter="1">02 此刻</button><button data-chapter="2">03 可能</button></nav>
-    <div class="bar-tools"><button id="sound" aria-pressed="false">声音 · 关</button><button id="pause" aria-pressed="false">暂停</button><button id="read-report">完整解读 ↗</button></div>
+    <nav aria-label="从体验到阅读"><button data-chapter="0" aria-current="step">01 现在</button><button data-chapter="1">02 之前</button><button data-chapter="2">03 此后</button><button id="read-report">04 完整解读</button></nav>
+    <div class="bar-tools"><button id="sound" aria-pressed="false">声音 · 关</button><button id="pause" aria-pressed="false">暂停</button></div>
   </header>
   <div id="story-surface" tabindex="0" role="group" aria-label="长按鼠标或触摸画面，沿固定环路行走，松开停下；也可按住空格或方向键" aria-describedby="story-instruction"></div>
   <section class="story-copy" aria-label="这段路上的理解">
-    <p class="story-kicker" id="story-kicker">来处 · 01</p>
+    <p class="story-kicker" id="story-kicker">现在 · 01</p>
     <h1 id="story-title"></h1>
-    <details id="story-note"><summary>读这一句 <span aria-hidden="true">＋</span></summary><p id="story-description"></p></details>
+    <details id="story-note">
+      <summary><span id="note-label">点这里，读懂路上这句话</span><span class="note-toggle" aria-hidden="true"></span></summary>
+      <div class="note-body"><blockquote id="note-quote"></blockquote><p id="story-description"></p><small id="note-help">展开时先停下来读。收起后，再长按继续走。</small></div>
+    </details>
   </section>
   <section id="story-choices" class="story-choices" aria-label="比较不同的选择" hidden>
-    <div id="choice-tabs" class="story-choice-tabs" role="group" aria-label="三种有条件的走法"></div>
-    <div id="choice-detail" hidden><p class="choice-condition" id="choice-condition"></p><p id="choice-description"></p><button id="walk-choice">试着走一步 ↗</button></div>
+    <div class="choice-scroll" id="choice-scroll">
+      <p class="choices-heading" id="choices-heading">我的卡片 · 已收集 0 / 3</p>
+      <p class="collection-hint" id="collection-hint">先任选一种走法。体验结束，就获得一张卡。</p>
+      <div id="choice-tabs" class="story-choice-tabs" role="group" aria-label="三种有条件的走法"></div>
+      <div id="choice-detail" hidden>
+        <p class="choice-condition" id="choice-condition"></p>
+        <div id="choice-card" hidden aria-label="留下这一步"></div>
+        <p id="choice-result" hidden></p>
+        <p id="choice-description"></p>
+        <button id="choice-replay" hidden>重播这段体验 ↺</button>
+      </div>
+    </div>
+    <div class="choice-exit">
+      <button id="read-after-choice" class="primary-action" hidden>带着这一步，进入完整解读 →</button>
+      <p id="choice-reading-hint" hidden>上下滚动，细看这张卡；选好一步，就可以继续。</p>
+    </div>
   </section>
-  <footer class="story-footer"><p id="story-instruction">长按画面，沿环行走 · 松开停下 · 也可按住空格键</p><button id="next-chapter">回看这条路的来处 ↗</button><button id="restart" hidden>重新走一遍 ↺</button></footer>
+  <footer class="story-footer" id="story-guide" aria-label="当前步骤与操作">
+    <div class="guide-copy"><span id="guide-step">第 1 步 / 4 · 现在</span><strong id="guide-title">先沿路走一走，看见现在的循环</strong><p id="story-instruction">按住下面的按钮或风景空白处，松开就停。</p><span id="guide-progress"></span></div>
+    <div class="guide-actions"><button id="guide-hold" class="primary-action" aria-describedby="story-instruction"><span class="hold-symbol" aria-hidden="true">◎</span><span id="hold-label">按住这里，开始走</span></button><button id="next-chapter">接着看：之前 →</button><button id="restart" hidden>从头体验 ↺</button></div>
+  </footer>
   <p class="sr-only" id="story-status" aria-live="polite" aria-atomic="true"></p>
   <div id="story-error" hidden role="status"><p>这个浏览器暂时无法展开动态风景。三段理解与完整正文仍可阅读。</p><button id="error-read">阅读完整解读</button></div>
   <dialog id="reading-dialog" aria-labelledby="reading-title">
-    <div class="reading-toolbar"><span id="reading-title">此后 · 完整解读</span><button id="close-reading" autofocus>回到风景 ×</button></div>
+    <div class="reading-toolbar"><span id="reading-title" tabindex="-1">第 4 步 · 完整解读</span><button id="close-reading">回到风景 ×</button></div>
     <article class="reading" id="reading" aria-label="完整个人咨询解读">
+      <p class="reading-eyebrow">从刚才的体验，走进更深的理解</p>
       <h1>@@TITLE@@</h1><div class="report-context">@@SUBTITLE@@</div>
-      <ol class="static-story">@@FALLBACK@@</ol>
+      <section id="reading-entry" hidden aria-label="带着刚才的选择继续读"><p>刚才，你选择了</p><h2 id="reading-choice-title"></h2><p id="reading-choice-result"></p></section>
+      <p id="reading-intro">接下来，把刚才的循环、形成的模式和可尝试的改变放在一起看。可以从第一章往下读，也可以点选一个章节，停下来慢慢理解。</p>
+      <nav id="reading-nav" aria-label="完整解读章节">@@READING_NAV@@</nav>
+      <details class="experience-recap"><summary>回看刚才的风景与选择</summary><ol class="static-story">@@FALLBACK@@</ol></details>
       @@CHAPTERS@@
       <section class="reading-section sources-section" id="technical">
         <header class="reading-heading"><p class="section-index">依据 / 按需展开</p><h2>理解，也可以继续核对。</h2><div class="section-intro">@@TECHNICAL_INTRO@@</div></header>
@@ -57,6 +81,7 @@
   <script id="wayfinder-assets" type="application/json">@@ASSET_PACK@@</script>
   <script>@@BOOTSTRAP_JS@@</script>
   <script id="wayfinder-runtime">@@ENGINE_JS@@</script>
+  <script>@@CHOICE_EFFECTS_JS@@</script>
   <script>@@ADAPTER_JS@@</script>
   <script>@@UI_JS@@</script>
 </body>

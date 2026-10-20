@@ -1,4 +1,4 @@
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#565529;color:#252d23;font-family:Enreal,"PingFang SC","Microsoft YaHei",sans-serif}*{box-sizing:border-box}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,#story-surface:focus-visible{outline:2px solid #786e32;outline-offset:5px}button{color:inherit}button[hidden],[hidden]{display:none!important}main.content{position:fixed;inset:45px 0 0;width:100%;height:calc(100% - 45px)}.story-bar{position:fixed;z-index:30;inset:0 0 auto;height:45px;background:#fdfcf6;display:flex;align-items:stretch;box-shadow:0 1px 0 #252d2318;font-size:12px;letter-spacing:.08em}.story-brand{font-family:"Songti SC",SimSun,serif;font-size:20px;letter-spacing:.22em;padding:8px 22px;border-right:1px solid #252d2320}.story-bar nav{display:flex}.story-bar button{background:none;border:0;padding:0 22px;transition:background .2s}.story-bar button:hover{background:#e6e5d5}.story-bar nav button{color:#7b7e70}.story-bar nav button[aria-current]{color:#252d23;background:#eeeee2}.bar-tools{display:flex;margin-left:auto}.bar-tools button{border-left:1px solid #252d2318;padding:0 18px}#story-surface{position:fixed;z-index:10;inset:45px 0 0;touch-action:none;outline-offset:-6px}.story-copy{position:fixed;z-index:20;left:6vw;bottom:114px;max-width:min(400px,44vw);pointer-events:none;text-shadow:0 1px 16px #e3e0ada0}.story-kicker{font-size:11px;letter-spacing:.25em;margin:0 0 14px;opacity:.65}.story-copy h1{font-family:"Songti SC","STSong",SimSun,serif;font-weight:500;font-size:clamp(22px,2.5vw,36px);line-height:1.7;letter-spacing:.12em;margin:0;white-space:pre-line}.story-copy details{pointer-events:auto;margin-top:18px;max-width:370px}.story-copy summary{cursor:pointer;list-style:none;font-size:11px;letter-spacing:.16em;opacity:.7;display:inline-block;border-bottom:1px solid #343a2945;padding:0 0 5px}.story-copy summary::-webkit-details-marker{display:none}.story-copy summary span{padding-left:10px}.story-copy details p{font-size:13px;line-height:1.9;letter-spacing:.025em;margin:14px 0 0;background:#f6f3deeb;padding:16px 20px;text-shadow:none;box-shadow:0 4px 28px #3d441914}.story-footer{z-index:20;position:fixed;bottom:25px;left:6vw;right:4vw;display:flex;align-items:center;gap:30px;font-size:11px;letter-spacing:.07em}.story-footer p{margin:0;opacity:.7;flex:1;text-shadow:0 1px 9px #ece7c8}.story-footer button,#walk-choice{border:0;border-bottom:1px solid currentColor;padding:6px 0;background:none;letter-spacing:.1em;font-size:12px}.story-choices{position:fixed;z-index:21;bottom:110px;right:5vw;width:min(380px,38vw)}.story-choice-tabs{display:flex;flex-direction:column;align-items:flex-start;gap:14px}.story-choice-tabs button{background:#f7f4deeb;border:0;padding:11px 20px;font-size:13px;letter-spacing:.06em;box-shadow:0 3px 16px #4c4b1b0d;text-align:left}.story-choice-tabs button[aria-pressed=true]{background:#303d2c;color:#f9f7e4}.story-choice-tabs button span{font-size:10px;margin-right:14px;opacity:.6}#choice-detail{padding:14px 20px 18px;background:#f7f4deeb;margin-top:16px;font-size:12px;line-height:1.9}#choice-detail p{margin:0 0 10px}.choice-condition{color:#70734f}#walk-choice{margin-top:4px}.loader{z-index:12;position:fixed;inset:45px 0 0;background:#565529;display:grid;align-content:center;justify-items:center;color:#f7f4da;pointer-events:none}.loader span{font-family:"Songti SC",SimSun,serif;font-size:40px;letter-spacing:1em;padding-left:1em}.loader p{font-size:11px;letter-spacing:.3em;margin-top:30px}.loader[hidden]{display:none}#story-error{position:fixed;inset:33% 20%;z-index:29;background:#f6f3e4;padding:30px;line-height:1.8}#story-error button{background:none;border:0;border-bottom:1px solid;padding:6px 0}#reading-dialog{position:fixed;inset:0;margin:0 0 0 auto;width:min(920px,100vw);height:100dvh;max-height:none;max-width:none;border:0;padding:0;background:#f5f1e7;color:#292d26;overflow:auto;overscroll-behavior:contain;z-index:100;user-select:text}#reading-dialog *{user-select:text}#reading-dialog::backdrop{background:#202c25a6;backdrop-filter:blur(3px)}.reading-toolbar{position:sticky;top:0;background:#f5f1e7f5;z-index:3;padding:20px 34px;display:flex;justify-content:space-between;border-bottom:1px solid #353e2720;font-size:12px;letter-spacing:.1em}.reading-toolbar button{border:0;background:none;font-size:12px}#reading-dialog .reading{padding:55px 8% 50px;max-width:none;width:auto}#reading-dialog .reading>h1{font:400 32px/1.6 "Songti SC",serif;margin:0 0 24px}#reading-dialog .report-context{margin-bottom:40px}#reading-dialog .static-story{padding:20px 20px 20px 38px;line-height:1.9;background:#e9e7d9;font-size:13px}#reading-dialog .static-story h3{font-size:14px;font-weight:500}#reading-dialog .reading-section{padding:50px 0}#reading-dialog .reading-heading h2{font-size:27px}#reading-dialog .report-ending{padding:30px 0}.art-credit{font-size:11px;line-height:1.8;color:#747763;padding:20px 0}.art-credit a{color:inherit}.art-credit summary{cursor:pointer}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{z-index:110}body[data-chapter="1"] .story-copy,body[data-chapter="2"] .story-copy{bottom:114px}body[data-transitioning="true"] .story-copy,body[data-transitioning="true"] .story-choices{opacity:0;pointer-events:none}.story-copy,.story-choices{transition:opacity .5s}/* Preserve original engine artwork; only its English game HUD is replaced. */main.content .game-ui-hud,main.content .hud,main.content .tutorial,main.content .haiku-counter{display:none!important}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#565529;color:#252d23;font-family:Enreal,"PingFang SC","Microsoft YaHei",sans-serif}*{box-sizing:border-box}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,#story-surface:focus-visible{outline:2px solid #786e32;outline-offset:5px}button{color:inherit}button[hidden],[hidden]{display:none!important}main.content{position:fixed;inset:45px 0 0;width:100%;height:calc(100% - 45px)}.story-bar{position:fixed;z-index:30;inset:0 0 auto;height:45px;background:#fdfcf6;display:flex;align-items:stretch;box-shadow:0 1px 0 #252d2318;font-size:12px;letter-spacing:.08em}.story-brand{font-family:"Songti SC",SimSun,serif;font-size:20px;letter-spacing:.22em;padding:8px 22px;border-right:1px solid #252d2320}.story-bar nav{display:flex}.story-bar button{background:none;border:0;padding:0 22px;transition:background .2s}.story-bar button:hover{background:#e6e5d5}.story-bar nav button{color:#7b7e70}.story-bar nav button[aria-current]{color:#252d23;background:#eeeee2}.bar-tools{display:flex;margin-left:auto}.bar-tools button{border-left:1px solid #252d2318;padding:0 18px}#story-surface{position:fixed;z-index:10;inset:45px 0 0;touch-action:none;outline-offset:-6px}.story-copy{position:fixed;z-index:20;left:6vw;bottom:114px;max-width:min(400px,44vw);pointer-events:none;text-shadow:0 1px 16px #e3e0ada0}.story-kicker{font-size:11px;letter-spacing:.25em;margin:0 0 14px;opacity:.65}.story-copy h1{font-family:"Songti SC","STSong",SimSun,serif;font-weight:500;font-size:clamp(22px,2.5vw,36px);line-height:1.7;letter-spacing:.12em;margin:0;white-space:pre-line}.story-copy details{pointer-events:auto;margin-top:18px;max-width:370px}.story-copy summary{cursor:pointer;list-style:none;font-size:11px;letter-spacing:.16em;opacity:.7;display:inline-block;border-bottom:1px solid #343a2945;padding:0 0 5px}.story-copy summary::-webkit-details-marker{display:none}.story-copy summary span{padding-left:10px}.story-copy details p{font-size:13px;line-height:1.9;letter-spacing:.025em;margin:14px 0 0;background:#f6f3deeb;padding:16px 20px;text-shadow:none;box-shadow:0 4px 28px #3d441914}.story-footer{z-index:20;position:fixed;bottom:25px;left:6vw;right:4vw;display:flex;align-items:center;gap:30px;font-size:11px;letter-spacing:.07em}.story-footer p{margin:0;opacity:.7;flex:1;text-shadow:0 1px 9px #ece7c8}.story-footer button,#choice-replay{border:0;border-bottom:1px solid currentColor;padding:6px 0;background:none;letter-spacing:.1em;font-size:12px}.story-choices{position:fixed;z-index:21;bottom:110px;right:5vw;width:min(380px,38vw)}.story-choice-tabs{display:flex;flex-direction:column;align-items:flex-start;gap:14px}.story-choice-tabs button{background:#f7f4deeb;border:0;padding:11px 20px;font-size:13px;letter-spacing:.06em;box-shadow:0 3px 16px #4c4b1b0d;text-align:left}.story-choice-tabs button[aria-pressed=true]{background:#303d2c;color:#f9f7e4}.story-choice-tabs button span{font-size:10px;margin-right:14px;opacity:.6}#choice-detail{padding:14px 20px 18px;background:#f7f4deeb;margin-top:16px;font-size:12px;line-height:1.9}#choice-detail p{margin:0 0 10px}.choice-condition{color:#70734f}#choice-replay{margin-top:4px}.loader{z-index:12;position:fixed;inset:45px 0 0;background:#565529;display:grid;align-content:center;justify-items:center;color:#f7f4da;pointer-events:none}.loader span{font-family:"Songti SC",SimSun,serif;font-size:40px;letter-spacing:1em;padding-left:1em}.loader p{font-size:11px;letter-spacing:.3em;margin-top:30px}.loader[hidden]{display:none}#story-error{position:fixed;inset:33% 20%;z-index:29;background:#f6f3e4;padding:30px;line-height:1.8}#story-error button{background:none;border:0;border-bottom:1px solid;padding:6px 0}#reading-dialog{position:fixed;inset:0;margin:0 0 0 auto;width:min(920px,100vw);height:100dvh;max-height:none;max-width:none;border:0;padding:0;background:#f5f1e7;color:#292d26;overflow:auto;overscroll-behavior:contain;z-index:100;user-select:text}#reading-dialog *{user-select:text}#reading-dialog::backdrop{background:#202c25a6;backdrop-filter:blur(3px)}.reading-toolbar{position:sticky;top:0;background:#f5f1e7f5;z-index:3;padding:20px 34px;display:flex;justify-content:space-between;border-bottom:1px solid #353e2720;font-size:12px;letter-spacing:.1em}.reading-toolbar button{border:0;background:none;font-size:12px}#reading-dialog .reading{padding:55px 8% 50px;max-width:none;width:auto}#reading-dialog .reading>h1{font:400 32px/1.6 "Songti SC",serif;margin:0 0 24px}#reading-dialog .report-context{margin-bottom:40px}#reading-dialog .static-story{padding:20px 20px 20px 38px;line-height:1.9;background:#e9e7d9;font-size:13px}#reading-dialog .static-story h3{font-size:14px;font-weight:500}#reading-dialog .reading-section{padding:50px 0}#reading-dialog .reading-heading h2{font-size:27px}#reading-dialog .report-ending{padding:30px 0}.art-credit{font-size:11px;line-height:1.8;color:#747763;padding:20px 0}.art-credit a{color:inherit}.art-credit summary{cursor:pointer}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{z-index:110}body[data-chapter="1"] .story-copy,body[data-chapter="2"] .story-copy{bottom:114px}body[data-transitioning="true"] .story-copy,body[data-transitioning="true"] .story-choices{opacity:0;pointer-events:none}.story-copy,.story-choices{transition:opacity .5s}/* Preserve original engine artwork; only its English game HUD is replaced. */main.content .game-ui-hud,main.content .hud,main.content .tutorial,main.content .haiku-counter{display:none!important}
 @media(max-width:700px){.story-bar{height:44px}.story-brand{font-size:18px;padding:10px 12px}.story-bar button{padding:0 10px;font-size:11px;letter-spacing:0}.bar-tools #pause,.bar-tools #sound{display:none}.bar-tools button{padding:0 12px}main.content,#story-surface{top:44px}.story-copy{left:7vw;bottom:130px;max-width:84vw}.story-copy h1{font-size:24px}.story-kicker{font-size:10px;margin-bottom:8px}.story-copy details{margin-top:10px;max-width:84vw}.story-copy details p{max-height:24vh;overflow:auto;font-size:12px;padding:12px 15px}.story-footer{left:7vw;right:7vw;bottom:28px;align-items:flex-start;gap:12px}.story-footer p{font-size:10px;max-width:55%;line-height:1.8}.story-footer button{font-size:11px;white-space:nowrap}.story-choices{right:7vw;left:7vw;bottom:105px;width:auto}.story-choice-tabs{gap:8px}.story-choice-tabs button{padding:10px 14px;font-size:12px}#choice-detail{font-size:11px;margin-top:10px;padding:12px 15px}body[data-chapter="2"] .story-copy{top:83px;bottom:auto}body[data-chapter="2"] .story-copy h1{font-size:21px}body[data-chapter="2"] .story-copy details{display:none}.reading-toolbar{padding:18px 22px}#reading-dialog .reading{padding:35px 7%}.reading-heading h2{font-size:24px!important}#story-error{inset:28% 7%}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.story-copy,.story-choices{transition:none}}@media print{html,body{overflow:visible;height:auto;background:white}.content,.story-bar,#story-surface,.story-copy,.story-footer,.story-choices,.loader,#story-error,.reading-toolbar{display:none!important}#reading-dialog{display:block!important;position:static;width:100%;height:auto;overflow:visible}#reading-dialog .reading{padding:0}.source-detail{break-inside:avoid}}
 
@@ -9,3 +9,144 @@ body[data-reduced="true"]{background:#e9e5d4}body[data-reduced="true"] main.cont
 
 /* Hold is the only travel input; the words stay available while the reader rests. */
 #story-surface{cursor:grab;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}#story-surface[data-holding="true"]{cursor:grabbing}.story-copy details p{white-space:pre-line}.loop-reading li{margin:12px 0}.loop-reading p{margin:4px 0 12px}.text-sprite-3d{text-shadow:0 2px 7px #15200ee6,0 0 20px #15200e80}body[data-biome="tundra"] .text-sprite-3d{text-shadow:0 1px 9px #ffffffc0}
+
+/* Choice playback uses the published poem card; its paper and token art stay native. */
+body[data-chapter="2"] #story-surface{cursor:default}
+body[data-chapter="2"][data-selected="true"] .story-copy{top:87px;bottom:auto;max-width:42vw}
+body[data-chapter="2"][data-selected="true"] .story-copy h1{font-size:22px;line-height:1.65}
+#choice-card{white-space:pre-line;text-align:center;font-family:Enreal,"Songti SC",SimSun,serif;line-height:1.8}
+#choice-card .container.svelte-wamszv{width:100%;height:192px;padding:26px 28px;background-size:100% 100%;color:#303b27}
+#choice-card .lines-container.svelte-wamszv{font-family:Enreal,"Songti SC",SimSun,serif;font-size:14px;line-height:1.65;margin:10px 0 0}
+#choice-card .token-container.svelte-wamszv{margin-left:0}
+#choice-card .token.svelte-wamszv{width:20px;height:20px;margin-left:7px}
+#choice-detail #choice-result{font-size:13px;line-height:1.85;margin:10px 0 4px}
+#choice-replay{margin-top:8px}
+body[data-phase="done"] #choice-detail{padding:12px 16px 14px}
+body[data-phase="done"] .story-choice-tabs{gap:7px}
+body[data-phase="done"] .story-choice-tabs button{padding:8px 16px;font-size:12px}
+body[data-transitioning="true"] .story-choices{opacity:1;pointer-events:auto}
+body[data-transitioning="true"] #choice-detail{opacity:.55}
+/* Tundra includes dark shaded ground as well as snow. Keep scene copy legible
+   in both, using the same pale ink and soft dark shadow as the other biomes. */
+body[data-biome="tundra"]:not([data-reduced="true"]) .story-copy,body[data-biome="tundra"]:not([data-reduced="true"]) .story-footer{color:#fff9df;text-shadow:0 2px 18px #18200ed9}
+body[data-biome="tundra"] .text-sprite-3d{text-shadow:0 2px 7px #15200ee6,0 0 20px #15200e80}
+@media(max-width:700px){
+ body[data-chapter="2"][data-selected="true"] .story-copy{top:72px;max-width:86vw}
+ body[data-chapter="2"][data-selected="true"] .story-copy h1{font-size:17px}
+ body[data-chapter="2"] .story-choices{bottom:94px}
+ body[data-chapter="2"][data-selected="true"] .story-choice-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:stretch}
+ body[data-chapter="2"][data-selected="true"] .story-choice-tabs button{padding:9px 8px;font-size:11px;line-height:1.6;letter-spacing:0}
+ body[data-chapter="2"][data-selected="true"] .story-choice-tabs button span{display:block;margin:0 0 3px}
+ #choice-card .container.svelte-wamszv{height:164px;padding:20px 24px}
+ #choice-card .lines-container.svelte-wamszv{font-size:12px;line-height:1.6;margin-top:6px}
+ #choice-detail #choice-result{font-size:12px;line-height:1.75}
+ body[data-phase="done"] #choice-detail{max-height:43vh;overflow:auto}
+ .bar-tools #pause{display:block;padding:0 8px}
+}
+
+/* V21: one visible action leads from walking, to choosing, to deep reading. */
+.story-bar nav #read-report{border-left:1px solid #252d2318}
+.story-bar nav #read-report[aria-current]{background:#303d2c;color:#fff9df}
+body .story-copy,body[data-chapter="1"] .story-copy,body[data-chapter="2"] .story-copy{top:84px;bottom:auto;max-width:min(370px,36vw)}
+.story-copy h1{font-size:clamp(23px,2.1vw,30px);line-height:1.6}
+.story-copy details{margin-top:18px;max-width:370px}
+.story-copy summary{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:44px;padding:11px 14px;border:1px solid #f7f4de85;background:#f6f2ddf2;color:#303b27;opacity:1;font-size:12px;letter-spacing:.03em;text-shadow:none;box-shadow:0 3px 16px #15200e15}
+.story-copy summary span{padding:0}
+.note-toggle:after{content:'＋';font-size:18px}
+details[open] .note-toggle:after{content:'−'}
+.note-body{padding:16px 18px;background:#f6f2ddf7;color:#303b27;text-shadow:none;max-height:40vh;overflow:auto;border-top:1px solid #303b2720;box-shadow:0 10px 24px #15200e18}
+.note-body blockquote{margin:0 0 12px;padding:0 0 0 12px;border-left:2px solid #7c8354;font-family:"Songti SC",serif;font-size:17px;line-height:1.7}
+.story-copy .note-body p{padding:0;margin:0;background:none;box-shadow:none;max-height:none;font-size:13px;line-height:1.9}
+.note-body small{display:block;margin-top:14px;font-size:11px;line-height:1.7;color:#686d54;border-top:1px solid #303b2720;padding-top:10px}
+body:has(#story-note[open]) .text-sprite-3d{opacity:0!important}
+body #story-guide.story-footer{left:5vw;right:5vw;bottom:20px;gap:24px;display:flex;align-items:center;min-height:124px;padding:20px 24px;background:#faf6e9f5;border:1px solid #fff9e8aa;color:#303b27;text-shadow:none;box-shadow:0 4px 30px #18200e22;backdrop-filter:blur(8px)}
+.guide-copy{flex:1;min-width:0}
+#guide-step{font-size:10px;letter-spacing:.15em;color:#737861;display:block;margin-bottom:7px}
+#guide-title{display:block;font-family:"Songti SC",SimSun,serif;font-size:20px;font-weight:500;line-height:1.5;letter-spacing:.03em}
+body #story-guide #story-instruction{margin-top:6px;color:#555e45;text-shadow:none;max-width:none;opacity:1;font-size:12px;line-height:1.75;letter-spacing:.01em}
+#guide-progress{display:block;margin-top:5px;font-size:11px;color:#737861;line-height:1.5}
+#guide-progress:empty{display:none}
+.guide-actions{display:flex;align-items:center;gap:16px;flex-shrink:0}
+button.primary-action,#story-guide button.primary-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 20px;background:#303d2c;color:#fff9df;border:1px solid #303d2c;font-size:14px;line-height:1.6;letter-spacing:.02em;text-align:center;box-shadow:0 3px 12px #303d2c18}
+#guide-hold{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;min-width:210px}
+#guide-hold[data-holding="true"]{background:#536444;box-shadow:inset 0 0 0 2px #e6ecc7}
+#guide-hold[disabled]{background:#7b816d;border-color:#7b816d;cursor:default;box-shadow:none}
+#guide-hold .hold-symbol{font-size:23px;line-height:1}
+#story-guide #next-chapter{border:1px solid #303d2745;padding:13px 18px;font-size:12px;line-height:1.6;min-height:48px;white-space:nowrap}
+#story-guide #next-chapter[data-prominent="true"]{background:#303d2c;color:#fff9df;border-color:#303d2c}
+#story-guide[data-complete="true"] #guide-hold{background:transparent;color:#303d2c;border-color:#303d2745;box-shadow:none}
+#story-guide #restart{font-size:11px;color:#6b7358;border-bottom-color:#6b735855;white-space:nowrap}
+body[data-chapter="2"] #story-guide{min-height:94px;padding:16px 22px}
+body[data-chapter="2"] #guide-title{font-size:18px}
+.story-choices{bottom:170px;width:min(390px,38vw);max-height:calc(100dvh - 240px);display:flex;flex-direction:column;overflow:hidden;padding:2px}
+.choice-scroll{min-height:0;overflow:auto;overscroll-behavior:contain}
+.choice-exit{flex:none;background:#f6f2ddf2;padding:12px 16px 14px;border-top:1px solid #303b2720}
+.choice-exit:has(#read-after-choice[hidden]){display:none}
+.choices-heading{margin:0 0 12px;padding:8px 10px;background:#f6f2dded;font-size:12px;line-height:1.5;color:#303b27}
+.story-choice-tabs{gap:9px;align-items:stretch}
+.story-choice-tabs button{min-height:48px;font-size:14px;border:1px solid #fdf7e6ad;line-height:1.6}
+.story-choice-tabs button:after{content:' →';float:right;opacity:.65;margin-left:8px}
+body[data-phase="done"] .choices-heading{font-size:11px;margin-bottom:7px;padding:5px 8px}
+body[data-phase="done"] .story-choice-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+body[data-phase="done"] .story-choice-tabs button{font-size:10px;padding:7px 8px;line-height:1.55;letter-spacing:0}
+body[data-phase="done"] .story-choice-tabs button span{display:block;margin:0 0 3px}
+body[data-phase="done"] .story-choice-tabs button:after{display:none}
+#read-after-choice{width:100%;margin:0;font-size:13px;padding:12px 10px;min-height:48px}
+#choice-reading-hint{font-size:10px;color:#737861;margin:8px 0 0;line-height:1.7}
+#choice-replay{font-size:10px;color:#737861;min-height:32px}
+body[data-phase="done"] #choice-detail{max-height:none;overflow:visible}
+#choice-card .container.svelte-wamszv{height:164px;padding:18px 22px}
+#choice-card .lines-container.svelte-wamszv{font-size:13px;margin-top:8px}
+#story-error{inset:95px 5vw auto auto;max-width:390px;padding:20px;z-index:25}
+.reading-eyebrow{font-size:12px;letter-spacing:.1em;color:#747b62;margin:0 0 20px}
+#reading-entry{padding:20px 24px;background:#e8e9d9;border-left:3px solid #738258;margin:0 0 26px}
+#reading-entry>p:first-child{font-size:11px;color:#646e50;margin:0 0 8px}
+#reading-entry h2{font:500 21px/1.65 "Songti SC",serif;margin:0 0 12px}
+#reading-entry #reading-choice-result,#reading-intro{font-size:14px;line-height:1.95;margin:0}
+#reading-intro{margin-bottom:22px}
+#reading-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 18px;padding:22px 0;border-block:1px solid #303d2725;margin-bottom:30px}
+#reading-nav a{color:#34412d;font-size:13px;line-height:1.8;text-decoration:none;padding:5px 0}
+#reading-nav a:hover{text-decoration:underline}
+#reading-nav span{display:block;color:#7d836d;font-size:10px;letter-spacing:.1em}
+#reading-dialog .reading-section{scroll-margin-top:85px}
+.experience-recap>summary{cursor:pointer;font-size:12px;color:#778064;padding:10px 0}
+#reading-dialog .report-context{margin-bottom:26px}
+@media(min-width:701px) and (max-height:760px){body .story-copy{top:75px}.story-choices{bottom:149px;max-height:calc(100dvh - 220px)}body #story-guide.story-footer{min-height:106px;padding:14px 20px;bottom:15px}#choice-card .container.svelte-wamszv{height:144px;padding:13px 20px}#choice-card .lines-container.svelte-wamszv{font-size:12px}#choice-detail{padding:10px 14px}#choice-detail #choice-result{font-size:12px;line-height:1.65}}
+@media(max-width:1000px) and (min-width:701px){.guide-actions{gap:8px;flex-direction:column}#guide-hold{min-width:220px}#story-guide #next-chapter{width:100%}.story-copy h1{font-size:24px}.story-choices{right:4vw;width:38vw}}
+@media(max-width:700px){
+ .story-brand{font-size:16px;padding:12px 10px}.story-bar nav{flex:1;justify-content:space-evenly}.story-bar nav button{padding:0 7px;font-size:10px;white-space:nowrap}.bar-tools #pause{font-size:10px;padding:0 8px}
+ body .story-copy,body[data-chapter="1"] .story-copy,body[data-chapter="2"] .story-copy{left:6vw;top:69px;bottom:auto;max-width:88vw}
+ .story-copy h1{font-size:22px;line-height:1.5}.story-copy .story-kicker{margin-bottom:7px}.story-copy details{margin-top:12px;max-width:88vw}.story-copy summary{font-size:11px;padding:9px 12px;min-height:42px;max-width:300px}.note-body{max-height:30vh;padding:12px 15px}.story-copy .note-body p{font-size:12px}.note-body blockquote{font-size:15px}.note-body small{font-size:10px}
+ body #story-guide.story-footer{left:4vw;right:4vw;bottom:max(12px,env(safe-area-inset-bottom));display:block;padding:15px 16px;min-height:0}
+ #guide-step{font-size:9px;margin-bottom:5px}#guide-title{font-size:17px}body #story-guide #story-instruction{font-size:11px;line-height:1.6;margin-top:5px}#guide-progress{font-size:10px;margin-top:4px}
+ .guide-actions{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:8px;margin-top:12px}.guide-actions:has(#guide-hold[hidden]){display:flex;justify-content:flex-end;margin-top:7px}
+ #guide-hold{min-width:0}#story-guide button.primary-action{padding:10px 8px;font-size:12px;min-height:46px;gap:5px}#story-guide #next-chapter{padding:10px 8px;font-size:11px;min-height:46px;white-space:normal}#guide-hold .hold-symbol{font-size:18px}
+ body[data-chapter="2"] #story-guide{padding:12px 15px}body[data-chapter="2"] #guide-title{font-size:16px}body[data-chapter="2"] #guide-progress{display:none}
+ body[data-chapter="2"] .story-copy h1{font-size:20px}body[data-chapter="2"][data-selected="true"] .story-copy{top:66px}body[data-chapter="2"][data-selected="true"] .story-copy h1{font-size:17px}
+ body[data-chapter="2"] .story-choices{left:6vw;right:6vw;bottom:165px;width:auto;max-height:calc(100dvh - 315px);padding:1px}
+ body[data-chapter="2"][data-selected="true"] .story-choice-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.story-choice-tabs button{font-size:13px;min-height:48px}.story-choice-tabs button span{font-size:9px}
+ #choice-detail{padding:10px 13px;margin-top:8px}#choice-detail #choice-result{font-size:11px;line-height:1.8;margin-top:8px}#choice-card .container.svelte-wamszv{height:144px;padding:14px 20px}#choice-card .lines-container.svelte-wamszv{font-size:12px;line-height:1.65}
+ #read-after-choice{font-size:12px;padding:10px 8px}.choice-exit{padding:10px 13px 12px}#choice-reading-hint{font-size:10px}
+ body[data-phase="done"] .story-choices{max-height:calc(100dvh - 270px);bottom:130px}body[data-phase="done"] #story-guide{padding:10px 15px}body[data-phase="done"] #guide-step{display:none}body[data-phase="done"] #story-guide .guide-actions{display:none}body[data-phase="done"] #guide-title{font-size:14px}body[data-phase="done"] #story-instruction{font-size:10px}
+ body[data-chapter="2"][data-phase="done"] .text-sprite-3d{opacity:0!important}
+ #story-error{inset:200px 6vw auto;max-width:none;font-size:12px}.reading-toolbar{padding:16px 20px}.reading-toolbar span{font-size:11px}#reading-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 16px;padding:16px 0}#reading-nav a{font-size:12px}#reading-entry{padding:16px 18px}#reading-entry h2{font-size:19px}#reading-entry #reading-choice-result,#reading-intro{font-size:13px}
+}
+@media print{#story-guide,#reading-entry,#reading-nav,.reading-eyebrow,#reading-intro,.experience-recap{display:none!important}}
+
+/* A saved card is a reading surface; only an uncollected option starts a trip. */
+.choices-heading,body[data-phase="done"] .choices-heading{margin-bottom:0;padding:9px 10px 5px}
+.collection-hint{margin:0 0 10px;padding:0 10px 9px;background:#f6f2dded;color:#636c54;font-size:10px;line-height:1.7}
+.story-choice-tabs button:after{display:none}
+.choice-collection-state{display:block;font-family:system-ui,sans-serif;font-size:10px;line-height:1.5;letter-spacing:0;margin-top:7px;color:#687657}
+.story-choice-tabs button[aria-pressed="true"] .choice-collection-state{color:#edf2d3}
+.story-choice-tabs button[data-collected="true"]{border-color:#778766}
+body[data-has-cards="true"] .story-choice-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+body[data-has-cards="true"] .story-choice-tabs button{font-size:11px;padding:9px 8px;line-height:1.6;letter-spacing:0}
+body[data-has-cards="true"] .story-choice-tabs button span{display:block;margin:0 0 3px}
+body[data-has-cards="true"] .choice-collection-state{font-size:9px}
+body[data-reviewing-card="true"] .text-sprite-3d{opacity:0!important}
+@media(max-width:700px){
+ .collection-hint{font-size:10px;margin-bottom:7px;padding-bottom:7px}
+ body[data-has-cards="true"] .story-choice-tabs button{padding:8px 6px;font-size:10px}
+ body[data-has-cards="true"] .choice-collection-state{font-size:9px;line-height:1.6;margin-top:6px}
+}

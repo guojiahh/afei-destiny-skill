@@ -1,6 +1,6 @@
 # 工作区地图
 
-更新日期：2026-10-16
+更新日期：2026-10-20
 
 ## 一句话说明
 
@@ -10,6 +10,38 @@
 在 Mac 上从实际仓库根目录开始，按[开发初始化指南](../CONTRIBUTING.md)建立本机环境。
 
 最重要的边界是：**含答案题库、预测记录和错题分析永远不能进入可安装 Skill。** 否则下一轮作答会被答案污染。
+
+## 先选入口
+
+| 你要做什么 | 从哪里开始 | 需要哪些目录 |
+|---|---|---|
+| 安装并让 Codex 咨询 | [Skill 安装与首次调用](../afei-destiny-skill/README.md) | 只安装 `afei-destiny-skill/` |
+| 先体验匿名报告 | [V21 完整 HTML](../design-demos/cihou-wayfinder-v21/final_report.html)、[演示说明](../design-demos/cihou-wayfinder-v21/README.md) | 完整仓库的 `design-demos/`，或单独保存该 HTML |
+| 修改功能、运行检查 | [开发环境与命令](../CONTRIBUTING.md)、[当前交接](CIHOU_HANDOFF.md) | 完整研发仓库 |
+| 复现实验或查看评测 | [评测入口](../evaluation/README.md) | `evaluation/`；不复制进安装包 |
+| 按受众查文档 | [文档总索引](README.md) | 说明层；不属于运行依赖 |
+
+核心计算使用 Python 3.9–3.13 和包内 `lunar_python 1.4.8`，无需额外安装运行依赖。开发检查的 PyYAML 由 `requirements-dev.txt` 提供；Node.js 用于 JavaScript 行为回归，浏览器用于实际交互验收。只运行计算器不需要 Node.js，也不需要先运行开发服务器。
+
+## 仓库快速检查与匿名预览
+
+从仓库根目录执行；环境初始化见 [CONTRIBUTING.md](../CONTRIBUTING.md)。
+
+```sh
+source .venv/bin/activate
+python tools/check_workspace.py
+python design-demos/cihou-wayfinder-v21/build_demo.py --check
+```
+
+修改 Skill 后再运行 `python tools/check_workspace.py --skill`；它需要本机 `skill-creator` 校验器，可用 `--skill-validator /实际路径/quick_validate.py` 指定。生成器或共享画面改动后，先运行 `python design-demos/cihou-wayfinder-v21/build_demo.py` 重建再 `--check`，不要用旧 HTML 验收新源码。
+
+需要 HTTP 开发预览时，只服务匿名演示目录：
+
+```sh
+python -m http.server 8765 --bind 127.0.0.1 --directory design-demos/cihou-wayfinder-v21
+```
+
+再访问 `http://127.0.0.1:8765/final_report.html`，终端按 Ctrl+C 停止。本地预览地址不是在线交付服务；不要对仓库根目录或真实咨询目录开放文件服务。HTML 内嵌原资源、九章正文和下载，可作为单文件保存。
 
 ## Git 仓库边界
 
@@ -72,9 +104,10 @@
 | `scripts/consultation_harness.py` | 会话发现与创建、状态机、来源、血缘和失效 | 改阶段或恢复语义时 |
 | `scripts/consultation_output_router.py` | 只选择活动产物的输出计划 | 改输出路由时 |
 | `scripts/validate_final_report.py` | 检查用户报告章节顺序并阻止技术章节前置 | 改最终报告固定格式时 |
-| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py` | 校验个人模型、生成并登记正式 HTML | 改 HTML 数据契约、完整内容与呈现时 |
+| `scripts/generate_html_report.py`、`scripts/render_quiet_report.py`、`scripts/render_wayfinder_report.py` | 校验来源模型、按版本分派并内嵌原资源生成正式 HTML | 改 HTML 数据契约、完整内容与呈现时 |
 | `assets/cihou/` 内的 `mobius-model-template.json`、`user-report-template.md`、`technical-report-template.md` | 新报告固定模型与双底稿骨架 | 改所有报告共同结构时 |
-| `assets/cihou/quiet/` | 当前 quiet 正式页面模板、样式、交互和图像 | 改统一莫比乌斯视觉与阅读方式时 |
+| `assets/cihou/quiet/wayfinder/` | 当前 V21 原运行时、资源、适配层、界面和视听效果 | 改统一体验与阅读方式时 |
+| `assets/cihou/quiet/immersive/` | V8、V15 等历史程序绘画资源 | 复核历史版本时，不作为当前默认入口 |
 | `scripts/doctor.py` | 环境与固定命例自检 | 改依赖或运行入口时 |
 | `scripts/test_*.py` | Skill 全部回归测试 | 每个脚本修复必须同步补测试 |
 | `scripts/vendor/` | 内置第三方依赖 | 只有升级依赖时 |
@@ -136,7 +169,7 @@ evaluation/
 - `assets/showcase/`：README 主视觉、社交预览、能力闭环图和抽象背景。
 - `assets/contact/`：联系图片。
 - `design-demos/`：匿名产品原型、保留的历史设计，以及上述展示图的 HTML 源稿和渲染脚本；以[设计演示索引](../design-demos/README.md)区分用途。
-- 当前完整匿名入口为 [V19 求职示例](../design-demos/cihou-wayfinder-v19/final_report.html)，合成双底稿、模型与构建脚本位于同目录；由正式生成器输出原站引擎与资源内嵌的单份 HTML。`design-demos/cihou-quiet.html`、V8、V15、[V16](../design-demos/cihou-wayfinder-v16/final_report.html)、[V17](../design-demos/cihou-wayfinder-v17/final_report.html)和 [V18](../design-demos/cihou-wayfinder-v18/final_report.html)保留为历史设计对照。正式开发从 [此后交接](CIHOU_HANDOFF.md)进入 Skill 内的生成器与 `assets/cihou/quiet/wayfinder/`。
+- 当前完整匿名入口为 [V21 求职示例](../design-demos/cihou-wayfinder-v21/final_report.html)，合成双底稿、模型、来源计划与[构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py)位于同目录；正式生成器输出原站引擎与资源内嵌的单份 HTML。实际交互记录见 [V21 QA](../design-demos/cihou-wayfinder-v21/QA.md)。V19、V20、V18 及更早版本保留在[历史设计索引](../design-demos/README.md)，不随当前源码批量重写。正式开发从[此后交接](CIHOU_HANDOFF.md)进入 Skill 内生成器与 `assets/cihou/quiet/wayfinder/`。
 - `design-demos/cihou-stage1.html` 及同名目录是四个人工匿名案例的历史设计对照，不再是当前开发入口。真实个人报告只保存在对应 `consultation_state/<session>/`。
 
 它们不会影响 Skill 的推理准确率。做功能优化时无需加载这些文件。
@@ -165,6 +198,8 @@ evaluation/
 
 ## 什么任务从哪里开始
 
+下表中的 `scripts/` 与 `references/` 简写均相对于 `afei-destiny-skill/`；开发检查与匿名演示命令从仓库根目录运行。
+
 | 任务 | 第一个入口 | 必做验证 |
 |---|---|---|
 | 排盘算错 | `scripts/calculate_bazi.py` | 添加 fixture/边界测试，运行计算器测试 |
@@ -176,7 +211,7 @@ evaluation/
 | 开始或继续真实咨询 | `consultation_harness.py` | 先对根目录 `discover`；用户选择后对单一子目录 `start` 或 `status`、`audit`、`resume` |
 | 下一次完整模拟咨询 | [此后交接](CIHOU_HANDOFF.md)和现有 Skill 协议 | 新开独立会话，逐轮由用户提供反馈；完成双底稿、个人模型与 HTML，校验登记后才完成默认交付 |
 | 修改正式 HTML 交付 | [HTML 协议](../afei-destiny-skill/references/html-report.md)、`scripts/generate_html_report.py`、`assets/cihou/`（均在 Skill 内） | 运行来源、覆盖、失效与安全回归；核对完整内容和桌面／窄屏交互 |
-| 修改此后匿名视觉样机 | [V19 构建脚本](../design-demos/cihou-wayfinder-v19/build_demo.py)、[此后交接](CIHOU_HANDOFF.md) | 重建并 `--check` 单文件 HTML，核对桌面／窄屏、行走、换景、选择、暂停与减少动态；不覆盖历史原型 |
+| 修改此后匿名视觉样机 | [V21 构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py)、[此后交接](CIHOU_HANDOFF.md) | 重建并 `--check` 单文件 HTML，核对长按引导、首次收卡／已得直读、明确重播、阅读返回及桌面／窄屏；保留历史原型 |
 | 生成最终报告 | `consultation_output_router.py`、`references/markdown-report.md`、`references/technical-report.md` | 分别形成来源计划，先写重点问题和人生全景，再写技术报告；用户报告须通过 `validate_final_report.py`，继续按 [HTML 协议](../afei-destiny-skill/references/html-report.md) 编排模型，生成并登记主交付 HTML |
 
 ## 文件治理规则
@@ -192,7 +227,7 @@ evaluation/
 
 - Git 主分支：`main`；当前工作分支以 `git branch --show-current` 为准。
 - 当前 Skill：确定性排盘、民用时与主口径盘对照、多会话独立目录、继续/新开决策、入口关注方向、盲测前完整审计、四到五条开场盲测、一次反馈转场、倾听式主问题、来源防火墙、输出路由，以及带具体场景和心结收束的读者优先双 Markdown 报告规范已实现；默认个人 HTML 生成、校验、登记与下游失效已接通，双 Markdown 保留为底稿。
-- 当前此后：第一阶段已于 2026-10-16 完成并获用户确认；quiet 视觉已用于正式个人 HTML，所有新完整报告统一莫比乌斯隐喻、三态、九章正文与双底稿结构。2026-10-20 的 V19 继续复用 Wayfinder 原站运行时与美术、音频及视频，按住沿固定路线行走，首景重复六节点循环，三态为此刻／来处／可能；每份新模板按[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)必填 `loop_story`，采用自然的第二人称与可能的形成路径，方法说明集中于依据，场景短句平滑浮现；原资源与九章全文内嵌为单份 HTML。V19 沿用 V18 文案，仅集中处理首次加载浮字定位。原 V8、V15、V16、V17、V18 与历史交付保留。原作权属、实际验收与私有在线交付的后续范围以[交接说明](CIHOU_HANDOFF.md)为准。
+- 当前此后：默认运行时为 `wayfinder-v21`，复用 Wayfinder 原引擎及资源，路径为现在／之前／此后／完整解读。前两景长按沿固定路线阅读，实际经过全部节点并松开后提示下一步，始终可跳看；此后未得项完成有限体验收卡，已得项直接阅读，只有显式重播才再次播放。本页显示收卡进度，切章或从头体验保留，刷新重置；一张卡即可进入九章解读，阅读关闭后仍回到当前卡。每份报告按[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)填写自己的 `loop_story`，分析与来源来自本次双底稿。旧 V20、V19 及更早 HTML 保留；原作权属、实际 QA 与后续范围以[交接说明](CIHOU_HANDOFF.md)为准，私有在线托管仍未实现。
 - 当前本地门禁：Skill 与评测两组回归测试（数量以当前检查输出为准）、`doctor.py`、最终报告结构与心结收束校验、Skill 结构校验和 Markdown 链接检查。
 - 当前 2010–2025 语料：16 届、107 个案例、515 题。
 - 所有 515 题均已揭晓，现阶段只能作为训练/回归池。

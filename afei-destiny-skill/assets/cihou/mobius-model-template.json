@@ -6,10 +6,10 @@
   "sources": {},
   "authoring_notes": [
     "固定的是莫比乌斯视觉与章节阅读顺序；事实、困局、行动、分支和语言必须逐次来自本次完整咨询与双报告。",
-    "主图采用此刻／来处／可能三视角；第一视角六个loop_story节点顺序固定、逐圈复现，具体短句和解释每次从当前资料填写。填写前读references/loop-narrative.md。",
+    "主图按现在／之前／此后三步引导：前两步按住沿固定路线读当前循环与可能形成路径，覆盖该步全部短句后提示可去下一步；不自动切场，不锁导航。此后首次点待收集项完整体验后收卡，已得卡点开直读；只有明确点“重播这段体验”才重播。收卡显示本页x/3，切章或从头体验保留，刷新新页面后重置。一张卡即可进入完整解读。loop_story六节点顺序固定，所有具体内容仍从本次资料填写。",
     "全篇按client-voice.md写作：可从当前模式推演可能的学习经历，以“你可能曾经……”自然引入；不逐段重复假设、无依据、待核对等编写说明。来源状态和反证保留在底层与集中校验区。",
     "不要把莫比乌斯隐喻当作已经证实的心理因果。证据不足时保留 unknown/hypothesis，无依据的边不要添加。",
-    "第三幅画面表示可控尝试而非保证成功；外部回应只能写成 condition，不能进入自动叙事。可选 hero_choices 需恰好三条有条件、等权的路径，各含 id/title/condition/text/refs；不能以通用励志句填充。",
+    "第三幅画面表示可控尝试而非保证成功；外部回应只能写成 condition，不能进入自动叙事。可选 hero_choices 省略、留空或恰好三条，各含 id/title/condition/text/refs/feedback；feedback 按 attempt/prepare/sustain 各一条，含三句短话与结果说明，沿用该 choice 的来源。点击一次即换场、自动呈现有限行动与结果，不再要求第二次选择或长按；结果不可声称现实行动或外部成功已经发生。 所选卡只作为完整解读的阅读入口；显示所选卡摘要，并保留九章完整目录和阅读顺序。不要要求收齐三张卡。",
     "补全所有占位符并审阅来源后设 draft=false。代码能核对结构与出处，语义真实性仍需逐段人工审阅。"
   ],
   "title": "__CIHOU_FILL__: 个人报告标题",
@@ -70,16 +70,16 @@
   },
   "presentation": {
     "style": "quiet-v1",
-    "hero_runtime": "wayfinder-v19",
+    "hero_runtime": "wayfinder-v21",
     "hero_states": [
       {
         "lines": [
           "__CIHOU_FILL__: 第一行",
           "__CIHOU_FILL__: 第二行"
         ],
-        "description": "__CIHOU_FILL__: 此刻：当前困局怎样逐步被维持，哪部分是尚待核对的解释",
-        "hint": "__CIHOU_FILL__: 长按沿环行走，松开停下；每圈重现相同六句",
-        "label": "__CIHOU_FILL__: 第一视角的循环概述",
+        "description": "__CIHOU_FILL__: 现在：当前困局怎样逐步被维持，哪部分是尚待核对的解释",
+        "hint": "__CIHOU_FILL__: 按住看看现在的循环，松开停下；看过六句后可主动去之前",
+        "label": "__CIHOU_FILL__: 现在阶段的循环概述",
         "node_id": "pattern",
         "refs": [
           "user:2"
@@ -90,12 +90,17 @@
           "__CIHOU_FILL__: 第一行",
           "__CIHOU_FILL__: 第二行"
         ],
-        "description": "__CIHOU_FILL__: 来处：承接已知往事或由当前模式推演可能的学习经历，用自然的“你可能曾经……”讲清其作用与变化",
-        "hint": "__CIHOU_FILL__: 回看这套做法如何逐渐成为熟悉的选择",
-        "label": "__CIHOU_FILL__: 第二视角的来处概述",
+        "description": "__CIHOU_FILL__: 之前：承接已知往事或由当前模式推演可能的学习经历，用自然的“你可能曾经……”讲清其作用与变化",
+        "hint": "__CIHOU_FILL__: 按住回看之前怎样学会这种做法，看过三句后可主动去此后",
+        "label": "__CIHOU_FILL__: 之前阶段的可能形成路径",
         "node_id": "experience",
         "refs": [
           "user:2"
+        ],
+        "anchors": [
+          "__CIHOU_FILL__: 这种做法曾在什么条件下有用",
+          "__CIHOU_FILL__: 它怎样逐渐成为熟悉的规则",
+          "__CIHOU_FILL__: 今天什么条件变了，哪些仍可留下"
         ]
       },
       {
@@ -103,9 +108,9 @@
           "__CIHOU_FILL__: 第一行",
           "__CIHOU_FILL__: 第二行"
         ],
-        "description": "__CIHOU_FILL__: 离环视角：改变一个可控行动，观察反馈而不是承诺未来",
-        "hint": "__CIHOU_FILL__: 向下阅读具体实施步骤",
-        "label": "__CIHOU_FILL__: 第三状态无障碍说明",
+        "description": "__CIHOU_FILL__: 此后：在实际条件下尝试一小步，观察反馈，不承诺外部结果",
+        "hint": "__CIHOU_FILL__: 点击一个选择得到反馈卡，带着它读完整解读",
+        "label": "__CIHOU_FILL__: 此后阶段的选择与阅读引导",
         "node_id": "action",
         "refs": [
           "user:5"
@@ -184,7 +189,63 @@
           "user:6"
         ]
       }
-    }
+    },
+    "hero_choices": [
+      {
+        "id": "attempt",
+        "title": "__CIHOU_FILL__: 本次条件下的一条具体路径",
+        "condition": "__CIHOU_FILL__: 这条路径适用的实际条件",
+        "text": "__CIHOU_FILL__: 本人可控的一小步、必要支持和完成线",
+        "refs": [
+          "user:5"
+        ],
+        "feedback": {
+          "mode": "attempt",
+          "lines": [
+            "__CIHOU_FILL__: 行动开始的一句",
+            "__CIHOU_FILL__: 行动中的成本或支持",
+            "__CIHOU_FILL__: 这一步停在哪里"
+          ],
+          "result": "__CIHOU_FILL__: 说明本轮体验带来的认识与可观察内容，不把动画当作已经发生的现实结果"
+        }
+      },
+      {
+        "id": "prepare",
+        "title": "__CIHOU_FILL__: 本次条件下的一条具体路径",
+        "condition": "__CIHOU_FILL__: 这条路径适用的实际条件",
+        "text": "__CIHOU_FILL__: 本人可控的一小步、必要支持和完成线",
+        "refs": [
+          "user:5"
+        ],
+        "feedback": {
+          "mode": "prepare",
+          "lines": [
+            "__CIHOU_FILL__: 行动开始的一句",
+            "__CIHOU_FILL__: 行动中的成本或支持",
+            "__CIHOU_FILL__: 这一步停在哪里"
+          ],
+          "result": "__CIHOU_FILL__: 说明本轮体验带来的认识与可观察内容，不把动画当作已经发生的现实结果"
+        }
+      },
+      {
+        "id": "sustain",
+        "title": "__CIHOU_FILL__: 本次条件下的一条具体路径",
+        "condition": "__CIHOU_FILL__: 这条路径适用的实际条件",
+        "text": "__CIHOU_FILL__: 本人可控的一小步、必要支持和完成线",
+        "refs": [
+          "user:5"
+        ],
+        "feedback": {
+          "mode": "sustain",
+          "lines": [
+            "__CIHOU_FILL__: 行动开始的一句",
+            "__CIHOU_FILL__: 行动中的成本或支持",
+            "__CIHOU_FILL__: 这一步停在哪里"
+          ],
+          "result": "__CIHOU_FILL__: 说明本轮体验带来的认识与可观察内容，不把动画当作已经发生的现实结果"
+        }
+      }
+    ]
   },
   "chapters": [
     {

@@ -1,0 +1,106 @@
+{
+  "source": "/Users/afei/Desktop/bazi-skill-main/design-demos/cihou-wayfinder-v16/wayfinder/reference/recovered-source",
+  "purpose": "Original published Wayfinder source-map feature subset for interaction reuse; static source, not behavior replay",
+  "files": [
+    {
+      "path": "config.js",
+      "sha256": "b74f5cbe37101f3fb44fc613d7be05633fbe6f0689356115428fca3b89941b5f",
+      "bytes": 1640
+    },
+    {
+      "path": "systems/HaikuCollectionSystem.js",
+      "sha256": "9d322d4d4b5e3c5a84363cdad96bb2cf83f59d485a3805eb34c9cc6219812ab5",
+      "bytes": 11945
+    },
+    {
+      "path": "systems/TokenPlacementSystem.js",
+      "sha256": "59a25c0bc2b9a533dbf1a0e76bdf5d59c5bd4ad239d40b67389adcb1cd2cef52",
+      "bytes": 10872
+    },
+    {
+      "path": "systems/TokenConstellationSystem.js",
+      "sha256": "8619fa32ec1134e94ec0dc690fa8625653c188f70e8768849cf8b997decefa9a",
+      "bytes": 23421
+    },
+    {
+      "path": "systems/TokenPaperFollowSystem.js",
+      "sha256": "79a1b7f332aa55bb3b83170ce7dcd1e4f912ed3ac30e31f8973da4b5ec29bfa9",
+      "bytes": 13751
+    },
+    {
+      "path": "systems/HaikuFloraSystem.js",
+      "sha256": "41dcb44f75bcd5996071717fe60da5c804396bb845174078b63c61aaf5021b50",
+      "bytes": 10026
+    },
+    {
+      "path": "systems/OriginTreeSystem.js",
+      "sha256": "05e4a2249421be423f1e1ca13044c7483e437d170a158835940b79d235623ec3",
+      "bytes": 18646
+    },
+    {
+      "path": "systems/TreeSpriteAnimationSystem.js",
+      "sha256": "a32ef4c40f33e3e2b1b72d0ff885369df2f5d794d4652890c0e21c85498163e6",
+      "bytes": 3488
+    },
+    {
+      "path": "systems/SpriteSheetAnimationSystem.js",
+      "sha256": "e290311c2d1ad4e58dbaf0e98287d03dae5379ca8ccbab4eeb266c82337e106e",
+      "bytes": 3948
+    },
+    {
+      "path": "systems/OutroSystem.js",
+      "sha256": "ba12ce1066364acd01aee22e64df33bfec7feb00f892b7b11d48627aa8f0e6b1",
+      "bytes": 11823
+    },
+    {
+      "path": "systems/FloatingEndLines.js",
+      "sha256": "928c5e3c6c5f6c5e2b77fe9887277a4aff466996fbac9b70fc69f851c3e0f9a5",
+      "bytes": 2521
+    },
+    {
+      "path": "systems/SimpleEnvironmentSystem.js",
+      "sha256": "9c31199504d3b5c2dff6d85b8050957359a9ca7db23584e6585733fe678649d5",
+      "bytes": 22213
+    },
+    {
+      "path": "systems/SimpleEnvironmentAssetsSystem.js",
+      "sha256": "e67ca1fef684cd6fe39fc23cad5d501781f49a6dc5a599d90ac408d88b38b920",
+      "bytes": 12377
+    },
+    {
+      "path": "systems/CompassSystem.js",
+      "sha256": "cf4f69d813e60d3e16d3ea70850a874cd2acea35f22f0e0a4848024db2d6afb6",
+      "bytes": 16626
+    },
+    {
+      "path": "systems/GameUISystem.js",
+      "sha256": "8b0e5b023c8a78bc03ace814adbe18903f207de0536b9526982b9da2d7c1bb7e",
+      "bytes": 11489
+    },
+    {
+      "path": "systems/initialize.js",
+      "sha256": "5490017966f2eebef58912485979d69296fe2098943fafd1f589d0a8c6e5a2ea",
+      "bytes": 13019
+    },
+    {
+      "path": "systems/character/CapeMesh.js",
+      "sha256": "a025f02e2cfd5fb4a2101b5f20a262f171af11cfdf93c7b5995517a82561d8a1",
+      "bytes": 12111
+    },
+    {
+      "path": "overlays/HaikuPopup.svelte",
+      "sha256": "2b569f52a329a2f8b1fd09b6afc239dd0c632188afde2306f01c207984f9f0a9",
+      "bytes": 7021
+    },
+    {
+      "path": "overlays/GamePages.svelte",
+      "sha256": "3e323223e0d1e9b285564d96db9a12964cd8f9c5016d811c7debdd41e9edddb5",
+      "bytes": 19220
+    },
+    {
+      "path": "tags/tags.js",
+      "sha256": "ab494365083df13ae94cfd7564cf1a0c53f7a697f2029edc30ad267fa4a1bdc4",
+      "bytes": 32710
+    }
+  ]
+}

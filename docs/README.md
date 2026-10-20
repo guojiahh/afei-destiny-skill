@@ -2,25 +2,35 @@
 
 这个目录只放“解释项目”的材料；可安装 Skill 在 `afei-destiny-skill/`，评测程序和实验原件在 `evaluation/`。
 
-## 先看哪一份
+## 使用者：安装或体验
 
 | 你的目的 | 入口 |
 |---|---|
-| 想弄明白整个仓库 | [工作区地图](WORKSPACE_GUIDE.md) |
-| 想在新电脑上开发、运行检查 | [参与开发与迁移说明](../CONTRIBUTING.md) |
-| 想知道题怎么做、怎么评分、怎么改 Skill | [评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md) |
-| 想看 2026-08-11 的知识补全与证据 | [知识与推理缺口审计](KNOWLEDGE_AUDIT.md) |
-| 想安装或调用 Skill | [技能安装与使用](../afei-destiny-skill/README.md) |
-| 想复现实验 | [评测实验室索引](../evaluation/README.md) |
-| 想看本轮真实结果 | [2010–2025 迭代报告](../evaluation/competition-iterations/iteration_report.md) |
-| 想对外演示 | [三分钟演示指南](SHOWCASE.md) |
-| 想接续此后开发或开始下一次完整咨询 | [当前版本与新对话交接](CIHOU_HANDOFF.md)：第一阶段已完成，下一阶段从此进入 |
-| 想了解此后的产品形态与后续规划 | [此后产品形态与体验方案](CIHOU_PRODUCT_PLAN.md) |
-| 想查看第一阶段完成范围与设计约束 | [主图与连续阅读重构方案](CIHOU_PHASE1_REDESIGN.md)：莫比乌斯视觉与九章正文已固定为新报告模板 |
-| 想了解主图与完整咨询报告如何衔接 | [主图与完整报告体验方案](CIHOU_REPORT_EXPERIENCE.md)（历史研究，非现役选型） |
-| 想查看默认最终交付的生成流程 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md)、[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md) |
-| 想体验当前完整匿名演示 | [V19 求职示例](../design-demos/cihou-wayfinder-v19/final_report.html)及[构建脚本](../design-demos/cihou-wayfinder-v19/build_demo.py)；显式合成材料，真实个人报告另用本次来源生成 |
-| 想区分当前样机和历史设计 | [设计演示索引](../design-demos/README.md) |
+| 安装并首次调用 | [Skill 安装与使用](../afei-destiny-skill/README.md)：只复制技能包，先自检再调用 |
+| 先体验匿名界面 | [V21 完整 HTML](../design-demos/cihou-wayfinder-v21/final_report.html)、[演示说明](../design-demos/cihou-wayfinder-v21/README.md)、[实际 QA](../design-demos/cihou-wayfinder-v21/QA.md) |
+| 查看个人报告怎样生成 | [HTML 报告协议](../afei-destiny-skill/references/html-report.md)、[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md) |
+| 对外介绍项目 | [三分钟演示指南](SHOWCASE.md) |
+
+V21 的路径是现在／之前／此后／完整解读：前两景长按阅读，此后收卡、已得卡直读，一张卡即可深入正文。匿名材料不是个人咨询，真实报告必须从本次会话来源生成。
+
+## 开发者：环境、实现与目录边界
+
+| 你的目的 | 入口 |
+|---|---|
+| 看懂安装包与研发仓库 | [工作区地图](WORKSPACE_GUIDE.md) |
+| 在新电脑开发、运行检查 | [参与开发](../CONTRIBUTING.md) |
+| 继续当前 V21 | [当前版本与交接](CIHOU_HANDOFF.md)、[V21 构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py) |
+| 区分当前样机和历史设计 | [设计演示索引](../design-demos/README.md) |
+| 了解产品规划 | [产品形态与体验方案](CIHOU_PRODUCT_PLAN.md)：实际能力以当前交接和代码为准 |
+
+## 研究者：评测与历史材料
+
+| 你的目的 | 入口 |
+|---|---|
+| 看做题、评分与迭代方法 | [评测与迭代方法报告](EVALUATION_AND_ITERATION_METHOD.md) |
+| 复现实验 | [评测实验室](../evaluation/README.md)、[2010–2025 迭代报告](../evaluation/competition-iterations/iteration_report.md) |
+| 复核知识补全历史 | [2026-08-11 知识审计](KNOWLEDGE_AUDIT.md) |
+| 回看早期报告研究 | [主图重构方案](CIHOU_PHASE1_REDESIGN.md)、[主图与报告研究](CIHOU_REPORT_EXPERIENCE.md)：历史材料，非现役选型 |
 
 ## 项目说明
 

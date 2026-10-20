@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "synthetic-wayfinder-job-v20",
+  "synthetic_demo": true,
+  "consultation_registered": false,
+  "notice": "匿名求职演示。人物情境为合成内容，来处以可能的形成路径表达；没有对应真实咨询者。",
+  "inputs": [
+    {
+      "path": "build_demo.py",
+      "sha256": "23c99beecc42eb234c393e37517fa310d1de8dd62470dff60717344589169495"
+    },
+    {
+      "path": "../cihou-wayfinder-v15/build_demo.py",
+      "sha256": "9e93b2affba4a5de657bf67922d7fbd21c01f9e69ec4aa5bb823010ce05b8ae1"
+    }
+  ],
+  "inference": [
+    {
+      "id": "formation-pathway",
+      "kind": "hypothesis",
+      "inference_type": "mechanism-grounded-possible-past",
+      "refs": [
+        "user:2",
+        "technical:7"
+      ],
+      "verified_biography": false
+    }
+  ],
+  "sources": {
+    "user": {
+      "path": "final_report.md",
+      "artifact_id": "synthetic-user-source-v20",
+      "sha256": "3ca1fe495c98bef9a796153b435d9048ab538eebb2c8cb7d5d17276f3366ad26"
+    },
+    "technical": {
+      "path": "technical_analysis.md",
+      "artifact_id": "synthetic-technical-source-v20",
+      "sha256": "186e1501514ad48bfff3426f60a22d31bc2d069e427672a28c9614679fa4ba32"
+    }
+  },
+  "choice_feedback": [
+    {
+      "choice_id": "try",
+      "mode": "attempt",
+      "refs": [
+        "user:5"
+      ]
+    },
+    {
+      "choice_id": "prepare",
+      "mode": "prepare",
+      "refs": [
+        "user:2",
+        "user:5"
+      ]
+    },
+    {
+      "choice_id": "support",
+      "mode": "sustain",
+      "refs": [
+        "user:3",
+        "user:5"
+      ]
+    }
+  ],
+  "outputs": {
+    "report-model.json": {
+      "sha256": "8f3c961a450fd2153f6e4d8c0e2f25c6818d7d281e2cc6d8ab120fb0445a8f0a"
+    },
+    "story-data.js": {
+      "sha256": "3d895289ef265a8452d6aa7d2c46e514fad197ff78bde94292cf9bd3ef99b453"
+    },
+    "final_report.html": {
+      "sha256": "efde62362f3557b142180415fb663b672dda598e3223afd07a196caaeae92ab3"
+    }
+  }
+}

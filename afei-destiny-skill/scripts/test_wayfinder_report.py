@@ -59,7 +59,10 @@ class WayfinderReportTests(unittest.TestCase):
             fixture.model["presentation"]["hero_choices"] = [
                 {"id": "synthetic-" + str(i), "title": "Synthetic choice " + str(i),
                  "condition": "Synthetic condition " + str(i),
-                 "text": "One synthetic controllable action " + str(i), "refs": ["user:5"]}
+                 "text": "One synthetic controllable action " + str(i), "refs": ["user:5"],
+                 "feedback": {"mode": ["attempt", "prepare", "sustain"][i],
+                              "lines": ["Synthetic step " + str(n) for n in range(3)],
+                              "result": "Synthetic finite experience " + str(i)}}
                 for i in range(3)
             ]
             fixture.model["presentation"]["loop_story"] = {
@@ -107,7 +110,7 @@ class WayfinderReportTests(unittest.TestCase):
 
     def test_source_bound_default_runtime_and_registered_delivery(self):
         fixture = self.fixture
-        self.assertEqual("wayfinder-v19", self.provenance["hero"]["version"])
+        self.assertEqual("wayfinder-v21", self.provenance["hero"]["version"])
         runtime = (wayfinder.ASSETS / "runtime" / "wayfinder.js").read_bytes()
         self.assertEqual(hashlib.sha256(runtime).hexdigest(), self.provenance["hero"]["runtime_sha256"])
         self.assertEqual(fixture.model["sources"], self.provenance["sources"])
@@ -130,6 +133,8 @@ class WayfinderReportTests(unittest.TestCase):
         self.assertEqual([state["anchors"] for state in model["presentation"]["hero_states"]],
                          self.data["anchors"])
         self.assertEqual(model["presentation"]["hero_choices"], self.data["choices"])
+        self.assertEqual(["attempt", "prepare", "sustain"],
+                         [choice["feedback"]["mode"] for choice in self.data["choices"]])
         self.assertEqual(model["presentation"]["loop_story"], self.data["loop_story"])
         static_story = self.html.split('<ol class="static-story">', 1)[1].split(
             '<section class="reading-section chapter-', 1)[0]
@@ -174,6 +179,7 @@ class WayfinderReportTests(unittest.TestCase):
         model["presentation"]["hero_states"][0]["anchors"][0] = payload
         model["presentation"]["loop_story"]["nodes"][0].update(text="<img src=x>", detail=payload)
         model["presentation"]["loop_story"]["future"]["text"] = payload
+        model["presentation"]["hero_choices"][0]["feedback"]["result"] = payload
         model["chapters"][0]["cards"][0]["text"] = payload
         html = render(model, self.sources)
         self.assertNotIn(payload, html)
@@ -184,6 +190,7 @@ class WayfinderReportTests(unittest.TestCase):
         self.assertEqual(payload, data["hero_states"][0]["description"])
         self.assertEqual(payload, data["loop_story"]["nodes"][0]["detail"])
         self.assertEqual(payload, data["loop_story"]["future"]["text"])
+        self.assertEqual(payload, data["choices"][0]["feedback"]["result"])
         self.assertNotIn("<img src=x>", html)
         self.assertIn("&lt;img src=x&gt;", html)
         self.assertIn(r"\u003c/script", html)
@@ -271,55 +278,86 @@ class Element{
  constructor(tag='DIV'){this.tagName=tag;this.events={};this.children=[];this.dataset={};this.attrs={};
   this.hidden=false;this.open=false;this.textContent='';this.disabled=false;this.captured=new Set()}
  addEventListener(type,callback){(this.events[type]??=[]).push(callback)}
- emit(type,extra={}){const event={preventDefault(){},...extra};for(const cb of this.events[type]||[])cb(event)}
- setAttribute(key,value){this.attrs[key]=String(value)}removeAttribute(key){delete this.attrs[key]}
+ emit(type,extra={}){const event={target:this,currentTarget:this,preventDefault(){},...extra};for(const cb of this.events[type]||[])cb(event)}
+ setAttribute(key,value){this.attrs[key]=String(value);if(key==='disabled')this.disabled=true}
+ getAttribute(key){return this.attrs[key]??null}
+ removeAttribute(key){delete this.attrs[key];if(key==='disabled')this.disabled=false}
  append(...children){this.children.push(...children)}
- querySelectorAll(selector){assert.equal(selector,'button');return this.children.filter(child=>child.tagName==='BUTTON')}
+ replaceChildren(...children){this.children=[...children]}
+ querySelectorAll(selector){
+  assert.ok(['button','a'].includes(selector),'Unexpected element selector '+selector);
+  return this.children.filter(child=>child.tagName===selector.toUpperCase());
+ }
  showModal(){this.open=true}close(){this.open=false;this.emit('close')}focus(){this.focused=true}
+ scrollIntoView(options){this.scrolledIntoView=options||true}
+ scrollTo(options){this.scrollTop=typeof options==='object'?options.top:0}
  setPointerCapture(id){this.captured.add(id)}hasPointerCapture(id){return this.captured.has(id)}
  releasePointerCapture(id){this.captured.delete(id)}
 }
 function setup(initialReduced=false){
  const ids=['story-surface','reading-dialog','read-report','error-read','close-reading','story-note',
   'story-kicker','story-title','story-description','story-choices','next-chapter','restart','story-instruction',
-  'walk-choice','story-status','choice-detail','choice-tabs','choice-condition','choice-description',
+  'choice-result','choice-replay','choice-card','story-status','choice-detail','choice-tabs','choice-condition','choice-description',
+  'guide-hold','guide-title','guide-step','guide-progress','note-label','note-quote','note-help',
+  'choices-heading','choice-reading-hint','collection-hint','choice-scroll','hold-label','story-guide',
+  'read-after-choice','reading-entry','reading-choice-title','reading-choice-result','reading-title','reading-nav','reading-intro',
   'pause','sound','story-loader','story-error'];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  const chapters=[0,1,2].map(index=>{const button=new Element('BUTTON');button.dataset.chapter=String(index);return button});
+ const readingLinks=[1,2,3,4,5,6,7,8,9].map(index=>{
+  const link=new Element('A');link.dataset.readingChapter='chapter-'+index;
+  link.setAttribute('href','#chapter-'+index);link.textContent='Synthetic reading chapter '+index;
+  nodes['chapter-'+index]=new Element('SECTION');return link;
+ });
+ nodes['reading-nav'].append(...readingLinks);
  const skip=new Element('A'),media=new Element(),document=new Element(),window=new Element();
  media.matches=initialReduced;document.body=new Element('BODY');
  document.getElementById=id=>{assert.ok(nodes[id],'Unexpected node '+id);return nodes[id]};
  document.querySelector=selector=>{assert.equal(selector,'.skip');return skip};
  document.querySelectorAll=selector=>{
   if(selector==='button[data-chapter]'||selector==='[data-chapter]')return chapters;
-  if(selector==='.story-bar,.story-copy,.story-footer,.story-choices')return [new Element(),new Element(),new Element(),nodes['story-choices']];
+  if(selector==='[data-reading-chapter]'||selector==='a[data-reading-chapter]')return readingLinks;
+  if(selector==='.story-bar,.story-copy,.story-choices')return [new Element(),new Element(),nodes['story-choices']];
   throw Error('Unexpected selector '+selector);
  };
  document.createElement=tag=>new Element(tag.toUpperCase());
  document.createTextNode=text=>({textContent:text});
- let connectCalls=0;
+ let connectCalls=0,runSequence=0;
  const api={paused:false,active:true,muted:true,choice:null,choiceCalls:0,
-  state:{chapter:0,ready:true,biomeName:'forest',transitioning:false,loopNodeId:'trigger'},
+  state:{chapter:0,ready:true,biomeName:'forest',transitioning:false,loopNodeId:'trigger',beat:0,anchorVisit:0,
+   interacting:false,active:true,paused:false,holdProgress:0,phase:'road',choiceRunning:false,presentationReady:false,choiceRunId:0},
   getState(){return {...this.state}},
-  setSteering(value){this.steering=value},setInteraction(value){this.interaction=value},
-  setPaused(value){this.paused=value},setActive(value){this.active=value},setMuted(value){this.muted=value},
-  setChapter(value){this.state.chapter=value;document.emit('cihou:state',{detail:this.getState()})},
-  setChoice(value){this.choice=value;this.choiceCalls++;this.state.chapter=2;this.state.selectedChoice=value;document.emit('cihou:state',{detail:this.getState()})},
+  publish(){document.emit('cihou:state',{detail:this.getState()})},
+  // The real stop API publishes synchronously before UI releases pointer
+  // ownership. Keep that ordering so a release cannot fabricate a visit.
+  setSteering(value){this.steering=value;if(value===0){this.state.interacting=false;this.publish()}},
+  setInteraction(value){this.interaction=value;if(value===0){this.state.interacting=false;this.publish()}},
+  setPaused(value){this.paused=this.state.paused=value;this.publish()},
+  setActive(value){this.active=this.state.active=value;this.publish()},setMuted(value){this.muted=value},
+  setChapter(value){Object.assign(this.state,{chapter:value,loopNodeId:value===0?'trigger':'anchor-0',beat:0,choiceRunId:++runSequence,
+   interacting:false,selectedChoice:null,choiceRunning:false,presentationReady:false,
+   holdProgress:value===0?0:1,phase:value===0?'road':value===1?'ring':'choice'});this.publish()},
+  setChoice(value){this.choice=value;this.choiceCalls++;this.state.chapter=2;this.state.selectedChoice=value;
+   this.state.phase='playing';this.state.choiceRunning=true;this.state.choiceRunId=++runSequence;this.state.presentationReady=false;
+   document.emit('cihou:state',{detail:this.getState()})},
   setExit(value){this.exit=value},reset(){this.setChapter(0)}
  };
  window.CIHOU_STORY_DATA={hero_states:[0,1,2].map(i=>({lines:['Synthetic '+i,'Synthetic second '+i],
-  description:'Synthetic description '+i})),
+  description:'Synthetic description '+i,anchors:[0,1,2].map(n=>'Synthetic anchor '+i+':'+n)})),
   loop_story:{nodes:['trigger','meaning','response','relief','cost','return'].map(id=>({
    id,text:'Synthetic '+id,detail:'Only this local detail '+id,refs:['user:2']})),
    present:{text:'Synthetic shared present context',refs:['user:2']},
    past:{text:'Synthetic sourced past context',refs:['user:2']},
    future:{text:'Synthetic future context',refs:['user:5']}},
-  choices:[0,1,2].map(i=>({title:'Synthetic choice '+i,condition:'Synthetic condition '+i,text:'Synthetic action '+i}))};
+  reading_chapters:readingLinks.map((link,index)=>({id:link.dataset.readingChapter,title:link.textContent,refs:['user:'+index]})),
+  choices:[0,1,2].map(i=>({title:'Synthetic choice '+i,condition:'Synthetic condition '+i,text:'Synthetic action '+i,
+   feedback:{mode:['attempt','prepare','sustain'][i],lines:['First '+i,'Second '+i,'Third '+i],result:'Synthetic result '+i}}))};
  window.WayfinderTemplate={connect(){connectCalls++;return Promise.resolve()}};
  vm.runInNewContext(source,{window,document,matchMedia:()=>media,innerWidth:1200,console});
  return {nodes,chapters,media,document,window,api,connects:()=>connectCalls,
   click:id=>nodes[id].emit('click'),ready:()=>document.emit('cihou:ready',{detail:api}),
   reduced(value){media.matches=value;media.emit('change')},
+  state(patch){Object.assign(api.state,patch);api.publish()},
   note(value){nodes['story-note'].open=value;nodes['story-note'].emit('toggle')},
   choose(index){nodes['choice-tabs'].children[index].emit('click')}};
 }
@@ -355,6 +393,216 @@ if(process.argv[2]==='copy'){
   surface.emit('keyup',{key});assert.equal(h.api.interaction,0);
  }
  assert.equal(h.api.state.chapter,0,'Holding or releasing is not an explicit chapter choice');
+ h.chapters[2].emit('click');h.choose(0);
+ pointer('pointerdown');assert.equal(h.api.interaction,0,'The automatic choice does not require or accept manual hold walking');
+ surface.emit('keydown',{key:' '});assert.equal(h.api.interaction,0,'Space must not manually walk chapter 2');
+}else if(process.argv[2]==='guidance'){
+ const h=setup();h.ready();
+ const progress=()=>Number(h.nodes['guide-progress'].dataset.count);
+ const total=()=>Number(h.nodes['guide-progress'].dataset.total);
+ const prominent=()=>h.nodes['next-chapter'].dataset.prominent==='true';
+ const pointer=(type,id=7,target='guide-hold')=>h.nodes[target].emit(type,{pointerId:id,button:0,isPrimary:true,pointerType:'mouse'});
+ const visit=(id,extra={})=>h.state({loopNodeId:id,interacting:true,...extra});
+ const six=['trigger','meaning','response','relief','cost','return'];
+ assert.equal(progress(),0,'The initially projected sentence is not a walked node');
+ assert.equal(total(),6);assert.equal(prominent(),false);
+ assert.match(h.nodes['guide-hold'].textContent+h.nodes['story-instruction'].textContent,/长按|按住/,
+  'The first interaction explains how to begin');
+ for(const button of h.chapters){assert.equal(button.disabled,false);assert.equal(button.getAttribute('disabled'),null)}
+ visit('meaning');assert.equal(progress(),0,'An unheld state event is not experience');
+ pointer('pointerdown');assert.equal(h.api.interaction,1,'The visible guide button really starts walking');
+ assert.equal(h.nodes['story-surface'].dataset.holding,'true');
+ const heldCopy=h.nodes['guide-hold'].textContent+h.nodes['guide-step'].textContent+h.nodes['story-instruction'].textContent;
+ assert.match(heldCopy,/松开|行走|走着|正在/,'Holding receives immediate feedback');
+ visit('meaning',{paused:true});assert.equal(progress(),0,'Paused residual movement cannot count');
+ visit('meaning',{paused:false,active:false});assert.equal(progress(),0,'An inactive world cannot count');
+ h.document.hidden=true;visit('meaning',{active:true});assert.equal(progress(),0,'Background residual movement cannot count');
+ h.document.hidden=false;visit('trigger',{interacting:false});assert.equal(progress(),0,'A hold without movement cannot count');
+ for(const id of six){visit(id);visit(id)}
+ assert.equal(progress(),6,'Each valid node is counted once');
+ assert.equal(h.api.state.chapter,0,'Completing a route does not navigate');
+ assert.equal(prominent(),false,'Completion still waits for a deliberate release');
+ pointer('pointerup',8);assert.equal(prominent(),false,'Another pointer cannot release this hold');
+ pointer('pointerup');assert.equal(h.api.interaction,0);assert.equal(prominent(),true);
+ assert.equal(h.nodes['guide-progress'].dataset.complete,'true');
+ h.click('next-chapter');assert.equal(h.api.state.chapter,1);assert.equal(total(),3);assert.equal(progress(),0);
+ assert.equal(h.api.state.holdProgress,1,'The fixture models navigation setting this legacy value');
+ assert.equal(prominent(),false,'Legacy holdProgress cannot satisfy the second chapter');
+ const guide=h.nodes['guide-hold'];guide.emit('keydown',{key:' '});
+ assert.equal(h.api.interaction,1,'Space on the guide button is a real hold');
+ for(const id of ['anchor-0','anchor-1','anchor-2'])visit(id);
+ assert.equal(progress(),3);assert.equal(prominent(),false);
+ guide.emit('keyup',{key:'Enter'});assert.equal(prominent(),false,'Unrelated keyup cannot complete a space hold');
+ guide.emit('keyup',{key:' '});assert.equal(prominent(),true);assert.equal(h.api.state.chapter,1);
+ h.chapters[0].emit('click');assert.equal(progress(),6,'Returning preserves the first chapter coverage');
+ h.chapters[1].emit('click');assert.equal(progress(),3,'Each chapter owns its own coverage');
+ h.chapters[2].emit('click');h.click('restart');assert.equal(progress(),0);assert.equal(total(),6);assert.equal(prominent(),false);
+ // Cancellation can stop a complete hold, but is not the user's affirmative
+ // release. A new complete reading must not auto-advance on losing focus.
+ for(const interruption of ['pointercancel','lostpointercapture','blur']){
+  const cancelled=setup();cancelled.ready();
+  const button=cancelled.nodes['guide-hold'];button.emit('pointerdown',{pointerId:3,button:0,isPrimary:true});
+  for(const id of six)cancelled.state({loopNodeId:id,interacting:true});
+  button.emit(interruption,{pointerId:3});
+  assert.notEqual(cancelled.nodes['next-chapter'].dataset.prominent,'true',interruption+' is not a deliberate release');
+  assert.equal(cancelled.api.state.chapter,0);
+ }
+ const enter=setup();enter.ready();enter.nodes['guide-hold'].emit('keydown',{key:'Enter'});
+ assert.equal(enter.api.interaction,1,'Enter is available on the explicit hold button');
+ enter.nodes['guide-hold'].emit('keyup',{key:'Enter'});assert.equal(enter.api.interaction,0);
+ const skip=setup();skip.ready();skip.chapters[2].emit('click');
+ assert.equal(skip.api.state.chapter,2,'The top navigation remains available before completing either hold');
+}else if(process.argv[2]==='card-reading'){
+ const h=setup();h.ready();h.chapters[2].emit('click');
+ assert.equal(h.nodes['read-after-choice'].hidden,true,'The card CTA waits for a completed result');
+ h.choose(0);assert.equal(h.api.choiceCalls,1);assert.equal(h.nodes['read-after-choice'].hidden,true);
+ h.state({phase:'done',choiceRunning:false,presentationReady:true});
+ assert.equal(h.nodes['read-after-choice'].hidden,false,'One completed card is sufficient to enter the full report');
+ const card=h.nodes['choice-card'].textContent;
+ h.nodes['reading-dialog'].scrollTop=950;h.click('read-after-choice');
+ assert.equal(h.nodes['reading-dialog'].open,true);assert.equal(h.api.active,false);
+ assert.equal(h.nodes['reading-dialog'].scrollTop,0,'Entering from a card starts with its report context');
+ assert.equal(h.nodes['reading-entry'].hidden,false);
+ assert.ok(h.nodes['reading-choice-title'].textContent.includes('Synthetic choice 0'));
+ assert.ok(h.nodes['reading-choice-result'].textContent.includes('Synthetic result 0'));
+ assert.equal(h.api.choiceCalls,1,'Reading is not another playback request');
+ h.click('close-reading');
+ assert.equal(h.nodes['reading-dialog'].open,false);assert.equal(h.api.active,true);
+ assert.equal(h.nodes['choice-card'].textContent,card,'Closing returns to the same card');
+ assert.equal(h.nodes['choice-tabs'].children[0].attrs['aria-pressed'],'true');
+ assert.equal(h.api.choiceCalls,1,'Returning to the card does not replay it');
+ h.choose(1);h.state({phase:'done',choiceRunning:false,presentationReady:true});h.click('read-after-choice');
+ assert.ok(h.nodes['reading-choice-title'].textContent.includes('Synthetic choice 1'));
+ assert.ok(h.nodes['reading-choice-result'].textContent.includes('Synthetic result 1'));
+ assert.equal(h.nodes['reading-choice-result'].textContent.includes('Synthetic result 0'),false,'A later card replaces stale reading context');
+ h.click('close-reading');h.click('restart');h.click('read-report');
+ assert.equal(h.nodes['reading-entry'].hidden,true,'Restart clears the selected-card reading context');
+ for(const kind of ['reduced','failed']){
+  const fallback=setup(kind==='reduced');
+  if(kind==='failed')fallback.document.emit('cihou:error',{detail:new Error('Synthetic unavailable WebGL')});
+  fallback.chapters[2].emit('click');fallback.choose(2);
+  assert.equal(fallback.nodes['read-after-choice'].hidden,false,kind+' still provides the complete-report CTA');
+  fallback.click('read-after-choice');assert.equal(fallback.nodes['reading-dialog'].open,true);
+  assert.ok(fallback.nodes['reading-choice-title'].textContent.includes('Synthetic choice 2'));
+  assert.ok(fallback.nodes['reading-choice-result'].textContent.includes('Synthetic result 2'));
+  assert.equal(fallback.api.choiceCalls,0,'Static access never waits for WebGL or starts motion');
+ }
+}else if(process.argv[2]==='collection'){
+ const h=setup();h.ready();h.chapters[2].emit('click');
+ const count=()=>Number(h.nodes['story-choices'].dataset.collectedCount);
+ const buttons=h.nodes['choice-tabs'].children;
+ assert.equal(count(),0);
+ for(let index=0;index<3;index++){
+  const before=h.api.choiceCalls;h.nodes['choice-scroll'].scrollTop=420;h.choose(index);
+  assert.equal(h.nodes['choice-scroll'].scrollTop,0,'A newly selected route starts with its card area in view');
+  assert.equal(h.api.choiceCalls,before+1,'Each unknown card starts one experience');
+  assert.equal(buttons[index].dataset.collected,'false','Starting a route does not collect its card');
+  h.state({phase:'done',choiceRunning:false,presentationReady:true,transitioning:false});
+  assert.equal(count(),index+1,'A matching complete result collects exactly one card');
+  assert.equal(buttons[index].dataset.collected,'true');
+  assert.equal(buttons[index].dataset.collectState,'collected');
+  assert.equal(h.nodes['read-after-choice'].hidden,false,'A first card already permits complete reading');
+  if(index<2)assert.ok(h.nodes['collection-hint'].textContent.trim(),
+   'After a card the interface explains how to find the remaining choices');
+ }
+ const before=h.api.choiceCalls;
+ for(const index of [0,2,1,0]){
+  h.nodes['choice-scroll'].scrollTop=420;h.choose(index);
+  assert.equal(h.nodes['choice-scroll'].scrollTop,0,'Opening a collected card resets its scroll position');
+  assert.equal(h.api.choiceCalls,before,'Collected items open their card without replay');
+  assert.equal(h.nodes['choice-result'].textContent,'Synthetic result '+index);
+  assert.equal(h.nodes['choice-card'].textContent,'First '+index+'\nSecond '+index+'\nThird '+index);
+  assert.equal(h.nodes['read-after-choice'].hidden,false);
+ }
+ h.chapters[0].emit('click');h.chapters[2].emit('click');assert.equal(count(),3,'Chapter navigation keeps the page collection');
+ h.click('restart');h.chapters[2].emit('click');assert.equal(count(),3,'Restarting the walk keeps cards already obtained');
+ h.choose(2);assert.equal(h.api.choiceCalls,before,'A card remains independently accessible after restart');
+ const fresh=setup();fresh.ready();fresh.chapters[2].emit('click');
+ assert.equal(Number(fresh.nodes['story-choices'].dataset.collectedCount),0,'A new page experience starts a new collection');
+ fresh.choose(0);assert.equal(fresh.api.choiceCalls,1);
+}else if(process.argv[2]==='collection-races'){
+ const h=setup();h.ready();h.chapters[2].emit('click');
+ const count=()=>Number(h.nodes['story-choices'].dataset.collectedCount);
+ const buttons=h.nodes['choice-tabs'].children;
+ h.choose(0);const obsoleteA=h.api.getState();h.choose(0);
+ assert.equal(h.api.choiceCalls,1,'Repeated clicks on the active unknown item do not restart it');
+ assert.equal(h.api.getState().choiceRunId,obsoleteA.choiceRunId);
+ h.choose(1);
+ assert.equal(count(),0,'Leaving an unfinished route does not collect it');
+ h.document.emit('cihou:state',{detail:{...obsoleteA,phase:'done',choiceRunning:false,presentationReady:true}});
+ assert.equal(count(),0,'A superseded completion cannot collect either route');
+ assert.equal(buttons[0].dataset.collected,'false');assert.equal(buttons[1].dataset.collected,'false');
+ assert.equal(h.nodes['read-after-choice'].hidden,true,'An obsolete result does not unlock the current result card');
+ const current=h.api.getState();
+ for(const premature of [{phase:'settling',choiceRunning:false},
+  {phase:'done',choiceRunning:true},{phase:'done',choiceRunning:false,transitioning:true}]){
+  h.document.emit('cihou:state',{detail:{...current,presentationReady:true,...premature}});
+  assert.equal(count(),0,'Incomplete or covered feedback cannot enter the collection');
+ }
+ h.state({phase:'done',choiceRunning:false,presentationReady:true,transitioning:false});
+ assert.equal(count(),1);assert.equal(buttons[1].dataset.collected,'true');
+ h.choose(0);const unfinishedA=h.api.getState(),calls=h.api.choiceCalls;
+ assert.equal(h.api.state.choiceRunning,true);
+ h.choose(1);
+ assert.equal(h.api.choiceCalls,calls,'Reading an obtained card does not replay it');
+ assert.equal(h.api.state.choiceRunning,false,'Reading an obtained card cancels the unfinished other route');
+ assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 1');
+ h.document.emit('cihou:state',{detail:{...unfinishedA,phase:'done',choiceRunning:false,presentationReady:true}});
+ assert.equal(count(),1,'A cancelled late completion cannot silently collect the other card');
+ assert.equal(buttons[0].dataset.collected,'false');
+ assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 1','A late event cannot replace the card being read');
+ h.choose(0);assert.equal(h.api.choiceCalls,calls+1,'The unfinished card still requires its own first complete experience');
+ h.choose(1);const beforeReplay=h.api.choiceCalls;
+ h.click('choice-replay');assert.equal(h.api.choiceCalls,beforeReplay+1,'Only explicit replay replays an obtained card');
+ assert.equal(h.api.choice,1);assert.equal(count(),1,'Replay neither removes nor duplicates the saved card');
+ const replay=h.api.getState();h.choose(1);
+ assert.equal(h.api.choiceCalls,beforeReplay+1,'Clicking the collected tab during replay still opens its saved card');
+ assert.equal(h.api.state.choiceRunning,false,'Selecting the collected tab cancels its optional replay and reads the saved card');
+ h.document.emit('cihou:state',{detail:{...replay,phase:'done',choiceRunning:false,presentationReady:true}});
+ assert.equal(count(),1);assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 1');
+ h.click('choice-replay');assert.equal(h.api.choiceCalls,beforeReplay+2);
+ h.state({phase:'done',choiceRunning:false,presentationReady:true,transitioning:false});assert.equal(count(),1);
+}else if(process.argv[2]==='collection-static'){
+ for(const kind of ['reduced','failed']){
+  const h=setup(kind==='reduced');
+  if(kind==='failed')h.document.emit('cihou:error',{detail:new Error('Synthetic unavailable WebGL')});
+  h.chapters[2].emit('click');
+  for(let index=0;index<3;index++){
+   h.choose(index);
+   assert.equal(Number(h.nodes['story-choices'].dataset.collectedCount),index+1,
+    kind+' collects only the selected readable static result');
+   assert.equal(h.api.choiceCalls,0);
+   assert.equal(h.nodes['read-after-choice'].hidden,false);
+  }
+  h.choose(0);assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 0');
+  assert.equal(h.api.choiceCalls,0,'Static card browsing requires no engine');
+ }
+ const h=setup();h.ready();h.chapters[2].emit('click');h.choose(1);h.reduced(true);
+ assert.equal(Number(h.nodes['story-choices'].dataset.collectedCount),1,'Mid-run static fallback can preserve its readable result');
+ const calls=h.api.choiceCalls;h.reduced(false);h.choose(1);
+ assert.equal(h.api.choiceCalls,calls,'Restoring motion does not replay a static card already obtained');
+ const failed=setup();failed.ready();failed.chapters[2].emit('click');failed.choose(2);
+ failed.document.emit('cihou:error',{detail:new Error('Synthetic mid-run rendering failure')});
+ assert.equal(Number(failed.nodes['story-choices'].dataset.collectedCount),1,'A readable failure fallback belongs to its selected card');
+ const failedCalls=failed.api.choiceCalls;failed.choose(2);assert.equal(failed.api.choiceCalls,failedCalls);
+}else if(process.argv[2]==='choice'){
+ const h=setup();h.ready();h.chapters[2].emit('click');
+ h.choose(1);assert.equal(h.api.choiceCalls,1,'One click starts exactly one finite experience');
+ assert.equal(h.api.choice,1);assert.equal(h.nodes['choice-description'].textContent,'Synthetic action 1');
+ for(let i=0;i<3;i++)h.document.emit('cihou:state',{detail:h.api.getState()});
+ assert.equal(h.api.choiceCalls,1,'Rendering playback progress must never issue another playback request');
+ h.api.state.transitioning=true;h.choose(2);
+ assert.equal(h.api.choiceCalls,2,'A new click during transition must reach the adapter queue');
+ h.api.state.transitioning=false;h.api.state.phase='done';h.api.state.choiceRunning=false;h.api.state.presentationReady=true;
+ h.document.emit('cihou:state',{detail:h.api.getState()});
+ assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 2');
+ assert.equal(h.nodes['choice-card'].textContent,'First 2\nSecond 2\nThird 2');
+ assert.equal(h.api.choiceCalls,2,'Completing an effect must not replay it');
+ h.click('choice-replay');assert.equal(h.api.choiceCalls,3,'Only an explicit optional replay issues another request');
+ const failed=setup();failed.document.emit('cihou:error',{detail:new Error('Synthetic no WebGL')});
+ failed.chapters[2].emit('click');failed.choose(0);
+ assert.equal(failed.nodes['choice-result'].textContent,'Synthetic result 0','An unavailable engine retains the same result copy');
+ assert.equal(failed.api.choiceCalls,0);
 }else{
 // Requests made during preparation must survive the eventual ready event.
 const h=setup();
@@ -371,14 +619,14 @@ h.click('close-reading');assert.equal(h.api.active,true);
 // Mid-session reduce stops the entire engine through its API, preserving copy.
 h.reduced(true);
 assert.equal(h.api.paused,true);assert.equal(h.api.active,false);
-assert.equal(h.document.body.dataset.reduced,'true');assert.equal(h.nodes['walk-choice'].hidden,true);
+assert.equal(h.document.body.dataset.reduced,'true');
 const choicesBefore=h.api.choiceCalls;h.choose(2);
-assert.equal(h.api.choiceCalls,choicesBefore,'Reduced preview must not initiate animated scenery');
+assert.equal(h.api.choiceCalls,choicesBefore,'Reduced feedback must not initiate animated scenery');
 assert.equal(h.nodes['choice-description'].textContent,'Synthetic action 2');
+assert.equal(h.nodes['choice-result'].textContent,'Synthetic result 2');
 h.reduced(false);
 assert.equal(h.api.paused,false);assert.equal(h.api.active,true);assert.equal(h.connects(),1);
-assert.equal(h.api.choice,2,'Returning motion must match the visible selected choice');
-assert.equal(h.nodes['walk-choice'].hidden,false);
+assert.equal(h.api.choiceCalls,choicesBefore,'Restoring motion must not replay an already read static result');
 h.chapters[0].emit('click');h.reduced(true);h.reduced(false);
 assert.equal(h.api.state.chapter,0,'An old choice must not override an explicitly returned chapter');
 const pendingView=setup();
@@ -391,9 +639,11 @@ const staticPage=setup(true);
 assert.equal(staticPage.connects(),0);assert.equal(staticPage.nodes['story-loader'].hidden,true);
 staticPage.chapters[2].emit('click');staticPage.choose(2);staticPage.click('read-report');
 assert.equal(staticPage.nodes['choice-description'].textContent,'Synthetic action 2');
+assert.equal(staticPage.nodes['choice-result'].textContent,'Synthetic result 2');
 staticPage.reduced(false);assert.equal(staticPage.connects(),1);
 staticPage.ready();
-assert.equal(staticPage.api.choice,2);assert.equal(staticPage.api.state.chapter,2);
+assert.equal(staticPage.api.choiceCalls,0,'Initial static feedback remains completed when the engine becomes available');
+assert.equal(staticPage.api.state.chapter,2);
 assert.equal(staticPage.api.active,false,'Reading opened before engine load still stops it');
 staticPage.click('close-reading');assert.equal(staticPage.api.active,true);
 }
@@ -411,6 +661,24 @@ staticPage.click('close-reading');assert.equal(staticPage.api.active,true);
     def test_ui_current_node_note_uses_local_detail_without_repeating_global_context(self):
         self._run_ui_case("copy")
 
+    def test_ui_choice_click_plays_once_state_events_do_not_replay_and_failure_keeps_result(self):
+        self._run_ui_case("choice")
+
+    def test_ui_two_hold_chapters_count_real_nodes_and_offer_next_only_after_release(self):
+        self._run_ui_case("guidance")
+
+    def test_ui_one_result_card_enters_full_reading_and_returns_without_replay(self):
+        self._run_ui_case("card-reading")
+
+    def test_ui_collected_cards_open_independently_and_survive_navigation_and_restart(self):
+        self._run_ui_case("collection")
+
+    def test_ui_incomplete_or_obsolete_results_cannot_collect_and_only_replay_replays(self):
+        self._run_ui_case("collection-races")
+
+    def test_ui_static_and_failed_results_collect_without_animated_playback(self):
+        self._run_ui_case("collection-static")
+
     def test_default_loop_story_requires_six_ordered_sourced_nodes(self):
         state = read_state(self.fixture.s)
         valid = copy.deepcopy(self.fixture.model)
@@ -424,6 +692,42 @@ staticPage.click('close-reading');assert.equal(staticPage.api.active,true);
             model = copy.deepcopy(valid)
             mutate(model)
             with self.assertRaises(ValueError):
+                validate_model(model, state, self.sources)
+
+    def test_v20_choices_require_complete_distinct_sourced_feedback(self):
+        state = read_state(self.fixture.s)
+        valid = copy.deepcopy(self.fixture.model)
+        validate_model(valid, state, self.sources)
+        mutations = [
+            (lambda choices: choices[0].pop('feedback'), 'requires feedback'),
+            (lambda choices: choices[0]['feedback'].update(mode='success'), 'feedback mode'),
+            (lambda choices: choices[0]['feedback'].update(mode=[]), 'feedback mode'),
+            (lambda choices: choices[1]['feedback'].update(mode='attempt'), 'each feedback mode once'),
+            (lambda choices: choices[0]['feedback']['lines'].pop(), 'three short lines'),
+            (lambda choices: choices[0]['feedback']['lines'].__setitem__(1, ' '), 'three short lines'),
+            (lambda choices: choices[0]['feedback']['lines'].__setitem__(1, '文' * 33), 'three short lines'),
+            (lambda choices: choices[0]['feedback'].update(result=' '), 'feedback result'),
+            (lambda choices: choices[0].update(refs=['user:999']), 'section references'),
+        ]
+        for mutate, message in mutations:
+            model = copy.deepcopy(valid)
+            mutate(model['presentation']['hero_choices'])
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                validate_model(model, state, self.sources)
+
+    def test_v20_choices_remain_optional_and_historical_models_need_no_feedback(self):
+        state = read_state(self.fixture.s)
+        model = copy.deepcopy(self.fixture.model)
+        model['presentation']['hero_choices'] = []
+        validate_model(model, state, self.sources)
+        model['presentation'].pop('hero_choices')
+        validate_model(model, state, self.sources)
+        for runtime in ['wayfinder-v16', 'wayfinder-v17', 'wayfinder-v18', 'wayfinder-v19', 'paper-v15']:
+            model = copy.deepcopy(self.fixture.model)
+            model['presentation']['hero_runtime'] = runtime
+            for choice in model['presentation']['hero_choices']:
+                choice.pop('feedback')
+            with self.subTest(runtime=runtime):
                 validate_model(model, state, self.sources)
 
     def _run_adapter_case(self, case):
@@ -559,7 +863,77 @@ const transformed=firstSlot.style.transform;
 for(const callback of postRenderCallbacks)callback();
 assert.equal(firstSlot.style.transform,transformed,'A stationary frame must not accumulate clamp offsets');
 assert.equal(JSON.stringify(slotFor(nativeLabel)),originalNativeStyles,'Other native text slots are untouched');
-if(process.argv[3]==='startup'){
+if(process.argv[3]==='choice-panel'){
+ // Reuse the actual projected native hint, including late font metrics and
+ // CSSOM serialization. The fixture describes visible controls, not the
+ // adapter's intended clamp arithmetic.
+ story.choices=[0,1,2].map(index=>({title:'Synthetic choice '+index,
+  feedback:{mode:['attempt','prepare','sustain'][index],
+   lines:['Synthetic finite first sentence','Synthetic finite second sentence','Synthetic finite final sentence']}}));
+ world.findTag(tags.EnvironmentState).name='grasslands';
+ api.setChapter(2);api.setChoice(1);move();move();
+ assert.equal(api.getState().choiceMode,'prepare');
+ let panelRect={left:780,top:160,right:1180,bottom:760},guideRect=null,copyRect=null;
+ document.querySelector=selector=>{
+  if(selector==='#story-choices')return {getBoundingClientRect:()=>panelRect};
+  if(selector==='#story-guide')return guideRect?{getBoundingClientRect:()=>guideRect}:null;
+  if(selector==='.story-copy')return copyRect?{getBoundingClientRect:()=>copyRect}:null;
+  throw Error('Unexpected visible-control selector '+selector);
+ };
+ const viewport=world.findTag(tags.AppState);
+ function currentHint(){return world.query(tags.TextHint).entities.find(entity=>!entity.has(tags.KillTextHint))}
+ function checkVisible(label,left,top,headerBottom,largeText=false){
+  const native=currentHint(),slot=slotFor(native),position=native.get(tags.TextHint).position.toArray();
+  slot.inner.layoutScale=largeText?2.2:1;
+  // Native projection may land behind the panel or above the title area.
+  // Every rendered frame must remain readable, including a cached projection.
+  slot.style.transform='translate('+left+'px, '+top+'px)';
+  for(let frame=0;frame<120;frame++){
+   clockMilliseconds+=1000/60;for(const callback of postRenderCallbacks)callback();
+   const rect=slot.inner.getBoundingClientRect();
+   assert.ok(rect.left>=16-.002&&rect.right<=viewport.width-16+.002,label+' remains inside the viewport');
+   assert.ok(rect.top>=headerBottom+10-.002,label+' clears the fixed title controls');
+   if(viewport.width>700)assert.ok(rect.right<=panelRect.left-12+.002,label+' clears the right choice panel');
+   else assert.ok(rect.bottom<=panelRect.top-12+.002,label+' clears the lower choice panel');
+   assert.deepEqual(native.get(tags.TextHint).position.toArray(),position,
+    'Panel avoidance moves only the projected typography, never its route landmark');
+  }
+ }
+ viewport.width=1200;viewport.height=800;
+ checkVisible('Desktop prepare playback',930,340,148);
+ checkVisible('Desktop high camera projection',900,20,148);
+ viewport.width=390;viewport.height=844;panelRect={left:16,top:410,right:374,bottom:820};
+ checkVisible('Narrow prepare playback with longer metrics',240,650,132,true);
+ checkVisible('Narrow high camera projection',40,12,132,true);
+ let safety=0;while(api.getState().phase!=='done'&&safety++<800)move();
+ assert.equal(api.getState().phase,'done','The same placement rule covers the finished result card');
+ viewport.width=1200;viewport.height=800;panelRect={left:620,top:150,right:1180,bottom:770};
+ checkVisible('Larger desktop result card',930,360,148);
+ viewport.width=390;viewport.height=844;panelRect={left:16,top:360,right:374,bottom:830};
+ checkVisible('Larger narrow result card',230,650,132,true);
+ // The same real callback must leave the explicit hold guide usable and,
+ // on narrow screens, keep the world phrase below the fixed explanation.
+ api.setChapter(0);move();move();
+ function checkGuide(left,top){
+  const native=currentHint(),slot=slotFor(native),position=native.get(tags.TextHint).position.toArray();
+  slot.style.transform='translate('+left+'px, '+top+'px)';
+  for(let frame=0;frame<120;frame++){
+   clockMilliseconds+=1000/60;for(const callback of postRenderCallbacks)callback();
+   const rect=slot.inner.getBoundingClientRect();
+   assert.ok(rect.bottom<=guideRect.top-12+.002,'The projected phrase clears the hold guide');
+   if(viewport.width<=700)assert.ok(rect.top>=copyRect.bottom+12-.002,
+    'The narrow world phrase clears the heading and explanation');
+   assert.deepEqual(native.get(tags.TextHint).position.toArray(),position,'Guidance does not move the world landmark');
+  }
+ }
+ viewport.width=1200;viewport.height=800;guideRect={top:650};copyRect={bottom:240};
+ checkGuide(300,720);
+ api.setChapter(1);move();move();
+ viewport.width=390;viewport.height=844;guideRect={top:430};copyRect={bottom:230};
+ checkGuide(40,110);checkGuide(40,700);
+ assert.equal(JSON.stringify(slotFor(nativeLabel)),originalNativeStyles,'The original unrelated label is not reflowed');
+ api.destroy();
+}else if(process.argv[3]==='startup'){
  const viewport=world.findTag(tags.AppState);
  const firstPosition=firstHint.get(tags.TextHint).position.toArray();
  function post(){
@@ -741,6 +1115,9 @@ assert.equal(JSON.stringify(lastSlot),releasedStyles,'A shared callback cannot k
 
     def test_real_postrender_character_pass_and_return_is_continuous_across_frame_rates(self):
         self._run_adapter_case("motion")
+
+    def test_prepare_projected_text_clears_choice_controls_and_the_result_card(self):
+        self._run_adapter_case("choice-panel")
 
     def test_native_cached_startup_projection_survives_cssom_rounding_font_and_resize(self):
         self._run_adapter_case("startup")

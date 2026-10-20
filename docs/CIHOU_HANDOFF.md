@@ -1,4 +1,48 @@
-# 此后 · V19 加载期文字定位与完整报告交接
+# 此后 · V21 从体验到完整解读的引导
+
+更新：2026-10-20。当前默认 `presentation.hero_runtime="wayfinder-v21"`。用户可见路径为 **现在 → 之前 → 此后 → 完整解读**：前两景按住沿路读，第三景点击选择留卡，得到一张卡就能主动进入九章解读。顶部始终可以跳看或直接阅读，不要求凑齐三张卡。
+
+第一次了解项目先看[截图与操作演示](SHOWCASE.md)；找实现看[工作区地图](WORKSPACE_GUIDE.md)。本页开头是当前契约，下方折叠部分保留历史决策。原作素材的再分发授权尚未核实，见[第三方说明](../afei-destiny-skill/THIRD_PARTY_NOTICES.md)。
+
+- 当前演示：[V21 完整匿名 HTML](../design-demos/cihou-wayfinder-v21/final_report.html)／[说明与来源](../design-demos/cihou-wayfinder-v21/README.md)／[构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py)。复用 V20 的合成个人分析、六节点、三种反馈和九章内容；本轮只强化导览与阅读连接，独立生成模型、双底稿和来源计划。
+- “现在”按住看六节点循环；“之前”按住看三个来源绑定锚点。只计数实际长按行走时经过的不同节点，走过全部并主动松开后突出下一步；不自动切场、不锁导航。第一景仍可重复循环，阶段覆盖数不写入咨询事实。解释按钮注明用途，展开后引用当前句、暂停行走并隐藏重复浮字，收起后可继续长按。
+- “此后”首次点待收集项会叶片换场、自动完成有限体验并收下原诗卡。显示 `x / 3` 与每项待收集、正在体验、已收集状态；已得卡点开直读，只有明确点“重播这段体验”才重播。回看已得卡停止当前体验，未完成项不被误收。切章与从头体验保留本页收卡进度，刷新新页面后重置，不写咨询事实或账户状态。
+- 一张卡就能点“带着这一步，进入完整解读 →”，无需收齐三张；仍可逐项收集和比较。主动点击才进入阅读，不抢走卡片。窄屏卡片内容独立滚动，阅读按钮保持可见。完整解读保留所选摘要与九章目录，关闭后回到同一张卡，不重新播放。
+- 渲染器从真实章节派生 `reading_chapters` 与目录，正文锚点为 `chapter-章节ID`，不新增一套个人结论。个人内容、反馈来源和可能形成路径继续按[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)及 [HTML 协议](../afei-destiny-skill/references/html-report.md)。
+- [V20 历史 HTML](../design-demos/cihou-wayfinder-v20/final_report.html)及其[原 QA](../design-demos/cihou-wayfinder-v20/QA.md)保留，不覆盖。[V21 QA 与截图](../design-demos/cihou-wayfinder-v21/QA.md)记录本轮实际长按、三种反馈、留卡到阅读及桌面／窄屏验收。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v21/build_demo.py
+python design-demos/cihou-wayfinder-v21/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+<details>
+<summary>历史交接：V20 及更早版本（保留原记录）</summary>
+
+以下“当前”指对应版本当时的状态，继续开发以本页开头的 V21 为准。
+
+## V20 一次点击自动反馈（2026-10-20 历史记录）
+
+更新：2026-10-20。当前默认 `presentation.hero_runtime="wayfinder-v20"`。此刻保留按住前进、松开停下的六节点循环；“可能”改为点击任一选择后经过原叶片换场，自动完成一段有限行动与效果，再停在三句诗卡和结果文字。不要求第二次确认、第二轮选择或长按。
+
+- 当前入口：[V20 完整匿名 HTML](../design-demos/cihou-wayfinder-v20/final_report.html)／[演示说明](../design-demos/cihou-wayfinder-v20/README.md)／[构建脚本](../design-demos/cihou-wayfinder-v20/build_demo.py)。双底稿、模型与来源计划在同目录，全部为合成资料。
+- 三种体验分别为向外尝试、有限准备、有支持的持续。可选 `hero_choices` 的每项增加 `feedback={mode, lines, result}`：三种 `mode` 各一项，三条短句每条最多32字，结果非空并继承该项 `refs`。共享模板不硬编码求职故事；演示第三项“留给时间跟坚持”配有可持续的小步、休息、支持与记录，不将时间写成必然好转的原因。
+- 选择只启动有限的视觉体验。结果文案不声称现实已投递、已补齐条件或已得到外部回应。减少动态与引擎失败时保留相同的短句与结果；暂停、阅读与后台停止继续控制播放，状态更新本身不重复发起体验。
+- 内容与来源继续遵循[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)和 [HTML 协议](../afei-destiny-skill/references/html-report.md)。[V19 完整演示](../design-demos/cihou-wayfinder-v19/final_report.html)及更早历史保留，不回写旧 HTML；显式旧运行时可省略新反馈字段。
+- 本轮浏览器冷启动、三条完整反馈、桌面／窄屏与动效验收见 [V20 QA 与截图](../design-demos/cihou-wayfinder-v20/QA.md)。快速换选等待原叶片完整退场后再消费最后选择，避免原 Svelte 组件复用导致卡住或遮住首句。代码回归、单文件重建与浏览器视觉验收分别记录；没有新增独立审美评分、实体手机接收验证或私有在线服务。
+
+```sh
+source .venv/bin/activate
+python design-demos/cihou-wayfinder-v20/build_demo.py
+python design-demos/cihou-wayfinder-v20/build_demo.py --check
+python tools/check_workspace.py --skill
+```
+
+以下保留 V19 及更早记录，其中“当前”指对应版本当时的状态。
+
+## V19 加载期文字定位（2026-10-20 历史记录）
 
 更新：2026-10-20。当前默认 `presentation.hero_runtime="wayfinder-v19"`。本版沿用 V18 全部读者文案、可能形成路径与六节点结构，只处理首次加载时浮字定位的稳定性；原站美术、固定路线、按住前进／松开停下和此刻／来处／可能不变。
 
@@ -93,7 +137,7 @@ python tools/check_workspace.py --skill
 
 ## 以下为 V8 保存交接记录（历史基线）
 
-2026-10-18。用户从历史对照页指定 **V8** 为保存版本，并要求提交 Git、查看完整 HTML。当时渲染器默认切换为 `painted-v8`。这是历史保存记录；当前选择以本文上方 V19 为准。
+2026-10-18。用户从历史对照页指定 **V8** 为保存版本，并要求提交 Git、查看完整 HTML。当时渲染器默认切换为 `painted-v8`。这是历史保存记录；当前选择以本文顶部为准。
 
 ## V8 当时的产品与唯一入口
 
@@ -154,3 +198,5 @@ python tools/check_workspace.py --skill
 回归测试只用合成材料。当前交付记录以会话活动产物和实际 QA 为准；桌面／手机视口测试不等于实体手机接收与打开验证。`127.0.0.1` 只是本机预览，最终入口链接实际 HTML 文件。
 
 私有在线托管、账号、云端存储、跨设备同步、在线咨询和回访服务尚未实现。Git 提交只保存本地可重建源码、共享美术与模板，不代表推送、发布或上线。
+
+</details>

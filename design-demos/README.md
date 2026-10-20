@@ -4,7 +4,7 @@
 
 ## 当前完整匿名演示
 
-[V19 求职完整 HTML](cihou-wayfinder-v19/final_report.html)直接复用 Wayfinder 的原站运行时、风景和视听资源，按住沿固定路线行走，松开停下；首景重复六个循环位置，主动切换“此刻／来处／可能”，再比较三种有条件的走法。V19 沿用 V18 文案，集中修复加载期文字定位。自然的第二人称连接当下机制、可能的形成路径与下一步，短句随景色平滑浮现。九章正文与[每位读者的闭环叙事合同](../afei-destiny-skill/references/loop-narrative.md)保持来源绑定。全部资源内嵌到单份 HTML；[构建脚本](cihou-wayfinder-v19/build_demo.py)、合成双底稿、来源绑定模型和来源计划位于同目录。
+[V21 求职完整 HTML](cihou-wayfinder-v21/final_report.html)把体验与深度阅读连成 **现在 → 之前 → 此后 → 完整解读**。现在按住看六节点循环，之前按住看固定模式；实际走过本景全部短句并松开后突出下一步，始终可自由跳看。此后一次点击完成有限体验并留卡，明确入口把这一张卡带进九章解读，保留所选摘要和完整目录，不要求凑齐三张卡。原站美术、V20 合成个人分析和三种反馈保持，所有资源内嵌到单份 HTML；[演示说明](cihou-wayfinder-v21/README.md)、[QA 与截图](cihou-wayfinder-v21/QA.md)、[构建脚本](cihou-wayfinder-v21/build_demo.py)、双底稿、来源绑定模型和计划位于同目录。内容合同见[闭环叙事协议](../afei-destiny-skill/references/loop-narrative.md)。
 
 这是显式合成的设计材料，未使用真实咨询或出生数据。原作署名和权属见[来源说明](../afei-destiny-skill/assets/cihou/quiet/wayfinder/PROVENANCE.md)，运行与验收状态见[交接说明](../docs/CIHOU_HANDOFF.md)。个人报告仍必须按 [HTML 协议](../afei-destiny-skill/references/html-report.md)，使用本次已登记双底稿与模型生成，不能给匿名样机换名。
 
@@ -12,6 +12,8 @@
 
 | 版本 | 保留价值 |
 |---|---|
+| [V20 一次点击反馈](cihou-wayfinder-v20/final_report.html) | 三种有限体验、原诗卡、结果与快速换选退场时序的历史版本；[原 QA](cihou-wayfinder-v20/QA.md)保留 |
+| [V19 加载期文字定位](cihou-wayfinder-v19/final_report.html) | 沿用 V18 文案，修复原生投影缓存与适配层校正的衔接；保留当时的选择流程 |
 | [V18 自然叙事](cihou-wayfinder-v18/final_report.html) | 自然第二人称、可能学习路径与集中依据说明的历史版本；V19 保留同一文案 |
 | [V17 固定路线循环](cihou-wayfinder-v17/final_report.html) | 按住固定路线、首景六节点重复与此刻／来处／可能结构的历史版本 |
 | [V16 原站引擎复用](cihou-wayfinder-v16/final_report.html) | 原站世界、中文锚点与九章报告的历史演示，保留原文件，不随新版本更新 |
