@@ -7,7 +7,7 @@
   "inputs": [
     {
       "path": "build_demo.py",
-      "sha256": "8e187b7d2a53a6b25272cedac31d28796bd85f1c89f43ac880b613cbdce0f518"
+      "sha256": "704091f5a5c512a6f26816d4e3ab5af092d92f8063b74f0ce32a215fe07f9a97"
     },
     {
       "path": "../cihou-wayfinder-v15/build_demo.py",

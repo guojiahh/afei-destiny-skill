@@ -126,6 +126,8 @@ python afei-destiny-skill/scripts/consultation_harness.py set-delivery --session
 
 页面由 `render_quiet_report.py` 按 `presentation.hero_runtime` 分派；当前默认使用 `render_wayfinder_report.py`，从 `assets/cihou/quiet/wayfinder/` 读取原站运行时、CSS、适配层与素材。生成前逐项核验 `asset-manifest.json` 的 SHA-256，再将图片、字体、GLTF／GLB、音频、MP4 和代码内嵌到单份 HTML，运行时转换为本地 Blob URL；不要求另带资源目录或联网读取素材。V15 程序绘画兼容分支使用 `hero_runtime="paper-v15"` 与 `HERO_BUNDLE`；它不改变三态和九章内容契约。原站资源来源与权属见[来源说明](../assets/cihou/quiet/wayfinder/PROVENANCE.md)，不能把原版角色和美术称为此后原创，也不能沿用旧 CC0 或单一 Three.js MIT 声明代替原作权属。
 
+跨平台交付按 UTF-8 字节校验与保存 HTML，不经操作系统自动转换换行。底稿在解析时可以统一换行，但页面下载须保留已登记文件的原始字节，下载后的 SHA-256 必须与来源记录一致；不要为通过校验改写历史底稿或素材。
+
 框架与咨询内容分开维护：主图、人物动作、交互、排版和阅读组件由固定源码负责；每份咨询在独立会话内初始化并填写来源绑定的内容模型，再由生成器装入框架。不得为每份报告另写页面、重画主图或把私人文字写进共享场景代码。主图的个人含义通过 `loop_story` 的六节点与三段说明、三个 `hero_states` 的短句、可选 `anchors` 和 `hero_choices` 呈现，九章正文与底稿引用仍由同一模型驱动。
 
 V21 保留原站的绘画世界和视听表现，固定路线、按住前进、首景六节点重复与主动分场由适配层控制；原作的自由采诗流程不作为个人报告的任务门槛。一次点击触发有限的视觉体验与结果文字，结果文案保留条件和可观察内容，不声称实际求职或生活结果已经发生。键盘、暂停、声音、重走、后台停止、减少动态、失败后的可读解释与无脚本正文由当前模板维护。验收须区分代码接入、单文件重建、浏览器实测和独立审美评审，不把其中一项当作全部通过。私有在线托管、手机传输服务、账号与回访同步尚未实现；手机视口验收不等于实体手机交付验证。

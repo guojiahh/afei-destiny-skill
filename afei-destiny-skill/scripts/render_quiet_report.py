@@ -83,7 +83,7 @@ def render_quiet(model, sources):
 
     downloads = ''.join(
         '<a download="' + esc(Path(source['artifact']['path']).name, quote=True) + '" href="data:text/markdown;base64,'
-        + base64.b64encode(source['text'].encode('utf-8')).decode('ascii') + '">' + label + '<span aria-hidden="true">↓</span></a>'
+        + base64.b64encode(source.get('raw_bytes', source['text'].encode('utf-8'))).decode('ascii') + '">' + label + '<span aria-hidden="true">↓</span></a>'
         for source, label in [(sources['user'], '下载咨询底稿'), (sources['technical'], '下载技术底稿')])
     provenance = {'schema_version': 1, 'session_id': model['session_id'], 'sources': model['sources'],
                   'model_sha256': hashlib.sha256(safe_json(model).encode('utf-8')).hexdigest(), 'presentation': 'quiet-v1'}

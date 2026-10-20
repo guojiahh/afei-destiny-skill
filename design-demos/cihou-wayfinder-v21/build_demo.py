@@ -267,13 +267,13 @@ def main():
     args = parser.parse_args()
     files = build_files(include_html=not args.content_only)
     if args.check:
-        stale = [name for name, text in files.items() if not (HERE / name).is_file() or (HERE / name).read_text(encoding="utf-8") != text]
+        stale = [name for name, text in files.items() if not (HERE / name).is_file() or (HERE / name).read_bytes() != text.encode("utf-8")]
         if stale:
             raise SystemExit("Rebuild V21 narrative content: " + ", ".join(stale))
         print("[OK] V21 narrative sources, inference metadata and complete model match")
         return
     for filename, text in files.items():
-        (HERE / filename).write_text(text, encoding="utf-8")
+        (HERE / filename).write_bytes(text.encode("utf-8"))
         print(str(HERE / filename) + " (" + str(len(text.encode("utf-8"))) + " bytes)")
 
 

@@ -53,13 +53,16 @@ def load_sources(session, state):
         require(len(rows) == 1, 'requires exactly one active ' + kind)
         row = rows[0]
         p = ensure_inside_session(session, session / row['path'])
-        require(file_hash(p) == row['sha256'], 'source hash mismatch: ' + key)
-        text = p.read_text(encoding='utf-8')
+        raw_bytes = p.read_bytes()
+        require(hashlib.sha256(raw_bytes).hexdigest() == row['sha256'], 'source hash mismatch: ' + key)
+        # Parse universal newlines, but retain the exact registered bytes for downloads.
+        text = raw_bytes.decode('utf-8').replace('\r\n', '\n').replace('\r', '\n')
         if key == 'user':
             require(not validate_report_text(text), 'user report structure must pass validation')
         preface, parts = sections(text)
         require(parts, 'report has no sections: ' + key)
-        result[key] = {'artifact': row, 'text': text, 'preface': preface, 'sections': parts}
+        result[key] = {'artifact': row, 'raw_bytes': raw_bytes, 'text': text,
+                       'preface': preface, 'sections': parts}
     return result
 
 
@@ -343,16 +346,16 @@ def render(model, sources):
         chapters.append(f'<section class="chapter"><header class="chapter-heading"><span class="eyebrow">{index:02d} / {esc(c.get("kicker", "继续理解"))}</span><h2>{esc(c["title"])}</h2><p>{esc(c["lead"])}</p></header><div class="insights {c["layout"]}">{cards}</div><div class="originals">{"".join(originals)}</div></section>')
     technical = ''.join(f'<details class="source-detail" id="source-technical-{i+1}"><summary>{esc(part["title"])}</summary><div class="prose">{markdown(part["body"])}</div></details>' for i, part in enumerate(sources['technical']['sections']))
     technical_cards = ''.join(f'<article class="insight"><h3>{esc(card["title"])}</h3><p>{esc(card["text"])}</p><div class="source-link">{evidence_links(card["refs"])}</div></article>' for card in model['technical_cards'])
-    downloads = ''.join(f'<a download="{esc(source["artifact"]["path"].split("/")[-1], quote=True)}" href="data:text/markdown;base64,{base64.b64encode(source["text"].encode()).decode()}">{label}</a>' for key,label in [('user','下载解读底稿'),('technical','下载技术底稿')] for source in [sources[key]])
+    downloads = ''.join(f'<a download="{esc(source["artifact"]["path"].split("/")[-1], quote=True)}" href="data:text/markdown;base64,{base64.b64encode(source.get("raw_bytes", source["text"].encode("utf-8"))).decode("ascii")}">{label}</a>' for key,label in [('user','下载解读底稿'),('technical','下载技术底稿')] for source in [sources[key]])
     payload = {'diagram':model['diagram']}
     provenance = {'schema_version':1,'session_id':model['session_id'],'sources':model['sources'],'model_sha256':hashlib.sha256(safe_json(model).encode()).hexdigest()}
     fallback = ''.join(f'<li><strong>{esc(n["label"])}</strong>：{esc(n["text"])}</li>' for n in model['diagram']['nodes'])
-    template = (ASSETS/'report.html').read_text()
+    template = (ASSETS/'report.html').read_text(encoding='utf-8')
     replacements = {'VERSION':provenance['model_sha256'][:8],'DATE':esc(sources['user']['artifact'].get('created_at','')[:10]),'TITLE':esc(model['title']),'SUBTITLE':esc(model['subtitle']),'CLOSING':esc(model['closing']),
         'CHAPTERS':''.join(chapters),'TECHNICAL':technical,'TECHNICAL_INTRO':esc(model['technical_intro']),
         'TECHNICAL_CARDS':technical_cards,'PREFACE':markdown(sources['user']['preface'])+markdown(sources['technical']['preface']),
         'LIMITS':esc(model['limits']),'DOWNLOADS':downloads,'DATA':safe_json(payload),'PROVENANCE':safe_json(provenance),
-        'FALLBACK':fallback,'CSS':(ASSETS/'report.css').read_text(),'JS':(ASSETS/'report.js').read_text()}
+        'FALLBACK':fallback,'CSS':(ASSETS/'report.css').read_text(encoding='utf-8'),'JS':(ASSETS/'report.js').read_text(encoding='utf-8')}
     return re.sub(r'@@([A-Z_]+)@@',lambda m:replacements[m[1]],template)
 
 
@@ -361,14 +364,14 @@ def validate_registration(session, state, kind, path, source_ids):
     report_ids = {s['artifact']['id'] for s in sources.values()}
     require(report_ids <= set(source_ids), 'HTML/model must depend directly on both current reports')
     if kind == 'visual_report_model':
-        model = json.loads(path.read_text())
+        model = json.loads(path.read_text(encoding='utf-8'))
         validate_model(model, state, sources)
     else:
         rows = active_artifacts(state, 'visual_report_model')
         require(len(rows) == 1 and rows[0]['id'] in source_ids, 'HTML must depend on active visual model')
-        model = json.loads((session/rows[0]['path']).read_text())
+        model = json.loads((session/rows[0]['path']).read_text(encoding='utf-8'))
         validate_model(model, state, sources)
-        require(path.read_text() == render(model, sources), 'HTML does not match validated content and renderer')
+        require(path.read_bytes() == render(model, sources).encode('utf-8'), 'HTML does not match validated content and renderer')
 
 
 def generate(session, model_path, output, register=False, check=False):
@@ -381,11 +384,11 @@ def generate(session, model_path, output, register=False, check=False):
     require(output not in {session/s['artifact']['path'] for s in sources.values()}, 'output collides with report')
     model = json.loads(model_path.read_text(encoding='utf-8'))
     validate_model(model, state, sources)
-    rendered = render(model, sources)
+    rendered = render(model, sources).encode('utf-8')
     if check:
-        require(output.is_file() and output.read_text() == rendered, 'HTML is missing or differs from current sources')
+        require(output.is_file() and output.read_bytes() == rendered, 'HTML is missing or differs from current sources')
         return {'ok':True,'checked':str(output)}
-    require(not output.exists() or output.read_text() == rendered, 'use a new output filename; preserve old HTML')
+    require(not output.exists() or output.read_bytes() == rendered, 'use a new output filename; preserve old HTML')
     parents = [s['artifact']['id'] for s in sources.values()]
     if register:
         require(not active_artifacts(state,'html_report'), 'active HTML exists; check it or supersede before rebuilding')
@@ -403,7 +406,7 @@ def generate(session, model_path, output, register=False, check=False):
         write_json_atomic(plan_path, plan)
         plan_artifact = register_artifact(session,state,kind='output_plan',path=plan_path,source_categories=['prior_output'],source_artifact_ids=parents)
         parents.append(plan_artifact['id'])
-    output.write_text(rendered,encoding='utf-8')
+    output.write_bytes(rendered)
     if register:
         artifact = register_artifact(session,state,kind='html_report',path=output,source_categories=['prior_output'],source_artifact_ids=parents)
         return {'ok':True,'html':str(output),'artifact_id':artifact['id'],'sha256':artifact['sha256']}

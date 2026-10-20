@@ -14,7 +14,7 @@ from unittest.mock import patch
 
 import test_html_report as synthetic_fixture
 import render_wayfinder_report as wayfinder
-from consultation_harness import active_artifacts, read_state, session_lifecycle
+from consultation_harness import active_artifacts, read_state, register_artifact, session_lifecycle
 from generate_html_report import generate, load_sources, render, safe_json, validate_model
 
 
@@ -124,7 +124,7 @@ class WayfinderReportTests(unittest.TestCase):
         self.assertTrue({fixture.user["id"], fixture.tech["id"], model_record["id"]}
                         <= set(html_record["source_artifact_ids"]))
         for name, source in self.sources.items():
-            self.assertEqual(hashlib.sha256(source["text"].encode()).hexdigest(),
+            self.assertEqual(hashlib.sha256(source["raw_bytes"]).hexdigest(),
                              self.provenance["sources"][name]["sha256"])
 
     def test_three_sourced_views_choices_nine_chapters_and_both_originals(self):
@@ -150,13 +150,76 @@ class WayfinderReportTests(unittest.TestCase):
         for kind, count in [("user", 8), ("technical", 11)]:
             for index in range(1, count + 1):
                 self.assertIn('id="source-' + kind + '-' + str(index) + '"', self.html)
-            encoded = base64.b64encode(self.sources[kind]["text"].encode()).decode()
+            encoded = base64.b64encode(self.sources[kind]["raw_bytes"]).decode()
             self.assertIn("data:text/markdown;base64," + encoded, self.html)
         self.assertEqual(2, self.html.count("data:text/markdown;base64,"))
         self.assertIn('<article class="reading" id="reading"', self.html)
         self.assertIn("<noscript>", self.html)
         self.assertIn("Wayfinder", self.html)
         self.assertNotIn("@@", self.html)
+
+    def test_crlf_source_downloads_preserve_registered_bytes_in_both_presentations(self):
+        class CrlfSourcesFixture(synthetic_fixture.HtmlReportTests):
+            def reg(self, kind, name, text, cats, parents=()):
+                if kind not in {"markdown_report", "technical_report"}:
+                    return super().reg(kind, name, text, cats, parents)
+                path = self.s / name
+                raw = text.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8")
+                path.write_bytes(raw)
+                return register_artifact(self.s, self.state, kind=kind, path=path,
+                                         source_categories=cats, source_artifact_ids=parents)
+
+        for runtime in ["paper-v15", "wayfinder-v21"]:
+            with self.subTest(runtime=runtime):
+                fixture = CrlfSourcesFixture("runTest")
+                fixture.setUp()
+                try:
+                    fixture.mobius()
+                    fixture.model = copy.deepcopy(self.fixture.model)
+                    fixture.model["session_id"] = fixture.state["session_id"]
+                    fixture.model["sources"] = {
+                        kind: {"artifact_id": row["id"], "sha256": row["sha256"]}
+                        for kind, row in [("user", fixture.user), ("technical", fixture.tech)]}
+                    fixture.model["presentation"]["hero_runtime"] = runtime
+                    fixture.save()
+                    generate(fixture.s, fixture.model_path, fixture.out, register=True)
+                    self.assertTrue(generate(fixture.s, fixture.model_path, fixture.out, check=True)["ok"])
+                    rendered = fixture.out.read_bytes().decode("utf-8")
+                    provenance = embedded_json(rendered, "report-provenance")
+                    sources = load_sources(fixture.s, read_state(fixture.s))
+                    downloads = re.findall(r'href="data:text/markdown;base64,([^"]+)"', rendered)
+                    self.assertEqual(2, len(downloads))
+                    for (kind, source), encoded in zip(sources.items(), downloads):
+                        raw = (fixture.s / source["artifact"]["path"]).read_bytes()
+                        self.assertIn(b"\r\n", raw)
+                        self.assertNotIn("\r", source["text"])
+                        self.assertEqual(raw, source["raw_bytes"])
+                        self.assertEqual(raw, base64.b64decode(encoded, validate=True))
+                        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+                                         provenance["sources"][kind]["sha256"])
+                finally:
+                    fixture.tearDown()
+
+    def test_runtime_provenance_and_embedding_preserve_crlf_bytes(self):
+        runtime = "// Synthetic runtime\r\nwindow.synthetic = '原始字节';\r\n".encode("utf-8")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "runtime").mkdir()
+            (root / "runtime" / "wayfinder.js").write_bytes(runtime)
+            for filename in ["fonts.525e81a0.css", "main.7011abb4.css", "src.1489fb19.css"]:
+                (root / "runtime" / filename).write_bytes(b"")
+            for filename in ["adapter.js", "choice-effects.js", "bootstrap.js", "ui.js", "report.css"]:
+                (root / filename).write_bytes(b"")
+            (root / "report.html").write_bytes(
+                b'<script id="synthetic-runtime">@@ENGINE_JS@@</script>'
+                b'<script id="report-provenance" type="application/json">@@PROVENANCE@@</script>')
+            with patch.object(wayfinder, "ASSETS", root), patch.object(
+                    wayfinder, "packed_assets", return_value=({}, [])):
+                rendered = wayfinder.render_wayfinder(
+                    self.fixture.model, {"FALLBACK": ""}, {"sources": self.fixture.model["sources"]})
+            self.assertIn(runtime.decode("utf-8"), rendered)
+            self.assertEqual(hashlib.sha256(runtime).hexdigest(),
+                             embedded_json(rendered, "report-provenance")["hero"]["runtime_sha256"])
 
     def test_no_external_runtime_scripts_styles_or_asset_urls(self):
         parser = ResourceTags()

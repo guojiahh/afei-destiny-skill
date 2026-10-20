@@ -25,7 +25,7 @@ def script(text):
 @lru_cache(maxsize=1)
 def packed_assets():
     """Verify every original resource before embedding; deterministic ordering."""
-    entries = json.loads((ASSETS / 'asset-manifest.json').read_text())
+    entries = json.loads((ASSETS / 'asset-manifest.json').read_text(encoding='utf-8'))
     packed = {}
     for entry in entries:
         raw = (ASSETS / 'assets' / entry['path'].lstrip('/')).read_bytes()
@@ -78,11 +78,12 @@ def render_wayfinder(model, replacements, provenance):
         for field, label in zip(['present', 'past', 'future'], labels):
             if field in loop_story:
                 replacements['FALLBACK'] += '<li><h3>' + label + '</h3><p>' + html.escape(loop_story[field]['text']) + '</p></li>'
-    runtime = (ASSETS / 'runtime' / 'wayfinder.js').read_text()
+    runtime_bytes = (ASSETS / 'runtime' / 'wayfinder.js').read_bytes()
+    runtime = runtime_bytes.decode('utf-8')
     provenance['hero'] = {
         'version': model['presentation'].get('hero_runtime', 'wayfinder-v21'),
         'origin': 'https://wayfinder.nfb.ca/',
-        'runtime_sha256': hashlib.sha256(runtime.encode()).hexdigest(),
+        'runtime_sha256': hashlib.sha256(runtime_bytes).hexdigest(),
         'adapter_assets': {name: hashlib.sha256((ASSETS / name).read_bytes()).hexdigest()
                            for name in ['adapter.js', 'choice-effects.js', 'bootstrap.js', 'ui.js', 'report.css', 'report.html']},
         'resources': entries,
@@ -90,7 +91,7 @@ def render_wayfinder(model, replacements, provenance):
     }
     css_parts = []
     for filename in ['fonts.525e81a0.css', 'main.7011abb4.css', 'src.1489fb19.css']:
-        css = (ASSETS / 'runtime' / filename).read_text()
+        css = (ASSETS / 'runtime' / filename).read_text(encoding='utf-8')
         def resource(match):
             name = '/' + match[1].split('/')[-1]
             mime, data = packed[name]
@@ -98,16 +99,16 @@ def render_wayfinder(model, replacements, provenance):
         css_parts.append(re.sub(r'url\((?:[\'"])?(\.\./assets/[^)\'"\s]+)(?:[\'"])?\)', resource, css))
     replacements.update({
         'ENGINE_CSS': '\n'.join(css_parts),
-        'READING_CSS': (ROOT / 'report.css').read_text(),
-        'CSS': (ASSETS / 'report.css').read_text(),
+        'READING_CSS': (ROOT / 'report.css').read_text(encoding='utf-8'),
+        'CSS': (ASSETS / 'report.css').read_text(encoding='utf-8'),
         'ASSET_PACK': safe_json(packed),
         'DATA': safe_json(story),
         'PROVENANCE': safe_json(provenance),
-        'BOOTSTRAP_JS': script((ASSETS / 'bootstrap.js').read_text()),
+        'BOOTSTRAP_JS': script((ASSETS / 'bootstrap.js').read_text(encoding='utf-8')),
         'ENGINE_JS': script(runtime),
-        'CHOICE_EFFECTS_JS': script((ASSETS / 'choice-effects.js').read_text()),
-        'ADAPTER_JS': script((ASSETS / 'adapter.js').read_text()),
-        'UI_JS': script((ASSETS / 'ui.js').read_text()),
+        'CHOICE_EFFECTS_JS': script((ASSETS / 'choice-effects.js').read_text(encoding='utf-8')),
+        'ADAPTER_JS': script((ASSETS / 'adapter.js').read_text(encoding='utf-8')),
+        'UI_JS': script((ASSETS / 'ui.js').read_text(encoding='utf-8')),
     })
     return re.sub(r'@@([A-Z_0-9]+)@@', lambda match: replacements[match[1]],
-                  (ASSETS / 'report.html').read_text())
+                  (ASSETS / 'report.html').read_text(encoding='utf-8'))

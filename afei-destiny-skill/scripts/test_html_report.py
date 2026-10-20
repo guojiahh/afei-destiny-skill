@@ -98,6 +98,25 @@ class HtmlReportTests(unittest.TestCase):
             for i in range(1,count+1):self.assertIn(f'id="source-{key}-{i}"',text)
         self.assertEqual(before,[(self.s/n).read_bytes() for n in ['final_report.md','technical_analysis.md']])
         self.assertEqual(2,text.count('data:text/markdown;base64,'))
+    def test_html_registration_preserves_utf8_and_mixed_newlines(self):
+        from unittest.mock import patch
+        self.model['title'] = '换行保真 · 合成报告'
+        self.save()
+        sources = load_sources(self.s, self.state)
+        # Bundled scripts may contain CRLF even when the page template uses LF.
+        rendered = render(self.model, sources).replace('\n', '\r\n', 1)
+        self.assertIn('\r\n', rendered)
+        expected = rendered.encode('utf-8')
+        with patch('generate_html_report.render', return_value=rendered):
+            generate(self.s, self.model_path, self.out, register=True)
+            self.assertEqual(expected, self.out.read_bytes())
+            self.assertTrue(generate(self.s, self.model_path, self.out, check=True)['ok'])
+            record = active_artifacts(read_state(self.s), 'html_report')[0]
+            self.assertEqual(hashlib.sha256(expected).hexdigest(), record['sha256'])
+            # Re-saving with different newlines is still a change, not a match.
+            self.out.write_bytes(expected.replace(b'\r\n', b'\n', 1))
+            with self.assertRaises(HarnessError):
+                generate(self.s, self.model_path, self.out, check=True)
     def test_legacy_markdown_delivery_and_explicit_markdown_remain_supported(self):
         self.state.pop('delivery_format');self.assertEqual('complete',session_lifecycle(self.state))
         self.state['delivery_format']='markdown';self.assertEqual('complete',session_lifecycle(self.state))
