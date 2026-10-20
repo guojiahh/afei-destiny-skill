@@ -20,3 +20,13 @@ design-demos/cihou-wayfinder-v16/wayfinder/assets/** -whitespace
 # Archived research sources retain their original formatting.
 design-demos/cihou-reference-study/** -text -whitespace
 design-demos/cihou-wayfinder-v16/wayfinder/reference/recovered-source/** -whitespace
+
+# Keep GitHub language statistics focused on maintained application source.
+design-demos/** linguist-documentation
+design-demos/**/final_report.html linguist-generated
+afei-destiny-skill/scripts/vendor/** linguist-vendored
+afei-destiny-skill/assets/cihou/quiet/wayfinder/runtime/** linguist-vendored
+afei-destiny-skill/assets/cihou/quiet/wayfinder/assets/** linguist-vendored
+afei-destiny-skill/assets/cihou/quiet/immersive/three.min.js linguist-vendored
+afei-destiny-skill/assets/cihou/quiet/immersive/prototype*.html linguist-documentation
+afei-destiny-skill/assets/cihou/quiet/immersive/*preview*.html linguist-documentation
