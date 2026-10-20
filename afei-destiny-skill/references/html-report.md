@@ -21,17 +21,17 @@
 5. 生成预览，检查语义、桌面与窄屏、按住固定路线前进／松开停下、六节点次序与首景持续循环、主动切场、一次点击后的叶片换场／自动有限体验／结果文字、暂停／重看／减少动态、正文完整度和依据展开。修正使用新的预览文件名，保留旧版本。
 6. 用 `--register` 生成并登记最终页面，再 `--check` 与 Harness `audit`。最终回复只突出 HTML 一个入口并打开，底稿在页尾按需下载。
 
-从仓库根目录运行，`SESSION` 是 Harness 返回、用户选定的独立咨询目录：
+按 [运行准备](runtime-setup.md) 绑定解释器、绝对安装目录和绝对 `SESSION`，保持用户工作目录。`SESSION` 只使用 Harness 返回、用户选定的独立咨询目录；以下 `sh` 命令在 PowerShell 中前置 `& `：
 
 ```sh
 # 双底稿已按各自来源计划完成并登记后
-python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --describe-sources
-python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --init-model visual_report_model.json
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/generate_html_report.py" --session-dir "$SESSION" --describe-sources
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/generate_html_report.py" --session-dir "$SESSION" --init-model visual_report_model.json
 # 代理阅读全文、填写模型并复核；草稿不能跳过这一步直接生成
-python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output preview.html
-python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --register
-python afei-destiny-skill/scripts/generate_html_report.py --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --check
-python afei-destiny-skill/scripts/consultation_harness.py audit --session-dir "$SESSION"
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/generate_html_report.py" --session-dir "$SESSION" --model visual_report_model.json --output preview.html
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/generate_html_report.py" --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --register
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/generate_html_report.py" --session-dir "$SESSION" --model visual_report_model.json --output final_report.html --check
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" audit --session-dir "$SESSION"
 ```
 
 `--init-model`、`--model` 与 `--output` 相对路径均相对于该会话，不能越界。已有文件不覆盖，更新时使用版本文件名。`--register` 同时登记模型及 `<output-stem>_source_plan.json`；`--check` 不写文件。内容结构校验不能证明解释正确，仍需逐段核对原意、限制与反例。
@@ -113,7 +113,7 @@ V21 在本页保留已收集的卡片，显示 `x / 3` 与待收集、正在体�
 历史无 `delivery_format` 字段的会话按旧 Markdown 交付理解。用户要补 HTML 时先 `status`、`audit`、`resume`，按需执行：
 
 ```sh
-python afei-destiny-skill/scripts/consultation_harness.py set-delivery --session-dir "$SESSION" --format html --reason "用户要求 HTML 主交付"
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" set-delivery --session-dir "$SESSION" --format html --reason "用户要求 HTML 主交付"
 ```
 
 用户明确只要 Markdown 可用 `--format markdown` 并记录原因。不能为了绕过失败静默改格式。新模板与历史底稿标题不一致时，按来源规范形成新版本并登记，再初始化模型，不能覆盖旧文件。

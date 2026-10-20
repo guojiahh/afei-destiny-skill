@@ -19,6 +19,7 @@ V21 的路径是现在／之前／此后／完整解读：前两景长按阅读�
 |---|---|
 | 看懂安装包与研发仓库 | [工作区地图](WORKSPACE_GUIDE.md) |
 | 在新电脑开发、运行检查 | [参与开发](../CONTRIBUTING.md) |
+| 查看安装到完整报告的实测与修复 | [首次使用验收](FIRST_USE_ACCEPTANCE.md) |
 | 继续当前 V21 | [当前版本与交接](CIHOU_HANDOFF.md)、[V21 构建脚本](../design-demos/cihou-wayfinder-v21/build_demo.py) |
 | 区分当前样机和历史设计 | [设计演示索引](../design-demos/README.md) |
 | 了解产品规划 | [产品形态与体验方案](CIHOU_PRODUCT_PLAN.md)：实际能力以当前交接和代码为准 |

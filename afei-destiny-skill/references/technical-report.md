@@ -4,19 +4,17 @@
 
 每次使用 [技术报告源模板](../assets/cihou/technical-report-template.md)，保留十一节标题和顺序。模板只提供结构，不含任何个人盘面或现成判断。新报告按这一结构生成；已登记的历史报告不因模板更新而重写。
 
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 一、生成条件与来源
 
 进入 `report_ready` 后，与用户报告的 `report_source` 分别生成技术来源计划：
 
-```powershell
-python scripts/consultation_output_router.py `
-  --session-dir consultation_state/<chosen-session> `
-  --intent technical_report_source `
-  --output technical_report_source_plan.json `
-  --register
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_output_router.py" --session-dir "$SESSION" --intent technical_report_source --output technical_report_source_plan.json --register
 ```
 
-该路由至少要求活动的 `chart_facts`、`chart_lock` 和 `preblind_analysis`。它排除含 `biography` 或 `user_preference` 的产物，避免把用户叙述反向当作盘面依据；可以使用固定盲测反馈标签说明哪些原判断被支持或下调。
+该路由至少要求活动的 `chart_facts`、`chart_lock` 和 `preblind_analysis`。`one_shot` 或跳过盲测的 `focused` 也须先按 [盘面审计](preblind-analysis.md) 完成第三项，不能用虚构的盲测反馈补齐。它排除含 `biography` 或 `user_preference` 的产物，避免把用户叙述反向当作盘面依据；可以使用固定盲测反馈标签说明哪些原判断被支持或下调。
 
 ## 二、固定结构
 
@@ -60,7 +58,7 @@ python scripts/consultation_output_router.py `
 写入：
 
 ```text
-consultation_state/<chosen-session>/technical_analysis.md
+$SESSION/technical_analysis.md
 ```
 
 先移除模板占位内容和写作注释，再按十一节逐项核对。技术报告与用户报告分别依赖自己的来源计划，不能用用户报告代替技术来源审计。
@@ -68,6 +66,12 @@ consultation_state/<chosen-session>/technical_analysis.md
 生成 `cihou-mobius-v1` HTML 时会强制检查这十一节标题及顺序，并拒绝两份底稿中仍含 `__CIHOU_FILL__` 的产物。此规则适用于新固定模板；历史 HTML 的读取和复核沿用其原有规则，不为迁移样式而覆盖历史底稿。结构检查不能替代来源、反证和结论一致性检查。
 
 登记为 `technical_report`，并传入实际使用的活动产物 ID。若已经存在活动技术报告，先按 `output` 范围失效旧输出，不得静默覆盖。
+
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" register --session-dir "$SESSION" --kind technical_report --path "$SESSION/technical_analysis.md" --source-category prior_output --source-artifact "<实际使用的技术来源产物ID>"
+```
+
+重复 `--source-artifact` 传入该技术来源计划中实际使用的全部活动来源；不能使用含传记或关注偏好的用户报告作为上游。
 
 ## 五、交付检查
 

@@ -1,5 +1,7 @@
 # 排盘口径与计算器使用
 
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 固定口径
 
 - 年柱以立春为界，不以农历正月初一为界。
@@ -13,29 +15,29 @@
 
 公历：
 
-```powershell
-python scripts/calculate_bazi.py --date 1983-10-19 --time 09:58 --calendar solar --gender male --target-year 2011 --compact
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/calculate_bazi.py" --date 1983-10-19 --time 09:58 --calendar solar --gender male --target-year 2011 --compact
 ```
 
 农历（日期仍写数字；闰月另加参数）：
 
-```powershell
-python scripts/calculate_bazi.py --date 1990-04-21 --time 14:30 --calendar lunar --gender female --leap --compact
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/calculate_bazi.py" --date 1990-04-21 --time 14:30 --calendar lunar --gender female --leap --compact
 ```
 
 民用午夜换日：
 
-```powershell
-python scripts/calculate_bazi.py --date 1990-05-15 --time 23:30 --gender male --day-boundary civil-midnight --compact
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/calculate_bazi.py" --date 1990-05-15 --time 23:30 --gender male --day-boundary civil-midnight --compact
 ```
 
 真太阳时近似校正：
 
-```powershell
-python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --longitude 104.07 --utc-offset 8 --compact
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/calculate_bazi.py" --date 1990-05-15 --time 14:30 --gender female --longitude 104.07 --utc-offset 8 --compact
 ```
 
-`--longitude` 是出生地经度，东经为正；`--utc-offset` 为当地当时法定时区。若历史上实行夏令时，用 `--dst-minutes` 显式扣除。程序采用经度差和时间方程的近似校正，不能替代专业天文历表。
+`--longitude`（东经为正）和 `--utc-offset`（当地标准 UTC 时差）是一对**启用真太阳时近似校正**的参数，必须同时提供；`--utc-offset 8` 不是单独声明“北京时间”的参数。用户选择民用钟表时、不做校正时，两者都不传，只在 `inputs` 中记录出生地时区。启用校正且当时实行夏令时，再用 `--dst-minutes` 显式扣除。程序采用经度差和时间方程的近似校正，不能替代专业天文历表。
 
 计算结果中的 `time_basis_comparison` 同时给出：
 
@@ -48,14 +50,14 @@ python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female 
 
 多个候选年份使用同一尺度比较：
 
-```powershell
-python scripts/compare_candidate_years.py --date 1972-11-02 --time 10:00 --gender male --years 1992 1995 1996 1997 1999
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/compare_candidate_years.py" --date 1972-11-02 --time 10:00 --gender male --years 1992 1995 1996 1997 1999
 ```
 
 候选项给出具体日期、节气前后或发生在换运年时，改用精确日期：
 
-```powershell
-python scripts/compare_candidate_years.py --date 1963-02-06 --time 12:00 --gender male --candidate-dates 2003-08-08 2003-08-21
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/compare_candidate_years.py" --date 1963-02-06 --time 12:00 --gender male --candidate-dates 2003-08-08 2003-08-21
 ```
 
 `--target-date YYYY-MM-DD[THH:MM]` 按起运时刻解析所在大运。只给 `--target-year` 时，
@@ -108,8 +110,8 @@ python scripts/compare_candidate_years.py --date 1963-02-06 --time 12:00 --gende
 
 计算器固定使用 vendored `lunar_python 1.4.8`，无需联网。回归测试：
 
-```powershell
-python -m unittest -v scripts/test_calculate_bazi.py
+```sh
+"$CIHOU_PYTHON" -m unittest discover -s "$CIHOU_SKILL_DIR/scripts" -p test_calculate_bazi.py
 ```
 
 测试夹具只用于核对排盘事实，不包含 Benchmark 答案。

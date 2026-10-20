@@ -8,6 +8,8 @@
 
 默认产物链固定为：**咨询 → 登记用户与技术两份 Markdown 底稿 → `cihou-mobius-v1` 个人模型 → 登记 HTML → 交付 HTML 一个入口**。莫比乌斯环统一表达“一个应对方式如何可能把人带回原处”；环上的具体含义、因果假设和离环行动必须从本次底稿取得。不能为套图而把所有问题写成拖延、准备过度或心理问题。
 
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 目录
 
 1. [生成条件](#一生成条件)
@@ -240,38 +242,28 @@
 
 生成来源计划：
 
-```powershell
-python scripts/consultation_output_router.py `
-  --session-dir consultation_state/<chosen-session> `
-  --intent report_source `
-  --output report_source_plan.json `
-  --register
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_output_router.py" --session-dir "$SESSION" --intent report_source --output report_source_plan.json --register
 ```
 
 依据计划写入：
 
 ```text
-consultation_state/<chosen-session>/final_report.md
+$SESSION/final_report.md
 ```
 
 写完先运行固定结构检查：
 
-```powershell
-python scripts/validate_final_report.py `
-  consultation_state/<chosen-session>/final_report.md
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/validate_final_report.py" "$SESSION/final_report.md"
 ```
 
 检查失败时先调整章节顺序或移出技术内容，不得登记不合格报告。
 
 随后登记为 `markdown_report`，并把所有实际使用的活动产物 ID 作为来源。报告文件不得写入 Skill 目录，不得包含 Benchmark，不能读取 `stale` 或 `superseded` 产物。
 
-```powershell
-python scripts/consultation_harness.py register `
-  --session-dir consultation_state/<chosen-session> `
-  --kind markdown_report `
-  --path consultation_state/<chosen-session>/final_report.md `
-  --source-category prior_output `
-  --source-artifact <实际使用的活动产物ID>
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" register --session-dir "$SESSION" --kind markdown_report --path "$SESSION/final_report.md" --source-category prior_output --source-artifact "<实际使用的活动产物ID>"
 ```
 
 重复 `--source-artifact` 传入全部实际来源。若已有活动 `markdown_report`，先按 `output` 范围 `supersede`，不得静默覆盖。

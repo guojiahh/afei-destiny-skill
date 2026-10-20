@@ -45,22 +45,25 @@ GitHub 的文件预览不会运行交互页面。已克隆仓库时，也可以�
 
 ### 安装并开始自己的探索
 
-1. 获取仓库：
+1. 准备 Python **3.9–3.13** 和 Git，只下载安装所需目录：
 
    ```sh
-   git clone --depth 1 https://github.com/guojiahh/afei-destiny-skill.git
-   cd afei-destiny-skill
+   git clone --depth 1 --filter=blob:none --sparse https://github.com/guojiahh/afei-destiny-skill.git afei-destiny-source
+   cd afei-destiny-source
+   git sparse-checkout set afei-destiny-skill
    ```
 
-2. 只安装里面的 **`afei-destiny-skill/`** 目录。默认目标是 `~/.codex/skills/afei-destiny-skill/`，首层应直接有 `SKILL.md`。运行环境为 Python **3.9–3.13**，计算依赖已内置。[macOS / Linux / Windows 复制命令与自检](afei-destiny-skill/README.md#安装)。
+2. 按[安装与自检步骤](afei-destiny-skill/README.md#安装)，把里面的 **`afei-destiny-skill/`** 复制到技能目录，首层直接有 `SKILL.md`。计算依赖已内置，无需 pip 或 Node。macOS / Linux 使用 `python3`，Windows 使用 `python`，先确认版本在支持范围内。
 
-3. 在新的 Codex 会话中调用：
+3. 自检通过后，离开技能目录，在自己的独立工作文件夹打开 Codex，再复制这段话：
 
    ```text
-   请用 $afei-destiny-skill 开始预测，一步一步带着我分析。
+   请用 $afei-destiny-skill 带我完成一次分步咨询，最终生成可本地打开的完整 HTML 报告。
+   先问我出生资料和本次问题，带我完成排盘、反馈与深入分析；资料足够后生成并校验 final_report.html。
+   咨询保存在当前工作目录，最后给我报告的绝对路径和可点击入口。
    ```
 
-技能会确认出生资料与关注方向，计算并审计盘面，先锁定盲测再接收反馈，随后围绕一个现实主问题深入。完整咨询会从本次底稿生成个人 HTML；也可以只问职业、关系或某一年，不必每次生成长报告。
+接下来按提示补充资料、回应开场判断，再谈一个最关心的问题。完整报告保存在工作目录下的 `consultation_state/<本次会话>/final_report.html`，点击返回的文件入口或在浏览器打开即可。[逐步预期、打开与继续](afei-destiny-skill/README.md#从第一次对话到完整-html)。也可以只问一个主题。
 
 ### 只想运行排盘器
 
@@ -104,10 +107,10 @@ python3 afei-destiny-skill/scripts/calculate_bazi.py --date 1990-05-15 --time 14
 
 欢迎通过 [Issues](https://github.com/guojiahh/afei-destiny-skill/issues) 提交安装、计算或交互问题，或发起改进建议。**请勿在公开问题中提交出生资料、私人咨询或含答案的缓存。**
 
-开发环境和修改约定见 [CONTRIBUTING.md](CONTRIBUTING.md)。准备好 Python 与 Node 后，在仓库根目录运行：
+开发环境和修改约定见 [CONTRIBUTING.md](CONTRIBUTING.md)。准备好 Python 与 Node 后，在仓库根目录运行；Windows 使用 `python`：
 
 ```sh
-python tools/check_workspace.py
+python3 tools/check_workspace.py
 ```
 
 修改 Skill 还需 `--skill` 结构校验。GitHub Actions 对 macOS、Windows、Linux 运行同一检查入口。

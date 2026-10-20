@@ -2,6 +2,8 @@
 
 输出路由只决定“用哪些已经完成的活动产物、以什么形式交付”，不得改变置信度或把失效结论捞回来。默认最终交付是 `final_report.html`；`final_report.md` 与 `technical_analysis.md` 是有来源的内部底稿及可选下载。生成流程见 [html-report.md](html-report.md)。
 
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 路由表
 
 | 用户意图 | `--intent` | 输出作用 |
@@ -16,12 +18,8 @@
 
 运行：
 
-```powershell
-python scripts/consultation_output_router.py `
-  --session-dir consultation_state/<chosen-session> `
-  --intent consultation_summary `
-  --output output_plan.json `
-  --register
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_output_router.py" --session-dir "$SESSION" --intent consultation_summary --output output_plan.json --register
 ```
 
 路由器只选择 `active` 产物，输出每个来源的文件路径、哈希和来源类别。`report_source` 同时包含入口关注方向、输入、盘面、盲测前完整审计、盲测清单、反馈、最小咨询上下文、主问题、未来与既有报告章节。`technical_report_source` 使用盘面事实、盘面锁、盲测前审计、锁定清单、固定反馈与不含传记的技术章节。若缺少必需产物，会直接失败，不用空洞套话补齐。

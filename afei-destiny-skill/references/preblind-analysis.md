@@ -2,6 +2,10 @@
 
 本文件规定 `chart_ready` 到 `first_read` 之间必须完成的内部分析。它的目标不是向用户倾倒术语，而是先把整张盘的主要结构、冲突、时间窗口和反证分析足量，再从中筛选四到五条现实可验证的盲测。没有活动的 `preblind_analysis`，引导式会话不得进入 `first_read`。
 
+`one_shot` 或最终需要完整报告的 `focused` 同样需要这份来源隔离的盘面审计，供技术底稿取用；可以不生成候选、不展示盲测、不追问。未做的盲测和反馈如实留空，不能把内部分析或已知经历登记成一次盲测。
+
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 一、来源隔离
 
 `preblind_analysis` 只能使用：
@@ -58,18 +62,11 @@
 
 先形成盘面锁，再写内部审计并登记：
 
-```powershell
-python scripts/consultation_harness.py register `
-  --session-dir consultation_state/<chosen-session> `
-  --kind preblind_analysis `
-  --path consultation_state/<chosen-session>/preblind_analysis.md `
-  --source-category chart_fact `
-  --source-category traditional_rule `
-  --source-artifact <chart_facts-id> `
-  --source-artifact <chart_lock-id>
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" register --session-dir "$SESSION" --kind preblind_analysis --path "$SESSION/preblind_analysis.md" --source-category chart_fact --source-category traditional_rule --source-artifact "<chart_facts-id>" --source-artifact "<chart_lock-id>"
 ```
 
-然后才可以迁移到 `first_read`、生成 `blind_candidates`。候选应以该审计为上游，不得把 `consultation_brief` 作为上游。
+引导式会话随后才可迁移到 `first_read`、生成 `blind_candidates`；`focused`／`one_shot` 按各自阶段继续。若生成候选，须以该审计为上游，不得把 `consultation_brief` 作为上游。
 
 ## 六、验收
 

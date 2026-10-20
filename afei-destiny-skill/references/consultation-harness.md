@@ -2,6 +2,8 @@
 
 本文件规定所有真实咨询怎样发现、初始化、恢复、纠正和失效。目标是让用户感受到一条连续、被认真承接的咨询线；底层则确保不同咨询、旧盘、旧判断和新反馈不会被静默混用。Harness 只管理状态与来源，不生成命理结论。
 
+命令沿用 [运行准备](runtime-setup.md) 中的绝对安装路径、解释器和所选会话变量；保持用户工作目录。下列单行 `sh` 命令在 PowerShell 中前置 `& `，不要使用反引号续行。
+
 ## 目录
 
 1. [基本原则](#一基本原则)
@@ -15,7 +17,7 @@
 
 ## 一、基本原则
 
-- 会话状态只写入用户当前工作目录，不写入 Skill、仓库示例或 Benchmark。
+- 会话状态只写入用户工作目录下的绝对 `CIHOU_STATE_ROOT`，不写入 Skill、仓库示例或 Benchmark；执行脚本时不切换到安装目录。
 - `consultation_state/` 只作会话集合根目录；每次咨询写入独立子目录。
 - 每次继续咨询前先读取 `session_state.json`；不能凭聊天记忆猜当前阶段。
 - 不得同时读取两个会话目录，也不得扫描根目录拼接产物。
@@ -40,9 +42,8 @@ consultation_state/
 
 每次开始或继续前先只读发现：
 
-```powershell
-python scripts/consultation_harness.py discover `
-  --state-root consultation_state
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" discover --state-root "$CIHOU_STATE_ROOT"
 ```
 
 根据 `decision` 执行：
@@ -56,31 +57,24 @@ python scripts/consultation_harness.py discover `
 
 用户明确说“重新开始”“新开一次”时直接新建：
 
-```powershell
-python scripts/consultation_harness.py start `
-  --state-root consultation_state `
-  --mode guided `
-  --topic "整体分析" `
-  --label overall `
-  --user-choice new
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" start --state-root "$CIHOU_STATE_ROOT" --mode guided --topic "整体分析" --label overall --user-choice new
 ```
 
-`start` 使用时间、标签和随机短 ID 创建不可碰撞的子目录，并返回准确的 `session_dir`。本轮之后的全部命令和输出路由只使用这个目录。不得按修改时间自行猜测当前会话，也不得因为出生资料相同就复用旧目录。
+`start` 使用时间、标签和随机短 ID 创建不可碰撞的子目录，并返回准确的 `session_dir`。将它的绝对路径赋给 `SESSION`，按运行准备带 `--session-dir "$SESSION"` 再次自检可写性；本轮之后的全部命令和输出路由只使用这个目录。不得按修改时间自行猜测当前会话，也不得因为出生资料相同就复用旧目录。
 
 模式：
 
 - `guided`：默认七阶段咨询，包含开场盲测和反馈结算。
 - `focused`：用户只问一个明确问题，跳过强制盲测，但仍保留盘面锁、血缘和输出路由。
-- `one_shot`：用户明确要求一次讲完；未完成的校准项保持未核验。
+- `one_shot`：用户明确要求一次讲完或不追问；未完成的校准项保持未核验。约定最终要完整报告或 HTML 不单独触发此模式；“一步一步，最后给完整报告”仍为 `guided`，明确“不追问”时优先 `one_shot`。
 
 用户选择继续某条未完成咨询后，对 `discover` 返回的准确目录运行：
 
-```powershell
-python scripts/consultation_harness.py status --session-dir consultation_state/<chosen-session>
-python scripts/consultation_harness.py audit --session-dir consultation_state/<chosen-session>
-python scripts/consultation_harness.py resume `
-  --session-dir consultation_state/<chosen-session> `
-  --user-choice continue
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" status --session-dir "$SESSION"
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" audit --session-dir "$SESSION"
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" resume --session-dir "$SESSION" --user-choice continue
 ```
 
 `audit` 失败时停止消费产物。先修复缺失、被篡改或依赖失效的问题，再继续。
@@ -88,9 +82,8 @@ python scripts/consultation_harness.py resume `
 
 `init --session-dir` 仅保留给测试和已明确指定独立目录的低层调用；正常流程使用 `start --state-root`。旧版可能把产物直接放在根目录，`discover` 会将其标为 `legacy_root`。迁移前运行以下只读预览，只有用户查看预览并明确确认后才能移动：
 
-```powershell
-python scripts/consultation_harness.py migration-preview `
-  --state-root consultation_state
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" migration-preview --state-root "$CIHOU_STATE_ROOT"
 ```
 
 ## 三、三种操作语义
@@ -103,11 +96,8 @@ python scripts/consultation_harness.py migration-preview `
 
 新输入或新方法使旧版本不再权威。必须使被替代产物标记为 `superseded`，并把依赖它的后续产物标记为 `stale`：
 
-```powershell
-python scripts/consultation_harness.py supersede `
-  --session-dir consultation_state/<chosen-session> `
-  --scope chart `
-  --reason "用户将出生时间从 09:00 修正为 08:20"
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" supersede --session-dir "$SESSION" --scope chart --reason "用户将出生时间从 09:00 修正为 08:20"
 ```
 
 范围：
@@ -125,11 +115,8 @@ python scripts/consultation_harness.py supersede `
 
 用户明确要求从某个检查点重新开始时使用：
 
-```powershell
-python scripts/consultation_harness.py reset `
-  --session-dir consultation_state/<chosen-session> `
-  --to first_read `
-  --reason "用户要求换一种开场盲测重新开始"
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" reset --session-dir "$SESSION" --to first_read --reason "用户要求换一种开场盲测重新开始"
 ```
 
 重启会使该阶段及之后生成的活动产物失效。已看过的信息不能再声称“从未见过”；需要重新盲测时，要如实说明这是复测而非第一次盲测。
@@ -138,10 +125,8 @@ python scripts/consultation_harness.py reset `
 
 使用 Harness 推进，而不是只在正文中声称“进入下一步”：
 
-```powershell
-python scripts/consultation_harness.py transition `
-  --session-dir consultation_state/<chosen-session> `
-  --to chart_ready
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" transition --session-dir "$SESSION" --to chart_ready
 ```
 
 正常迁移会检查必需产物。用户明确要求跳过时可使用 `--operator-override --reason ...`，状态历史会记录跳过的门禁；不能静默跳阶段。
@@ -154,16 +139,14 @@ intake → chart_ready → first_read → calibration → deep_dive → forecast
 
 `guided` 从 `chart_ready` 进入 `first_read` 前必须登记 `chart_lock` 和 `preblind_analysis`。`focused` 和 `one_shot` 正常从 `chart_ready` 进入 `deep_dive`。两份 Markdown 底稿只有进入 `report_ready` 后才能分别登记为 `markdown_report` 与 `technical_report`。随后按 [html-report.md](html-report.md) 登记 `visual_report_model` 与 `html_report`。HTML 不新增分析阶段；新会话默认 `delivery_format=html` 且 `report_template=cihou-mobius-v1`，固定莫比乌斯三态与九章正文；只有有效双底稿、模型和 HTML 齐备才为 `complete`。历史缺少交付格式字段的会话沿用 Markdown，用户明确要求时使用 `set-delivery --format html --reason ...` 迁移；显式只要 Markdown 可记录 `--format markdown`。
 
+计划交付完整报告的 `focused`／`one_shot` 也须按 [盘面审计](preblind-analysis.md) 登记 `preblind_analysis`，供 `technical_report_source` 使用；不必展示盲测或要求反馈。跳过盲测不能跳过这份来源隔离的技术依据，也不能事后补造候选或命中记录。
+
 ## 五、产物注册与血缘
 
 先把文件写入会话目录，再登记种类、来源类别和上游产物：
 
-```powershell
-python scripts/consultation_harness.py register `
-  --session-dir consultation_state/<chosen-session> `
-  --kind chart_facts `
-  --path consultation_state/<chosen-session>/chart_facts.json `
-  --source-category operational_input
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" register --session-dir "$SESSION" --kind chart_facts --path "$SESSION/chart_facts.json" --source-category operational_input
 ```
 
 后续产物使用 `--source-artifact <id>` 连接血缘。Harness 会继承上游来源类别、计算文件哈希，并拒绝：
@@ -201,11 +184,8 @@ python scripts/consultation_harness.py register `
 
 首次盲测前运行声明检查：
 
-```powershell
-python scripts/consultation_harness.py firewall-check `
-  --purpose blind_generation `
-  --source-category chart_fact `
-  --source-category traditional_rule
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/consultation_harness.py" firewall-check --purpose blind_generation --source-category chart_fact --source-category traditional_rule
 ```
 
 入口关注方向写入只含 `user_preference` 的 `consultation_brief`。`preblind_analysis`、`blind_candidates`、`blind_manifest` 不能含 `biography`、`user_preference`、`feedback_label`、`prior_output` 或 Benchmark。进入咨询映射后可以读取入口偏好和最小传记摘要，但必须把它们标为咨询上下文，不能改写成独立盘面证据。

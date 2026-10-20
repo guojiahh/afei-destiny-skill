@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import json
 import sys
@@ -14,10 +15,64 @@ from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_DIR = SCRIPT_DIR.parent
+# Current complete release manifest, hashed as UTF-8 JSON with sorted object
+# keys and compact separators. Update deliberately when resource inventory changes;
+# source indentation and LF/CRLF do not affect this digest.
+WAYFINDER_MANIFEST_SHA256 = "e610b2e83752f07e27bc2d84ff3d3b72f33b8b2b83409de6e4a2efa969453be8"
 
 
 def check(name: str, ok: bool, detail: str) -> dict[str, Any]:
     return {"name": name, "ok": bool(ok), "detail": detail}
+
+
+def check_report_files(skill_dir: Path) -> dict[str, Any]:
+    """Check the installed default report, not files in the development repo."""
+    required = [
+        "scripts/generate_html_report.py",
+        "scripts/render_quiet_report.py",
+        "scripts/render_wayfinder_report.py",
+        "references/html-report.md",
+        "references/loop-narrative.md",
+        "assets/cihou/user-report-template.md",
+        "assets/cihou/technical-report-template.md",
+        "assets/cihou/mobius-model-template.json",
+        "assets/cihou/quiet/report.css",
+    ]
+    required += [
+        "assets/cihou/quiet/wayfinder/" + name
+        for name in (
+            "report.html", "report.css", "bootstrap.js", "adapter.js",
+            "choice-effects.js", "ui.js", "runtime/wayfinder.js",
+            "runtime/fonts.525e81a0.css", "runtime/main.7011abb4.css",
+            "runtime/src.1489fb19.css",
+        )
+    ]
+    missing = [name for name in required if not (skill_dir / name).is_file()]
+    return check("html_report_files", not missing,
+                 "missing=" + ", ".join(missing) if missing else "default V21 renderer and templates complete")
+
+
+def check_wayfinder_assets(directory: Path) -> dict[str, Any]:
+    """Fail during installation diagnostics if a report resource is incomplete."""
+    try:
+        entries = json.loads((directory / "asset-manifest.json").read_text(encoding="utf-8"))
+        if not isinstance(entries, list) or not entries:
+            raise ValueError("asset-manifest.json must contain a nonempty resource list")
+        canonical = json.dumps(entries, ensure_ascii=False, sort_keys=True,
+                               separators=(",", ":")).encode("utf-8")
+        if hashlib.sha256(canonical).hexdigest() != WAYFINDER_MANIFEST_SHA256:
+            raise ValueError("asset-manifest.json does not match the complete release inventory")
+        asset_root = (directory / "assets").resolve()
+        for entry in entries:
+            path = (asset_root / entry["path"].lstrip("/")).resolve()
+            path.relative_to(asset_root)
+            raw = path.read_bytes()
+            if hashlib.sha256(raw).hexdigest() != entry["sha256"]:
+                raise ValueError("asset digest mismatch: " + entry["path"])
+        return check("html_report_assets", True, f"{len(entries)} resources verified (SHA-256)")
+    except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
+        return check("html_report_assets", False,
+                     f"{exc}; reinstall the complete afei-destiny-skill directory, including assets/")
 
 
 def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
@@ -38,6 +93,7 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
         SCRIPT_DIR / "consultation_harness.py",
         SCRIPT_DIR / "consultation_output_router.py",
         SCRIPT_DIR / "validate_final_report.py",
+        SKILL_DIR / "references" / "runtime-setup.md",
         SKILL_DIR / "references" / "calculation-conventions.md",
         SKILL_DIR / "references" / "guided-consultation.md",
         SKILL_DIR / "references" / "preblind-analysis.md",
@@ -48,6 +104,8 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
     )
     missing = [str(path.relative_to(SKILL_DIR)) for path in required if not path.is_file()]
     checks.append(check("required_files", not missing, "missing=" + ",".join(missing) if missing else "complete"))
+    checks.append(check_report_files(SKILL_DIR))
+    checks.append(check_wayfinder_assets(SKILL_DIR / "assets/cihou/quiet/wayfinder"))
 
     vendor_dir = SCRIPT_DIR / "vendor"
     if str(vendor_dir) not in sys.path:
@@ -88,9 +146,8 @@ def run_checks(session_dir: Path | None = None) -> dict[str, Any]:
             temporary = tempfile.TemporaryDirectory()
             target = Path(temporary.name)
         target.mkdir(parents=True, exist_ok=True)
-        probe = target / ".afei-destiny-skill-doctor-write-probe"
-        probe.write_text("ok", encoding="utf-8")
-        probe.unlink()
+        with tempfile.TemporaryFile(dir=target, prefix=".afei-destiny-skill-doctor-") as probe:
+            probe.write(b"ok")
         checks.append(check("session_directory_writable", True, str(target.resolve())))
     except OSError as exc:
         checks.append(check("session_directory_writable", False, repr(exc)))

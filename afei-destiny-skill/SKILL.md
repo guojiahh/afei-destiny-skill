@@ -16,6 +16,8 @@ description: >
 
 严禁凭记忆心算日柱、大运或节气交界。严禁把五行数量直接等同旺衰。严禁为了显得准确而编造古籍引文、用户经历或确定性灾祸。
 
+首次执行先读 [runtime-setup.md](references/runtime-setup.md)：确认 Python 3.9–3.13，从本文件实际位置确定绝对安装路径，在用户工作目录调用绝对脚本路径并运行自检。安装目录与咨询输出目录分开；下列命令使用该文档定义的变量。
+
 ## 先识别任务模式
 
 ### A. 统一引导式咨询（默认）
@@ -28,7 +30,7 @@ description: >
 
 ### C. 一次性完整解读
 
-用户明确要求“一次讲完”“完整报告”“不要追问”时，同时读取 [markdown-report.md](references/markdown-report.md)，以 `one_shot` 模式准备完整底稿，并按 [html-report.md](references/html-report.md) 生成默认 HTML 交付。未核验内容标记为未核验，不为了完整感虚构反馈。
+用户明确要求“一次讲完”“不要追问”“直接出报告”时，以 `one_shot` 模式读取 [preblind-analysis.md](references/preblind-analysis.md)、[markdown-report.md](references/markdown-report.md) 与 [technical-report.md](references/technical-report.md)，准备完整底稿，再按 [html-report.md](references/html-report.md) 生成默认 HTML 交付。跳过的是盲测与追问，不是独立盘面审计和来源登记；未核验内容保持未核验，不虚构反馈。只说“最终要完整报告／HTML”是在约定交付形式，仍按 A 或 B 交谈；同时说“一步一步”时保留引导式咨询，明确“不追问／一次讲完”时优先 `one_shot`。
 
 ### D. 命理选择题 / Benchmark
 
@@ -36,7 +38,7 @@ description: >
 
 ## 会话 Harness
 
-真实咨询模式 A–C 使用 `scripts/consultation_harness.py` 管理阶段、产物哈希、来源类别和下游失效；Benchmark 不得进入咨询会话血缘。首次使用、环境变化或脚本失败时运行 `python scripts/doctor.py`。
+真实咨询模式 A–C 使用 `scripts/consultation_harness.py` 管理阶段、产物哈希、来源类别和下游失效；Benchmark 不得进入咨询会话血缘。首次使用、环境变化或脚本失败时按 [运行准备](references/runtime-setup.md) 选择解释器并调用 `doctor.py`；选定会话后带其绝对 `--session-dir` 再确认输出可写。
 
 任何咨询开始前先 `discover`。继续旧会话时只对用户选中的子目录运行 `status`、`audit` 和 `resume`；重新开始使用 `start` 创建新子目录，不能覆盖或清空旧会话。补充内容保留旧血缘；替换输入或解释使用 `supersede`；从检查点重来使用 `reset`。出生输入改变时，先使当前会话的旧盘及其下游失效，再重新计算。不得仅在正文中口头说“已经重算”。完整命令、来源防火墙和用户可见承接方式见 [consultation-harness.md](references/consultation-harness.md)。
 
@@ -66,10 +68,10 @@ description: >
 
 ## 确定性排盘
 
-开始计算前读取 [calculation-conventions.md](references/calculation-conventions.md)。从技能目录执行：
+开始计算前读取 [calculation-conventions.md](references/calculation-conventions.md)。保持用户工作目录，使用已确认的解释器和绝对安装路径（PowerShell 写法见运行准备）：
 
-```powershell
-python scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
+```sh
+"$CIHOU_PYTHON" "$CIHOU_SKILL_DIR/scripts/calculate_bazi.py" --date 1990-05-15 --time 14:30 --gender female --target-year 2026 --compact
 ```
 
 农历、晚子换日、经度校正等参数见该参考文件。解析 JSON 时至少核对：

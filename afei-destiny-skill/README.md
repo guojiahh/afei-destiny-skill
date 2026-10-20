@@ -9,13 +9,29 @@
 ## 运行环境
 
 - Codex 可读取本地 Skill，并具备运行 Python、读写本地文件的权限。
-- Python **3.9–3.13**。核心计算依赖 `lunar_python 1.4.8` 已放在 `scripts/vendor/`，无需另外 `pip install`。
+- Python **3.9–3.13** 和 Git。核心计算依赖 `lunar_python 1.4.8` 已放在 `scripts/vendor/`，无需另外 `pip install`。Git 仅用于获取源码。
 - 完整 HTML 用现代浏览器阅读；动态画面依赖 WebGL，减少动态或引擎失败时仍有文字与正文入口。当前交付是本地文件，尚无私有在线托管、账户或跨设备同步。
 - Node.js 用于开发时的 JavaScript 行为回归；计算和生成 HTML 不依赖 Node.js。
 
 ## 安装
 
-先获取[源码仓库](https://github.com/guojiahh/afei-destiny-skill)，在含 `afei-destiny-skill/` 的仓库根目录运行。只复制这一层，目标首层必须直接有 `SKILL.md`。
+### 1. 检查环境并下载
+
+macOS / Linux 先运行 `python3 --version`，Windows PowerShell 先运行 `python --version`，确认是 **3.9–3.13**；两端均运行 `git --version`。若系统的默认 Python 不在此范围，先安装受支持版本，并用其命令或绝对路径替换下面的解释器。无需创建 `python` 别名。
+
+以下命令在两个平台都可逐行执行，只获取技能所需文件，避免下载历史演示中的大 HTML：
+
+```sh
+git clone --depth 1 --filter=blob:none --sparse https://github.com/guojiahh/afei-destiny-skill.git afei-destiny-source
+cd afei-destiny-source
+git sparse-checkout set afei-destiny-skill
+```
+
+当前独立技能约 **89 MB**。如果已经有完整仓库，直接进入含 `afei-destiny-skill/` 的仓库根目录，跳过下载。开发或查看全部本地演示时，可在克隆目录执行 `git sparse-checkout disable` 完整检出。
+
+### 2. 复制到技能目录
+
+继续在刚才的源码根目录运行，只复制里面的 `afei-destiny-skill/`，目标首层必须直接有 `SKILL.md`。
 
 macOS / Linux：
 
@@ -32,7 +48,9 @@ print(destination / "SKILL.md")
 PY
 ```
 
-`SKILLS_DIR` 必须指向实际的 **skills 目录**，不是它的上级；自定义安装时改这一变量即可。复制命令会拒绝已存在的目标，不合并旧安装。升级前先备份并移开旧目录，咨询文件另行保留。
+`SKILLS_DIR` 指向 **skills 目录**，不是它的上级。以上沿用官方 `$skill-installer` 的默认位置 `${CODEX_HOME:-$HOME/.codex}/skills`；[当前官方文档](https://learn.chatgpt.com/docs/build-skills)也列出用户级 `~/.agents/skills`。已有安装能识别就保留，不必重装；自定义目标必须属于所用 Codex 的技能发现位置，任意目录不会因复制而自动加载。只保留一份可发现的同名技能。
+
+复制命令会拒绝已存在的目标，不合并旧安装。升级前先备份并移开旧目录，独立咨询工作目录保持原位。
 
 Windows PowerShell：
 
@@ -44,16 +62,32 @@ New-Item -ItemType Directory -Force -Path $skillsDir | Out-Null
 Copy-Item -LiteralPath ".\afei-destiny-skill" -Destination $destination -Recurse
 ```
 
-安装后开启新的 Codex 会话，用 `$afei-destiny-skill` 显式调用。若技能列表没有更新，再重新打开 Codex。
+### 3. 自检，再切换到咨询工作目录
 
-第一次运行或环境变化时，在**已安装 Skill 的目录**执行自检；macOS / Linux 示例：
+macOS / Linux：
 
 ```sh
 cd "$SKILLS_DIR/afei-destiny-skill"
 python3 scripts/doctor.py
+mkdir -p "$HOME/Documents/命运探索"
+cd "$HOME/Documents/命运探索"
 ```
 
-Windows 使用 `Set-Location $destination` 后运行 `python scripts/doctor.py`。自检会核对 Python、内置依赖、必要文件和固定命例；它不发起咨询或生成报告。
+Windows PowerShell：
+
+```powershell
+Set-Location $destination
+python scripts/doctor.py
+$consultationWorkspace = Join-Path $HOME "Documents\命运探索"
+New-Item -ItemType Directory -Force -Path $consultationWorkspace | Out-Null
+Set-Location $consultationWorkspace
+```
+
+自检应全部显示 `[OK]`；若有 `[FAIL]`，先按错误说明修复环境。自检也会核对完整 HTML 的模板、渲染文件和素材哈希，避免聊完才发现安装不完整。它不发起咨询或生成报告。macOS / Linux 后续使用刚验证过的 `python3`，Windows 使用 `python`；若选择了其他解释器，整个流程持续使用它。
+
+**技能目录放程序，咨询工作目录放你的资料和报告。** 将上面的“命运探索”工作文件夹作为 Codex 的当前项目／工作目录，开启会话；CLI 用户可在该目录运行 `codex`。不要在技能安装目录、源码仓库或匿名演示目录开展真实咨询。
+
+输入 `$` 查找 `afei-destiny-skill`；CLI／IDE 也可用 `/skills` 查看。若没有出现，核对安装首层的 `SKILL.md` 与发现目录，再重新打开 Codex。下面的完整咨询示例可直接复制到新会话。
 
 ### 从旧名称迁移
 
@@ -63,17 +97,55 @@ Windows 使用 `Set-Location $destination` 后运行 `python scripts/doctor.py`�
 
 ## 怎么提问
 
-### 统一入口：不知道问什么也可以开始
+### 从第一次对话到完整 HTML
 
-直接说：
+在自己的咨询工作目录里打开 Codex，复制：
 
 ```text
-请用 $afei-destiny-skill 开始预测，一步一步带着我分析。
+请用 $afei-destiny-skill 带我完成一次分步咨询，最终生成可本地打开的完整 HTML 报告。
+先问我出生资料和本次最关心的问题，再带我完成排盘、开场反馈与深入分析。
+把本次咨询保存在当前工作目录下独立的 consultation_state 会话中，不写入技能安装目录。
+资料足够后直接完成双底稿、生成和校验 final_report.html，最后给我报告的绝对路径和可点击入口。
 ```
 
-技能会先确认最低出生信息并排盘，然后从不读取个人经历的候选中筛出默认四条跨方向盲测。你可以直接回复“1准；2部分准，准在……；3不准；4不确定”；清单展示前会被锁定，回答后不能改题圆场。系统只结算一次，再从你愿意展开的话头进入一个现实主问题。深入过程中每轮显示进度，以倾听和承接为主；信息足够后承接已有授权或询问是否生成完整 HTML 报告。
+| 你会经历什么 | 你需要做什么 | 接下来会得到什么 |
+|---|---|---|
+| 确认输入 | 提供公历／农历日期、时间、性别口径和关注方向；不确定处直说 | 独立会话目录与明确的计算口径 |
+| 排盘与审计 | 核对输入，接近时间边界时确认口径 | 由脚本计算的四柱与盘面说明 |
+| 开场反馈 | 回应预先锁定的默认四条判断，如“1准；2部分准，准在……；3不准；4不确定” | 一次反馈结算；不确定可以保留 |
+| 深入一个现实问题 | 按提示讲具体场景、已经做过什么和最难的部分 | 随反馈修正的理解、现实条件与可尝试的选择 |
+| 生成完整 HTML | 确认必要资料已表达；上面的请求已授权最终生成 | 本次双底稿、有来源的九章正文、交互场景与校验后的文件入口 |
 
-这个流程追求的是“你的回答确实改变了后续分析”，不是通过宽泛问题制造被说中的感觉。最终报告的重要判断会配不同生活场景、情绪成本和反例，并在重点问题结尾帮助用户分清真正想确认的东西、仍可改变的部分和可以暂时不再逼迫自己的部分。
+咨询需要你逐步参与反馈。最终解释会区分计算事实、可能的理解与现实选择，并为重要判断保留支持、反证和未知。
+
+### 报告在哪里，怎样打开
+
+默认文件位于你的工作目录中：
+
+```text
+命运探索/
+└─ consultation_state/
+   └─ <本次会话目录>/
+      ├─ session_state.json
+      ├─ final_report.html
+      ├─ final_report.md
+      └─ technical_analysis.md
+```
+
+以 Codex 返回的**绝对路径**为准。点击文件入口，或在 Finder／资源管理器中找到 `final_report.html`，用现代浏览器打开。完整 HTML 包含场景、正文与底稿下载，单份约 68 MB，首次加载需稍等。阅读顺序是现在、之前、此后、完整解读；一张选择卡即可进入正文，也能继续收集和比较。
+
+如果对话停在排盘或文字分析，可以继续说：“请接着完成这次咨询，并生成、校验完整的 `final_report.html`，给我可打开的文件入口。”两份 Markdown 同时保留，用于依据核对和后续修订。
+
+### 以后怎样继续
+
+在 Codex 中重新打开**同一个咨询工作目录**，复制：
+
+```text
+请用 $afei-destiny-skill 查找当前工作目录里已保存的咨询，列出可继续的会话让我选择。
+选定后先核对状态和来源，再继续剩余咨询或更新这次完整 HTML；保留已有会话记录。
+```
+
+也可以直接提供上次返回的会话目录。出生资料或解释需要更正时明确告诉 Codex，让它按本次状态更新相关产物。保留整个 `consultation_state/<本次会话目录>/` 才能继续；单独的 HTML 用于阅读。
 
 ### 直接问一个主题
 
@@ -133,9 +205,10 @@ python3 scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female
 | `scripts/validate_final_report.py` | 固定用户报告的读者优先顺序，拒绝技术章节重新前置 |
 | `scripts/generate_html_report.py`、`scripts/render_quiet_report.py`、`scripts/render_wayfinder_report.py` | 初始化来源模型、按版本分派、校验并内嵌原资源生成离线 HTML |
 | `assets/cihou/` | 用户八节／技术十一节底稿、九章模型与 quiet 页面资产 |
-| `scripts/doctor.py` | Python、文件、内置依赖、固定命例和会话目录环境自检 |
+| `scripts/doctor.py` | Python、依赖、固定命例、HTML 模板与素材完整性、会话目录可写性自检 |
 | `scripts/test_consultation_harness.py` | 完整会话 Harness 与输出路由回归测试 |
 | `scripts/vendor/` | 内置 `lunar_python 1.4.8`，支持离线运行 |
+| `references/runtime-setup.md` | 确认解释器、绝对安装路径和独立用户工作目录，统一跨平台脚本调用 |
 | `references/calculation-conventions.md` | 计算参数和边界口径 |
 | `references/reasoning-protocol.md` | 事实、结构、触发和反证流程 |
 | `references/structure-analysis.md` | 旺衰、格局、从格、调候和多种用神语义 |
@@ -161,7 +234,7 @@ python3 scripts/calculate_bazi.py --date 1990-05-15 --time 14:30 --gender female
 
 ## 开发验证
 
-只拿到独立 Skill 时，在技能目录执行；macOS / Linux 未激活虚拟环境时将 `python` 换成 `python3`：
+完整开发回归还需要 Node.js（CI 使用 Node 22）；正常咨询和 HTML 生成不需要。只拿到独立 Skill 时，在技能目录执行；macOS / Linux 未激活虚拟环境时将 `python` 换成 `python3`：
 
 ```text
 python -m unittest discover -s scripts -p "test_*.py"
